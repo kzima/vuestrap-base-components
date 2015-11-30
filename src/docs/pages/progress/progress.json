@@ -1,0 +1,40 @@
+{
+	"name": "progress",
+	"title": "Progress",
+	"description": "Provide up-to-date feedback on the progress of a workflow or action with simple yet flexible progress bars.",
+	"dependenices": [],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "animated",
+			"type": "Boolean",
+			"default": false,
+			"required": false,
+			"description": "Makes stripes to animate right to left."
+		},
+		{
+			"name": "max",
+			"type": "Number",
+			"default": "100",
+			"required": false,
+			"description": "Maximum value."
+		},
+		{
+			"name": "striped",
+			"type": "Boolean",
+			"default": false,
+			"required": false,
+			"description": "Uses a gradient to create a striped effect."
+		},
+		{
+			"name": "variant",
+			"type": "String",
+			"values": ["primary","success","info","warning","danger","link"],
+			"default": "success",
+			"description": "Background color context."
+		}
+	]
+}

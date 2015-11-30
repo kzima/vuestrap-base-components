@@ -1,0 +1,39 @@
+{
+  "name": "vuestrap-base",
+  "homepage": "https://github.com/kzima/vuestrap-base-components",
+  "authors": [
+    "kzima <kris@mosquito.ie>"
+  ],
+  "description": "Web components that extend Bootstrap 4.",
+  "main": [
+    "dist/vuestrap-base.js",
+    "dist/vuestrap-base.js.map",
+    "dist/vuestrap-base.min.js",
+    "dist/vuestrap-base.css",
+    "dist/vuestrap-base.css.map",
+    "dist/vuestrap-base.min.css"
+  ],
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [
+    "bootstrap4",
+    "vuestrap",
+    "vue-components",
+    "web-components"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "assets/*",
+    "node_modules",
+    "bower_components",
+    "docs",
+    "src",
+    "build",
+    "gulpfile.js",
+    "index.html",
+    "webpack*.js",
+    "utils"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+	"name": "navbar",
+	"title": "Navbar",
+	"description": "The navbar is a simple wrapper for positioning branding, navigation, and other elements into a concise navigation header.",
+	"dependencies": ["vuestrap/nav","vuestrap/buttons","vuestrap/forms"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "fixed",
+			"type": "String",
+			"default": "''",
+			"description": "Removes rounded corners and sticks the navbar to the top/bottom."
+		},
+		{
+			"name": "type",
+			"type": "String",
+			"values": ["light","dark"],
+			"default": "success",
+			"description": "When type is set to dark, light font color will be applied."
+		},
+		{
+			"name": "variant",
+			"type": "String",
+			"values": ["inverse","primary","success","info","warning","danger"],
+			"default": "success",
+			"description": "Background color of the navbar."
+		}
+	]
+}

@@ -1,0 +1,26 @@
+<docs-demo :meta="meta" :snippet="snippet">
+	<!-- Html controls start-->
+	<div slot="controls">
+		<label>controls <input type="checkbox" v-model="controls"></label>
+		<label>indicators <input type="checkbox" v-model="indicators"></label>
+	</div>
+	<!-- Html controls end-->
+	<div slot="markup">
+			<!-- Html markup start-->
+			<carousel
+				:interval="5000",
+				:controls="controls"
+				:indicators="indicators">
+			  <slide>
+			    <img src="/assets/carousel-one.png" class="img-fluid">
+			  </slide>
+			  <slide>
+			    <img src="/assets/carousel-two.png" class="img-fluid">
+			  </slide>
+			  <slide>
+			    <img src="/assets/carousel-three.png" class="img-fluid">
+			  </slide>
+			</carousel>
+			<!-- Html markup end-->
+	</div>
+</docs-demo>	

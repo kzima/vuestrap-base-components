@@ -1,0 +1,45 @@
+<docs-demo :meta="meta" :snippet="snippet">
+	<div slot="controls">
+		<!-- Html controls start-->
+		<label>caret <input type="checkbox" v-model="caret"></label>
+		<label>
+			size 
+			<select v-model="size">
+				<option v-for="option in sizes" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+		<label>
+			variant 
+			<select v-model="variant">
+				<option v-for="option in variants" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+		<label>
+			position 
+			<select v-model="position">
+				<option v-for="option in positions" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+		<!-- Html controls end-->
+	</div>
+	<div slot="markup" class="clearfix">
+			<!-- Html markup start-->
+			<div class="div" v-bind:class="{'pull-right': position == 'right'}">
+				<dropdown-select
+			    :list="list"
+			    :model.sync="model"
+			    :position="position"
+			    :size="size"
+			    :variant="variant"
+			    :caret="caret">
+				</dropdown-select>
+			</div>
+			<!-- Html markup end-->
+	</div>
+</docs-demo>	

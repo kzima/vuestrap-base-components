@@ -1,0 +1,33 @@
+<docs-demo :meta="meta" :snippet="snippet">
+	<div slot="controls">
+		<!-- Html controls start-->
+		<label>
+			type
+			<select v-model="type">
+				<option v-for="option in types" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+		<label>vertical <input type="checkbox" v-model="vertical"></label>
+		<!-- Html controls end-->
+	</div>
+	<div slot="markup">
+			<!-- Html markup start-->
+			<navigation :type="type" :vertical="vertical">
+			  <li class="nav-item">
+		    <a href="#" class="nav-link active">Active</a>
+			  </li>
+			  <li class="nav-item">
+			    <a href="#" class="nav-link">Link</a>
+			  </li>
+			  <li class="nav-item">
+			    <a href="#" class="nav-link">Another link</a>
+			  </li>
+			  <li class="nav-item">
+			    <a href="#" class="nav-link disabled">Disabled</a>
+			  </li>
+			</navigation>
+			<!-- Html markup end-->
+	</div>
+</docs-demo>	

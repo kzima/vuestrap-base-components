@@ -1,0 +1,32 @@
+{
+	"name": "modal",
+	"title": "Modal",
+	"description": "Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.",
+	"dependencies": ["vuestrap/buttons"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "id",
+			"type": "String",
+			"default": "default",
+			"description": "Id used for the modal. If not set it will be auto-generated. To show modal from anywhere in the application use <code>$broadcast('show-modal', 'id')</code> event.<br><code>$broadcast('hide-modal', 'id')</code> hides it.<br>Thanks to event system you can have multiple modal instances on the same page."
+		},
+		{
+			"name": "size",
+			"type": "String",
+			"values": ["sm","md","lg"],
+			"default": "md",
+			"description": "Size of the button."
+		},
+		{
+			"name": "fade",
+			"type": "Boolean",
+			"default": true,
+			"required": false,
+			"description": "If set to true modal will fade in on open and fade out on close."
+		}
+	]
+}

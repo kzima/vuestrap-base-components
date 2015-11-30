@@ -1,0 +1,4 @@
+<div class="btn-group" data-toggle="buttons">
+  <label class="btn {{btnVariant}} {{btnSize}} {{ checked($index) ? 'active' : '' }}" v-for="item in list">
+    <input type="checkbox" autocomplete="off" v-model="item.checked">{{item.text}}</label>
+</div>

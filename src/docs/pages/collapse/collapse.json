@@ -1,0 +1,26 @@
+{
+	"name": "collapse",
+	"title": "Collapse",
+	"description": "Click the buttons below to show and hide another element. It requires either <code>id</code> or <code>group</code> (but not both) for this to work.",
+	"dependencies": ["vuestrap/collapseToggle"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "id",
+			"type": "String",
+			"default": "",
+			"required": "false",
+			"description": "With <code>id</code> you can control individual collapse elements. Use same unique <code>id</code> for both <code>&lt;collapse></code> and <code>&lt;collapse-toggle></code> elements."
+		},
+		{
+			"name": "group",
+			"type": "String",
+			"default": "",
+			"required": "false",
+			"description": "With <code>group</code> you can control a number of collapse elements. Use same unique <code>group</code> for all <code>&lt;collapse></code> and <code>&lt;collapse-toggle></code> elements."
+		}
+	]
+}

@@ -1,0 +1,22 @@
+<docs-demo :meta="meta" :snippet="snippet">
+	<div slot="controls">
+		<!-- Html controls start-->
+		<label>striped <input type="checkbox" v-model="striped"></label>
+		<!-- <label>animated <input type="checkbox" v-model="animated"></label> -->
+		<label>
+			variant
+			<select v-model="variant">
+				<option v-for="option in variants" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+		<label class="form-control-label">value</label> <input type="range" v-model="value"> {{value}}%
+		<!-- Html controls end-->
+	</div>
+	<div slot="markup">
+			<!-- Html markup start-->
+			<progress :variant="variant" :value="value" :striped="striped" :animated="animated">25%</progress>
+			<!-- Html markup end-->
+	</div>
+</docs-demo>	

@@ -1,0 +1,32 @@
+{
+	"name": "alert",
+	"title": "Alert",
+	"description": "Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.",
+	"dependencies": ["vuestrap/buttons"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "show",
+			"type": "Boolean",
+			"default": false,
+			"required": true,
+			"description": "Show/hides the alert."
+		}, 
+		{
+			"name": "state",
+			"type": "String",
+			"values": ["success","info","warning","danger"],
+			"default": "success",
+			"description": "Type of the alert."
+		}, 
+		{
+      "name" : "dismissible",
+      "type": "Boolean",
+      "default": false,
+      "description": "Show/hide close button."
+    }
+	]
+}

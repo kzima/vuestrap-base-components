@@ -1,0 +1,39 @@
+<docs-demo :meta="meta" :snippet="snippet">
+
+	<!-- Html controls start-->
+	<div slot="controls">
+		<label>
+			size 
+			<select v-model="size">
+				<option v-for="option in sizes" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+	</div>
+	<!-- Html controls end-->
+
+	<!-- Html markup start-->
+	<div slot="markup">
+			<btn :size="size" variant="primary">Primary</btn>
+			<btn :size="size" variant="secondary">Secondary</btn>
+			<btn :size="size" variant="success">Success</btn>
+			<btn :size="size" variant="warning">Warning</btn>
+			<btn :size="size" variant="danger">Danger</btn>
+			<hr>
+			<btn :size="size" variant="primary-outline">Primary</btn>
+			<btn :size="size" variant="secondary-outline">Secondary</btn>
+			<btn :size="size" variant="success-outline">Success</btn>
+			<btn :size="size" variant="warning-outline">Warning</btn>
+			<btn :size="size" variant="danger-outline">Danger</btn>
+			<hr>
+			<btn :size="size" variant="link">Button Link</btn>
+			<btn :size="size" variant="link" href="#">Regular Link</btn>
+			<btn :size="size" variant="primary" type="submit">Submit</btn>
+			<btn :size="size" variant="primary" :disabled="true">Disabled</btn>
+			<hr>
+			<btn :size="size" variant="primary" :block="true">Block</btn>
+	</div>
+	<!-- Html markup end-->
+
+</docs-demo>	

@@ -1,0 +1,53 @@
+{
+	"name": "form-textarea",
+	"title": "Form textarea",
+	"description": "A textarea input.",
+	"dependencies": ["vuestrap/forms"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "model",
+			"type": "String",
+			"default": "''",
+			"required": true,
+			"description": "Any text entered will be two way bound with your model variable."
+		},
+		{
+			"name": "id",
+			"type": "String",
+			"default": "unqueId",
+			"description": "Id used for input and corresponding label. If not set it will be auto-generated."
+		},
+		{
+			"name": "label",
+			"type": "String",
+			"values": "",
+			"default": "''",
+			"required": false,
+			"description": "A label text above the input."
+		},
+		{
+			"name": "description",
+			"type": "String",
+			"default": "''",
+			"required": false,
+			"description": "A text muted text under neath of the input."
+		},
+		{
+			"name": "rows",
+			"type": "Number",
+			"default": "3",
+			"description": "Size of textearea (Html5 rows attribute)."
+		}, 
+		{
+			"name": "state",
+			"type": "String",
+			"values": ["success","info","warning","danger"],
+			"default": "success",
+			"description": "A validation state."
+		}
+	]
+}

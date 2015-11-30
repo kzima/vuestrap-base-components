@@ -1,0 +1,24 @@
+<docs-demo :meta="meta" :snippet="snippet">
+	<div slot="controls">
+		<!-- Html controls start-->
+		<label>fade <input type="checkbox" v-model="fade"></label>
+		<label>
+				size
+				<select v-model="size">
+					<option v-for="option in sizes" v-bind:value="option.value">
+				    {{ option.text }}
+				  </option>
+				</select>
+			</label>
+		<!-- Html controls end-->
+	</div>
+	<div slot="markup">
+			<!-- Html markup start-->
+			<tabs :fade="fade" :size="size">
+				<tab id="tab-1" title="Tab 1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quidem!</tab>
+				<tab id="tab-2" title="Tab 2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, corporis?</tab>
+				<tab id="tab-2" title="Tab 3" :disabled="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, architecto, maiores.</tab>
+			</tabs>
+			<!-- Html markup end-->
+	</div>
+</example>	

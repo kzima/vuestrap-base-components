@@ -1,0 +1,67 @@
+{
+	"name": "dropdown-select",
+	"title": "Dropdown Select",
+	"description": "Dropdown select allows to select an item from the list and update the model.",
+	"dependencies": ["vuestrap/buttons"],
+	"category": "components",
+	"browserSupport": ["IE9+", "Android 4.3"],
+	"options": [
+		{
+			"name": "model",
+			"type": "String",
+			"default": "''",
+			"required": true,
+			"description": "A result of the selection. Two way data binding."
+		},
+		{
+			"name": "list",
+			"type": "Array",
+			"default": "[]",
+			"required": true,
+			"description": "A list of selectable items."
+		},
+		{
+			"name": "position",
+			"type": "String",
+			"values": ["left", "right"],
+			"default": "'left'",
+			"required": false,
+			"description": "Vertical position of the dropdown list against the dropdown button. It becomes handy when dropdown floats to the right."
+		},
+		{
+			"name": "icon",
+			"type": "String",
+			"default": "''",
+			"required": false,
+			"description": "Show icon to the left of the button text."
+		},
+		{
+			"name": "caret",
+			"type": "Boolean",
+			"default": true,
+			"required": false,
+			"description": "Show/hide down caret."
+		},
+		{
+			"name": "default-text",
+			"type": "String",
+			"default": "'Plase select one'",
+			"required": false,
+			"description": "Default text shown before selection is made."
+		},
+		{
+			"name": "size",
+			"type": "String",
+			"values": ["sm","md","lg"],
+			"default": "md",
+			"description": "Size of the button."
+		}, 
+		{
+			"name": "variant",
+			"type": "String",
+			"values": ["secondary","primary","success","info","warning","danger","link"],
+			"default": "success",
+			"description": "Button color context."
+		}
+	]
+}

@@ -1,0 +1,40 @@
+{
+	"name": "form-checkbox",
+	"title": "Form Checkbox",
+	"description": "A Checkbox input for selection of one or more items.",
+	"dependencies": ["vuestrap/forms","vuestrap/custom-forms"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "list",
+			"type": "Array",
+			"default": "[]",
+			"required": true,
+			"description": "A list of checkbox items."
+		},
+		{
+			"name": "custom",
+			"type": "Boolean",
+			"default": true,
+			"required": false,
+			"description": "A custom styling overlying the default radio button."
+		},
+		{
+			"name": "vertical",
+			"type": "Boolean",
+			"default": true,
+			"required": false,
+			"description": "Stacks inputs vertically."
+		},
+		{
+			"name": "state",
+			"type": "String",
+			"values": ["success","info","warning","danger"],
+			"default": "success",
+			"description": "A validation state."
+		}
+	]
+}

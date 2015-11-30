@@ -1,0 +1,2 @@
+<button type="{{type}}" class="btn {{btnVariant}} {{btnSize}} {{btnBlock}}" v-bind:disabled="disabled" v-if="!href"><slot></slot></button>
+<a v-bind:href="href" class="btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{btnDisabled}}" v-if="href" v-bind:role="role"><slot></slot></a>

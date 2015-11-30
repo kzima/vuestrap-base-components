@@ -1,0 +1,19 @@
+{
+	"name": "breadcrumb",
+	"title": "Breadcrumb",
+	"description": "Indicate the current page’s location within a navigational hierarchy.",
+	"dependencies": [],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "list",
+			"type": "Array",
+			"default": "[]",
+			"required": true,
+			"description": "A list of links."
+		}
+	]
+}

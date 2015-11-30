@@ -1,0 +1,27 @@
+{
+	"name": "navigation",
+	"title": "Nav",
+	"description": "Roll your own navigation style by extending the base .nav component.",
+	"note": "To avoid confilcts with html5 <code>&lt;nav></code> tag, please use <code>&lt;navigation></code> tag or better your own namsepaced one. Also by default, wrapping element is <code>&lt;ul></code>, so only <code>&lt;li></li></code>'s are required within <code>&lt;navigation></code> tag.",
+	"dependencies": [],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "type",
+			"type": "String",
+			"values": ["default","pills", "navbar"],
+			"default": "default",
+			"description": "Type of the navigation. Use <code>navbar</code> type in conjuction with <code>&lt;navbar></code> element."
+		},
+		{
+			"name": "vertical",
+			"type": "Boolean",
+			"default": false,
+			"required": false,
+			"description": "Stack items in vertical position."
+		}
+	]
+}

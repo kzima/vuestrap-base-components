@@ -1,0 +1,39 @@
+<docs-demo :meta="meta" :snippet="snippet">
+    <div slot="controls">
+        <!-- Html controls start-->
+        <label>fade <input type="checkbox" v-model="fade"></label>
+        <label>
+			size
+			<select v-model="size">
+				<option v-for="option in sizes" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+        <!-- Html controls end-->
+    </div>
+    <div slot="markup">
+        <!-- Html markup start-->
+
+        <!-- trigger -->
+        <button class="btn btn-primary mini" v-on:click="$broadcast('show::modal', 'modal1')">
+        	Show Modal
+        </button>
+
+        <!-- modal -->
+        <modal id="modal1" :size="size" :fade="fade">
+            <div slot="modal-header">
+                <h3>header</h3>
+            </div>
+            <div slot="modal-body">
+                body
+            </div>
+            <div slot="modal-footer">
+                <button class="btn btn-primary" v-on:click="$broadcast('hide::modal', 'modal1')">
+                    OK
+                </button>
+            </div>
+        </modal>
+        <!-- Html markup end-->
+    </div>
+</docs-demo>

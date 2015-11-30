@@ -1,0 +1,19 @@
+{
+	"name": "jumbotron",
+	"title": "Jumbotron",
+	"description": "A lightweight, flexible component that can optionally extend the entire viewport to showcase key marketing messages on your site.",
+	"dependencies": [],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "fluid",
+			"type": "Boolean",
+			"default": false,
+			"required": false,
+			"description": "To make the jumbotron full width, and without rounded corners."
+		}
+	]
+}

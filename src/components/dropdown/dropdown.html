@@ -1,0 +1,12 @@
+<div class="dropdown" v-bind:class="{ open: show }">
+    <button
+        id="dLabel"
+        class="btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}" role="button"
+        aria-haspopup="true"
+        aria-expanded="{{show}}"
+        v-on:click="toggle($event)">
+        <span v-html="text" v-show="text"></span>
+        <span class="caret"></span>
+    </button>
+    <slot></slot>
+</div>

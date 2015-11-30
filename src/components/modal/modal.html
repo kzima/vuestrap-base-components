@@ -1,0 +1,18 @@
+<div style="display: none">
+	<div id="{{id}}" class="modal" v-bind:class="{ fade: fade, in: animateModal || !fade }" style="display: block" v-on:click="onClickOut($event)">
+	  	<div class="modal-dialog  modal-{{size}}" role="document" style="z-index: 9999">
+		    <div class="modal-content">
+		        <div class="modal-header">
+		        	<slot name="modal-header"></slot>
+		        </div>
+		        <div class="modal-body">
+		        	<slot name="modal-body"></slot>
+		        </div>
+		        <div class="modal-footer">
+		        	<slot name="modal-footer"></slot>
+		        </div>
+		    </div>
+		</div>
+	</div>
+	<div class="modal-backdrop" v-bind:class="{ fade: fade, in: animateBackdrop || !fade }"></div>
+</div>

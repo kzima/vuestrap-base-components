@@ -1,0 +1,55 @@
+{
+  "name": "vuestrap-base-components",
+  "version": "0.1.0",
+  "description": "Web components that extend Bootstrap 4.",
+  "library": "vuestrapBase",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kzima/vuestrap-base-components.git"
+  },
+  "scripts": {
+    "dev": "webpack -w --colors --progress --config webpack.build.js --env dev",
+    "dist": "webpack --colors --progress --config  webpack.build.js --env docs && webpack --colors --progress --config webpack.build.js --env dev && webpack --colors --progress --config webpack.build.js --env dist",
+    "docs": "webpack-dev-server --inline --hot --quiet --config webpack.build.js --env docs"
+  },
+  "keywords": [
+    "Bootstrap4",
+    "Web",
+    "Components",
+    "Polymer"
+  ],
+  "author": {
+    "name": "Kris Zima",
+    "email": "kris@mosquito.ie",
+    "url": "https://github.com/kzima"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kzima/vuestrap-base-components/issues"
+  },
+  "dependencies": {
+    "vue": "^1.0.10"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.1.0",
+    "babel-core": "^5.8.33",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^5.3.3",
+    "css-loader": "^0.21.0",
+    "director": "^1.2.8",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "highlightjs-loader": "^0.1.3",
+    "html-loader": "^0.3.0",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.4.1",
+    "optimist": "^0.6.1",
+    "sass-loader": "^3.1.1",
+    "style-loader": "^0.13.0",
+    "vuestrap": "^1.0.0",
+    "vuestrap-docs": "^0.1.2",
+    "vuestrap-theme-loader": "^0.1.2",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "homepage": "https://github.com/kzima/vuestrap-base-components#readme"
+}

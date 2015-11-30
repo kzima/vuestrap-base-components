@@ -1,0 +1,32 @@
+<docs-demo :meta="meta" :snippet="snippet">
+
+	<!-- Html controls start-->
+	<div slot="controls">
+		<label>show <input type="checkbox" v-model="show"></label>
+		<label>dismissible <input type="checkbox" v-model="dismissible"></label>
+		<label>state
+			<select v-model="state">
+				<option v-for="option in states" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+	</div>
+	<!-- Html controls end-->
+	
+	<!-- Html markup start-->
+	<div slot="markup">
+		<alert
+		    :show.sync="show"
+		    :state="state"
+		    :message="message"
+		    :dismissible="dismissible">
+		    This is an alert
+		</alert>
+		<template v-if="!show">
+			<button href='#' v-on:click="show = true">Show alert again</button>
+		</template>
+	</div>
+	<!-- Html markup end-->
+
+</docs-demo>	

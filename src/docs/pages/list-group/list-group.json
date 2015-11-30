@@ -1,0 +1,11 @@
+{
+	"name": "list-group",
+	"title": "List Group",
+	"description": "List groups are a flexible and powerful component for displaying not only simple lists of elements, but complex ones with custom content.",
+	"dependencies": ["vuestrap/labels"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": []
+}

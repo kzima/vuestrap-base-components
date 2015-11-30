@@ -1,0 +1,26 @@
+{
+	"name": "accordion",
+	"title": "Accordion",
+	"description": "Extend the default collapse behavior to create an accordion. It requires both <code>id</code> and <code>group</code> for this to work.",
+	"dependencies": ["vuestrap/collapse","vuestrap/collapseToggle"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "id",
+			"type": "String",
+			"default": "",
+			"required": true,
+			"description": "You need to provide <code>id</code> for both <code>&lt;collapse></code> and <code>&lt;collapse-toggle></code> elements, so accordion knows which element to open."
+		},
+		{
+			"name": "group",
+			"type": "String",
+			"default": "",
+			"required": true,
+			"description": "You need to provide <code>group</code> for both <code>&lt;collapse></code> and <code>&lt;collapse-toggle></code> elements, so accordion knows which elements to hide in the same group."
+		}
+	]
+}

@@ -1,0 +1,35 @@
+{
+	"name": "card",
+	"title": "Card",
+	"description": "A card is a flexible and extensible content container.",
+	"dependencies": ["vuestrap/buttons","vuestrap/images","vuestrap/list-group"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "align",
+			"type": "String",
+			"values": ["left", "right", "center"],
+			"default": "'left'",
+			"required": false,
+			"description": "Position text inside the box."
+		},
+		{
+			"name": "type",
+			"type": "String",
+			"values": ["image-overlay", "inverse"],
+			"default": "''",
+			"required": false,
+			"description": "When inverse is set it will change font text in div content block to bright. If 'image-overlay' is set,  it will also set the position aboslute of the block to overlay image."
+		},
+		{
+			"name": "variant",
+			"type": "String",
+			"values": ["primary","success","info","warning","danger"],
+			"default": "success",
+			"description": "Button color context."
+		}
+	]
+}

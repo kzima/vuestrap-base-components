@@ -1,0 +1,76 @@
+{
+	"name": "form-input",
+	"title": "Form Input",
+	"description": "A textual input.",
+	"dependencies": ["vuestrap/forms"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "model",
+			"type": "String",
+			"default": "''",
+			"required": true,
+			"description": "Any text entered will be two way bound with your model variable."
+		},
+		{
+			"name": "type",
+			"type": "String",
+			"default": "'text'",
+			"values": ["text", "password", "datetime", "datetime-local", "date", "month", "time", "week", "number", "email", "url", "search", "tel", "color"],
+			"required": false,
+			"description": "A type of input"
+		},
+		{
+			"name": "id",
+			"type": "String",
+			"default": "unqueId",
+			"description": "Id used for input and corresponding label. If not set it will be auto-generated."
+		},
+		{
+			"name": "label",
+			"type": "String",
+			"values": "",
+			"default": "''",
+			"required": false,
+			"description": "A label text above the input."
+		},
+		{
+			"name": "placeholder",
+			"type": "String",
+			"default": "''",
+			"required": false,
+			"description": "Show Html5 placeholder."
+		},
+		{
+			"name": "description",
+			"type": "String",
+			"default": "''",
+			"required": false,
+			"description": "A text muted text under neath of the input."
+		},
+		{
+			"name": "size",
+			"type": "String",
+			"values": ["sm","md","lg"],
+			"default": "md",
+			"description": "Size of the button."
+		}, 
+		{
+			"name": "state",
+			"type": "String",
+			"values": ["success","info","warning","danger"],
+			"default": "success",
+			"description": "A validation state."
+		},
+		{
+			"name": "state-icon",
+			"type": "Boolean",
+			"default": true,
+			"required": false,
+			"description": "Show/hide icon within input. Icon is only shown when state is set."
+		}
+	]
+}

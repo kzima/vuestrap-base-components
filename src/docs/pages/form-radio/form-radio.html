@@ -1,0 +1,26 @@
+<docs-demo :meta="meta" :snippet="snippet">
+	<div slot="controls">
+		<!-- Html controls start-->
+		<label>vertical <input type="checkbox" v-model="vertical"></label>
+		<label>custom <input type="checkbox" v-model="custom"></label>
+		<label>state
+			<select v-model="state">
+				<option v-for="option in states" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+		<!-- Html controls end-->
+	</div>
+	<div slot="markup">
+			<!-- Html markup start-->
+			<form-radio
+		    :model.sync="model"
+		    :list="list"
+		    :custom="custom"
+		    :vertical="vertical"
+		    :state="state">
+			</form-radio>
+			<!-- Html markup end-->
+	</div>
+</docs-demo>	

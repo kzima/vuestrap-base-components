@@ -1,0 +1,29 @@
+<docs-demo :meta="meta" :snippet="snippet">
+    <div slot="controls">
+        <!-- Html controls start-->
+        <label>
+			position
+			<select v-model="position">
+				<option v-for="option in positions" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+        <!-- Html controls end-->
+    </div>
+    <div slot="markup">
+        <!-- Html markup start-->
+        <media :position="position">
+            <div slot="aside">
+                <a href="#">
+                	<img class="media-object" src="/assets/media.png">
+                </a>
+            </div>
+            <div slot="body">
+            	<h4 class="media-heading">Media heading</h4>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            </div>
+        </media>
+        <!-- Html markup end-->
+    </div>
+</docs-demo>

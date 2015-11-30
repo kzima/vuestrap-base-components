@@ -1,0 +1,27 @@
+{
+	"name": "tabs",
+	"title": "Tabs",
+	"description": "",
+	"dependenices": ["vuestrap/tabs"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "fade",
+			"type": "Boolean",
+			"default": true,
+			"required": false,
+			"description": "If set to true, tab panels will animate during tab change."
+		}, 
+		{
+			"name": "size",
+			"type": "String",
+			"default": "md",
+			"values": ["sm", "md", "lg"],
+			"required": false,
+			"description": "Size of the tab buttons."
+		}
+	]
+}

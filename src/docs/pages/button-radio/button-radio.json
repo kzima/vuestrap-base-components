@@ -1,0 +1,40 @@
+{
+	"name": "button-radio",
+	"title": "Button Radio",
+	"description": "Alllows to select only one item out of a group of buttons.",
+	"dependencies": ["vuestrap/buttons"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "model",
+			"type": "String",
+			"default": "''",
+			"required": true,
+			"description": "A result of the selection. Two way binding."
+		},
+		{
+			"name": "list",
+			"type": "Array",
+			"default": "[]",
+			"required": true,
+			"description": "A list of checkbox items."
+		},
+		{
+			"name": "size",
+			"type": "String",
+			"values": ["sm","md","lg"],
+			"default": "md",
+			"description": "Size of the button."
+		}, 
+		{
+			"name": "variant",
+			"type": "String",
+			"values": ["secondary","primary","success","info","warning","danger","link"],
+			"default": "success",
+			"description": "Button color context."
+		}
+	]
+}

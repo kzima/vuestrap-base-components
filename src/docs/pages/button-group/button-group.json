@@ -1,0 +1,19 @@
+{
+	"name": "button-group",
+	"title": "Button Group",
+	"description": "Group a series of buttons together on a single line with the button group.",
+	"dependencies": ["vuestrap/buttons"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "vertical",
+			"type": "Boolean",
+			"default": false,
+			"required": false,
+			"description": "Stacks buttons in vertical position."
+		}
+	]
+}

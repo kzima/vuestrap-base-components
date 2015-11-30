@@ -1,0 +1,21 @@
+<code class="html">
+<form-radio
+  :model.sync="model"
+  :list="[
+    {
+      name: 'First',
+      value: 'first',
+    }, {
+      name: 'Second',
+      value: 'second',
+    }, {
+      name: 'Third (disabled)',
+      value: 'third',
+      disabled: true,
+    },
+  ]"
+  :custom="true"
+  :vertical="true"
+  :state="'success'">
+</form-radio>
+</code>

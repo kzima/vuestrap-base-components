@@ -1,0 +1,69 @@
+{
+	"name": "tables",
+	"title": "Tables",
+	"description": "For tabular data.",
+	"dependenices": ["vuestrap/tables"],
+	"note": "This is standard html <code>&lt;table></code> markup. Please see options below on what classes can be used for styling.",
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": ".table",
+			"type": "class",
+			"default": "",
+			"required": false,
+			"description": "Adds styling to the table."
+		},
+		{
+			"name": ".table-border",
+			"type": "class",
+			"default": "",
+			"required": false,
+			"description": "Adds borders on all sides of the table and cells."
+		},
+		{
+			"name": ".table-inverse",
+			"type": "class",
+			"default": "",
+			"required": false,
+			"description": "<code>&lt;table></code> appear dark gray."
+		},
+		{
+			"name": ".thead-inverse",
+			"type": "class",
+			"default": "",
+			"required": false,
+			"description": "<code>&lt;thead></code>s appear light or dark gray."
+		},
+		{
+			"name": ".table-hover",
+			"type": "class",
+			"default": "",
+			"required": false,
+			"description": "To enable a hover state on table rows within a <code>&lt;tbody></code>."
+		},
+		{
+			"name": ".table-sm",
+			"type": "class",
+			"default": "",
+			"required": false,
+			"description": "To make tables more compact by cutting cell padding in half."
+		},
+		{
+			"name": ".table-responsive",
+			"type": "class",
+			"default": "",
+			"required": false,
+			"description": "To make them scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference in these tables."
+		},
+		{
+			"name": ".table-striped",
+			"type": "class",
+			"default": "",
+			"required": false,
+			"description": "Adds zebra-striping to any table row within the <code>&lt;tbody></code>."
+		}
+	]
+}

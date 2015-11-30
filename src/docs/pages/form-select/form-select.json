@@ -1,0 +1,75 @@
+{
+	"name": "form-select",
+	"title": "Form Select",
+	"description": "A textual input.",
+	"dependencies": ["vuestrap/forms"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "model",
+			"type": "String",
+			"default": "''",
+			"required": true,
+			"description": "A result of the selection. Two way data binding."
+		},
+		{
+			"name": "options",
+			"type": "Array",
+			"default": "[]",
+			"required": true,
+			"description": "A list of options"
+		},
+		{
+			"name": "id",
+			"type": "String",
+			"default": "unqueId",
+			"description": "Id used for input and corresponding label. If not set it will be auto-generated."
+		},
+		{
+			"name": "label",
+			"type": "String",
+			"values": "",
+			"default": "''",
+			"required": false,
+			"description": "A label text above the input."
+		},
+		{
+			"name": "default-option",
+			"type": "Object",
+			"default": "''",
+			"required": false,
+			"description": "Show default option, i.e. <code>{text: 'Please select one',value: 'default'}</code>."
+		},
+		{
+			"name": "description",
+			"type": "String",
+			"default": "''",
+			"required": false,
+			"description": "A text muted text under neath of the input."
+		},
+		{
+			"name": "size",
+			"type": "String",
+			"values": ["sm","md","lg"],
+			"default": "md",
+			"description": "Size of the button."
+		}, 
+		{
+			"name": "state",
+			"type": "String",
+			"values": ["success","info","warning","danger"],
+			"default": "success",
+			"description": "A validation state."
+		},
+		{
+			"name": "multiple",
+			"type": "Boolean",
+			"default": true,
+			"required": false,
+			"description": "Multiple selection"
+		}
+	]
+}

@@ -1,0 +1,11 @@
+<div class="media">
+  <div class="{{mediaHorizontalAlign}} {{mediaVerticalAlign}}" v-if="mediaHorizontalAlign == 'media-left'">
+  	<slot name="aside">
+  </div>
+  <div class="media-body">
+  	<slot name="body">
+  </div>
+  <div class="{{mediaHorizontalAlign}} {{mediaVerticalAlign}}" v-if="mediaHorizontalAlign == 'media-right'">
+  	<slot name="aside">
+  </div>
+</div>

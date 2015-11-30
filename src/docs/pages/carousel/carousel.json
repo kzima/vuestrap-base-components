@@ -1,0 +1,33 @@
+{
+	"name": "carousel",
+	"title": "Carousel",
+	"description": "",
+	"dependencies": ["vuestrap/{dependency}"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "interval",
+			"type": "Number",
+			"default": "5000",
+			"required": "false",
+			"description": "Slides will be auto rotated every 5000ms (5s). To stop auto-rotation set interval to 0."
+		},
+		{
+			"name": "indicators",
+			"type": "Boolean",
+			"default": true,
+			"required": "false",
+			"description": "Show/hide indicators."
+		},
+		{
+			"name": "controls",
+			"type": "Boolean",
+			"default": true,
+			"required": "false",
+			"description": "Show/hide controls."
+		}
+	]
+}

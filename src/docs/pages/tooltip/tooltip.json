@@ -1,0 +1,35 @@
+{
+	"name": "tooltip",
+	"title": "Tooltip",
+	"description": "Add small overlay content to any element for housing secondary information. Tooltips rely on on the 3rd party library <a href='http://github.hubspot.com/tether/'>tether</a> for positioning.",
+	"dependenices": ["vuestrap-tether", "vuestrap/buttons"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	
+	"options": [
+		{
+			"name": "position",
+			"type": "String",
+			"values": ["top", "bottom", "left", "right"],
+			"default": "top",
+			"required": false,
+			"description": "Position of the popover."
+		},
+		{
+			"name": "text",
+			"type": "String",
+			"default": "''",
+			"required": false,
+			"description": "Title or a small text."
+		},
+		{
+			"name": "triggers",
+			"type": "Array",
+			"values": ["click","focus","hover"],
+			"default": "['click']",
+			"description": "Opens popover based on specified triggers. If you consider supporting mobile devices than you might need to specify both click and hover trigger (on desktops click will take priority)."
+		}
+	]
+}

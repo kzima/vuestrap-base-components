@@ -1,0 +1,50 @@
+{
+	"name": "pagination",
+	"title": "Pagination",
+	"description": "Provide pagination links for your site or app with the multi-page pagination component.",
+	"dependencies": ["vuestrap/buttons","vuestrap/button-group"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "current-page",
+			"type": "Number",
+			"default": "1",
+			"description": "Sets the initial active page number."
+		},
+		{
+			"name": "limit",
+			"type": "Number",
+			"default": "7",
+			"description": "Number of visible links"
+		}, 
+		{
+			"name": "per-page",
+			"type": "Number",
+			"default": "20",
+			"description": "Number of visible links including left and right arrows."
+		},
+		{
+			"name": "total-rows",
+			"type": "Number",
+			"default": "20",
+			"description": "Number of all results, so the pagination can calculate page links."
+		},
+		{
+			"name": "size",
+			"type": "String",
+			"values": ["sm","md","lg"],
+			"default": "md",
+			"description": "Size of the button."
+		}, 
+		{
+			"name": "variant",
+			"type": "String",
+			"values": ["secondary","primary","success","info","warning","danger","link"],
+			"default": "success",
+			"description": "Button color context."
+		}
+	]
+}

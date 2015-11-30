@@ -1,0 +1,34 @@
+<docs-demo :meta="meta" :snippet="snippet">
+	<div slot="controls">
+		<!-- Html controls start-->
+		<label>
+				size
+				<select v-model="size">
+					<option v-for="option in sizes" v-bind:value="option.value">
+				    {{ option.text }}
+				  </option>
+				</select>
+			</label>
+
+			<label>
+				variant
+				<select v-model="variant">
+					<option v-for="option in variants" v-bind:value="option.value">
+				    {{ option.text }}
+				  </option>
+				</select>
+			</label>
+		<!-- Html controls end-->
+	</div>
+	<div slot="markup">
+			<!-- Html markup start-->
+			<pagination
+			    :size="size"
+			    :variant="variant"
+			    :total-rows="totalRows"
+			    :current-page.sync="currentPage"
+			    :per-page="perPage">
+			</pagination>
+			<!-- Html markup end-->
+	</div>
+</docs-demo>	

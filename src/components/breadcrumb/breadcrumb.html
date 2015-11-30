@@ -1,0 +1,6 @@
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li v-for="item in list" v-bind:class="{ active: active }">
+        <a href="{{item.href}}" v-if="!active">{{item.text}}</a>
+        <span v-if="active">{{item.text}}</span>
+    </li>
+</ol>

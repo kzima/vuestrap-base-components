@@ -1,0 +1,19 @@
+{
+	"name": "media",
+	"title": "Media",
+	"description": "The media object is an abstract element used as the basis for building more complex and repetitive components (like blog comments, Tweets, etc).",
+	"dependencies": ["vuestrap/images"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "align",
+			"type": "String",
+			"default": "top left",
+			"required": false,
+			"description": "To align media object versus body content."
+		}
+	]
+}

@@ -1,0 +1,11 @@
+<span class="icons icons-kzima {{iconsSize}} {{iconsVariant}} {{iconsBackground}} {{iconsAlign}}">
+	<svg class="icon" v-if="name">
+		<use v-bind:xlink:href="path + '#' + name"></use>
+	</svg>
+	<svg class="icon-background" v-if="background">
+		<use v-bind:xlink:href="path + '#' + background"></use>
+	</svg>
+	<span class="text" v-if="text.length">
+		<span><slot>{{text}}</slot></span>
+	</span>
+</span>

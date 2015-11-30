@@ -1,0 +1,49 @@
+<docs-demo :meta="meta" :snippet="snippet">
+
+	<!-- Html controls start-->
+	<div slot="controls">
+		<label>
+			variant
+			<select v-model="variant">
+				<option v-for="option in variants" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+
+		<label>
+			type
+			<select v-model="type">
+				<option v-for="option in types" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+
+		<label>
+			align
+			<select v-model="align">
+				<option v-for="option in aligns" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+	</div>
+	<!-- Html controls end-->
+
+	<!-- Html markup start-->
+	<div slot="markup">
+			<card style="max-width: 350px;" 
+				:variant="variant"
+				:type="type"
+				:align="align">
+				<img class="card-img img-fluid" src="/assets/card-350x150.png" alt="Card image cap">
+			  <div class="card-block">
+			    <h4 class="card-title">Card title</h4>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			  </div>
+		  </card>
+	</div>
+	<!-- Html markup end-->
+
+</docs-demo>	

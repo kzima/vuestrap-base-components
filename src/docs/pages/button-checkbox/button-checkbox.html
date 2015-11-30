@@ -1,0 +1,36 @@
+<docs-demo :meta="meta" :snippet="snippet">
+
+	<!-- Html controls start-->
+	<div slot="controls">
+		<label>
+			size 
+			<select v-model="size">
+				<option v-for="option in sizes" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+		<label>
+			variant 
+			<select v-model="variant">
+				<option v-for="option in variants" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+	</div>
+	<!-- Html controls end-->
+
+	<!-- Html markup start-->
+	{{model}}
+	<div slot="markup">
+			<button-checkbox
+			  :list.sync="list"
+			  :model.sync="model"
+			  :size="size"
+			  :variant="variant">
+			</button-checkbox>
+	</div>
+	<!-- Html markup end-->
+
+</docs-demo>	

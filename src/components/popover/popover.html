@@ -1,0 +1,10 @@
+<span v-el:trigger>
+	<slot></slot>
+</span> 
+<div class="popover {{popoverAlignment}}" v-show="show" v-el:popover>
+  <div class="popover-arrow"></div>
+  <h3 class="popover-title" v-if="title">{{title}}</h3>
+  <div class="popover-content">
+    <span v-html="text"></span>
+  </div>
+</div>

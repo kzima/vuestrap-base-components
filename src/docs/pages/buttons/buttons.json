@@ -1,0 +1,57 @@
+{
+	"name": "buttons",
+	"title": "Buttons",
+	"description": "Use Bootstrap’s custom button styles for actions in forms, dialogs, and more. Includes support for a handful of contextual variations, sizes, states, and more.",
+	"dependencies": ["vuestrap/buttons"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "block",
+			"type": "Boolean",
+			"default": false,
+			"description": "Button spans over full width of a parent."
+		}, 
+		{
+			"name": "disabled",
+			"type": "Boolean",
+			"default": false,
+			"description": "Make buttons look inactive by adding the disabled boolean attribute to any <code>&lt;button></code> element."
+		}, 
+		{
+			"name": "href",
+			"type": "String",
+			"default": "",
+			"description": "If <code>href</code> is provided, button is a regular <code>&lt;a></code> link with button spacing."
+		}, 
+		{
+			"name": "role",
+			"type": "String",
+			"default": "",
+			"description": "if <code>&lt;a></code> elements are used to trigger in-page functionality (like collapsing content), than these links should be given a <code>role='button'</code>"
+		}, 
+		{
+			"name": "size",
+			"type": "String",
+			"values": ["sm","md","lg"],
+			"default": "md",
+			"description": "Size of the button."
+		}, 
+		{
+			"name": "type",
+			"type": "String",
+			"values": ["button","submit"],
+			"default": "button",
+			"description": "Button type."
+		},
+		{
+			"name": "variant",
+			"type": "String",
+			"values": ["secondary","primary","success","info","warning","danger","link","secondary-outline","primary-outline","success-outline","info-outline","warning-outline","danger-outline"],
+			"default": "success",
+			"description": "Button color context."
+		}
+	]
+}

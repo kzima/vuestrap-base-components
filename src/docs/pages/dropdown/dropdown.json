@@ -1,0 +1,47 @@
+{
+	"name": "dropdown",
+	"title": "Dropdown",
+	"description": "Dropdowns are toggleable, contextual overlays for displaying lists of links.",
+	"dependencies": ["vuestrap/buttons"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "icon",
+			"type": "String",
+			"default": "",
+			"required": false,
+			"description": "Show icon to the left of the button text."
+		},
+		{
+			"name": "caret",
+			"type": "Boolean",
+			"default": true,
+			"required": false,
+			"description": "Show/hide down caret.."
+		},
+		{
+			"name": "text",
+			"type": "String",
+			"default": "",
+			"required": false,
+			"description": "Button text.."
+		},
+		{
+			"name": "size",
+			"type": "String",
+			"values": ["sm","md","lg"],
+			"default": "md",
+			"description": "Size of the button.."
+		}, 
+		{
+			"name": "variant",
+			"type": "String",
+			"values": ["secondary","primary","success","info","warning","danger","link"],
+			"default": "success",
+			"description": "Button color context."
+		}
+	]
+}

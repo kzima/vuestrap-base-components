@@ -1,0 +1,32 @@
+<div class="jumbotron">
+  <h1>{{pkg.name}} <span class="label label-success">{{pkg.version}}</span></h1>
+  <p>{{pkg.description}}</p>
+</div>
+<h2>Installation</h2>
+<div class="row">
+	<div class="col-xs-12 col-sm-6">
+    <h3>Compiled</h3>
+    <p>Minified CSS and JavaScript with no  documentation or original source files.</p>
+    <code>bower install {{pkg.name}} --save-dev</code>
+	</div>
+	<div class="col-xs-12 col-sm-6">
+    <h3>Source</h3>
+    <p>Source Sass, JavaScript, and documentation files.</p>
+    <code>npm install {{pkg.name}} --save-dev</code>
+   </div>
+</div>
+
+<div class="m-b-lg"></div>
+<h2>Usage</h2>
+<p>For compiled components, use it within your Vue instance like this:</p>
+<p><code>new Vue({ components: { '{{sampleComponentName}}': {{pkg.library}}.{{sampleComponentName}} }})</code></p>
+
+<div class="m-b"></div>
+<strong>OR</strong>
+<div class="m-b"></div>
+
+<p>If you chosen to work with source components, just import* desired component like so:</p>
+<p><code>import {{sampleComponentName}} from '{{pkg.name}}/src/components/{{sampleComponentName}}'</code></p>
+<p>and then load it in your Vue instance:</p>
+<p><code>new Vue({ components: { '{{sampleComponentName}}': {{sampleComponentName}} }})</code></p>
+<p>*Note: You will need <a href="https://github.com/babel/babel-loader">Babel Loader</a> in your Webpack config file to support ES6 syntax.</p>
