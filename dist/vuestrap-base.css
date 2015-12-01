@@ -1814,7 +1814,6 @@ a.text-danger:focus, a.text-danger:hover {
       padding: 0.2em; }
   .vuestrap-docs-demo .highlight {
     padding: 1rem;
-    padding-top: 0;
     margin: 1rem -1rem;
     background-color: #f7f7f9;
     margin-bottom: 0; }

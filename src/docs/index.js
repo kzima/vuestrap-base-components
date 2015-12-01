@@ -6,8 +6,8 @@ import introductionPage from 'src/docs/pages/introduction'
 import accordion from 'src/docs/pages/accordion'
 import alert from 'src/docs/pages/alert'
 import breadcrumb from 'src/docs/pages/breadcrumb'
-import buttonCheckbox from 'src/docs/pages/button-checkbox'
 import buttonGroup from 'src/docs/pages/button-group'
+import buttonCheckbox from 'src/docs/pages/button-checkbox'
 import buttonRadio from 'src/docs/pages/button-radio'
 import buttons from 'src/docs/pages/buttons'
 import card from 'src/docs/pages/card'
@@ -65,8 +65,8 @@ const pages = {
 	accordion: accordion,
 	alert: alert,
 	breadcrumb: breadcrumb,
-	'button-checkbox': buttonCheckbox,
 	'button-group': buttonGroup,
+	'button-checkbox': buttonCheckbox,
 	'button-radio': buttonRadio,
 	buttons: buttons,
 	card: card,
@@ -112,8 +112,10 @@ for (const key in pages) {
 				route: '/' + meta.name,
 				url: '#/' + meta.name
 			}
+
 	    // add route for demo page
 			routes.push(route)
+
 			// add to demoPages Collection
 			demoPages.push(route)
 		} else {
@@ -140,6 +142,14 @@ window.docs = new Vue({
 		demoPages: demoPages,
 		currentView: '',
 	},
+	methods: {
+    closeDropdownsAndPopovers() {
+      this.$broadcast('hide::popover')
+      this.$broadcast('hide::tooltip')
+      this.$broadcast('hide::dropdown')
+      this.console = ''
+    },
+  },
 	components: components,
 	ready() {
 		// handle routes for other demo pages

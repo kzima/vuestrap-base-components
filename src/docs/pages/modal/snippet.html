@@ -1,10 +1,9 @@
-<code class="html">
 <!-- trigger -->
 <button class="btn btn-primary mini" v-on:click="$broadcast('show-modal', 'modal1')">
   Show Modal
 </button>
 <!-- modal -->
-<modal id="modal1" size="md" :fade="true">
+<modal id="modal1" size="md" fade>
   <div slot="modal-header">
     <h3>header</h3>
   </div>
@@ -17,4 +16,3 @@
     </button>
   </div>
 </modal>
-</code>

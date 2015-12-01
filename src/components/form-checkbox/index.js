@@ -53,10 +53,12 @@ export default {
   },
   ready() {
     // handle initial selection
-    this.list.forEach((item) => {
-      if (this.model.indexOf(item.value) !== -1) {
-        item.checked = true
-      }
+    Vue.nextTick(() => {
+      this.list.forEach((item) => {
+        if (this.model.indexOf(item.value) !== -1) {
+          item.checked = true
+        }
+      })
     })
   }
 }

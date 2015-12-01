@@ -46,4 +46,5 @@ You can then use icon component in your html, like so:
 
 TODO
 =========
+- document events
 - testing
