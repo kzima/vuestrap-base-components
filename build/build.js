@@ -7890,7 +7890,7 @@
 /* 233 */
 /***/ function(module, exports) {
 
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"markup\">\r\n\t\t<popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"top\">\r\n\t\t\t<button class=\"btn\">popover top</button>\r\n\t\t</popover>\r\n\t\t<popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"bottom\">\r\n\t\t\t<button class=\"btn\">poopover bottom</button>\r\n\t\t</popover>\r\n\t\t<popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"left\">\r\n\t\t\t<button class=\"btn\">poopover left</button>\r\n\t\t</popover>\r\n\t\t<popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"right\">\r\n\t\t\t<button class=\"btn\">poopover right</button>\r\n\t\t</popover>\r\n\t</div>\r\n</docs-demo>\t\r\n";
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"markup\">\r\n\t\t<popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"top\">\r\n\t\t\t<button class=\"btn\">popover top</button>\r\n\t\t</popover>\r\n\t\t<popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"bottom\">\r\n\t\t\t<button class=\"btn\">popover bottom</button>\r\n\t\t</popover>\r\n\t\t<popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"left\">\r\n\t\t\t<button class=\"btn\">popover left</button>\r\n\t\t</popover>\r\n\t\t<popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"right\">\r\n\t\t\t<button class=\"btn\">popover right</button>\r\n\t\t</popover>\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
 /* 234 */
@@ -9284,7 +9284,7 @@
 
 	module.exports = {
 		"name": "vuestrap-base-components",
-		"version": "0.2.0",
+		"version": "0.2.1",
 		"description": "Web components that extend Bootstrap 4.",
 		"library": "vuestrapBase",
 		"repository": {
@@ -9322,7 +9322,7 @@
 			"css-loader": "^0.21.0",
 			"director": "^1.2.8",
 			"extract-text-webpack-plugin": "^0.8.2",
-			"highlightjs-loader": "^0.1.3",
+			"highlightjs-loader": "^0.2.3",
 			"html-loader": "^0.3.0",
 			"json-loader": "^0.5.4",
 			"node-sass": "^3.4.1",
@@ -9330,7 +9330,7 @@
 			"sass-loader": "^3.1.1",
 			"style-loader": "^0.13.0",
 			"vuestrap": "^1.0.0",
-			"vuestrap-docs": "^0.1.2",
+			"vuestrap-docs": "^0.1.3",
 			"vuestrap-theme-loader": "^0.1.2",
 			"webpack": "^1.12.9",
 			"webpack-dev-server": "^1.12.1"
