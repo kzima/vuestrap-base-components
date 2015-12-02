@@ -63,13 +63,6 @@
 			"values": ["success","info","warning","danger"],
 			"default": "success",
 			"description": "A validation state."
-		},
-		{
-			"name": "multiple",
-			"type": "Boolean",
-			"default": true,
-			"required": false,
-			"description": "Multiple selection"
 		}
 	]
 }

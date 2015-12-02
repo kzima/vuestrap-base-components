@@ -20,6 +20,9 @@ import 'vuestrap/components/carousel'
 import template from './carousel.html'
 import {csstransitions} from 'utils'
 
+// import polyfill for IE9
+import 'utils/ie9_polyfill.js'
+
 // this is directly linked to the bootstrap animation timing in _carusel.scss
 // for browsers that do not support transitions like IE9 just change slide immediately
 const TRANSITION_DURATION = csstransitions() ? 600 : 0

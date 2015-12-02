@@ -44,7 +44,7 @@ if (ENV === 'dev') {
 /**
  * define devtool for source maps
  */
-if (ENV !== 'dist') {
+if (ENV === 'dev') {
   config.devtool = 'source-map'
 }
 

@@ -33,4 +33,16 @@ export default {
       default: 'default',
     },
   },
+  ready() {
+    this._progress = this.$els.progress
+    this._progressBar = this.$els.progressbar
+    this._progressBar.style.width = this.value + '%'
+    this._progress.setAttribute('value',  this.value)
+  },
+  watch: {
+    value(val) {
+      this._progress.setAttribute('value', val)
+      this._progressBar.style.width = this.value + '%'
+    }
+  }
 }

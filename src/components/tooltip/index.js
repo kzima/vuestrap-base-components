@@ -150,10 +150,10 @@ export default {
 
   beforeDestroy() {
     // clean up listeners
-    this._trigger.removeEventListener('click')
-    this._trigger.removeEventListener('mouseenter')
-    this._trigger.removeEventListener('mouseleave')
-    this._trigger.removeEventListener('focus')
-    this._trigger.removeEventListener('blur')
+    this._trigger.removeEventListener('click', () => _this._eventHandler())
+    this._trigger.removeEventListener('mouseenter', () => _this._eventHandler())
+    this._trigger.removeEventListener('mouseleave', () => _this._eventHandler())
+    this._trigger.removeEventListener('focus', () => _this._eventHandler())
+    this._trigger.removeEventListener('blur', () => _this._eventHandler())
   }
 }

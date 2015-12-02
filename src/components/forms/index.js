@@ -1,2 +1,2 @@
 // import dependencies
-import 'vuestrap/components/buttons'
+import 'vuestrap/components/forms'
