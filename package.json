@@ -1,6 +1,6 @@
 {
   "name": "vuestrap-base-components",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Web components that extend Bootstrap 4.",
   "library": "vuestrapBase",
   "repository": {
@@ -28,7 +28,8 @@
     "url": "https://github.com/kzima/vuestrap-base-components/issues"
   },
   "dependencies": {
-    "vue": "^1.0.10"
+    "vue": "^1.0.10",
+    "vuestrap": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
@@ -45,7 +46,6 @@
     "optimist": "^0.6.1",
     "sass-loader": "^3.1.1",
     "style-loader": "^0.13.0",
-    "vuestrap": "^1.0.0",
     "vuestrap-docs": "^0.1.5",
     "vuestrap-theme-loader": "^0.1.2",
     "webpack": "^1.12.9",

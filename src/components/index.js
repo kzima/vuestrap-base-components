@@ -7,53 +7,53 @@ import 'vuestrap/core'
 /**
  * IMPORT EACH COMPONENT
  */
-import accordion from 'src/docs/pages/accordion'
-import alert from 'src/docs/pages/alert'
-import breadcrumb from 'src/docs/pages/breadcrumb'
-import buttonCheckbox from 'src/docs/pages/button-checkbox'
-import buttonGroup from 'src/docs/pages/button-group'
-import buttonRadio from 'src/docs/pages/button-radio'
-import buttons from 'src/docs/pages/buttons'
-import card from 'src/docs/pages/card'
-import carousel from 'src/docs/pages/carousel'
-import collapse from 'src/docs/pages/collapse'
-import dropdown from 'src/docs/pages/dropdown'
-import dropdownSelect from 'src/docs/pages/dropdown-select'
-import formCheckbox from 'src/docs/pages/form-checkbox'
-import formRadio from 'src/docs/pages/form-radio'
-import formInput from 'src/docs/pages/form-input'
-import formSelect from 'src/docs/pages/form-select'
-import formTextarea from 'src/docs/pages/form-textarea'
-import images from 'src/docs/pages/images'
-import jumbotron from 'src/docs/pages/jumbotron'
-import labels from 'src/docs/pages/labels'
-import listGroup from 'src/docs/pages/list-group'
-import media from 'src/docs/pages/media'
-import modal from 'src/docs/pages/modal'
-import navigation from 'src/docs/pages/nav'
-import navbar from 'src/docs/pages/navbar'
-import pager from 'src/docs/pages/pager'
-import pagination from 'src/docs/pages/pagination'
-import popover from 'src/docs/pages/popover'
-import progress from 'src/docs/pages/progress'
-import tables from 'src/docs/pages/tables'
-import tabs from 'src/docs/pages/tabs'
-import tooltip from 'src/docs/pages/tooltip'
-
+import accordion from 'src/components/collapse'
+import alert from 'src/components/alert'
+import breadcrumb from 'src/components/breadcrumb'
+import buttonCheckbox from 'src/components/button-checkbox'
+import buttonGroup from 'src/components/button-group'
+import buttonRadio from 'src/components/button-radio'
+import buttons from 'src/components/buttons'
+import card from 'src/components/card'
+import {slide, carousel} from 'src/components/carousel'
+import collapse from 'src/components/collapse'
+import dropdown from 'src/components/dropdown'
+import dropdownSelect from 'src/components/dropdown-select'
+import formCheckbox from 'src/components/form-checkbox'
+import formRadio from 'src/components/form-radio'
+import formInput from 'src/components/form-input'
+import formSelect from 'src/components/form-select'
+import formTextarea from 'src/components/form-textarea'
+import images from 'src/components/images'
+import jumbotron from 'src/components/jumbotron'
+import labels from 'src/components/labels'
+import listGroup from 'src/components/list-group'
+import media from 'src/components/media'
+import modal from 'src/components/modal'
+import navigation from 'src/components/nav'
+import navbar from 'src/components/navbar'
+import pager from 'src/components/pager'
+import pagination from 'src/components/pagination'
+import popover from 'src/components/popover'
+import progress from 'src/components/progress'
+import tables from 'src/components/tables'
+import {tab, tabs} from 'src/components/tabs'
+import tooltip from 'src/components/tooltip'
 
 const vuestrapBase = {
-	intro: introductionPage,
-	accordion: accordion,
-	alert: alert,
-	breadcrumb: breadcrumb,
+	'accordion': accordion,
+	'badge': labels,
+	'alert': alert,
+	'breadcrumb': breadcrumb,
 	'button-checkbox': buttonCheckbox,
 	'button-group': buttonGroup,
 	'button-radio': buttonRadio,
-	buttons: buttons,
-	card: card,
-	carousel: carousel,
-	collapse: collapse,
-	dropdown: dropdown,
+	'buttons': buttons,
+	'card': card,
+	'slide': slide,
+	'carousel': carousel,
+	'collapse': collapse,
+	'dropdown': dropdown,
 	'dropdown-select': dropdownSelect,
 	'form-checkbox': formCheckbox,
 	'form-radio': formRadio,
@@ -73,8 +73,10 @@ const vuestrapBase = {
 	'popover': popover,
 	'progress': progress,
 	'tables': tables,
+	'tab': tab,
 	'tabs': tabs,
 	'tooltip': tooltip,
 }
 
+// export all components under global variable
 module.exports = vuestrapBase
