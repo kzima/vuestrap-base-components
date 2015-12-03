@@ -1,6 +1,6 @@
 // import dependencies
 import 'vuestrap/components/forms'
-import {uniqueId} from 'utils'
+import {uniqueId} from 'utils/helpers.js'
 import template from './form-input.html'
 
 // export component object

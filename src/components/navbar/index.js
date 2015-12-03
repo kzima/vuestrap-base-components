@@ -8,7 +8,7 @@ export default {
   replace: true,
   computed: {
     navbarType() {
-      return !this.type || this.type === `default` ? `navbar-light` : `navbar-dark`
+      return !this.type || this.type === `default` || this.type === `light` ? `navbar-light` : `navbar-dark`
     },
   	navbarVariant() {
       return !this.variant || this.variant === `default` ? `bg-faded` : `bg-${this.variant}`
@@ -20,7 +20,7 @@ export default {
   props: {
   	type: {
       type: String,
-      default: 'light',
+      default: 'default',
     },
   	variant: {
       type: String,

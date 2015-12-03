@@ -18,7 +18,7 @@
 // import dependencies
 import 'vuestrap/components/carousel'
 import template from './carousel.html'
-import {csstransitions} from 'utils'
+import {csstransitions} from 'utils/helpers.js'
 
 // import polyfill for IE9
 import 'utils/ie9_polyfill.js'
@@ -155,4 +155,3 @@ export const slide = {
   template: '<div class="carousel-item"><slot></slot></div>',
   replace: true,
 }
-

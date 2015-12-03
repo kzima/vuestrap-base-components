@@ -1,6 +1,6 @@
 // import dependencies
 import template from './collapse.html'
-import {csstransitions} from 'utils'
+import {csstransitions} from 'utils/helpers.js'
 
 // import polyfill for IE9
 import 'utils/ie9_polyfill.js'

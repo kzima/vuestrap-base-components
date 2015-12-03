@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="../dist/vuestrap-base.css" rel='stylesheet' type='text/css'>
+    <style>
+    body {
+        padding: 5em 2em;
+    }
+    
+    footer .container {
+        border-top: 1px solid #ccc;
+        padding-top: 1em;
+    }
+    
+    [v-cloak] {
+        display: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+
+        <!-- navbar component -->
+        <navbar fixed="top" variant="default">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <ul class="nav navbar-nav pull-left">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+            <form class="form-inline navbar-form pull-right">
+                <input class="form-control" type="text" placeholder="Search">
+                <button class="btn btn-success-outline" type="submit">Search</button>
+            </form>
+        </navbar>
+
+        <!-- jumbotron component -->
+        <div class="container">
+            <jumbotron>
+                <h1 class="display-3">Hello, world!</h1>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <hr class="m-y-md">
+                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+
+                <!-- modal component trigger -->
+                <button class="btn btn-primary" v-on:click="$broadcast('show::modal', 'modal1')">
+                  Show Modal
+                </button>
+
+                <!-- modal component content -->
+                <modal id="modal1" size="md">
+                  <div slot="modal-header">
+                    <h3>header</h3>
+                  </div>
+                  <div slot="modal-body">
+                    body
+                  </div>
+                  <div slot="modal-footer">
+                    <button class="btn btn-primary" v-on:click="$broadcast('hide::modal', 'modal1')">
+                      OK
+                    </button>
+                  </div>
+                </modal>
+            </jumbotron>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-4" v-for="item in [0,1,2]">
+
+                <!-- card component -->
+                <card>
+                    <img class="card-img img-fluid" src="https://placehold.it/350x150" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Button</a>
+                    </div>
+                </card>
+
+              </div>
+            </div>
+        </div>
+        <div class="m-b-lg"></div>
+        <footer>
+            <div class="container">
+                <p>© Company 2016</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.min.js"></script>
+    <script src="../dist/vuestrap-base.js"></script>
+    <script>
+       new Vue({
+            el: '#app',
+            components: {
+                'modal': vuestrapBase.modal,
+                'navbar': vuestrapBase.navbar,
+                'jumbotron': vuestrapBase.jumbotron,
+                'card': vuestrapBase.card
+            }
+        })
+    </script>
+
+</body>
+
+</html>

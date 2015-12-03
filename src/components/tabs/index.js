@@ -1,7 +1,7 @@
 // import dependencies
 import 'vuestrap/components/nav'
 import template from './tabs.html'
-import {csstransitions} from 'utils'
+import {csstransitions} from 'utils/helpers.js'
 
 // this is directly linked to the bootstrap animation timing in _carusel.scss
 // for browsers that do not support transitions like IE9 just change slide immediately

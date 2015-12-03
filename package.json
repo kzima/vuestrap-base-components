@@ -1,6 +1,6 @@
 {
   "name": "vuestrap-base-components",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Web components that extend Bootstrap 4.",
   "library": "vuestrapBase",
   "repository": {
