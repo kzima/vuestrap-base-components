@@ -8,7 +8,7 @@
  * - we need to use 'right' and 'left' classes to trigger animation
  * - 'next' and 'prev' class makes the incoming slide positioned absolute, so it can follow outgoing slide
  *
- * The slide right to left we have to:
+ * To slide right to left we have to:
  * - add class 'active', 'next', and right to the next slide
  * - add class 'left' on the current slide same time as remove the 'right' class on the incoming one
  * - remove all classes and only leave 'active' on the incoming slide
@@ -18,10 +18,10 @@
 // import dependencies
 import 'vuestrap/components/carousel'
 import template from './carousel.html'
-import {csstransitions} from 'utils/helpers.js'
+import {csstransitions} from '../../../utils/helpers.js'
 
 // import polyfill for IE9
-import 'utils/ie9_polyfill.js'
+import '../../../utils/ie9_polyfill.js'
 
 // this is directly linked to the bootstrap animation timing in _carusel.scss
 // for browsers that do not support transitions like IE9 just change slide immediately

@@ -1,5 +1,7 @@
 // import dependencies
+import 'vuestrap/components/nav'
 import 'vuestrap/components/navbar'
+import 'vuestrap/components/forms'
 import template from './navbar.html'
 
 // export component object

@@ -5,7 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 // export config
 module.exports = {
   themeLoader: {
-    themes: ['./src/docs/theme/_docs.scss', './node_modules/vuestrap/theme/bootstrap.scss'], // docs theme, default bootstrap
+    themes: ['./src/theme/docs.scss', './node_modules/vuestrap/theme/bootstrap.scss'], // docs theme, default bootstrap
   },
   resolve: {
     root: path.resolve('./')

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!-- main vue app -->
-<html lang="en" id="docs" v-on:click="closeDropdownsAndPopovers">
+<html lang="en"  id="docs">
 	<head>
-		<title v-text="pageTitle">Vuestrap Base Components</title>
+		<title v-text="pageTitle">Vuestrap Docs</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,14 +30,14 @@
 			h3 {
 				font-size: 1.3rem !important;
 			}
-			body > .navbar {
+			#docs > .navbar {
 				padding: 0.2em 0 !important;
 				line-height: 3em;
 			}
-			body > .navbar .navbar-brand {
-				padding: 0 !important;;
+			#docs > .navbar .navbar-brand {
+				padding: 0 !important;
 			}
-			body > .navbar .navbar-brand img{
+			#docs > .navbar .navbar-brand img {
 				height: 2.5em;
 			}
 			[v-cloak] {
@@ -52,45 +52,13 @@
 	</head>
 
 	<body v-cloak>
-
-		<!-- header -->
-		<nav class="navbar navbar-fixed-top navbar-light bg-faded">
-	    <div class="container">
-	        <a class="navbar-brand text-center" href="#/">
-						<img src="assets/vuestrap-logo.svg" alt="Vuestrap logo">
-					</a>
-					<a class="navbar-brand text-center" href="#/">
-						Documentation
-					</a>
-					<ul class="nav navbar-nav pull-right">
-						<li class="nav-item">
-							<a href="#/" class="btn">Introduction</a>
-						</li>
-						<li class="nav-item">
-							<a href="{{pkg.homepage}}" class="btn btn-success" target="_blank">Github</a>
-						</li>
-					</ul>
-	    </div><!-- /.container -->
-	  </nav><!-- /.navbar -->
-
-		<!-- content -->
-		<div class="container">
-			<div class="row row-offcanvas row-offcanvas-right">
-				<div class="col-xs-12 col-sm-9">
-					<component :is="currentView"></component>
-		    </div><!-- /col-xs-12 -->
-
-				<!-- sidebar -->
-				<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-					<docs-search :list="demoPages" :current-view="currentView"></docs-search>
-				</div><!--/sidebar-->
-
-			</div><!--/row-->
-		</div><!--/container-->
+		
+		<div id="docs">
+			<docs-pages :routes="routes" :page-title.sync="pageTitle"></docs-pages>
+		</div>
 		
 		<!-- footer -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js"></script>
 		<script src="build/build.js"></script>
 
 	</body>

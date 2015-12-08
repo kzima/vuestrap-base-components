@@ -1,6 +1,6 @@
 {
   "name": "vuestrap-base-components",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Web components that extend Bootstrap 4.",
   "library": "vuestrapBase",
   "repository": {
@@ -48,7 +48,7 @@
     "optimist": "^0.6.1",
     "sass-loader": "^3.1.1",
     "style-loader": "^0.13.0",
-    "vuestrap-docs": "^0.1.5",
+    "vuestrap-docs": "^0.2.2",
     "vuestrap-theme-loader": "^0.1.2",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.12.1"

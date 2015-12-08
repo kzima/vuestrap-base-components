@@ -3,7 +3,6 @@
  */
 // import normalize, grid, utilities and
 import 'vuestrap/core'
-
 /**
  * IMPORT EACH COMPONENT
  */
