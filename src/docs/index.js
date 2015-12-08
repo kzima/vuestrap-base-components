@@ -24,6 +24,7 @@ import listGroup from 'src/docs/list-group'
 import media from 'src/docs/media'
 import modal from 'src/docs/modal'
 import navigation from 'src/docs/nav'
+import nav from 'src/docs/nav'
 import navbar from 'src/docs/navbar'
 import pager from 'src/docs/pager'
 import pagination from 'src/docs/pagination'
@@ -60,6 +61,7 @@ export default {
 		media,
 		modal,
 		navigation,
+		nav,
 		navbar,
 		pager,
 		pagination,

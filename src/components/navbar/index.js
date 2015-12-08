@@ -29,8 +29,12 @@ export default {
       default: 'default',
     },
     fixed: {
-    	type: String,
-    	default: '',
+      type: String,
+      default: '',
+    }, 
+    full: {
+    	type: Boolean,
+    	default: false,
     }
   },
 }

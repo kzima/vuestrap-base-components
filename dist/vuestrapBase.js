@@ -2431,6 +2431,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    fixed: {
 	      type: String,
 	      'default': ''
+	    },
+	    full: {
+	      type: Boolean,
+	      'default': false
 	    }
 	  }
 	};
@@ -2462,7 +2466,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 106 */
 /***/ function(module, exports) {
 
-	module.exports = "<nav class=\"navbar {{navbarType}} {{navbarVariant}} {{navbarfixed}}\">\r\n\t<slot></slot>\r\n</nav>";
+	module.exports = "<nav class=\"navbar {{navbarType}} {{navbarVariant}} {{navbarfixed}} {{full ? 'navbar-full' : ''}}\">\r\n\t<slot></slot>\r\n</nav>";
 
 /***/ },
 /* 107 */

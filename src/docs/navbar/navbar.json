@@ -27,6 +27,12 @@
 			"values": ["inverse","primary","success","info","warning","danger"],
 			"default": "success",
 			"description": "Background color of the navbar."
+		},
+		{
+			"name": "full",
+			"type": "Boolean",
+			"default": false,
+			"description": "Removes rounded corners if set to true."
 		}
 	]
 }
