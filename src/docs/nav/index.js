@@ -6,9 +6,9 @@ import demo from 'vuestrap-docs/src/components/demo'
 
 export default {
   route: {
-    url: '/nav',
-    name: 'nav',
-    title: 'Nav',
+    url: '/navigation',
+    name: 'navigation',
+    title: 'Navigation',
   },
   template: template,
   data() {

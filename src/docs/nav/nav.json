@@ -1,6 +1,6 @@
 {
 	"name": "navigation",
-	"title": "Nav",
+	"title": "Navigation",
 	"description": "Roll your own navigation style by extending the base .nav component.",
 	"note": "To avoid confilcts with html5 <code>&lt;nav></code> tag, please use <code>&lt;navigation></code> tag or better your own namsepaced one. Also by default, wrapping element is <code>&lt;ul></code>, so only <code>&lt;li></li></code>'s are required within <code>&lt;navigation></code> tag.",
 	"dependencies": [],

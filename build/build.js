@@ -2014,8 +2014,6 @@
 
 	var _srcDocsNav2 = _interopRequireDefault(_srcDocsNav);
 
-	var _srcDocsNav3 = _interopRequireDefault(_srcDocsNav);
-
 	var _srcDocsNavbar = __webpack_require__(221);
 
 	var _srcDocsNavbar2 = _interopRequireDefault(_srcDocsNavbar);
@@ -2049,7 +2047,7 @@
 	var _srcDocsTooltip2 = _interopRequireDefault(_srcDocsTooltip);
 
 	exports['default'] = {
-		pages: [_srcDocsIntroduction2['default'], _srcDocsAccordion2['default'], _srcDocsAlert2['default'], _srcDocsBreadcrumb2['default'], _srcDocsButtonGroup2['default'], _srcDocsButtonCheckbox2['default'], _srcDocsButtonRadio2['default'], _srcDocsButtons2['default'], _srcDocsCard2['default'], _srcDocsCarousel2['default'], _srcDocsCollapse2['default'], _srcDocsDropdown2['default'], _srcDocsDropdownSelect2['default'], _srcDocsFormCheckbox2['default'], _srcDocsFormRadio2['default'], _srcDocsFormInput2['default'], _srcDocsFormSelect2['default'], _srcDocsFormTextarea2['default'], _srcDocsImages2['default'], _srcDocsJumbotron2['default'], _srcDocsLabels2['default'], _srcDocsListGroup2['default'], _srcDocsMedia2['default'], _srcDocsModal2['default'], _srcDocsNav2['default'], _srcDocsNav3['default'], _srcDocsNavbar2['default'], _srcDocsPager2['default'], _srcDocsPagination2['default'], _srcDocsPopover2['default'], _srcDocsProgress2['default'], _srcDocsTables2['default'], _srcDocsTabs2['default'], _srcDocsTooltip2['default']]
+		pages: [_srcDocsIntroduction2['default'], _srcDocsAccordion2['default'], _srcDocsAlert2['default'], _srcDocsBreadcrumb2['default'], _srcDocsButtonGroup2['default'], _srcDocsButtonCheckbox2['default'], _srcDocsButtonRadio2['default'], _srcDocsButtons2['default'], _srcDocsCard2['default'], _srcDocsCarousel2['default'], _srcDocsCollapse2['default'], _srcDocsDropdown2['default'], _srcDocsDropdownSelect2['default'], _srcDocsFormCheckbox2['default'], _srcDocsFormRadio2['default'], _srcDocsFormInput2['default'], _srcDocsFormSelect2['default'], _srcDocsFormTextarea2['default'], _srcDocsImages2['default'], _srcDocsJumbotron2['default'], _srcDocsLabels2['default'], _srcDocsListGroup2['default'], _srcDocsMedia2['default'], _srcDocsModal2['default'], _srcDocsNav2['default'], _srcDocsNavbar2['default'], _srcDocsPager2['default'], _srcDocsPagination2['default'], _srcDocsPopover2['default'], _srcDocsProgress2['default'], _srcDocsTables2['default'], _srcDocsTabs2['default'], _srcDocsTooltip2['default']]
 	};
 	module.exports = exports['default'];
 
@@ -7488,9 +7486,9 @@
 
 	exports['default'] = {
 	  route: {
-	    url: '/nav',
-	    name: 'nav',
-	    title: 'Nav'
+	    url: '/navigation',
+	    name: 'navigation',
+	    title: 'Navigation'
 	  },
 	  template: _navHtml2['default'],
 	  data: function data() {
@@ -7515,7 +7513,7 @@
 
 	module.exports = {
 		"name": "navigation",
-		"title": "Nav",
+		"title": "Navigation",
 		"description": "Roll your own navigation style by extending the base .nav component.",
 		"note": "To avoid confilcts with html5 <code>&lt;nav></code> tag, please use <code>&lt;navigation></code> tag or better your own namsepaced one. Also by default, wrapping element is <code>&lt;ul></code>, so only <code>&lt;li></li></code>'s are required within <code>&lt;navigation></code> tag.",
 		"dependencies": [],
