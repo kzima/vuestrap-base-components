@@ -1,13 +1,13 @@
 <dropdown-select 
   :list="[
     {
-      name: 'First',
+      text: 'First',
       value: 'first',
     }, {
-      name: 'Second',
+      text: 'Second',
       value: 'second',
     }, {
-      name: 'Third',
+      text: 'Third',
       value: 'third',
     },
   ]"
@@ -15,5 +15,7 @@
   size="md"
   variant="primary"
   position="left"
+  default-text="Action"
+  force-default="false"
   caret="false">
 </dropdown-select>

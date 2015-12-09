@@ -6,8 +6,8 @@
         aria-haspopup="true"
         aria-expanded="show"
         v-on:click="toggle($event)">
-        <span v-if="selected">{{model.text}}</span>
-        <span v-if="!selected">{{defaultText}}</span>
+        <span v-if="selected && !forceDefault">{{model.text}}</span>
+        <span v-if="!selected || forceDefault">{{defaultText}}</span>
     </button>
     <ul class="dropdown-menu" v-bind:class="{'dropdown-menu-right' : position == 'right'}" aria-labelledby="dLabel">
         <li v-for="item in list">

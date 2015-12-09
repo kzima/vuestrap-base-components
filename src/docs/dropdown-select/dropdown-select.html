@@ -2,6 +2,7 @@
 	<div slot="controls">
 		<!-- Html controls start-->
 		<label>caret <input type="checkbox" v-model="caret"></label>
+		<label>force default <input type="checkbox" v-model="forceDefault"></label>
 		<label>
 			size 
 			<select v-model="size">
@@ -37,6 +38,8 @@
 			    :position="position"
 			    :size="size"
 			    :variant="variant"
+			    default-text="Action"
+			    :force-default="forceDefault"
 			    :caret="caret">
 				</dropdown-select>
 			</div>

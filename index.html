@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- main vue app -->
-<html lang="en"  id="docs">
+<html lang="en" id="docs" v-on:click="closeDropdownsAndPopovers">
 	<head>
 		<title v-text="pageTitle">Vuestrap Docs</title>
 		<meta charset="utf-8">
@@ -30,14 +30,14 @@
 			h3 {
 				font-size: 1.3rem !important;
 			}
-			#docs > .navbar {
+			#docs-pages > .navbar {
 				padding: 0.2em 0 !important;
 				line-height: 3em;
 			}
-			#docs > .navbar .navbar-brand {
+			#docs-pages > .navbar .navbar-brand {
 				padding: 0 !important;
 			}
-			#docs > .navbar .navbar-brand img {
+			#docs-pages > .navbar .navbar-brand img {
 				height: 2.5em;
 			}
 			[v-cloak] {
@@ -53,11 +53,12 @@
 
 	<body v-cloak>
 		
-		<div id="docs">
+		<div id="docs-pages">
 			<docs-pages :routes="routes" :page-title.sync="pageTitle"></docs-pages>
 		</div>
 		
 		<!-- footer -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.min.js"></script>
 		<script src="build/build.js"></script>
 

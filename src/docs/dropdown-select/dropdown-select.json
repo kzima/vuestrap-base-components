@@ -50,6 +50,13 @@
 			"description": "Default text shown before selection is made."
 		},
 		{
+			"name": "force-default",
+			"type": "Boolean",
+			"default": false,
+			"required": false,
+			"description": "Force default text to be always shown, if set to true."
+		},
+		{
 			"name": "size",
 			"type": "String",
 			"values": ["sm","md","lg"],

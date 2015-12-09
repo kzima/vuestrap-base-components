@@ -30,6 +30,14 @@ window.docs = new Vue({
 		routes: routes,
 		pageTitle: 'Vuestrap Docs',
 	},
+	methods: {
+    closeDropdownsAndPopovers() {
+      this.$broadcast('hide::popover')
+      this.$broadcast('hide::tooltip')
+      this.$broadcast('hide::dropdown')
+      this.console = ''
+    },
+  },
 	components: {
 		docsPages,
 	},

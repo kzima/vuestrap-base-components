@@ -33,6 +33,7 @@ export default {
         },
       ],
       caret: true,
+      forceDefault: false,
       position: 'left',
       positions: positions,
       size: 'md',

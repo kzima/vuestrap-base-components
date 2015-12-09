@@ -58,6 +58,10 @@ export default {
       type: String,
       default: 'Plase select one'
     },
+    forceDefault: {
+      type: Boolean,
+      default: false
+    },
   },
   methods: {
     toggle(e) {
