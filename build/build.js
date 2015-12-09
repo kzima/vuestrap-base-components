@@ -1845,7 +1845,7 @@
 
 	module.exports = {
 		"name": "vuestrap-base-components",
-		"version": "0.5.0",
+		"version": "0.6.0",
 		"description": "Web components that extend Bootstrap 4.",
 		"library": "vuestrapBase",
 		"repository": {
@@ -5122,7 +5122,7 @@
 /* 137 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">dropdown-select</span> \r\n  <span class=\"hljs-attribute\">:list</span>=<span class=\"hljs-value\">\"list: [\r\n    {\r\n      name: 'First',\r\n      value: 'first',\r\n    }, {\r\n      name: 'Second',\r\n      value: 'second',\r\n    }, {\r\n      name: 'Third',\r\n      value: 'third',\r\n    },\r\n  ],\"</span>\r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\r\n  <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"left\"</span>\r\n  <span class=\"hljs-attribute\">caret</span>=<span class=\"hljs-value\">\"false\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">dropdown-select</span>&gt;</span>\r\n";
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">dropdown-select</span> \r\n  <span class=\"hljs-attribute\">:list</span>=<span class=\"hljs-value\">\"[\r\n    {\r\n      name: 'First',\r\n      value: 'first',\r\n    }, {\r\n      name: 'Second',\r\n      value: 'second',\r\n    }, {\r\n      name: 'Third',\r\n      value: 'third',\r\n    },\r\n  ]\"</span>\r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\r\n  <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"left\"</span>\r\n  <span class=\"hljs-attribute\">caret</span>=<span class=\"hljs-value\">\"false\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">dropdown-select</span>&gt;</span>\r\n";
 
 /***/ },
 /* 138 */
