@@ -10,10 +10,10 @@
 	"options": [
 		{
 			"name": "model",
-			"type": "String",
+			"type": "String/Object",
 			"default": "''",
 			"required": true,
-			"description": "A result of the selection. Two way binding."
+			"description": "A result of the selection. Can return String or Object (see <code>return-object</code> attribute)."
 		},
 		{
 			"name": "list",
@@ -35,6 +35,13 @@
 			"values": ["secondary","primary","success","info","warning","danger","link"],
 			"default": "success",
 			"description": "Button color context."
+		},
+		{
+			"name": "return-object",
+			"type": "Boolean",
+			"default": false,
+			"required": false,
+			"description": "If set to true, a full object will be returned in the model. By default only String <code>value</code> is returned."
 		}
 	]
 }

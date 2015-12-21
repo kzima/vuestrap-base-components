@@ -14,20 +14,12 @@
 	</div>
 	<div slot="markup">
 			<!-- Html markup start-->
-			<navigation :type="type" :vertical="vertical">
-			  <li class="nav-item">
-		    <a href="#" class="nav-link active">Active</a>
-			  </li>
-			  <li class="nav-item">
-			    <a href="#" class="nav-link">Link</a>
-			  </li>
-			  <li class="nav-item">
-			    <a href="#" class="nav-link">Another link</a>
-			  </li>
-			  <li class="nav-item">
-			    <a href="#" class="nav-link disabled">Disabled</a>
-			  </li>
-			</navigation>
+			<vs-nav :type="type" :vertical="vertical">
+			 	<vs-nav-item href="#" v-on:click.prevent="" active>Active</vs-nav-item>
+			 	<vs-nav-item href="#" v-on:click.prevent="">Link</vs-nav-item>
+			 	<vs-nav-item href="#" v-on:click.prevent="">Another Link</vs-nav-item>
+			 	<vs-nav-item href="#" v-on:click.prevent="" disabled>Disabled</vs-nav-item>
+			</vs-nav>
 			<!-- Html markup end-->
 	</div>
 </docs-demo>	

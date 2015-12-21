@@ -13,7 +13,7 @@
 			"type": "String",
 			"default": "''",
 			"required": true,
-			"description": "A result of the selection. Two way data binding."
+			"description": "A result of the selection."
 		},
 		{
 			"name": "options",

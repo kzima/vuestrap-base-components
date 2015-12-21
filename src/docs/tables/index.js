@@ -1,8 +1,8 @@
 import meta from './tables.json'
 import template from './tables.html'
 import snippet from './snippet.html'
-import tables from 'src/components/tables'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsTable from 'src/components/tables'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 
 export default {
   route: {
@@ -15,10 +15,11 @@ export default {
     return {
       meta: meta,
       snippet: snippet,
+      hover: false,
     }
   },
   components: {
-    'tables': tables,
-    'docs-demo': demo,
+    vsTable,
+    docsDemo,
   },
 }

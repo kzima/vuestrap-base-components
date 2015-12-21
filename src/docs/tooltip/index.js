@@ -1,8 +1,8 @@
 import meta from './tooltip.json'
 import template from './tooltip.html'
 import snippet from './snippet.html'
-import tooltip from 'src/components/tooltip'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsTooltip from 'src/components/tooltip'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 
 export default {
   route: {
@@ -18,7 +18,7 @@ export default {
     }
   },
   components: {
-    'tooltip': tooltip,
-    'docs-demo': demo,
+    vsTooltip,
+    docsDemo,
   },
 }

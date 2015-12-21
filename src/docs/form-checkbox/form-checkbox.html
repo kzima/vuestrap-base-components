@@ -14,13 +14,14 @@
 	</div>
 	<div slot="markup">
 			<!-- Html markup start-->
-			<form-checkbox
+			<vs-form-checkbox
 		    :list.sync="list"
 		    :model.sync="model"
 		    :custom="custom"
 		    :vertical="vertical"
-		    :state="state">
-			</form-checkbox>
+		    :state="state"
+		    return-object>
+			</vs-form-checkbox>
 			<!-- Html markup end-->
 	</div>
 </docs-demo>	

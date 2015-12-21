@@ -14,13 +14,14 @@
 	</div>
 	<div slot="markup">
 			<!-- Html markup start-->
-			<form-radio
+			<vs-form-radio
 		    :model.sync="model"
 		    :list="list"
 		    :custom="custom"
 		    :vertical="vertical"
-		    :state="state">
-			</form-radio>
+		    :state="state"
+		    return-object>
+			</vs-form-radio>
 			<!-- Html markup end-->
 	</div>
 </docs-demo>	

@@ -13,14 +13,14 @@
 			"type": "String",
 			"default": "",
 			"required": "false",
-			"description": "With <code>id</code> you can control individual collapse elements. Use same unique <code>id</code> for both <code>&lt;collapse></code> and <code>&lt;collapse-toggle></code> elements."
+			"description": "With <code>id</code> you can control individual collapse elements. Use same unique <code>id</code> for both <code>&lt;vs-collapse></code> and <code>&lt;vs-collapse-toggle></code> elements."
 		},
 		{
 			"name": "group",
 			"type": "String",
 			"default": "",
 			"required": "false",
-			"description": "With <code>group</code> you can control a number of collapse elements. Use same unique <code>group</code> for all <code>&lt;collapse></code> and <code>&lt;collapse-toggle></code> elements."
+			"description": "With <code>group</code> you can control a number of collapse elements. Use same unique <code>group</code> for all <code>&lt;vs-collapse></code> and <code>&lt;vs-collapse-toggle></code> elements."
 		}
 	]
 }

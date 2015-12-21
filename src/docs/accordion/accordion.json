@@ -13,14 +13,14 @@
 			"type": "String",
 			"default": "",
 			"required": true,
-			"description": "You need to provide <code>id</code> for both <code>&lt;collapse></code> and <code>&lt;collapse-toggle></code> elements, so accordion knows which element to open."
+			"description": "You need to provide <code>id</code> for both <code>&lt;vs-collapse></code> and <code>&lt;vs-collapse-toggle></code> elements, so accordion knows which element to open."
 		},
 		{
 			"name": "group",
 			"type": "String",
 			"default": "",
 			"required": true,
-			"description": "You need to provide <code>group</code> for both <code>&lt;collapse></code> and <code>&lt;collapse-toggle></code> elements, so accordion knows which elements to hide in the same group."
+			"description": "You need to provide <code>group</code> for both <code>&lt;vs-collapse></code> and <code>&lt;vs-collapse-toggle></code> elements, so accordion knows which elements to hide in the same group."
 		}
 	]
 }

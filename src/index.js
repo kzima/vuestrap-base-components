@@ -2,6 +2,7 @@
  * IMPORT GLOBAL STYLING
  */
 // import normalize, grid, utilities and
+import Vue from 'vue'
 import 'vuestrap/core'
 
 // import external dependencies

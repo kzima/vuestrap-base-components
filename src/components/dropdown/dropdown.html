@@ -1,4 +1,4 @@
-<div class="dropdown" v-bind:class="{ open: show }">
+<div v-bind:class="{ open: show, dropdown: !dropup, dropup: dropup}">
     <button
         id="dLabel"
         class="btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}" role="button"

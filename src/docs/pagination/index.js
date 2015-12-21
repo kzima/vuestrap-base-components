@@ -1,15 +1,15 @@
 import meta from './pagination.json'
 import template from './pagination.html'
 import snippet from './snippet.html'
-import pagination from 'src/components/pagination'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsPagination from 'src/components/pagination'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 import {sizes, variants} from 'utils'
 
 export default {
   route: {
     url: '/pagination',
     name: 'pagination',
-    title: 'pagination',
+    title: 'Pagination',
   },
   template: template,
   data() {
@@ -27,7 +27,7 @@ export default {
     }
   },
   components: {
-    'pagination': pagination,
-    'docs-demo': demo,
+    vsPagination,
+    docsDemo,
   },
 }

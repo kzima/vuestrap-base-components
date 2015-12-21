@@ -1,8 +1,8 @@
 import meta from './progress.json'
 import template from './progress.html'
 import snippet from './snippet.html'
-import progress from 'src/components/progress'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsProgress from 'src/components/progress'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 import {variants} from 'utils'
 
 export default {
@@ -24,7 +24,7 @@ export default {
     }
   },
   components: {
-    'progress': progress,
-    'docs-demo': demo,
+    vsProgress,
+    docsDemo,
   },
 }

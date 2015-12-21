@@ -42,6 +42,12 @@
 			"values": ["secondary","primary","success","info","warning","danger","link"],
 			"default": "success",
 			"description": "Button color context."
+		},
+		{
+			"name": "dropup",
+			"type": "Boolean",
+			"default": false,
+			"description": "Allow for dropdowns to go bottom up (aka, dropup-menu)"
 		}
 	]
 }

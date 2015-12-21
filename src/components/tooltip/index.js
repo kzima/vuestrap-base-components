@@ -2,6 +2,7 @@
 import 'vuestrap/components/tooltip'
 // TODO import {Tether} from 'vuestrap-tether'
 import template from './tooltip.html'
+import Vue from 'vue'
 
 // export component object
 export default {
@@ -25,7 +26,7 @@ export default {
     triggers: {
       type: Array,
       default() {
-        return ['click', 'focus', 'hover']
+        return ['hover']
       }
     },
     text: {

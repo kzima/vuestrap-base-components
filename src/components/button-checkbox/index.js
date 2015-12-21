@@ -14,17 +14,10 @@ export default {
       return !this.size || this.size === `default` ? `` : `btn-${this.size}`
     },
   },
-  methods: {
-    checked(index) {
-      if (!this.list) return false
-      return this.model.indexOf(this.list[index].value) !== -1
-    }
-  },
   props: {
     list: {
       type: Array,
       default: [],
-      twoWay: true,
       required: true
     },
     model: {
@@ -40,14 +33,38 @@ export default {
       type: String,
       default: 'default'
     },
+    returnObject: {
+      type: Boolean,
+      default: false
+    },
+  },
+  methods: {
+    checked(index) {
+      if (!this.list) return false
+      let result = false
+      if (this.returnObject) {
+        for (let i = 0; i < this.model.length; i++) {
+          if (this.model[i].value === this.list[index].value) {
+            result = true
+          }
+        }
+      } else {
+         result = this.model.indexOf(this.list[index].value) !== -1
+      }
+      return result
+    }
   },
   watch: {
     list: {
-      handler() {
+      handler(val) {
         this.model = []
         this.list.forEach((item) => {
           if (item.checked) {
-            this.model.push(item.value)
+            if (this.returnObject) {
+              this.model.push(item)
+            } else {
+              this.model.push(item.value)
+            }
           }
         })
         // dispatch an event
@@ -56,4 +73,20 @@ export default {
       deep: true,
     }
   },
+  ready() {
+    // handle initial selection
+    this.list.forEach((item) => {
+      if (this.returnObject) {
+        this.model.forEach((modelItem) => {
+          if (modelItem.value === item.value) {
+            item.checked = true
+          }
+        })
+      } else {
+         if (this.model.indexOf(item.value) !== -1) {
+          item.checked = true
+        }
+      }
+    })
+  }
 }

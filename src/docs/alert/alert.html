@@ -16,13 +16,13 @@
 	
 	<!-- Html markup start-->
 	<div slot="markup">
-		<alert
+		<vs-alert
 		    :show.sync="show"
 		    :state="state"
 		    :message="message"
 		    :dismissible="dismissible">
 		    This is an alert
-		</alert>
+		</vs-alert>
 		<template v-if="!show">
 			<button href='#' v-on:click="show = true">Show alert again</button>
 		</template>

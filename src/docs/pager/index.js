@@ -1,8 +1,8 @@
 import meta from './pager.json'
 import template from './pager.html'
 import snippet from './snippet.html'
-import pager from 'src/components/pager'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsPager from 'src/components/pager'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 
 export default {
   route: {
@@ -21,7 +21,7 @@ export default {
     }
   },
   components: {
-    'pager': pager,
-    'docs-demo': demo,
+    vsPager,
+    docsDemo,
   },
 }

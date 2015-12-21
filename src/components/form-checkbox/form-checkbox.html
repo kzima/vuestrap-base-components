@@ -7,7 +7,7 @@
 				value="{{item.value}}" 
 				autocomplete="off" 
 				v-model="item.checked" 
-				disabled="{{item.disabled}}">
+				v-bind:disabled="item.disabled">
 				<span class="c-indicator" v-if="custom"></span> {{item.text}}
 		</label>
 	</div>

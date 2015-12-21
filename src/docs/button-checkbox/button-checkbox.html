@@ -22,14 +22,14 @@
 	<!-- Html controls end-->
 
 	<!-- Html markup start-->
-	{{model}}
 	<div slot="markup">
-			<button-checkbox
-			  :list.sync="list"
-			  :model.sync="model"
-			  :size="size"
-			  :variant="variant">
-			</button-checkbox>
+		<vs-button-checkbox
+		  :list.sync="list"
+		  :model.sync="model"
+		  :size="size"
+		  :variant="variant"
+		  return-object>
+		</vs-button-checkbox>
 	</div>
 	<!-- Html markup end-->
 

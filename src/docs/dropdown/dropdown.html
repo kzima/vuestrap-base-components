@@ -2,6 +2,7 @@
 	<div slot="controls">
 		<!-- Html controls start-->
 		<label>caret <input type="checkbox" v-model="caret"></label>
+		<label>dropup <input type="checkbox" v-model="dropup"></label>
 		<label>
 			size 
 			<select v-model="size">
@@ -23,16 +24,17 @@
 	</div>
 	<div slot="markup">
 			<!-- Html markup start-->
-			<dropdown
+			<vs-dropdown
 			  :text="'Action'"
 			  :variant="variant"
 			  :size="size"
-			  :caret="caret">
+			  :caret="caret"
+			  :dropup="dropup">
 			  <ul class="dropdown-menu">
 			      <li><a class="dropdown-item" href="#" v-on:click.prevent="">Completed</a></li>
 			      <li><a class="dropdown-item" href="#" v-on:click.prevent="">Pending</a></li>
 			  </ul>
-			</dropdown>
+			</vs-dropdown>
 			<!-- Html markup end-->
 	</div>
 </docs-demo>	

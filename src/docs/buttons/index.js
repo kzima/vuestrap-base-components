@@ -1,8 +1,8 @@
 import meta from './buttons.json'
 import template from './buttons.html'
 import snippet from './snippet.html'
-import buttons from 'src/components/buttons'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsBtn from 'src/components/buttons'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 import {sizes, variants} from 'utils'
 
 export default {
@@ -23,8 +23,8 @@ export default {
     }
   },
   components: {
-    'btn': buttons,
-    'docs-demo': demo,
+    vsBtn,
+    docsDemo,
   },
 }
 

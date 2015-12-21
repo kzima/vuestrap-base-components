@@ -1,8 +1,8 @@
 import meta from './form-select.json'
 import template from './form-select.html'
 import snippet from './snippet.html'
-import formSelect from 'src/components/form-select'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsFormSelect from 'src/components/form-select'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 import {sizes, states} from 'utils'
 
 export default {
@@ -33,7 +33,7 @@ export default {
     }
   },
   components: {
-    'form-select': formSelect,
-    'docs-demo': demo,
+    vsFormSelect,
+    docsDemo,
   },
 }

@@ -1,4 +1,4 @@
-<dropdown-select 
+<vs-dropdown-select 
   :list="[
     {
       text: 'First',
@@ -9,13 +9,14 @@
     }, {
       text: 'Third',
       value: 'third',
-    },
-  ]"
+    }]"
   :model.sync="model"
   size="md"
   variant="primary"
   position="left"
   default-text="Action"
   force-default="false"
-  caret="false">
-</dropdown-select>
+  caret="false"
+  dropup
+  return-object>
+</vs-dropdown-select>

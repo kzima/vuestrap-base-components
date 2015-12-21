@@ -1,8 +1,8 @@
 import meta from './dropdown.json'
 import template from './dropdown.html'
 import snippet from './snippet.html'
-import dropdown from 'src/components/dropdown'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsDropdown from 'src/components/dropdown'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 import {sizes, variants} from 'utils'
 
 export default {
@@ -17,6 +17,7 @@ export default {
       meta: meta,
       snippet: snippet,
       caret: true,
+      dropup: false,
       size: 'md',
       sizes: sizes,
       variant: 'primary',
@@ -24,7 +25,7 @@ export default {
     }
   },
   components: {
-    'dropdown': dropdown,
-    'docs-demo': demo,
+    vsDropdown,
+    docsDemo,
   },
 }

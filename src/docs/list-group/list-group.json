@@ -7,5 +7,28 @@
 	"browserSupport": {
 		"browsers": ["IE9+", "Android 4.3"]
 	},
-	"options": []
+	"options": [
+		{
+			"name": "state",
+			"type": "String",
+			"default": "default",
+			"values": ["default","success","info","warning","danger"],
+			"required": false,
+			"description": "A color context ot the individual <code>&lt;vs-list-group-item></code>."
+		},
+		{
+			"name": "active",
+			"type": "Boolean",
+			"default": false,
+			"required": false,
+			"description": "An active state ot the individual <code>&lt;vs-list-group-item></code>."
+		},
+		{
+			"name": "disabled",
+			"type": "Boolean",
+			"default": false,
+			"required": false,
+			"description": "A disabled state ot the individual <code>&lt;vs-list-group-item></code>."
+		}
+	]
 }

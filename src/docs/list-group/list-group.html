@@ -1,20 +1,32 @@
 <docs-demo :meta="meta" :snippet="snippet">
+<div slot="controls">
+		<!-- Html controls start-->
+		<label>
+			variant 
+			<select v-model="state">
+				<option v-for="option in states" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+	</div>
+	<!-- Html controls end-->
 	<div slot="markup">
 			<!-- Html markup start-->
-			<list-group style="width: 350px">
-				<li class="list-group-item">
-			    <badge type="pill" class="pull-right">14</badge>
+			<vs-list-group style="width: 350px">
+				<vs-list-group-item :state="state">
+			    <vs-badge type="pill" class="pull-right">14</vs-badge>
 			    Cras justo odio
-			  </li>
-			  <li class="list-group-item">
-			    <badge type="pill" class="pull-right">2</badge>
+			  </vs-list-group-item>
+			  <vs-list-group-item>
+			    <vs-badge type="pill" class="pull-right">2</vs-badge>
 			    Dapibus ac facilisis in
-			  </li>
-			  <li class="list-group-item">
-			    <badge type="pill" class="pull-right">1</badge>
+			  </vs-list-group-item>
+			  <vs-list-group-item>
+			    <vs-badge type="pill" class="pull-right">1</vs-badge>
 			    Morbi leo risus
-			  </li>
-			</list-group>
+			  </vs-list-group-item>
+			</vs-list-group>
 			<!-- Html markup end-->
 	</div>
 </docs-demo>	

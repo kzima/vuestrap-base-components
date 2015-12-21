@@ -1,8 +1,8 @@
 import meta from './form-textarea.json'
 import template from './form-textarea.html'
 import snippet from './snippet.html'
-import formTextarea from 'src/components/form-textarea'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsFormTextarea from 'src/components/form-textarea'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 import {states} from 'utils'
 
 export default {
@@ -22,7 +22,7 @@ export default {
     }
   },
   components: {
-    'form-textarea': formTextarea,
-    'docs-demo': demo,
+    vsFormTextarea,
+    docsDemo,
   },
 }

@@ -48,7 +48,7 @@ export const collapse = {
   },
   events: {
     'toggled::collapse'(data) {
-      if (data.id === this.id || data.group === this.group) {
+      if (data.id && data.id === this.id && !data.group || data.group && data.group === this.group && !data.id) {
         if ((this.$el.className + ' ').indexOf(' in ') > -1) {
           this.hide()
         } else {

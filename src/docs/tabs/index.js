@@ -1,8 +1,8 @@
 import meta from './tabs.json'
 import template from './tabs.html'
 import snippet from './snippet.html'
-import {tab, tabs} from 'src/components/tabs'
-import demo from 'vuestrap-docs/src/components/demo'
+import {tab as vsTab, tabs as vsTabs} from 'src/components/tabs'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 import {sizes} from 'utils'
 
 export default {
@@ -22,8 +22,8 @@ export default {
     }
   },
   components: {
-    'tab': tab,
-    'tabs': tabs,
-    'docs-demo': demo,
+    vsTab,
+    vsTabs,
+    docsDemo,
   },
 }

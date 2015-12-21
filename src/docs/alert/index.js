@@ -1,8 +1,8 @@
 import meta from './alert.json'
 import template from './alert.html'
 import snippet from './snippet.html'
-import alert from 'src/components/alert'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsAlert from 'src/components/alert'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 
 export default {
   route: {
@@ -29,7 +29,7 @@ export default {
     }
   },
   components: {
-    'alert': alert,
-    'docs-demo': demo,
+    vsAlert,
+    docsDemo,
   },
 }

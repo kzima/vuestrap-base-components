@@ -2,6 +2,8 @@
 import 'vuestrap/components/popover'
 // TODO import {Tether} from 'vuestrap-tether'
 import template from './popover.html'
+import Vue from 'vue'
+
 
 // export component object
 export default {

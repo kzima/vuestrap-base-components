@@ -9,6 +9,13 @@
 	},
 	"options": [
 		{
+			"name": "model",
+			"type": "Array",
+			"default": "[]",
+			"required": true,
+			"description": "An array of <code>String</code> or <code>Object</code> values, (see <code>return-object</code> attribute)."
+		},
+		{
 			"name": "list",
 			"type": "Array",
 			"default": "[]",
@@ -35,6 +42,13 @@
 			"values": ["success","info","warning","danger"],
 			"default": "success",
 			"description": "A validation state."
+		},
+		{
+			"name": "return-object",
+			"type": "Boolean",
+			"default": false,
+			"required": false,
+			"description": "If set to true, a full object will be returned in the model. By default only <code>value</code> is returned."
 		}
 	]
 }

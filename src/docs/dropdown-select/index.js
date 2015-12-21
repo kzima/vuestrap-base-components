@@ -1,8 +1,8 @@
 import meta from './dropdown-select.json'
 import template from './dropdown-select.html'
 import snippet from './snippet.html'
-import dropdownSelect from 'src/components/dropdown-select'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsDropdownSelect from 'src/components/dropdown-select'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 import {sizes, variants, positions} from 'utils'
 
 export default {
@@ -17,9 +17,9 @@ export default {
       meta: meta,
       snippet: snippet,
       model: {
-          text: 'First',
-          value: 'first',
-        },
+        text: 'First',
+        value: 'first',
+      },
       list: [
         {
           text: 'First',
@@ -33,6 +33,7 @@ export default {
         },
       ],
       caret: true,
+      dropup: false,
       forceDefault: false,
       position: 'left',
       positions: positions,
@@ -43,7 +44,7 @@ export default {
     }
   },
   components: {
-    'dropdown-select': dropdownSelect,
-    'docs-demo': demo,
+    vsDropdownSelect,
+    docsDemo,
   },
 }

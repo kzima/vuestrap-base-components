@@ -1,8 +1,8 @@
 import meta from './modal.json'
 import template from './modal.html'
 import snippet from './snippet.html'
-import modal from 'src/components/modal'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsModal from 'src/components/modal'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 import {sizes} from 'utils'
 
 export default {
@@ -22,7 +22,7 @@ export default {
     }
   },
   components: {
-    'modal': modal,
-    'docs-demo': demo,
+    vsModal,
+    docsDemo,
   },
 }

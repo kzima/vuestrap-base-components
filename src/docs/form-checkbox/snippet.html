@@ -1,17 +1,18 @@
-<form-checkbox 
-  :list.sync=" [{
-      text: 'First',
-      checked: false,
-    }, {
-      text: 'Second',
-      checked: true,
-    }, {
-      text: 'Third',
-      checked: false,
-      disabled: true
-    },
-  ]"
+<vs-form-checkbox 
+  :list.sync="[{
+    text: 'First',
+    value: 'first',
+  }, {
+    text: 'Second',
+    value: 'second',
+  }, {
+    text: 'Third',
+    value: 'third',
+    disabled: true
+  }]"
   :state="'default'"
   custom="false"
-  vertical>
-</form-checkbox>
+  vertical
+  return-object
+  return-object>
+</vs-form-checkbox>

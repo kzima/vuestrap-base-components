@@ -25,31 +25,23 @@
     <div id="app" v-cloak>
 
         <!-- navbar component -->
-        <navbar fixed="top" variant="default">
+        <vs-navbar fixed="top" variant="default">
             <a class="navbar-brand" href="#">Navbar</a>
-            <ul class="nav navbar-nav pull-left">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-            </ul>
+            <vs-nav type="navbar" :vertical="false" class="pull-left">
+              <vs-nav-item href="#" active>Home</vs-nav-item>
+              <vs-nav-item href="#">Features</vs-nav-item>
+              <vs-nav-item href="#">Pricing</vs-nav-item>
+              <vs-nav-item href="#">About</vs-nav-item>
+            </vs-nav>
             <form class="form-inline navbar-form pull-right">
                 <input class="form-control" type="text" placeholder="Search">
                 <button class="btn btn-success-outline" type="submit">Search</button>
             </form>
-        </navbar>
+        </vs-navbar>
 
         <!-- jumbotron component -->
         <div class="container">
-            <jumbotron>
+            <vs-jumbotron>
                 <h1 class="display-3">Hello, world!</h1>
                 <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
                 <hr class="m-y-md">
@@ -61,7 +53,7 @@
                 </button>
 
                 <!-- modal component content -->
-                <modal id="modal1" size="md">
+                <vs-modal id="modal1" size="md">
                   <div slot="modal-header">
                     <h3>header</h3>
                   </div>
@@ -73,8 +65,8 @@
                       OK
                     </button>
                   </div>
-                </modal>
-            </jumbotron>
+                </vs-modal>
+            </vs-jumbotron>
         </div>
 
 
@@ -83,14 +75,14 @@
               <div class="col-xs-12 col-sm-4" v-for="item in [0,1,2]">
 
                 <!-- card component -->
-                <card>
+                <vs-card>
                     <img class="card-img img-fluid" src="https://placehold.it/350x150" alt="Card image cap">
                     <div class="card-block">
                         <h4 class="card-title">Card title</h4>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Button</a>
                     </div>
-                </card>
+                </vs-card>
 
               </div>
             </div>
@@ -109,10 +101,12 @@
        new Vue({
             el: '#app',
             components: {
-                'modal': vuestrapBase.modal,
-                'navbar': vuestrapBase.navbar,
-                'jumbotron': vuestrapBase.jumbotron,
-                'card': vuestrapBase.card
+                'vs-modal': vuestrapBase.modal,
+                'vs-nav': vuestrapBase.nav,
+                'vs-nav-item': vuestrapBase.navItem,
+                'vs-navbar': vuestrapBase.navbar,
+                'vs-jumbotron': vuestrapBase.jumbotron,
+                'vs-card': vuestrapBase.card
             }
         })
     </script>

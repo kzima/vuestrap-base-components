@@ -18,7 +18,7 @@
 			"name": "disabled",
 			"type": "Boolean",
 			"default": false,
-			"description": "Make buttons look inactive by adding the disabled boolean attribute to any <code>&lt;button></code> element."
+			"description": "Make buttons look inactive by adding the disabled boolean attribute to any <code>&lt;vs-btn></code> element."
 		}, 
 		{
 			"name": "href",

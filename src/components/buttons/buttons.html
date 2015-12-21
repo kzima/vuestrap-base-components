@@ -1,2 +1,7 @@
-<button type="{{type}}" class="btn {{btnVariant}} {{btnSize}} {{btnBlock}}" v-bind:disabled="disabled" v-if="!href"><slot></slot></button>
-<a v-bind:href="href" class="btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{btnDisabled}}" v-if="href" v-bind:role="role"><slot></slot></a>
+<span class="btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}}" v-bind:disabled="disabled" v-if="type != 'submit'">
+	<template v-if="!href"><slot></slot></template>
+	<a v-bind:href="href" class="{{btnDisabled}}" v-bind:role="role" v-if="href"><slot></slot></a>
+</span>
+<button type="submit" class="btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}}" v-bind:disabled="disabled" v-if="type == 'submit'">
+	<slot></slot>
+</button>

@@ -1,8 +1,8 @@
 import meta from './media.json'
 import template from './media.html'
 import snippet from './snippet.html'
-import media from 'src/components/media'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsMedia from 'src/components/media'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 
 export default {
   route: {
@@ -27,7 +27,7 @@ export default {
     }
   },
   components: {
-    'media': media,
-    'docs-demo': demo,
+    vsMedia,
+    docsDemo,
   },
 }

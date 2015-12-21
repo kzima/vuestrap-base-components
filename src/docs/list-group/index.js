@@ -1,10 +1,13 @@
 import meta from './list-group.json'
 import template from './list-group.html'
 import snippet from './snippet.html'
-import listGroup from 'src/components/list-group'
-import badge from 'src/components/labels'
-import demo from 'vuestrap-docs/src/components/demo'
-import {variants} from 'utils'
+import {listGroup as vsListGroup, listGroupItem as vsListGroupItem} from 'src/components/list-group'
+import vsBadge from 'src/components/labels'
+import docsDemo from 'vuestrap-docs/src/components/demo'
+import {states} from 'utils'
+
+// remove error from the list and later replace with danger
+states.splice(2, 1)
 
 export default {
   route: {
@@ -17,15 +20,16 @@ export default {
     return {
       meta: meta,
       snippet: snippet,
-      variant: 'primary',
-      variants: variants,
+      state: 'success',
+      states: states.concat([{text: 'danger', value: 'danger'}, {text: 'info', value: 'info'}]),
       type: 'default',
       types: [{text: 'default', value: 'default'}, {text: 'pill', value: 'pill'}],
     }
   },
   components: {
-    'list-group': listGroup,
-    'badge': badge,
-    'docs-demo': demo,
+    vsListGroup,
+    vsListGroupItem,
+    vsBadge,
+    docsDemo,
   },
 }

@@ -1,8 +1,8 @@
 import meta from './button-checkbox.json'
 import template from './button-checkbox.html'
 import snippet from './snippet.html'
-import buttonCheckbox from 'src/components/button-checkbox'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsButtonCheckbox from 'src/components/button-checkbox'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 import {sizes, variants} from 'utils'
 
 export default {
@@ -16,20 +16,19 @@ export default {
     return {
       meta: meta,
       snippet: snippet,
-      model: ['second'],
-      list: [
-        {
+      model: [{text: 'Second', value: 'second'}],
+      list: [{
           text: 'First',
-          value: 'first',
           checked: false,
+          value: 'first'
         }, {
           text: 'Second',
-          value: 'second',
           checked: false,
+          value: 'second'
         }, {
           text: 'Third',
-          value: 'third',
           checked: false,
+          value: 'third'
         },
       ],
       size: 'md',
@@ -39,7 +38,7 @@ export default {
     }
   },
   components: {
-    'button-checkbox': buttonCheckbox,
-    'docs-demo': demo,
+    vsButtonCheckbox,
+    docsDemo,
   },
 }

@@ -3544,6 +3544,10 @@ a.label:focus, a.label:hover {
   background-color: #d9534f; }
   .label-danger[href]:focus, .label-danger[href]:hover {
     background-color: #c9302c; }
+.list-group li.list-group-item:focus, .list-group li.list-group-item:hover {
+  color: #555;
+  text-decoration: none;
+  background-color: #f5f5f5; }
 .media {
   margin-top: 15px; }
   .media:first-child {

@@ -1,8 +1,8 @@
 import meta from './collapse.json'
 import template from './collapse.html'
 import snippet from './snippet.html'
-import {collapse, collapseToggle} from 'src/components/collapse'
-import demo from 'vuestrap-docs/src/components/demo'
+import {collapse as vsCollapse, collapseToggle as vsCollapseToggle} from 'src/components/collapse'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 
 export default {
   route: {
@@ -18,8 +18,8 @@ export default {
     }
   },
   components: {
-    'collapse': collapse,
-    'collapseToggle': collapseToggle,
-    'docs-demo': demo,
+    vsCollapse,
+    vsCollapseToggle,
+    docsDemo,
   },
 }

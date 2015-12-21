@@ -1,8 +1,8 @@
 import meta from './navbar.json'
 import template from './navbar.html'
 import snippet from './snippet.html'
-import navbar from 'src/components/navbar'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsNavbar from 'src/components/navbar'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 import {variants} from 'utils'
 
 export default {
@@ -25,8 +25,8 @@ export default {
     }
   },
   components: {
-    'navbar': navbar,
-    'docs-demo': demo,
+    vsNavbar,
+    docsDemo,
   },
   watch: {
     type(val) {

@@ -1,8 +1,8 @@
 import meta from './carousel.json'
 import template from './carousel.html'
 import snippet from './snippet.html'
-import {carousel, slide} from 'src/components/carousel'
-import demo from 'vuestrap-docs/src/components/demo'
+import {carousel as vsCarousel, slide as vsSlide} from 'src/components/carousel'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 import {variants} from 'utils'
 
 export default {
@@ -21,8 +21,8 @@ export default {
     }
   },
   components: {
-    'slide': slide,
-    'carousel': carousel,
-    'docs-demo': demo,
+    vsSlide,
+    vsCarousel,
+    docsDemo,
   },
 }

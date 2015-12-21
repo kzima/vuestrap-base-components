@@ -1,8 +1,8 @@
 import meta from './nav.json'
 import template from './nav.html'
 import snippet from './snippet.html'
-import navigation from 'src/components/nav'
-import demo from 'vuestrap-docs/src/components/demo'
+import {nav as vsNav, navItem as vsNavItem} from 'src/components/nav'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 
 export default {
   route: {
@@ -21,7 +21,8 @@ export default {
     }
   },
   components: {
-    'navigation': navigation,
-    'docs-demo': demo,
+    vsNav,
+    vsNavItem,
+    docsDemo,
   },
 }

@@ -1,5 +1,5 @@
 <progress 
-	class="progress {{progressVariant}} {{ striped ? 'progress-striped' : ''}} {{ animated ? 'progres-animated' : ''}}" 
+	class="progress {{progressVariant}} {{striped ? 'progress-striped' : ''}} {{animated ? 'progres-animated' : ''}}" 
 	value="{{value}}" 
 	max="{{max}}" 
 	aria-valuenow="{{value}}" 
@@ -7,6 +7,6 @@
 	aria-valuemax="{{max}}"
 	v-el:progress>
   <div class="progress">
-    <span class="progress-bar" v-bind:style="{width: '+ value + '%'}" v-el:progressbar></span>
+    <span class="progress-bar" v-bind:style="{width: value + '%'}" v-el:progressbar></span>
   </div>
 </progress>

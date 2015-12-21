@@ -1,4 +1,4 @@
-<form-radio 
+<vs-form-radio 
   :model.sync="model"
   :list="[
     {
@@ -11,9 +11,9 @@
       name: 'Third (disabled)',
       value: 'third',
       disabled: true,
-    },
-  ]"
+    }]"
   :state="'success'"
   custom="false"
-  vertical>
-</form-radio>
+  vertical
+  return-object>
+</vs-form-radio>

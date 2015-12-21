@@ -6,7 +6,6 @@ import 'vuestrap/core'
 /**
  * IMPORT EACH COMPONENT
  */
-import accordion from './collapse'
 import alert from './alert'
 import breadcrumb from './breadcrumb'
 import buttonCheckbox from './button-checkbox'
@@ -15,7 +14,7 @@ import buttonRadio from './button-radio'
 import buttons from './buttons'
 import card from './card'
 import {slide, carousel} from './carousel'
-import collapse from './collapse'
+import {collapse, collapseToggle} from './collapse'
 import dropdown from './dropdown'
 import dropdownSelect from './dropdown-select'
 import formCheckbox from './form-checkbox'
@@ -29,7 +28,7 @@ import labels from './labels'
 import listGroup from './list-group'
 import media from './media'
 import modal from './modal'
-import navigation from './nav'
+import {nav, navItem} from './nav'
 import navbar from './navbar'
 import pager from './pager'
 import pagination from './pagination'
@@ -40,8 +39,6 @@ import {tab, tabs} from './tabs'
 import tooltip from './tooltip'
 
 const vuestrapBase = {
-	accordion,
-	labels,
 	alert,
 	breadcrumb,
 	buttonCheckbox,
@@ -52,6 +49,7 @@ const vuestrapBase = {
 	slide,
 	carousel,
 	collapse,
+	collapseToggle,
 	dropdown,
 	dropdownSelect,
 	formCheckbox,
@@ -65,7 +63,8 @@ const vuestrapBase = {
 	listGroup,
 	media,
 	modal,
-	navigation,
+	nav,
+	navItem,
 	navbar,
 	pager,
 	pagination,

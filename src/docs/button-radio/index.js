@@ -1,8 +1,8 @@
 import meta from './button-radio.json'
 import template from './button-radio.html'
 import snippet from './snippet.html'
-import buttonRadio from 'src/components/button-radio'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsButtonRadio from 'src/components/button-radio'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 import {sizes, variants} from 'utils'
 
 export default {
@@ -16,7 +16,10 @@ export default {
     return {
       meta: meta,
       snippet: snippet,
-      model: 'second',
+      model: {
+          text: 'Second',
+          value: 'second',
+      },
       list: [{
           text: 'First',
           value: 'first',
@@ -35,7 +38,7 @@ export default {
     }
   },
   components: {
-    'button-radio': buttonRadio,
-    'docs-demo': demo,
+    vsButtonRadio,
+    docsDemo,
   },
 }

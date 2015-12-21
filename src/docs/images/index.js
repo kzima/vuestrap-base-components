@@ -1,8 +1,8 @@
+import 'src/components/images'
 import meta from './images.json'
 import template from './images.html'
 import snippet from './snippet.html'
-import images from 'src/components/images'
-import demo from 'vuestrap-docs/src/components/demo'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 
 export default {
   route: {
@@ -18,7 +18,6 @@ export default {
     }
   },
   components: {
-    'images': images,
-    'docs-demo': demo,
+    docsDemo,
   },
 }

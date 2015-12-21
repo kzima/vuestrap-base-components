@@ -2,6 +2,7 @@
 	<div slot="controls">
 		<!-- Html controls start-->
 		<label>caret <input type="checkbox" v-model="caret"></label>
+		<label>dropup <input type="checkbox" v-model="dropup"></label>
 		<label>force default <input type="checkbox" v-model="forceDefault"></label>
 		<label>
 			size 
@@ -32,7 +33,7 @@
 	<div slot="markup" class="clearfix">
 			<!-- Html markup start-->
 			<div class="div" v-bind:class="{'pull-right': position == 'right'}">
-				<dropdown-select
+				<vs-dropdown-select
 			    :list="list"
 			    :model.sync="model"
 			    :position="position"
@@ -40,8 +41,10 @@
 			    :variant="variant"
 			    default-text="Action"
 			    :force-default="forceDefault"
-			    :caret="caret">
-				</dropdown-select>
+			    :caret="caret"
+			    :dropup="dropup"
+			    return-object>
+				</vs-dropdown-select>
 			</div>
 			<!-- Html markup end-->
 	</div>

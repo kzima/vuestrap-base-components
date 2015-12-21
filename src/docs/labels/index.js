@@ -1,8 +1,8 @@
 import meta from './labels.json'
 import template from './labels.html'
 import snippet from './snippet.html'
-import badge from 'src/components/badge'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsBadge from 'src/components/badge'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 import {variants} from 'utils'
 
 export default {
@@ -23,7 +23,7 @@ export default {
     }
   },
   components: {
-    'badge': badge,
-    'docs-demo': demo,
+    vsBadge,
+    docsDemo,
   },
 }

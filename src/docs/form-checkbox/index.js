@@ -1,8 +1,8 @@
 import meta from './form-checkbox.json'
 import template from './form-checkbox.html'
 import snippet from './snippet.html'
-import formCheckbox from 'src/components/form-checkbox'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsFormCheckbox from 'src/components/form-checkbox'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 import {states} from 'utils'
 
 export default {
@@ -16,7 +16,10 @@ export default {
     return {
       meta: meta,
       snippet: snippet,
-      model: ['second'],
+      model: [{
+        text: 'Second',
+        value: 'second'
+      }],
       list: [{
           text: 'First',
           checked: false,
@@ -28,7 +31,8 @@ export default {
         }, {
           text: 'Third',
           checked: false,
-          value: 'third'
+          value: 'third',
+          disabled: true,
         },
       ],
       custom: true,
@@ -38,7 +42,7 @@ export default {
     }
   },
   components: {
-    'form-checkbox': formCheckbox,
-    'docs-demo': demo,
+    vsFormCheckbox,
+    docsDemo,
   },
 }

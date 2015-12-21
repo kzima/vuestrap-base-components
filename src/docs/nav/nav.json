@@ -1,8 +1,7 @@
 {
-	"name": "navigation",
-	"title": "Navigation",
+	"name": "nav",
+	"title": "Nav",
 	"description": "Roll your own navigation style by extending the base .nav component.",
-	"note": "To avoid confilcts with html5 <code>&lt;nav></code> tag, please use <code>&lt;navigation></code> tag or better your own namsepaced one. Also by default, wrapping element is <code>&lt;ul></code>, so only <code>&lt;li></li></code>'s are required within <code>&lt;navigation></code> tag.",
 	"dependencies": [],
 	"category": "components",
 	"browserSupport": {
@@ -14,7 +13,7 @@
 			"type": "String",
 			"values": ["default","pills", "navbar"],
 			"default": "default",
-			"description": "Type of the navigation. Use <code>navbar</code> type in conjuction with <code>&lt;navbar></code> element."
+			"description": "Type of the navigation. Use <code>navbar</code> type in conjuction with <code>&lt;vs-navbar></code> element."
 		},
 		{
 			"name": "vertical",
@@ -22,6 +21,20 @@
 			"default": false,
 			"required": false,
 			"description": "Stack items in vertical position."
+		},
+		{
+			"name": "active",
+			"type": "Boolean",
+			"default": false,
+			"required": false,
+			"description": "An active state ot the individual <code>&lt;vs-nav-item></code>."
+		},
+		{
+			"name": "disabled",
+			"type": "Boolean",
+			"default": false,
+			"required": false,
+			"description": "A disabled state ot the individual <code>&lt;vs-nav-item></code>."
 		}
 	]
 }

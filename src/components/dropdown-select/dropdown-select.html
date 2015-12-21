@@ -1,4 +1,4 @@
-<div class="dropdown dropdown-select" v-bind:class="{open: show}">
+<div class="dropdown-select" v-bind:class="{open: show, dropdown: !dropup, dropup: dropup}">
     <button
         id="dLabel"
         class="btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}"
@@ -6,8 +6,7 @@
         aria-haspopup="true"
         aria-expanded="show"
         v-on:click="toggle($event)">
-        <span v-if="selected && !forceDefault">{{model.text}}</span>
-        <span v-if="!selected || forceDefault">{{defaultText}}</span>
+        <span class="checked-items" v-html="displayItem"></span>
     </button>
     <ul class="dropdown-menu" v-bind:class="{'dropdown-menu-right' : position == 'right'}" aria-labelledby="dLabel">
         <li v-for="item in list">

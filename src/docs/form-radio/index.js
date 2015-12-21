@@ -1,8 +1,8 @@
 import meta from './form-radio.json'
 import template from './form-radio.html'
 import snippet from './snippet.html'
-import formRadio from 'src/components/form-radio'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsFormRadio from 'src/components/form-radio'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 import {states} from 'utils'
 
 export default {
@@ -16,7 +16,10 @@ export default {
     return {
       meta: meta,
       snippet: snippet,
-      model: 'second',
+      model: {
+        name: 'Second',
+        value: 'second',
+      },
       list: [
         {
           name: 'First',
@@ -37,7 +40,7 @@ export default {
     }
   },
   components: {
-    'form-radio': formRadio,
-    'docs-demo': demo,
+    vsFormRadio,
+    docsDemo,
   },
 }

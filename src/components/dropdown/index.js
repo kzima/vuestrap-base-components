@@ -43,6 +43,10 @@ export default {
       type: String,
       default: 'default'
     },
+    dropup: {
+      type: Boolean,
+      default: false
+    },
   },
   methods: {
     toggle(e) {

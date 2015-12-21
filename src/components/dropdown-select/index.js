@@ -22,11 +22,28 @@ export default {
     dropdownToggle() {
       return this.caret ? 'dropdown-toggle' : ''
     },
+    displayItem() {
+      // if zero show default message
+      if ((this.returnObject && this.model && !this.model.text) || (!this.returnObject && this.model && this.model.length === 0) || this.forceDefault) {
+          return this.defaultText
+      }
+
+      // show selected item
+      if (this.returnObject && this.model && this.model.text) {
+          return this.model.text
+      }
+      if (!this.returnObject && this.model) {
+          return this.model
+      }
+
+      return ''
+    }
   },
   props: {
+    id: {
+      type: String
+    },
     model: {
-      type: Object,
-      default: false,
       required: true
     },
     list: {
@@ -62,6 +79,14 @@ export default {
       type: Boolean,
       default: false
     },
+    returnObject: {
+      type: Boolean,
+      default: false
+    },
+    dropup: {
+      type: Boolean,
+      default: false
+    },
   },
   methods: {
     toggle(e) {
@@ -69,18 +94,22 @@ export default {
       this.show = !this.show
       // Dispatch an event from the current vm that propagates all the way up to its $root
       if (this.show) {
-        this.$dispatch('shown:dropdown')
+        this.$dispatch('shown:dropdown', this.id)
         e.stopPropagation()
       } else {
-        this.$dispatch('hidden::dropdown')
+        this.$dispatch('hidden::dropdown', this.id)
       }
     },
     select(item) {
-      this.model = item
+      // we need to set empty model to make model watchers react to it
+      if (this.returnObject) {
+        this.model = item
+      } else {
+        this.model = item.value
+      }
       this.show = false
-      this.selected = true
       // Dispatch an event from the current vm that propagates all the way up to its $root
-      this.$dispatch('selected::dropdown', item)
+      this.$dispatch('selected::dropdown', this.id, this.model)
     }
   },
   events: {
@@ -89,8 +118,6 @@ export default {
     }
   },
   ready() {
-    if (this.model) {
-      this.selected = true
-    }
+
   }
 }

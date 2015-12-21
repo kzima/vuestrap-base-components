@@ -35,6 +35,10 @@ export default {
     	type: String,
     	default: 'default'
     },
+    returnObject: {
+      type: Boolean,
+      default: false
+    },
 	},
   watch: {
     list: {
@@ -42,23 +46,33 @@ export default {
         this.model = []
         this.list.forEach((item) => {
           if (item.checked) {
-            this.model.push(item.value)
+            if (this.returnObject) {
+              this.model.push(item)
+            } else {
+              this.model.push(item.value)
+            }
           }
         })
         // dispatch an event
-        this.$dispatch('changed::form-checkbox', this.model)
+        this.$dispatch('changed::button-checkbox', this.model)
       },
       deep: true,
-    },
+    }
   },
   ready() {
     // handle initial selection
-    Vue.nextTick(() => {
-      this.list.forEach((item) => {
-        if (this.model.indexOf(item.value) !== -1) {
+    this.list.forEach((item) => {
+      if (this.returnObject) {
+        this.model.forEach((modelItem) => {
+          if (modelItem.value === item.value) {
+            item.checked = true
+          }
+        })
+      } else {
+         if (this.model.indexOf(item.value) !== -1) {
           item.checked = true
         }
-      })
+      }
     })
   }
 }

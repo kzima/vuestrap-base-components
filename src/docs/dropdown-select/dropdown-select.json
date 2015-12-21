@@ -8,10 +8,10 @@
 	"options": [
 		{
 			"name": "model",
-			"type": "String",
+			"type": "String/Object",
 			"default": "''",
 			"required": true,
-			"description": "A result of the selection. Two way data binding."
+			"description": "A result of the selection. Can return object (see <code>return-object</code> attribute)."
 		},
 		{
 			"name": "list",
@@ -55,6 +55,13 @@
 			"default": false,
 			"required": false,
 			"description": "Force default text to be always shown, if set to true."
+		},
+		{
+			"name": "return-object",
+			"type": "Boolean",
+			"default": false,
+			"required": false,
+			"description": "If set to true, a full object will be returned in the model. By default only <code>value</code> is returned."
 		},
 		{
 			"name": "size",

@@ -1,8 +1,8 @@
 import meta from './card.json'
 import template from './card.html'
 import snippet from './snippet.html'
-import card from 'src/components/card'
-import demo from 'vuestrap-docs/src/components/demo'
+import vsCard from 'src/components/card'
+import docsDemo from 'vuestrap-docs/src/components/demo'
 import {variants} from 'utils'
 
 export default {
@@ -25,7 +25,7 @@ export default {
     }
   },
   components: {
-    'card': card,
-    'docs-demo': demo,
+    vsCard,
+    docsDemo,
   },
 }
