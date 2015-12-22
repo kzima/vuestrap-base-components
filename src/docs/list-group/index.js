@@ -6,9 +6,6 @@ import vsBadge from 'src/components/labels'
 import docsDemo from 'vuestrap-docs/src/components/demo'
 import {states} from 'utils'
 
-// remove error from the list and later replace with danger
-states.splice(2, 1)
-
 export default {
   route: {
     url: '/list-group',
@@ -21,7 +18,8 @@ export default {
       meta: meta,
       snippet: snippet,
       state: 'success',
-      states: states.concat([{text: 'danger', value: 'danger'}, {text: 'info', value: 'info'}]),
+      flush: false,
+      states: states.concat([{text: 'info', value: 'info'}]),
       type: 'default',
       types: [{text: 'default', value: 'default'}, {text: 'pill', value: 'pill'}],
     }

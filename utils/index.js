@@ -8,7 +8,7 @@ export const positions = [
 export const states = [
   {text: 'default', value: 'default'},
   {text: 'success', value: 'success'},
-  {text: 'error', value: 'error'},
+  {text: 'danger', value: 'danger'},
   {text: 'warning', value: 'warning'},
 ]
 export const variants = [
