@@ -1,6 +1,7 @@
 // import dependencies
 import 'vuestrap/components/dropdown'
 import template from './dropdown-select.html'
+import './dropdown-override.scss'
 
 // export component object
 export default {
@@ -44,7 +45,7 @@ export default {
       type: String
     },
     model: {
-      required: true
+      required: false
     },
     list: {
       type: Array,
