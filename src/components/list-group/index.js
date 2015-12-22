@@ -7,6 +7,12 @@ import './list-group-override.scss'
 export const listGroup = {
   template: template,
   replace: true,
+  props: {
+    flush: {
+      type: Boolean,
+      default: false,
+    },
+  },
 }
 
 export const listGroupItem = {
