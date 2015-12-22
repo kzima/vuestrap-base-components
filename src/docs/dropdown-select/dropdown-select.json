@@ -4,13 +4,15 @@
 	"description": "Dropdown select allows to select an item from the list and update the model.",
 	"dependencies": ["vuestrap/buttons"],
 	"category": "components",
-	"browserSupport": ["IE9+", "Android 4.3"],
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
 	"options": [
 		{
 			"name": "model",
 			"type": "String/Object",
 			"default": "''",
-			"required": true,
+			"required": false,
 			"description": "A result of the selection. Can return object (see <code>return-object</code> attribute)."
 		},
 		{
