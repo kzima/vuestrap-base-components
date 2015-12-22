@@ -1,6 +1,7 @@
 <docs-demo :meta="meta" :snippet="snippet">
 <div slot="controls">
 		<!-- Html controls start-->
+		<label>flush <input type="checkbox" v-model="flush"></label>
 		<label>
 			state 
 			<select v-model="state">
@@ -13,7 +14,7 @@
 	<!-- Html controls end-->
 	<div slot="markup">
 			<!-- Html markup start-->
-			<vs-list-group style="width: 350px">
+			<vs-list-group style="width: 350px" :flush="flush">
 				<vs-list-group-item :state="state">
 			    <vs-badge type="pill" class="pull-right">14</vs-badge>
 			    Cras justo odio

@@ -29,6 +29,13 @@
 			"default": false,
 			"required": false,
 			"description": "A disabled state ot the individual <code>&lt;vs-list-group-item></code>."
+		},
+		{
+			"name": "flush",
+			"type": "Boolean",
+			"default": false,
+			"required": false,
+			"description": "Removes borders if set to true."
 		}
 	]
 }
