@@ -45,7 +45,7 @@
 		{
 			"name": "state",
 			"type": "String",
-			"values": ["success","info","warning","danger"],
+			"values": ["success","warning","danger"],
 			"default": "success",
 			"description": "A validation state."
 		},
