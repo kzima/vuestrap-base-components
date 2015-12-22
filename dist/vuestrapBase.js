@@ -104,83 +104,83 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _dropdown2 = _interopRequireDefault(_dropdown);
 	
-	var _dropdownSelect = __webpack_require__(55);
+	var _dropdownSelect = __webpack_require__(57);
 	
 	var _dropdownSelect2 = _interopRequireDefault(_dropdownSelect);
 	
-	var _formCheckbox = __webpack_require__(57);
+	var _formCheckbox = __webpack_require__(61);
 	
 	var _formCheckbox2 = _interopRequireDefault(_formCheckbox);
 	
-	var _formRadio = __webpack_require__(64);
+	var _formRadio = __webpack_require__(71);
 	
 	var _formRadio2 = _interopRequireDefault(_formRadio);
 	
-	var _formInput = __webpack_require__(66);
+	var _formInput = __webpack_require__(73);
 	
 	var _formInput2 = _interopRequireDefault(_formInput);
 	
-	var _formSelect = __webpack_require__(68);
+	var _formSelect = __webpack_require__(76);
 	
 	var _formSelect2 = _interopRequireDefault(_formSelect);
 	
-	var _formTextarea = __webpack_require__(70);
+	var _formTextarea = __webpack_require__(78);
 	
 	var _formTextarea2 = _interopRequireDefault(_formTextarea);
 	
-	var _images = __webpack_require__(72);
+	var _images = __webpack_require__(80);
 	
 	var _images2 = _interopRequireDefault(_images);
 	
-	var _jumbotron = __webpack_require__(74);
+	var _jumbotron = __webpack_require__(82);
 	
 	var _jumbotron2 = _interopRequireDefault(_jumbotron);
 	
-	var _labels = __webpack_require__(79);
+	var _labels = __webpack_require__(87);
 	
 	var _labels2 = _interopRequireDefault(_labels);
 	
-	var _listGroup = __webpack_require__(84);
+	var _listGroup = __webpack_require__(92);
 	
 	var _listGroup2 = _interopRequireDefault(_listGroup);
 	
-	var _media = __webpack_require__(89);
+	var _media = __webpack_require__(97);
 	
 	var _media2 = _interopRequireDefault(_media);
 	
-	var _modal = __webpack_require__(94);
+	var _modal = __webpack_require__(102);
 	
 	var _modal2 = _interopRequireDefault(_modal);
 	
-	var _nav = __webpack_require__(99);
+	var _nav = __webpack_require__(107);
 	
-	var _navbar = __webpack_require__(106);
+	var _navbar = __webpack_require__(114);
 	
 	var _navbar2 = _interopRequireDefault(_navbar);
 	
-	var _pager = __webpack_require__(111);
+	var _pager = __webpack_require__(119);
 	
 	var _pager2 = _interopRequireDefault(_pager);
 	
-	var _pagination = __webpack_require__(116);
+	var _pagination = __webpack_require__(124);
 	
 	var _pagination2 = _interopRequireDefault(_pagination);
 	
-	var _popover = __webpack_require__(121);
+	var _popover = __webpack_require__(129);
 	
 	var _popover2 = _interopRequireDefault(_popover);
 	
-	var _progress = __webpack_require__(127);
+	var _progress = __webpack_require__(135);
 	
 	var _progress2 = _interopRequireDefault(_progress);
 	
-	var _tables = __webpack_require__(132);
+	var _tables = __webpack_require__(140);
 	
 	var _tables2 = _interopRequireDefault(_tables);
 	
-	var _tabs = __webpack_require__(137);
+	var _tabs = __webpack_require__(145);
 	
-	var _tooltip = __webpack_require__(139);
+	var _tooltip = __webpack_require__(147);
 	
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 	
@@ -1351,6 +1351,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _dropdownHtml2 = _interopRequireDefault(_dropdownHtml);
 	
+	__webpack_require__(55);
+	
 	// export component object
 	exports['default'] = {
 	  template: _dropdownHtml2['default'],
@@ -1444,6 +1446,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 55 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 56 */,
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1457,9 +1466,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	__webpack_require__(51);
 	
-	var _dropdownSelectHtml = __webpack_require__(56);
+	var _dropdownSelectHtml = __webpack_require__(58);
 	
 	var _dropdownSelectHtml2 = _interopRequireDefault(_dropdownSelectHtml);
+	
+	__webpack_require__(59);
 	
 	// export component object
 	exports['default'] = {
@@ -1503,7 +1514,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      type: String
 	    },
 	    model: {
-	      required: true
+	      required: false
 	    },
 	    list: {
 	      type: Array,
@@ -1581,13 +1592,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 56 */
+/* 58 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"dropdown-select\" v-bind:class=\"{open: show, dropdown: !dropup, dropup: dropup}\">\r\n    <button\r\n        id=\"dLabel\"\r\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\r\n        role=\"button\"\r\n        aria-haspopup=\"true\"\r\n        aria-expanded=\"show\"\r\n        v-on:click=\"toggle($event)\">\r\n        <span class=\"checked-items\" v-html=\"displayItem\"></span>\r\n    </button>\r\n    <ul class=\"dropdown-menu\" v-bind:class=\"{'dropdown-menu-right' : position == 'right'}\" aria-labelledby=\"dLabel\">\r\n        <li v-for=\"item in list\">\r\n            <button class=\"dropdown-item\" v-on:click.stop=\"select(item)\">{{item.text}}</button>\r\n        </li>\r\n    </ul>\r\n</div>\r\n";
 
 /***/ },
-/* 57 */
+/* 59 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 60 */,
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1599,9 +1617,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(58);
+	__webpack_require__(62);
 	
-	var _formCheckboxHtml = __webpack_require__(63);
+	var _formCheckboxHtml = __webpack_require__(70);
 	
 	var _formCheckboxHtml2 = _interopRequireDefault(_formCheckboxHtml);
 	
@@ -1686,40 +1704,58 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 58 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(10);
+	__webpack_require__(63);
 	
-	__webpack_require__(59);
-	
-	__webpack_require__(61);
+	__webpack_require__(68);
 
 /***/ },
-/* 59 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 60 */,
-/* 61 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 62 */,
 /* 63 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// import dependencies
+	'use strict';
+	
+	__webpack_require__(64);
+	
+	__webpack_require__(66);
+	
+	__webpack_require__(10);
+
+/***/ },
+/* 64 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 65 */,
+/* 66 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 67 */,
+/* 68 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 69 */,
+/* 70 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n\t<div class=\"checkbox\" v-for=\"item in list\" v-bind:class=\"{ 'checkbox-inline': !vertical, disabled: item.disabled }\">\r\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-checkbox': custom }\">\r\n\t\t\t<input \r\n\t\t\t\tid=\"{{item.id}}\" \r\n\t\t\t\ttype=\"checkbox\" \r\n\t\t\t\tvalue=\"{{item.value}}\" \r\n\t\t\t\tautocomplete=\"off\" \r\n\t\t\t\tv-model=\"item.checked\" \r\n\t\t\t\tv-bind:disabled=\"item.disabled\">\r\n\t\t\t\t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.text}}\r\n\t\t</label>\r\n\t</div>\r\n</fieldset>\r\n";
 
 /***/ },
-/* 64 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1731,9 +1767,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(58);
+	__webpack_require__(62);
 	
-	var _formRadioHtml = __webpack_require__(65);
+	var _formRadioHtml = __webpack_require__(72);
 	
 	var _formRadioHtml2 = _interopRequireDefault(_formRadioHtml);
 	
@@ -1811,13 +1847,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 65 */
+/* 72 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n\t<div class=\"radio\" v-for=\"item in list\" v-bind:class=\"{ 'radio-inline': !vertical, disabled: item.disabled }\">\r\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-radio': custom }\">\r\n\t\t\t<input \r\n\t\t\t\tid=\"{{item.id}}\" \r\n\t\t\t\ttype=\"radio\" \r\n\t\t\t\tname=\"{{name}}\"\r\n\t\t\t\tvalue=\"{{item.value}}\" \r\n\t\t\t\tautocomplete=\"off\" \r\n\t\t\t\tv-model=\"selection\" \r\n\t\t\t\tdisabled=\"{{item.disabled}}\">\r\n\t\t \t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.name}}\r\n\t\t</label>\r\n\t</div>\r\n</fieldset>\r\n";
 
 /***/ },
-/* 66 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1829,11 +1865,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(58);
+	__webpack_require__(74);
 	
 	var _utilsHelpersJs = __webpack_require__(47);
 	
-	var _formInputHtml = __webpack_require__(67);
+	var _formInputHtml = __webpack_require__(75);
 	
 	var _formInputHtml2 = _interopRequireDefault(_formInputHtml);
 	
@@ -1899,13 +1935,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 67 */
+/* 74 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// import dependencies
+	'use strict';
+	
+	__webpack_require__(10);
+	
+	__webpack_require__(64);
+	
+	__webpack_require__(66);
+
+/***/ },
+/* 75 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <div class=\"inputClass\">\r\n        <input \r\n        \ttype=\"{{type}}\" \r\n        \tclass=\"form-control {{stateIconType}} {{inputSize}}\" \r\n        \tid=\"{{id}}\" \r\n        \tplaceholder=\"{{placeholder}}\" \r\n        \tv-model=\"model\">\r\n    </div>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>\r\n";
 
 /***/ },
-/* 68 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1917,11 +1966,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(58);
+	__webpack_require__(74);
 	
 	var _utilsHelpersJs = __webpack_require__(47);
 	
-	var _formSelectHtml = __webpack_require__(69);
+	var _formSelectHtml = __webpack_require__(77);
 	
 	var _formSelectHtml2 = _interopRequireDefault(_formSelectHtml);
 	
@@ -1991,13 +2040,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 69 */
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <!-- single select -->\r\n    <select class=\"form-control {{inputSize}}\" id=\"{{id}}\" v-model=\"model\" options=\"allOptions\" v-if=\"!multiple\">\r\n    \t<option v-for=\"option in allOptions\" v-bind:value=\"option.value\">{{option.text}}</option>\r\n    </select>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>\r\n";
 
 /***/ },
-/* 70 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2009,11 +2058,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(58);
+	__webpack_require__(74);
 	
 	var _utilsHelpersJs = __webpack_require__(47);
 	
-	var _formTextareaHtml = __webpack_require__(71);
+	var _formTextareaHtml = __webpack_require__(79);
 	
 	var _formTextareaHtml2 = _interopRequireDefault(_formTextareaHtml);
 	
@@ -2056,22 +2105,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 71 */
+/* 79 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <textarea class=\"form-control\" id=\"{{id}}\" rows=\"{{rows}}\" v-model=\"model\"></textarea>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>";
 
 /***/ },
-/* 72 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(73);
+	__webpack_require__(81);
 
 /***/ },
-/* 73 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2080,7 +2129,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	__webpack_require__(36);
 
 /***/ },
-/* 74 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2092,9 +2141,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(75);
+	__webpack_require__(83);
 	
-	var _jumbotronHtml = __webpack_require__(78);
+	var _jumbotronHtml = __webpack_require__(86);
 	
 	var _jumbotronHtml2 = _interopRequireDefault(_jumbotronHtml);
 	
@@ -2112,29 +2161,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 75 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(76);
+	__webpack_require__(84);
 
 /***/ },
-/* 76 */
+/* 84 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 77 */,
-/* 78 */
+/* 85 */,
+/* 86 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"jumbotron\" v-bind:class=\"{ 'jumbotron-fluid': fluid }\">\r\n  <div class=\"container\">\r\n    <slot></slot>\r\n  </div>\r\n</div>";
 
 /***/ },
-/* 79 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2146,9 +2195,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(80);
+	__webpack_require__(88);
 	
-	var _labelsHtml = __webpack_require__(83);
+	var _labelsHtml = __webpack_require__(91);
 	
 	var _labelsHtml2 = _interopRequireDefault(_labelsHtml);
 	
@@ -2178,29 +2227,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 80 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(81);
+	__webpack_require__(89);
 
 /***/ },
-/* 81 */
+/* 89 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 82 */,
-/* 83 */
+/* 90 */,
+/* 91 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"label {{labelVariant}} {{labelType}}\">\r\n\t<slot></slot>\r\n</span>\r\n";
 
 /***/ },
-/* 84 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2212,18 +2261,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(85);
+	__webpack_require__(93);
 	
-	var _listGroupHtml = __webpack_require__(86);
+	var _listGroupHtml = __webpack_require__(94);
 	
 	var _listGroupHtml2 = _interopRequireDefault(_listGroupHtml);
 	
-	__webpack_require__(87);
+	__webpack_require__(95);
 	
 	// export component object
 	var listGroup = {
 	  template: _listGroupHtml2['default'],
-	  replace: true
+	  replace: true,
+	  props: {
+	    flush: {
+	      type: Boolean,
+	      'default': false
+	    }
+	  }
 	};
 	
 	exports.listGroup = listGroup;
@@ -2253,7 +2308,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.listGroupItem = listGroupItem;
 
 /***/ },
-/* 85 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2261,23 +2316,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	__webpack_require__(38);
 	
-	__webpack_require__(81);
+	__webpack_require__(89);
 
 /***/ },
-/* 86 */
+/* 94 */
 /***/ function(module, exports) {
 
-	module.exports = "<ul class=\"list-group\">\r\n  <slot></slot>\r\n</ul>";
+	module.exports = "<ul v-bind:class=\"{'list-group': true, 'list-group-flush': flush}\">\r\n  <slot></slot>\r\n</ul>";
 
 /***/ },
-/* 87 */
+/* 95 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 88 */,
-/* 89 */
+/* 96 */,
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2289,9 +2344,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(90);
+	__webpack_require__(98);
 	
-	var _mediaHtml = __webpack_require__(93);
+	var _mediaHtml = __webpack_require__(101);
 	
 	var _mediaHtml2 = _interopRequireDefault(_mediaHtml);
 	
@@ -2322,31 +2377,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 90 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(91);
+	__webpack_require__(99);
 	
 	__webpack_require__(36);
 
 /***/ },
-/* 91 */
+/* 99 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 92 */,
-/* 93 */
+/* 100 */,
+/* 101 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"media\">\r\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-left'\">\r\n  \t<slot name=\"aside\">\r\n  </div>\r\n  <div class=\"media-body\">\r\n  \t<slot name=\"body\">\r\n  </div>\r\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-right'\">\r\n  \t<slot name=\"aside\">\r\n  </div>\r\n</div>";
 
 /***/ },
-/* 94 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2358,11 +2413,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(95);
+	__webpack_require__(103);
 	
 	var _utilsHelpersJs = __webpack_require__(47);
 	
-	var _modalHtml = __webpack_require__(98);
+	var _modalHtml = __webpack_require__(106);
 	
 	var _modalHtml2 = _interopRequireDefault(_modalHtml);
 	
@@ -2457,31 +2512,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 95 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(96);
+	__webpack_require__(104);
 	
 	__webpack_require__(10);
 
 /***/ },
-/* 96 */
+/* 104 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 97 */,
-/* 98 */
+/* 105 */,
+/* 106 */
 /***/ function(module, exports) {
 
 	module.exports = "<div style=\"display: none\">\r\n\t<div id=\"{{id}}\" class=\"modal\" v-bind:class=\"{ fade: fade, in: animateModal || !fade }\" style=\"display: block\" v-on:click=\"onClickOut($event)\">\r\n\t  \t<div class=\"modal-dialog  modal-{{size}}\" role=\"document\" style=\"z-index: 9999\">\r\n\t\t    <div class=\"modal-content\">\r\n\t\t        <div class=\"modal-header\">\r\n\t\t        \t<slot name=\"modal-header\"></slot>\r\n\t\t        </div>\r\n\t\t        <div class=\"modal-body\">\r\n\t\t        \t<slot name=\"modal-body\"></slot>\r\n\t\t        </div>\r\n\t\t        <div class=\"modal-footer\">\r\n\t\t        \t<slot name=\"modal-footer\"></slot>\r\n\t\t        </div>\r\n\t\t    </div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"modal-backdrop\" v-bind:class=\"{ fade: fade, in: animateBackdrop || !fade }\"></div>\r\n</div>";
 
 /***/ },
-/* 99 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2493,11 +2548,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(100);
+	__webpack_require__(108);
 	
-	__webpack_require__(103);
+	__webpack_require__(111);
 	
-	var _navHtml = __webpack_require__(105);
+	var _navHtml = __webpack_require__(113);
 	
 	var _navHtml2 = _interopRequireDefault(_navHtml);
 	
@@ -2540,36 +2595,36 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.navItem = navItem;
 
 /***/ },
-/* 100 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(101);
+	__webpack_require__(109);
 
 /***/ },
-/* 101 */
+/* 109 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 102 */,
-/* 103 */
+/* 110 */,
+/* 111 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 104 */,
-/* 105 */
+/* 112 */,
+/* 113 */
 /***/ function(module, exports) {
 
 	module.exports = "<ul class=\"nav\" v-bind:class=\"{ 'nav-stacked': vertical, 'nav-pills': type == 'pills', 'navbar-nav': type == 'navbar' }\">\n  <slot></slot> \n</ul>";
 
 /***/ },
-/* 106 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2581,13 +2636,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(100);
+	__webpack_require__(108);
 	
-	__webpack_require__(107);
+	__webpack_require__(115);
 	
-	__webpack_require__(58);
+	__webpack_require__(74);
 	
-	var _navbarHtml = __webpack_require__(110);
+	var _navbarHtml = __webpack_require__(118);
 	
 	var _navbarHtml2 = _interopRequireDefault(_navbarHtml);
 	
@@ -2628,35 +2683,35 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 107 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(108);
+	__webpack_require__(116);
 	
 	__webpack_require__(10);
 	
-	__webpack_require__(101);
+	__webpack_require__(109);
 	
-	__webpack_require__(59);
+	__webpack_require__(64);
 
 /***/ },
-/* 108 */
+/* 116 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 109 */,
-/* 110 */
+/* 117 */,
+/* 118 */
 /***/ function(module, exports) {
 
 	module.exports = "<nav class=\"navbar {{navbarType}} {{navbarVariant}} {{navbarfixed}} {{full ? 'navbar-full' : ''}}\">\r\n\t<slot></slot>\r\n</nav>";
 
 /***/ },
-/* 111 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2668,9 +2723,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(112);
+	__webpack_require__(120);
 	
-	var _pagerHtml = __webpack_require__(115);
+	var _pagerHtml = __webpack_require__(123);
 	
 	var _pagerHtml2 = _interopRequireDefault(_pagerHtml);
 	
@@ -2682,29 +2737,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 112 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(113);
+	__webpack_require__(121);
 
 /***/ },
-/* 113 */
+/* 121 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 114 */,
-/* 115 */
+/* 122 */,
+/* 123 */
 /***/ function(module, exports) {
 
 	module.exports = "<nav>\r\n  <ul class=\"pager\">\r\n  \t<slot></slot>\r\n  </ul>\r\n</nav>";
 
 /***/ },
-/* 116 */
+/* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2716,9 +2771,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(117);
+	__webpack_require__(125);
 	
-	var _paginationHtml = __webpack_require__(120);
+	var _paginationHtml = __webpack_require__(128);
 	
 	var _paginationHtml2 = _interopRequireDefault(_paginationHtml);
 	
@@ -2811,33 +2866,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 117 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(118);
+	__webpack_require__(126);
 	
 	__webpack_require__(10);
 	
 	__webpack_require__(20);
 
 /***/ },
-/* 118 */
+/* 126 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 119 */,
-/* 120 */
+/* 127 */,
+/* 128 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"btn-group pagination\" role=\"group\" aria-label=\"Pagination\">\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == 1 \" v-on:click=\"(currentPage == 1) ? return : currentPage--\"><span aria-hidden=\"true\">&laquo;</span></button>\r\n    <button type=\"button\" class=\"btn  btn-secondary {{btnSize}} {{ currentPage == 1 ?  'active' : '' }}\" v-on:click=\"currentPage = 1\" v-show=\"showPrev\">1</button>\r\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showPrev\">...</span>\r\n    <button type=\"button\"\r\n    \tclass=\"btn {{btnSize}} {{btnVariant($index)}} {{ $index + diff == currentPage ? 'active' : '' }} {{ $index + diff != currentPage ? 'hidden-xs-down' : '' }}\"\r\n    \tv-for=\"item in pageLinks\"\r\n        v-on:click=\"currentPage = $index + diff\">{{$index + diff}}\r\n    </button>\r\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showNext\">...</span>\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}} {{ numberOfPages == currentPage ? 'active' : '' }}\" v-show=\"showNext\" v-on:click=\"currentPage = numberOfPages\">{{numberOfPages}}</button>\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == numberOfPages\" v-on:click=\"(currentPage == numberOfPages) ? return : currentPage++\"><span aria-hidden=\"true\">&raquo;</span></button>\r\n</div>\r\n";
 
 /***/ },
-/* 121 */
+/* 129 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2849,15 +2904,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(122);
+	__webpack_require__(130);
 	
 	// TODO import {Tether} from 'vuestrap-tether'
 	
-	var _popoverHtml = __webpack_require__(125);
+	var _popoverHtml = __webpack_require__(133);
 	
 	var _popoverHtml2 = _interopRequireDefault(_popoverHtml);
 	
-	var _vue = __webpack_require__(126);
+	var _vue = __webpack_require__(134);
 	
 	var _vue2 = _interopRequireDefault(_vue);
 	
@@ -3043,31 +3098,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 122 */
+/* 130 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(123);
+	__webpack_require__(131);
 	
 	__webpack_require__(10);
 
 /***/ },
-/* 123 */
+/* 131 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 124 */,
-/* 125 */
+/* 132 */,
+/* 133 */
 /***/ function(module, exports) {
 
 	module.exports = "<span v-el:trigger>\r\n\t<slot></slot>\r\n</span> \r\n<div class=\"popover {{popoverAlignment}}\" v-show=\"show\" v-el:popover>\r\n  <div class=\"popover-arrow\"></div>\r\n  <h3 class=\"popover-title\" v-if=\"title\">{{title}}</h3>\r\n  <div class=\"popover-content\">\r\n    <span v-html=\"text\"></span>\r\n  </div>\r\n</div>";
 
 /***/ },
-/* 126 */
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -5621,7 +5676,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* istanbul ignore if */if(true){if(inBrowser && window.__VUE_DEVTOOLS_GLOBAL_HOOK__){window.__VUE_DEVTOOLS_GLOBAL_HOOK__.emit('init',Vue);}}module.exports = Vue;
 
 /***/ },
-/* 127 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -5633,9 +5688,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(128);
+	__webpack_require__(136);
 	
-	var _progressHtml = __webpack_require__(131);
+	var _progressHtml = __webpack_require__(139);
 	
 	var _progressHtml2 = _interopRequireDefault(_progressHtml);
 	
@@ -5686,29 +5741,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 128 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(129);
+	__webpack_require__(137);
 
 /***/ },
-/* 129 */
+/* 137 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 130 */,
-/* 131 */
+/* 138 */,
+/* 139 */
 /***/ function(module, exports) {
 
 	module.exports = "<progress \r\n\tclass=\"progress {{progressVariant}} {{striped ? 'progress-striped' : ''}} {{animated ? 'progres-animated' : ''}}\" \r\n\tvalue=\"{{value}}\" \r\n\tmax=\"{{max}}\" \r\n\taria-valuenow=\"{{value}}\" \r\n\taria-valuemin=\"0\" \r\n\taria-valuemax=\"{{max}}\"\r\n\tv-el:progress>\r\n  <div class=\"progress\">\r\n    <span class=\"progress-bar\" v-bind:style=\"{width: value + '%'}\" v-el:progressbar></span>\r\n  </div>\r\n</progress>";
 
 /***/ },
-/* 132 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -5720,9 +5775,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(133);
+	__webpack_require__(141);
 	
-	var _tablesHtml = __webpack_require__(136);
+	var _tablesHtml = __webpack_require__(144);
 	
 	var _tablesHtml2 = _interopRequireDefault(_tablesHtml);
 	
@@ -5822,29 +5877,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 133 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(134);
+	__webpack_require__(142);
 
 /***/ },
-/* 134 */
+/* 142 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 135 */,
-/* 136 */
+/* 143 */,
+/* 144 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:class=\"{repsonsive: responsive}\">\r\n\t<slot></slot>\r\n</div>";
 
 /***/ },
-/* 137 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -5856,9 +5911,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(100);
+	__webpack_require__(108);
 	
-	var _tabsHtml = __webpack_require__(138);
+	var _tabsHtml = __webpack_require__(146);
 	
 	var _tabsHtml2 = _interopRequireDefault(_tabsHtml);
 	
@@ -5984,13 +6039,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.tab = tab;
 
 /***/ },
-/* 138 */
+/* 146 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"tabs\">\n  <ul class=\"nav nav-tabs\">\n    <li class=\"nav-item\" v-for=\"item in items\" v-on:click=\"setActive($index)\">\n      <span class=\"nav-link btn {{btnSize}} {{item.active ? 'active' : ''}} {{ item.disabled ? 'disabled' : '' }}\">{{item.title}}</span>\n    </li>\n  </ul>\n  <div class=\"tab-content\">\n    <slot></slot>\n  </div>\n</div>";
 
 /***/ },
-/* 139 */
+/* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -6002,15 +6057,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(140);
+	__webpack_require__(148);
 	
 	// TODO import {Tether} from 'vuestrap-tether'
 	
-	var _tooltipHtml = __webpack_require__(143);
+	var _tooltipHtml = __webpack_require__(151);
 	
 	var _tooltipHtml2 = _interopRequireDefault(_tooltipHtml);
 	
-	var _vue = __webpack_require__(126);
+	var _vue = __webpack_require__(134);
 	
 	var _vue2 = _interopRequireDefault(_vue);
 	
@@ -6195,25 +6250,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 140 */
+/* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(141);
+	__webpack_require__(149);
 	
 	__webpack_require__(10);
 
 /***/ },
-/* 141 */
+/* 149 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 142 */,
-/* 143 */
+/* 150 */,
+/* 151 */
 /***/ function(module, exports) {
 
 	module.exports = "<span v-el:trigger>\r\n\t<slot></slot>\r\n</span> \r\n<div class=\"tooltip fade in {{tooltipAlignment}}\" v-show=\"show\" v-el:tooltip>\r\n\t<div class=\"tooltip-inner\">\r\n\t\t<div class=\"tooltip-arrow\"></div>\r\n\t  <div class=\"tooltip-content\">\r\n\t    <span v-html=\"text\"></span>\r\n\t  </div>\r\n\t</div>\r\n</div>";

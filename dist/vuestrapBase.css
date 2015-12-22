@@ -3055,6 +3055,10 @@ button.list-group-item-danger {
   top: auto;
   bottom: 100%;
   margin-bottom: 2px; }
+.dropup {
+  display: inline-block; }
+.dropup.dropdown-select {
+  display: inline-block; }
 .form-control {
   display: block;
   width: 100%;
@@ -3472,6 +3476,8 @@ input[type="checkbox"].disabled {
   background-color: #eee;
   border: .075rem solid #ddd;
   border-radius: 0 .25rem .25rem 0; }
+.c-input {
+  color: inherit; }
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
