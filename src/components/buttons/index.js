@@ -1,5 +1,6 @@
 import 'vuestrap/components/buttons'
 import template from './buttons.html'
+import './buttons-override.scss'
 
 // export component object
 export default {
@@ -22,6 +23,10 @@ export default {
       default: false
     },
     disabled: {
+      type: Boolean,
+      default: false
+    },
+    inactive: {
     	type: Boolean,
       default: false
     },
@@ -36,10 +41,6 @@ export default {
   	size: {
       type: String,
       default: 'md'
-    },
-    type: {
-    	type: String,
-      default: 'button'
     },
     variant: {
       type: String,
