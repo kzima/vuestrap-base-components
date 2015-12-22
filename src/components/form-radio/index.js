@@ -1,5 +1,5 @@
 // import dependencies
-import 'vuestrap/components/forms'
+import 'src/components/custom-forms'
 import template from './form-radio.html'
 
 // export component object
