@@ -21,6 +21,12 @@
 			"description": "Make buttons look inactive by adding the disabled boolean attribute to any <code>&lt;vs-btn></code> element."
 		}, 
 		{
+			"name": "inactive",
+			"type": "Boolean",
+			"default": false,
+			"description": "Similar to disabled state, but it's clickable."
+		}, 
+		{
 			"name": "href",
 			"type": "String",
 			"default": "",
@@ -39,13 +45,6 @@
 			"default": "md",
 			"description": "Size of the button."
 		}, 
-		{
-			"name": "type",
-			"type": "String",
-			"values": ["button","submit"],
-			"default": "button",
-			"description": "Button type."
-		},
 		{
 			"name": "variant",
 			"type": "String",

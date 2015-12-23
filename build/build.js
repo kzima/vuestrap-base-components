@@ -4514,7 +4514,7 @@
 
 	module.exports = {
 		"name": "vuestrap-base-components",
-		"version": "0.7.2",
+		"version": "0.7.3",
 		"description": "Web components that extend Bootstrap 4.",
 		"library": "vuestrapBase",
 		"repository": {
@@ -6534,6 +6534,12 @@
 				"description": "Make buttons look inactive by adding the disabled boolean attribute to any <code>&lt;vs-btn></code> element."
 			},
 			{
+				"name": "inactive",
+				"type": "Boolean",
+				"default": false,
+				"description": "Similar to disabled state, but it's clickable."
+			},
+			{
 				"name": "href",
 				"type": "String",
 				"default": "",
@@ -6555,16 +6561,6 @@
 				],
 				"default": "md",
 				"description": "Size of the button."
-			},
-			{
-				"name": "type",
-				"type": "String",
-				"values": [
-					"button",
-					"submit"
-				],
-				"default": "button",
-				"description": "Button type."
 			},
 			{
 				"name": "variant",

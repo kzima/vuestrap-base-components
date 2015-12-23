@@ -69,7 +69,7 @@ if (ENV === 'docs') {
  */
 if (ENV !== 'docs') {
   config.entry = {}
-  config.entry[pkg.library] = './src/components/index.js'
+  config.entry[pkg.library] = './src/components/compiled.js'
 } else {
   config.entry = './src/index.js'
 }

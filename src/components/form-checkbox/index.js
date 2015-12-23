@@ -1,5 +1,5 @@
 // import dependencies
-import 'src/components/custom-forms'
+import '../custom-forms'
 import template from './form-checkbox.html'
 
 // export component object

@@ -25,7 +25,7 @@ import formTextarea from './form-textarea'
 import images from './images'
 import jumbotron from './jumbotron'
 import labels from './labels'
-import {listGroup, listGroupItem} from './list-group'
+import listGroup from './list-group'
 import media from './media'
 import modal from './modal'
 import {nav, navItem} from './nav'
@@ -39,43 +39,42 @@ import {tab, tabs} from './tabs'
 import tooltip from './tooltip'
 
 const vuestrapBase = {
-	'vsAlert': alert,
-	'vsBreadcrumb': breadcrumb,
-	'vsButtonCheckbox': buttonCheckbox,
-	'vsButtonGroup': buttonGroup,
-	'vsButtonRadio': buttonRadio,
-	'vsBtn': buttons,
-	'vsCard': card,
-	'vsSlide': slide,
-	'vsCarousel': carousel,
-	'vsCollapse': collapse,
-	'vsCollapseToggle': collapseToggle,
-	'vsDropdown': dropdown,
-	'vsDropdownSelect': dropdownSelect,
-	'vsFormCheckbox': formCheckbox,
-	'vsFormRadio': formRadio,
-	'vsFormInput': formInput,
-	'vsFormSelect': formSelect,
-	'vsFormTextarea': formTextarea,
-	'vsImages': images,
-	'vsJumbotron': jumbotron,
-	'vsLabels': labels,
-	'vsListGroup': listGroup,
-	'vsListGroupItem': listGroupItem,
-	'vsMedia': media,
-	'vsModal': modal,
-	'vsNav': nav,
-	'vsNavItem': navItem,
-	'vsNavbar': navbar,
-	'vsPager': pager,
-	'vsPagination': pagination,
-	'vsPopover': popover,
-	'vsProgress': progress,
-	'vsTables': tables,
-	'vsTab': tab,
-	'vsTabs': tabs,
-	'vsTooltip': tooltip,
+	alert,
+	breadcrumb,
+	buttonCheckbox,
+	buttonGroup,
+	buttonRadio,
+	buttons,
+	card,
+	slide,
+	carousel,
+	collapse,
+	collapseToggle,
+	dropdown,
+	dropdownSelect,
+	formCheckbox,
+	formRadio,
+	formInput,
+	formSelect,
+	formTextarea,
+	images,
+	jumbotron,
+	labels,
+	listGroup,
+	media,
+	modal,
+	nav,
+	navItem,
+	navbar,
+	pager,
+	pagination,
+	popover,
+	progress,
+	tables,
+	tab,
+	tabs,
+	tooltip,
 }
 
 // export all components under global variable
-export default vuestrapBase
+module.exports = vuestrapBase
