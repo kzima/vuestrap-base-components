@@ -18,25 +18,21 @@ config.plugins = [
   new ExtractTextPlugin(fileName + '.css')
 ]
 
-// plugins for production
-if (ENV === 'dist') {
+// set an environment variable to be available in the build script
+if (ENV) {
   config.plugins.push(new webpack.DefinePlugin({
     'process.env': {
-      NODE_ENV: '"production"'
+      NODE_ENV: '"' + ENV + '"'
     }
   }))
-  config.plugins.push(new webpack.optimize.UglifyJsPlugin({
-	  sourceMap: false,
-	  compress: {
-	    warnings: false
-	  }
-	}))
 }
-// plugins for dev
-if (ENV === 'dev') {
-  config.plugins.push(new webpack.DefinePlugin({
-    'process.env': {
-      NODE_ENV: '"dev"'
+
+// plugins for production
+if (ENV === 'dist') {
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin({
+    sourceMap: false,
+    compress: {
+      warnings: false
     }
   }))
 }

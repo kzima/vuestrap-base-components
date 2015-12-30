@@ -29,7 +29,7 @@ export const collapse = {
       this.$el.classList.add('collapsing')
       this.$el.offsetWidth
       this.$el.style.height = height + 'px'
-      setTimeout(()=> {
+      this._collapseAnimation = setTimeout(()=> {
         this.$el.classList.remove('collapsing')
         this.$el.classList.add('collapse', 'in')
       }, TRANSITION_DURATION)
@@ -40,7 +40,7 @@ export const collapse = {
       this.$el.classList.add('collapsing')
       this.$el.offsetWidth
       this.$el.style.height = '0px'
-      setTimeout(()=> {
+      this._collapseAnimation = setTimeout(()=> {
         this.$el.classList.remove('collapsing')
         this.$el.classList.add('collapse')
       }, TRANSITION_DURATION)
@@ -77,6 +77,9 @@ export const collapse = {
       }
     },
   },
+  destroyed() {
+    clearTimeout(this._collapseAnimation)
+  }
 }
 
 // export component object

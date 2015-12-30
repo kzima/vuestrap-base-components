@@ -3,7 +3,7 @@ import 'vuestrap/components/nav'
 import template from './tabs.html'
 import {csstransitions} from '../../../utils/helpers.js'
 
-// this is directly linked to the bootstrap animation timing in _carusel.scss
+// this is directly linked to the bootstrap animation timing in _tabs.scss
 // for browsers that do not support transitions like IE9 just change slide immediately
 const TRANSITION_DURATION = csstransitions() ? 150 : 0
 
@@ -65,7 +65,7 @@ export const tabs = {
 
       // set new active tab and animate (if fade flag is set to true)
       this.$children[index].$set('active', true)
-      setTimeout(() => {
+      this._tabAnimation = setTimeout(() => {
         // setting animate to true will trigger fade in effect
         this.items[index].active = true
         this.$children[index].$set('animate', true)
@@ -79,6 +79,9 @@ export const tabs = {
       this.setActive(0)
     }
   },
+  destroyed() {
+    clearTimeout(this._tabAnimation)
+  }
 }
 
 // export tab object

@@ -23,7 +23,7 @@ import {csstransitions} from '../../../utils/helpers.js'
 // import polyfill for IE9
 import '../../../utils/ie9_polyfill.js'
 
-// this is directly linked to the bootstrap animation timing in _carusel.scss
+// this is directly linked to the bootstrap animation timing in _carousel.scss
 // for browsers that do not support transitions like IE9 just change slide immediately
 const TRANSITION_DURATION = csstransitions() ? 600 : 0
 
@@ -139,7 +139,7 @@ export const carousel = {
       this._items[oldVal].classList.add(this.direction.outgoing)
       this._items[val].classList.remove(this.direction.incoming)
       // wait for animation to finish and cleanup classes
-      setTimeout(() => {
+      this._carouselAnimation = setTimeout(() => {
         this._items[oldVal].classList.remove(this.direction.outgoing, 'active')
         this._items[val].classList.remove(this.direction.overlay)
         this.animating = false
@@ -147,6 +147,9 @@ export const carousel = {
         this.$dispatch('slid::carousel', val)
       }, TRANSITION_DURATION)
     }
+  },
+  destroyed() {
+    clearTimeout(this._carouselAnimation)
   }
 }
 

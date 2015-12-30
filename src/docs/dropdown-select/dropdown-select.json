@@ -11,7 +11,7 @@
 		{
 			"name": "model",
 			"type": "String/Object",
-			"default": "''",
+			"default": "",
 			"required": false,
 			"description": "A result of the selection. Can return object (see <code>return-object</code> attribute)."
 		},
@@ -26,7 +26,7 @@
 			"name": "position",
 			"type": "String",
 			"values": ["left", "right"],
-			"default": "'left'",
+			"default": "left",
 			"required": false,
 			"description": "Vertical position of the dropdown list against the dropdown button. It becomes handy when dropdown floats to the right."
 		},
@@ -40,28 +40,28 @@
 		{
 			"name": "caret",
 			"type": "Boolean",
-			"default": true,
+			"default": "true",
 			"required": false,
 			"description": "Show/hide down caret."
 		},
 		{
 			"name": "default-text",
 			"type": "String",
-			"default": "'Plase select one'",
+			"default": "Plase select one",
 			"required": false,
 			"description": "Default text shown before selection is made."
 		},
 		{
 			"name": "force-default",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"required": false,
 			"description": "Force default text to be always shown, if set to true."
 		},
 		{
 			"name": "return-object",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"required": false,
 			"description": "If set to true, a full object will be returned in the model. By default only <code>value</code> is returned."
 		},

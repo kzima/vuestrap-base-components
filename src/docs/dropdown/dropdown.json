@@ -18,7 +18,7 @@
 		{
 			"name": "caret",
 			"type": "Boolean",
-			"default": true,
+			"default": "true",
 			"required": false,
 			"description": "Show/hide down caret.."
 		},

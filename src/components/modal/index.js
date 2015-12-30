@@ -36,9 +36,9 @@ export default {
       this.$el.style.display = 'block'
       const _this = this
       // wait for the display block, and then add class "in" class on the modal
-      setTimeout(() => {
+      this._modalAnimation = setTimeout(() => {
         _this.animateBackdrop = true
-        setTimeout(() => {
+        this._modalAnimation = setTimeout(() => {
           _this.animateModal = true
           _this.$dispatch('shown::modal')
         }, (_this.fade) ? TRANSITION_DURATION : 0)
@@ -48,10 +48,10 @@ export default {
       const _this = this
       // first animate modal out
       this.animateModal = false
-      setTimeout(() => {
+      this._modalAnimation = setTimeout(() => {
         // wait for animation to complete and then hide the backdrop
         _this.animateBackdrop = false
-        setTimeout(() => {
+        this._modalAnimation = setTimeout(() => {
           // no hide the modal wrapper
           _this.$el.style.display = 'none'
           _this.$dispatch('hidden::modal')
@@ -74,6 +74,9 @@ export default {
       }
     })
   },
+  destroyed() {
+    clearTimeout(this._modalAnimation)
+  }
   events: {
     // control modal from outside via events
     'show::modal'(id) {

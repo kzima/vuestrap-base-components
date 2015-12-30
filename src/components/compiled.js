@@ -77,4 +77,4 @@ const vuestrapBase = {
 }
 
 // export all components under global variable
-module.exports = vuestrapBase
+export default vuestrapBase
