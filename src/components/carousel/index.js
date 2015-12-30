@@ -150,6 +150,7 @@ export const carousel = {
   },
   destroyed() {
     clearTimeout(this._carouselAnimation)
+    clearInterval(this._intervalId)
   }
 }
 

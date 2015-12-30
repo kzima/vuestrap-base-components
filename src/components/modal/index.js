@@ -65,18 +65,6 @@ export default {
       }
     },
   },
-  ready() {
-    // support for esc key press
-    document.addEventListener('keydown', (e) => {
-      const key = e.which || e.keyCode
-      if (key === 27) { // 27 is esc
-        this.hide()
-      }
-    })
-  },
-  destroyed() {
-    clearTimeout(this._modalAnimation)
-  }
   events: {
     // control modal from outside via events
     'show::modal'(id) {
@@ -89,5 +77,17 @@ export default {
         this.hide()
       }
     }
-  }
+  },
+  ready() {
+    // support for esc key press
+    document.addEventListener('keydown', (e) => {
+      const key = e.which || e.keyCode
+      if (key === 27) { // 27 is esc
+        this.hide()
+      }
+    })
+  },
+  destroyed() {
+    clearTimeout(this._modalAnimation)
+  },
 }

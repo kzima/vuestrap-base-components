@@ -56,22 +56,22 @@
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	__webpack_require__(3);
+	__webpack_require__(2);
 
 	// import external dependencies
 	// docs component handles routing and demo pages
 
-	var _vuestrapDocsSrcComponentsDocs = __webpack_require__(8);
+	var _vuestrapDocsSrcComponentsDocs = __webpack_require__(7);
 
 	var _vuestrapDocsSrcComponentsDocs2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDocs);
 
 	// import utils
 
-	var _vuestrapDocsUtils = __webpack_require__(35);
+	var _vuestrapDocsUtils = __webpack_require__(34);
 
 	// import demo pages compatibile with docs component
 
-	var _srcDocs = __webpack_require__(38);
+	var _srcDocs = __webpack_require__(37);
 
 	var _srcDocs2 = _interopRequireDefault(_srcDocs);
 
@@ -107,7 +107,7 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {/*!
+	/*!
 	 * Vue.js v1.0.10
 	 * (c) 2015 Evan You
 	 * Released under the MIT License.
@@ -402,7 +402,7 @@
 	                 * the text parser to re-compile the regular expressions.
 	                 *
 	                 * @type {Array<String>}
-	                 */get:function get(){return delimiters;},set:function set(val){delimiters = val;compileRegex();},configurable:true,enumerable:true},unsafeDelimiters:{get:function get(){return unsafeDelimiters;},set:function set(val){unsafeDelimiters = val;compileRegex();},configurable:true,enumerable:true}});var warn=undefined;if(process.env.NODE_ENV !== 'production'){(function(){var hasConsole=typeof console !== 'undefined';warn = function(msg,e){if(hasConsole && (!config.silent || config.debug)){console.warn('[Vue warn]: ' + msg); /* istanbul ignore if */if(config.debug){if(e){throw e;}else {console.warn(new Error('Warning Stack Trace').stack);}}}};})();} /**
+	                 */get:function get(){return delimiters;},set:function set(val){delimiters = val;compileRegex();},configurable:true,enumerable:true},unsafeDelimiters:{get:function get(){return unsafeDelimiters;},set:function set(val){unsafeDelimiters = val;compileRegex();},configurable:true,enumerable:true}});var warn=undefined;if(true){(function(){var hasConsole=typeof console !== 'undefined';warn = function(msg,e){if(hasConsole && (!config.silent || config.debug)){console.warn('[Vue warn]: ' + msg); /* istanbul ignore if */if(config.debug){if(e){throw e;}else {console.warn(new Error('Warning Stack Trace').stack);}}}};})();} /**
 	 * Append with transition.
 	 *
 	 * @param {Element} el
@@ -443,7 +443,7 @@
 	 *
 	 * @param {String|Element} el
 	 * @return {Element}
-	 */function query(el){if(typeof el === 'string'){var selector=el;el = document.querySelector(el);if(!el){process.env.NODE_ENV !== 'production' && warn('Cannot find element: ' + selector);}}return el;} /**
+	 */function query(el){if(typeof el === 'string'){var selector=el;el = document.querySelector(el);if(!el){("docs") !== 'production' && warn('Cannot find element: ' + selector);}}return el;} /**
 	 * Check if a node is in the document.
 	 * Note: document.documentElement.contains should work here
 	 * but always returns false for comment nodes in phantomjs,
@@ -571,7 +571,7 @@
 	 * @param {Element} el
 	 * @param {Object} options
 	 * @return {Object|undefined}
-	 */function checkComponentAttr(el,options){var tag=el.tagName.toLowerCase();var hasAttrs=el.hasAttributes();if(!commonTagRE.test(tag) && tag !== 'component'){if(resolveAsset(options,'components',tag)){return {id:tag};}else {var is=hasAttrs && getIsBinding(el);if(is){return is;}else if(process.env.NODE_ENV !== 'production'){if(tag.indexOf('-') > -1 || /HTMLUnknownElement/.test(el.toString()) &&  // Chrome returns unknown for several HTML5 elements.
+	 */function checkComponentAttr(el,options){var tag=el.tagName.toLowerCase();var hasAttrs=el.hasAttributes();if(!commonTagRE.test(tag) && tag !== 'component'){if(resolveAsset(options,'components',tag)){return {id:tag};}else {var is=hasAttrs && getIsBinding(el);if(is){return is;}else if(true){if(tag.indexOf('-') > -1 || /HTMLUnknownElement/.test(el.toString()) &&  // Chrome returns unknown for several HTML5 elements.
 	// https://code.google.com/p/chromium/issues/detail?id=540526
 	!/^(data|time|rtc|rb)$/.test(tag)){warn('Unknown custom element: <' + tag + '> - did you ' + 'register the component correctly?');}}}}else if(hasAttrs){return getIsBinding(el);}} /**
 	 * Get "is" binding from an element.
@@ -592,7 +592,7 @@
 	 * @param {*} value
 	 */function assertProp(prop,value){ // if a prop is not provided and is not required,
 	// skip the check.
-	if(prop.raw === null && !prop.required){return true;}var options=prop.options;var type=options.type;var valid=true;var expectedType;if(type){if(type === String){expectedType = 'string';valid = typeof value === expectedType;}else if(type === Number){expectedType = 'number';valid = typeof value === 'number';}else if(type === Boolean){expectedType = 'boolean';valid = typeof value === 'boolean';}else if(type === Function){expectedType = 'function';valid = typeof value === 'function';}else if(type === Object){expectedType = 'object';valid = isPlainObject(value);}else if(type === Array){expectedType = 'array';valid = isArray(value);}else {valid = value instanceof type;}}if(!valid){process.env.NODE_ENV !== 'production' && warn('Invalid prop: type check failed for ' + prop.path + '="' + prop.raw + '".' + ' Expected ' + formatType(expectedType) + ', got ' + formatValue(value) + '.');return false;}var validator=options.validator;if(validator){if(!validator.call(null,value)){process.env.NODE_ENV !== 'production' && warn('Invalid prop: custom validator check failed for ' + prop.path + '="' + prop.raw + '"');return false;}}return true;}function formatType(val){return val?val.charAt(0).toUpperCase() + val.slice(1):'custom type';}function formatValue(val){return Object.prototype.toString.call(val).slice(8,-1);} /**
+	if(prop.raw === null && !prop.required){return true;}var options=prop.options;var type=options.type;var valid=true;var expectedType;if(type){if(type === String){expectedType = 'string';valid = typeof value === expectedType;}else if(type === Number){expectedType = 'number';valid = typeof value === 'number';}else if(type === Boolean){expectedType = 'boolean';valid = typeof value === 'boolean';}else if(type === Function){expectedType = 'function';valid = typeof value === 'function';}else if(type === Object){expectedType = 'object';valid = isPlainObject(value);}else if(type === Array){expectedType = 'array';valid = isArray(value);}else {valid = value instanceof type;}}if(!valid){("docs") !== 'production' && warn('Invalid prop: type check failed for ' + prop.path + '="' + prop.raw + '".' + ' Expected ' + formatType(expectedType) + ', got ' + formatValue(value) + '.');return false;}var validator=options.validator;if(validator){if(!validator.call(null,value)){("docs") !== 'production' && warn('Invalid prop: custom validator check failed for ' + prop.path + '="' + prop.raw + '"');return false;}}return true;}function formatType(val){return val?val.charAt(0).toUpperCase() + val.slice(1):'custom type';}function formatValue(val){return Object.prototype.toString.call(val).slice(8,-1);} /**
 	 * Option overwriting strategies are functions that handle
 	 * how to merge a parent option value and a child option
 	 * value into the final value.
@@ -607,7 +607,7 @@
 	 */function mergeData(to,from){var key,toVal,fromVal;for(key in from) {toVal = to[key];fromVal = from[key];if(!hasOwn(to,key)){set(to,key,fromVal);}else if(isObject(toVal) && isObject(fromVal)){mergeData(toVal,fromVal);}}return to;} /**
 	 * Data
 	 */strats.data = function(parentVal,childVal,vm){if(!vm){ // in a Vue.extend merge, both should be functions
-	if(!childVal){return parentVal;}if(typeof childVal !== 'function'){process.env.NODE_ENV !== 'production' && warn('The "data" option should be a function ' + 'that returns a per-instance value in component ' + 'definitions.');return parentVal;}if(!parentVal){return childVal;} // when parentVal & childVal are both present,
+	if(!childVal){return parentVal;}if(typeof childVal !== 'function'){("docs") !== 'production' && warn('The "data" option should be a function ' + 'that returns a per-instance value in component ' + 'definitions.');return parentVal;}if(!parentVal){return childVal;} // when parentVal & childVal are both present,
 	// we need to return a function that returns the
 	// merged result of both functions... no need to
 	// check if parentVal is a function here because
@@ -615,12 +615,12 @@
 	return function mergedDataFn(){return mergeData(childVal.call(this),parentVal.call(this));};}else if(parentVal || childVal){return function mergedInstanceDataFn(){ // instance merge
 	var instanceData=typeof childVal === 'function'?childVal.call(vm):childVal;var defaultData=typeof parentVal === 'function'?parentVal.call(vm):undefined;if(instanceData){return mergeData(instanceData,defaultData);}else {return defaultData;}};}}; /**
 	 * El
-	 */strats.el = function(parentVal,childVal,vm){if(!vm && childVal && typeof childVal !== 'function'){process.env.NODE_ENV !== 'production' && warn('The "el" option should be a function ' + 'that returns a per-instance value in component ' + 'definitions.');return;}var ret=childVal || parentVal; // invoke the element factory if this is instance merge
+	 */strats.el = function(parentVal,childVal,vm){if(!vm && childVal && typeof childVal !== 'function'){("docs") !== 'production' && warn('The "el" option should be a function ' + 'that returns a per-instance value in component ' + 'definitions.');return;}var ret=childVal || parentVal; // invoke the element factory if this is instance merge
 	return vm && typeof ret === 'function'?ret.call(vm):ret;}; /**
 	 * Hooks and param attributes are merged as arrays.
 	 */strats.init = strats.created = strats.ready = strats.attached = strats.detached = strats.beforeCompile = strats.compiled = strats.beforeDestroy = strats.destroyed = function(parentVal,childVal){return childVal?parentVal?parentVal.concat(childVal):isArray(childVal)?childVal:[childVal]:parentVal;}; /**
 	 * 0.11 deprecation warning
-	 */strats.paramAttributes = function(){ /* istanbul ignore next */process.env.NODE_ENV !== 'production' && warn('"paramAttributes" option has been deprecated in 0.12. ' + 'Use "props" instead.');}; /**
+	 */strats.paramAttributes = function(){ /* istanbul ignore next */("docs") !== 'production' && warn('"paramAttributes" option has been deprecated in 0.12. ' + 'Use "props" instead.');}; /**
 	 * Assets
 	 *
 	 * When a vm is present (instance creation), we need to do
@@ -640,7 +640,7 @@
 	 * constructors.
 	 *
 	 * @param {Object} options
-	 */function guardComponents(options){if(options.components){var components=options.components = guardArrayAssets(options.components);var def;var ids=Object.keys(components);for(var i=0,l=ids.length;i < l;i++) {var key=ids[i];if(commonTagRE.test(key)){process.env.NODE_ENV !== 'production' && warn('Do not use built-in HTML elements as component ' + 'id: ' + key);continue;}def = components[key];if(isPlainObject(def)){components[key] = Vue.extend(def);}}}} /**
+	 */function guardComponents(options){if(options.components){var components=options.components = guardArrayAssets(options.components);var def;var ids=Object.keys(components);for(var i=0,l=ids.length;i < l;i++) {var key=ids[i];if(commonTagRE.test(key)){("docs") !== 'production' && warn('Do not use built-in HTML elements as component ' + 'id: ' + key);continue;}def = components[key];if(isPlainObject(def)){components[key] = Vue.extend(def);}}}} /**
 	 * Ensure all props option syntax are normalized into the
 	 * Object-based format.
 	 *
@@ -651,7 +651,7 @@
 	 *
 	 * @param {Object|Array} assets
 	 * @return {Object}
-	 */function guardArrayAssets(assets){if(isArray(assets)){var res={};var i=assets.length;var asset;while(i--) {asset = assets[i];var id=typeof asset === 'function'?asset.options && asset.options.name || asset.id:asset.name || asset.id;if(!id){process.env.NODE_ENV !== 'production' && warn('Array-syntax assets must provide a "name" or "id" field.');}else {res[id] = asset;}}return res;}return assets;} /**
+	 */function guardArrayAssets(assets){if(isArray(assets)){var res={};var i=assets.length;var asset;while(i--) {asset = assets[i];var id=typeof asset === 'function'?asset.options && asset.options.name || asset.id:asset.name || asset.id;if(!id){("docs") !== 'production' && warn('Array-syntax assets must provide a "name" or "id" field.');}else {res[id] = asset;}}return res;}return assets;} /**
 	 * Merge two option objects into a new one.
 	 * Core utility used in both instantiation and inheritance.
 	 *
@@ -672,7 +672,7 @@
 	assets[camelizedId = camelize(id)] ||  // Pascal Case ID
 	assets[camelizedId.charAt(0).toUpperCase() + camelizedId.slice(1)];} /**
 	 * Assert asset exists
-	 */function assertAsset(val,type,id){if(!val){process.env.NODE_ENV !== 'production' && warn('Failed to resolve ' + type + ': ' + id);}}var arrayProto=Array.prototype;var arrayMethods=Object.create(arrayProto) /**
+	 */function assertAsset(val,type,id){if(!val){("docs") !== 'production' && warn('Failed to resolve ' + type + ': ' + id);}}var arrayProto=Array.prototype;var arrayMethods=Object.create(arrayProto) /**
 	 * Intercept mutating methods and emit events
 	 */;['push','pop','shift','unshift','splice','sort','reverse'].forEach(function(method){ // cache original method
 	var original=arrayProto[method];def(arrayMethods,method,function mutator(){ // avoid leaking arguments:
@@ -874,13 +874,13 @@
 	 * @param {String} path
 	 */function getPath(obj,path){return parseExpression(path).get(obj);} /**
 	 * Warn against setting non-existent root path on a vm.
-	 */var warnNonExistent;if(process.env.NODE_ENV !== 'production'){warnNonExistent = function(path){warn('You are setting a non-existent path "' + path.raw + '" ' + 'on a vm instance. Consider pre-initializing the property ' + 'with the "data" option for more reliable reactivity ' + 'and better performance.');};} /**
+	 */var warnNonExistent;if(true){warnNonExistent = function(path){warn('You are setting a non-existent path "' + path.raw + '" ' + 'on a vm instance. Consider pre-initializing the property ' + 'with the "data" option for more reliable reactivity ' + 'and better performance.');};} /**
 	 * Set on an object from a path
 	 *
 	 * @param {Object} obj
 	 * @param {String | Array} path
 	 * @param {*} val
-	 */function setPath(obj,path,val){var original=obj;if(typeof path === 'string'){path = parse(path);}if(!path || !isObject(obj)){return false;}var last,key;for(var i=0,l=path.length;i < l;i++) {last = obj;key = path[i];if(key.charAt(0) === '*'){key = parseExpression(key.slice(1)).get.call(original,original);}if(i < l - 1){obj = obj[key];if(!isObject(obj)){obj = {};if(process.env.NODE_ENV !== 'production' && last._isVue){warnNonExistent(path);}set(last,key,obj);}}else {if(isArray(obj)){obj.$set(key,val);}else if(key in obj){obj[key] = val;}else {if(process.env.NODE_ENV !== 'production' && obj._isVue){warnNonExistent(path);}set(obj,key,val);}}}return true;}var path=Object.freeze({parsePath:parsePath,getPath:getPath,setPath:setPath});var expressionCache=new Cache(1000);var allowedKeywords='Math,Date,this,true,false,null,undefined,Infinity,NaN,' + 'isNaN,isFinite,decodeURI,decodeURIComponent,encodeURI,' + 'encodeURIComponent,parseInt,parseFloat';var allowedKeywordsRE=new RegExp('^(' + allowedKeywords.replace(/,/g,'\\b|') + '\\b)'); // keywords that don't make sense inside expressions
+	 */function setPath(obj,path,val){var original=obj;if(typeof path === 'string'){path = parse(path);}if(!path || !isObject(obj)){return false;}var last,key;for(var i=0,l=path.length;i < l;i++) {last = obj;key = path[i];if(key.charAt(0) === '*'){key = parseExpression(key.slice(1)).get.call(original,original);}if(i < l - 1){obj = obj[key];if(!isObject(obj)){obj = {};if(("docs") !== 'production' && last._isVue){warnNonExistent(path);}set(last,key,obj);}}else {if(isArray(obj)){obj.$set(key,val);}else if(key in obj){obj[key] = val;}else {if(("docs") !== 'production' && obj._isVue){warnNonExistent(path);}set(obj,key,val);}}}return true;}var path=Object.freeze({parsePath:parsePath,getPath:getPath,setPath:setPath});var expressionCache=new Cache(1000);var allowedKeywords='Math,Date,this,true,false,null,undefined,Infinity,NaN,' + 'isNaN,isFinite,decodeURI,decodeURIComponent,encodeURI,' + 'encodeURIComponent,parseInt,parseFloat';var allowedKeywordsRE=new RegExp('^(' + allowedKeywords.replace(/,/g,'\\b|') + '\\b)'); // keywords that don't make sense inside expressions
 	var improperKeywords='break,case,class,catch,const,continue,debugger,default,' + 'delete,do,else,export,extends,finally,for,function,if,' + 'import,in,instanceof,let,return,super,switch,throw,try,' + 'var,while,with,yield,enum,await,implements,package,' + 'proctected,static,interface,private,public';var improperKeywordsRE=new RegExp('^(' + improperKeywords.replace(/,/g,'\\b|') + '\\b)');var wsRE=/\s/g;var newlineRE=/\n/g;var saveRE=/[\{,]\s*[\w\$_]+\s*:|('[^']*'|"[^"]*")|new |typeof |void /g;var restoreRE=/"(\d+)"/g;var pathTestRE=/^[A-Za-z_$][\w$]*(\.[A-Za-z_$][\w$]*|\['.*?'\]|\[".*?"\]|\[\d+\]|\[[A-Za-z_$][\w$]*\])*$/;var pathReplaceRE=/[^\w$\.]([A-Za-z_$][\w$]*(\.[A-Za-z_$][\w$]*|\['.*?'\]|\[".*?"\])*)/g;var booleanLiteralRE=/^(true|false)$/; /**
 	 * Save / Rewrite / Restore
 	 *
@@ -919,7 +919,7 @@
 	 *
 	 * @param {String} exp
 	 * @return {Function}
-	 */function compileGetter(exp){if(improperKeywordsRE.test(exp)){process.env.NODE_ENV !== 'production' && warn('Avoid using reserved keywords in expression: ' + exp);} // reset state
+	 */function compileGetter(exp){if(improperKeywordsRE.test(exp)){("docs") !== 'production' && warn('Avoid using reserved keywords in expression: ' + exp);} // reset state
 	saved.length = 0; // save strings and object literal keys
 	var body=exp.replace(saveRE,save).replace(wsRE,''); // rewrite all paths
 	// pad 1 space here becaue the regex matches 1 extra char
@@ -931,12 +931,12 @@
 	 *
 	 * @param {String} body
 	 * @return {Function|undefined}
-	 */function makeGetterFn(body){try{return new Function('scope','return ' + body + ';');}catch(e) {process.env.NODE_ENV !== 'production' && warn('Invalid expression. ' + 'Generated function body: ' + body);}} /**
+	 */function makeGetterFn(body){try{return new Function('scope','return ' + body + ';');}catch(e) {("docs") !== 'production' && warn('Invalid expression. ' + 'Generated function body: ' + body);}} /**
 	 * Compile a setter function for the expression.
 	 *
 	 * @param {String} exp
 	 * @return {Function|undefined}
-	 */function compileSetter(exp){var path=parsePath(exp);if(path){return function(scope,val){setPath(scope,path,val);};}else {process.env.NODE_ENV !== 'production' && warn('Invalid setter expression: ' + exp);}} /**
+	 */function compileSetter(exp){var path=parsePath(exp);if(path){return function(scope,val){setPath(scope,path,val);};}else {("docs") !== 'production' && warn('Invalid setter expression: ' + exp);}} /**
 	 * Parse an expression into re-written getter/setters.
 	 *
 	 * @param {String} exp
@@ -963,14 +963,14 @@
 	 */function resetBatcherState(){queue = [];userQueue = [];has = {};circular = {};waiting = internalQueueDepleted = false;} /**
 	 * Flush both queues and run the watchers.
 	 */function flushBatcherQueue(){runBatcherQueue(queue);internalQueueDepleted = true;runBatcherQueue(userQueue); // dev tool hook
-	/* istanbul ignore if */if(process.env.NODE_ENV !== 'production'){if(inBrowser && window.__VUE_DEVTOOLS_GLOBAL_HOOK__){window.__VUE_DEVTOOLS_GLOBAL_HOOK__.emit('flush');}}resetBatcherState();} /**
+	/* istanbul ignore if */if(true){if(inBrowser && window.__VUE_DEVTOOLS_GLOBAL_HOOK__){window.__VUE_DEVTOOLS_GLOBAL_HOOK__.emit('flush');}}resetBatcherState();} /**
 	 * Run the watchers in a single queue.
 	 *
 	 * @param {Array} queue
 	 */function runBatcherQueue(queue){ // do not cache length because more watchers might be pushed
 	// as we run existing watchers
 	for(var i=0;i < queue.length;i++) {var watcher=queue[i];var id=watcher.id;has[id] = null;watcher.run(); // in dev build, check and stop circular updates.
-	if(process.env.NODE_ENV !== 'production' && has[id] != null){circular[id] = (circular[id] || 0) + 1;if(circular[id] > config._maxUpdateCount){queue.splice(has[id],1);warn('You may have an infinite update loop for watcher ' + 'with expression: ' + watcher.expression);}}}} /**
+	if(("docs") !== 'production' && has[id] != null){circular[id] = (circular[id] || 0) + 1;if(circular[id] > config._maxUpdateCount){queue.splice(has[id],1);warn('You may have an infinite update loop for watcher ' + 'with expression: ' + watcher.expression);}}}} /**
 	 * Push a watcher into the watcher queue.
 	 * Jobs with duplicate IDs will be skipped unless it's
 	 * pushed when the queue is being flushed.
@@ -1014,14 +1014,14 @@
 	 * @param {Dep} dep
 	 */Watcher.prototype.addDep = function(dep){var id=dep.id;if(!this.newDeps[id]){this.newDeps[id] = dep;if(!this.deps[id]){this.deps[id] = dep;dep.addSub(this);}}}; /**
 	 * Evaluate the getter, and re-collect dependencies.
-	 */Watcher.prototype.get = function(){this.beforeGet();var scope=this.scope || this.vm;var value;try{value = this.getter.call(scope,scope);}catch(e) {if(process.env.NODE_ENV !== 'production' && config.warnExpressionErrors){warn('Error when evaluating expression "' + this.expression + '". ' + (config.debug?'':'Turn on debug mode to see stack trace.'),e);}} // "touch" every property so they are all tracked as
+	 */Watcher.prototype.get = function(){this.beforeGet();var scope=this.scope || this.vm;var value;try{value = this.getter.call(scope,scope);}catch(e) {if(("docs") !== 'production' && config.warnExpressionErrors){warn('Error when evaluating expression "' + this.expression + '". ' + (config.debug?'':'Turn on debug mode to see stack trace.'),e);}} // "touch" every property so they are all tracked as
 	// dependencies for deep watching
 	if(this.deep){traverse(value);}if(this.preProcess){value = this.preProcess(value);}if(this.filters){value = scope._applyFilters(value,null,this.filters,false);}if(this.postProcess){value = this.postProcess(value);}this.afterGet();return value;}; /**
 	 * Set the corresponding value with the setter.
 	 *
 	 * @param {*} value
-	 */Watcher.prototype.set = function(value){var scope=this.scope || this.vm;if(this.filters){value = scope._applyFilters(value,this.value,this.filters,true);}try{this.setter.call(scope,scope,value);}catch(e) {if(process.env.NODE_ENV !== 'production' && config.warnExpressionErrors){warn('Error when evaluating setter "' + this.expression + '"',e);}} // two-way sync for v-for alias
-	var forContext=scope.$forContext;if(forContext && forContext.alias === this.expression){if(forContext.filters){process.env.NODE_ENV !== 'production' && warn('It seems you are using two-way binding on ' + 'a v-for alias (' + this.expression + '), and the ' + 'v-for has filters. This will not work properly. ' + 'Either remove the filters or use an array of ' + 'objects and bind to object properties instead.');return;}forContext._withLock(function(){if(scope.$key){ // original is an object
+	 */Watcher.prototype.set = function(value){var scope=this.scope || this.vm;if(this.filters){value = scope._applyFilters(value,this.value,this.filters,true);}try{this.setter.call(scope,scope,value);}catch(e) {if(("docs") !== 'production' && config.warnExpressionErrors){warn('Error when evaluating setter "' + this.expression + '"',e);}} // two-way sync for v-for alias
+	var forContext=scope.$forContext;if(forContext && forContext.alias === this.expression){if(forContext.filters){("docs") !== 'production' && warn('It seems you are using two-way binding on ' + 'a v-for alias (' + this.expression + '), and the ' + 'v-for has filters. This will not work properly. ' + 'Either remove the filters or use an array of ' + 'objects and bind to object properties instead.');return;}forContext._withLock(function(){if(scope.$key){ // original is an object
 	forContext.rawValue[scope.$key] = value;}else {forContext.rawValue.$set(scope.$index,value);}});}}; /**
 	 * Prepare for dependency collection.
 	 */Watcher.prototype.beforeGet = function(){Dep.target = this;this.newDeps = Object.create(null);}; /**
@@ -1034,7 +1034,7 @@
 	 */Watcher.prototype.update = function(shallow){if(this.lazy){this.dirty = true;}else if(this.sync || !config.async){this.run();}else { // if queued, only overwrite shallow with non-shallow,
 	// but not the other way around.
 	this.shallow = this.queued?shallow?this.shallow:false:!!shallow;this.queued = true; // record before-push error stack in debug mode
-	/* istanbul ignore if */if(process.env.NODE_ENV !== 'production' && config.debug){this.prevError = new Error('[vue] async stack trace');}pushWatcher(this);}}; /**
+	/* istanbul ignore if */if(("docs") !== 'production' && config.debug){this.prevError = new Error('[vue] async stack trace');}pushWatcher(this);}}; /**
 	 * Batcher job interface.
 	 * Will be called by the batcher.
 	 */Watcher.prototype.run = function(){if(this.active){var value=this.get();if(value !== this.value ||  // Deep watchers and Array watchers should fire even
@@ -1045,7 +1045,7 @@
 	var oldValue=this.value;this.value = value; // in debug + async mode, when a watcher callbacks
 	// throws, we also throw the saved before-push error
 	// so the full cross-tick stack trace is available.
-	var prevError=this.prevError; /* istanbul ignore if */if(process.env.NODE_ENV !== 'production' && config.debug && prevError){this.prevError = null;try{this.cb.call(this.vm,value,oldValue);}catch(e) {nextTick(function(){throw prevError;},0);throw e;}}else {this.cb.call(this.vm,value,oldValue);}}this.queued = this.shallow = false;}}; /**
+	var prevError=this.prevError; /* istanbul ignore if */if(("docs") !== 'production' && config.debug && prevError){this.prevError = null;try{this.cb.call(this.vm,value,oldValue);}catch(e) {nextTick(function(){throw prevError;},0);throw e;}}else {this.cb.call(this.vm,value,oldValue);}}this.queued = this.shallow = false;}}; /**
 	 * Evaluate the value of the watcher.
 	 * This only gets called for lazy watchers.
 	 */Watcher.prototype.evaluate = function(){ // avoid overwriting another watcher that is being
@@ -1063,7 +1063,7 @@
 	 * is collected as a "deep" dependency.
 	 *
 	 * @param {*} val
-	 */function traverse(val){var i,keys;if(isArray(val)){i = val.length;while(i--) traverse(val[i]);}else if(isObject(val)){keys = Object.keys(val);i = keys.length;while(i--) traverse(val[keys[i]]);}}var cloak={bind:function bind(){var el=this.el;this.vm.$once('hook:compiled',function(){el.removeAttribute('v-cloak');});}};var ref={bind:function bind(){process.env.NODE_ENV !== 'production' && warn('v-ref:' + this.arg + ' must be used on a child ' + 'component. Found on <' + this.el.tagName.toLowerCase() + '>.');}};var el={priority:1500,bind:function bind(){ /* istanbul ignore if */if(!this.arg){return;}var id=this.id = camelize(this.arg);var refs=(this._scope || this.vm).$els;if(hasOwn(refs,id)){refs[id] = this.el;}else {defineReactive(refs,id,this.el);}},unbind:function unbind(){var refs=(this._scope || this.vm).$els;if(refs[this.id] === this.el){refs[this.id] = null;}}};var prefixes=['-webkit-','-moz-','-ms-'];var camelPrefixes=['Webkit','Moz','ms'];var importantRE=/!important;?$/;var propCache=Object.create(null);var testEl=null;var style={deep:true,update:function update(value){if(typeof value === 'string'){this.el.style.cssText = value;}else if(isArray(value)){this.handleObject(value.reduce(extend,{}));}else {this.handleObject(value || {});}},handleObject:function handleObject(value){ // cache object styles so that only changed props
+	 */function traverse(val){var i,keys;if(isArray(val)){i = val.length;while(i--) traverse(val[i]);}else if(isObject(val)){keys = Object.keys(val);i = keys.length;while(i--) traverse(val[keys[i]]);}}var cloak={bind:function bind(){var el=this.el;this.vm.$once('hook:compiled',function(){el.removeAttribute('v-cloak');});}};var ref={bind:function bind(){("docs") !== 'production' && warn('v-ref:' + this.arg + ' must be used on a child ' + 'component. Found on <' + this.el.tagName.toLowerCase() + '>.');}};var el={priority:1500,bind:function bind(){ /* istanbul ignore if */if(!this.arg){return;}var id=this.id = camelize(this.arg);var refs=(this._scope || this.vm).$els;if(hasOwn(refs,id)){refs[id] = this.el;}else {defineReactive(refs,id,this.el);}},unbind:function unbind(){var refs=(this._scope || this.vm).$els;if(refs[this.id] === this.el){refs[this.id] = null;}}};var prefixes=['-webkit-','-moz-','-ms-'];var camelPrefixes=['Webkit','Moz','ms'];var importantRE=/!important;?$/;var propCache=Object.create(null);var testEl=null;var style={deep:true,update:function update(value){if(typeof value === 'string'){this.el.style.cssText = value;}else if(isArray(value)){this.handleObject(value.reduce(extend,{}));}else {this.handleObject(value || {});}},handleObject:function handleObject(value){ // cache object styles so that only changed props
 	// are actually updated.
 	var cache=this.cache || (this.cache = {});var name,val;for(name in cache) {if(!(name in value)){this.handleSingle(name,null);delete cache[name];}}for(name in value) {val = value[name];if(val !== cache[name]){cache[name] = val;this.handleSingle(name,val);}}},handleSingle:function handleSingle(prop,value){prop = normalize(prop);if(!prop)return; // unsupported prop
 	// cast possible numbers/booleans into strings
@@ -1090,7 +1090,7 @@
 	var disallowedInterpAttrRE=/^v-|^:|^@|^(is|transition|transition-mode|debounce|track-by|stagger|enter-stagger|leave-stagger)$/;var bind={priority:850,bind:function bind(){var attr=this.arg;var tag=this.el.tagName; // should be deep watch on object mode
 	if(!attr){this.deep = true;} // handle interpolation bindings
 	if(this.descriptor.interp){ // only allow binding on native attributes
-	if(disallowedInterpAttrRE.test(attr) || attr === 'name' && (tag === 'PARTIAL' || tag === 'SLOT')){process.env.NODE_ENV !== 'production' && warn(attr + '="' + this.descriptor.raw + '": ' + 'attribute interpolation is not allowed in Vue.js ' + 'directives and special attributes.');this.el.removeAttribute(attr);this.invalid = true;} /* istanbul ignore if */if(process.env.NODE_ENV !== 'production'){var raw=attr + '="' + this.descriptor.raw + '": '; // warn src
+	if(disallowedInterpAttrRE.test(attr) || attr === 'name' && (tag === 'PARTIAL' || tag === 'SLOT')){("docs") !== 'production' && warn(attr + '="' + this.descriptor.raw + '": ' + 'attribute interpolation is not allowed in Vue.js ' + 'directives and special attributes.');this.el.removeAttribute(attr);this.invalid = true;} /* istanbul ignore if */if(true){var raw=attr + '="' + this.descriptor.raw + '": '; // warn src
 	if(attr === 'src'){warn(raw + 'interpolation in "src" attribute will cause ' + 'a 404 request. Use v-bind:src instead.');} // warn style
 	if(attr === 'style'){warn(raw + 'interpolation in "style" attribute will cause ' + 'the attribute to be discarded in Internet Explorer. ' + 'Use v-bind:style instead.');}}}},update:function update(value){if(this.invalid){return;}var attr=this.arg;if(this.arg){this.handleSingle(attr,value);}else {this.handleObject(value || {});}}, // share object handler with v-bind:class
 	handleObject:style.handleObject,handleSingle:function handleSingle(attr,value){if(inputProps[attr] && attr in this.el){this.el[attr] = attr === 'value'?value || '': // IE9 will set input.value to "null" for null...
@@ -1102,7 +1102,7 @@
 	var keyCodes={esc:27,tab:9,enter:13,space:32,'delete':46,up:38,left:37,right:39,down:40};function keyFilter(handler,keys){var codes=keys.map(function(key){var charCode=key.charCodeAt(0);if(charCode > 47 && charCode < 58){return parseInt(key,10);}if(key.length === 1){charCode = key.toUpperCase().charCodeAt(0);if(charCode > 64 && charCode < 91){return charCode;}}return keyCodes[key];});return function keyHandler(e){if(codes.indexOf(e.keyCode) > -1){return handler.call(this,e);}};}function stopFilter(handler){return function stopHandler(e){e.stopPropagation();return handler.call(this,e);};}function preventFilter(handler){return function preventHandler(e){e.preventDefault();return handler.call(this,e);};}var on={acceptStatement:true,priority:700,bind:function bind(){ // deal with iframes
 	if(this.el.tagName === 'IFRAME' && this.arg !== 'load'){var self=this;this.iframeBind = function(){on$1(self.el.contentWindow,self.arg,self.handler);};this.on('load',this.iframeBind);}},update:function update(handler){ // stub a noop for v-on with no value,
 	// e.g. @mousedown.prevent
-	if(!this.descriptor.raw){handler = function(){};}if(typeof handler !== 'function'){process.env.NODE_ENV !== 'production' && warn('v-on:' + this.arg + '="' + this.expression + '" expects a function value, ' + 'got ' + handler);return;} // apply modifiers
+	if(!this.descriptor.raw){handler = function(){};}if(typeof handler !== 'function'){("docs") !== 'production' && warn('v-on:' + this.arg + '="' + this.expression + '" expects a function value, ' + 'got ' + handler);return;} // apply modifiers
 	if(this.modifiers.stop){handler = stopFilter(handler);}if(this.modifiers.prevent){handler = preventFilter(handler);} // key filter
 	var keys=Object.keys(this.modifiers).filter(function(key){return key !== 'stop' && key !== 'prevent';});if(keys.length){handler = keyFilter(handler,keys);}this.reset();this.handler = handler;if(this.iframeBind){this.iframeBind();}else {on$1(this.el,this.arg,this.handler);}},reset:function reset(){var el=this.iframeBind?this.el.contentWindow:this.el;if(this.handler){off(el,this.arg,this.handler);}},unbind:function unbind(){this.reset();}};var checkbox={bind:function bind(){var self=this;var el=this.el;this.getValue = function(){return el.hasOwnProperty('_value')?el._value:self.params.number?toNumber(el.value):el.value;};function getBooleanValue(){var val=el.checked;if(val && el.hasOwnProperty('_trueValue')){return el._trueValue;}if(!val && el.hasOwnProperty('_falseValue')){return el._falseValue;}return val;}this.listener = function(){var model=self._watcher.value;if(isArray(model)){var val=self.getValue();if(el.checked){if(indexOf(model,val) < 0){model.push(val);}}else {model.$remove(val);}}else {self.set(getBooleanValue());}};this.on('change',this.listener);if(el.checked){this.afterBind = this.listener;}},update:function update(value){var el=this.el;if(isArray(value)){el.checked = indexOf(value,this.getValue()) > -1;}else {if(el.hasOwnProperty('_trueValue')){el.checked = looseEqual(value,el._trueValue);}else {el.checked = !!value;}}}};var select={bind:function bind(){var self=this;var el=this.el; // method to force update DOM using latest value.
 	this.forceUpdate = function(){if(self._watcher){self.update(self._watcher.get());}}; // check if this is a multiple select
@@ -1166,7 +1166,7 @@
 	   *     - radio
 	   *     - number
 	   */bind:function bind(){ // friendly warning...
-	this.checkFilters();if(this.hasRead && !this.hasWrite){process.env.NODE_ENV !== 'production' && warn('It seems you are using a read-only filter with ' + 'v-model. You might want to use a two-way filter ' + 'to ensure correct behavior.');}var el=this.el;var tag=el.tagName;var handler;if(tag === 'INPUT'){handler = handlers[el.type] || handlers.text;}else if(tag === 'SELECT'){handler = handlers.select;}else if(tag === 'TEXTAREA'){handler = handlers.text;}else {process.env.NODE_ENV !== 'production' && warn('v-model does not support element type: ' + tag);return;}el.__v_model = this;handler.bind.call(this);this.update = handler.update;this._unbind = handler.unbind;}, /**
+	this.checkFilters();if(this.hasRead && !this.hasWrite){("docs") !== 'production' && warn('It seems you are using a read-only filter with ' + 'v-model. You might want to use a two-way filter ' + 'to ensure correct behavior.');}var el=this.el;var tag=el.tagName;var handler;if(tag === 'INPUT'){handler = handlers[el.type] || handlers.text;}else if(tag === 'SELECT'){handler = handlers.select;}else if(tag === 'TEXTAREA'){handler = handlers.text;}else {("docs") !== 'production' && warn('v-model does not support element type: ' + tag);return;}el.__v_model = this;handler.bind.call(this);this.update = handler.update;this._unbind = handler.unbind;}, /**
 	   * Check read/write filter stats.
 	   */checkFilters:function checkFilters(){var filters=this.filters;if(!filters)return;var i=filters.length;while(i--) {var filter=resolveAsset(this.vm.$options,'filters',filters[i].name);if(typeof filter === 'function' || filter.read){this.hasRead = true;}if(filter.write){this.hasWrite = true;}}},unbind:function unbind(){this.el.__v_model = null;this._unbind && this._unbind();}};var show={bind:function bind(){ // check else block
 	var next=this.el.nextElementSibling;if(next && getAttr(next,'v-else') !== null){this.elseEl = next;}},update:function update(value){this.apply(this.el,value);if(this.elseEl){this.apply(this.elseEl,!value);}},apply:function apply(el,value){applyTransition(el,value?1:-1,function(){el.style.display = value?'':'none';},this.vm);}};var templateCache=new Cache(1000);var idSelectorCache=new Cache(1000);var map={efault:[0,'',''],legend:[1,'<fieldset>','</fieldset>'],tr:[2,'<table><tbody>','</tbody></table>'],col:[2,'<table><tbody></tbody><colgroup>','</colgroup></table>']};map.td = map.th = [3,'<table><tbody><tr>','</tr></tbody></table>'];map.option = map.optgroup = [1,'<select multiple="multiple">','</select>'];map.thead = map.tbody = map.colgroup = map.caption = map.tfoot = [1,'<table>','</table>'];map.g = map.defs = map.symbol = map.use = map.image = map.text = map.circle = map.ellipse = map.line = map.path = map.polygon = map.polyline = map.rect = [1,'<svg ' + 'xmlns="http://www.w3.org/2000/svg" ' + 'xmlns:xlink="http://www.w3.org/1999/xlink" ' + 'xmlns:ev="http://www.w3.org/2001/xml-events"' + 'version="1.1">','</svg>']; /**
@@ -1291,8 +1291,8 @@
 	 * @param {Fragment} parentFrag
 	 */FragmentFactory.prototype.create = function(host,scope,parentFrag){var frag=cloneNode(this.template);return new Fragment(this.linker,this.vm,frag,host,scope,parentFrag);};var vIf={priority:2000,bind:function bind(){var el=this.el;if(!el.__vue__){ // check else block
 	var next=el.nextElementSibling;if(next && getAttr(next,'v-else') !== null){remove(next);this.elseFactory = new FragmentFactory(this.vm,next);} // check main block
-	this.anchor = createAnchor('v-if');replace(el,this.anchor);this.factory = new FragmentFactory(this.vm,el);}else {process.env.NODE_ENV !== 'production' && warn('v-if="' + this.expression + '" cannot be ' + 'used on an instance root element.');this.invalid = true;}},update:function update(value){if(this.invalid)return;if(value){if(!this.frag){this.insert();}}else {this.remove();}},insert:function insert(){if(this.elseFrag){this.elseFrag.remove();this.elseFrag = null;}this.frag = this.factory.create(this._host,this._scope,this._frag);this.frag.before(this.anchor);},remove:function remove(){if(this.frag){this.frag.remove();this.frag = null;}if(this.elseFactory && !this.elseFrag){this.elseFrag = this.elseFactory.create(this._host,this._scope,this._frag);this.elseFrag.before(this.anchor);}},unbind:function unbind(){if(this.frag){this.frag.destroy();}}};var uid$1=0;var vFor={priority:2000,params:['track-by','stagger','enter-stagger','leave-stagger'],bind:function bind(){ // support "item in items" syntax
-	var inMatch=this.expression.match(/(.*) in (.*)/);if(inMatch){var itMatch=inMatch[1].match(/\((.*),(.*)\)/);if(itMatch){this.iterator = itMatch[1].trim();this.alias = itMatch[2].trim();}else {this.alias = inMatch[1].trim();}this.expression = inMatch[2];}if(!this.alias){process.env.NODE_ENV !== 'production' && warn('Alias is required in v-for.');return;} // uid as a cache identifier
+	this.anchor = createAnchor('v-if');replace(el,this.anchor);this.factory = new FragmentFactory(this.vm,el);}else {("docs") !== 'production' && warn('v-if="' + this.expression + '" cannot be ' + 'used on an instance root element.');this.invalid = true;}},update:function update(value){if(this.invalid)return;if(value){if(!this.frag){this.insert();}}else {this.remove();}},insert:function insert(){if(this.elseFrag){this.elseFrag.remove();this.elseFrag = null;}this.frag = this.factory.create(this._host,this._scope,this._frag);this.frag.before(this.anchor);},remove:function remove(){if(this.frag){this.frag.remove();this.frag = null;}if(this.elseFactory && !this.elseFrag){this.elseFrag = this.elseFactory.create(this._host,this._scope,this._frag);this.elseFrag.before(this.anchor);}},unbind:function unbind(){if(this.frag){this.frag.destroy();}}};var uid$1=0;var vFor={priority:2000,params:['track-by','stagger','enter-stagger','leave-stagger'],bind:function bind(){ // support "item in items" syntax
+	var inMatch=this.expression.match(/(.*) in (.*)/);if(inMatch){var itMatch=inMatch[1].match(/\((.*),(.*)\)/);if(itMatch){this.iterator = itMatch[1].trim();this.alias = itMatch[2].trim();}else {this.alias = inMatch[1].trim();}this.expression = inMatch[2];}if(!this.alias){("docs") !== 'production' && warn('Alias is required in v-for.');return;} // uid as a cache identifier
 	this.id = '__v-for__' + ++uid$1; // check if this is an option list,
 	// so that we know if we need to update the <select>'s
 	// v-model when the option list has changed.
@@ -1391,14 +1391,14 @@
 	   * @param {Fragment} frag
 	   * @param {Number} index
 	   * @param {String} [key]
-	   */cacheFrag:function cacheFrag(value,frag,index,key){var trackByKey=this.params.trackBy;var cache=this.cache;var primitive=!isObject(value);var id;if(key || trackByKey || primitive){id = trackByKey?trackByKey === '$index'?index:value[trackByKey]:key || value;if(!cache[id]){cache[id] = frag;}else if(trackByKey !== '$index'){process.env.NODE_ENV !== 'production' && this.warnDuplicate(value);}}else {id = this.id;if(hasOwn(value,id)){if(value[id] === null){value[id] = frag;}else {process.env.NODE_ENV !== 'production' && this.warnDuplicate(value);}}else {def(value,id,frag);}}frag.raw = value;}, /**
+	   */cacheFrag:function cacheFrag(value,frag,index,key){var trackByKey=this.params.trackBy;var cache=this.cache;var primitive=!isObject(value);var id;if(key || trackByKey || primitive){id = trackByKey?trackByKey === '$index'?index:value[trackByKey]:key || value;if(!cache[id]){cache[id] = frag;}else if(trackByKey !== '$index'){("docs") !== 'production' && this.warnDuplicate(value);}}else {id = this.id;if(hasOwn(value,id)){if(value[id] === null){value[id] = frag;}else {("docs") !== 'production' && this.warnDuplicate(value);}}else {def(value,id,frag);}}frag.raw = value;}, /**
 	   * Get a cached fragment from the value/index/key
 	   *
 	   * @param {*} value
 	   * @param {Number} index
 	   * @param {String} key
 	   * @return {Fragment}
-	   */getCachedFrag:function getCachedFrag(value,index,key){var trackByKey=this.params.trackBy;var primitive=!isObject(value);var frag;if(key || trackByKey || primitive){var id=trackByKey?trackByKey === '$index'?index:value[trackByKey]:key || value;frag = this.cache[id];}else {frag = value[this.id];}if(frag && (frag.reused || frag.fresh)){process.env.NODE_ENV !== 'production' && this.warnDuplicate(value);}return frag;}, /**
+	   */getCachedFrag:function getCachedFrag(value,index,key){var trackByKey=this.params.trackBy;var primitive=!isObject(value);var frag;if(key || trackByKey || primitive){var id=trackByKey?trackByKey === '$index'?index:value[trackByKey]:key || value;frag = this.cache[id];}else {frag = value[this.id];}if(frag && (frag.reused || frag.fresh)){("docs") !== 'production' && this.warnDuplicate(value);}return frag;}, /**
 	   * Delete a fragment from cache.
 	   *
 	   * @param {Fragment} frag
@@ -1448,7 +1448,7 @@
 	 *
 	 * @param {Number} n
 	 * @return {Array}
-	 */function range(n){var i=-1;var ret=new Array(n);while(++i < n) {ret[i] = i;}return ret;}if(process.env.NODE_ENV !== 'production'){vFor.warnDuplicate = function(value){warn('Duplicate value found in v-for="' + this.descriptor.raw + '": ' + JSON.stringify(value) + '. Use track-by="$index" if ' + 'you are expecting duplicate values.');};}var html={bind:function bind(){ // a comment node means this is a binding for
+	 */function range(n){var i=-1;var ret=new Array(n);while(++i < n) {ret[i] = i;}return ret;}if(true){vFor.warnDuplicate = function(value){warn('Duplicate value found in v-for="' + this.descriptor.raw + '": ' + JSON.stringify(value) + '. Use track-by="$index" if ' + 'you are expecting duplicate values.');};}var html={bind:function bind(){ // a comment node means this is a binding for
 	// {{{ inline unescaped html }}}
 	if(this.el.nodeType === 8){ // hold nodes
 	this.nodes = []; // replace the placeholder with proper anchor
@@ -1618,7 +1618,7 @@
 	// will remain at link time.
 	this.el.removeAttribute('is'); // remove ref, same as above
 	if(this.descriptor.ref){this.el.removeAttribute('v-ref:' + hyphenate(this.descriptor.ref));} // if static, build right now.
-	if(this.literal){this.setComponent(this.expression);}}else {process.env.NODE_ENV !== 'production' && warn('cannot mount component "' + this.expression + '" ' + 'on already mounted element: ' + this.el);}}, /**
+	if(this.literal){this.setComponent(this.expression);}}else {("docs") !== 'production' && warn('cannot mount component "' + this.expression + '" ' + 'on already mounted element: ' + this.el);}}, /**
 	   * Public update, called by the watcher in the dynamic
 	   * literal scenario, e.g. <component :is="view">
 	   */update:function update(value){if(!this.literal){this.setComponent(value);}}, /**
@@ -1675,7 +1675,7 @@
 	// call attach/detach hooks for them.
 	_frag:this._frag}; // extra options
 	// in 1.0.0 this is used by vue-router only
-	/* istanbul ignore if */if(extraOptions){extend(options,extraOptions);}var child=new this.Component(options);if(this.keepAlive){this.cache[this.Component.cid] = child;} /* istanbul ignore if */if(process.env.NODE_ENV !== 'production' && this.el.hasAttribute('transition') && child._isFragment){warn('Transitions will not work on a fragment instance. ' + 'Template: ' + child.$options.template);}return child;}}, /**
+	/* istanbul ignore if */if(extraOptions){extend(options,extraOptions);}var child=new this.Component(options);if(this.keepAlive){this.cache[this.Component.cid] = child;} /* istanbul ignore if */if(("docs") !== 'production' && this.el.hasAttribute('transition') && child._isFragment){warn('Transitions will not work on a fragment instance. ' + 'Template: ' + child.$options.template);}return child;}}, /**
 	   * Try to get a cached instance of the current component.
 	   *
 	   * @return {Vue|undefined}
@@ -1704,7 +1704,7 @@
 	   * @param {Vue} target
 	   * @param {Function} [cb]
 	   */transition:function transition(target,cb){var self=this;var current=this.childVM; // for devtool inspection
-	if(process.env.NODE_ENV !== 'production'){if(current)current._inactive = true;target._inactive = false;}this.childVM = target;switch(self.params.transitionMode){case 'in-out':target.$before(self.anchor,function(){self.remove(current,cb);});break;case 'out-in':self.remove(current,function(){target.$before(self.anchor,cb);});break;default:self.remove(current);target.$before(self.anchor,cb);}}, /**
+	if(true){if(current)current._inactive = true;target._inactive = false;}this.childVM = target;switch(self.params.transitionMode){case 'in-out':target.$before(self.anchor,function(){self.remove(current,cb);});break;case 'out-in':self.remove(current,function(){target.$before(self.anchor,cb);});break;default:self.remove(current);target.$before(self.anchor,cb);}}, /**
 	   * Unbind.
 	   */unbind:function unbind(){this.invalidatePending(); // Do not defer cleanup when unbinding
 	this.unbuild(); // destroy all keep-alive cached instances
@@ -1716,20 +1716,20 @@
 	 * @param {Element|DocumentFragment} el
 	 * @param {Array} propOptions
 	 * @return {Function} propsLinkFn
-	 */function compileProps(el,propOptions){var props=[];var names=Object.keys(propOptions);var i=names.length;var options,name,attr,value,path,parsed,prop;while(i--) {name = names[i];options = propOptions[name] || empty;if(process.env.NODE_ENV !== 'production' && name === '$data'){warn('Do not use $data as prop.');continue;} // props could contain dashes, which will be
+	 */function compileProps(el,propOptions){var props=[];var names=Object.keys(propOptions);var i=names.length;var options,name,attr,value,path,parsed,prop;while(i--) {name = names[i];options = propOptions[name] || empty;if(("docs") !== 'production' && name === '$data'){warn('Do not use $data as prop.');continue;} // props could contain dashes, which will be
 	// interpreted as minus calculations by the parser
 	// so we need to camelize the path here
-	path = camelize(name);if(!identRE.test(path)){process.env.NODE_ENV !== 'production' && warn('Invalid prop key: "' + name + '". Prop keys ' + 'must be valid identifiers.');continue;}prop = {name:name,path:path,options:options,mode:propBindingModes.ONE_WAY,raw:null};attr = hyphenate(name); // first check dynamic version
+	path = camelize(name);if(!identRE.test(path)){("docs") !== 'production' && warn('Invalid prop key: "' + name + '". Prop keys ' + 'must be valid identifiers.');continue;}prop = {name:name,path:path,options:options,mode:propBindingModes.ONE_WAY,raw:null};attr = hyphenate(name); // first check dynamic version
 	if((value = getBindAttr(el,attr)) === null){if((value = getBindAttr(el,attr + '.sync')) !== null){prop.mode = propBindingModes.TWO_WAY;}else if((value = getBindAttr(el,attr + '.once')) !== null){prop.mode = propBindingModes.ONE_TIME;}}if(value !== null){ // has dynamic binding!
 	prop.raw = value;parsed = parseDirective(value);value = parsed.expression;prop.filters = parsed.filters; // check binding type
 	if(isLiteral(value)){ // for expressions containing literal numbers and
 	// booleans, there's no need to setup a prop binding,
 	// so we can optimize them as a one-time set.
 	prop.optimizedLiteral = true;}else {prop.dynamic = true; // check non-settable path for two-way bindings
-	if(process.env.NODE_ENV !== 'production' && prop.mode === propBindingModes.TWO_WAY && !settablePathRE.test(value)){prop.mode = propBindingModes.ONE_WAY;warn('Cannot bind two-way prop with non-settable ' + 'parent path: ' + value);}}prop.parentPath = value; // warn required two-way
-	if(process.env.NODE_ENV !== 'production' && options.twoWay && prop.mode !== propBindingModes.TWO_WAY){warn('Prop "' + name + '" expects a two-way binding type.');}}else if((value = getAttr(el,attr)) !== null){ // has literal binding!
+	if(("docs") !== 'production' && prop.mode === propBindingModes.TWO_WAY && !settablePathRE.test(value)){prop.mode = propBindingModes.ONE_WAY;warn('Cannot bind two-way prop with non-settable ' + 'parent path: ' + value);}}prop.parentPath = value; // warn required two-way
+	if(("docs") !== 'production' && options.twoWay && prop.mode !== propBindingModes.TWO_WAY){warn('Prop "' + name + '" expects a two-way binding type.');}}else if((value = getAttr(el,attr)) !== null){ // has literal binding!
 	prop.raw = value;}else if(options.required){ // warn missing required
-	process.env.NODE_ENV !== 'production' && warn('Missing required prop: ' + name);} // push prop
+	("docs") !== 'production' && warn('Missing required prop: ' + name);} // push prop
 	props.push(prop);}return makePropsLinkFn(props);} /**
 	 * Build a function that applies props to a vm.
 	 *
@@ -1741,7 +1741,7 @@
 	if(vm._context){if(prop.mode === propBindingModes.ONE_TIME){ // one time binding
 	value = (scope || vm._context).$get(prop.parentPath);initProp(vm,prop,value);}else { // dynamic binding
 	vm._bindDir({name:'prop',def:propDef,prop:prop},null,null,scope); // el, host, scope
-	}}else {process.env.NODE_ENV !== 'production' && warn('Cannot bind dynamic prop on a root instance' + ' with no parent: ' + prop.name + '="' + raw + '"');}}else if(prop.optimizedLiteral){ // optimized literal, cast it and just set once
+	}}else {("docs") !== 'production' && warn('Cannot bind dynamic prop on a root instance' + ' with no parent: ' + prop.name + '="' + raw + '"');}}else if(prop.optimizedLiteral){ // optimized literal, cast it and just set once
 	var stripped=stripQuotes(raw);value = stripped === raw?toBoolean(toNumber(raw)):stripped;initProp(vm,prop,value);}else { // string literal, but we need to cater for
 	// Boolean props with no value
 	value = options.type === Boolean && raw === ''?true:raw;initProp(vm,prop,value);}}};} /**
@@ -1753,7 +1753,7 @@
 	 */function getDefault(vm,options){ // no default, return undefined
 	if(!hasOwn(options,'default')){ // absent boolean value defaults to false
 	return options.type === Boolean?false:undefined;}var def=options['default']; // warn against non-factory defaults for Object & Array
-	if(isObject(def)){process.env.NODE_ENV !== 'production' && warn('Object/Array as default prop values will be shared ' + 'across multiple instances. Use a factory function ' + 'to return the default value instead.');} // call factory function for non-Function types
+	if(isObject(def)){("docs") !== 'production' && warn('Object/Array as default prop values will be shared ' + 'across multiple instances. Use a factory function ' + 'to return the default value instead.');} // call factory function for non-Function types
 	return typeof def === 'function' && options.type !== Function?def.call(vm):def;} // special binding prefixes
 	var bindRE=/^v-bind:|^:/;var onRE=/^v-on:|^@/;var argRE=/:(.*)$/;var modifierRE=/\.[^\.]+/g;var transitionRE=/^(v-bind:|:)?transition$/; // terminal directives
 	var terminalDirectives=['for','if']; // default directive priority
@@ -1846,7 +1846,7 @@
 	if(options._asComponent){ // 2. container attributes
 	if(containerAttrs && contextOptions){contextLinkFn = compileDirectives(containerAttrs,contextOptions);}if(replacerAttrs){ // 3. replacer attributes
 	replacerLinkFn = compileDirectives(replacerAttrs,options);}}else { // non-component, just compile as a normal element.
-	replacerLinkFn = compileDirectives(el.attributes,options);}}else if(process.env.NODE_ENV !== 'production' && containerAttrs){ // warn container directives for fragment instances
+	replacerLinkFn = compileDirectives(el.attributes,options);}}else if(("docs") !== 'production' && containerAttrs){ // warn container directives for fragment instances
 	var names=containerAttrs.filter(function(attr){ // allow vue-loader/vueify scoped css attributes
 	return attr.name.indexOf('_v-') < 0 &&  // allow event listeners
 	!onRE.test(attr.name) &&  // allow slots
@@ -1963,14 +1963,14 @@
 	arg = null; // check modifiers
 	modifiers = parseModifiers(name);name = name.replace(modifierRE,''); // attribute interpolations
 	if(tokens){value = tokensToExp(tokens);arg = name;pushDir('bind',publicDirectives.bind,true); // warn against mixing mustaches with v-bind
-	if(process.env.NODE_ENV !== 'production'){if(name === 'class' && Array.prototype.some.call(attrs,function(attr){return attr.name === ':class' || attr.name === 'v-bind:class';})){warn('class="' + rawValue + '": Do not mix mustache interpolation ' + 'and v-bind for "class" on the same element. Use one or the other.');}}}else  // special attribute: transition
+	if(true){if(name === 'class' && Array.prototype.some.call(attrs,function(attr){return attr.name === ':class' || attr.name === 'v-bind:class';})){warn('class="' + rawValue + '": Do not mix mustache interpolation ' + 'and v-bind for "class" on the same element. Use one or the other.');}}}else  // special attribute: transition
 	if(transitionRE.test(name)){modifiers.literal = !bindRE.test(name);pushDir('transition',internalDirectives.transition);}else  // event handlers
 	if(onRE.test(name)){arg = name.replace(onRE,'');pushDir('on',publicDirectives.on);}else  // attribute bindings
 	if(bindRE.test(name)){dirName = name.replace(bindRE,'');if(dirName === 'style' || dirName === 'class'){pushDir(dirName,internalDirectives[dirName]);}else {arg = dirName;pushDir('bind',publicDirectives.bind);}}else  // normal directives
 	if(name.indexOf('v-') === 0){ // check arg
 	arg = (arg = name.match(argRE)) && arg[1];if(arg){name = name.replace(argRE,'');} // extract directive name
 	dirName = name.slice(2); // skip v-else (when used with v-show)
-	if(dirName === 'else'){continue;}dirDef = resolveAsset(options,'directives',dirName);if(process.env.NODE_ENV !== 'production'){assertAsset(dirDef,'directive',dirName);}if(dirDef){pushDir(dirName,dirDef);}}} /**
+	if(dirName === 'else'){continue;}dirDef = resolveAsset(options,'directives',dirName);if(true){assertAsset(dirDef,'directive',dirName);}if(dirDef){pushDir(dirName,dirDef);}}} /**
 	   * Push a directive.
 	   *
 	   * @param {String} dirName
@@ -2014,7 +2014,7 @@
 	 * @param {Element} el
 	 * @param {Object} options
 	 * @return {Element|DocumentFragment}
-	 */function transcludeTemplate(el,options){var template=options.template;var frag=parseTemplate(template,true);if(frag){var replacer=frag.firstChild;var tag=replacer.tagName && replacer.tagName.toLowerCase();if(options.replace){ /* istanbul ignore if */if(el === document.body){process.env.NODE_ENV !== 'production' && warn('You are mounting an instance with a template to ' + '<body>. This will replace <body> entirely. You ' + 'should probably use `replace: false` here.');} // there are many cases where the instance must
+	 */function transcludeTemplate(el,options){var template=options.template;var frag=parseTemplate(template,true);if(frag){var replacer=frag.firstChild;var tag=replacer.tagName && replacer.tagName.toLowerCase();if(options.replace){ /* istanbul ignore if */if(el === document.body){("docs") !== 'production' && warn('You are mounting an instance with a template to ' + '<body>. This will replace <body> entirely. You ' + 'should probably use `replace: false` here.');} // there are many cases where the instance must
 	// become a fragment instance: basically anything that
 	// can create more than 1 root nodes.
 	if( // multi-children template
@@ -2023,7 +2023,7 @@
 	tag === 'component' || resolveAsset(options,'components',tag) || replacer.hasAttribute('is') || replacer.hasAttribute(':is') || replacer.hasAttribute('v-bind:is') ||  // element directive
 	resolveAsset(options,'elementDirectives',tag) ||  // for block
 	replacer.hasAttribute('v-for') ||  // if block
-	replacer.hasAttribute('v-if')){return frag;}else {options._replacerAttrs = extractAttrs(replacer);mergeAttrs(el,replacer);return replacer;}}else {el.appendChild(frag);return el;}}else {process.env.NODE_ENV !== 'production' && warn('Invalid template option: ' + template);}} /**
+	replacer.hasAttribute('v-if')){return frag;}else {options._replacerAttrs = extractAttrs(replacer);mergeAttrs(el,replacer);return replacer;}}else {el.appendChild(frag);return el;}}else {("docs") !== 'production' && warn('Invalid template option: ' + template);}} /**
 	 * Helper to extract a component container's attributes
 	 * into a plain object array.
 	 *
@@ -2047,11 +2047,11 @@
 	   * - meta properties
 	   */Vue.prototype._initState = function(){this._initProps();this._initMeta();this._initMethods();this._initData();this._initComputed();}; /**
 	   * Initialize props.
-	   */Vue.prototype._initProps = function(){var options=this.$options;var el=options.el;var props=options.props;if(props && !el){process.env.NODE_ENV !== 'production' && warn('Props will not be compiled if no `el` option is ' + 'provided at instantiation.');} // make sure to convert string selectors into element now
+	   */Vue.prototype._initProps = function(){var options=this.$options;var el=options.el;var props=options.props;if(props && !el){("docs") !== 'production' && warn('Props will not be compiled if no `el` option is ' + 'provided at instantiation.');} // make sure to convert string selectors into element now
 	el = options.el = query(el);this._propsUnlinkFn = el && el.nodeType === 1 && props // props must be linked in proper scope if inside v-for
 	?compileAndLinkProps(this,el,props,this._scope):null;}; /**
 	   * Initialize the data.
-	   */Vue.prototype._initData = function(){var propsData=this._data;var optionsDataFn=this.$options.data;var optionsData=optionsDataFn && optionsDataFn();if(optionsData){this._data = optionsData;for(var prop in propsData) {if(process.env.NODE_ENV !== 'production' && hasOwn(optionsData,prop)){warn('Data field "' + prop + '" is already defined ' + 'as a prop. Use prop default value instead.');}if(this._props[prop].raw !== null || !hasOwn(optionsData,prop)){set(optionsData,prop,propsData[prop]);}}}var data=this._data; // proxy data on instance
+	   */Vue.prototype._initData = function(){var propsData=this._data;var optionsDataFn=this.$options.data;var optionsData=optionsDataFn && optionsDataFn();if(optionsData){this._data = optionsData;for(var prop in propsData) {if(("docs") !== 'production' && hasOwn(optionsData,prop)){warn('Data field "' + prop + '" is already defined ' + 'as a prop. Use prop default value instead.');}if(this._props[prop].raw !== null || !hasOwn(optionsData,prop)){set(optionsData,prop,propsData[prop]);}}}var data=this._data; // proxy data on instance
 	var keys=Object.keys(data);var i,key;i = keys.length;while(i--) {key = keys[i];this._proxy(key);} // observe data
 	observe(data,this);}; /**
 	   * Swap the instance's $data. Called in $data's setter.
@@ -2109,7 +2109,7 @@
 	   * @param {String} key
 	   * @param {Function|String|Object} handler
 	   * @param {Object} [options]
-	   */function register(vm,action,key,handler,options){var type=typeof handler;if(type === 'function'){vm[action](key,handler,options);}else if(type === 'string'){var methods=vm.$options.methods;var method=methods && methods[handler];if(method){vm[action](key,method,options);}else {process.env.NODE_ENV !== 'production' && warn('Unknown method: "' + handler + '" when ' + 'registering callback for ' + action + ': "' + key + '".');}}else if(handler && type === 'object'){register(vm,action,key,handler.handler,handler);}} /**
+	   */function register(vm,action,key,handler,options){var type=typeof handler;if(type === 'function'){vm[action](key,handler,options);}else if(type === 'string'){var methods=vm.$options.methods;var method=methods && methods[handler];if(method){vm[action](key,method,options);}else {("docs") !== 'production' && warn('Unknown method: "' + handler + '" when ' + 'registering callback for ' + action + ': "' + key + '".');}}else if(handler && type === 'object'){register(vm,action,key,handler.handler,handler);}} /**
 	   * Setup recursive attached/detached calls
 	   */Vue.prototype._initDOMHooks = function(){this.$on('hook:attached',onAttached);this.$on('hook:detached',onDetached);}; /**
 	   * Callback to recursively call attached hook on children
@@ -2153,7 +2153,7 @@
 	this.descriptor = descriptor;this.name = descriptor.name;this.expression = descriptor.expression;this.arg = descriptor.arg;this.modifiers = descriptor.modifiers;this.filters = descriptor.filters;this.literal = this.modifiers && this.modifiers.literal; // private
 	this._locked = false;this._bound = false;this._listeners = null; // link context
 	this._host = host;this._scope = scope;this._frag = frag; // store directives on node in dev mode
-	if(process.env.NODE_ENV !== 'production' && this.el){this.el._vue_directives = this.el._vue_directives || [];this.el._vue_directives.push(this);}} /**
+	if(("docs") !== 'production' && this.el){this.el._vue_directives = this.el._vue_directives || [];this.el._vue_directives.push(this);}} /**
 	 * Initialize the directive, mixin definition properties,
 	 * setup the watcher, call definition bind() and update()
 	 * if present.
@@ -2197,7 +2197,7 @@
 	 *
 	 * @param {*} value
 	 * @public
-	 */Directive.prototype.set = function(value){ /* istanbul ignore else */if(this.twoWay){this._withLock(function(){this._watcher.set(value);});}else if(process.env.NODE_ENV !== 'production'){warn('Directive.set() can only be used inside twoWay' + 'directives.');}}; /**
+	 */Directive.prototype.set = function(value){ /* istanbul ignore else */if(this.twoWay){this._withLock(function(){this._watcher.set(value);});}else if(true){warn('Directive.set() can only be used inside twoWay' + 'directives.');}}; /**
 	 * Execute a function while preventing that function from
 	 * triggering updates on this directive instance.
 	 *
@@ -2211,7 +2211,7 @@
 	 * @param {Function} handler
 	 */Directive.prototype.on = function(event,handler){on$1(this.el,event,handler);(this._listeners || (this._listeners = [])).push([event,handler]);}; /**
 	 * Teardown the watcher and call unbind.
-	 */Directive.prototype._teardown = function(){if(this._bound){this._bound = false;if(this.unbind){this.unbind();}if(this._watcher){this._watcher.teardown();}var listeners=this._listeners;var i;if(listeners){i = listeners.length;while(i--) {off(this.el,listeners[i][0],listeners[i][1]);}}var unwatchFns=this._paramUnwatchFns;if(unwatchFns){i = unwatchFns.length;while(i--) {unwatchFns[i]();}}if(process.env.NODE_ENV !== 'production' && this.el){this.el._vue_directives.$remove(this);}this.vm = this.el = this._watcher = this._listeners = null;}};function lifecycleMixin(Vue){ /**
+	 */Directive.prototype._teardown = function(){if(this._bound){this._bound = false;if(this.unbind){this.unbind();}if(this._watcher){this._watcher.teardown();}var listeners=this._listeners;var i;if(listeners){i = listeners.length;while(i--) {off(this.el,listeners[i][0],listeners[i][1]);}}var unwatchFns=this._paramUnwatchFns;if(unwatchFns){i = unwatchFns.length;while(i--) {unwatchFns[i]();}}if(("docs") !== 'production' && this.el){this.el._vue_directives.$remove(this);}this.vm = this.el = this._watcher = this._listeners = null;}};function lifecycleMixin(Vue){ /**
 	   * Update v-ref for component.
 	   *
 	   * @param {Boolean} remove
@@ -2305,7 +2305,7 @@
 	   * @param {Array} filters
 	   * @param {Boolean} write
 	   * @return {*}
-	   */Vue.prototype._applyFilters = function(value,oldValue,filters,write){var filter,fn,args,arg,offset,i,l,j,k;for(i = 0,l = filters.length;i < l;i++) {filter = filters[i];fn = resolveAsset(this.$options,'filters',filter.name);if(process.env.NODE_ENV !== 'production'){assertAsset(fn,'filter',filter.name);}if(!fn)continue;fn = write?fn.write:fn.read || fn;if(typeof fn !== 'function')continue;args = write?[value,oldValue]:[value];offset = write?2:1;if(filter.args){for(j = 0,k = filter.args.length;j < k;j++) {arg = filter.args[j];args[j + offset] = arg.dynamic?this.$get(arg.value):arg.value;}}value = fn.apply(this,args);}return value;}; /**
+	   */Vue.prototype._applyFilters = function(value,oldValue,filters,write){var filter,fn,args,arg,offset,i,l,j,k;for(i = 0,l = filters.length;i < l;i++) {filter = filters[i];fn = resolveAsset(this.$options,'filters',filter.name);if(true){assertAsset(fn,'filter',filter.name);}if(!fn)continue;fn = write?fn.write:fn.read || fn;if(typeof fn !== 'function')continue;args = write?[value,oldValue]:[value];offset = write?2:1;if(filter.args){for(j = 0,k = filter.args.length;j < k;j++) {arg = filter.args[j];args[j + offset] = arg.dynamic?this.$get(arg.value):arg.value;}}value = fn.apply(this,args);}return value;}; /**
 	   * Resolve a component, depending on whether the component
 	   * is defined normally or using an async factory function.
 	   * Resolves synchronously if already resolved, otherwise
@@ -2314,12 +2314,12 @@
 	   *
 	   * @param {String} id
 	   * @param {Function} cb
-	   */Vue.prototype._resolveComponent = function(id,cb){var factory=resolveAsset(this.$options,'components',id);if(process.env.NODE_ENV !== 'production'){assertAsset(factory,'component',id);}if(!factory){return;} // async component factory
+	   */Vue.prototype._resolveComponent = function(id,cb){var factory=resolveAsset(this.$options,'components',id);if(true){assertAsset(factory,'component',id);}if(!factory){return;} // async component factory
 	if(!factory.options){if(factory.resolved){ // cached
 	cb(factory.resolved);}else if(factory.requested){ // pool callbacks
 	factory.pendingCallbacks.push(cb);}else {factory.requested = true;var cbs=factory.pendingCallbacks = [cb];factory(function resolve(res){if(isPlainObject(res)){res = Vue.extend(res);} // cache resolved
 	factory.resolved = res; // invoke callbacks
-	for(var i=0,l=cbs.length;i < l;i++) {cbs[i](res);}},function reject(reason){process.env.NODE_ENV !== 'production' && warn('Failed to resolve async component: ' + id + '. ' + (reason?'\nReason: ' + reason:''));});}}else { // normal component
+	for(var i=0,l=cbs.length;i < l;i++) {cbs[i](res);}},function reject(reason){("docs") !== 'production' && warn('Failed to resolve async component: ' + id + '. ' + (reason?'\nReason: ' + reason:''));});}}else { // normal component
 	cb(factory);}};}function globalAPI(Vue){ /**
 	   * Expose useful internals
 	   */Vue.util = util;Vue.config = config;Vue.set = set;Vue['delete'] = del;Vue.nextTick = nextTick; /**
@@ -2358,7 +2358,7 @@
 	   *
 	   * @param {String} id
 	   * @param {*} definition
-	   */config._assetTypes.forEach(function(type){Vue[type] = function(id,definition){if(!definition){return this.options[type + 's'][id];}else { /* istanbul ignore if */if(process.env.NODE_ENV !== 'production'){if(type === 'component' && commonTagRE.test(id)){warn('Do not use built-in HTML elements as component ' + 'id: ' + id);}}if(type === 'component' && isPlainObject(definition)){definition.name = id;definition = Vue.extend(definition);}this.options[type + 's'][id] = definition;return definition;}};});}var filterRE=/[^|]\|[^|]/;function dataAPI(Vue){ /**
+	   */config._assetTypes.forEach(function(type){Vue[type] = function(id,definition){if(!definition){return this.options[type + 's'][id];}else { /* istanbul ignore if */if(true){if(type === 'component' && commonTagRE.test(id)){warn('Do not use built-in HTML elements as component ' + 'id: ' + id);}}if(type === 'component' && isPlainObject(definition)){definition.name = id;definition = Vue.extend(definition);}this.options[type + 's'][id] = definition;return definition;}};});}var filterRE=/[^|]\|[^|]/;function dataAPI(Vue){ /**
 	   * Get the value from an expression on this vm.
 	   *
 	   * @param {String} exp
@@ -2540,7 +2540,7 @@
 	   *
 	   * @param {Element|DocumentFragment|string} el
 	   * @public
-	   */Vue.prototype.$mount = function(el){if(this._isCompiled){process.env.NODE_ENV !== 'production' && warn('$mount() should be called only once.');return;}el = query(el);if(!el){el = document.createElement('div');}this._compile(el);this._initDOMHooks();if(inDoc(this.$el)){this._callHook('attached');ready.call(this);}else {this.$once('hook:attached',ready);}return this;}; /**
+	   */Vue.prototype.$mount = function(el){if(this._isCompiled){("docs") !== 'production' && warn('$mount() should be called only once.');return;}el = query(el);if(!el){el = document.createElement('div');}this._compile(el);this._initDOMHooks();if(inDoc(this.$el)){this._callHook('attached');ready.call(this);}else {this.$once('hook:attached',ready);}return this;}; /**
 	   * Mark an instance as ready.
 	   */function ready(){this._isAttached = true;this._isReady = true;this._callHook('ready');} /**
 	   * Teardown the instance, simply delegate to the internal
@@ -2625,7 +2625,7 @@
 	   * @param {Number} delay = 300
 	   * @return {Function}
 	   */debounce:function debounce(handler,delay){if(!handler)return;if(!delay){delay = 300;}return _debounce(handler,delay);}};var partial={priority:1750,params:['name'], // watch changes to name for dynamic partials
-	paramWatchers:{name:function name(value){vIf.remove.call(this);if(value){this.insert(value);}}},bind:function bind(){this.anchor = createAnchor('v-partial');replace(this.el,this.anchor);this.insert(this.params.name);},insert:function insert(id){var partial=resolveAsset(this.vm.$options,'partials',id);if(process.env.NODE_ENV !== 'production'){assertAsset(partial,'partial',id);}if(partial){this.factory = new FragmentFactory(this.vm,partial);vIf.insert.call(this);}},unbind:function unbind(){if(this.frag){this.frag.destroy();}}}; // This is the elementDirective that handles <content>
+	paramWatchers:{name:function name(value){vIf.remove.call(this);if(value){this.insert(value);}}},bind:function bind(){this.anchor = createAnchor('v-partial');replace(this.el,this.anchor);this.insert(this.params.name);},insert:function insert(id){var partial=resolveAsset(this.vm.$options,'partials',id);if(true){assertAsset(partial,'partial',id);}if(partial){this.factory = new FragmentFactory(this.vm,partial);vIf.insert.call(this);}},unbind:function unbind(){if(this.frag){this.frag.destroy();}}}; // This is the elementDirective that handles <content>
 	// transclusions. It relies on the raw content of an
 	// instance being stored as `$options._content` during
 	// the transclude phase.
@@ -2655,131 +2655,28 @@
 	 * These can be seen as the default options of every
 	 * Vue instance.
 	 */Vue.options = {directives:publicDirectives,elementDirectives:elementDirectives,filters:filters,transitions:{},components:{},partials:{},replace:true}; // devtools global hook
-	/* istanbul ignore if */if(process.env.NODE_ENV !== 'production'){if(inBrowser && window.__VUE_DEVTOOLS_GLOBAL_HOOK__){window.__VUE_DEVTOOLS_GLOBAL_HOOK__.emit('init',Vue);}}module.exports = Vue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+	/* istanbul ignore if */if(true){if(inBrowser && window.__VUE_DEVTOOLS_GLOBAL_HOOK__){window.__VUE_DEVTOOLS_GLOBAL_HOOK__.emit('init',Vue);}}module.exports = Vue;
 
 /***/ },
 /* 2 */
-/***/ function(module, exports) {
-
-	// shim for using process in browser
-
-	'use strict';
-
-	var process = module.exports = {};
-	var queue = [];
-	var draining = false;
-	var currentQueue;
-	var queueIndex = -1;
-
-	function cleanUpNextTick() {
-	    draining = false;
-	    if (currentQueue.length) {
-	        queue = currentQueue.concat(queue);
-	    } else {
-	        queueIndex = -1;
-	    }
-	    if (queue.length) {
-	        drainQueue();
-	    }
-	}
-
-	function drainQueue() {
-	    if (draining) {
-	        return;
-	    }
-	    var timeout = setTimeout(cleanUpNextTick);
-	    draining = true;
-
-	    var len = queue.length;
-	    while (len) {
-	        currentQueue = queue;
-	        queue = [];
-	        while (++queueIndex < len) {
-	            if (currentQueue) {
-	                currentQueue[queueIndex].run();
-	            }
-	        }
-	        queueIndex = -1;
-	        len = queue.length;
-	    }
-	    currentQueue = null;
-	    draining = false;
-	    clearTimeout(timeout);
-	}
-
-	process.nextTick = function (fun) {
-	    var args = new Array(arguments.length - 1);
-	    if (arguments.length > 1) {
-	        for (var i = 1; i < arguments.length; i++) {
-	            args[i - 1] = arguments[i];
-	        }
-	    }
-	    queue.push(new Item(fun, args));
-	    if (queue.length === 1 && !draining) {
-	        setTimeout(drainQueue, 0);
-	    }
-	};
-
-	// v8 likes predictible objects
-	function Item(fun, array) {
-	    this.fun = fun;
-	    this.array = array;
-	}
-	Item.prototype.run = function () {
-	    this.fun.apply(null, this.array);
-	};
-	process.title = 'browser';
-	process.browser = true;
-	process.env = {};
-	process.argv = [];
-	process.version = ''; // empty string to avoid regexp issues
-	process.versions = {};
-
-	function noop() {}
-
-	process.on = noop;
-	process.addListener = noop;
-	process.once = noop;
-	process.off = noop;
-	process.removeListener = noop;
-	process.removeAllListeners = noop;
-	process.emit = noop;
-
-	process.binding = function (name) {
-	    throw new Error('process.binding is not supported');
-	};
-
-	process.cwd = function () {
-	    return '/';
-	};
-	process.chdir = function (dir) {
-	    throw new Error('process.chdir is not supported');
-	};
-	process.umask = function () {
-	    return 0;
-	};
-
-/***/ },
-/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import core stuff
 	'use strict';
 
-	__webpack_require__(4);
+	__webpack_require__(3);
 
 /***/ },
-/* 4 */
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(5);
+	var content = __webpack_require__(4);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -2796,10 +2693,10 @@
 	}
 
 /***/ },
-/* 5 */
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -2810,7 +2707,7 @@
 
 
 /***/ },
-/* 6 */
+/* 5 */
 /***/ function(module, exports) {
 
 	/*
@@ -2865,7 +2762,7 @@
 	};
 
 /***/ },
-/* 7 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -3119,7 +3016,7 @@
 
 
 /***/ },
-/* 8 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -3131,33 +3028,33 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(9);
+	__webpack_require__(8);
 
-	var _docsHtml = __webpack_require__(11);
+	var _docsHtml = __webpack_require__(10);
 
 	var _docsHtml2 = _interopRequireDefault(_docsHtml);
 
 	// import vuestrap dependencies
 
-	__webpack_require__(12);
+	__webpack_require__(11);
 
-	__webpack_require__(15);
+	__webpack_require__(14);
 
-	__webpack_require__(22);
+	__webpack_require__(21);
 
 	// import external dependencies
 
-	var _search = __webpack_require__(23);
+	var _search = __webpack_require__(22);
 
 	var _search2 = _interopRequireDefault(_search);
 
 	// import utils
 
-	var _utils = __webpack_require__(35);
+	var _utils = __webpack_require__(34);
 
 	// import package.json meta data
 
-	var _packageJson = __webpack_require__(37);
+	var _packageJson = __webpack_require__(36);
 
 	var _packageJson2 = _interopRequireDefault(_packageJson);
 
@@ -3213,16 +3110,16 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 9 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(10);
+	var content = __webpack_require__(9);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -3239,10 +3136,10 @@
 	}
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -3253,31 +3150,31 @@
 
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports) {
 
 	module.exports = "<!-- header -->\r\n<nav class=\"navbar navbar-fixed-top navbar-light bg-faded\">\r\n  <div class=\"container\">\r\n      <a class=\"navbar-brand text-center\" href=\"#/\">\r\n\t\t\t\t<img v-bind:src=\"'assets/vuestrap-logo.svg'\" alt=\"Vuestrap logo\">\r\n\t\t\t</a>\r\n\t\t\t<a class=\"navbar-brand text-center\" href=\"#/\">\r\n\t\t\t\tDocumentation\r\n\t\t\t</a>\r\n\t\t\t<ul class=\"nav navbar-nav pull-right\">\r\n\t\t\t\t<li class=\"nav-item\">\r\n\t\t\t\t\t<a href=\"#/\" class=\"btn\">Introduction</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item\">\r\n\t\t\t\t\t<a href=\"{{pkg.homepage}}\" class=\"btn btn-success\" target=\"_blank\">Github</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n  </div><!-- /.container -->\r\n</nav><!-- /.navbar -->\r\n\r\n<!-- content -->\r\n<div class=\"container\">\r\n\t<div class=\"row row-offcanvas row-offcanvas-right\">\r\n\t\t<div class=\"col-xs-12 col-sm-9\">\r\n\t\t\t<component :is=\"currentView\"></component>\r\n    </div><!-- /col-xs-12 -->\r\n\r\n\t\t<!-- sidebar -->\r\n\t\t<div class=\"col-xs-6 col-sm-3 sidebar-offcanvas\" id=\"sidebar\">\r\n\t\t\t<docs-search :list=\"routes\" :current-view=\"currentView\"></docs-search>\r\n\t\t</div><!--/sidebar-->\r\n\r\n\t</div><!--/row-->\r\n</div><!--/container-->";
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(13);
+	__webpack_require__(12);
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(14);
+	var content = __webpack_require__(13);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -3294,10 +3191,10 @@
 	}
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -3308,31 +3205,31 @@
 
 
 /***/ },
-/* 15 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(16);
+	__webpack_require__(15);
 
-	__webpack_require__(18);
+	__webpack_require__(17);
 
-	__webpack_require__(13);
+	__webpack_require__(12);
 
-	__webpack_require__(20);
+	__webpack_require__(19);
 
 /***/ },
-/* 16 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(17);
+	var content = __webpack_require__(16);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -3349,10 +3246,10 @@
 	}
 
 /***/ },
-/* 17 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -3363,16 +3260,16 @@
 
 
 /***/ },
-/* 18 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(19);
+	var content = __webpack_require__(18);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -3389,10 +3286,10 @@
 	}
 
 /***/ },
-/* 19 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -3403,16 +3300,16 @@
 
 
 /***/ },
-/* 20 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(21);
+	var content = __webpack_require__(20);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -3429,10 +3326,10 @@
 	}
 
 /***/ },
-/* 21 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -3443,16 +3340,16 @@
 
 
 /***/ },
-/* 22 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(18);
+	__webpack_require__(17);
 
 /***/ },
-/* 23 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -3464,15 +3361,15 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(24);
+	__webpack_require__(23);
 
-	var _searchHtml = __webpack_require__(26);
+	var _searchHtml = __webpack_require__(25);
 
 	var _searchHtml2 = _interopRequireDefault(_searchHtml);
 
-	__webpack_require__(27);
+	__webpack_require__(26);
 
-	__webpack_require__(32);
+	__webpack_require__(31);
 
 	// export component object
 	exports['default'] = {
@@ -3512,16 +3409,16 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 24 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(25);
+	var content = __webpack_require__(24);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -3538,10 +3435,10 @@
 	}
 
 /***/ },
-/* 25 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -3552,33 +3449,33 @@
 
 
 /***/ },
-/* 26 */
+/* 25 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"vuestrap-docs-search list-group\">\r\n  <!-- search -->\r\n  <div class=\"list-group-item list-group-search\" v-if=\"list.length > showSearch\">\r\n    <input type=\"text\" class=\"form-control\" placeholder=\"Search...\" v-model=\"search\" autocomplete=\"off\">\r\n  </div>\r\n  <!-- components -->\r\n  <a href=\"#{{item.url}}\" \r\n    v-bind:class=\"{\r\n      'list-group-item': true, \r\n      active: currentView && item.id === currentView,\r\n    }\" \r\n    v-for=\"item in list | skipIntro | filterBy search in 'title'\">\r\n    {{item.title}}\r\n  </a>\r\n</div>";
 
 /***/ },
-/* 27 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(28);
+	__webpack_require__(27);
 
-	__webpack_require__(30);
+	__webpack_require__(29);
 
 /***/ },
-/* 28 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(29);
+	var content = __webpack_require__(28);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -3595,10 +3492,10 @@
 	}
 
 /***/ },
-/* 29 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -3609,16 +3506,16 @@
 
 
 /***/ },
-/* 30 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(31);
+	var content = __webpack_require__(30);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -3635,10 +3532,10 @@
 	}
 
 /***/ },
-/* 31 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -3649,29 +3546,29 @@
 
 
 /***/ },
-/* 32 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(18);
+	__webpack_require__(17);
 
-	__webpack_require__(20);
+	__webpack_require__(19);
 
-	__webpack_require__(33);
+	__webpack_require__(32);
 
 /***/ },
-/* 33 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(34);
+	var content = __webpack_require__(33);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -3688,10 +3585,10 @@
 	}
 
 /***/ },
-/* 34 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -3702,7 +3599,7 @@
 
 
 /***/ },
-/* 35 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -3718,7 +3615,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _director = __webpack_require__(36);
+	var _director = __webpack_require__(35);
 
 	var _director2 = _interopRequireDefault(_director);
 
@@ -3765,7 +3662,7 @@
 	exports.getRoutes = getRoutes;
 
 /***/ },
-/* 36 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -4509,12 +4406,12 @@
 	//
 
 /***/ },
-/* 37 */
+/* 36 */
 /***/ function(module, exports) {
 
 	module.exports = {
 		"name": "vuestrap-base-components",
-		"version": "0.7.3",
+		"version": "0.7.4",
 		"description": "Web components that extend Bootstrap 4.",
 		"library": "vuestrapBase",
 		"repository": {
@@ -4572,7 +4469,7 @@
 	};
 
 /***/ },
-/* 38 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import modules and pages
@@ -4584,135 +4481,135 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _srcDocsIntroduction = __webpack_require__(39);
+	var _srcDocsIntroduction = __webpack_require__(38);
 
 	var _srcDocsIntroduction2 = _interopRequireDefault(_srcDocsIntroduction);
 
-	var _srcDocsAccordion = __webpack_require__(44);
+	var _srcDocsAccordion = __webpack_require__(43);
 
 	var _srcDocsAccordion2 = _interopRequireDefault(_srcDocsAccordion);
 
-	var _srcDocsAlert = __webpack_require__(60);
+	var _srcDocsAlert = __webpack_require__(59);
 
 	var _srcDocsAlert2 = _interopRequireDefault(_srcDocsAlert);
 
-	var _srcDocsBreadcrumb = __webpack_require__(66);
+	var _srcDocsBreadcrumb = __webpack_require__(65);
 
 	var _srcDocsBreadcrumb2 = _interopRequireDefault(_srcDocsBreadcrumb);
 
-	var _srcDocsButtonGroup = __webpack_require__(75);
+	var _srcDocsButtonGroup = __webpack_require__(74);
 
 	var _srcDocsButtonGroup2 = _interopRequireDefault(_srcDocsButtonGroup);
 
-	var _srcDocsButtonCheckbox = __webpack_require__(84);
+	var _srcDocsButtonCheckbox = __webpack_require__(83);
 
 	var _srcDocsButtonCheckbox2 = _interopRequireDefault(_srcDocsButtonCheckbox);
 
-	var _srcDocsButtonRadio = __webpack_require__(91);
+	var _srcDocsButtonRadio = __webpack_require__(90);
 
 	var _srcDocsButtonRadio2 = _interopRequireDefault(_srcDocsButtonRadio);
 
-	var _srcDocsButtons = __webpack_require__(97);
+	var _srcDocsButtons = __webpack_require__(96);
 
 	var _srcDocsButtons2 = _interopRequireDefault(_srcDocsButtons);
 
-	var _srcDocsCard = __webpack_require__(105);
+	var _srcDocsCard = __webpack_require__(104);
 
 	var _srcDocsCard2 = _interopRequireDefault(_srcDocsCard);
 
-	var _srcDocsCarousel = __webpack_require__(116);
+	var _srcDocsCarousel = __webpack_require__(115);
 
 	var _srcDocsCarousel2 = _interopRequireDefault(_srcDocsCarousel);
 
-	var _srcDocsCollapse = __webpack_require__(125);
+	var _srcDocsCollapse = __webpack_require__(124);
 
 	var _srcDocsCollapse2 = _interopRequireDefault(_srcDocsCollapse);
 
-	var _srcDocsDropdown = __webpack_require__(129);
+	var _srcDocsDropdown = __webpack_require__(128);
 
 	var _srcDocsDropdown2 = _interopRequireDefault(_srcDocsDropdown);
 
-	var _srcDocsDropdownSelect = __webpack_require__(140);
+	var _srcDocsDropdownSelect = __webpack_require__(139);
 
 	var _srcDocsDropdownSelect2 = _interopRequireDefault(_srcDocsDropdownSelect);
 
-	var _srcDocsFormCheckbox = __webpack_require__(148);
+	var _srcDocsFormCheckbox = __webpack_require__(147);
 
 	var _srcDocsFormCheckbox2 = _interopRequireDefault(_srcDocsFormCheckbox);
 
-	var _srcDocsFormRadio = __webpack_require__(158);
+	var _srcDocsFormRadio = __webpack_require__(157);
 
 	var _srcDocsFormRadio2 = _interopRequireDefault(_srcDocsFormRadio);
 
-	var _srcDocsFormInput = __webpack_require__(164);
+	var _srcDocsFormInput = __webpack_require__(163);
 
 	var _srcDocsFormInput2 = _interopRequireDefault(_srcDocsFormInput);
 
-	var _srcDocsFormSelect = __webpack_require__(170);
+	var _srcDocsFormSelect = __webpack_require__(169);
 
 	var _srcDocsFormSelect2 = _interopRequireDefault(_srcDocsFormSelect);
 
-	var _srcDocsFormTextarea = __webpack_require__(176);
+	var _srcDocsFormTextarea = __webpack_require__(175);
 
 	var _srcDocsFormTextarea2 = _interopRequireDefault(_srcDocsFormTextarea);
 
-	var _srcDocsImages = __webpack_require__(182);
+	var _srcDocsImages = __webpack_require__(181);
 
 	var _srcDocsImages2 = _interopRequireDefault(_srcDocsImages);
 
-	var _srcDocsJumbotron = __webpack_require__(188);
+	var _srcDocsJumbotron = __webpack_require__(187);
 
 	var _srcDocsJumbotron2 = _interopRequireDefault(_srcDocsJumbotron);
 
-	var _srcDocsLabels = __webpack_require__(194);
+	var _srcDocsLabels = __webpack_require__(193);
 
 	var _srcDocsLabels2 = _interopRequireDefault(_srcDocsLabels);
 
-	var _srcDocsListGroup = __webpack_require__(201);
+	var _srcDocsListGroup = __webpack_require__(200);
 
 	var _srcDocsListGroup2 = _interopRequireDefault(_srcDocsListGroup);
 
-	var _srcDocsMedia = __webpack_require__(209);
+	var _srcDocsMedia = __webpack_require__(208);
 
 	var _srcDocsMedia2 = _interopRequireDefault(_srcDocsMedia);
 
-	var _srcDocsModal = __webpack_require__(218);
+	var _srcDocsModal = __webpack_require__(217);
 
 	var _srcDocsModal2 = _interopRequireDefault(_srcDocsModal);
 
-	var _srcDocsNav = __webpack_require__(227);
+	var _srcDocsNav = __webpack_require__(226);
 
 	var _srcDocsNav2 = _interopRequireDefault(_srcDocsNav);
 
-	var _srcDocsNavbar = __webpack_require__(235);
+	var _srcDocsNavbar = __webpack_require__(234);
 
 	var _srcDocsNavbar2 = _interopRequireDefault(_srcDocsNavbar);
 
-	var _srcDocsPager = __webpack_require__(241);
+	var _srcDocsPager = __webpack_require__(240);
 
 	var _srcDocsPager2 = _interopRequireDefault(_srcDocsPager);
 
-	var _srcDocsPagination = __webpack_require__(250);
+	var _srcDocsPagination = __webpack_require__(249);
 
 	var _srcDocsPagination2 = _interopRequireDefault(_srcDocsPagination);
 
-	var _srcDocsPopover = __webpack_require__(259);
+	var _srcDocsPopover = __webpack_require__(258);
 
 	var _srcDocsPopover2 = _interopRequireDefault(_srcDocsPopover);
 
-	var _srcDocsProgress = __webpack_require__(268);
+	var _srcDocsProgress = __webpack_require__(267);
 
 	var _srcDocsProgress2 = _interopRequireDefault(_srcDocsProgress);
 
-	var _srcDocsTables = __webpack_require__(277);
+	var _srcDocsTables = __webpack_require__(276);
 
 	var _srcDocsTables2 = _interopRequireDefault(_srcDocsTables);
 
-	var _srcDocsTabs = __webpack_require__(286);
+	var _srcDocsTabs = __webpack_require__(285);
 
 	var _srcDocsTabs2 = _interopRequireDefault(_srcDocsTabs);
 
-	var _srcDocsTooltip = __webpack_require__(292);
+	var _srcDocsTooltip = __webpack_require__(291);
 
 	var _srcDocsTooltip2 = _interopRequireDefault(_srcDocsTooltip);
 
@@ -4722,7 +4619,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 39 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4733,11 +4630,11 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _introductionHtml = __webpack_require__(40);
+	var _introductionHtml = __webpack_require__(39);
 
 	var _introductionHtml2 = _interopRequireDefault(_introductionHtml);
 
-	__webpack_require__(41);
+	__webpack_require__(40);
 
 	exports['default'] = {
 		route: {
@@ -4758,31 +4655,31 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 40 */
+/* 39 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"jumbotron\">\r\n  <h1>{{pkg.name}} <span class=\"label label-success\">{{pkg.version}}</span></h1>\r\n  <p>{{pkg.description}}</p>\r\n</div>\r\n<h2>Installation</h2>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12 col-sm-6\">\r\n    <h3>Compiled</h3>\r\n    <p>Minified CSS and JavaScript with no  documentation or original source files.</p>\r\n    <code>bower install {{pkg.name}} --save-dev</code>\r\n  </div>\r\n  <div class=\"col-xs-12 col-sm-6\">\r\n    <h3>Source</h3>\r\n    <p>Source Sass, JavaScript, and documentation files.</p>\r\n    <code>npm install {{pkg.name}} --save-dev</code>\r\n   </div>\r\n</div>\r\n\r\n<div class=\"m-b-lg\"></div>\r\n<h2>Usage</h2>\r\n<p>For compiled components, use it within your Vue instance like this:</p>\r\n<p><code>new Vue({ components: { '{{componentNameSurfixed}}': {{pkg.library}}.{{componentNameCamelCase}} }})</code></p>\r\n\r\n<div class=\"m-b\"></div>\r\n<strong>OR</strong>\r\n<div class=\"m-b\"></div>\r\n\r\n<p>If you chosen to work with source components, just import* desired component like so:</p>\r\n<p><code>import {{componentNameCamelCase}} from '{{pkg.name}}/src/components/{{componentName}}'</code></p>\r\n<p>and then load it in your Vue instance:</p>\r\n<p><code>new Vue({ components: { '{{componentNameSurfixed}}' : {{componentNameCamelCase}} }})</code></p>\r\n<p>*Note: You will need <a href=\"https://github.com/babel/babel-loader\">Babel Loader</a> in your Webpack config file to support ES6 syntax.</p>\r\n\r\n<div class=\"m-b-lg\"></div>\r\n<h2>Examples</h2>\r\n<ul>\r\n  <li><a href=\"examples/basic.html\" target=\"_blank\">Basic example of a landing page with selected components.</a></li>\r\n  <li><a href=\"http://kzima.github.io/vuestrap-starter/\" target=\"_blank\">Advanced example</a> with webpack config and theme implementation - (<a href=\"https://github.com/kzima/vuestrap-starter\" target=\"_blank\">source on github</a>)</li>\r\n</ul>";
 
 /***/ },
-/* 41 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(42);
+	__webpack_require__(41);
 
 /***/ },
-/* 42 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(43);
+	var content = __webpack_require__(42);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -4799,10 +4696,10 @@
 	}
 
 /***/ },
-/* 43 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -4813,7 +4710,7 @@
 
 
 /***/ },
-/* 44 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4824,21 +4721,21 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _accordionJson = __webpack_require__(45);
+	var _accordionJson = __webpack_require__(44);
 
 	var _accordionJson2 = _interopRequireDefault(_accordionJson);
 
-	var _accordionHtml = __webpack_require__(46);
+	var _accordionHtml = __webpack_require__(45);
 
 	var _accordionHtml2 = _interopRequireDefault(_accordionHtml);
 
-	var _snippetHtml = __webpack_require__(47);
+	var _snippetHtml = __webpack_require__(46);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsCollapse = __webpack_require__(48);
+	var _srcComponentsCollapse = __webpack_require__(47);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
@@ -4864,7 +4761,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 45 */
+/* 44 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4901,19 +4798,19 @@
 	};
 
 /***/ },
-/* 46 */
+/* 45 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t<vs-collapse-toggle id=\"item-1\" group=\"accordion-1\">\r\n\t\t\t<div><a href=\"#\">Collapsible Group Item #1</a></div>\r\n\t\t</vs-collapse-toggle>\r\n\t\t<vs-collapse id=\"item-1\" group=\"accordion-1\">\r\n\t\t\t<div class=\"card card-block\">\r\n\t\t\t\t<h5>First</h5>\r\n\t\t    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n\t\t  </div>\r\n\t\t</vs-collapse>\r\n\t\t<vs-collapse-toggle id=\"item-2\" group=\"accordion-1\">\r\n\t\t\t<div><a href=\"#\">Collapsible Group Item #2</a></div>\r\n\t\t</vs-collapse-toggle>\r\n\t\t<vs-collapse id=\"item-2\" group=\"accordion-1\">\r\n\t\t\t<div class=\"card card-block\">\r\n\t\t\t\t<h5>Second</h5>\r\n\t\t    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n\t\t  </div>\r\n\t\t</vs-collapse>\r\n\t\t<vs-collapse-toggle id=\"item-3\" group=\"accordion-1\">\r\n\t\t\t<div><a href=\"#\">Collapsible Group Item #3</a></div>\r\n\t\t</vs-collapse-toggle>\r\n\t\t<vs-collapse id=\"item-3\" group=\"accordion-1\">\r\n\t\t\t<div class=\"card card-block\">\r\n\t\t\t\t<h5>Third</h5>\r\n\t\t    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n\t\t  </div>\r\n\t\t</vs-collapse>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 47 */
+/* 46 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-comment\">&lt;!-- item 1 --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"item-1\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Collapsible Group Item #1<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"item-1\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card card-block\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h5</span>&gt;</span>First<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h5</span>&gt;</span>\r\n    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse</span>&gt;</span>\r\n\r\n<span class=\"hljs-comment\">&lt;!-- item 2 --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"item-2\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Collapsible Group Item #2<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"item-2\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card card-block\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h5</span>&gt;</span>Second<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h5</span>&gt;</span>\r\n    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse</span>&gt;</span>\r\n\r\n<span class=\"hljs-comment\">&lt;!-- item 3--&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"item-3\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Collapsible Group Item #3<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"item-3\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card card-block\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h5</span>&gt;</span>Third<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h5</span>&gt;</span>\r\n    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse</span>&gt;</span>\r\n";
 
 /***/ },
-/* 48 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -4925,15 +4822,15 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _collapseHtml = __webpack_require__(49);
+	var _collapseHtml = __webpack_require__(48);
 
 	var _collapseHtml2 = _interopRequireDefault(_collapseHtml);
 
-	var _utilsHelpersJs = __webpack_require__(50);
+	var _utilsHelpersJs = __webpack_require__(49);
 
 	// import polyfill for IE9
 
-	__webpack_require__(51);
+	__webpack_require__(50);
 
 	// for browsers that do not support transitions like IE9 just change immediately
 	var TRANSITION_DURATION = (0, _utilsHelpersJs.csstransitions)() ? 350 : 0;
@@ -4961,7 +4858,7 @@
 	      this.$el.classList.add('collapsing');
 	      this.$el.offsetWidth;
 	      this.$el.style.height = height + 'px';
-	      setTimeout(function () {
+	      this._collapseAnimation = setTimeout(function () {
 	        _this.$el.classList.remove('collapsing');
 	        _this.$el.classList.add('collapse', 'in');
 	      }, TRANSITION_DURATION);
@@ -4974,7 +4871,7 @@
 	      this.$el.classList.add('collapsing');
 	      this.$el.offsetWidth;
 	      this.$el.style.height = '0px';
-	      setTimeout(function () {
+	      this._collapseAnimation = setTimeout(function () {
 	        _this2.$el.classList.remove('collapsing');
 	        _this2.$el.classList.add('collapse');
 	      }, TRANSITION_DURATION);
@@ -5010,6 +4907,9 @@
 	        }
 	      }
 	    }
+	  },
+	  destroyed: function destroyed() {
+	    clearTimeout(this._collapseAnimation);
 	  }
 	};
 
@@ -5049,13 +4949,13 @@
 	exports.collapseToggle = collapseToggle;
 
 /***/ },
-/* 49 */
+/* 48 */
 /***/ function(module, exports) {
 
 	module.exports = "<div id=\"{{id}}\" class=\"collapse\">\r\n  <slot></slot>\r\n</div>";
 
 /***/ },
-/* 50 */
+/* 49 */
 /***/ function(module, exports) {
 
 	/**
@@ -5090,7 +4990,7 @@
 	}
 
 /***/ },
-/* 51 */
+/* 50 */
 /***/ function(module, exports) {
 
 	/*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js*/
@@ -5190,7 +5090,7 @@
 	};
 
 /***/ },
-/* 52 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -5202,15 +5102,15 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(53);
+	__webpack_require__(52);
 
-	var _demoHtml = __webpack_require__(55);
+	var _demoHtml = __webpack_require__(54);
 
 	var _demoHtml2 = _interopRequireDefault(_demoHtml);
 
-	__webpack_require__(56);
+	__webpack_require__(55);
 
-	__webpack_require__(57);
+	__webpack_require__(56);
 
 	// export component object
 	exports['default'] = {
@@ -5232,16 +5132,16 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 53 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(54);
+	var content = __webpack_require__(53);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -5258,10 +5158,10 @@
 	}
 
 /***/ },
-/* 54 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -5272,10 +5172,19 @@
 
 
 /***/ },
-/* 55 */
+/* 54 */
 /***/ function(module, exports) {
 
 	module.exports = "<section class=\"vuestrap-docs-demo\" id=\"{{meta.name}}\">\r\n\r\n\t<!-- Meta title -->\r\n\t<h2>{{meta.title}}</h2>\r\n\t<p v-html=\"meta.description\"></p>\r\n\r\n\t<div class=\"m-b\"></div>\r\n\r\n\t<div class=\"alert alert-info\" role=\"alert\" v-if=\"meta.note\">\r\n  \t<icon background=\"circle-outline\" size=\"sm\" variant=\"info\" text=\"i\"></icon> <span v-html=\"meta.note\"></span>\r\n\t</div>\r\n\r\n\t<div class=\"m-b-md\"></div>\r\n\r\n\t<!-- Component manipulators -->\r\n\t<slot name=\"controls\"></slot>\r\n\r\n\t<!-- Output & Code sample -->\r\n\t<div class=\"code-demo\">\r\n\r\n\t\t<slot class=\"markup\" name=\"markup\"></slot>\r\n\r\n\t\t<div class=\"highlight\">\r\n\t\t\t<pre><code v-html=\"snippet\"></code></pre>\r\n\t\t</div>\r\n\t</div>\r\n\r\n\t<!-- Options -->\r\n\t<div class=\"options\" v-if=\"meta.options.length\">\r\n\t\t<h3>Options</h3>\r\n\t\t<table class='table table-responsive'>\r\n\t\t\t<tr>\r\n\t\t\t\t<th>Name</th>\r\n\t\t\t\t<th>Type</th>\r\n\t\t\t\t<th>Default</th>\r\n\t\t\t\t<th>Required</th>\r\n\t\t\t\t<th>Description</th>\r\n\t\t\t</tr>\r\n\t\t\t<tr v-for=\"item in meta.options\">\r\n\t\t\t\t<td>{{item.name}}</td>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<code v-html=\"item.type\"></code>\r\n\t\t\t\t</td>\r\n\t\t\t\t<td><code v-if=\"item.default\" v-html=\"item.default\"></code></td>\r\n\t\t\t\t<td>{{item.required == true ? 'yes' : ''}}</td>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<p v-html=\"item.description\"></p>\r\n\t\t\t\t\t<p v-if=\"item.values\">\r\n\t\t\t\t\t\tPosible values:\r\n\t\t\t\t\t\t<code v-for=\"item in item.values\">{{item}}</code>\r\n\t\t\t\t\t</p>\r\n\t\t\t\t</td>\r\n\t\t\t</tr>\r\n\t\t</table>\t\r\n\t</div>\r\n\r\n\t<!-- Accessibility -->\r\n\t<div class=\"accessibility\" v-if=\"meta.accessibility\">\r\n\t\t<h3>Accessibility</h3>\r\n\t\t<p v-html=\"meta.accessibility\"></p>\r\n\t</div>\r\n\r\n\t<div class=\"m-b-md\"></div>\r\n\r\n\t<!-- Browser Support -->\r\n\t<div class=\"browserSupport\" v-if=\"meta.browserSupport\">\r\n\t\t<h3>Browser Support</h3>\r\n\t\t<span class=\"label label-primary\" v-for=\"item in meta.browserSupport.browsers\">{{ item }}</span>\r\n\t\t<p><small v-html=\"meta.browserSupport.note\"></small></p>\r\n\t</div>\r\n</section>\r\n";
+
+/***/ },
+/* 55 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// import dependencies
+	'use strict';
+
+	__webpack_require__(29);
 
 /***/ },
 /* 56 */
@@ -5284,30 +5193,21 @@
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(30);
+	__webpack_require__(57);
+
+	__webpack_require__(17);
 
 /***/ },
 /* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// import dependencies
-	'use strict';
-
-	__webpack_require__(58);
-
-	__webpack_require__(18);
-
-/***/ },
-/* 58 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(59);
+	var content = __webpack_require__(58);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -5324,10 +5224,10 @@
 	}
 
 /***/ },
-/* 59 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -5338,7 +5238,7 @@
 
 
 /***/ },
-/* 60 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5349,23 +5249,23 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _alertJson = __webpack_require__(61);
+	var _alertJson = __webpack_require__(60);
 
 	var _alertJson2 = _interopRequireDefault(_alertJson);
 
-	var _alertHtml = __webpack_require__(62);
+	var _alertHtml = __webpack_require__(61);
 
 	var _alertHtml2 = _interopRequireDefault(_alertHtml);
 
-	var _snippetHtml = __webpack_require__(63);
+	var _snippetHtml = __webpack_require__(62);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsAlert = __webpack_require__(64);
+	var _srcComponentsAlert = __webpack_require__(63);
 
 	var _srcComponentsAlert2 = _interopRequireDefault(_srcComponentsAlert);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
@@ -5395,7 +5295,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 61 */
+/* 60 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5442,19 +5342,19 @@
 	};
 
 /***/ },
-/* 62 */
+/* 61 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\">\r\n\t\t<label>show <input type=\"checkbox\" v-model=\"show\"></label>\r\n\t\t<label>dismissible <input type=\"checkbox\" v-model=\"dismissible\"></label>\r\n\t\t<label>state\r\n\t\t\t<select v-model=\"state\">\r\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\t\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t<vs-alert\r\n\t\t    :show.sync=\"show\"\r\n\t\t    :state=\"state\"\r\n\t\t    :message=\"message\"\r\n\t\t    :dismissible=\"dismissible\">\r\n\t\t    This is an alert\r\n\t\t</vs-alert>\r\n\t\t<template v-if=\"!show\">\r\n\t\t\t<button href='#' v-on:click=\"show = true\">Show alert again</button>\r\n\t\t</template>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 63 */
+/* 62 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-alert</span> \r\n  <span class=\"hljs-attribute\">show.sync</span>=<span class=\"hljs-value\">\"showVariable\"</span>\r\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"state\"</span>\r\n  <span class=\"hljs-attribute\">dismissible</span>&gt;</span>\r\n  This is an alert\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-alert</span>&gt;</span>\r\n";
 
 /***/ },
-/* 64 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -5466,9 +5366,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(57);
+	__webpack_require__(56);
 
-	var _alertHtml = __webpack_require__(65);
+	var _alertHtml = __webpack_require__(64);
 
 	var _alertHtml2 = _interopRequireDefault(_alertHtml);
 
@@ -5508,13 +5408,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 65 */
+/* 64 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"alert {{alertState}} {{ dismissible ? 'alert-dismissible' : '' }} fade in\" role=\"alert\" v-show=\"show\">\r\n    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\" v-if=\"dismissible\" v-on:click.stop=\"dismiss\">\r\n        <span aria-hidden=\"true\">&times;</span>\r\n        <span class=\"sr-only\">Close</span>\r\n    </button>\r\n    <slot></slot>\r\n</div>\r\n";
 
 /***/ },
-/* 66 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5525,23 +5425,23 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _breadcrumbJson = __webpack_require__(67);
+	var _breadcrumbJson = __webpack_require__(66);
 
 	var _breadcrumbJson2 = _interopRequireDefault(_breadcrumbJson);
 
-	var _breadcrumbHtml = __webpack_require__(68);
+	var _breadcrumbHtml = __webpack_require__(67);
 
 	var _breadcrumbHtml2 = _interopRequireDefault(_breadcrumbHtml);
 
-	var _snippetHtml = __webpack_require__(69);
+	var _snippetHtml = __webpack_require__(68);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsBreadcrumb = __webpack_require__(70);
+	var _srcComponentsBreadcrumb = __webpack_require__(69);
 
 	var _srcComponentsBreadcrumb2 = _interopRequireDefault(_srcComponentsBreadcrumb);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
@@ -5567,7 +5467,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 67 */
+/* 66 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5594,19 +5494,19 @@
 	};
 
 /***/ },
-/* 68 */
+/* 67 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t\t<vs-breadcrumb\r\n    \t\t:list=\"list\">\r\n\t\t\t</vs-breadcrumb>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n\t\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 69 */
+/* 68 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-breadcrumb</span> \r\n  <span class=\"hljs-attribute\">:list</span>=<span class=\"hljs-value\">\"[{text: 'Home', href: '#'}, {text: 'Library', active: true}]\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-breadcrumb</span>&gt;</span>\r\n";
 
 /***/ },
-/* 70 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -5618,9 +5518,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(71);
+	__webpack_require__(70);
 
-	var _breadcrumbHtml = __webpack_require__(74);
+	var _breadcrumbHtml = __webpack_require__(73);
 
 	var _breadcrumbHtml2 = _interopRequireDefault(_breadcrumbHtml);
 
@@ -5639,25 +5539,25 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 71 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(72);
+	__webpack_require__(71);
 
 /***/ },
-/* 72 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(73);
+	var content = __webpack_require__(72);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -5674,10 +5574,10 @@
 	}
 
 /***/ },
-/* 73 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -5688,13 +5588,13 @@
 
 
 /***/ },
-/* 74 */
+/* 73 */
 /***/ function(module, exports) {
 
 	module.exports = "<ol class=\"breadcrumb\" style=\"margin-bottom: 5px;\">\r\n    <li v-for=\"item in list\" v-bind:class=\"{ active: active }\">\r\n        <a href=\"{{item.href}}\" v-if=\"!active\">{{item.text}}</a>\r\n        <span v-if=\"active\">{{item.text}}</span>\r\n    </li>\r\n</ol>";
 
 /***/ },
-/* 75 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5705,23 +5605,23 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _buttonGroupJson = __webpack_require__(76);
+	var _buttonGroupJson = __webpack_require__(75);
 
 	var _buttonGroupJson2 = _interopRequireDefault(_buttonGroupJson);
 
-	var _buttonGroupHtml = __webpack_require__(77);
+	var _buttonGroupHtml = __webpack_require__(76);
 
 	var _buttonGroupHtml2 = _interopRequireDefault(_buttonGroupHtml);
 
-	var _snippetHtml = __webpack_require__(78);
+	var _snippetHtml = __webpack_require__(77);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsButtonGroup = __webpack_require__(79);
+	var _srcComponentsButtonGroup = __webpack_require__(78);
 
 	var _srcComponentsButtonGroup2 = _interopRequireDefault(_srcComponentsButtonGroup);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
@@ -5747,7 +5647,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 76 */
+/* 75 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5776,19 +5676,19 @@
 	};
 
 /***/ },
-/* 77 */
+/* 76 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\">\r\n\t\t<label>vertical <input type=\"checkbox\" v-model=\"vertical\"></label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t\t<vs-button-group :vertical=\"vertical\">\r\n\t\t\t  <button type=\"button\" class=\"btn btn-secondary\">Left</button>\r\n\t\t\t  <button type=\"button\" class=\"btn btn-secondary\">Middle</button>\r\n\t\t\t  <button type=\"button\" class=\"btn btn-secondary\">Right</button>\r\n\t\t\t</vs-button-group>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 78 */
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-button-group</span> <span class=\"hljs-attribute\">vertical</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"button\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-secondary\"</span>&gt;</span>Left<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"button\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-secondary\"</span>&gt;</span>Middle<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"button\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-secondary\"</span>&gt;</span>Right<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-button-group</span>&gt;</span>\r\n";
 
 /***/ },
-/* 79 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -5800,9 +5700,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(80);
+	__webpack_require__(79);
 
-	var _buttonGroupHtml = __webpack_require__(83);
+	var _buttonGroupHtml = __webpack_require__(82);
 
 	var _buttonGroupHtml2 = _interopRequireDefault(_buttonGroupHtml);
 
@@ -5820,27 +5720,27 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 80 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(81);
+	__webpack_require__(80);
 
-	__webpack_require__(18);
+	__webpack_require__(17);
 
 /***/ },
-/* 81 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(82);
+	var content = __webpack_require__(81);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -5857,10 +5757,10 @@
 	}
 
 /***/ },
-/* 82 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -5871,13 +5771,13 @@
 
 
 /***/ },
-/* 83 */
+/* 82 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\" v-bind:class=\"{ 'btn-group-vertical': vertical }\">\r\n\t<slot></slot>\r\n</div>\r\n";
 
 /***/ },
-/* 84 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5888,27 +5788,27 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _buttonCheckboxJson = __webpack_require__(85);
+	var _buttonCheckboxJson = __webpack_require__(84);
 
 	var _buttonCheckboxJson2 = _interopRequireDefault(_buttonCheckboxJson);
 
-	var _buttonCheckboxHtml = __webpack_require__(86);
+	var _buttonCheckboxHtml = __webpack_require__(85);
 
 	var _buttonCheckboxHtml2 = _interopRequireDefault(_buttonCheckboxHtml);
 
-	var _snippetHtml = __webpack_require__(87);
+	var _snippetHtml = __webpack_require__(86);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsButtonCheckbox = __webpack_require__(88);
+	var _srcComponentsButtonCheckbox = __webpack_require__(87);
 
 	var _srcComponentsButtonCheckbox2 = _interopRequireDefault(_srcComponentsButtonCheckbox);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -5949,7 +5849,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 85 */
+/* 84 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -6018,19 +5918,19 @@
 	};
 
 /***/ },
-/* 86 */
+/* 85 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\">\r\n\t\t<label>\r\n\t\t\tsize \r\n\t\t\t<select v-model=\"size\">\r\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>\r\n\t\t\tvariant \r\n\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t<vs-button-checkbox\r\n\t\t  :list.sync=\"list\"\r\n\t\t  :model.sync=\"model\"\r\n\t\t  :size=\"size\"\r\n\t\t  :variant=\"variant\"\r\n\t\t  return-object>\r\n\t\t</vs-button-checkbox>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 87 */
+/* 86 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-button-checkbox</span> \r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">:list.sync</span>=<span class=\"hljs-value\">\" [{\r\n      text: 'First',\r\n      value: 'first',\r\n    }, {\r\n      text: 'Second',\r\n      value: 'second',\r\n    }, {\r\n      text: 'Third',\r\n      value: 'third',\r\n    }]\"</span>\r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\r\n  <span class=\"hljs-attribute\">return-object</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-button-checkbox</span>&gt;</span>\r\n";
 
 /***/ },
-/* 88 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -6042,9 +5942,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(80);
+	__webpack_require__(79);
 
-	var _buttonCheckboxHtml = __webpack_require__(89);
+	var _buttonCheckboxHtml = __webpack_require__(88);
 
 	var _buttonCheckboxHtml2 = _interopRequireDefault(_buttonCheckboxHtml);
 
@@ -6143,13 +6043,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 89 */
+/* 88 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n  <label class=\"btn {{btnVariant}} {{btnSize}} {{ checked($index) ? 'active' : '' }}\" v-for=\"item in list\">\r\n  <input \r\n  \ttype=\"checkbox\" \r\n  \tvalue=\"{{item.value}}\" \r\n  \tautocomplete=\"off\" \r\n  \tv-model=\"item.checked\" \r\n  \tv-bind:disabled=\"item.disabled\">\r\n  \t{{item.text}}\r\n  </label>\r\n</div>\r\n";
 
 /***/ },
-/* 90 */
+/* 89 */
 /***/ function(module, exports) {
 
 	/**
@@ -6197,7 +6097,7 @@
 	exports.sizes = sizes;
 
 /***/ },
-/* 91 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6208,27 +6108,27 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _buttonRadioJson = __webpack_require__(92);
+	var _buttonRadioJson = __webpack_require__(91);
 
 	var _buttonRadioJson2 = _interopRequireDefault(_buttonRadioJson);
 
-	var _buttonRadioHtml = __webpack_require__(93);
+	var _buttonRadioHtml = __webpack_require__(92);
 
 	var _buttonRadioHtml2 = _interopRequireDefault(_buttonRadioHtml);
 
-	var _snippetHtml = __webpack_require__(94);
+	var _snippetHtml = __webpack_require__(93);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsButtonRadio = __webpack_require__(95);
+	var _srcComponentsButtonRadio = __webpack_require__(94);
 
 	var _srcComponentsButtonRadio2 = _interopRequireDefault(_srcComponentsButtonRadio);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -6269,7 +6169,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 92 */
+/* 91 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -6338,19 +6238,19 @@
 	};
 
 /***/ },
-/* 93 */
+/* 92 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\">\r\n\t\t\t<label>\r\n\t\t\t\tsize\r\n\t\t\t\t<select v-model=\"size\">\r\n\t\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t\t    {{ option.text }}\r\n\t\t\t\t  </option>\r\n\t\t\t\t</select>\r\n\t\t\t</label>\r\n\r\n\t\t\t<label>\r\n\t\t\t\tvariant\r\n\t\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t\t    {{ option.text }}\r\n\t\t\t\t  </option>\r\n\t\t\t\t</select>\r\n\t\t\t</label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t<vs-button-radio\r\n\t\t\t:model.sync=\"model\"\r\n\t    :list=\"list\"\r\n\t    :size=\"size\"\r\n\t    :variant=\"variant\"\r\n\t    return-object>\r\n\t\t</vs-button-radio>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n\t\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 94 */
+/* 93 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-button-radio</span> \r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">:list</span>=<span class=\"hljs-value\">\"[{\r\n      text: 'First',\r\n      value: 'first',\r\n    }, {\r\n      text: 'Second',\r\n      value: 'second',\r\n    }, {\r\n      text: 'Third',\r\n      value: 'third',\r\n    }]\"</span>\r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\r\n  <span class=\"hljs-attribute\">return-boject</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-button-radio</span>&gt;</span>\r\n";
 
 /***/ },
-/* 95 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -6362,9 +6262,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(80);
+	__webpack_require__(79);
 
-	var _buttonRadioHtml = __webpack_require__(96);
+	var _buttonRadioHtml = __webpack_require__(95);
 
 	var _buttonRadioHtml2 = _interopRequireDefault(_buttonRadioHtml);
 
@@ -6439,13 +6339,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 96 */
+/* 95 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n    <label \r\n    \tclass=\"btn {{btnVariant}} {{btnSize}} {{ selection == item.value ? 'active' : '' }}\" \r\n    \tv-for=\"item in list\">\r\n      <input \r\n      \ttype=\"radio\" \r\n      \tname=\"options\" \r\n      \tvalue=\"{{item.value}}\" \r\n      \tautocomplete=\"off\" \r\n      \tv-model=\"selection\"> {{item.text}}\r\n    </label>\r\n</div>\r\n";
 
 /***/ },
-/* 97 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6456,27 +6356,27 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _buttonsJson = __webpack_require__(98);
+	var _buttonsJson = __webpack_require__(97);
 
 	var _buttonsJson2 = _interopRequireDefault(_buttonsJson);
 
-	var _buttonsHtml = __webpack_require__(99);
+	var _buttonsHtml = __webpack_require__(98);
 
 	var _buttonsHtml2 = _interopRequireDefault(_buttonsHtml);
 
-	var _snippetHtml = __webpack_require__(100);
+	var _snippetHtml = __webpack_require__(99);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsButtons = __webpack_require__(101);
+	var _srcComponentsButtons = __webpack_require__(100);
 
 	var _srcComponentsButtons2 = _interopRequireDefault(_srcComponentsButtons);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -6503,7 +6403,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 98 */
+/* 97 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -6587,19 +6487,19 @@
 	};
 
 /***/ },
-/* 99 */
+/* 98 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\">\r\n\t\t<label>\r\n\t\t\tsize \r\n\t\t\t<select v-model=\"size\">\r\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t<vs-btn :size=\"size\" variant=\"primary\">Primary</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"secondary\">Secondary</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"success\">Success</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"warning\">Warning</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"danger\">Danger</vs-btn>\r\n\t\t<hr>\r\n\t\t<vs-btn :size=\"size\" variant=\"primary-outline\">Primary</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"secondary-outline\">Secondary</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"success-outline\">Success</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"warning-outline\">Warning</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"danger-outline\">Danger</vs-btn>\r\n\t\t<hr>\r\n\t\t<vs-btn :size=\"size\" variant=\"link\">Button Link</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"link\" href=\"#\">Regular Link</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"primary\" :disabled=\"true\">Disabled</vs-btn>\r\n\t\t<hr>\r\n\t\t<vs-btn :size=\"size\" variant=\"primary\" :block=\"true\">Block</vs-btn>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 100 */
+/* 99 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-comment\">&lt;!-- colour variants --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>&gt;</span>Primary<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"secondary\"</span>&gt;</span>Secondary<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"success\"</span>&gt;</span>Success<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"warning\"</span>&gt;</span>Warning<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"danger\"</span>&gt;</span>Danger<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n\r\n<span class=\"hljs-comment\">&lt;!-- outlined variants --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary-outline\"</span>&gt;</span>Primary<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"secondary-outline\"</span>&gt;</span>Secondary<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"success-outline\"</span>&gt;</span>Success<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"warning-outline\"</span>&gt;</span>Warning<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"danger-outline\"</span>&gt;</span>Danger<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n\r\n<span class=\"hljs-comment\">&lt;!-- button types --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"link\"</span>&gt;</span>Button Link<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"link\"</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Regular Link<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span> <span class=\"hljs-attribute\">disabled</span>&gt;</span>Disabled<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span> <span class=\"hljs-attribute\">block</span>&gt;</span>Block<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n";
 
 /***/ },
-/* 101 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6610,13 +6510,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(22);
+	__webpack_require__(21);
 
-	var _buttonsHtml = __webpack_require__(102);
+	var _buttonsHtml = __webpack_require__(101);
 
 	var _buttonsHtml2 = _interopRequireDefault(_buttonsHtml);
 
-	__webpack_require__(103);
+	__webpack_require__(102);
 
 	// export component object
 	exports['default'] = {
@@ -6668,22 +6568,22 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 102 */
+/* 101 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}}\" v-bind:disabled=\"disabled\">\r\n\t<template v-if=\"!href\"><slot></slot></template>\r\n\t<a v-bind:href=\"href\" class=\"{{btnDisabled}}\" v-bind:role=\"role\" v-if=\"href\"><slot></slot></a>\r\n</span>";
 
 /***/ },
-/* 103 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(104);
+	var content = __webpack_require__(103);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -6700,10 +6600,10 @@
 	}
 
 /***/ },
-/* 104 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -6714,7 +6614,7 @@
 
 
 /***/ },
-/* 105 */
+/* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6725,27 +6625,27 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _cardJson = __webpack_require__(106);
+	var _cardJson = __webpack_require__(105);
 
 	var _cardJson2 = _interopRequireDefault(_cardJson);
 
-	var _cardHtml = __webpack_require__(107);
+	var _cardHtml = __webpack_require__(106);
 
 	var _cardHtml2 = _interopRequireDefault(_cardHtml);
 
-	var _snippetHtml = __webpack_require__(108);
+	var _snippetHtml = __webpack_require__(107);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsCard = __webpack_require__(109);
+	var _srcComponentsCard = __webpack_require__(108);
 
 	var _srcComponentsCard2 = _interopRequireDefault(_srcComponentsCard);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -6774,7 +6674,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 106 */
+/* 105 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -6834,19 +6734,19 @@
 	};
 
 /***/ },
-/* 107 */
+/* 106 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\">\r\n\t\t<label>\r\n\t\t\tvariant\r\n\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\r\n\t\t<label>\r\n\t\t\ttype\r\n\t\t\t<select v-model=\"type\">\r\n\t\t\t\t<option v-for=\"option in types\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\r\n\t\t<label>\r\n\t\t\talign\r\n\t\t\t<select v-model=\"align\">\r\n\t\t\t\t<option v-for=\"option in aligns\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t\t<vs-card style=\"max-width: 350px;\" \r\n\t\t\t\t:variant=\"variant\"\r\n\t\t\t\t:type=\"type\"\r\n\t\t\t\t:align=\"align\">\r\n\t\t\t\t<img class=\"card-img img-fluid\" v-bind:src=\"'assets/card-350x150.png'\" alt=\"Card image cap\">\r\n\t\t\t  <div class=\"card-block\">\r\n\t\t\t    <h4 class=\"card-title\">Card title</h4>\r\n\t\t\t    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\r\n\t\t\t  </div>\r\n\t\t  </vs-card>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 108 */
+/* 107 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-card</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"default\"</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"default\"</span> <span class=\"hljs-attribute\">align</span>=<span class=\"hljs-value\">\"left\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card-img img-fluid\"</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"https://placehold.it/350x150\"</span> <span class=\"hljs-attribute\">alt</span>=<span class=\"hljs-value\">\"Card image cap\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card-block\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h4</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card-title\"</span>&gt;</span>Card title<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h4</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">p</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card-text\"</span>&gt;</span>Some quick example text to build on the card title and make up the bulk of the card's content.<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">p</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-primary\"</span>&gt;</span>Button<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-card</span>&gt;</span>\r\n";
 
 /***/ },
-/* 109 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -6858,15 +6758,15 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(110);
+	__webpack_require__(109);
 
-	var _cardHtml = __webpack_require__(115);
+	var _cardHtml = __webpack_require__(114);
 
 	var _cardHtml2 = _interopRequireDefault(_cardHtml);
 
 	// import polyfill for IE9
 
-	__webpack_require__(51);
+	__webpack_require__(50);
 
 	// export component object
 	exports['default'] = {
@@ -6912,31 +6812,31 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 110 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(111);
+	__webpack_require__(110);
 
-	__webpack_require__(18);
+	__webpack_require__(17);
 
-	__webpack_require__(113);
+	__webpack_require__(112);
 
-	__webpack_require__(28);
+	__webpack_require__(27);
 
 /***/ },
-/* 111 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(112);
+	var content = __webpack_require__(111);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -6953,10 +6853,10 @@
 	}
 
 /***/ },
-/* 112 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -6967,16 +6867,16 @@
 
 
 /***/ },
-/* 113 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(114);
+	var content = __webpack_require__(113);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -6993,10 +6893,10 @@
 	}
 
 /***/ },
-/* 114 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -7007,13 +6907,13 @@
 
 
 /***/ },
-/* 115 */
+/* 114 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"card {{cardVariant}} {{cardAlign}} {{cardInverse}}\">\r\n    <slot></slot>\r\n</div>\r\n";
 
 /***/ },
-/* 116 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7024,25 +6924,25 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _carouselJson = __webpack_require__(117);
+	var _carouselJson = __webpack_require__(116);
 
 	var _carouselJson2 = _interopRequireDefault(_carouselJson);
 
-	var _carouselHtml = __webpack_require__(118);
+	var _carouselHtml = __webpack_require__(117);
 
 	var _carouselHtml2 = _interopRequireDefault(_carouselHtml);
 
-	var _snippetHtml = __webpack_require__(119);
+	var _snippetHtml = __webpack_require__(118);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsCarousel = __webpack_require__(120);
+	var _srcComponentsCarousel = __webpack_require__(119);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -7068,7 +6968,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 117 */
+/* 116 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -7111,19 +7011,19 @@
 	};
 
 /***/ },
-/* 118 */
+/* 117 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\">\r\n\t\t<label>controls <input type=\"checkbox\" v-model=\"controls\"></label>\r\n\t\t<label>indicators <input type=\"checkbox\" v-model=\"indicators\"></label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-carousel\r\n\t\t\t\t:interval=\"5000\",\r\n\t\t\t\t:controls=\"controls\"\r\n\t\t\t\t:indicators=\"indicators\">\r\n\t\t\t  <vs-slide>\r\n\t\t\t    <img v-bind:src=\"'assets/carousel-one.png'\" class=\"img-fluid\">\r\n\t\t\t  </vs-slide>\r\n\t\t\t  <vs-slide>\r\n\t\t\t    <img v-bind:src=\"'assets/carousel-two.png'\" class=\"img-fluid\">\r\n\t\t\t  </vs-slide>\r\n\t\t\t  <vs-slide>\r\n\t\t\t    <img v-bind:src=\"'assets/carousel-three.png'\" class=\"img-fluid\">\r\n\t\t\t  </vs-slide>\r\n\t\t\t</vs-carousel>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 119 */
+/* 118 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-carousel</span> <span class=\"hljs-attribute\">:interval</span>=<span class=\"hljs-value\">\"5000\"</span> <span class=\"hljs-attribute\">controls</span>=<span class=\"hljs-value\">\"false\"</span> <span class=\"hljs-attribute\">indicators</span>=<span class=\"hljs-value\">\"false\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-slide</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/1200x400?text=one\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-slide</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-slide</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/1200x400?text=two\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-slide</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-slide</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/1200x400?text=three\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-slide</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-carousel</span>&gt;</span>\r\n";
 
 /***/ },
-/* 120 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7152,19 +7052,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(121);
+	__webpack_require__(120);
 
-	var _carouselHtml = __webpack_require__(124);
+	var _carouselHtml = __webpack_require__(123);
 
 	var _carouselHtml2 = _interopRequireDefault(_carouselHtml);
 
-	var _utilsHelpersJs = __webpack_require__(50);
+	var _utilsHelpersJs = __webpack_require__(49);
 
 	// import polyfill for IE9
 
-	__webpack_require__(51);
+	__webpack_require__(50);
 
-	// this is directly linked to the bootstrap animation timing in _carusel.scss
+	// this is directly linked to the bootstrap animation timing in _carousel.scss
 	// for browsers that do not support transitions like IE9 just change slide immediately
 	var TRANSITION_DURATION = (0, _utilsHelpersJs.csstransitions)() ? 600 : 0;
 
@@ -7282,7 +7182,7 @@
 	      this._items[oldVal].classList.add(this.direction.outgoing);
 	      this._items[val].classList.remove(this.direction.incoming);
 	      // wait for animation to finish and cleanup classes
-	      setTimeout(function () {
+	      this._carouselAnimation = setTimeout(function () {
 	        _this2._items[oldVal].classList.remove(_this2.direction.outgoing, 'active');
 	        _this2._items[val].classList.remove(_this2.direction.overlay);
 	        _this2.animating = false;
@@ -7290,6 +7190,10 @@
 	        _this2.$dispatch('slid::carousel', val);
 	      }, TRANSITION_DURATION);
 	    }
+	  },
+	  destroyed: function destroyed() {
+	    clearTimeout(this._carouselAnimation);
+	    clearInterval(this._intervalId);
 	  }
 	};
 
@@ -7302,27 +7206,27 @@
 	exports.slide = slide;
 
 /***/ },
-/* 121 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(113);
+	__webpack_require__(112);
 
-	__webpack_require__(122);
+	__webpack_require__(121);
 
 /***/ },
-/* 122 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(123);
+	var content = __webpack_require__(122);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -7339,10 +7243,10 @@
 	}
 
 /***/ },
-/* 123 */
+/* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -7353,13 +7257,13 @@
 
 
 /***/ },
-/* 124 */
+/* 123 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"carousel slide\" data-ride=\"carousel\" v-on:mouseenter=\"pause()\" v-on:mouseleave=\"start()\">\r\n\r\n    <!-- Indicators -->\r\n    <ol class=\"carousel-indicators\" v-show=\"indicators\">\r\n        <li v-for=\"item in slides\" v-bind:class=\"{'active': item == index}\" v-on:click=\"changeSlide($index)\"></li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\" role=\"listbox\">\r\n        <slot></slot>\r\n    </div>\r\n\r\n    <!-- Controls -->\r\n    <a class=\"left carousel-control\" href=\"#\" role=\"button\" v-on:click.prevent=\"prev\" v-show=\"controls\">\r\n        <span class=\"icon-prev\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#\" role=\"button\" v-on:click.prevent=\"next\" v-show=\"controls\">\r\n        <span class=\"icon-next\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Next</span>\r\n    </a>\r\n\r\n</div>";
 
 /***/ },
-/* 125 */
+/* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7370,21 +7274,21 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _collapseJson = __webpack_require__(126);
+	var _collapseJson = __webpack_require__(125);
 
 	var _collapseJson2 = _interopRequireDefault(_collapseJson);
 
-	var _collapseHtml = __webpack_require__(127);
+	var _collapseHtml = __webpack_require__(126);
 
 	var _collapseHtml2 = _interopRequireDefault(_collapseHtml);
 
-	var _snippetHtml = __webpack_require__(128);
+	var _snippetHtml = __webpack_require__(127);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsCollapse = __webpack_require__(48);
+	var _srcComponentsCollapse = __webpack_require__(47);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
@@ -7410,7 +7314,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 126 */
+/* 125 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -7446,19 +7350,19 @@
 	};
 
 /***/ },
-/* 127 */
+/* 126 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t<vs-collapse-toggle id=\"collapse-1\">\r\n\t\t\t<button class=\"btn btn-default\">Toogle first</button>\r\n\t\t</vs-collapse-toggle>\r\n\t\t<vs-collapse-toggle id=\"collapse-2\">\r\n\t\t\t<button class=\"btn btn-default\">Toogle second</button>\r\n\t\t</vs-collapse-toggle>\r\n\t\t<vs-collapse-toggle group=\"group-1\">\r\n\t\t\t<button class=\"btn btn-default\">Toogle all</button>\r\n\t\t</vs-collapse-toggle>\r\n\t\t\r\n\t\t<div class=\"m-b\"></div>\r\n\r\n\t\t<vs-collapse id=\"collapse-1\" group=\"group-1\">\r\n\t\t\t<div class=\"card card-block\">\r\n\t\t\t\t<h5>First</h5>\r\n\t\t    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n\t\t  </div>\r\n\t\t</vs-collapse>\r\n\t\t<vs-collapse id=\"collapse-2\" group=\"group-1\">\r\n\t\t\t<div class=\"card card-block\">\r\n\t\t\t\t<h5>Second</h5>\r\n\t\t    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n\t\t  </div>\r\n\t\t</vs-collapse>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 128 */
+/* 127 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-comment\">&lt;!-- triggers --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"collapse-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-default\"</span>&gt;</span>Toogle first<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"collapse-2\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-default\"</span>&gt;</span>Toogle second<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"group-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-default\"</span>&gt;</span>Toogle all<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\r\n\r\n<span class=\"hljs-comment\">&lt;!-- item 1 --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"collapse-1\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"group-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card card-block\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h5</span>&gt;</span>First<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h5</span>&gt;</span>\r\n    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse</span>&gt;</span>\r\n\r\n<span class=\"hljs-comment\">&lt;!-- item 2 --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"collapse-2\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"group-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card card-block\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h5</span>&gt;</span>Second<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h5</span>&gt;</span>\r\n    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse</span>&gt;</span>\r\n";
 
 /***/ },
-/* 129 */
+/* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7469,27 +7373,27 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _dropdownJson = __webpack_require__(130);
+	var _dropdownJson = __webpack_require__(129);
 
 	var _dropdownJson2 = _interopRequireDefault(_dropdownJson);
 
-	var _dropdownHtml = __webpack_require__(131);
+	var _dropdownHtml = __webpack_require__(130);
 
 	var _dropdownHtml2 = _interopRequireDefault(_dropdownHtml);
 
-	var _snippetHtml = __webpack_require__(132);
+	var _snippetHtml = __webpack_require__(131);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsDropdown = __webpack_require__(133);
+	var _srcComponentsDropdown = __webpack_require__(132);
 
 	var _srcComponentsDropdown2 = _interopRequireDefault(_srcComponentsDropdown);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -7518,7 +7422,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 130 */
+/* 129 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -7546,7 +7450,7 @@
 			{
 				"name": "caret",
 				"type": "Boolean",
-				"default": true,
+				"default": "true",
 				"required": false,
 				"description": "Show/hide down caret.."
 			},
@@ -7593,19 +7497,19 @@
 	};
 
 /***/ },
-/* 131 */
+/* 130 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>caret <input type=\"checkbox\" v-model=\"caret\"></label>\r\n\t\t<label>dropup <input type=\"checkbox\" v-model=\"dropup\"></label>\r\n\t\t<label>\r\n\t\t\tsize \r\n\t\t\t<select v-model=\"size\">\r\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>\r\n\t\t\tvariant \r\n\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t</div>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-dropdown\r\n\t\t\t  :text=\"'Action'\"\r\n\t\t\t  :variant=\"variant\"\r\n\t\t\t  :size=\"size\"\r\n\t\t\t  :caret=\"caret\"\r\n\t\t\t  :dropup=\"dropup\">\r\n\t\t\t  <ul class=\"dropdown-menu\">\r\n\t\t\t      <li><a class=\"dropdown-item\" href=\"#\" v-on:click.prevent=\"\">Completed</a></li>\r\n\t\t\t      <li><a class=\"dropdown-item\" href=\"#\" v-on:click.prevent=\"\">Pending</a></li>\r\n\t\t\t  </ul>\r\n\t\t\t</vs-dropdown>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 132 */
+/* 131 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-dropdown</span> \r\n  <span class=\"hljs-attribute\">text</span>=<span class=\"hljs-value\">\"Action\"</span>\r\n  <span class=\"hljs-attribute\">icon</span>=<span class=\"hljs-value\">\"\"</span>\r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\r\n  <span class=\"hljs-attribute\">caret</span>=<span class=\"hljs-value\">\"false\"</span>\r\n  <span class=\"hljs-attribute\">dropup</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">ul</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"dropdown-menu\"</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"dropdown-item\"</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Completed<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"dropdown-item\"</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Pending<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">ul</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-dropdown</span>&gt;</span>\r\n";
 
 /***/ },
-/* 133 */
+/* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -7617,13 +7521,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(134);
+	__webpack_require__(133);
 
-	var _dropdownHtml = __webpack_require__(137);
+	var _dropdownHtml = __webpack_require__(136);
 
 	var _dropdownHtml2 = _interopRequireDefault(_dropdownHtml);
 
-	__webpack_require__(138);
+	__webpack_require__(137);
 
 	// export component object
 	exports['default'] = {
@@ -7693,27 +7597,27 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 134 */
+/* 133 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(135);
+	__webpack_require__(134);
 
-	__webpack_require__(18);
+	__webpack_require__(17);
 
 /***/ },
-/* 135 */
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(136);
+	var content = __webpack_require__(135);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -7730,10 +7634,10 @@
 	}
 
 /***/ },
-/* 136 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -7744,22 +7648,22 @@
 
 
 /***/ },
-/* 137 */
+/* 136 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:class=\"{ open: show, dropdown: !dropup, dropup: dropup}\">\r\n    <button\r\n        id=\"dLabel\"\r\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\" role=\"button\"\r\n        aria-haspopup=\"true\"\r\n        aria-expanded=\"{{show}}\"\r\n        v-on:click=\"toggle($event)\">\r\n        <span v-html=\"text\" v-show=\"text\"></span>\r\n        <span class=\"caret\"></span>\r\n    </button>\r\n    <slot></slot>\r\n</div>\r\n";
 
 /***/ },
-/* 138 */
+/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(139);
+	var content = __webpack_require__(138);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -7776,10 +7680,10 @@
 	}
 
 /***/ },
-/* 139 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -7790,7 +7694,7 @@
 
 
 /***/ },
-/* 140 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7801,27 +7705,27 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _dropdownSelectJson = __webpack_require__(141);
+	var _dropdownSelectJson = __webpack_require__(140);
 
 	var _dropdownSelectJson2 = _interopRequireDefault(_dropdownSelectJson);
 
-	var _dropdownSelectHtml = __webpack_require__(142);
+	var _dropdownSelectHtml = __webpack_require__(141);
 
 	var _dropdownSelectHtml2 = _interopRequireDefault(_dropdownSelectHtml);
 
-	var _snippetHtml = __webpack_require__(143);
+	var _snippetHtml = __webpack_require__(142);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsDropdownSelect = __webpack_require__(144);
+	var _srcComponentsDropdownSelect = __webpack_require__(143);
 
 	var _srcComponentsDropdownSelect2 = _interopRequireDefault(_srcComponentsDropdownSelect);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -7867,7 +7771,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 141 */
+/* 140 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -7888,7 +7792,7 @@
 			{
 				"name": "model",
 				"type": "String/Object",
-				"default": "''",
+				"default": "",
 				"required": false,
 				"description": "A result of the selection. Can return object (see <code>return-object</code> attribute)."
 			},
@@ -7906,7 +7810,7 @@
 					"left",
 					"right"
 				],
-				"default": "'left'",
+				"default": "left",
 				"required": false,
 				"description": "Vertical position of the dropdown list against the dropdown button. It becomes handy when dropdown floats to the right."
 			},
@@ -7920,28 +7824,28 @@
 			{
 				"name": "caret",
 				"type": "Boolean",
-				"default": true,
+				"default": "true",
 				"required": false,
 				"description": "Show/hide down caret."
 			},
 			{
 				"name": "default-text",
 				"type": "String",
-				"default": "'Plase select one'",
+				"default": "Plase select one",
 				"required": false,
 				"description": "Default text shown before selection is made."
 			},
 			{
 				"name": "force-default",
 				"type": "Boolean",
-				"default": false,
+				"default": "false",
 				"required": false,
 				"description": "Force default text to be always shown, if set to true."
 			},
 			{
 				"name": "return-object",
 				"type": "Boolean",
-				"default": false,
+				"default": "false",
 				"required": false,
 				"description": "If set to true, a full object will be returned in the model. By default only <code>value</code> is returned."
 			},
@@ -7975,19 +7879,19 @@
 	};
 
 /***/ },
-/* 142 */
+/* 141 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>caret <input type=\"checkbox\" v-model=\"caret\"></label>\r\n\t\t<label>dropup <input type=\"checkbox\" v-model=\"dropup\"></label>\r\n\t\t<label>force default <input type=\"checkbox\" v-model=\"forceDefault\"></label>\r\n\t\t<label>\r\n\t\t\tsize \r\n\t\t\t<select v-model=\"size\">\r\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>\r\n\t\t\tvariant \r\n\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>\r\n\t\t\tposition \r\n\t\t\t<select v-model=\"position\">\r\n\t\t\t\t<option v-for=\"option in positions\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\" class=\"clearfix\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<div class=\"div\" v-bind:class=\"{'pull-right': position == 'right'}\">\r\n\t\t\t\t<vs-dropdown-select\r\n\t\t\t    :list=\"list\"\r\n\t\t\t    :model.sync=\"model\"\r\n\t\t\t    :position=\"position\"\r\n\t\t\t    :size=\"size\"\r\n\t\t\t    :variant=\"variant\"\r\n\t\t\t    default-text=\"Action\"\r\n\t\t\t    :force-default=\"forceDefault\"\r\n\t\t\t    :caret=\"caret\"\r\n\t\t\t    :dropup=\"dropup\"\r\n\t\t\t    return-object>\r\n\t\t\t\t</vs-dropdown-select>\r\n\t\t\t</div>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 143 */
+/* 142 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-dropdown-select</span> \r\n  <span class=\"hljs-attribute\">:list</span>=<span class=\"hljs-value\">\"[\r\n    {\r\n      text: 'First',\r\n      value: 'first',\r\n    }, {\r\n      text: 'Second',\r\n      value: 'second',\r\n    }, {\r\n      text: 'Third',\r\n      value: 'third',\r\n    }]\"</span>\r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\r\n  <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"left\"</span>\r\n  <span class=\"hljs-attribute\">default-text</span>=<span class=\"hljs-value\">\"Action\"</span>\r\n  <span class=\"hljs-attribute\">force-default</span>=<span class=\"hljs-value\">\"false\"</span>\r\n  <span class=\"hljs-attribute\">caret</span>=<span class=\"hljs-value\">\"false\"</span>\r\n  <span class=\"hljs-attribute\">dropup</span>\r\n  <span class=\"hljs-attribute\">return-object</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-dropdown-select</span>&gt;</span>\r\n";
 
 /***/ },
-/* 144 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -7999,13 +7903,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(134);
+	__webpack_require__(133);
 
-	var _dropdownSelectHtml = __webpack_require__(145);
+	var _dropdownSelectHtml = __webpack_require__(144);
 
 	var _dropdownSelectHtml2 = _interopRequireDefault(_dropdownSelectHtml);
 
-	__webpack_require__(146);
+	__webpack_require__(145);
 
 	// export component object
 	exports['default'] = {
@@ -8127,22 +8031,22 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 145 */
+/* 144 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"dropdown-select\" v-bind:class=\"{open: show, dropdown: !dropup, dropup: dropup}\">\r\n    <button\r\n        id=\"dLabel\"\r\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\r\n        role=\"button\"\r\n        aria-haspopup=\"true\"\r\n        aria-expanded=\"show\"\r\n        v-on:click=\"toggle($event)\">\r\n        <span class=\"checked-items\" v-html=\"displayItem\"></span>\r\n    </button>\r\n    <ul class=\"dropdown-menu\" v-bind:class=\"{'dropdown-menu-right' : position == 'right'}\" aria-labelledby=\"dLabel\">\r\n        <li v-for=\"item in list\">\r\n            <button class=\"dropdown-item\" v-on:click.stop=\"select(item)\">{{item.text}}</button>\r\n        </li>\r\n    </ul>\r\n</div>\r\n";
 
 /***/ },
-/* 146 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(147);
+	var content = __webpack_require__(146);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -8159,10 +8063,10 @@
 	}
 
 /***/ },
-/* 147 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -8173,7 +8077,7 @@
 
 
 /***/ },
-/* 148 */
+/* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8184,27 +8088,27 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _formCheckboxJson = __webpack_require__(149);
+	var _formCheckboxJson = __webpack_require__(148);
 
 	var _formCheckboxJson2 = _interopRequireDefault(_formCheckboxJson);
 
-	var _formCheckboxHtml = __webpack_require__(150);
+	var _formCheckboxHtml = __webpack_require__(149);
 
 	var _formCheckboxHtml2 = _interopRequireDefault(_formCheckboxHtml);
 
-	var _snippetHtml = __webpack_require__(151);
+	var _snippetHtml = __webpack_require__(150);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsFormCheckbox = __webpack_require__(152);
+	var _srcComponentsFormCheckbox = __webpack_require__(151);
 
 	var _srcComponentsFormCheckbox2 = _interopRequireDefault(_srcComponentsFormCheckbox);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -8249,7 +8153,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 149 */
+/* 148 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -8318,19 +8222,19 @@
 	};
 
 /***/ },
-/* 150 */
+/* 149 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>vertical <input type=\"checkbox\" v-model=\"vertical\"></label>\r\n\t\t<label>custom <input type=\"checkbox\" v-model=\"custom\"></label>\r\n\t\t<label>state\r\n\t\t\t<select v-model=\"state\">\r\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-form-checkbox\r\n\t\t    :list.sync=\"list\"\r\n\t\t    :model.sync=\"model\"\r\n\t\t    :custom=\"custom\"\r\n\t\t    :vertical=\"vertical\"\r\n\t\t    :state=\"state\"\r\n\t\t    return-object>\r\n\t\t\t</vs-form-checkbox>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 151 */
+/* 150 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-form-checkbox</span> \r\n  <span class=\"hljs-attribute\">:list.sync</span>=<span class=\"hljs-value\">\"[{\r\n    text: 'First',\r\n    value: 'first',\r\n  }, {\r\n    text: 'Second',\r\n    value: 'second',\r\n  }, {\r\n    text: 'Third',\r\n    value: 'third',\r\n    disabled: true\r\n  }]\"</span>\r\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"'default'\"</span>\r\n  <span class=\"hljs-attribute\">custom</span>=<span class=\"hljs-value\">\"false\"</span>\r\n  <span class=\"hljs-attribute\">vertical</span>\r\n  <span class=\"hljs-attribute\">return-object</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-form-checkbox</span>&gt;</span>\r\n";
 
 /***/ },
-/* 152 */
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -8342,9 +8246,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(153);
+	__webpack_require__(152);
 
-	var _formCheckboxHtml = __webpack_require__(157);
+	var _formCheckboxHtml = __webpack_require__(156);
 
 	var _formCheckboxHtml2 = _interopRequireDefault(_formCheckboxHtml);
 
@@ -8429,40 +8333,40 @@
 	module.exports = exports['default'];
 
 /***/ },
+/* 152 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// import dependencies
+	'use strict';
+
+	__webpack_require__(153);
+
+	__webpack_require__(154);
+
+/***/ },
 /* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(154);
+	__webpack_require__(19);
 
-	__webpack_require__(155);
+	__webpack_require__(32);
+
+	__webpack_require__(17);
 
 /***/ },
 /* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// import dependencies
-	'use strict';
-
-	__webpack_require__(20);
-
-	__webpack_require__(33);
-
-	__webpack_require__(18);
-
-/***/ },
-/* 155 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(156);
+	var content = __webpack_require__(155);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -8479,10 +8383,10 @@
 	}
 
 /***/ },
-/* 156 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -8493,13 +8397,13 @@
 
 
 /***/ },
-/* 157 */
+/* 156 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n\t<div class=\"checkbox\" v-for=\"item in list\" v-bind:class=\"{ 'checkbox-inline': !vertical, disabled: item.disabled }\">\r\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-checkbox': custom }\">\r\n\t\t\t<input \r\n\t\t\t\tid=\"{{item.id}}\" \r\n\t\t\t\ttype=\"checkbox\" \r\n\t\t\t\tvalue=\"{{item.value}}\" \r\n\t\t\t\tautocomplete=\"off\" \r\n\t\t\t\tv-model=\"item.checked\" \r\n\t\t\t\tv-bind:disabled=\"item.disabled\">\r\n\t\t\t\t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.text}}\r\n\t\t</label>\r\n\t</div>\r\n</fieldset>\r\n";
 
 /***/ },
-/* 158 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8510,27 +8414,27 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _formRadioJson = __webpack_require__(159);
+	var _formRadioJson = __webpack_require__(158);
 
 	var _formRadioJson2 = _interopRequireDefault(_formRadioJson);
 
-	var _formRadioHtml = __webpack_require__(160);
+	var _formRadioHtml = __webpack_require__(159);
 
 	var _formRadioHtml2 = _interopRequireDefault(_formRadioHtml);
 
-	var _snippetHtml = __webpack_require__(161);
+	var _snippetHtml = __webpack_require__(160);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsFormRadio = __webpack_require__(162);
+	var _srcComponentsFormRadio = __webpack_require__(161);
 
 	var _srcComponentsFormRadio2 = _interopRequireDefault(_srcComponentsFormRadio);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -8572,7 +8476,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 159 */
+/* 158 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -8647,19 +8551,19 @@
 	};
 
 /***/ },
-/* 160 */
+/* 159 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>vertical <input type=\"checkbox\" v-model=\"vertical\"></label>\r\n\t\t<label>custom <input type=\"checkbox\" v-model=\"custom\"></label>\r\n\t\t<label>state\r\n\t\t\t<select v-model=\"state\">\r\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-form-radio\r\n\t\t    :model.sync=\"model\"\r\n\t\t    :list=\"list\"\r\n\t\t    :custom=\"custom\"\r\n\t\t    :vertical=\"vertical\"\r\n\t\t    :state=\"state\"\r\n\t\t    return-object>\r\n\t\t\t</vs-form-radio>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 161 */
+/* 160 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-form-radio</span> \r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">:list</span>=<span class=\"hljs-value\">\"[\r\n    {\r\n      name: 'First',\r\n      value: 'first',\r\n    }, {\r\n      name: 'Second',\r\n      value: 'second',\r\n    }, {\r\n      name: 'Third (disabled)',\r\n      value: 'third',\r\n      disabled: true,\r\n    }]\"</span>\r\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"'success'\"</span>\r\n  <span class=\"hljs-attribute\">custom</span>=<span class=\"hljs-value\">\"false\"</span>\r\n  <span class=\"hljs-attribute\">vertical</span>\r\n  <span class=\"hljs-attribute\">return-object</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-form-radio</span>&gt;</span>\r\n";
 
 /***/ },
-/* 162 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -8671,9 +8575,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(153);
+	__webpack_require__(152);
 
-	var _formRadioHtml = __webpack_require__(163);
+	var _formRadioHtml = __webpack_require__(162);
 
 	var _formRadioHtml2 = _interopRequireDefault(_formRadioHtml);
 
@@ -8751,13 +8655,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 163 */
+/* 162 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n\t<div class=\"radio\" v-for=\"item in list\" v-bind:class=\"{ 'radio-inline': !vertical, disabled: item.disabled }\">\r\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-radio': custom }\">\r\n\t\t\t<input \r\n\t\t\t\tid=\"{{item.id}}\" \r\n\t\t\t\ttype=\"radio\" \r\n\t\t\t\tname=\"{{name}}\"\r\n\t\t\t\tvalue=\"{{item.value}}\" \r\n\t\t\t\tautocomplete=\"off\" \r\n\t\t\t\tv-model=\"selection\" \r\n\t\t\t\tdisabled=\"{{item.disabled}}\">\r\n\t\t \t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.name}}\r\n\t\t</label>\r\n\t</div>\r\n</fieldset>\r\n";
 
 /***/ },
-/* 164 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8768,27 +8672,27 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _formInputJson = __webpack_require__(165);
+	var _formInputJson = __webpack_require__(164);
 
 	var _formInputJson2 = _interopRequireDefault(_formInputJson);
 
-	var _formInputHtml = __webpack_require__(166);
+	var _formInputHtml = __webpack_require__(165);
 
 	var _formInputHtml2 = _interopRequireDefault(_formInputHtml);
 
-	var _snippetHtml = __webpack_require__(167);
+	var _snippetHtml = __webpack_require__(166);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsFormInput = __webpack_require__(168);
+	var _srcComponentsFormInput = __webpack_require__(167);
 
 	var _srcComponentsFormInput2 = _interopRequireDefault(_srcComponentsFormInput);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -8819,7 +8723,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 165 */
+/* 164 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -8928,19 +8832,19 @@
 	};
 
 /***/ },
-/* 166 */
+/* 165 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>state icon <input type=\"checkbox\" v-model=\"stateIcon\"></label>\r\n\t\t<label>size\r\n\t\t\t<select v-model=\"size\">\r\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>state\r\n\t\t\t<select v-model=\"state\">\r\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-form-input\r\n\t\t    :model.sync=\"model\"\r\n\t\t    type=\"text\"\r\n\t\t    label=\"Example Label\"\r\n\t\t    placeholder=\"Placeholder\"\r\n\t\t    description=\"We'll never share your email with anyone else.\"\r\n\t\t    :size=\"size\"\r\n\t\t    :state-icon=\"stateIcon\"\r\n\t\t    :state=\"state\">\r\n\t\t\t</vs-form-input>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 167 */
+/* 166 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-form-input</span> \r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"text\"</span>\r\n  <span class=\"hljs-attribute\">label</span>=<span class=\"hljs-value\">\"Example Label\"</span>\r\n  <span class=\"hljs-attribute\">placeholder</span>=<span class=\"hljs-value\">\"Placeholder\"</span>\r\n  <span class=\"hljs-attribute\">description</span>=<span class=\"hljs-value\">\"We'll never share your email with anyone else.\"</span>\r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"'success'\"</span>\r\n  <span class=\"hljs-attribute\">state-icon</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-form-input</span>&gt;</span>\r\n";
 
 /***/ },
-/* 168 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -8952,11 +8856,11 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(32);
+	__webpack_require__(31);
 
-	var _utilsHelpersJs = __webpack_require__(50);
+	var _utilsHelpersJs = __webpack_require__(49);
 
-	var _formInputHtml = __webpack_require__(169);
+	var _formInputHtml = __webpack_require__(168);
 
 	var _formInputHtml2 = _interopRequireDefault(_formInputHtml);
 
@@ -9022,13 +8926,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 169 */
+/* 168 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <div class=\"inputClass\">\r\n        <input \r\n        \ttype=\"{{type}}\" \r\n        \tclass=\"form-control {{stateIconType}} {{inputSize}}\" \r\n        \tid=\"{{id}}\" \r\n        \tplaceholder=\"{{placeholder}}\" \r\n        \tv-model=\"model\">\r\n    </div>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>\r\n";
 
 /***/ },
-/* 170 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9039,27 +8943,27 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _formSelectJson = __webpack_require__(171);
+	var _formSelectJson = __webpack_require__(170);
 
 	var _formSelectJson2 = _interopRequireDefault(_formSelectJson);
 
-	var _formSelectHtml = __webpack_require__(172);
+	var _formSelectHtml = __webpack_require__(171);
 
 	var _formSelectHtml2 = _interopRequireDefault(_formSelectHtml);
 
-	var _snippetHtml = __webpack_require__(173);
+	var _snippetHtml = __webpack_require__(172);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsFormSelect = __webpack_require__(174);
+	var _srcComponentsFormSelect = __webpack_require__(173);
 
 	var _srcComponentsFormSelect2 = _interopRequireDefault(_srcComponentsFormSelect);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -9094,7 +8998,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 171 */
+/* 170 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -9180,19 +9084,19 @@
 	};
 
 /***/ },
-/* 172 */
+/* 171 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>size\r\n\t\t\t<select v-model=\"size\">\r\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>state\r\n\t\t\t<select v-model=\"state\">\r\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-form-select\r\n\t\t    :model.sync=\"model\"\r\n\t\t    :options=\"options\"\r\n\t\t    type=\"text\"\r\n\t\t    label=\"Example Label\"\r\n\t\t    description=\"We'll never share your gender with anyone else.\"\r\n\t\t    :size=\"size\"\r\n\t\t    :state=\"state\">\r\n\t\t\t</vs-form-select>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 173 */
+/* 172 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-form-select</span> \r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">:options</span>=<span class=\"hljs-value\">\"options\"</span>\r\n  <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"text\"</span>\r\n  <span class=\"hljs-attribute\">label</span>=<span class=\"hljs-value\">\"Example Label\"</span>\r\n  <span class=\"hljs-attribute\">description</span>=<span class=\"hljs-value\">\"We'll never share your gender with anyone else.\"</span>\r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"'success'\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-form-select</span>&gt;</span>\r\n";
 
 /***/ },
-/* 174 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -9204,11 +9108,11 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(32);
+	__webpack_require__(31);
 
-	var _utilsHelpersJs = __webpack_require__(50);
+	var _utilsHelpersJs = __webpack_require__(49);
 
-	var _formSelectHtml = __webpack_require__(175);
+	var _formSelectHtml = __webpack_require__(174);
 
 	var _formSelectHtml2 = _interopRequireDefault(_formSelectHtml);
 
@@ -9278,13 +9182,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 175 */
+/* 174 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <!-- single select -->\r\n    <select class=\"form-control {{inputSize}}\" id=\"{{id}}\" v-model=\"model\" options=\"allOptions\" v-if=\"!multiple\">\r\n    \t<option v-for=\"option in allOptions\" v-bind:value=\"option.value\">{{option.text}}</option>\r\n    </select>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>\r\n";
 
 /***/ },
-/* 176 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9295,27 +9199,27 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _formTextareaJson = __webpack_require__(177);
+	var _formTextareaJson = __webpack_require__(176);
 
 	var _formTextareaJson2 = _interopRequireDefault(_formTextareaJson);
 
-	var _formTextareaHtml = __webpack_require__(178);
+	var _formTextareaHtml = __webpack_require__(177);
 
 	var _formTextareaHtml2 = _interopRequireDefault(_formTextareaHtml);
 
-	var _snippetHtml = __webpack_require__(179);
+	var _snippetHtml = __webpack_require__(178);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsFormTextarea = __webpack_require__(180);
+	var _srcComponentsFormTextarea = __webpack_require__(179);
 
 	var _srcComponentsFormTextarea2 = _interopRequireDefault(_srcComponentsFormTextarea);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -9341,7 +9245,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 177 */
+/* 176 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -9409,19 +9313,19 @@
 	};
 
 /***/ },
-/* 178 */
+/* 177 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>state\r\n\t\t\t<select v-model=\"state\">\r\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-form-textarea\r\n\t\t    :model.sync=\"model\"\r\n\t\t    type=\"text\"\r\n\t\t    label=\"Example Label\"\r\n\t\t    description=\"Extra textarea description.\"\r\n\t\t    :rows=\"2\"\r\n\t\t    :state=\"state\">\r\n\t\t\t</vs-form-textarea>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 179 */
+/* 178 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-form-textarea</span> \r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"text\"</span>\r\n  <span class=\"hljs-attribute\">label</span>=<span class=\"hljs-value\">\"Example Label\"</span>\r\n  <span class=\"hljs-attribute\">description</span>=<span class=\"hljs-value\">\"Extra textarea description.\"</span>\r\n  <span class=\"hljs-attribute\">rows</span>=<span class=\"hljs-value\">\"2\"</span>\r\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"'success'\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-form-textarea</span>&gt;</span>\r\n";
 
 /***/ },
-/* 180 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -9433,11 +9337,11 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(32);
+	__webpack_require__(31);
 
-	var _utilsHelpersJs = __webpack_require__(50);
+	var _utilsHelpersJs = __webpack_require__(49);
 
-	var _formTextareaHtml = __webpack_require__(181);
+	var _formTextareaHtml = __webpack_require__(180);
 
 	var _formTextareaHtml2 = _interopRequireDefault(_formTextareaHtml);
 
@@ -9480,13 +9384,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 181 */
+/* 180 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <textarea class=\"form-control\" id=\"{{id}}\" rows=\"{{rows}}\" v-model=\"model\"></textarea>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>";
 
 /***/ },
-/* 182 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9497,21 +9401,21 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(183);
+	__webpack_require__(182);
 
-	var _imagesJson = __webpack_require__(185);
+	var _imagesJson = __webpack_require__(184);
 
 	var _imagesJson2 = _interopRequireDefault(_imagesJson);
 
-	var _imagesHtml = __webpack_require__(186);
+	var _imagesHtml = __webpack_require__(185);
 
 	var _imagesHtml2 = _interopRequireDefault(_imagesHtml);
 
-	var _snippetHtml = __webpack_require__(187);
+	var _snippetHtml = __webpack_require__(186);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
@@ -9535,25 +9439,25 @@
 	module.exports = exports['default'];
 
 /***/ },
+/* 182 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// import dependencies
+	'use strict';
+
+	__webpack_require__(183);
+
+/***/ },
 /* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(184);
+	__webpack_require__(112);
 
 /***/ },
 /* 184 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-
-	__webpack_require__(113);
-
-/***/ },
-/* 185 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -9574,19 +9478,19 @@
 	};
 
 /***/ },
-/* 186 */
+/* 185 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\" v-if=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<img v-bind:src=\"'assets/150x150.png'\" alt=\"...\" class=\"img-rounded\">\r\n\t\t\t<img v-bind:src=\"'assets/150x150.png'\" alt=\"...\" class=\"img-circle\">\r\n\t\t\t<img v-bind:src=\"'assets/150x150.png'\" alt=\"...\" class=\"img-thumbnail\">\r\n\t\t\t<div class=\"m-b\"></div>\r\n\t\t\t<img v-bind:src=\"'assets/responsive.png'\" alt=\"...\" class=\"img-fluid\" >\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 187 */
+/* 186 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/150x150?text=150x150\"</span> <span class=\"hljs-attribute\">alt</span>=<span class=\"hljs-value\">\"...\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"img-rounded\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/150x150?text=150x150\"</span> <span class=\"hljs-attribute\">alt</span>=<span class=\"hljs-value\">\"...\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"img-circle\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/150x150?text=150x150\"</span> <span class=\"hljs-attribute\">alt</span>=<span class=\"hljs-value\">\"...\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"img-thumbnail\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/1000x150?text=1000x150 - responsive\"</span> <span class=\"hljs-attribute\">alt</span>=<span class=\"hljs-value\">\"...\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"img-fluid\"</span> &gt;</span>\r\n";
 
 /***/ },
-/* 188 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9597,23 +9501,23 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _jumbotronJson = __webpack_require__(189);
+	var _jumbotronJson = __webpack_require__(188);
 
 	var _jumbotronJson2 = _interopRequireDefault(_jumbotronJson);
 
-	var _jumbotronHtml = __webpack_require__(190);
+	var _jumbotronHtml = __webpack_require__(189);
 
 	var _jumbotronHtml2 = _interopRequireDefault(_jumbotronHtml);
 
-	var _snippetHtml = __webpack_require__(191);
+	var _snippetHtml = __webpack_require__(190);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsJumbotron = __webpack_require__(192);
+	var _srcComponentsJumbotron = __webpack_require__(191);
 
 	var _srcComponentsJumbotron2 = _interopRequireDefault(_srcComponentsJumbotron);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
@@ -9638,7 +9542,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 189 */
+/* 188 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -9665,19 +9569,19 @@
 	};
 
 /***/ },
-/* 190 */
+/* 189 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>fluid <input type=\"checkbox\" v-model=\"fluid\"></label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-jumbotron :fluid=\"fluid\">\r\n\t\t\t\t<h1 class=\"display-3\">Hello, world!</h1>\r\n\t\t\t  <p class=\"lead\">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>\r\n\t\t\t  <hr class=\"m-y-md\">\r\n\t\t\t  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>\r\n\t\t\t  <p class=\"lead\">\r\n\t\t\t    <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more</a>\r\n\t\t\t  </p>\r\n\t\t\t</vs-jumbotron>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 191 */
+/* 190 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-jumbotron</span> <span class=\"hljs-attribute\">fluid</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h1</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"display-3\"</span>&gt;</span>Hello, world!<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h1</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">p</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"lead\"</span>&gt;</span>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">p</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">hr</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"m-y-md\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">p</span>&gt;</span>It uses utility classes for typography and spacing to space content out within the larger container.<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">p</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">p</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"lead\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-primary btn-lg\"</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span> <span class=\"hljs-attribute\">role</span>=<span class=\"hljs-value\">\"button\"</span>&gt;</span>Learn more<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">p</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-jumbotron</span>&gt;</span>\r\n";
 
 /***/ },
-/* 192 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -9689,9 +9593,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(41);
+	__webpack_require__(40);
 
-	var _jumbotronHtml = __webpack_require__(193);
+	var _jumbotronHtml = __webpack_require__(192);
 
 	var _jumbotronHtml2 = _interopRequireDefault(_jumbotronHtml);
 
@@ -9709,13 +9613,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 193 */
+/* 192 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"jumbotron\" v-bind:class=\"{ 'jumbotron-fluid': fluid }\">\r\n  <div class=\"container\">\r\n    <slot></slot>\r\n  </div>\r\n</div>";
 
 /***/ },
-/* 194 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9726,27 +9630,27 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _labelsJson = __webpack_require__(195);
+	var _labelsJson = __webpack_require__(194);
 
 	var _labelsJson2 = _interopRequireDefault(_labelsJson);
 
-	var _labelsHtml = __webpack_require__(196);
+	var _labelsHtml = __webpack_require__(195);
 
 	var _labelsHtml2 = _interopRequireDefault(_labelsHtml);
 
-	var _snippetHtml = __webpack_require__(197);
+	var _snippetHtml = __webpack_require__(196);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsBadge = __webpack_require__(198);
+	var _srcComponentsBadge = __webpack_require__(197);
 
 	var _srcComponentsBadge2 = _interopRequireDefault(_srcComponentsBadge);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -9773,7 +9677,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 195 */
+/* 194 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -9820,19 +9724,19 @@
 	};
 
 /***/ },
-/* 196 */
+/* 195 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>\r\n\t\t\ttype \r\n\t\t\t<select v-model=\"type\">\r\n\t\t\t\t<option v-for=\"option in types\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>\r\n\t\t\tvariant \r\n\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-badge :variant=\"variant\" :type=\"type\">open</vs-badge>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 197 */
+/* 196 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-badge</span> <span class=\"hljs-attribute\">:variant</span>=<span class=\"hljs-value\">\"variant\"</span> <span class=\"hljs-attribute\">:type</span>=<span class=\"hljs-value\">\"type\"</span>&gt;</span>open<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-badge</span>&gt;</span>\r\n";
 
 /***/ },
-/* 198 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9843,7 +9747,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _srcComponentsLabels = __webpack_require__(199);
+	var _srcComponentsLabels = __webpack_require__(198);
 
 	var _srcComponentsLabels2 = _interopRequireDefault(_srcComponentsLabels);
 
@@ -9851,7 +9755,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 199 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -9863,9 +9767,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(56);
+	__webpack_require__(55);
 
-	var _labelsHtml = __webpack_require__(200);
+	var _labelsHtml = __webpack_require__(199);
 
 	var _labelsHtml2 = _interopRequireDefault(_labelsHtml);
 
@@ -9895,13 +9799,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 200 */
+/* 199 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"label {{labelVariant}} {{labelType}}\">\r\n\t<slot></slot>\r\n</span>\r\n";
 
 /***/ },
-/* 201 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9912,29 +9816,29 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _listGroupJson = __webpack_require__(202);
+	var _listGroupJson = __webpack_require__(201);
 
 	var _listGroupJson2 = _interopRequireDefault(_listGroupJson);
 
-	var _listGroupHtml = __webpack_require__(203);
+	var _listGroupHtml = __webpack_require__(202);
 
 	var _listGroupHtml2 = _interopRequireDefault(_listGroupHtml);
 
-	var _snippetHtml = __webpack_require__(204);
+	var _snippetHtml = __webpack_require__(203);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsListGroup = __webpack_require__(205);
+	var _srcComponentsListGroup = __webpack_require__(204);
 
-	var _srcComponentsLabels = __webpack_require__(199);
+	var _srcComponentsLabels = __webpack_require__(198);
 
 	var _srcComponentsLabels2 = _interopRequireDefault(_srcComponentsLabels);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -9964,7 +9868,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 202 */
+/* 201 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -10021,19 +9925,19 @@
 	};
 
 /***/ },
-/* 203 */
+/* 202 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>flush <input type=\"checkbox\" v-model=\"flush\"></label>\r\n\t\t<label>\r\n\t\t\tstate \r\n\t\t\t<select v-model=\"state\">\r\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-list-group style=\"width: 350px\" :flush=\"flush\">\r\n\t\t\t\t<vs-list-group-item :state=\"state\">\r\n\t\t\t    <vs-badge type=\"pill\" class=\"pull-right\">14</vs-badge>\r\n\t\t\t    Cras justo odio\r\n\t\t\t  </vs-list-group-item>\r\n\t\t\t  <vs-list-group-item>\r\n\t\t\t    <vs-badge type=\"pill\" class=\"pull-right\">2</vs-badge>\r\n\t\t\t    Dapibus ac facilisis in\r\n\t\t\t  </vs-list-group-item>\r\n\t\t\t  <vs-list-group-item>\r\n\t\t\t    <vs-badge type=\"pill\" class=\"pull-right\">1</vs-badge>\r\n\t\t\t    Morbi leo risus\r\n\t\t\t  </vs-list-group-item>\r\n\t\t\t</vs-list-group>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 204 */
+/* 203 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-list-group</span> <span class=\"hljs-attribute\">flush</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-list-group-item</span> <span class=\"hljs-attribute\">state</span>=<span class=\"hljs-value\">\"success\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-badge</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"pill\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"pull-right\"</span>&gt;</span>14<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-badge</span>&gt;</span>\r\n    Cras justo odio\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-list-group-item</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-list-group-item</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-badge</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"pill\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"pull-right\"</span>&gt;</span>2<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-badge</span>&gt;</span>\r\n    Dapibus ac facilisis in\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-list-group-item</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-list-group-item</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-badge</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"pill\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"pull-right\"</span>&gt;</span>1<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-badge</span>&gt;</span>\r\n    Morbi leo risus\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-list-group-item</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-list-group</span>&gt;</span>";
 
 /***/ },
-/* 205 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -10045,13 +9949,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(27);
+	__webpack_require__(26);
 
-	var _listGroupHtml = __webpack_require__(206);
+	var _listGroupHtml = __webpack_require__(205);
 
 	var _listGroupHtml2 = _interopRequireDefault(_listGroupHtml);
 
-	__webpack_require__(207);
+	__webpack_require__(206);
 
 	// export component object
 	var listGroup = {
@@ -10092,22 +9996,22 @@
 	exports.listGroupItem = listGroupItem;
 
 /***/ },
-/* 206 */
+/* 205 */
 /***/ function(module, exports) {
 
 	module.exports = "<ul v-bind:class=\"{'list-group': true, 'list-group-flush': flush}\">\r\n  <slot></slot>\r\n</ul>";
 
 /***/ },
-/* 207 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(208);
+	var content = __webpack_require__(207);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10124,10 +10028,10 @@
 	}
 
 /***/ },
-/* 208 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -10138,7 +10042,7 @@
 
 
 /***/ },
-/* 209 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10149,23 +10053,23 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _mediaJson = __webpack_require__(210);
+	var _mediaJson = __webpack_require__(209);
 
 	var _mediaJson2 = _interopRequireDefault(_mediaJson);
 
-	var _mediaHtml = __webpack_require__(211);
+	var _mediaHtml = __webpack_require__(210);
 
 	var _mediaHtml2 = _interopRequireDefault(_mediaHtml);
 
-	var _snippetHtml = __webpack_require__(212);
+	var _snippetHtml = __webpack_require__(211);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsMedia = __webpack_require__(213);
+	var _srcComponentsMedia = __webpack_require__(212);
 
 	var _srcComponentsMedia2 = _interopRequireDefault(_srcComponentsMedia);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
@@ -10192,7 +10096,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 210 */
+/* 209 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -10221,19 +10125,19 @@
 	};
 
 /***/ },
-/* 211 */
+/* 210 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n    <div slot=\"controls\">\r\n        <!-- Html controls start-->\r\n        <label>\r\n\t\t\tposition\r\n\t\t\t<select v-model=\"position\">\r\n\t\t\t\t<option v-for=\"option in positions\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n        <!-- Html controls end-->\r\n    </div>\r\n    <div slot=\"markup\">\r\n        <!-- Html markup start-->\r\n        <vs-media :position=\"position\">\r\n            <div slot=\"aside\">\r\n                <a href=\"#\">\r\n                \t<img class=\"media-object\" v-bind:src=\"'assets/media.png'\">\r\n                </a>\r\n            </div>\r\n            <div slot=\"body\">\r\n            \t<h4 class=\"media-heading\">Media heading</h4>\r\n                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.\r\n            </div>\r\n        </vs-media>\r\n        <!-- Html markup end-->\r\n    </div>\r\n</docs-demo>\r\n";
 
 /***/ },
-/* 212 */
+/* 211 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-media</span> <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"top left\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"aside\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"media-object\"</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/50x50?text=media\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"body\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h4</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"media-heading\"</span>&gt;</span>Media heading<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h4</span>&gt;</span> \r\n    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-media</span>&gt;</span>\r\n";
 
 /***/ },
-/* 213 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -10245,9 +10149,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(214);
+	__webpack_require__(213);
 
-	var _mediaHtml = __webpack_require__(217);
+	var _mediaHtml = __webpack_require__(216);
 
 	var _mediaHtml2 = _interopRequireDefault(_mediaHtml);
 
@@ -10278,27 +10182,27 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 214 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(215);
+	__webpack_require__(214);
 
-	__webpack_require__(113);
+	__webpack_require__(112);
 
 /***/ },
-/* 215 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(216);
+	var content = __webpack_require__(215);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10315,10 +10219,10 @@
 	}
 
 /***/ },
-/* 216 */
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -10329,13 +10233,13 @@
 
 
 /***/ },
-/* 217 */
+/* 216 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"media\">\r\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-left'\">\r\n  \t<slot name=\"aside\">\r\n  </div>\r\n  <div class=\"media-body\">\r\n  \t<slot name=\"body\">\r\n  </div>\r\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-right'\">\r\n  \t<slot name=\"aside\">\r\n  </div>\r\n</div>";
 
 /***/ },
-/* 218 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10346,27 +10250,27 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _modalJson = __webpack_require__(219);
+	var _modalJson = __webpack_require__(218);
 
 	var _modalJson2 = _interopRequireDefault(_modalJson);
 
-	var _modalHtml = __webpack_require__(220);
+	var _modalHtml = __webpack_require__(219);
 
 	var _modalHtml2 = _interopRequireDefault(_modalHtml);
 
-	var _snippetHtml = __webpack_require__(221);
+	var _snippetHtml = __webpack_require__(220);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsModal = __webpack_require__(222);
+	var _srcComponentsModal = __webpack_require__(221);
 
 	var _srcComponentsModal2 = _interopRequireDefault(_srcComponentsModal);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -10392,7 +10296,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 219 */
+/* 218 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -10438,19 +10342,19 @@
 	};
 
 /***/ },
-/* 220 */
+/* 219 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n    <div slot=\"controls\">\r\n        <!-- Html controls start-->\r\n        <label>fade <input type=\"checkbox\" v-model=\"fade\"></label>\r\n        <label>\r\n\t\t\tsize\r\n\t\t\t<select v-model=\"size\">\r\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n        <!-- Html controls end-->\r\n    </div>\r\n    <div slot=\"markup\">\r\n        <!-- Html markup start-->\r\n\r\n        <!-- trigger -->\r\n        <button class=\"btn btn-primary\" v-on:click=\"$broadcast('show::modal', 'modal1')\">\r\n        \tShow Modal\r\n        </button>\r\n\r\n        <!-- modal -->\r\n        <vs-modal id=\"modal1\" :size=\"size\" :fade=\"fade\">\r\n            <div slot=\"modal-header\">\r\n                <h3>header</h3>\r\n            </div>\r\n            <div slot=\"modal-body\">\r\n                body\r\n            </div>\r\n            <div slot=\"modal-footer\">\r\n                <button class=\"btn btn-primary\" v-on:click=\"$broadcast('hide::modal', 'modal1')\">\r\n                    OK\r\n                </button>\r\n            </div>\r\n        </vs-modal>\r\n        <!-- Html markup end-->\r\n    </div>\r\n</docs-demo>\r\n";
 
 /***/ },
-/* 221 */
+/* 220 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-comment\">&lt;!-- trigger --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-primary mini\"</span> <span class=\"hljs-attribute\">v-on:click</span>=<span class=\"hljs-value\">\"$broadcast('show::modal', 'modal1')\"</span>&gt;</span>\r\n  Show Modal\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n<span class=\"hljs-comment\">&lt;!-- modal --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-modal</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"modal1\"</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">fade</span>=<span class=\"hljs-value\">\"false\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"modal-header\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h3</span>&gt;</span>header<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h3</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"modal-body\"</span>&gt;</span>\r\n    body\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"modal-footer\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-primary\"</span> <span class=\"hljs-attribute\">v-on:click</span>=<span class=\"hljs-value\">\"$broadcast('hide::modal', 'modal1')\"</span>&gt;</span>\r\n      OK\r\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-modal</span>&gt;</span>\r\n";
 
 /***/ },
-/* 222 */
+/* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -10462,11 +10366,11 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(223);
+	__webpack_require__(222);
 
-	var _utilsHelpersJs = __webpack_require__(50);
+	var _utilsHelpersJs = __webpack_require__(49);
 
-	var _modalHtml = __webpack_require__(226);
+	var _modalHtml = __webpack_require__(225);
 
 	var _modalHtml2 = _interopRequireDefault(_modalHtml);
 
@@ -10500,25 +10404,29 @@
 	  },
 	  methods: {
 	    show: function show() {
+	      var _this2 = this;
+
 	      this.$el.style.display = 'block';
 	      var _this = this;
 	      // wait for the display block, and then add class "in" class on the modal
-	      setTimeout(function () {
+	      this._modalAnimation = setTimeout(function () {
 	        _this.animateBackdrop = true;
-	        setTimeout(function () {
+	        _this2._modalAnimation = setTimeout(function () {
 	          _this.animateModal = true;
 	          _this.$dispatch('shown::modal');
 	        }, _this.fade ? TRANSITION_DURATION : 0);
 	      }, 0);
 	    },
 	    hide: function hide() {
+	      var _this3 = this;
+
 	      var _this = this;
 	      // first animate modal out
 	      this.animateModal = false;
-	      setTimeout(function () {
+	      this._modalAnimation = setTimeout(function () {
 	        // wait for animation to complete and then hide the backdrop
 	        _this.animateBackdrop = false;
-	        setTimeout(function () {
+	        _this3._modalAnimation = setTimeout(function () {
 	          // no hide the modal wrapper
 	          _this.$el.style.display = 'none';
 	          _this.$dispatch('hidden::modal');
@@ -10532,18 +10440,6 @@
 	      }
 	    }
 	  },
-	  ready: function ready() {
-	    var _this2 = this;
-
-	    // support for esc key press
-	    document.addEventListener('keydown', function (e) {
-	      var key = e.which || e.keyCode;
-	      if (key === 27) {
-	        // 27 is esc
-	        _this2.hide();
-	      }
-	    });
-	  },
 	  events: {
 	    // control modal from outside via events
 	    'show::modal': function showModal(id) {
@@ -10556,32 +10452,47 @@
 	        this.hide();
 	      }
 	    }
+	  },
+	  ready: function ready() {
+	    var _this4 = this;
+
+	    // support for esc key press
+	    document.addEventListener('keydown', function (e) {
+	      var key = e.which || e.keyCode;
+	      if (key === 27) {
+	        // 27 is esc
+	        _this4.hide();
+	      }
+	    });
+	  },
+	  destroyed: function destroyed() {
+	    clearTimeout(this._modalAnimation);
 	  }
 	};
 	module.exports = exports['default'];
 
 /***/ },
-/* 223 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(224);
+	__webpack_require__(223);
 
-	__webpack_require__(18);
+	__webpack_require__(17);
 
 /***/ },
-/* 224 */
+/* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(225);
+	var content = __webpack_require__(224);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10598,10 +10509,10 @@
 	}
 
 /***/ },
-/* 225 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -10612,13 +10523,13 @@
 
 
 /***/ },
-/* 226 */
+/* 225 */
 /***/ function(module, exports) {
 
 	module.exports = "<div style=\"display: none\">\r\n\t<div id=\"{{id}}\" class=\"modal\" v-bind:class=\"{ fade: fade, in: animateModal || !fade }\" style=\"display: block\" v-on:click=\"onClickOut($event)\">\r\n\t  \t<div class=\"modal-dialog  modal-{{size}}\" role=\"document\" style=\"z-index: 9999\">\r\n\t\t    <div class=\"modal-content\">\r\n\t\t        <div class=\"modal-header\">\r\n\t\t        \t<slot name=\"modal-header\"></slot>\r\n\t\t        </div>\r\n\t\t        <div class=\"modal-body\">\r\n\t\t        \t<slot name=\"modal-body\"></slot>\r\n\t\t        </div>\r\n\t\t        <div class=\"modal-footer\">\r\n\t\t        \t<slot name=\"modal-footer\"></slot>\r\n\t\t        </div>\r\n\t\t    </div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"modal-backdrop\" v-bind:class=\"{ fade: fade, in: animateBackdrop || !fade }\"></div>\r\n</div>";
 
 /***/ },
-/* 227 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10629,21 +10540,21 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _navJson = __webpack_require__(228);
+	var _navJson = __webpack_require__(227);
 
 	var _navJson2 = _interopRequireDefault(_navJson);
 
-	var _navHtml = __webpack_require__(229);
+	var _navHtml = __webpack_require__(228);
 
 	var _navHtml2 = _interopRequireDefault(_navHtml);
 
-	var _snippetHtml = __webpack_require__(230);
+	var _snippetHtml = __webpack_require__(229);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsNav = __webpack_require__(231);
+	var _srcComponentsNav = __webpack_require__(230);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
@@ -10672,7 +10583,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 228 */
+/* 227 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -10724,19 +10635,19 @@
 	};
 
 /***/ },
-/* 229 */
+/* 228 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>\r\n\t\t\ttype\r\n\t\t\t<select v-model=\"type\">\r\n\t\t\t\t<option v-for=\"option in types\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>vertical <input type=\"checkbox\" v-model=\"vertical\"></label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-nav :type=\"type\" :vertical=\"vertical\">\r\n\t\t\t \t<vs-nav-item href=\"#\" v-on:click.prevent=\"\" active>Active</vs-nav-item>\r\n\t\t\t \t<vs-nav-item href=\"#\" v-on:click.prevent=\"\">Link</vs-nav-item>\r\n\t\t\t \t<vs-nav-item href=\"#\" v-on:click.prevent=\"\">Another Link</vs-nav-item>\r\n\t\t\t \t<vs-nav-item href=\"#\" v-on:click.prevent=\"\" disabled>Disabled</vs-nav-item>\r\n\t\t\t</vs-nav>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 230 */
+/* 229 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"default\"</span> <span class=\"hljs-attribute\">:vertical</span>=<span class=\"hljs-value\">\"false\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span> <span class=\"hljs-attribute\">active</span>&gt;</span>Active<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Link<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Another Link<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span> <span class=\"hljs-attribute\">disabled</span>&gt;</span>Disabled<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav</span>&gt;</span>";
 
 /***/ },
-/* 231 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -10748,11 +10659,11 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(12);
+	__webpack_require__(11);
 
-	__webpack_require__(232);
+	__webpack_require__(231);
 
-	var _navHtml = __webpack_require__(234);
+	var _navHtml = __webpack_require__(233);
 
 	var _navHtml2 = _interopRequireDefault(_navHtml);
 
@@ -10795,16 +10706,16 @@
 	exports.navItem = navItem;
 
 /***/ },
-/* 232 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(233);
+	var content = __webpack_require__(232);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10821,10 +10732,10 @@
 	}
 
 /***/ },
-/* 233 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -10835,13 +10746,13 @@
 
 
 /***/ },
-/* 234 */
+/* 233 */
 /***/ function(module, exports) {
 
 	module.exports = "<ul class=\"nav\" v-bind:class=\"{ 'nav-stacked': vertical, 'nav-pills': type == 'pills', 'navbar-nav': type == 'navbar' }\">\n  <slot></slot> \n</ul>";
 
 /***/ },
-/* 235 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10852,27 +10763,27 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _navbarJson = __webpack_require__(236);
+	var _navbarJson = __webpack_require__(235);
 
 	var _navbarJson2 = _interopRequireDefault(_navbarJson);
 
-	var _navbarHtml = __webpack_require__(237);
+	var _navbarHtml = __webpack_require__(236);
 
 	var _navbarHtml2 = _interopRequireDefault(_navbarHtml);
 
-	var _snippetHtml = __webpack_require__(238);
+	var _snippetHtml = __webpack_require__(237);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsNavbar = __webpack_require__(239);
+	var _srcComponentsNavbar = __webpack_require__(238);
 
 	var _srcComponentsNavbar2 = _interopRequireDefault(_srcComponentsNavbar);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -10913,7 +10824,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 236 */
+/* 235 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -10973,19 +10884,19 @@
 	};
 
 /***/ },
-/* 237 */
+/* 236 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>\r\n\t\t\tfixed\r\n\t\t\t<select v-model=\"fixed\">\r\n\t\t\t\t<option v-for=\"option in fixeds\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>\r\n\t\t\ttype\r\n\t\t\t<select v-model=\"type\">\r\n\t\t\t\t<option v-for=\"option in types\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>\r\n\t\t\tvariant\r\n\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-navbar :fixed=\"fixed\" :type=\"type\" :variant=\"variant\">\r\n\t\t\t  <a class=\"navbar-brand\" href=\"#\">Navbar</a>\r\n\t\t\t  <ul class=\"nav navbar-nav pull-left\">\r\n\t\t\t    <li class=\"nav-item active\">\r\n\t\t\t      <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\r\n\t\t\t    </li>\r\n\t\t\t    <li class=\"nav-item\">\r\n\t\t\t      <a class=\"nav-link\" href=\"#\">Features</a>\r\n\t\t\t    </li>\r\n\t\t\t    <li class=\"nav-item\">\r\n\t\t\t      <a class=\"nav-link\" href=\"#\">Pricing</a>\r\n\t\t\t    </li>\r\n\t\t\t    <li class=\"nav-item\">\r\n\t\t\t      <a class=\"nav-link\" href=\"#\">About</a>\r\n\t\t\t    </li>\r\n\t\t\t  </ul>\r\n\t\t\t  <form class=\"form-inline navbar-form pull-right\">\r\n\t\t\t    <input class=\"form-control\" type=\"text\" placeholder=\"Search\">\r\n\t\t\t    <button class=\"btn btn-success-outline\" type=\"submit\">Search</button>\r\n\t\t\t  </form>\r\n\t\t\t</vs-navbar>\r\n\t\t\t<div v-if=\"fixed\">Look for navbar at the {{fixed}} :)</div>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 238 */
+/* 237 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-navbar</span> <span class=\"hljs-attribute\">fixed</span>=<span class=\"hljs-value\">\"top\"</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"light\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"default\"</span> <span class=\"hljs-attribute\">full</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"navbar-brand\"</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Navbar<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">ul</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"nav navbar-nav pull-left\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"nav-item active\"</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"nav-link\"</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Home <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">span</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"sr-only\"</span>&gt;</span>(current)<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">span</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"nav-item\"</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"nav-link\"</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Features<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"nav-item\"</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"nav-link\"</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Pricing<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"nav-item\"</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"nav-link\"</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>About<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">ul</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">form</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"form-inline navbar-form pull-right\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">input</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"form-control\"</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"text\"</span> <span class=\"hljs-attribute\">placeholder</span>=<span class=\"hljs-value\">\"Search\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-success-outline\"</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"submit\"</span>&gt;</span>Search<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">form</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-navbar</span>&gt;</span>\r\n";
 
 /***/ },
-/* 239 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -10997,13 +10908,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(12);
+	__webpack_require__(11);
 
-	__webpack_require__(15);
+	__webpack_require__(14);
 
-	__webpack_require__(32);
+	__webpack_require__(31);
 
-	var _navbarHtml = __webpack_require__(240);
+	var _navbarHtml = __webpack_require__(239);
 
 	var _navbarHtml2 = _interopRequireDefault(_navbarHtml);
 
@@ -11044,13 +10955,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 240 */
+/* 239 */
 /***/ function(module, exports) {
 
 	module.exports = "<nav class=\"navbar {{navbarType}} {{navbarVariant}} {{navbarfixed}} {{full ? 'navbar-full' : ''}}\">\r\n\t<slot></slot>\r\n</nav>";
 
 /***/ },
-/* 241 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11061,23 +10972,23 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _pagerJson = __webpack_require__(242);
+	var _pagerJson = __webpack_require__(241);
 
 	var _pagerJson2 = _interopRequireDefault(_pagerJson);
 
-	var _pagerHtml = __webpack_require__(243);
+	var _pagerHtml = __webpack_require__(242);
 
 	var _pagerHtml2 = _interopRequireDefault(_pagerHtml);
 
-	var _snippetHtml = __webpack_require__(244);
+	var _snippetHtml = __webpack_require__(243);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsPager = __webpack_require__(245);
+	var _srcComponentsPager = __webpack_require__(244);
 
 	var _srcComponentsPager2 = _interopRequireDefault(_srcComponentsPager);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
@@ -11105,7 +11016,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 242 */
+/* 241 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -11124,19 +11035,19 @@
 	};
 
 /***/ },
-/* 243 */
+/* 242 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-pager>\r\n\t\t\t\t<li><a href=\"#\">Previous</a></li>\r\n    \t\t<li><a href=\"#\">Next</a></li>\r\n    \t</vs-pager>\r\n    \t<hr>\r\n    \t<vs-pager>\r\n\t\t\t\t<li class=\"pager-prev\"><a href=\"#\">Older</a></li>\r\n    \t\t<li class=\"pager-next\"><a href=\"#\">Newer</a></li>\r\n    \t</vs-pager>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 244 */
+/* 243 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-pager</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Previous<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Next<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-pager</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">hr</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-pager</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"pager-prev\"</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Older<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"pager-next\"</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Newer<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-pager</span>&gt;</span>\r\n";
 
 /***/ },
-/* 245 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -11148,9 +11059,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(246);
+	__webpack_require__(245);
 
-	var _pagerHtml = __webpack_require__(249);
+	var _pagerHtml = __webpack_require__(248);
 
 	var _pagerHtml2 = _interopRequireDefault(_pagerHtml);
 
@@ -11162,25 +11073,25 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 246 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(247);
+	__webpack_require__(246);
 
 /***/ },
-/* 247 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(248);
+	var content = __webpack_require__(247);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -11197,10 +11108,10 @@
 	}
 
 /***/ },
-/* 248 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -11211,13 +11122,13 @@
 
 
 /***/ },
-/* 249 */
+/* 248 */
 /***/ function(module, exports) {
 
 	module.exports = "<nav>\r\n  <ul class=\"pager\">\r\n  \t<slot></slot>\r\n  </ul>\r\n</nav>";
 
 /***/ },
-/* 250 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11228,27 +11139,27 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _paginationJson = __webpack_require__(251);
+	var _paginationJson = __webpack_require__(250);
 
 	var _paginationJson2 = _interopRequireDefault(_paginationJson);
 
-	var _paginationHtml = __webpack_require__(252);
+	var _paginationHtml = __webpack_require__(251);
 
 	var _paginationHtml2 = _interopRequireDefault(_paginationHtml);
 
-	var _snippetHtml = __webpack_require__(253);
+	var _snippetHtml = __webpack_require__(252);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsPagination = __webpack_require__(254);
+	var _srcComponentsPagination = __webpack_require__(253);
 
 	var _srcComponentsPagination2 = _interopRequireDefault(_srcComponentsPagination);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -11279,7 +11190,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 251 */
+/* 250 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -11352,19 +11263,19 @@
 	};
 
 /***/ },
-/* 252 */
+/* 251 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>\r\n\t\t\t\tsize\r\n\t\t\t\t<select v-model=\"size\">\r\n\t\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t\t    {{ option.text }}\r\n\t\t\t\t  </option>\r\n\t\t\t\t</select>\r\n\t\t\t</label>\r\n\r\n\t\t\t<label>\r\n\t\t\t\tvariant\r\n\t\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t\t    {{ option.text }}\r\n\t\t\t\t  </option>\r\n\t\t\t\t</select>\r\n\t\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-pagination\r\n\t\t\t    :size=\"size\"\r\n\t\t\t    :variant=\"variant\"\r\n\t\t\t    :total-rows=\"totalRows\"\r\n\t\t\t    :current-page.sync=\"currentPage\"\r\n\t\t\t    :per-page=\"perPage\">\r\n\t\t\t</vs-pagination>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 253 */
+/* 252 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-pagination</span> \r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\r\n  <span class=\"hljs-attribute\">:total-rows</span>=<span class=\"hljs-value\">\"100\"</span>\r\n  <span class=\"hljs-attribute\">:current-page</span>=<span class=\"hljs-value\">\"currentPageVariable\"</span>\r\n  <span class=\"hljs-attribute\">:per-page</span>=<span class=\"hljs-value\">\"10\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-pagination</span>&gt;</span>\r\n";
 
 /***/ },
-/* 254 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -11376,9 +11287,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(255);
+	__webpack_require__(254);
 
-	var _paginationHtml = __webpack_require__(258);
+	var _paginationHtml = __webpack_require__(257);
 
 	var _paginationHtml2 = _interopRequireDefault(_paginationHtml);
 
@@ -11471,29 +11382,29 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 255 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(256);
+	__webpack_require__(255);
 
-	__webpack_require__(18);
+	__webpack_require__(17);
 
-	__webpack_require__(81);
+	__webpack_require__(80);
 
 /***/ },
-/* 256 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(257);
+	var content = __webpack_require__(256);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -11510,10 +11421,10 @@
 	}
 
 /***/ },
-/* 257 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -11524,13 +11435,13 @@
 
 
 /***/ },
-/* 258 */
+/* 257 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"btn-group pagination\" role=\"group\" aria-label=\"Pagination\">\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == 1 \" v-on:click=\"(currentPage == 1) ? return : currentPage--\"><span aria-hidden=\"true\">&laquo;</span></button>\r\n    <button type=\"button\" class=\"btn  btn-secondary {{btnSize}} {{ currentPage == 1 ?  'active' : '' }}\" v-on:click=\"currentPage = 1\" v-show=\"showPrev\">1</button>\r\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showPrev\">...</span>\r\n    <button type=\"button\"\r\n    \tclass=\"btn {{btnSize}} {{btnVariant($index)}} {{ $index + diff == currentPage ? 'active' : '' }} {{ $index + diff != currentPage ? 'hidden-xs-down' : '' }}\"\r\n    \tv-for=\"item in pageLinks\"\r\n        v-on:click=\"currentPage = $index + diff\">{{$index + diff}}\r\n    </button>\r\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showNext\">...</span>\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}} {{ numberOfPages == currentPage ? 'active' : '' }}\" v-show=\"showNext\" v-on:click=\"currentPage = numberOfPages\">{{numberOfPages}}</button>\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == numberOfPages\" v-on:click=\"(currentPage == numberOfPages) ? return : currentPage++\"><span aria-hidden=\"true\">&raquo;</span></button>\r\n</div>\r\n";
 
 /***/ },
-/* 259 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11541,23 +11452,23 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _popoverJson = __webpack_require__(260);
+	var _popoverJson = __webpack_require__(259);
 
 	var _popoverJson2 = _interopRequireDefault(_popoverJson);
 
-	var _popoverHtml = __webpack_require__(261);
+	var _popoverHtml = __webpack_require__(260);
 
 	var _popoverHtml2 = _interopRequireDefault(_popoverHtml);
 
-	var _snippetHtml = __webpack_require__(262);
+	var _snippetHtml = __webpack_require__(261);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsPopover = __webpack_require__(263);
+	var _srcComponentsPopover = __webpack_require__(262);
 
 	var _srcComponentsPopover2 = _interopRequireDefault(_srcComponentsPopover);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
@@ -11582,7 +11493,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 260 */
+/* 259 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -11643,19 +11554,19 @@
 	};
 
 /***/ },
-/* 261 */
+/* 260 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"markup\">\r\n\t\t<vs-popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"top\">\r\n\t\t\t<button class=\"btn\">popover top</button>\r\n\t\t</vs-popover>\r\n\t\t<vs-popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"bottom\">\r\n\t\t\t<button class=\"btn\">popover bottom</button>\r\n\t\t</vs-popover>\r\n\t\t<vs-popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"left\">\r\n\t\t\t<button class=\"btn\">popover left</button>\r\n\t\t</vs-popover>\r\n\t\t<vs-popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"right\">\r\n\t\t\t<button class=\"btn\">popover right</button>\r\n\t\t</vs-popover>\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 262 */
+/* 261 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-popover</span> \r\n  <span class=\"hljs-attribute\">title</span>=<span class=\"hljs-value\">\"popover top\"</span> \r\n  <span class=\"hljs-attribute\">text</span>=<span class=\"hljs-value\">\"Lorem ipsum dolor.\"</span> \r\n  <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"right\"</span> \r\n  <span class=\"hljs-attribute\">:triggers</span>=<span class=\"hljs-value\">\"['click']\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">input</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"text\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"form-control\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-popover</span>&gt;</span>\r\n";
 
 /***/ },
-/* 263 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -11667,11 +11578,11 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(264);
+	__webpack_require__(263);
 
 	// TODO import {Tether} from 'vuestrap-tether'
 
-	var _popoverHtml = __webpack_require__(267);
+	var _popoverHtml = __webpack_require__(266);
 
 	var _popoverHtml2 = _interopRequireDefault(_popoverHtml);
 
@@ -11861,27 +11772,27 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 264 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(265);
+	__webpack_require__(264);
 
-	__webpack_require__(18);
+	__webpack_require__(17);
 
 /***/ },
-/* 265 */
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(266);
+	var content = __webpack_require__(265);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -11898,10 +11809,10 @@
 	}
 
 /***/ },
-/* 266 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -11912,13 +11823,13 @@
 
 
 /***/ },
-/* 267 */
+/* 266 */
 /***/ function(module, exports) {
 
 	module.exports = "<span v-el:trigger>\r\n\t<slot></slot>\r\n</span> \r\n<div class=\"popover {{popoverAlignment}}\" v-show=\"show\" v-el:popover>\r\n  <div class=\"popover-arrow\"></div>\r\n  <h3 class=\"popover-title\" v-if=\"title\">{{title}}</h3>\r\n  <div class=\"popover-content\">\r\n    <span v-html=\"text\"></span>\r\n  </div>\r\n</div>";
 
 /***/ },
-/* 268 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11929,27 +11840,27 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _progressJson = __webpack_require__(269);
+	var _progressJson = __webpack_require__(268);
 
 	var _progressJson2 = _interopRequireDefault(_progressJson);
 
-	var _progressHtml = __webpack_require__(270);
+	var _progressHtml = __webpack_require__(269);
 
 	var _progressHtml2 = _interopRequireDefault(_progressHtml);
 
-	var _snippetHtml = __webpack_require__(271);
+	var _snippetHtml = __webpack_require__(270);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsProgress = __webpack_require__(272);
+	var _srcComponentsProgress = __webpack_require__(271);
 
 	var _srcComponentsProgress2 = _interopRequireDefault(_srcComponentsProgress);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -11977,7 +11888,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 269 */
+/* 268 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -12032,19 +11943,19 @@
 	};
 
 /***/ },
-/* 270 */
+/* 269 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>striped <input type=\"checkbox\" v-model=\"striped\"></label>\r\n\t\t<!-- <label>animated <input type=\"checkbox\" v-model=\"animated\"></label> -->\r\n\t\t<label>\r\n\t\t\tvariant\r\n\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label class=\"form-control-label\">value</label> <input type=\"range\" v-model=\"value\"> {{value}}%\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-progress :variant=\"variant\" :value=\"value\" :striped=\"striped\" :animated=\"animated\">25%</vs-progress>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 271 */
+/* 270 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-progress</span> \r\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\r\n  <span class=\"hljs-attribute\">value</span>=<span class=\"hljs-value\">\"25\"</span> \r\n  <span class=\"hljs-attribute\">striped</span>=<span class=\"hljs-value\">\"true\"</span> \r\n  <span class=\"hljs-attribute\">animated</span>=<span class=\"hljs-value\">\"false\"</span>&gt;</span>\r\n  25%\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-progress</span>&gt;</span>";
 
 /***/ },
-/* 272 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -12056,9 +11967,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(273);
+	__webpack_require__(272);
 
-	var _progressHtml = __webpack_require__(276);
+	var _progressHtml = __webpack_require__(275);
 
 	var _progressHtml2 = _interopRequireDefault(_progressHtml);
 
@@ -12109,25 +12020,25 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 273 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(274);
+	__webpack_require__(273);
 
 /***/ },
-/* 274 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(275);
+	var content = __webpack_require__(274);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -12144,10 +12055,10 @@
 	}
 
 /***/ },
-/* 275 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -12158,13 +12069,13 @@
 
 
 /***/ },
-/* 276 */
+/* 275 */
 /***/ function(module, exports) {
 
 	module.exports = "<progress \r\n\tclass=\"progress {{progressVariant}} {{striped ? 'progress-striped' : ''}} {{animated ? 'progres-animated' : ''}}\" \r\n\tvalue=\"{{value}}\" \r\n\tmax=\"{{max}}\" \r\n\taria-valuenow=\"{{value}}\" \r\n\taria-valuemin=\"0\" \r\n\taria-valuemax=\"{{max}}\"\r\n\tv-el:progress>\r\n  <div class=\"progress\">\r\n    <span class=\"progress-bar\" v-bind:style=\"{width: value + '%'}\" v-el:progressbar></span>\r\n  </div>\r\n</progress>";
 
 /***/ },
-/* 277 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12175,23 +12086,23 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _tablesJson = __webpack_require__(278);
+	var _tablesJson = __webpack_require__(277);
 
 	var _tablesJson2 = _interopRequireDefault(_tablesJson);
 
-	var _tablesHtml = __webpack_require__(279);
+	var _tablesHtml = __webpack_require__(278);
 
 	var _tablesHtml2 = _interopRequireDefault(_tablesHtml);
 
-	var _snippetHtml = __webpack_require__(280);
+	var _snippetHtml = __webpack_require__(279);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsTables = __webpack_require__(281);
+	var _srcComponentsTables = __webpack_require__(280);
 
 	var _srcComponentsTables2 = _interopRequireDefault(_srcComponentsTables);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
@@ -12217,7 +12128,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 278 */
+/* 277 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -12307,19 +12218,19 @@
 	};
 
 /***/ },
-/* 279 */
+/* 278 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-table hover responsive>\r\n\t\t\t\t<table>\r\n\t\t\t\t  <thead>\r\n\t\t\t\t    <tr>\r\n\t\t\t\t      <th>#</th>\r\n\t\t\t\t      <th>First Name</th>\r\n\t\t\t\t      <th>Last Name</th>\r\n\t\t\t\t      <th>Username</th>\r\n\t\t\t\t    </tr>\r\n\t\t\t\t  </thead>\r\n\t\t\t\t  <tbody>\r\n\t\t\t\t    <tr>\r\n\t\t\t\t      <th scope=\"row\">1</th>\r\n\t\t\t\t      <td>Mark</td>\r\n\t\t\t\t      <td>Otto</td>\r\n\t\t\t\t      <td>@mdo</td>\r\n\t\t\t\t    </tr>\r\n\t\t\t\t    <tr>\r\n\t\t\t\t      <th scope=\"row\">2</th>\r\n\t\t\t\t      <td>Jacob</td>\r\n\t\t\t\t      <td>Thornton</td>\r\n\t\t\t\t      <td>@fat</td>\r\n\t\t\t\t    </tr>\r\n\t\t\t\t    <tr>\r\n\t\t\t\t      <th scope=\"row\">3</th>\r\n\t\t\t\t      <td colspan=\"2\">Larry the Bird</td>\r\n\t\t\t\t      <td>@twitter</td>\r\n\t\t\t\t    </tr>\r\n\t\t\t\t  </tbody>\r\n\t\t\t\t</table>\r\n\t\t\t</vs-table>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 280 */
+/* 279 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-table</span> <span class=\"hljs-attribute\">hover</span> <span class=\"hljs-attribute\">responsive</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">table</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">thead</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">tr</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span>&gt;</span>#<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span>&gt;</span>First Name<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span>&gt;</span>Last Name<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span>&gt;</span>Username<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">tr</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">thead</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">tbody</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">tr</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span> <span class=\"hljs-attribute\">scope</span>=<span class=\"hljs-value\">\"row\"</span>&gt;</span>1<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>Mark<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>Otto<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>@mdo<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">tr</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">tr</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span> <span class=\"hljs-attribute\">scope</span>=<span class=\"hljs-value\">\"row\"</span>&gt;</span>2<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>Jacob<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>Thornton<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>@fat<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">tr</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">tr</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span> <span class=\"hljs-attribute\">scope</span>=<span class=\"hljs-value\">\"row\"</span>&gt;</span>3<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span> <span class=\"hljs-attribute\">colspan</span>=<span class=\"hljs-value\">\"2\"</span>&gt;</span>Larry the Bird<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>@twitter<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">tr</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">tbody</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">table</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-table</span>&gt;</span>";
 
 /***/ },
-/* 281 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -12331,15 +12242,15 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(282);
+	__webpack_require__(281);
 
-	var _tablesHtml = __webpack_require__(285);
+	var _tablesHtml = __webpack_require__(284);
 
 	var _tablesHtml2 = _interopRequireDefault(_tablesHtml);
 
 	// import ie9 polyfill
 
-	__webpack_require__(51);
+	__webpack_require__(50);
 
 	exports['default'] = {
 	  template: _tablesHtml2['default'],
@@ -12433,25 +12344,25 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 282 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(283);
+	__webpack_require__(282);
 
 /***/ },
-/* 283 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(284);
+	var content = __webpack_require__(283);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -12468,10 +12379,10 @@
 	}
 
 /***/ },
-/* 284 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -12482,13 +12393,13 @@
 
 
 /***/ },
-/* 285 */
+/* 284 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:class=\"{repsonsive: responsive}\">\r\n\t<slot></slot>\r\n</div>";
 
 /***/ },
-/* 286 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12499,25 +12410,25 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _tabsJson = __webpack_require__(287);
+	var _tabsJson = __webpack_require__(286);
 
 	var _tabsJson2 = _interopRequireDefault(_tabsJson);
 
-	var _tabsHtml = __webpack_require__(288);
+	var _tabsHtml = __webpack_require__(287);
 
 	var _tabsHtml2 = _interopRequireDefault(_tabsHtml);
 
-	var _snippetHtml = __webpack_require__(289);
+	var _snippetHtml = __webpack_require__(288);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsTabs = __webpack_require__(290);
+	var _srcComponentsTabs = __webpack_require__(289);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _utils = __webpack_require__(90);
+	var _utils = __webpack_require__(89);
 
 	exports['default'] = {
 	  route: {
@@ -12544,7 +12455,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 287 */
+/* 286 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -12585,19 +12496,19 @@
 	};
 
 /***/ },
-/* 288 */
+/* 287 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>fade <input type=\"checkbox\" v-model=\"fade\"></label>\r\n\t\t<label>\r\n\t\t\t\tsize\r\n\t\t\t\t<select v-model=\"size\">\r\n\t\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t\t    {{ option.text }}\r\n\t\t\t\t  </option>\r\n\t\t\t\t</select>\r\n\t\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-tabs :fade=\"fade\" :size=\"size\">\r\n\t\t\t\t<vs-tab id=\"tab-1\" title=\"Tab 1\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quidem!</vs-tab>\r\n\t\t\t\t<vs-tab id=\"tab-2\" title=\"Tab 2\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, corporis?</vs-tab>\r\n\t\t\t\t<vs-tab id=\"tab-2\" title=\"Tab 3\" disabled>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, architecto, maiores.</vs-tab>\r\n\t\t\t</vs-tabs>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</example>\t\r\n";
 
 /***/ },
-/* 289 */
+/* 288 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-tabs</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">fade</span>=<span class=\"hljs-value\">\"false\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-tab</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"tab-1\"</span> <span class=\"hljs-attribute\">title</span>=<span class=\"hljs-value\">\"Tab 1\"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quidem!<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-tab</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-tab</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"tab-2\"</span> <span class=\"hljs-attribute\">title</span>=<span class=\"hljs-value\">\"Tab 2\"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, corporis?<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-tab</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-tab</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"tab-2\"</span> <span class=\"hljs-attribute\">title</span>=<span class=\"hljs-value\">\"Tab 3\"</span> <span class=\"hljs-attribute\">disabled</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, architecto, maiores.<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-tab</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-tabs</span>&gt;</span>\r\n";
 
 /***/ },
-/* 290 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -12609,15 +12520,15 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(12);
+	__webpack_require__(11);
 
-	var _tabsHtml = __webpack_require__(291);
+	var _tabsHtml = __webpack_require__(290);
 
 	var _tabsHtml2 = _interopRequireDefault(_tabsHtml);
 
-	var _utilsHelpersJs = __webpack_require__(50);
+	var _utilsHelpersJs = __webpack_require__(49);
 
-	// this is directly linked to the bootstrap animation timing in _carusel.scss
+	// this is directly linked to the bootstrap animation timing in _tabs.scss
 	// for browsers that do not support transitions like IE9 just change slide immediately
 	var TRANSITION_DURATION = (0, _utilsHelpersJs.csstransitions)() ? 150 : 0;
 
@@ -12681,7 +12592,7 @@
 
 	      // set new active tab and animate (if fade flag is set to true)
 	      this.$children[index].$set('active', true);
-	      setTimeout(function () {
+	      this._tabAnimation = setTimeout(function () {
 	        // setting animate to true will trigger fade in effect
 	        _this.items[index].active = true;
 	        _this.$children[index].$set('animate', true);
@@ -12694,6 +12605,9 @@
 	    if (this.getActive() === -1) {
 	      this.setActive(0);
 	    }
+	  },
+	  destroyed: function destroyed() {
+	    clearTimeout(this._tabAnimation);
 	  }
 	};
 
@@ -12737,13 +12651,13 @@
 	exports.tab = tab;
 
 /***/ },
-/* 291 */
+/* 290 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"tabs\">\n  <ul class=\"nav nav-tabs\">\n    <li class=\"nav-item\" v-for=\"item in items\" v-on:click=\"setActive($index)\">\n      <span class=\"nav-link btn {{btnSize}} {{item.active ? 'active' : ''}} {{ item.disabled ? 'disabled' : '' }}\">{{item.title}}</span>\n    </li>\n  </ul>\n  <div class=\"tab-content\">\n    <slot></slot>\n  </div>\n</div>";
 
 /***/ },
-/* 292 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12754,23 +12668,23 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _tooltipJson = __webpack_require__(293);
+	var _tooltipJson = __webpack_require__(292);
 
 	var _tooltipJson2 = _interopRequireDefault(_tooltipJson);
 
-	var _tooltipHtml = __webpack_require__(294);
+	var _tooltipHtml = __webpack_require__(293);
 
 	var _tooltipHtml2 = _interopRequireDefault(_tooltipHtml);
 
-	var _snippetHtml = __webpack_require__(295);
+	var _snippetHtml = __webpack_require__(294);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsTooltip = __webpack_require__(296);
+	var _srcComponentsTooltip = __webpack_require__(295);
 
 	var _srcComponentsTooltip2 = _interopRequireDefault(_srcComponentsTooltip);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(51);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
@@ -12795,7 +12709,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 293 */
+/* 292 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -12849,19 +12763,19 @@
 	};
 
 /***/ },
-/* 294 */
+/* 293 */
 /***/ function(module, exports) {
 
 	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"markup\">\r\n\t\t\t\t<vs-tooltip text=\"tooltip top\" position=\"top\">\r\n\t\t\t\t\t<button class=\"btn\">tooltip top</button>\r\n\t\t\t\t</vs-tooltip>\r\n\t\t\t\t<vs-tooltip text=\"tooltip bottom\" position=\"bottom\">\r\n\t\t\t\t\t<button class=\"btn\">tooltip bottom</button>\r\n\t\t\t\t</vs-tooltip>\r\n\t\t\t\t<vs-tooltip text=\"tooltip left\" position=\"left\">\r\n\t\t\t\t\t<button class=\"btn\">tooltip left</button>\r\n\t\t\t\t</vs-tooltip>\r\n\t\t\t\t<vs-tooltip text=\"tooltip right\" position=\"right\">\r\n\t\t\t\t\t<button class=\"btn\">tooltip right</button>\r\n\t\t\t\t</vs-tooltip>\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
-/* 295 */
+/* 294 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-tooltip</span> \r\n  <span class=\"hljs-attribute\">text</span>=<span class=\"hljs-value\">\"tooltip top\"</span> \r\n  <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"top\"</span>\r\n  <span class=\"hljs-attribute\">:triggers</span>=<span class=\"hljs-value\">\"['hover']\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn\"</span>&gt;</span>tooltip top<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-tooltip</span>&gt;</span>\r\n";
 
 /***/ },
-/* 296 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -12873,11 +12787,11 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(297);
+	__webpack_require__(296);
 
 	// TODO import {Tether} from 'vuestrap-tether'
 
-	var _tooltipHtml = __webpack_require__(300);
+	var _tooltipHtml = __webpack_require__(299);
 
 	var _tooltipHtml2 = _interopRequireDefault(_tooltipHtml);
 
@@ -13066,27 +12980,27 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 297 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(298);
+	__webpack_require__(297);
 
-	__webpack_require__(18);
+	__webpack_require__(17);
 
 /***/ },
-/* 298 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(299);
+	var content = __webpack_require__(298);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(7)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -13103,10 +13017,10 @@
 	}
 
 /***/ },
-/* 299 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(6)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
 
 
@@ -13117,7 +13031,7 @@
 
 
 /***/ },
-/* 300 */
+/* 299 */
 /***/ function(module, exports) {
 
 	module.exports = "<span v-el:trigger>\r\n\t<slot></slot>\r\n</span> \r\n<div class=\"tooltip fade in {{tooltipAlignment}}\" v-show=\"show\" v-el:tooltip>\r\n\t<div class=\"tooltip-inner\">\r\n\t\t<div class=\"tooltip-arrow\"></div>\r\n\t  <div class=\"tooltip-content\">\r\n\t    <span v-html=\"text\"></span>\r\n\t  </div>\r\n\t</div>\r\n</div>";

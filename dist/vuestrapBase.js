@@ -60,6 +60,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	// import normalize, grid, utilities and
 	'use strict';
 	
+	Object.defineProperty(exports, '__esModule', {
+		value: true
+	});
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	__webpack_require__(1);
@@ -223,7 +227,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	
 	// export all components under global variable
-	module.exports = vuestrapBase;
+	exports['default'] = vuestrapBase;
+	module.exports = exports['default'];
 
 /***/ },
 /* 1 */
@@ -994,7 +999,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	__webpack_require__(41);
 	
-	// this is directly linked to the bootstrap animation timing in _carusel.scss
+	// this is directly linked to the bootstrap animation timing in _carousel.scss
 	// for browsers that do not support transitions like IE9 just change slide immediately
 	var TRANSITION_DURATION = (0, _utilsHelpersJs.csstransitions)() ? 600 : 0;
 	
@@ -1112,7 +1117,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this._items[oldVal].classList.add(this.direction.outgoing);
 	      this._items[val].classList.remove(this.direction.incoming);
 	      // wait for animation to finish and cleanup classes
-	      setTimeout(function () {
+	      this._carouselAnimation = setTimeout(function () {
 	        _this2._items[oldVal].classList.remove(_this2.direction.outgoing, 'active');
 	        _this2._items[val].classList.remove(_this2.direction.overlay);
 	        _this2.animating = false;
@@ -1120,6 +1125,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _this2.$dispatch('slid::carousel', val);
 	      }, TRANSITION_DURATION);
 	    }
+	  },
+	  destroyed: function destroyed() {
+	    clearTimeout(this._carouselAnimation);
+	    clearInterval(this._intervalId);
 	  }
 	};
 	
@@ -1239,7 +1248,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.$el.classList.add('collapsing');
 	      this.$el.offsetWidth;
 	      this.$el.style.height = height + 'px';
-	      setTimeout(function () {
+	      this._collapseAnimation = setTimeout(function () {
 	        _this.$el.classList.remove('collapsing');
 	        _this.$el.classList.add('collapse', 'in');
 	      }, TRANSITION_DURATION);
@@ -1252,7 +1261,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.$el.classList.add('collapsing');
 	      this.$el.offsetWidth;
 	      this.$el.style.height = '0px';
-	      setTimeout(function () {
+	      this._collapseAnimation = setTimeout(function () {
 	        _this2.$el.classList.remove('collapsing');
 	        _this2.$el.classList.add('collapse');
 	      }, TRANSITION_DURATION);
@@ -1288,6 +1297,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	      }
 	    }
+	  },
+	  destroyed: function destroyed() {
+	    clearTimeout(this._collapseAnimation);
 	  }
 	};
 	
@@ -2451,25 +2463,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  methods: {
 	    show: function show() {
+	      var _this2 = this;
+	
 	      this.$el.style.display = 'block';
 	      var _this = this;
 	      // wait for the display block, and then add class "in" class on the modal
-	      setTimeout(function () {
+	      this._modalAnimation = setTimeout(function () {
 	        _this.animateBackdrop = true;
-	        setTimeout(function () {
+	        _this2._modalAnimation = setTimeout(function () {
 	          _this.animateModal = true;
 	          _this.$dispatch('shown::modal');
 	        }, _this.fade ? TRANSITION_DURATION : 0);
 	      }, 0);
 	    },
 	    hide: function hide() {
+	      var _this3 = this;
+	
 	      var _this = this;
 	      // first animate modal out
 	      this.animateModal = false;
-	      setTimeout(function () {
+	      this._modalAnimation = setTimeout(function () {
 	        // wait for animation to complete and then hide the backdrop
 	        _this.animateBackdrop = false;
-	        setTimeout(function () {
+	        _this3._modalAnimation = setTimeout(function () {
 	          // no hide the modal wrapper
 	          _this.$el.style.display = 'none';
 	          _this.$dispatch('hidden::modal');
@@ -2483,18 +2499,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    }
 	  },
-	  ready: function ready() {
-	    var _this2 = this;
-	
-	    // support for esc key press
-	    document.addEventListener('keydown', function (e) {
-	      var key = e.which || e.keyCode;
-	      if (key === 27) {
-	        // 27 is esc
-	        _this2.hide();
-	      }
-	    });
-	  },
 	  events: {
 	    // control modal from outside via events
 	    'show::modal': function showModal(id) {
@@ -2507,6 +2511,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.hide();
 	      }
 	    }
+	  },
+	  ready: function ready() {
+	    var _this4 = this;
+	
+	    // support for esc key press
+	    document.addEventListener('keydown', function (e) {
+	      var key = e.which || e.keyCode;
+	      if (key === 27) {
+	        // 27 is esc
+	        _this4.hide();
+	      }
+	    });
+	  },
+	  destroyed: function destroyed() {
+	    clearTimeout(this._modalAnimation);
 	  }
 	};
 	module.exports = exports['default'];
@@ -5919,7 +5938,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _utilsHelpersJs = __webpack_require__(47);
 	
-	// this is directly linked to the bootstrap animation timing in _carusel.scss
+	// this is directly linked to the bootstrap animation timing in _tabs.scss
 	// for browsers that do not support transitions like IE9 just change slide immediately
 	var TRANSITION_DURATION = (0, _utilsHelpersJs.csstransitions)() ? 150 : 0;
 	
@@ -5983,7 +6002,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	      // set new active tab and animate (if fade flag is set to true)
 	      this.$children[index].$set('active', true);
-	      setTimeout(function () {
+	      this._tabAnimation = setTimeout(function () {
 	        // setting animate to true will trigger fade in effect
 	        _this.items[index].active = true;
 	        _this.$children[index].$set('animate', true);
@@ -5996,6 +6015,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (this.getActive() === -1) {
 	      this.setActive(0);
 	    }
+	  },
+	  destroyed: function destroyed() {
+	    clearTimeout(this._tabAnimation);
 	  }
 	};
 	
