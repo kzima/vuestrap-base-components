@@ -4,7 +4,8 @@
         class="btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}" role="button"
         aria-haspopup="true"
         aria-expanded="{{show}}"
-        v-on:click="toggle($event)">
+        v-on:click="toggle($event)"
+        :disabled="disabled">
         <span v-html="text" v-show="text"></span>
         <span class="caret"></span>
     </button>

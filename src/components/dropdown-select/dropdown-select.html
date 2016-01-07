@@ -5,7 +5,8 @@
         role="button"
         aria-haspopup="true"
         aria-expanded="show"
-        v-on:click="toggle($event)">
+        v-on:click="toggle($event)"
+        :disabled="disabled">
         <span class="checked-items" v-html="displayItem"></span>
     </button>
     <ul class="dropdown-menu" v-bind:class="{'dropdown-menu-right' : position == 'right'}" aria-labelledby="dLabel">

@@ -33,12 +33,20 @@ export default {
       if (this.returnObject && this.model && this.model.text) {
           return this.model.text
       }
+
+      // show text that coresponds to the model value
       if (!this.returnObject && this.model) {
-          return this.model
+        let result = this.model || ''
+        this.list.forEach((item) => {
+          if (item.value === this.model) {
+            result = item.text
+          }
+        })
+        return result
       }
 
       return ''
-    }
+    },
   },
   props: {
     id: {
@@ -85,6 +93,10 @@ export default {
       default: false
     },
     dropup: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
       type: Boolean,
       default: false
     },

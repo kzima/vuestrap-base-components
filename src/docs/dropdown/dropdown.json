@@ -48,6 +48,12 @@
 			"type": "Boolean",
 			"default": false,
 			"description": "Allow for dropdowns to go bottom up (aka, dropup-menu)"
+		},
+		{
+			"name": "disabled",
+			"type": "Boolean",
+			"default": false,
+			"description": "Make button look inactive by adding the disabled boolean attribute."
 		}
 	]
 }

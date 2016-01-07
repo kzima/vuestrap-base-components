@@ -4411,7 +4411,7 @@
 
 	module.exports = {
 		"name": "vuestrap-base-components",
-		"version": "0.7.4",
+		"version": "0.7.5",
 		"description": "Web components that extend Bootstrap 4.",
 		"library": "vuestrapBase",
 		"repository": {
@@ -6046,7 +6046,7 @@
 /* 88 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n  <label class=\"btn {{btnVariant}} {{btnSize}} {{ checked($index) ? 'active' : '' }}\" v-for=\"item in list\">\r\n  <input \r\n  \ttype=\"checkbox\" \r\n  \tvalue=\"{{item.value}}\" \r\n  \tautocomplete=\"off\" \r\n  \tv-model=\"item.checked\" \r\n  \tv-bind:disabled=\"item.disabled\">\r\n  \t{{item.text}}\r\n  </label>\r\n</div>\r\n";
+	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n  <label class=\"btn {{btnVariant}} {{btnSize}} {{ checked($index) ? 'active' : '' }}\" v-for=\"item in list\">\r\n  <input \r\n  \ttype=\"checkbox\" \r\n  \tvalue=\"{{item.value}}\" \r\n  \tautocomplete=\"off\" \r\n  \tv-model=\"item.checked\" \r\n  \t:disabled=\"item.disabled\">\r\n  \t{{item.text}}\r\n  </label>\r\n</div>\r\n";
 
 /***/ },
 /* 89 */
@@ -6342,7 +6342,7 @@
 /* 95 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n    <label \r\n    \tclass=\"btn {{btnVariant}} {{btnSize}} {{ selection == item.value ? 'active' : '' }}\" \r\n    \tv-for=\"item in list\">\r\n      <input \r\n      \ttype=\"radio\" \r\n      \tname=\"options\" \r\n      \tvalue=\"{{item.value}}\" \r\n      \tautocomplete=\"off\" \r\n      \tv-model=\"selection\"> {{item.text}}\r\n    </label>\r\n</div>\r\n";
+	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n    <label \r\n    \tclass=\"btn {{btnVariant}} {{btnSize}} {{ selection == item.value ? 'active' : '' }}\" \r\n    \tv-for=\"item in list\">\r\n      <input \r\n      \ttype=\"radio\" \r\n      \tname=\"options\" \r\n      \tvalue=\"{{item.value}}\" \r\n      \tautocomplete=\"off\" \r\n      \tv-model=\"selection\"\r\n        :disabled=\"{{item.disabled}}\"> {{item.text}}\r\n    </label>\r\n</div>\r\n";
 
 /***/ },
 /* 96 */
@@ -6571,7 +6571,7 @@
 /* 101 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}}\" v-bind:disabled=\"disabled\">\r\n\t<template v-if=\"!href\"><slot></slot></template>\r\n\t<a v-bind:href=\"href\" class=\"{{btnDisabled}}\" v-bind:role=\"role\" v-if=\"href\"><slot></slot></a>\r\n</span>";
+	module.exports = "<span class=\"btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}}\" :disabled=\"disabled\">\r\n\t<template v-if=\"!href\"><slot></slot></template>\r\n\t<a v-bind:href=\"href\" class=\"{{btnDisabled}}\" v-bind:role=\"role\" v-if=\"href\"><slot></slot></a>\r\n</span>";
 
 /***/ },
 /* 102 */
@@ -7492,6 +7492,12 @@
 				"type": "Boolean",
 				"default": false,
 				"description": "Allow for dropdowns to go bottom up (aka, dropup-menu)"
+			},
+			{
+				"name": "disabled",
+				"type": "Boolean",
+				"default": false,
+				"description": "Make button look inactive by adding the disabled boolean attribute."
 			}
 		]
 	};
@@ -7573,6 +7579,10 @@
 	    dropup: {
 	      type: Boolean,
 	      'default': false
+	    },
+	    disabled: {
+	      type: Boolean,
+	      'default': false
 	    }
 	  },
 	  methods: {
@@ -7651,7 +7661,7 @@
 /* 136 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-bind:class=\"{ open: show, dropdown: !dropup, dropup: dropup}\">\r\n    <button\r\n        id=\"dLabel\"\r\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\" role=\"button\"\r\n        aria-haspopup=\"true\"\r\n        aria-expanded=\"{{show}}\"\r\n        v-on:click=\"toggle($event)\">\r\n        <span v-html=\"text\" v-show=\"text\"></span>\r\n        <span class=\"caret\"></span>\r\n    </button>\r\n    <slot></slot>\r\n</div>\r\n";
+	module.exports = "<div v-bind:class=\"{ open: show, dropdown: !dropup, dropup: dropup}\">\r\n    <button\r\n        id=\"dLabel\"\r\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\" role=\"button\"\r\n        aria-haspopup=\"true\"\r\n        aria-expanded=\"{{show}}\"\r\n        v-on:click=\"toggle($event)\"\r\n        :disabled=\"disabled\">\r\n        <span v-html=\"text\" v-show=\"text\"></span>\r\n        <span class=\"caret\"></span>\r\n    </button>\r\n    <slot></slot>\r\n</div>\r\n";
 
 /***/ },
 /* 137 */
@@ -7874,6 +7884,12 @@
 				],
 				"default": "success",
 				"description": "Button color context."
+			},
+			{
+				"name": "disabled",
+				"type": "Boolean",
+				"default": false,
+				"description": "Make button look inactive by adding the disabled boolean attribute."
 			}
 		]
 	};
@@ -7932,6 +7948,8 @@
 	      return this.caret ? 'dropdown-toggle' : '';
 	    },
 	    displayItem: function displayItem() {
+	      var _this = this;
+
 	      // if zero show default message
 	      if (this.returnObject && this.model && !this.model.text || !this.returnObject && this.model && this.model.length === 0 || this.forceDefault) {
 	        return this.defaultText;
@@ -7941,8 +7959,16 @@
 	      if (this.returnObject && this.model && this.model.text) {
 	        return this.model.text;
 	      }
+
+	      // show text that coresponds to the model value
 	      if (!this.returnObject && this.model) {
-	        return this.model;
+	        var result = this.model || '';
+	        this.list.forEach(function (item) {
+	          if (item.value === _this.model) {
+	            result = item.text;
+	          }
+	        });
+	        return result;
 	      }
 
 	      return '';
@@ -7995,6 +8021,10 @@
 	    dropup: {
 	      type: Boolean,
 	      'default': false
+	    },
+	    disabled: {
+	      type: Boolean,
+	      'default': false
 	    }
 	  },
 	  methods: {
@@ -8034,7 +8064,7 @@
 /* 144 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"dropdown-select\" v-bind:class=\"{open: show, dropdown: !dropup, dropup: dropup}\">\r\n    <button\r\n        id=\"dLabel\"\r\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\r\n        role=\"button\"\r\n        aria-haspopup=\"true\"\r\n        aria-expanded=\"show\"\r\n        v-on:click=\"toggle($event)\">\r\n        <span class=\"checked-items\" v-html=\"displayItem\"></span>\r\n    </button>\r\n    <ul class=\"dropdown-menu\" v-bind:class=\"{'dropdown-menu-right' : position == 'right'}\" aria-labelledby=\"dLabel\">\r\n        <li v-for=\"item in list\">\r\n            <button class=\"dropdown-item\" v-on:click.stop=\"select(item)\">{{item.text}}</button>\r\n        </li>\r\n    </ul>\r\n</div>\r\n";
+	module.exports = "<div class=\"dropdown-select\" v-bind:class=\"{open: show, dropdown: !dropup, dropup: dropup}\">\r\n    <button\r\n        id=\"dLabel\"\r\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\r\n        role=\"button\"\r\n        aria-haspopup=\"true\"\r\n        aria-expanded=\"show\"\r\n        v-on:click=\"toggle($event)\"\r\n        :disabled=\"disabled\">\r\n        <span class=\"checked-items\" v-html=\"displayItem\"></span>\r\n    </button>\r\n    <ul class=\"dropdown-menu\" v-bind:class=\"{'dropdown-menu-right' : position == 'right'}\" aria-labelledby=\"dLabel\">\r\n        <li v-for=\"item in list\">\r\n            <button class=\"dropdown-item\" v-on:click.stop=\"select(item)\">{{item.text}}</button>\r\n        </li>\r\n    </ul>\r\n</div>\r\n";
 
 /***/ },
 /* 145 */

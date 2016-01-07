@@ -78,6 +78,12 @@
 			"values": ["secondary","primary","success","info","warning","danger","link"],
 			"default": "success",
 			"description": "Button color context."
+		},
+		{
+			"name": "disabled",
+			"type": "Boolean",
+			"default": false,
+			"description": "Make button look inactive by adding the disabled boolean attribute."
 		}
 	]
 }

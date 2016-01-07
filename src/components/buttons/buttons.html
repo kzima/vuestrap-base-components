@@ -1,4 +1,4 @@
-<span class="btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}}" v-bind:disabled="disabled">
+<span class="btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}}" :disabled="disabled">
 	<template v-if="!href"><slot></slot></template>
 	<a v-bind:href="href" class="{{btnDisabled}}" v-bind:role="role" v-if="href"><slot></slot></a>
 </span>
