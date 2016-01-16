@@ -3,7 +3,7 @@ import template from './form-radio.html'
 import snippet from './snippet.html'
 import vsFormRadio from 'src/components/form-radio'
 import docsDemo from 'vuestrap-docs/src/components/demo'
-import {states} from 'utils'
+import {states} from 'src/utils'
 
 export default {
   route: {

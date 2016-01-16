@@ -14,26 +14,26 @@
 			"default": "default",
 			"values": ["default","success","info","warning","danger"],
 			"required": false,
-			"description": "A color context ot the individual <code>&lt;vs-list-group-item></code>."
+			"description": "A color context on the individual <code>&lt;vs-list-group-item></code>."
 		},
 		{
 			"name": "active",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"required": false,
-			"description": "An active state ot the individual <code>&lt;vs-list-group-item></code>."
+			"description": "An active state on the individual <code>&lt;vs-list-group-item></code>."
 		},
 		{
 			"name": "disabled",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"required": false,
-			"description": "A disabled state ot the individual <code>&lt;vs-list-group-item></code>."
+			"description": "A disabled state on the individual <code>&lt;vs-list-group-item></code>."
 		},
 		{
 			"name": "flush",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"required": false,
 			"description": "Removes borders if set to true."
 		}

@@ -16,6 +16,9 @@ export default {
     btnSize() {
       return !this.size || this.size === `default` ? `` : `btn-${this.size}`
     },
+    btnDisabled() {
+      return this.disabled ? 'disabled' : ''
+    }
   },
   props: {
   	block: {

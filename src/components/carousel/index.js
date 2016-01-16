@@ -18,10 +18,10 @@
 // import dependencies
 import 'vuestrap/components/carousel'
 import template from './carousel.html'
-import {csstransitions} from '../../../utils/helpers.js'
+import {csstransitions} from '../../utils/helpers.js'
 
 // import polyfill for IE9
-import '../../../utils/ie9_polyfill.js'
+import '../../utils/ie9_polyfill.js'
 
 // this is directly linked to the bootstrap animation timing in _carousel.scss
 // for browsers that do not support transitions like IE9 just change slide immediately

@@ -3,7 +3,7 @@ import template from './carousel.html'
 import snippet from './snippet.html'
 import {carousel as vsCarousel, slide as vsSlide} from 'src/components/carousel'
 import docsDemo from 'vuestrap-docs/src/components/demo'
-import {variants} from 'utils'
+import {variants} from 'src/utils'
 
 export default {
   route: {

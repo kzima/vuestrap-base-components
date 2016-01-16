@@ -11,7 +11,7 @@
 		{
 			"name": "show",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"required": true,
 			"description": "Show/hides the alert."
 		}, 
@@ -25,7 +25,7 @@
 		{
       "name" : "dismissible",
       "type": "Boolean",
-      "default": false,
+      "default": "false",
       "description": "Show/hide close button."
     }
 	]

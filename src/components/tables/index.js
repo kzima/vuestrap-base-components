@@ -3,7 +3,7 @@ import 'vuestrap/components/tables'
 import template from './tables.html'
 
 // import ie9 polyfill
-import '../../../utils/ie9_polyfill.js'
+import '../../utils/ie9_polyfill.js'
 
 export default {
   template: template,

@@ -60,10 +60,6 @@ export default {
       default: [],
       required: true
     },
-    icon: {
-      type: String,
-      default: ''
-    },
     caret: {
       type: Boolean,
       default: true

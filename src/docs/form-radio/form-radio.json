@@ -31,14 +31,14 @@
 		{
 			"name": "custom",
 			"type": "Boolean",
-			"default": true,
+			"default": "true",
 			"required": false,
 			"description": "A custom styling overlying the default radio button."
 		},
 		{
 			"name": "vertical",
 			"type": "Boolean",
-			"default": true,
+			"default": "true",
 			"required": false,
 			"description": "Stacks inputs vertically."
 		},
@@ -52,7 +52,7 @@
 		{
 			"name": "return-object",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"required": false,
 			"description": "If set to true, a full object will be returned in the model. By default only <code>value</code> is returned."
 		}

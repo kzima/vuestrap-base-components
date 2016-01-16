@@ -31,7 +31,7 @@
 		{
 			"name": "full",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"description": "Removes rounded corners if set to true."
 		}
 	]

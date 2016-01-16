@@ -3,7 +3,7 @@ import 'vuestrap/components/card'
 import template from './card.html'
 
 // import polyfill for IE9
-import '../../../utils/ie9_polyfill.js'
+import '../../utils/ie9_polyfill.js'
 
 // export component object
 export default {

@@ -1,9 +1,9 @@
 // import dependencies
 import template from './collapse.html'
-import {csstransitions} from '../../../utils/helpers.js'
+import {csstransitions} from '../../utils/helpers.js'
 
 // import polyfill for IE9
-import '../../../utils/ie9_polyfill.js'
+import '../../utils/ie9_polyfill.js'
 
 // for browsers that do not support transitions like IE9 just change immediately
 const TRANSITION_DURATION = csstransitions() ? 350 : 0

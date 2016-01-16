@@ -24,10 +24,6 @@ export default {
     },
   },
   props: {
-    icon: {
-      type: String,
-      default: ''
-    },
     caret: {
       type: Boolean,
       default: true

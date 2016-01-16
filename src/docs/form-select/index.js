@@ -3,7 +3,7 @@ import template from './form-select.html'
 import snippet from './snippet.html'
 import vsFormSelect from 'src/components/form-select'
 import docsDemo from 'vuestrap-docs/src/components/demo'
-import {sizes, states} from 'utils'
+import {sizes, states} from 'src/utils'
 
 export default {
   route: {

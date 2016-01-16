@@ -18,14 +18,14 @@
 		{
 			"name": "indicators",
 			"type": "Boolean",
-			"default": true,
+			"default": "true",
 			"required": "false",
 			"description": "Show/hide indicators."
 		},
 		{
 			"name": "controls",
 			"type": "Boolean",
-			"default": true,
+			"default": "true",
 			"required": "false",
 			"description": "Show/hide controls."
 		}

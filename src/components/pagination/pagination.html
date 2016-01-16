@@ -1,13 +1,13 @@
 <div class="btn-group pagination" role="group" aria-label="Pagination">
-    <button type="button" class="btn btn-secondary {{btnSize}}" v-bind:disabled="currentPage == 1 " v-on:click="(currentPage == 1) ? return : currentPage--"><span aria-hidden="true">&laquo;</span></button>
-    <button type="button" class="btn  btn-secondary {{btnSize}} {{ currentPage == 1 ?  'active' : '' }}" v-on:click="currentPage = 1" v-show="showPrev">1</button>
+    <button type="button" class="btn btn-secondary {{btnSize}}" v-bind:disabled="currentPage == 1 " v-on:click.prevent="(currentPage == 1) ? return : currentPage--"><span aria-hidden="true">&laquo;</span></button>
+    <button type="button" class="btn  btn-secondary {{btnSize}} {{ currentPage == 1 ?  'active' : '' }}" v-on:click.prevent="currentPage = 1" v-show="showPrev">1</button>
     <span class="btn btn-secondary {{btnSize}}" v-show="showPrev">...</span>
     <button type="button"
     	class="btn {{btnSize}} {{btnVariant($index)}} {{ $index + diff == currentPage ? 'active' : '' }} {{ $index + diff != currentPage ? 'hidden-xs-down' : '' }}"
     	v-for="item in pageLinks"
-        v-on:click="currentPage = $index + diff">{{$index + diff}}
+        v-on:click.prevent="currentPage = $index + diff">{{$index + diff}}
     </button>
     <span class="btn btn-secondary {{btnSize}}" v-show="showNext">...</span>
-    <button type="button" class="btn btn-secondary {{btnSize}} {{ numberOfPages == currentPage ? 'active' : '' }}" v-show="showNext" v-on:click="currentPage = numberOfPages">{{numberOfPages}}</button>
-    <button type="button" class="btn btn-secondary {{btnSize}}" v-bind:disabled="currentPage == numberOfPages" v-on:click="(currentPage == numberOfPages) ? return : currentPage++"><span aria-hidden="true">&raquo;</span></button>
+    <button type="button" class="btn btn-secondary {{btnSize}} {{ numberOfPages == currentPage ? 'active' : '' }}" v-show="showNext" v-on:click.prevent="currentPage = numberOfPages">{{numberOfPages}}</button>
+    <button type="button" class="btn btn-secondary {{btnSize}}" v-bind:disabled="currentPage == numberOfPages" v-on:click.prevent="(currentPage == numberOfPages) ? return : currentPage++"><span aria-hidden="true">&raquo;</span></button>
 </div>

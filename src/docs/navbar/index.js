@@ -3,7 +3,7 @@ import template from './navbar.html'
 import snippet from './snippet.html'
 import vsNavbar from 'src/components/navbar'
 import docsDemo from 'vuestrap-docs/src/components/demo'
-import {variants} from 'utils'
+import {variants} from 'src/utils'
 
 export default {
   route: {

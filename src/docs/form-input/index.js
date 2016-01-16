@@ -3,7 +3,7 @@ import template from './form-input.html'
 import snippet from './snippet.html'
 import vsFormInput from 'src/components/form-input'
 import docsDemo from 'vuestrap-docs/src/components/demo'
-import {sizes, states} from 'utils'
+import {sizes, states} from 'src/utils'
 
 export default {
   route: {

@@ -3,7 +3,7 @@ import template from './button-radio.html'
 import snippet from './snippet.html'
 import vsButtonRadio from 'src/components/button-radio'
 import docsDemo from 'vuestrap-docs/src/components/demo'
-import {sizes, variants} from 'utils'
+import {sizes, variants} from 'src/utils'
 
 export default {
   route: {

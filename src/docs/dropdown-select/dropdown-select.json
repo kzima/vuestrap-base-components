@@ -31,13 +31,6 @@
 			"description": "Vertical position of the dropdown list against the dropdown button. It becomes handy when dropdown floats to the right."
 		},
 		{
-			"name": "icon",
-			"type": "String",
-			"default": "''",
-			"required": false,
-			"description": "Show icon to the left of the button text."
-		},
-		{
 			"name": "caret",
 			"type": "Boolean",
 			"default": "true",
@@ -82,7 +75,7 @@
 		{
 			"name": "disabled",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"description": "Make button look inactive by adding the disabled boolean attribute."
 		}
 	]

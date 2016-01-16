@@ -11,19 +11,19 @@
 		{
 			"name": "block",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"description": "Button spans over full width of a parent."
 		}, 
 		{
 			"name": "disabled",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"description": "Make buttons look inactive by adding the disabled boolean attribute to any <code>&lt;vs-btn></code> element."
 		}, 
 		{
 			"name": "inactive",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"description": "Similar to disabled state, but it's clickable."
 		}, 
 		{

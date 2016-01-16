@@ -11,7 +11,7 @@
 		{
 			"name": "fluid",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"required": false,
 			"description": "To make the jumbotron full width, and without rounded corners."
 		}

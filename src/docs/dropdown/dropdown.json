@@ -9,13 +9,6 @@
 	},
 	"options": [
 		{
-			"name": "icon",
-			"type": "String",
-			"default": "",
-			"required": false,
-			"description": "Show icon to the left of the button text."
-		},
-		{
 			"name": "caret",
 			"type": "Boolean",
 			"default": "true",
@@ -46,13 +39,13 @@
 		{
 			"name": "dropup",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"description": "Allow for dropdowns to go bottom up (aka, dropup-menu)"
 		},
 		{
 			"name": "disabled",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"description": "Make button look inactive by adding the disabled boolean attribute."
 		}
 	]

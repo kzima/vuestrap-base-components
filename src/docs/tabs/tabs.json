@@ -11,7 +11,7 @@
 		{
 			"name": "fade",
 			"type": "Boolean",
-			"default": true,
+			"default": "true",
 			"required": false,
 			"description": "If set to true, tab panels will animate during tab change."
 		}, 

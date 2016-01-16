@@ -68,7 +68,7 @@
 		{
 			"name": "state-icon",
 			"type": "Boolean",
-			"default": true,
+			"default": "true",
 			"required": false,
 			"description": "Show/hide icon within input. Icon is only shown when state is set."
 		}

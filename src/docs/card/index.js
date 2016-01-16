@@ -3,7 +3,7 @@ import template from './card.html'
 import snippet from './snippet.html'
 import vsCard from 'src/components/card'
 import docsDemo from 'vuestrap-docs/src/components/demo'
-import {variants} from 'utils'
+import {variants} from 'src/utils'
 
 export default {
   route: {

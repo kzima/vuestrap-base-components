@@ -3,7 +3,7 @@ import template from './tabs.html'
 import snippet from './snippet.html'
 import {tab as vsTab, tabs as vsTabs} from 'src/components/tabs'
 import docsDemo from 'vuestrap-docs/src/components/demo'
-import {sizes} from 'utils'
+import {sizes} from 'src/utils'
 
 export default {
   route: {

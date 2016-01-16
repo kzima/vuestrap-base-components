@@ -18,23 +18,23 @@
 		{
 			"name": "vertical",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"required": false,
 			"description": "Stack items in vertical position."
 		},
 		{
 			"name": "active",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"required": false,
-			"description": "An active state ot the individual <code>&lt;vs-nav-item></code>."
+			"description": "An active state on the individual <code>&lt;vs-nav-item></code>."
 		},
 		{
 			"name": "disabled",
 			"type": "Boolean",
-			"default": false,
+			"default": "false",
 			"required": false,
-			"description": "A disabled state ot the individual <code>&lt;vs-nav-item></code>."
+			"description": "A disabled state on the individual <code>&lt;vs-nav-item></code>."
 		}
 	]
 }

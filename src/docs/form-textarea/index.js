@@ -3,7 +3,7 @@ import template from './form-textarea.html'
 import snippet from './snippet.html'
 import vsFormTextarea from 'src/components/form-textarea'
 import docsDemo from 'vuestrap-docs/src/components/demo'
-import {states} from 'utils'
+import {states} from 'src/utils'
 
 export default {
   route: {

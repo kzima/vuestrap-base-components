@@ -3,7 +3,7 @@ import template from './form-checkbox.html'
 import snippet from './snippet.html'
 import vsFormCheckbox from 'src/components/form-checkbox'
 import docsDemo from 'vuestrap-docs/src/components/demo'
-import {states} from 'utils'
+import {states} from 'src/utils'
 
 export default {
   route: {

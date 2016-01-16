@@ -1,8 +1,7 @@
 // import dependencies
 import 'vuestrap/components/tooltip'
-// TODO import {Tether} from 'vuestrap-tether'
+import Tether from 'tether'
 import template from './tooltip.html'
-import Vue from 'vue'
 
 // export component object
 export default {
@@ -72,20 +71,20 @@ export default {
         }
 
         // let tether do the magic, after element is shown
-        Vue.nextTick(() => {
-          this._tether = new Tether({
-            element: this._tooltip,
-            target: this._trigger,
-            attachment: position.attachment,
-            targetAttachment: position.targetAttachment,
-          })
-          this.$dispatch('shown::tooltip')
+        this._tooltip.style.display = 'block'
+        this._tether = new Tether({
+          element: this._tooltip,
+          target: this._trigger,
+          attachment: position.attachment,
+          targetAttachment: position.targetAttachment,
         })
+        this.$dispatch('shown::tooltip')
 
       // element gets hidden
       } else {
         // remove the tether reference from the element
         if (this._tether) {
+           this._tooltip.style.display = 'none'
           this._tether.destroy()
         }
         this.$dispatch('hidden::tooltip')
@@ -134,6 +133,7 @@ export default {
     // configure tether
     this._trigger = this.$els.trigger.children[0]
     this._tooltip = this.$els.tooltip
+    this._tooltip.style.display = 'none'
     const _this = this
 
     // add listeners for specified triggers anb complementary click event

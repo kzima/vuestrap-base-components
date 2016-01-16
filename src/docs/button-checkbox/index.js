@@ -3,7 +3,7 @@ import template from './button-checkbox.html'
 import snippet from './snippet.html'
 import vsButtonCheckbox from 'src/components/button-checkbox'
 import docsDemo from 'vuestrap-docs/src/components/demo'
-import {sizes, variants} from 'utils'
+import {sizes, variants} from 'src/utils'
 
 export default {
   route: {

@@ -3,7 +3,7 @@ import template from './progress.html'
 import snippet from './snippet.html'
 import vsProgress from 'src/components/progress'
 import docsDemo from 'vuestrap-docs/src/components/demo'
-import {variants} from 'utils'
+import {variants} from 'src/utils'
 
 export default {
   route: {
