@@ -1,16 +1,21 @@
 {
   "name": "vuestrap-base-components",
-  "version": "0.7.5",
+  "version": "0.8.0",
   "description": "Web components that extend Bootstrap 4.",
   "library": "vuestrapBase",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kzima/vuestrap-base-components.git"
   },
+  "main": "dist/vuestrapBase-bundle.js",
   "scripts": {
-    "dev": "webpack -w --colors --progress --config webpack.build.js --env dev",
-    "dist": "webpack --colors --progress --config  webpack.build.js --env docs && webpack --colors --progress --config webpack.build.js --env dev && webpack --colors --progress --config webpack.build.js --env dist",
-    "docs": "webpack-dev-server --inline --hot --quiet --config webpack.build.js --env docs"
+    "build": "npm run docs && npm run dev && npm run dev-bundle && npm run dist && npm run dist-bundle",
+    "dist": "webpack --colors --progress --config webpack.build.js --env production",
+    "dist-bundle": "webpack --colors --progress --config webpack.build.js --env production --bundle true",
+    "dev": "webpack --colors --progress --config webpack.build.js --env development",
+    "dev-bundle": "webpack --colors --progress --config webpack.build.js --env development --bundle true",
+    "docs": "webpack --colors --progress --config  webpack.build.js --env docs",
+    "serve-docs": "webpack-dev-server --inline --hot --quiet --config webpack.build.js --env docs"
   },
   "keywords": [
     "Bootstrap4",
@@ -29,10 +34,11 @@
   },
   "peerDependencies": {
     "vuestrap": "^1.0.0",
-    "vuestrap-icons": "^0.4.9"
+    "vuestrap-icons": "^0.4.9",
+    "tether": "^1.1.1"
   },
   "dependencies": {
-    "vue": "^1.0.12"
+    "vue": "^1.0.14"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
