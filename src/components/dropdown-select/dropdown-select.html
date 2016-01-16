@@ -1,17 +1,17 @@
 <div class="dropdown-select" v-bind:class="{open: show, dropdown: !dropup, dropup: dropup}">
     <button
-        id="dLabel"
+        id="{{id}}"
         class="btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}"
         role="button"
         aria-haspopup="true"
         aria-expanded="show"
-        v-on:click="toggle($event)"
+        v-on:click.prevent="toggle($event)"
         :disabled="disabled">
         <span class="checked-items" v-html="displayItem"></span>
     </button>
     <ul class="dropdown-menu" v-bind:class="{'dropdown-menu-right' : position == 'right'}" aria-labelledby="dLabel">
         <li v-for="item in list">
-            <button class="dropdown-item" v-on:click.stop="select(item)">{{item.text}}</button>
+            <button class="dropdown-item" v-on:click.stop.prevent="select(item)">{{item.text}}</button>
         </li>
     </ul>
 </div>
