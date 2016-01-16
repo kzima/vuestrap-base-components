@@ -1,6 +1,7 @@
 import meta from './navbar.json'
 import template from './navbar.html'
 import snippet from './snippet.html'
+import {nav as vsNav, navItem as vsNavItem} from 'src/components/nav'
 import vsNavbar from 'src/components/navbar'
 import docsDemo from 'vuestrap-docs/src/components/demo'
 import {variants} from 'src/utils'
@@ -25,6 +26,8 @@ export default {
     }
   },
   components: {
+    vsNav,
+    vsNavItem,
     vsNavbar,
     docsDemo,
   },

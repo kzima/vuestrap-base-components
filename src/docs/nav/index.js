@@ -17,7 +17,7 @@ export default {
       snippet: snippet,
       vertical: false,
       type: 'default',
-      types: [{text: 'default', value: 'default'}, {text: 'pills', value: 'pills'}],
+      types: [{text: 'default', value: 'default'}, {text: 'pills', value: 'pills'}, {text: 'navbar', value: 'navbar'}],
     }
   },
   components: {
@@ -25,4 +25,16 @@ export default {
     vsNavItem,
     docsDemo,
   },
+  watch: {
+    type(val) {
+      if (val === 'navbar') {
+        this.vertical = false
+      }
+    },
+    vertical(val) {
+      if (val) {
+        this.type = 'default'
+      }
+    }
+  }
 }

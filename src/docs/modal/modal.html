@@ -16,9 +16,9 @@
         <!-- Html markup start-->
 
         <!-- trigger -->
-        <button class="btn btn-primary" v-on:click="$broadcast('show::modal', 'modal1')">
+        <vs-button variant="primary" v-on:click="$broadcast('show::modal', 'modal1')">
         	Show Modal
-        </button>
+        </vs-button>
 
         <!-- modal -->
         <vs-modal id="modal1" :size="size" :fade="fade">

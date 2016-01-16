@@ -18,12 +18,13 @@ if (BUNDLE) {
  * define environment
  */
 // set an environment variable to be available in the build script
+config.plugins = []
 if (ENV) {
-  config.plugins = [new webpack.DefinePlugin({
+  config.plugins.push(new webpack.DefinePlugin({
     'process.env': {
       NODE_ENV: '"' + ENV + '"'
     }
-  })]
+  }))
 }
 
 // define plugins for production
@@ -39,7 +40,7 @@ if (ENV === 'production') {
 /**
  * define devtool for source maps
  */
-if ((ENV === 'development' || ENV === 'docs') && !BUNDLE) {
+if (ENV === 'development' && !BUNDLE) {
   config.devtool = 'source-map'
 }
 
@@ -53,7 +54,7 @@ if (ENV === 'docs' || BUNDLE) {
     loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader!vuestrap-theme-loader'
   })
 } else {
-  config.plugin.push(new ExtractTextPlugin(fileName + '.css'))
+  config.plugins.push(new ExtractTextPlugin(fileName + '.css'))
   config.module.loaders.push({
     test: /\.scss$/,
     loader: ExtractTextPlugin.extract('style-loader', 'css-loader!autoprefixer-loader!sass-loader!vuestrap-theme-loader')

@@ -31,20 +31,12 @@
 			<!-- Html markup start-->
 			<vs-navbar :fixed="fixed" :type="type" :variant="variant">
 			  <a class="navbar-brand" href="#">Navbar</a>
-			  <ul class="nav navbar-nav pull-left">
-			    <li class="nav-item active">
-			      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" href="#">Features</a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" href="#">Pricing</a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" href="#">About</a>
-			    </li>
-			  </ul>
+			  <vs-nav type="navbar" class="pull-left">
+			    <vs-nav-item href="#" active>Home <span class="sr-only">(current)</span></vs-nav-item>
+			    <vs-nav-item href="#">Features</vs-nav-item>
+			    <vs-nav-item href="#">Pricing</vs-nav-item>
+			    <vs-nav-item href="#">About</vs-nav-item>
+			  </vs-nav>
 			  <form class="form-inline navbar-form pull-right">
 			    <input class="form-control" type="text" placeholder="Search">
 			    <button class="btn btn-success-outline" type="submit">Search</button>

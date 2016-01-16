@@ -6,12 +6,14 @@
   ],
   "description": "Web components that extend Bootstrap 4.",
   "main": [
-    "dist/vuestrap-base.js",
-    "dist/vuestrap-base.js.map",
-    "dist/vuestrap-base.min.js",
-    "dist/vuestrap-base.css",
-    "dist/vuestrap-base.css.map",
-    "dist/vuestrap-base.min.css"
+    "dist/vuestrapBase.js",
+    "dist/vuestrapBase.js.map",
+    "dist/vuestrapBase.min.js",
+    "dist/vuestrapBase.css",
+    "dist/vuestrapBase.css.map",
+    "dist/vuestrapBase.min.css",
+    "dist/vuestrapBase-bundle.js",
+    "dist/vuestrapBase-bundle.min.js"
   ],
   "moduleType": [
     "amd",

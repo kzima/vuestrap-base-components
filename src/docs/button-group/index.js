@@ -2,6 +2,7 @@ import meta from './button-group.json'
 import template from './button-group.html'
 import snippet from './snippet.html'
 import vsButtonGroup from 'src/components/button-group'
+import vsButton from 'src/components/buttons'
 import docsDemo from 'vuestrap-docs/src/components/demo'
 
 export default {
@@ -19,6 +20,7 @@ export default {
     }
   },
   components: {
+    vsButton,
     vsButtonGroup,
     docsDemo,
   },

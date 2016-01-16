@@ -11,7 +11,7 @@
 		{
 			"name": "type",
 			"type": "String",
-			"values": ["default","pills", "navbar"],
+			"values": ["default", "pills", "navbar"],
 			"default": "default",
 			"description": "Type of the navigation. Use <code>navbar</code> type in conjuction with <code>&lt;vs-navbar></code> element."
 		},
