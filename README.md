@@ -11,21 +11,41 @@ DEMO
 QUICK USE
 =========
 
-For compiled components, use it within your Vue instance like this:
+For compiled components, use it like this:
 
+*Bower*
+```js
+bower install vuestrap-base --save-dev
+```
+
+```js
+<link href="bower_components/vuestrap-base/vuestrapBase.min.css" rel='stylesheet' type='text/css'>
+<script src="bower_components/vuestrap-base/vuestrapBase.min.js"></script>
+```
+
+*NPM*
+```js
+npm install vuestrap-base-components --save-dev
+```
+
+```js
+import vuestrapBase from vuestrap-base-components
+```
+
+And then in your Vue instance:
 ```js
 new Vue({
 	el: '#app',
-	components: { 'alert': vuestrapBase.alert }
+	components: { 'vs-alert': vuestrapBase.alert }
 })
 ```
 
 -- OR --
 
-If you chosen to work with source components, just import* desired component like so:
+If you chosen to work with source components, just import* desired components like so:
 
 ```js
-import alert from 'vuestrap-alert/src/components/alert'
+import { vsAlert, vsButton } from 'vuestrap-alert/src/components'
 ```
 
 and then load it in your Vue instance:
@@ -33,7 +53,7 @@ and then load it in your Vue instance:
 ```js
 new Vue({
 	el: '#app',
-	components: { 'vs-alert': alert }
+	components: { vsAlert, vsButton }
 })
 ```
 
@@ -43,6 +63,16 @@ You can then use icon component in your html, like so:
 ```html
 <vs-alert>Hello</vs-alert>
 ```
+
+THEMING
+=========
+To be able to use your app theme with component's scss variables, you will need to use [vuestrap-theme-loader](https://github.com/kzima/vueastrap-theme-loader) in your webpack config file.
+
+```js
+npm install vuestrap-theme-loader --save-dev
+```
+
+See [vuestrap-starter](https://github.com/kzima/vuestrap-starter) for a webpack config example with theme loader.
 
 TODO
 =========

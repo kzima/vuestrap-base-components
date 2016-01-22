@@ -36,6 +36,7 @@
     "gulpfile.js",
     "index.html",
     "webpack*.js",
-    "utils"
+    "utils",
+    "dist/docs.js"
   ]
 }
