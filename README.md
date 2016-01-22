@@ -1,7 +1,7 @@
 Vuestrap Base Components
 =========
 
-Vuestrap Base Components extend Bootstrap 4 with [vuestrap](https://github.com/kzima/vuestrap/#readme) web components built with Vue.js and Webpack.
+Vuestrap Base Components extend Bootstrap 4. Built with [vuestrap](https://github.com/kzima/vuestrap/#readme), plain Vue.js and Webpack.
 
 DEMO
 =========
