@@ -30,6 +30,7 @@ import media from './media'
 import modal from './modal'
 import {nav, navItem} from './nav'
 import navbar from './navbar'
+import navbarToggler from './navbar-toggler'
 import pager from './pager'
 import pagination from './pagination'
 import popover from './popover'
@@ -46,15 +47,14 @@ const vuestrapBase = {
 	buttonRadio,
 	buttons,
 	card,
-	slide,
 	carousel,
 	collapse,
 	collapseToggle,
 	dropdown,
 	dropdownSelect,
 	formCheckbox,
-	formRadio,
 	formInput,
+	formRadio,
 	formSelect,
 	formTextarea,
 	images,
@@ -66,12 +66,14 @@ const vuestrapBase = {
 	nav,
 	navItem,
 	navbar,
+	navbarToggler,
 	pager,
 	pagination,
 	popover,
 	progress,
-	tables,
+	slide,
 	tab,
+	tables,
 	tabs,
 	tooltip,
 }

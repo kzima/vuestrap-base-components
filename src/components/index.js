@@ -30,6 +30,7 @@ import media from './media'
 import modal from './modal'
 import {nav, navItem} from './nav'
 import navbar from './navbar'
+import navbarToggler from './navbar-toggler'
 import pager from './pager'
 import pagination from './pagination'
 import popover from './popover'
@@ -41,20 +42,19 @@ import tooltip from './tooltip'
 const vuestrapBase = {
 	'vsAlert': alert,
 	'vsBreadcrumb': breadcrumb,
+	'vsBtn': buttons,
 	'vsButtonCheckbox': buttonCheckbox,
 	'vsButtonGroup': buttonGroup,
 	'vsButtonRadio': buttonRadio,
-	'vsBtn': buttons,
 	'vsCard': card,
-	'vsSlide': slide,
 	'vsCarousel': carousel,
 	'vsCollapse': collapse,
 	'vsCollapseToggle': collapseToggle,
 	'vsDropdown': dropdown,
 	'vsDropdownSelect': dropdownSelect,
 	'vsFormCheckbox': formCheckbox,
-	'vsFormRadio': formRadio,
 	'vsFormInput': formInput,
+	'vsFormRadio': formRadio,
 	'vsFormSelect': formSelect,
 	'vsFormTextarea': formTextarea,
 	'vsImages': images,
@@ -67,12 +67,14 @@ const vuestrapBase = {
 	'vsNav': nav,
 	'vsNavItem': navItem,
 	'vsNavbar': navbar,
+	'vsNavbarToggler': navbarToggler,
 	'vsPager': pager,
 	'vsPagination': pagination,
 	'vsPopover': popover,
 	'vsProgress': progress,
-	'vsTables': tables,
+	'vsSlide': slide,
 	'vsTab': tab,
+	'vsTables': tables,
 	'vsTabs': tabs,
 	'vsTooltip': tooltip,
 }
