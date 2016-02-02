@@ -17,7 +17,7 @@ export default {
     },
     navbarfixed() {
       return !this.fixed ? `` : `navbar-fixed-${this.fixed}`
-    },
+    }
   },
   props: {
   	type: {
@@ -31,7 +31,7 @@ export default {
     fixed: {
       type: String,
       default: '',
-    }, 
+    },
     full: {
     	type: Boolean,
     	default: false,
