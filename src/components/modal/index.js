@@ -30,6 +30,10 @@ export default {
       type: Boolean,
       default: true
     },
+    closeOnBackdrop: {
+      type: Boolean,
+      default: true,
+    }
   },
   methods: {
     show() {
@@ -60,7 +64,7 @@ export default {
     },
     onClickOut(e) {
       // if backdrop clicked, hide modal
-      if (e.target.id && e.target.id === this.id) {
+      if (this.closeOnBackdrop && e.target.id && e.target.id === this.id) {
         this.hide()
       }
     },

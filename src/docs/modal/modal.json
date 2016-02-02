@@ -27,6 +27,13 @@
 			"default": "true",
 			"required": false,
 			"description": "If set to true modal will fade in on open and fade out on close."
+		},
+		{
+			"name": "close-on-backdrop",
+			"type": "Boolean",
+			"default": "true",
+			"required": false,
+			"description": "To disable/enable closing of the modal when clicking on the backdrop."
 		}
 	]
 }
