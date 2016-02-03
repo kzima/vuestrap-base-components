@@ -40,6 +40,7 @@ import tooltip from './tooltip'
 
 const vuestrapBase = {
 	'vsAlert': alert,
+	'vsBadge': labels,
 	'vsBreadcrumb': breadcrumb,
 	'vsButtonCheckbox': buttonCheckbox,
 	'vsButtonGroup': buttonGroup,
@@ -59,7 +60,7 @@ const vuestrapBase = {
 	'vsFormTextarea': formTextarea,
 	'vsImages': images,
 	'vsJumbotron': jumbotron,
-	'vsLabels': labels,
+	'vsLabel': labels,
 	'vsListGroup': listGroup,
 	'vsListGroupItem': listGroupItem,
 	'vsMedia': media,

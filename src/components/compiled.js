@@ -7,6 +7,7 @@ import 'vuestrap/core'
  * IMPORT EACH COMPONENT
  */
 import alert from './alert'
+import badge from './labels'
 import breadcrumb from './breadcrumb'
 import buttonCheckbox from './button-checkbox'
 import buttonGroup from './button-group'
@@ -24,7 +25,7 @@ import formSelect from './form-select'
 import formTextarea from './form-textarea'
 import images from './images'
 import jumbotron from './jumbotron'
-import labels from './labels'
+import label from './labels'
 import listGroup from './list-group'
 import media from './media'
 import modal from './modal'
@@ -40,6 +41,7 @@ import tooltip from './tooltip'
 
 const vuestrapBase = {
 	alert,
+	badge,
 	breadcrumb,
 	buttonCheckbox,
 	buttonGroup,
@@ -59,7 +61,7 @@ const vuestrapBase = {
 	formTextarea,
 	images,
 	jumbotron,
-	labels,
+	label,
 	listGroup,
 	media,
 	modal,
