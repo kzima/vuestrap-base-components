@@ -37,11 +37,11 @@ export default {
   watch: {
     'type'(val) {
       // get first card-block or div and apply a card-image-overlay class if image-overlay slected
-      let div = this.$el.getElementsByClassName('card-block')[0] || this.$el.getElementsByTagName('div')[0];
+      const div = this.$el.getElementsByClassName('card-block')[0] || this.$el.getElementsByTagName('div')[0]
       if (val === 'image-overlay') {
-        div.classList.add('card-img-overlay');
+        div.classList.add('card-img-overlay')
       } else {
-        div.classList.remove('card-img-overlay');
+        div.classList.remove('card-img-overlay')
       }
     }
   }
