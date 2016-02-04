@@ -10,9 +10,9 @@ export default {
 	data() {
 		return {
 			pkg: this.$parent.pkg,
-			componentNameCamelCase: 'alert',
 			componentName: 'alert',
-			componentNameSurfixed: 'vs-alert'
+			componentNameSurfixed: 'vs-alert',
+			componentNameCamelCase: 'vsAlert',
 		}
 	},
   template: template,

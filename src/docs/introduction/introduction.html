@@ -19,16 +19,16 @@
 <div class="m-b-lg"></div>
 <h2>Usage</h2>
 <p>For compiled components, use it within your Vue instance like this:</p>
-<p><code>new Vue({ components: { '{{componentNameSurfixed}}': {{pkg.library}}.{{componentNameCamelCase}} }})</code></p>
+<p><code>new Vue({ components: { '{{componentNameSurfixed}}': {{pkg.library}}.{{componentName}} }})</code></p>
 
 <div class="m-b"></div>
 <strong>OR</strong>
 <div class="m-b"></div>
 
 <p>If you chosen to work with source components, just import* desired component like so:</p>
-<p><code>import {{componentNameCamelCase}} from '{{pkg.name}}/src/components/{{componentName}}'</code></p>
+<p><code>import { {{componentNameCamelCase}} } from '{{pkg.name}}/src/components'</code></p>
 <p>and then load it in your Vue instance:</p>
-<p><code>new Vue({ components: { '{{componentNameSurfixed}}' : {{componentNameCamelCase}} }})</code></p>
+<p><code>new Vue({ components: { {{componentNameCamelCase}} }})</code></p>
 <p>*Note: You will need <a href="https://github.com/babel/babel-loader">Babel Loader</a> in your Webpack config file to support ES6 syntax.</p>
 
 <div class="m-b-lg"></div>
