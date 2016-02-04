@@ -1,7 +1,7 @@
 {
 	"name": "accordion",
 	"title": "Accordion",
-	"description": "Extend the default collapse behavior to create an accordion. It requires both <code>id</code> and <code>group</code> for this to work.",
+	"description": "Extend the default collapse behavior to create an accordion. It requires both <code>target</code> and <code>target-group</code> attributes for this to work.",
 	"dependencies": ["vuestrap/collapse","vuestrap/collapseToggle"],
 	"category": "components",
 	"browserSupport": {
@@ -13,14 +13,14 @@
 			"type": "String",
 			"default": "",
 			"required": true,
-			"description": "You need to provide <code>id</code> for both <code>&lt;vs-collapse></code> and <code>&lt;vs-collapse-toggle></code> elements, so accordion knows which element to open."
+			"description": "An <code>id</code> attribute  needs to be set on <code>&lt;vs-collapse></code> tag and referenced in <code>&lt;vs-collapsetoggle></code> using <code>target</code> attribute."
 		},
 		{
 			"name": "group",
 			"type": "String",
 			"default": "",
 			"required": true,
-			"description": "You need to provide <code>group</code> for both <code>&lt;vs-collapse></code> and <code>&lt;vs-collapse-toggle></code> elements, so accordion knows which elements to hide in the same group."
+			"description": "A <code>group</code> attribute needs to be set on <code>&lt;vs-collapse></code> tag and referenced in <code>&lt;vs-collapsetoggle></code> using <code>target-group</code> attribute."
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"name": "collapse",
 	"title": "Collapse",
-	"description": "Click the buttons below to show and hide another element. It requires either <code>id</code> or <code>group</code> (but not both) for this to work.",
+	"description": "Click the buttons below to show and hide another element. It requires either <code>target</code> or <code>target-group</code> attribute for this to work.",
 	"dependencies": ["vuestrap/collapseToggle"],
 	"category": "components",
 	"browserSupport": {
@@ -12,15 +12,15 @@
 			"name": "id",
 			"type": "String",
 			"default": "",
-			"required": "false",
-			"description": "With <code>id</code> you can control individual collapse elements. Use same unique <code>id</code> for both <code>&lt;vs-collapse></code> and <code>&lt;vs-collapse-toggle></code> elements."
+			"required": true,
+			"description": "An <code>id</code> attribute  needs to be set on <code>&lt;vs-collapse></code> tag and referenced in <code>&lt;vs-collapsetoggle></code> using <code>target</code> attribute."
 		},
 		{
 			"name": "group",
 			"type": "String",
 			"default": "",
-			"required": "false",
-			"description": "With <code>group</code> you can control a number of collapse elements. Use same unique <code>group</code> for all <code>&lt;vs-collapse></code> and <code>&lt;vs-collapse-toggle></code> elements."
+			"required": true,
+			"description": "A <code>group</code> attribute needs to be set on <code>&lt;vs-collapse></code> tag and referenced in <code>&lt;vs-collapsetoggle></code> using <code>target-group</code> attribute."
 		}
 	]
 }

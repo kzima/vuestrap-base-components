@@ -90,11 +90,11 @@ export const collapseToggle = {
 
   },
   props: {
-    id: {
+    target: {
       type: String,
       default: ''
     },
-    group: {
+    targetGroup: {
       type: String,
       default: ''
     }
@@ -102,16 +102,16 @@ export const collapseToggle = {
   methods: {
     toggle() {
       // if both attributes missing, ignore
-      if (!this.id && !this.group) return
+      if (!this.target && !this.targetGroup) return
 
       // broadcast accordion toggle if both id and group are set otherwise broadcast collapse
       // we also use dispatch to tell other components about the change
-      if (this.id && this.group) {
-        this.$root.$broadcast('toggled::accordion', {id: this.id, group: this.group})
-        this.$root.$dispatch('toggled::accordion', {id: this.id, group: this.group})
+      if (this.target && this.targetGroup) {
+        this.$root.$broadcast('toggled::accordion', {id: this.target, group: this.targetGroup})
+        this.$root.$dispatch('toggled::accordion', {id: this.target, group: this.targetGroup})
       } else {
-        this.$root.$broadcast('toggled::collapse', {id: this.id, group: this.group})
-        this.$root.$dispatch('toggled::collapse', {id: this.id, group: this.group})
+        this.$root.$broadcast('toggled::collapse', {id: this.target, group: this.targetGroup})
+        this.$root.$dispatch('toggled::collapse', {id: this.target, group: this.targetGroup})
       }
     }
   },
