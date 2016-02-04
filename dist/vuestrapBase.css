@@ -2240,6 +2240,63 @@ input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%; }
+.label {
+  display: inline-block;
+  padding: .25em .4em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem; }
+  .label:empty {
+    display: none; }
+
+.btn .label {
+  position: relative;
+  top: -1px; }
+
+a.label:focus, a.label:hover {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer; }
+
+.label-pill {
+  padding-right: .6em;
+  padding-left: .6em;
+  border-radius: 10rem; }
+
+.label-default {
+  background-color: #818a91; }
+  .label-default[href]:focus, .label-default[href]:hover {
+    background-color: #687077; }
+
+.label-primary {
+  background-color: #563d7c; }
+  .label-primary[href]:focus, .label-primary[href]:hover {
+    background-color: #3e2c5a; }
+
+.label-success {
+  background-color: #42b983; }
+  .label-success[href]:focus, .label-success[href]:hover {
+    background-color: #359368; }
+
+.label-info {
+  background-color: #5bc0de; }
+  .label-info[href]:focus, .label-info[href]:hover {
+    background-color: #31b0d5; }
+
+.label-warning {
+  background-color: #f0ad4e; }
+  .label-warning[href]:focus, .label-warning[href]:hover {
+    background-color: #ec971f; }
+
+.label-danger {
+  background-color: #d9534f; }
+  .label-danger[href]:focus, .label-danger[href]:hover {
+    background-color: #c9302c; }
 .breadcrumb {
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
@@ -3495,63 +3552,6 @@ input[type="checkbox"].disabled {
   padding-right: 0;
   padding-left: 0;
   border-radius: 0; }
-.label {
-  display: inline-block;
-  padding: .25em .4em;
-  font-size: 75%;
-  font-weight: bold;
-  line-height: 1;
-  color: #fff;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: 0.25rem; }
-  .label:empty {
-    display: none; }
-
-.btn .label {
-  position: relative;
-  top: -1px; }
-
-a.label:focus, a.label:hover {
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer; }
-
-.label-pill {
-  padding-right: .6em;
-  padding-left: .6em;
-  border-radius: 10rem; }
-
-.label-default {
-  background-color: #818a91; }
-  .label-default[href]:focus, .label-default[href]:hover {
-    background-color: #687077; }
-
-.label-primary {
-  background-color: #563d7c; }
-  .label-primary[href]:focus, .label-primary[href]:hover {
-    background-color: #3e2c5a; }
-
-.label-success {
-  background-color: #42b983; }
-  .label-success[href]:focus, .label-success[href]:hover {
-    background-color: #359368; }
-
-.label-info {
-  background-color: #5bc0de; }
-  .label-info[href]:focus, .label-info[href]:hover {
-    background-color: #31b0d5; }
-
-.label-warning {
-  background-color: #f0ad4e; }
-  .label-warning[href]:focus, .label-warning[href]:hover {
-    background-color: #ec971f; }
-
-.label-danger {
-  background-color: #d9534f; }
-  .label-danger[href]:focus, .label-danger[href]:hover {
-    background-color: #c9302c; }
 .list-group li.list-group-item:focus, .list-group li.list-group-item:hover {
   color: #555;
   text-decoration: none;

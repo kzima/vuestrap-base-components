@@ -76,73 +76,75 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _alert2 = _interopRequireDefault(_alert);
 
-	var _breadcrumb = __webpack_require__(13);
+	var _labels = __webpack_require__(13);
+
+	var _labels2 = _interopRequireDefault(_labels);
+
+	var _breadcrumb = __webpack_require__(18);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
-	var _buttonCheckbox = __webpack_require__(18);
+	var _buttonCheckbox = __webpack_require__(23);
 
 	var _buttonCheckbox2 = _interopRequireDefault(_buttonCheckbox);
 
-	var _buttonGroup = __webpack_require__(23);
+	var _buttonGroup = __webpack_require__(28);
 
 	var _buttonGroup2 = _interopRequireDefault(_buttonGroup);
 
-	var _buttonRadio = __webpack_require__(25);
+	var _buttonRadio = __webpack_require__(30);
 
 	var _buttonRadio2 = _interopRequireDefault(_buttonRadio);
 
-	var _buttons = __webpack_require__(27);
+	var _buttons = __webpack_require__(32);
 
 	var _buttons2 = _interopRequireDefault(_buttons);
 
-	var _card = __webpack_require__(32);
+	var _card = __webpack_require__(37);
 
 	var _card2 = _interopRequireDefault(_card);
 
-	var _carousel = __webpack_require__(42);
+	var _carousel = __webpack_require__(47);
 
-	var _collapse = __webpack_require__(48);
+	var _collapse = __webpack_require__(53);
 
-	var _dropdown = __webpack_require__(50);
+	var _dropdown = __webpack_require__(55);
 
 	var _dropdown2 = _interopRequireDefault(_dropdown);
 
-	var _dropdownSelect = __webpack_require__(57);
+	var _dropdownSelect = __webpack_require__(62);
 
 	var _dropdownSelect2 = _interopRequireDefault(_dropdownSelect);
 
-	var _formCheckbox = __webpack_require__(61);
+	var _formCheckbox = __webpack_require__(66);
 
 	var _formCheckbox2 = _interopRequireDefault(_formCheckbox);
 
-	var _formRadio = __webpack_require__(71);
+	var _formRadio = __webpack_require__(76);
 
 	var _formRadio2 = _interopRequireDefault(_formRadio);
 
-	var _formInput = __webpack_require__(73);
+	var _formInput = __webpack_require__(78);
 
 	var _formInput2 = _interopRequireDefault(_formInput);
 
-	var _formSelect = __webpack_require__(76);
+	var _formSelect = __webpack_require__(81);
 
 	var _formSelect2 = _interopRequireDefault(_formSelect);
 
-	var _formTextarea = __webpack_require__(78);
+	var _formTextarea = __webpack_require__(83);
 
 	var _formTextarea2 = _interopRequireDefault(_formTextarea);
 
-	var _images = __webpack_require__(80);
+	var _images = __webpack_require__(85);
 
 	var _images2 = _interopRequireDefault(_images);
 
-	var _jumbotron = __webpack_require__(82);
+	var _jumbotron = __webpack_require__(87);
 
 	var _jumbotron2 = _interopRequireDefault(_jumbotron);
 
-	var _labels = __webpack_require__(87);
-
-	var _labels2 = _interopRequireDefault(_labels);
+	var _labels3 = _interopRequireDefault(_labels);
 
 	var _listGroup = __webpack_require__(92);
 
@@ -190,6 +192,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var vuestrapBase = {
 		alert: _alert2['default'],
+		badge: _labels2['default'],
 		breadcrumb: _breadcrumb2['default'],
 		buttonCheckbox: _buttonCheckbox2['default'],
 		buttonGroup: _buttonGroup2['default'],
@@ -209,7 +212,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		formTextarea: _formTextarea2['default'],
 		images: _images2['default'],
 		jumbotron: _jumbotron2['default'],
-		labels: _labels2['default'],
+		label: _labels3['default'],
 		listGroup: _listGroup2['default'],
 		media: _media2['default'],
 		modal: _modal2['default'],
@@ -755,19 +758,30 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	__webpack_require__(14);
 
-	var _breadcrumbHtml = __webpack_require__(17);
+	var _labelsHtml = __webpack_require__(17);
 
-	var _breadcrumbHtml2 = _interopRequireDefault(_breadcrumbHtml);
+	var _labelsHtml2 = _interopRequireDefault(_labelsHtml);
 
 	// export component object
 	exports['default'] = {
-	  template: _breadcrumbHtml2['default'],
+	  template: _labelsHtml2['default'],
 	  replace: true,
+	  computed: {
+	    labelVariant: function labelVariant() {
+	      return !this.variant || this.variant === 'default' ? 'label-default' : 'label-' + this.variant;
+	    },
+	    labelType: function labelType() {
+	      return !this.type ? '' : 'label-' + this.type;
+	    }
+	  },
 	  props: {
-	    list: {
-	      type: Array,
-	      'default': [],
-	      required: true
+	    variant: {
+	      type: String,
+	      'default': 'default'
+	    },
+	    type: {
+	      type: String,
+	      'default': ''
 	    }
 	  }
 	};
@@ -798,8 +812,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_breadcrumb.scss", function() {
-				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_breadcrumb.scss");
+			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_labels.scss", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_labels.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -817,7 +831,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".breadcrumb {\n  padding: 0.75rem 1rem;\n  margin-bottom: 1rem;\n  list-style: none;\n  background-color: #eceeef;\n  border-radius: 0.25rem; }\n  .breadcrumb::after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .breadcrumb > li {\n    float: left; }\n    .breadcrumb > li + li::before {\n      padding-right: .5rem;\n      padding-left: .5rem;\n      color: #818a91;\n      content: \"/\"; }\n  .breadcrumb > .active {\n    color: #818a91; }\n", ""]);
+	exports.push([module.id, ".label {\n  display: inline-block;\n  padding: .25em .4em;\n  font-size: 75%;\n  font-weight: bold;\n  line-height: 1;\n  color: #fff;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: baseline;\n  border-radius: 0.25rem; }\n  .label:empty {\n    display: none; }\n\n.btn .label {\n  position: relative;\n  top: -1px; }\n\na.label:focus, a.label:hover {\n  color: #fff;\n  text-decoration: none;\n  cursor: pointer; }\n\n.label-pill {\n  padding-right: .6em;\n  padding-left: .6em;\n  border-radius: 10rem; }\n\n.label-default {\n  background-color: #818a91; }\n  .label-default[href]:focus, .label-default[href]:hover {\n    background-color: #687077; }\n\n.label-primary {\n  background-color: #563d7c; }\n  .label-primary[href]:focus, .label-primary[href]:hover {\n    background-color: #3e2c5a; }\n\n.label-success {\n  background-color: #42b983; }\n  .label-success[href]:focus, .label-success[href]:hover {\n    background-color: #359368; }\n\n.label-info {\n  background-color: #5bc0de; }\n  .label-info[href]:focus, .label-info[href]:hover {\n    background-color: #31b0d5; }\n\n.label-warning {\n  background-color: #f0ad4e; }\n  .label-warning[href]:focus, .label-warning[href]:hover {\n    background-color: #ec971f; }\n\n.label-danger {\n  background-color: #d9534f; }\n  .label-danger[href]:focus, .label-danger[href]:hover {\n    background-color: #c9302c; }\n", ""]);
 
 	// exports
 
@@ -826,7 +840,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 17 */
 /***/ function(module, exports) {
 
-	module.exports = "<ol class=\"breadcrumb\" style=\"margin-bottom: 5px;\">\r\n    <li v-for=\"item in list\" v-bind:class=\"{ active: active }\">\r\n        <a href=\"{{item.href}}\" v-if=\"!active\">{{item.text}}</a>\r\n        <span v-if=\"active\">{{item.text}}</span>\r\n    </li>\r\n</ol>";
+	module.exports = "<span class=\"label {{labelVariant}} {{labelType}}\">\r\n\t<slot></slot>\r\n</span>\r\n";
 
 /***/ },
 /* 18 */
@@ -843,7 +857,95 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	__webpack_require__(19);
 
-	var _buttonCheckboxHtml = __webpack_require__(22);
+	var _breadcrumbHtml = __webpack_require__(22);
+
+	var _breadcrumbHtml2 = _interopRequireDefault(_breadcrumbHtml);
+
+	// export component object
+	exports['default'] = {
+	  template: _breadcrumbHtml2['default'],
+	  replace: true,
+	  props: {
+	    list: {
+	      type: Array,
+	      'default': [],
+	      required: true
+	    }
+	  }
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// import dependencies
+	'use strict';
+
+	__webpack_require__(20);
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(21);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_breadcrumb.scss", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_breadcrumb.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".breadcrumb {\n  padding: 0.75rem 1rem;\n  margin-bottom: 1rem;\n  list-style: none;\n  background-color: #eceeef;\n  border-radius: 0.25rem; }\n  .breadcrumb::after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .breadcrumb > li {\n    float: left; }\n    .breadcrumb > li + li::before {\n      padding-right: .5rem;\n      padding-left: .5rem;\n      color: #818a91;\n      content: \"/\"; }\n  .breadcrumb > .active {\n    color: #818a91; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 22 */
+/***/ function(module, exports) {
+
+	module.exports = "<ol class=\"breadcrumb\">\r\n    <li v-for=\"item in list\" v-bind:class=\"{ active: active }\">\r\n        <a href=\"{{item.href}}\" v-if=\"!active\">{{item.text}}</a>\r\n        <span v-if=\"active\">{{item.text}}</span>\r\n    </li>\r\n</ol>";
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// import dependencies
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	__webpack_require__(24);
+
+	var _buttonCheckboxHtml = __webpack_require__(27);
 
 	var _buttonCheckboxHtml2 = _interopRequireDefault(_buttonCheckboxHtml);
 
@@ -942,24 +1044,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 19 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(20);
+	__webpack_require__(25);
 
 	__webpack_require__(10);
 
 /***/ },
-/* 20 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(21);
+	var content = __webpack_require__(26);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -979,7 +1081,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 21 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -993,13 +1095,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 22 */
+/* 27 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n  <label class=\"btn {{btnVariant}} {{btnSize}} {{ checked($index) ? 'active' : '' }}\" v-for=\"item in list\">\r\n  <input \r\n  \ttype=\"checkbox\" \r\n  \tvalue=\"{{item.value}}\" \r\n  \tautocomplete=\"off\" \r\n  \tv-model=\"item.checked\" \r\n  \t:disabled=\"item.disabled\">\r\n  \t{{item.text}}\r\n  </label>\r\n</div>\r\n";
 
 /***/ },
-/* 23 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1011,9 +1113,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(19);
+	__webpack_require__(24);
 
-	var _buttonGroupHtml = __webpack_require__(24);
+	var _buttonGroupHtml = __webpack_require__(29);
 
 	var _buttonGroupHtml2 = _interopRequireDefault(_buttonGroupHtml);
 
@@ -1031,13 +1133,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 24 */
+/* 29 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\" v-bind:class=\"{ 'btn-group-vertical': vertical }\">\r\n\t<slot></slot>\r\n</div>\r\n";
+	module.exports = "<div role=\"group\" aria-label=\"Basic example\" v-bind:class=\"{ 'btn-group': true, btn-group-vertical': vertical }\">\r\n\t<slot></slot>\r\n</div>\r\n";
 
 /***/ },
-/* 25 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1049,9 +1151,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(19);
+	__webpack_require__(24);
 
-	var _buttonRadioHtml = __webpack_require__(26);
+	var _buttonRadioHtml = __webpack_require__(31);
 
 	var _buttonRadioHtml2 = _interopRequireDefault(_buttonRadioHtml);
 
@@ -1126,13 +1228,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 26 */
+/* 31 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n    <label \r\n    \tclass=\"btn {{btnVariant}} {{btnSize}} {{ selection == item.value ? 'active' : '' }}\" \r\n    \tv-for=\"item in list\">\r\n      <input \r\n      \ttype=\"radio\" \r\n      \tname=\"options\" \r\n      \tvalue=\"{{item.value}}\" \r\n      \tautocomplete=\"off\" \r\n      \tv-model=\"selection\"\r\n        :disabled=\"item.disabled\"> {{item.text}}\r\n    </label>\r\n</div>\r\n";
 
 /***/ },
-/* 27 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1143,13 +1245,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(28);
+	__webpack_require__(33);
 
-	var _buttonsHtml = __webpack_require__(29);
+	var _buttonsHtml = __webpack_require__(34);
 
 	var _buttonsHtml2 = _interopRequireDefault(_buttonsHtml);
 
-	__webpack_require__(30);
+	__webpack_require__(35);
 
 	// export component object
 	exports['default'] = {
@@ -1204,7 +1306,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 28 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1213,19 +1315,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	__webpack_require__(10);
 
 /***/ },
-/* 29 */
+/* 34 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}} {{btnDisabled}}\">\r\n\t<template v-if=\"!href\"><slot></slot></template>\r\n\t<a v-bind:href=\"href\" class=\"{{btnDisabled}}\" v-bind:role=\"role\" v-if=\"href\"><slot></slot></a>\r\n</span>";
 
 /***/ },
-/* 30 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(31);
+	var content = __webpack_require__(36);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -1245,7 +1347,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 31 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1259,7 +1361,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 32 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1271,15 +1373,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(33);
+	__webpack_require__(38);
 
-	var _cardHtml = __webpack_require__(40);
+	var _cardHtml = __webpack_require__(45);
 
 	var _cardHtml2 = _interopRequireDefault(_cardHtml);
 
 	// import polyfill for IE9
 
-	__webpack_require__(41);
+	__webpack_require__(46);
 
 	// export component object
 	exports['default'] = {
@@ -1325,28 +1427,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 33 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(34);
+	__webpack_require__(39);
 
 	__webpack_require__(10);
 
-	__webpack_require__(36);
+	__webpack_require__(41);
 
-	__webpack_require__(38);
+	__webpack_require__(43);
 
 /***/ },
-/* 34 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(35);
+	var content = __webpack_require__(40);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -1366,7 +1468,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 35 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1380,13 +1482,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 36 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(37);
+	var content = __webpack_require__(42);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -1406,7 +1508,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 37 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1420,13 +1522,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 38 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(39);
+	var content = __webpack_require__(44);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -1446,7 +1548,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 39 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1460,13 +1562,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 40 */
+/* 45 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"card {{cardVariant}} {{cardAlign}} {{cardInverse}}\">\r\n    <slot></slot>\r\n</div>\r\n";
 
 /***/ },
-/* 41 */
+/* 46 */
 /***/ function(module, exports) {
 
 	/*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js*/
@@ -1566,7 +1668,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 42 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1595,17 +1697,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(43);
+	__webpack_require__(48);
 
-	var _carouselHtml = __webpack_require__(46);
+	var _carouselHtml = __webpack_require__(51);
 
 	var _carouselHtml2 = _interopRequireDefault(_carouselHtml);
 
-	var _utilsHelpersJs = __webpack_require__(47);
+	var _utilsHelpersJs = __webpack_require__(52);
 
 	// import polyfill for IE9
 
-	__webpack_require__(41);
+	__webpack_require__(46);
 
 	// this is directly linked to the bootstrap animation timing in _carousel.scss
 	// for browsers that do not support transitions like IE9 just change slide immediately
@@ -1749,24 +1851,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.slide = slide;
 
 /***/ },
-/* 43 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(36);
+	__webpack_require__(41);
 
-	__webpack_require__(44);
+	__webpack_require__(49);
 
 /***/ },
-/* 44 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(45);
+	var content = __webpack_require__(50);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -1786,7 +1888,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 45 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1800,13 +1902,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 46 */
+/* 51 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"carousel slide\" data-ride=\"carousel\" v-on:mouseenter=\"pause()\" v-on:mouseleave=\"start()\">\r\n\r\n    <!-- Indicators -->\r\n    <ol class=\"carousel-indicators\" v-show=\"indicators\">\r\n        <li v-for=\"item in slides\" v-bind:class=\"{'active': item == index}\" v-on:click=\"changeSlide($index)\"></li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\" role=\"listbox\">\r\n        <slot></slot>\r\n    </div>\r\n\r\n    <!-- Controls -->\r\n    <a class=\"left carousel-control\" href=\"#\" role=\"button\" v-on:click.prevent=\"prev\" v-show=\"controls\">\r\n        <span class=\"icon-prev\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#\" role=\"button\" v-on:click.prevent=\"next\" v-show=\"controls\">\r\n        <span class=\"icon-next\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Next</span>\r\n    </a>\r\n\r\n</div>";
 
 /***/ },
-/* 47 */
+/* 52 */
 /***/ function(module, exports) {
 
 	/**
@@ -1841,7 +1943,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 48 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1853,15 +1955,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _collapseHtml = __webpack_require__(49);
+	var _collapseHtml = __webpack_require__(54);
 
 	var _collapseHtml2 = _interopRequireDefault(_collapseHtml);
 
-	var _utilsHelpersJs = __webpack_require__(47);
+	var _utilsHelpersJs = __webpack_require__(52);
 
 	// import polyfill for IE9
 
-	__webpack_require__(41);
+	__webpack_require__(46);
 
 	// for browsers that do not support transitions like IE9 just change immediately
 	var TRANSITION_DURATION = (0, _utilsHelpersJs.csstransitions)() ? 350 : 0;
@@ -1951,11 +2053,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  replace: true,
 	  computed: {},
 	  props: {
-	    id: {
+	    target: {
 	      type: String,
 	      'default': ''
 	    },
-	    group: {
+	    targetGroup: {
 	      type: String,
 	      'default': ''
 	    }
@@ -1963,16 +2065,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	  methods: {
 	    toggle: function toggle() {
 	      // if both attributes missing, ignore
-	      if (!this.id && !this.group) return;
+	      if (!this.target && !this.targetGroup) return;
 
 	      // broadcast accordion toggle if both id and group are set otherwise broadcast collapse
 	      // we also use dispatch to tell other components about the change
-	      if (this.id && this.group) {
-	        this.$root.$broadcast('toggled::accordion', { id: this.id, group: this.group });
-	        this.$root.$dispatch('toggled::accordion', { id: this.id, group: this.group });
+	      if (this.target && this.targetGroup) {
+	        this.$root.$broadcast('toggled::accordion', { id: this.target, group: this.targetGroup });
+	        this.$root.$dispatch('toggled::accordion', { id: this.target, group: this.targetGroup });
 	      } else {
-	        this.$root.$broadcast('toggled::collapse', { id: this.id, group: this.group });
-	        this.$root.$dispatch('toggled::collapse', { id: this.id, group: this.group });
+	        this.$root.$broadcast('toggled::collapse', { id: this.target, group: this.targetGroup });
+	        this.$root.$dispatch('toggled::collapse', { id: this.target, group: this.targetGroup });
 	      }
 	    }
 	  }
@@ -1980,13 +2082,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.collapseToggle = collapseToggle;
 
 /***/ },
-/* 49 */
+/* 54 */
 /***/ function(module, exports) {
 
 	module.exports = "<div id=\"{{id}}\" class=\"collapse\">\r\n  <slot></slot>\r\n</div>";
 
 /***/ },
-/* 50 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1998,13 +2100,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(51);
+	__webpack_require__(56);
 
-	var _dropdownHtml = __webpack_require__(54);
+	var _dropdownHtml = __webpack_require__(59);
 
 	var _dropdownHtml2 = _interopRequireDefault(_dropdownHtml);
 
-	__webpack_require__(55);
+	__webpack_require__(60);
 
 	// export component object
 	exports['default'] = {
@@ -2074,24 +2176,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 51 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(52);
+	__webpack_require__(57);
 
 	__webpack_require__(10);
 
 /***/ },
-/* 52 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(53);
+	var content = __webpack_require__(58);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2111,7 +2213,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 53 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2125,19 +2227,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 54 */
+/* 59 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:class=\"{ open: show, dropdown: !dropup, dropup: dropup}\">\r\n    <button\r\n        id=\"dLabel\"\r\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\" role=\"button\"\r\n        aria-haspopup=\"true\"\r\n        aria-expanded=\"{{show}}\"\r\n        v-on:click.prevent=\"toggle($event)\"\r\n        :disabled=\"disabled\">\r\n        <span v-html=\"text\" v-show=\"text\"></span>\r\n        <span class=\"caret\"></span>\r\n    </button>\r\n    <slot></slot>\r\n</div>\r\n";
 
 /***/ },
-/* 55 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(56);
+	var content = __webpack_require__(61);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2157,7 +2259,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 56 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2171,7 +2273,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 57 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2183,13 +2285,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(51);
+	__webpack_require__(56);
 
-	var _dropdownSelectHtml = __webpack_require__(58);
+	var _dropdownSelectHtml = __webpack_require__(63);
 
 	var _dropdownSelectHtml2 = _interopRequireDefault(_dropdownSelectHtml);
 
-	__webpack_require__(59);
+	__webpack_require__(64);
 
 	// export component object
 	exports['default'] = {
@@ -2321,19 +2423,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 58 */
+/* 63 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"dropdown-select\" v-bind:class=\"{open: show, dropdown: !dropup, dropup: dropup}\">\r\n    <button\r\n        id=\"{{id}}\"\r\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\r\n        role=\"button\"\r\n        aria-haspopup=\"true\"\r\n        aria-expanded=\"show\"\r\n        v-on:click.prevent=\"toggle($event)\"\r\n        :disabled=\"disabled\">\r\n        <span class=\"checked-items\" v-html=\"displayItem\"></span>\r\n    </button>\r\n    <ul class=\"dropdown-menu\" v-bind:class=\"{'dropdown-menu-right' : position == 'right'}\" aria-labelledby=\"dLabel\">\r\n        <li v-for=\"item in list\">\r\n            <button class=\"dropdown-item\" v-on:click.stop.prevent=\"select(item)\">{{item.text}}</button>\r\n        </li>\r\n    </ul>\r\n</div>\r\n";
 
 /***/ },
-/* 59 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(60);
+	var content = __webpack_require__(65);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2353,7 +2455,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 60 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2367,7 +2469,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 61 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2379,9 +2481,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(62);
+	__webpack_require__(67);
 
-	var _formCheckboxHtml = __webpack_require__(70);
+	var _formCheckboxHtml = __webpack_require__(75);
 
 	var _formCheckboxHtml2 = _interopRequireDefault(_formCheckboxHtml);
 
@@ -2466,37 +2568,37 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 62 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
-
-	__webpack_require__(63);
 
 	__webpack_require__(68);
 
+	__webpack_require__(73);
+
 /***/ },
-/* 63 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(64);
+	__webpack_require__(69);
 
-	__webpack_require__(66);
+	__webpack_require__(71);
 
 	__webpack_require__(10);
 
 /***/ },
-/* 64 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(65);
+	var content = __webpack_require__(70);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2516,7 +2618,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 65 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2530,13 +2632,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 66 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(67);
+	var content = __webpack_require__(72);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2556,7 +2658,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 67 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2570,13 +2672,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 68 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(69);
+	var content = __webpack_require__(74);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2596,7 +2698,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 69 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2610,13 +2712,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 70 */
+/* 75 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n\t<div class=\"checkbox\" v-for=\"item in list\" v-bind:class=\"{ 'checkbox-inline': !vertical, disabled: item.disabled }\">\r\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-checkbox': custom }\">\r\n\t\t\t<input \r\n\t\t\t\tid=\"{{item.id}}\" \r\n\t\t\t\ttype=\"checkbox\" \r\n\t\t\t\tvalue=\"{{item.value}}\" \r\n\t\t\t\tautocomplete=\"off\" \r\n\t\t\t\tv-model=\"item.checked\" \r\n\t\t\t\tv-bind:disabled=\"item.disabled\">\r\n\t\t\t\t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.text}}\r\n\t\t</label>\r\n\t</div>\r\n</fieldset>\r\n";
 
 /***/ },
-/* 71 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2628,9 +2730,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(62);
+	__webpack_require__(67);
 
-	var _formRadioHtml = __webpack_require__(72);
+	var _formRadioHtml = __webpack_require__(77);
 
 	var _formRadioHtml2 = _interopRequireDefault(_formRadioHtml);
 
@@ -2708,13 +2810,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 72 */
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n\t<div class=\"radio\" v-for=\"item in list\" v-bind:class=\"{ 'radio-inline': !vertical, disabled: item.disabled }\">\r\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-radio': custom }\">\r\n\t\t\t<input \r\n\t\t\t\tid=\"{{item.id}}\" \r\n\t\t\t\ttype=\"radio\" \r\n\t\t\t\tname=\"{{name}}\"\r\n\t\t\t\tvalue=\"{{item.value}}\" \r\n\t\t\t\tautocomplete=\"off\" \r\n\t\t\t\tv-model=\"selection\" \r\n\t\t\t\tdisabled=\"{{item.disabled}}\">\r\n\t\t \t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.name}}\r\n\t\t</label>\r\n\t</div>\r\n</fieldset>\r\n";
 
 /***/ },
-/* 73 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2726,11 +2828,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(74);
+	__webpack_require__(79);
 
-	var _utilsHelpersJs = __webpack_require__(47);
+	var _utilsHelpersJs = __webpack_require__(52);
 
-	var _formInputHtml = __webpack_require__(75);
+	var _formInputHtml = __webpack_require__(80);
 
 	var _formInputHtml2 = _interopRequireDefault(_formInputHtml);
 
@@ -2796,7 +2898,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 74 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2804,18 +2906,18 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	__webpack_require__(10);
 
-	__webpack_require__(64);
+	__webpack_require__(69);
 
-	__webpack_require__(66);
+	__webpack_require__(71);
 
 /***/ },
-/* 75 */
+/* 80 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <div class=\"inputClass\">\r\n        <input \r\n        \ttype=\"{{type}}\" \r\n        \tclass=\"form-control {{stateIconType}} {{inputSize}}\" \r\n        \tid=\"{{id}}\" \r\n        \tplaceholder=\"{{placeholder}}\" \r\n        \tv-model=\"model\">\r\n    </div>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>\r\n";
 
 /***/ },
-/* 76 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2827,11 +2929,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(74);
+	__webpack_require__(79);
 
-	var _utilsHelpersJs = __webpack_require__(47);
+	var _utilsHelpersJs = __webpack_require__(52);
 
-	var _formSelectHtml = __webpack_require__(77);
+	var _formSelectHtml = __webpack_require__(82);
 
 	var _formSelectHtml2 = _interopRequireDefault(_formSelectHtml);
 
@@ -2901,13 +3003,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 77 */
+/* 82 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <!-- single select -->\r\n    <select class=\"form-control {{inputSize}}\" id=\"{{id}}\" v-model=\"model\" options=\"allOptions\" v-if=\"!multiple\">\r\n    \t<option v-for=\"option in allOptions\" v-bind:value=\"option.value\">{{option.text}}</option>\r\n    </select>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>\r\n";
 
 /***/ },
-/* 78 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2919,11 +3021,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(74);
+	__webpack_require__(79);
 
-	var _utilsHelpersJs = __webpack_require__(47);
+	var _utilsHelpersJs = __webpack_require__(52);
 
-	var _formTextareaHtml = __webpack_require__(79);
+	var _formTextareaHtml = __webpack_require__(84);
 
 	var _formTextareaHtml2 = _interopRequireDefault(_formTextareaHtml);
 
@@ -2966,115 +3068,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 79 */
+/* 84 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <textarea class=\"form-control\" id=\"{{id}}\" rows=\"{{rows}}\" v-model=\"model\"></textarea>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>";
 
 /***/ },
-/* 80 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-
-	__webpack_require__(81);
-
-/***/ },
-/* 81 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-
-	__webpack_require__(36);
-
-/***/ },
-/* 82 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	__webpack_require__(83);
-
-	var _jumbotronHtml = __webpack_require__(86);
-
-	var _jumbotronHtml2 = _interopRequireDefault(_jumbotronHtml);
-
-	// export component object
-	exports['default'] = {
-	  template: _jumbotronHtml2['default'],
-	  replace: true,
-	  props: {
-	    fluid: {
-	      type: Boolean,
-	      'default': false
-	    }
-	  }
-	};
-	module.exports = exports['default'];
-
-/***/ },
-/* 83 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-
-	__webpack_require__(84);
-
-/***/ },
-/* 84 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(85);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_jumbotron.scss", function() {
-				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_jumbotron.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
 /* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(4)();
-	// imports
+	// import dependencies
+	'use strict';
 
-
-	// module
-	exports.push([module.id, ".jumbotron {\n  padding: 2rem 1rem;\n  margin-bottom: 2rem;\n  background-color: #eceeef;\n  border-radius: 0.3rem; }\n\n.jumbotron-hr {\n  border-top-color: #d0d5d8; }\n\n@media (min-width: 544px) {\n  .jumbotron {\n    padding: 4rem 2rem; } }\n\n.jumbotron-fluid {\n  padding-right: 0;\n  padding-left: 0;\n  border-radius: 0; }\n", ""]);
-
-	// exports
-
+	__webpack_require__(86);
 
 /***/ },
 /* 86 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<div class=\"jumbotron\" v-bind:class=\"{ 'jumbotron-fluid': fluid }\">\r\n  <div class=\"container\">\r\n    <slot></slot>\r\n  </div>\r\n</div>";
+	// import dependencies
+	'use strict';
+
+	__webpack_require__(41);
 
 /***/ },
 /* 87 */
@@ -3091,30 +3106,18 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	__webpack_require__(88);
 
-	var _labelsHtml = __webpack_require__(91);
+	var _jumbotronHtml = __webpack_require__(91);
 
-	var _labelsHtml2 = _interopRequireDefault(_labelsHtml);
+	var _jumbotronHtml2 = _interopRequireDefault(_jumbotronHtml);
 
 	// export component object
 	exports['default'] = {
-	  template: _labelsHtml2['default'],
+	  template: _jumbotronHtml2['default'],
 	  replace: true,
-	  computed: {
-	    labelVariant: function labelVariant() {
-	      return !this.variant || this.variant === 'default' ? 'label-default' : 'label-' + this.variant;
-	    },
-	    labelType: function labelType() {
-	      return !this.type ? '' : 'label-' + this.type;
-	    }
-	  },
 	  props: {
-	    variant: {
-	      type: String,
-	      'default': 'default'
-	    },
-	    type: {
-	      type: String,
-	      'default': ''
+	    fluid: {
+	      type: Boolean,
+	      'default': false
 	    }
 	  }
 	};
@@ -3145,8 +3148,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_labels.scss", function() {
-				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_labels.scss");
+			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_jumbotron.scss", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_jumbotron.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -3164,7 +3167,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".label {\n  display: inline-block;\n  padding: .25em .4em;\n  font-size: 75%;\n  font-weight: bold;\n  line-height: 1;\n  color: #fff;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: baseline;\n  border-radius: 0.25rem; }\n  .label:empty {\n    display: none; }\n\n.btn .label {\n  position: relative;\n  top: -1px; }\n\na.label:focus, a.label:hover {\n  color: #fff;\n  text-decoration: none;\n  cursor: pointer; }\n\n.label-pill {\n  padding-right: .6em;\n  padding-left: .6em;\n  border-radius: 10rem; }\n\n.label-default {\n  background-color: #818a91; }\n  .label-default[href]:focus, .label-default[href]:hover {\n    background-color: #687077; }\n\n.label-primary {\n  background-color: #563d7c; }\n  .label-primary[href]:focus, .label-primary[href]:hover {\n    background-color: #3e2c5a; }\n\n.label-success {\n  background-color: #42b983; }\n  .label-success[href]:focus, .label-success[href]:hover {\n    background-color: #359368; }\n\n.label-info {\n  background-color: #5bc0de; }\n  .label-info[href]:focus, .label-info[href]:hover {\n    background-color: #31b0d5; }\n\n.label-warning {\n  background-color: #f0ad4e; }\n  .label-warning[href]:focus, .label-warning[href]:hover {\n    background-color: #ec971f; }\n\n.label-danger {\n  background-color: #d9534f; }\n  .label-danger[href]:focus, .label-danger[href]:hover {\n    background-color: #c9302c; }\n", ""]);
+	exports.push([module.id, ".jumbotron {\n  padding: 2rem 1rem;\n  margin-bottom: 2rem;\n  background-color: #eceeef;\n  border-radius: 0.3rem; }\n\n.jumbotron-hr {\n  border-top-color: #d0d5d8; }\n\n@media (min-width: 544px) {\n  .jumbotron {\n    padding: 4rem 2rem; } }\n\n.jumbotron-fluid {\n  padding-right: 0;\n  padding-left: 0;\n  border-radius: 0; }\n", ""]);
 
 	// exports
 
@@ -3173,7 +3176,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 91 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"label {{labelVariant}} {{labelType}}\">\r\n\t<slot></slot>\r\n</span>\r\n";
+	module.exports = "<div class=\"jumbotron\" v-bind:class=\"{ 'jumbotron-fluid': fluid }\">\r\n  <div class=\"container\">\r\n    <slot></slot>\r\n  </div>\r\n</div>";
 
 /***/ },
 /* 92 */
@@ -3241,9 +3244,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(38);
+	__webpack_require__(43);
 
-	__webpack_require__(89);
+	__webpack_require__(15);
 
 /***/ },
 /* 94 */
@@ -3345,7 +3348,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	__webpack_require__(99);
 
-	__webpack_require__(36);
+	__webpack_require__(41);
 
 /***/ },
 /* 99 */
@@ -3408,7 +3411,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	__webpack_require__(103);
 
-	var _utilsHelpersJs = __webpack_require__(47);
+	var _utilsHelpersJs = __webpack_require__(52);
 
 	var _modalHtml = __webpack_require__(106);
 
@@ -3438,6 +3441,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      'default': 'md'
 	    },
 	    fade: {
+	      type: Boolean,
+	      'default': true
+	    },
+	    closeOnBackdrop: {
 	      type: Boolean,
 	      'default': true
 	    }
@@ -3475,7 +3482,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    onClickOut: function onClickOut(e) {
 	      // if backdrop clicked, hide modal
-	      if (e.target.id && e.target.id === this.id) {
+	      if (this.closeOnBackdrop && e.target.id && e.target.id === this.id) {
 	        this.hide();
 	      }
 	    }
@@ -3720,7 +3727,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 113 */
 /***/ function(module, exports) {
 
-	module.exports = "<ul v-bind:class=\"{'nav': true, 'nav-stacked': vertical, 'nav-pills': type == 'pills', 'navbar-nav': type == 'navbar' }\">\n  <slot></slot> \n</ul>";
+	module.exports = "<ul v-bind:class=\"{'nav': true, 'nav-stacked': vertical, 'nav-pills': type == 'pills', 'navbar-nav': type == 'navbar' }\">\r\n  <slot></slot> \r\n</ul>";
 
 /***/ },
 /* 114 */
@@ -3739,7 +3746,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	__webpack_require__(115);
 
-	__webpack_require__(74);
+	__webpack_require__(79);
 
 	var _navbarHtml = __webpack_require__(118);
 
@@ -3794,7 +3801,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	__webpack_require__(109);
 
-	__webpack_require__(64);
+	__webpack_require__(69);
 
 /***/ },
 /* 116 */
@@ -4041,7 +4048,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	__webpack_require__(10);
 
-	__webpack_require__(20);
+	__webpack_require__(25);
 
 /***/ },
 /* 126 */
@@ -6209,7 +6216,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	// import ie9 polyfill
 
-	__webpack_require__(41);
+	__webpack_require__(46);
 
 	exports['default'] = {
 	  template: _tablesHtml2['default'],
@@ -6376,7 +6383,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _tabsHtml2 = _interopRequireDefault(_tabsHtml);
 
-	var _utilsHelpersJs = __webpack_require__(47);
+	var _utilsHelpersJs = __webpack_require__(52);
 
 	// this is directly linked to the bootstrap animation timing in _tabs.scss
 	// for browsers that do not support transitions like IE9 just change slide immediately
