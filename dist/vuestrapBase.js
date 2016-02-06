@@ -66,127 +66,127 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(1);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/core\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	/**
 	 * IMPORT EACH COMPONENT
 	 */
 	
-	var _alert = __webpack_require__(6);
+	var _alert = __webpack_require__(1);
 	
 	var _alert2 = _interopRequireDefault(_alert);
 	
-	var _labels = __webpack_require__(13);
+	var _labels = __webpack_require__(3);
 	
 	var _labels2 = _interopRequireDefault(_labels);
 	
-	var _breadcrumb = __webpack_require__(18);
+	var _breadcrumb = __webpack_require__(5);
 	
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 	
-	var _buttonCheckbox = __webpack_require__(23);
+	var _buttonCheckbox = __webpack_require__(7);
 	
 	var _buttonCheckbox2 = _interopRequireDefault(_buttonCheckbox);
 	
-	var _buttonGroup = __webpack_require__(28);
+	var _buttonGroup = __webpack_require__(9);
 	
 	var _buttonGroup2 = _interopRequireDefault(_buttonGroup);
 	
-	var _buttonRadio = __webpack_require__(30);
+	var _buttonRadio = __webpack_require__(11);
 	
 	var _buttonRadio2 = _interopRequireDefault(_buttonRadio);
 	
-	var _buttons = __webpack_require__(32);
+	var _buttons = __webpack_require__(13);
 	
 	var _buttons2 = _interopRequireDefault(_buttons);
 	
-	var _card = __webpack_require__(37);
+	var _card = __webpack_require__(18);
 	
 	var _card2 = _interopRequireDefault(_card);
 	
-	var _carousel = __webpack_require__(47);
+	var _carousel = __webpack_require__(21);
 	
-	var _collapse = __webpack_require__(53);
+	var _collapse = __webpack_require__(24);
 	
-	var _dropdown = __webpack_require__(55);
+	var _dropdown = __webpack_require__(26);
 	
 	var _dropdown2 = _interopRequireDefault(_dropdown);
 	
-	var _dropdownSelect = __webpack_require__(62);
+	var _dropdownSelect = __webpack_require__(30);
 	
 	var _dropdownSelect2 = _interopRequireDefault(_dropdownSelect);
 	
-	var _formCheckbox = __webpack_require__(66);
+	var _formCheckbox = __webpack_require__(34);
 	
 	var _formCheckbox2 = _interopRequireDefault(_formCheckbox);
 	
-	var _formRadio = __webpack_require__(76);
+	var _formRadio = __webpack_require__(39);
 	
 	var _formRadio2 = _interopRequireDefault(_formRadio);
 	
-	var _formInput = __webpack_require__(78);
+	var _formInput = __webpack_require__(41);
 	
 	var _formInput2 = _interopRequireDefault(_formInput);
 	
-	var _formSelect = __webpack_require__(81);
+	var _formSelect = __webpack_require__(43);
 	
 	var _formSelect2 = _interopRequireDefault(_formSelect);
 	
-	var _formTextarea = __webpack_require__(83);
+	var _formTextarea = __webpack_require__(45);
 	
 	var _formTextarea2 = _interopRequireDefault(_formTextarea);
 	
-	var _images = __webpack_require__(85);
+	var _images = __webpack_require__(47);
 	
 	var _images2 = _interopRequireDefault(_images);
 	
-	var _jumbotron = __webpack_require__(87);
+	var _jumbotron = __webpack_require__(48);
 	
 	var _jumbotron2 = _interopRequireDefault(_jumbotron);
 	
 	var _labels3 = _interopRequireDefault(_labels);
 	
-	var _listGroup = __webpack_require__(92);
+	var _listGroup = __webpack_require__(50);
 	
 	var _listGroup2 = _interopRequireDefault(_listGroup);
 	
-	var _media = __webpack_require__(97);
+	var _media = __webpack_require__(54);
 	
 	var _media2 = _interopRequireDefault(_media);
 	
-	var _modal = __webpack_require__(102);
+	var _modal = __webpack_require__(56);
 	
 	var _modal2 = _interopRequireDefault(_modal);
 	
-	var _nav = __webpack_require__(107);
+	var _nav = __webpack_require__(58);
 	
-	var _navbar = __webpack_require__(114);
+	var _navbar = __webpack_require__(62);
 	
 	var _navbar2 = _interopRequireDefault(_navbar);
 	
-	var _pager = __webpack_require__(119);
+	var _pager = __webpack_require__(64);
 	
 	var _pager2 = _interopRequireDefault(_pager);
 	
-	var _pagination = __webpack_require__(124);
+	var _pagination = __webpack_require__(66);
 	
 	var _pagination2 = _interopRequireDefault(_pagination);
 	
-	var _popover = __webpack_require__(129);
+	var _popover = __webpack_require__(68);
 	
 	var _popover2 = _interopRequireDefault(_popover);
 	
-	var _progress = __webpack_require__(135);
+	var _progress = __webpack_require__(70);
 	
 	var _progress2 = _interopRequireDefault(_progress);
 	
-	var _tables = __webpack_require__(140);
+	var _tables = __webpack_require__(72);
 	
 	var _tables2 = _interopRequireDefault(_tables);
 	
-	var _tabs = __webpack_require__(145);
+	var _tabs = __webpack_require__(74);
 	
-	var _tooltip = __webpack_require__(147);
+	var _tooltip = __webpack_require__(76);
 	
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 	
@@ -237,24 +237,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// import core stuff
-	'use strict';
-	
-	__webpack_require__(2);
-
-/***/ },
-/* 2 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// import dependencies
 	'use strict';
 	
@@ -264,9 +246,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(7);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/alert\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _alertHtml = __webpack_require__(12);
+	var _alertHtml = __webpack_require__(2);
 	
 	var _alertHtml2 = _interopRequireDefault(_alertHtml);
 	
@@ -306,38 +288,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 7 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(8);
-	
-	__webpack_require__(10);
-
-/***/ },
-/* 8 */
+/* 2 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<div class=\"alert {{alertState}} {{ dismissible ? 'alert-dismissible' : '' }} fade in\" role=\"alert\" v-show=\"show\">\n    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\" v-if=\"dismissible\" v-on:click.stop.prevent=\"dismiss\">\n        <span aria-hidden=\"true\">&times;</span>\n        <span class=\"sr-only\">Close</span>\n    </button>\n    <slot></slot>\n</div>\n";
 
 /***/ },
-/* 9 */,
-/* 10 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 11 */,
-/* 12 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"alert {{alertState}} {{ dismissible ? 'alert-dismissible' : '' }} fade in\" role=\"alert\" v-show=\"show\">\r\n    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\" v-if=\"dismissible\" v-on:click.stop.prevent=\"dismiss\">\r\n        <span aria-hidden=\"true\">&times;</span>\r\n        <span class=\"sr-only\">Close</span>\r\n    </button>\r\n    <slot></slot>\r\n</div>\r\n";
-
-/***/ },
-/* 13 */
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -349,9 +306,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(14);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/labels\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _labelsHtml = __webpack_require__(17);
+	var _labelsHtml = __webpack_require__(4);
 	
 	var _labelsHtml2 = _interopRequireDefault(_labelsHtml);
 	
@@ -381,29 +338,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(15);
-
-/***/ },
-/* 15 */
+/* 4 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<span class=\"label {{labelVariant}} {{labelType}}\">\n\t<slot></slot>\n</span>\n";
 
 /***/ },
-/* 16 */,
-/* 17 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"label {{labelVariant}} {{labelType}}\">\r\n\t<slot></slot>\r\n</span>\r\n";
-
-/***/ },
-/* 18 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -415,9 +356,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(19);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/breadcrumb\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _breadcrumbHtml = __webpack_require__(22);
+	var _breadcrumbHtml = __webpack_require__(6);
 	
 	var _breadcrumbHtml2 = _interopRequireDefault(_breadcrumbHtml);
 	
@@ -436,29 +377,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 19 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(20);
-
-/***/ },
-/* 20 */
+/* 6 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<ol class=\"breadcrumb\">\n    <li v-for=\"item in list\" v-bind:class=\"{ active: active }\">\n        <a href=\"{{item.href}}\" v-if=\"!active\">{{item.text}}</a>\n        <span v-if=\"active\">{{item.text}}</span>\n    </li>\n</ol>";
 
 /***/ },
-/* 21 */,
-/* 22 */
-/***/ function(module, exports) {
-
-	module.exports = "<ol class=\"breadcrumb\">\r\n    <li v-for=\"item in list\" v-bind:class=\"{ active: active }\">\r\n        <a href=\"{{item.href}}\" v-if=\"!active\">{{item.text}}</a>\r\n        <span v-if=\"active\">{{item.text}}</span>\r\n    </li>\r\n</ol>";
-
-/***/ },
-/* 23 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -470,9 +395,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(24);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/button-group\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _buttonCheckboxHtml = __webpack_require__(27);
+	var _buttonCheckboxHtml = __webpack_require__(8);
 	
 	var _buttonCheckboxHtml2 = _interopRequireDefault(_buttonCheckboxHtml);
 	
@@ -571,31 +496,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 24 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(25);
-	
-	__webpack_require__(10);
-
-/***/ },
-/* 25 */
+/* 8 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\n  <label class=\"btn {{btnVariant}} {{btnSize}} {{ checked($index) ? 'active' : '' }}\" v-for=\"item in list\">\n  <input \n  \ttype=\"checkbox\" \n  \tvalue=\"{{item.value}}\" \n  \tautocomplete=\"off\" \n  \tv-model=\"item.checked\" \n  \t:disabled=\"item.disabled\">\n  \t{{item.text}}\n  </label>\n</div>\n";
 
 /***/ },
-/* 26 */,
-/* 27 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n  <label class=\"btn {{btnVariant}} {{btnSize}} {{ checked($index) ? 'active' : '' }}\" v-for=\"item in list\">\r\n  <input \r\n  \ttype=\"checkbox\" \r\n  \tvalue=\"{{item.value}}\" \r\n  \tautocomplete=\"off\" \r\n  \tv-model=\"item.checked\" \r\n  \t:disabled=\"item.disabled\">\r\n  \t{{item.text}}\r\n  </label>\r\n</div>\r\n";
-
-/***/ },
-/* 28 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -607,9 +514,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(24);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/button-group\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _buttonGroupHtml = __webpack_require__(29);
+	var _buttonGroupHtml = __webpack_require__(10);
 	
 	var _buttonGroupHtml2 = _interopRequireDefault(_buttonGroupHtml);
 	
@@ -627,13 +534,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 29 */
+/* 10 */
 /***/ function(module, exports) {
 
-	module.exports = "<div role=\"group\" aria-label=\"Basic example\" v-bind:class=\"{ 'btn-group': true, btn-group-vertical': vertical }\">\r\n\t<slot></slot>\r\n</div>\r\n";
+	module.exports = "<div role=\"group\" aria-label=\"Basic example\" v-bind:class=\"{ 'btn-group': true, btn-group-vertical': vertical }\">\n\t<slot></slot>\n</div>\n";
 
 /***/ },
-/* 30 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -645,9 +552,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(24);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/button-group\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _buttonRadioHtml = __webpack_require__(31);
+	var _buttonRadioHtml = __webpack_require__(12);
 	
 	var _buttonRadioHtml2 = _interopRequireDefault(_buttonRadioHtml);
 	
@@ -722,13 +629,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 31 */
+/* 12 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n    <label \r\n    \tclass=\"btn {{btnVariant}} {{btnSize}} {{ selection == item.value ? 'active' : '' }}\" \r\n    \tv-for=\"item in list\">\r\n      <input \r\n      \ttype=\"radio\" \r\n      \tname=\"options\" \r\n      \tvalue=\"{{item.value}}\" \r\n      \tautocomplete=\"off\" \r\n      \tv-model=\"selection\"\r\n        :disabled=\"item.disabled\"> {{item.text}}\r\n    </label>\r\n</div>\r\n";
+	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\n    <label \n    \tclass=\"btn {{btnVariant}} {{btnSize}} {{ selection == item.value ? 'active' : '' }}\" \n    \tv-for=\"item in list\">\n      <input \n      \ttype=\"radio\" \n      \tname=\"options\" \n      \tvalue=\"{{item.value}}\" \n      \tautocomplete=\"off\" \n      \tv-model=\"selection\"\n        :disabled=\"item.disabled\"> {{item.text}}\n    </label>\n</div>\n";
 
 /***/ },
-/* 32 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -739,13 +646,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(33);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/buttons\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _buttonsHtml = __webpack_require__(34);
+	var _buttonsHtml = __webpack_require__(14);
 	
 	var _buttonsHtml2 = _interopRequireDefault(_buttonsHtml);
 	
-	__webpack_require__(35);
+	__webpack_require__(15);
 	
 	// export component object
 	exports['default'] = {
@@ -800,29 +707,294 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 33 */
+/* 14 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}} {{btnDisabled}}\">\n\t<template v-if=\"!href\"><slot></slot></template>\n\t<a v-bind:href=\"href\" class=\"{{btnDisabled}}\" v-bind:role=\"role\" v-if=\"href\"><slot></slot></a>\n</span>";
+
+/***/ },
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// import dependencies
-	'use strict';
+	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
-	__webpack_require__(10);
+	// load the styles
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./buttons-override.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(17)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./buttons-override.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./buttons-override.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
-/* 34 */
-/***/ function(module, exports) {
+/* 16 */,
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<span class=\"btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}} {{btnDisabled}}\">\r\n\t<template v-if=\"!href\"><slot></slot></template>\r\n\t<a v-bind:href=\"href\" class=\"{{btnDisabled}}\" v-bind:role=\"role\" v-if=\"href\"><slot></slot></a>\r\n</span>";
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	var stylesInDom = {},
+		memoize = function(fn) {
+			var memo;
+			return function () {
+				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+				return memo;
+			};
+		},
+		isOldIE = memoize(function() {
+			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+		}),
+		getHeadElement = memoize(function () {
+			return document.head || document.getElementsByTagName("head")[0];
+		}),
+		singletonElement = null,
+		singletonCounter = 0,
+		styleElementsInsertedAtTop = [];
+	
+	module.exports = function(list, options) {
+		if(false) {
+			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+		}
+	
+		options = options || {};
+		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+		// tags it will allow on a page
+		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
+	
+		// By default, add <style> tags to the bottom of <head>.
+		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
+	
+		var styles = listToStyles(list);
+		addStylesToDom(styles, options);
+	
+		return function update(newList) {
+			var mayRemove = [];
+			for(var i = 0; i < styles.length; i++) {
+				var item = styles[i];
+				var domStyle = stylesInDom[item.id];
+				domStyle.refs--;
+				mayRemove.push(domStyle);
+			}
+			if(newList) {
+				var newStyles = listToStyles(newList);
+				addStylesToDom(newStyles, options);
+			}
+			for(var i = 0; i < mayRemove.length; i++) {
+				var domStyle = mayRemove[i];
+				if(domStyle.refs === 0) {
+					for(var j = 0; j < domStyle.parts.length; j++)
+						domStyle.parts[j]();
+					delete stylesInDom[domStyle.id];
+				}
+			}
+		};
+	}
+	
+	function addStylesToDom(styles, options) {
+		for(var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+			if(domStyle) {
+				domStyle.refs++;
+				for(var j = 0; j < domStyle.parts.length; j++) {
+					domStyle.parts[j](item.parts[j]);
+				}
+				for(; j < item.parts.length; j++) {
+					domStyle.parts.push(addStyle(item.parts[j], options));
+				}
+			} else {
+				var parts = [];
+				for(var j = 0; j < item.parts.length; j++) {
+					parts.push(addStyle(item.parts[j], options));
+				}
+				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+			}
+		}
+	}
+	
+	function listToStyles(list) {
+		var styles = [];
+		var newStyles = {};
+		for(var i = 0; i < list.length; i++) {
+			var item = list[i];
+			var id = item[0];
+			var css = item[1];
+			var media = item[2];
+			var sourceMap = item[3];
+			var part = {css: css, media: media, sourceMap: sourceMap};
+			if(!newStyles[id])
+				styles.push(newStyles[id] = {id: id, parts: [part]});
+			else
+				newStyles[id].parts.push(part);
+		}
+		return styles;
+	}
+	
+	function insertStyleElement(options, styleElement) {
+		var head = getHeadElement();
+		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
+		if (options.insertAt === "top") {
+			if(!lastStyleElementInsertedAtTop) {
+				head.insertBefore(styleElement, head.firstChild);
+			} else if(lastStyleElementInsertedAtTop.nextSibling) {
+				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
+			} else {
+				head.appendChild(styleElement);
+			}
+			styleElementsInsertedAtTop.push(styleElement);
+		} else if (options.insertAt === "bottom") {
+			head.appendChild(styleElement);
+		} else {
+			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+		}
+	}
+	
+	function removeStyleElement(styleElement) {
+		styleElement.parentNode.removeChild(styleElement);
+		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
+		if(idx >= 0) {
+			styleElementsInsertedAtTop.splice(idx, 1);
+		}
+	}
+	
+	function createStyleElement(options) {
+		var styleElement = document.createElement("style");
+		styleElement.type = "text/css";
+		insertStyleElement(options, styleElement);
+		return styleElement;
+	}
+	
+	function createLinkElement(options) {
+		var linkElement = document.createElement("link");
+		linkElement.rel = "stylesheet";
+		insertStyleElement(options, linkElement);
+		return linkElement;
+	}
+	
+	function addStyle(obj, options) {
+		var styleElement, update, remove;
+	
+		if (options.singleton) {
+			var styleIndex = singletonCounter++;
+			styleElement = singletonElement || (singletonElement = createStyleElement(options));
+			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
+			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
+		} else if(obj.sourceMap &&
+			typeof URL === "function" &&
+			typeof URL.createObjectURL === "function" &&
+			typeof URL.revokeObjectURL === "function" &&
+			typeof Blob === "function" &&
+			typeof btoa === "function") {
+			styleElement = createLinkElement(options);
+			update = updateLink.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+				if(styleElement.href)
+					URL.revokeObjectURL(styleElement.href);
+			};
+		} else {
+			styleElement = createStyleElement(options);
+			update = applyToTag.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+			};
+		}
+	
+		update(obj);
+	
+		return function updateStyle(newObj) {
+			if(newObj) {
+				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
+					return;
+				update(obj = newObj);
+			} else {
+				remove();
+			}
+		};
+	}
+	
+	var replaceText = (function () {
+		var textStore = [];
+	
+		return function (index, replacement) {
+			textStore[index] = replacement;
+			return textStore.filter(Boolean).join('\n');
+		};
+	})();
+	
+	function applyToSingletonTag(styleElement, index, remove, obj) {
+		var css = remove ? "" : obj.css;
+	
+		if (styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = replaceText(index, css);
+		} else {
+			var cssNode = document.createTextNode(css);
+			var childNodes = styleElement.childNodes;
+			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
+			if (childNodes.length) {
+				styleElement.insertBefore(cssNode, childNodes[index]);
+			} else {
+				styleElement.appendChild(cssNode);
+			}
+		}
+	}
+	
+	function applyToTag(styleElement, obj) {
+		var css = obj.css;
+		var media = obj.media;
+		var sourceMap = obj.sourceMap;
+	
+		if(media) {
+			styleElement.setAttribute("media", media)
+		}
+	
+		if(styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = css;
+		} else {
+			while(styleElement.firstChild) {
+				styleElement.removeChild(styleElement.firstChild);
+			}
+			styleElement.appendChild(document.createTextNode(css));
+		}
+	}
+	
+	function updateLink(linkElement, obj) {
+		var css = obj.css;
+		var media = obj.media;
+		var sourceMap = obj.sourceMap;
+	
+		if(sourceMap) {
+			// http://stackoverflow.com/a/26603875
+			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+		}
+	
+		var blob = new Blob([css], { type: "text/css" });
+	
+		var oldSrc = linkElement.href;
+	
+		linkElement.href = URL.createObjectURL(blob);
+	
+		if(oldSrc)
+			URL.revokeObjectURL(oldSrc);
+	}
+
 
 /***/ },
-/* 35 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 36 */,
-/* 37 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -834,15 +1006,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(38);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/card\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _cardHtml = __webpack_require__(45);
+	var _cardHtml = __webpack_require__(19);
 	
 	var _cardHtml2 = _interopRequireDefault(_cardHtml);
 	
 	// import polyfill for IE9
 	
-	__webpack_require__(46);
+	__webpack_require__(20);
 	
 	// export component object
 	exports['default'] = {
@@ -888,49 +1060,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 38 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(39);
-	
-	__webpack_require__(10);
-	
-	__webpack_require__(41);
-	
-	__webpack_require__(43);
-
-/***/ },
-/* 39 */
+/* 19 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<div class=\"card {{cardVariant}} {{cardAlign}} {{cardInverse}}\">\n    <slot></slot>\n</div>\n";
 
 /***/ },
-/* 40 */,
-/* 41 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 42 */,
-/* 43 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 44 */,
-/* 45 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"card {{cardVariant}} {{cardAlign}} {{cardInverse}}\">\r\n    <slot></slot>\r\n</div>\r\n";
-
-/***/ },
-/* 46 */
+/* 20 */
 /***/ function(module, exports) {
 
 	/*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js*/
@@ -1030,7 +1166,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 47 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1059,17 +1195,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(48);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/carousel\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _carouselHtml = __webpack_require__(51);
+	var _carouselHtml = __webpack_require__(22);
 	
 	var _carouselHtml2 = _interopRequireDefault(_carouselHtml);
 	
-	var _utilsHelpersJs = __webpack_require__(52);
+	var _utilsHelpersJs = __webpack_require__(23);
 	
 	// import polyfill for IE9
 	
-	__webpack_require__(46);
+	__webpack_require__(20);
 	
 	// this is directly linked to the bootstrap animation timing in _carousel.scss
 	// for browsers that do not support transitions like IE9 just change slide immediately
@@ -1213,31 +1349,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.slide = slide;
 
 /***/ },
-/* 48 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(41);
-	
-	__webpack_require__(49);
-
-/***/ },
-/* 49 */
+/* 22 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<div class=\"carousel slide\" data-ride=\"carousel\" v-on:mouseenter=\"pause()\" v-on:mouseleave=\"start()\">\n\n    <!-- Indicators -->\n    <ol class=\"carousel-indicators\" v-show=\"indicators\">\n        <li v-for=\"item in slides\" v-bind:class=\"{'active': item == index}\" v-on:click=\"changeSlide($index)\"></li>\n    </ol>\n\n    <!-- Wrapper for slides -->\n    <div class=\"carousel-inner\" role=\"listbox\">\n        <slot></slot>\n    </div>\n\n    <!-- Controls -->\n    <a class=\"left carousel-control\" href=\"#\" role=\"button\" v-on:click.prevent=\"prev\" v-show=\"controls\">\n        <span class=\"icon-prev\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Previous</span>\n    </a>\n    <a class=\"right carousel-control\" href=\"#\" role=\"button\" v-on:click.prevent=\"next\" v-show=\"controls\">\n        <span class=\"icon-next\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Next</span>\n    </a>\n\n</div>";
 
 /***/ },
-/* 50 */,
-/* 51 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"carousel slide\" data-ride=\"carousel\" v-on:mouseenter=\"pause()\" v-on:mouseleave=\"start()\">\r\n\r\n    <!-- Indicators -->\r\n    <ol class=\"carousel-indicators\" v-show=\"indicators\">\r\n        <li v-for=\"item in slides\" v-bind:class=\"{'active': item == index}\" v-on:click=\"changeSlide($index)\"></li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\" role=\"listbox\">\r\n        <slot></slot>\r\n    </div>\r\n\r\n    <!-- Controls -->\r\n    <a class=\"left carousel-control\" href=\"#\" role=\"button\" v-on:click.prevent=\"prev\" v-show=\"controls\">\r\n        <span class=\"icon-prev\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#\" role=\"button\" v-on:click.prevent=\"next\" v-show=\"controls\">\r\n        <span class=\"icon-next\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Next</span>\r\n    </a>\r\n\r\n</div>";
-
-/***/ },
-/* 52 */
+/* 23 */
 /***/ function(module, exports) {
 
 	/**
@@ -1272,7 +1390,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 53 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1284,15 +1402,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _collapseHtml = __webpack_require__(54);
+	var _collapseHtml = __webpack_require__(25);
 	
 	var _collapseHtml2 = _interopRequireDefault(_collapseHtml);
 	
-	var _utilsHelpersJs = __webpack_require__(52);
+	var _utilsHelpersJs = __webpack_require__(23);
 	
 	// import polyfill for IE9
 	
-	__webpack_require__(46);
+	__webpack_require__(20);
 	
 	// for browsers that do not support transitions like IE9 just change immediately
 	var TRANSITION_DURATION = (0, _utilsHelpersJs.csstransitions)() ? 350 : 0;
@@ -1411,13 +1529,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.collapseToggle = collapseToggle;
 
 /***/ },
-/* 54 */
+/* 25 */
 /***/ function(module, exports) {
 
-	module.exports = "<div id=\"{{id}}\" class=\"collapse\">\r\n  <slot></slot>\r\n</div>";
+	module.exports = "<div id=\"{{id}}\" class=\"collapse\">\n  <slot></slot>\n</div>";
 
 /***/ },
-/* 55 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1429,13 +1547,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(56);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/dropdown\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _dropdownHtml = __webpack_require__(59);
+	var _dropdownHtml = __webpack_require__(27);
 	
 	var _dropdownHtml2 = _interopRequireDefault(_dropdownHtml);
 	
-	__webpack_require__(60);
+	__webpack_require__(28);
 	
 	// export component object
 	exports['default'] = {
@@ -1505,38 +1623,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 56 */
+/* 27 */
+/***/ function(module, exports) {
+
+	module.exports = "<div v-bind:class=\"{ open: show, dropdown: !dropup, dropup: dropup}\">\n    <button\n        id=\"dLabel\"\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\" role=\"button\"\n        aria-haspopup=\"true\"\n        aria-expanded=\"{{show}}\"\n        v-on:click.prevent=\"toggle($event)\"\n        :disabled=\"disabled\">\n        <span v-html=\"text\" v-show=\"text\"></span>\n        <span class=\"caret\"></span>\n    </button>\n    <slot></slot>\n</div>\n";
+
+/***/ },
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// import dependencies
-	'use strict';
+	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
-	__webpack_require__(57);
-	
-	__webpack_require__(10);
+	// load the styles
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./dropdown-override.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(17)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./dropdown-override.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./dropdown-override.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
-/* 57 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 58 */,
-/* 59 */
-/***/ function(module, exports) {
-
-	module.exports = "<div v-bind:class=\"{ open: show, dropdown: !dropup, dropup: dropup}\">\r\n    <button\r\n        id=\"dLabel\"\r\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\" role=\"button\"\r\n        aria-haspopup=\"true\"\r\n        aria-expanded=\"{{show}}\"\r\n        v-on:click.prevent=\"toggle($event)\"\r\n        :disabled=\"disabled\">\r\n        <span v-html=\"text\" v-show=\"text\"></span>\r\n        <span class=\"caret\"></span>\r\n    </button>\r\n    <slot></slot>\r\n</div>\r\n";
-
-/***/ },
-/* 60 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 61 */,
-/* 62 */
+/* 29 */,
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1548,13 +1668,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(56);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/dropdown\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _dropdownSelectHtml = __webpack_require__(63);
+	var _dropdownSelectHtml = __webpack_require__(31);
 	
 	var _dropdownSelectHtml2 = _interopRequireDefault(_dropdownSelectHtml);
 	
-	__webpack_require__(64);
+	__webpack_require__(32);
 	
 	// export component object
 	exports['default'] = {
@@ -1686,20 +1806,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 63 */
+/* 31 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"dropdown-select\" v-bind:class=\"{open: show, dropdown: !dropup, dropup: dropup}\">\r\n    <button\r\n        id=\"{{id}}\"\r\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\r\n        role=\"button\"\r\n        aria-haspopup=\"true\"\r\n        aria-expanded=\"show\"\r\n        v-on:click.prevent=\"toggle($event)\"\r\n        :disabled=\"disabled\">\r\n        <span class=\"checked-items\" v-html=\"displayItem\"></span>\r\n    </button>\r\n    <ul class=\"dropdown-menu\" v-bind:class=\"{'dropdown-menu-right' : position == 'right'}\" aria-labelledby=\"dLabel\">\r\n        <li v-for=\"item in list\">\r\n            <button class=\"dropdown-item\" v-on:click.stop.prevent=\"select(item)\">{{item.text}}</button>\r\n        </li>\r\n    </ul>\r\n</div>\r\n";
+	module.exports = "<div class=\"dropdown-select\" v-bind:class=\"{open: show, dropdown: !dropup, dropup: dropup}\">\n    <button\n        id=\"{{id}}\"\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\n        role=\"button\"\n        aria-haspopup=\"true\"\n        aria-expanded=\"show\"\n        v-on:click.prevent=\"toggle($event)\"\n        :disabled=\"disabled\">\n        <span class=\"checked-items\" v-html=\"displayItem\"></span>\n    </button>\n    <ul class=\"dropdown-menu\" v-bind:class=\"{'dropdown-menu-right' : position == 'right'}\" aria-labelledby=\"dLabel\">\n        <li v-for=\"item in list\">\n            <button class=\"dropdown-item\" v-on:click.stop.prevent=\"select(item)\">{{item.text}}</button>\n        </li>\n    </ul>\n</div>\n";
 
 /***/ },
-/* 64 */
-/***/ function(module, exports) {
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
 
-	// removed by extract-text-webpack-plugin
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./dropdown-override.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(17)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./dropdown-override.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./dropdown-override.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
-/* 65 */,
-/* 66 */
+/* 33 */,
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1711,9 +1851,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(67);
+	__webpack_require__(35);
 	
-	var _formCheckboxHtml = __webpack_require__(75);
+	var _formCheckboxHtml = __webpack_require__(38);
 	
 	var _formCheckboxHtml2 = _interopRequireDefault(_formCheckboxHtml);
 	
@@ -1798,58 +1938,51 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 67 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(68);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/custom-forms\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	__webpack_require__(73);
+	__webpack_require__(36);
 
 /***/ },
-/* 68 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// import dependencies
-	'use strict';
+	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
-	__webpack_require__(69);
-	
-	__webpack_require__(71);
-	
-	__webpack_require__(10);
+	// load the styles
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./custom-override.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(17)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./custom-override.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./custom-override.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
-/* 69 */
+/* 37 */,
+/* 38 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<fieldset class=\"form-group {{inputState}}\">\n\t<div class=\"checkbox\" v-for=\"item in list\" v-bind:class=\"{ 'checkbox-inline': !vertical, disabled: item.disabled }\">\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-checkbox': custom }\">\n\t\t\t<input \n\t\t\t\tid=\"{{item.id}}\" \n\t\t\t\ttype=\"checkbox\" \n\t\t\t\tvalue=\"{{item.value}}\" \n\t\t\t\tautocomplete=\"off\" \n\t\t\t\tv-model=\"item.checked\" \n\t\t\t\tv-bind:disabled=\"item.disabled\">\n\t\t\t\t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.text}}\n\t\t</label>\n\t</div>\n</fieldset>\n";
 
 /***/ },
-/* 70 */,
-/* 71 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 72 */,
-/* 73 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 74 */,
-/* 75 */
-/***/ function(module, exports) {
-
-	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n\t<div class=\"checkbox\" v-for=\"item in list\" v-bind:class=\"{ 'checkbox-inline': !vertical, disabled: item.disabled }\">\r\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-checkbox': custom }\">\r\n\t\t\t<input \r\n\t\t\t\tid=\"{{item.id}}\" \r\n\t\t\t\ttype=\"checkbox\" \r\n\t\t\t\tvalue=\"{{item.value}}\" \r\n\t\t\t\tautocomplete=\"off\" \r\n\t\t\t\tv-model=\"item.checked\" \r\n\t\t\t\tv-bind:disabled=\"item.disabled\">\r\n\t\t\t\t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.text}}\r\n\t\t</label>\r\n\t</div>\r\n</fieldset>\r\n";
-
-/***/ },
-/* 76 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1861,9 +1994,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(67);
+	__webpack_require__(35);
 	
-	var _formRadioHtml = __webpack_require__(77);
+	var _formRadioHtml = __webpack_require__(40);
 	
 	var _formRadioHtml2 = _interopRequireDefault(_formRadioHtml);
 	
@@ -1941,13 +2074,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 77 */
+/* 40 */
 /***/ function(module, exports) {
 
-	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n\t<div class=\"radio\" v-for=\"item in list\" v-bind:class=\"{ 'radio-inline': !vertical, disabled: item.disabled }\">\r\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-radio': custom }\">\r\n\t\t\t<input \r\n\t\t\t\tid=\"{{item.id}}\" \r\n\t\t\t\ttype=\"radio\" \r\n\t\t\t\tname=\"{{name}}\"\r\n\t\t\t\tvalue=\"{{item.value}}\" \r\n\t\t\t\tautocomplete=\"off\" \r\n\t\t\t\tv-model=\"selection\" \r\n\t\t\t\tdisabled=\"{{item.disabled}}\">\r\n\t\t \t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.name}}\r\n\t\t</label>\r\n\t</div>\r\n</fieldset>\r\n";
+	module.exports = "<fieldset class=\"form-group {{inputState}}\">\n\t<div class=\"radio\" v-for=\"item in list\" v-bind:class=\"{ 'radio-inline': !vertical, disabled: item.disabled }\">\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-radio': custom }\">\n\t\t\t<input \n\t\t\t\tid=\"{{item.id}}\" \n\t\t\t\ttype=\"radio\" \n\t\t\t\tname=\"{{name}}\"\n\t\t\t\tvalue=\"{{item.value}}\" \n\t\t\t\tautocomplete=\"off\" \n\t\t\t\tv-model=\"selection\" \n\t\t\t\tdisabled=\"{{item.disabled}}\">\n\t\t \t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.name}}\n\t\t</label>\n\t</div>\n</fieldset>\n";
 
 /***/ },
-/* 78 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1959,11 +2092,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(79);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/forms\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _utilsHelpersJs = __webpack_require__(52);
+	var _utilsHelpersJs = __webpack_require__(23);
 	
-	var _formInputHtml = __webpack_require__(80);
+	var _formInputHtml = __webpack_require__(42);
 	
 	var _formInputHtml2 = _interopRequireDefault(_formInputHtml);
 	
@@ -2029,26 +2162,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 79 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(10);
-	
-	__webpack_require__(69);
-	
-	__webpack_require__(71);
-
-/***/ },
-/* 80 */
+/* 42 */
 /***/ function(module, exports) {
 
-	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <div class=\"inputClass\">\r\n        <input \r\n        \ttype=\"{{type}}\" \r\n        \tclass=\"form-control {{stateIconType}} {{inputSize}}\" \r\n        \tid=\"{{id}}\" \r\n        \tplaceholder=\"{{placeholder}}\" \r\n        \tv-model=\"model\">\r\n    </div>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>\r\n";
+	module.exports = "<fieldset class=\"form-group {{inputState}}\">\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\n    <div class=\"inputClass\">\n        <input \n        \ttype=\"{{type}}\" \n        \tclass=\"form-control {{stateIconType}} {{inputSize}}\" \n        \tid=\"{{id}}\" \n        \tplaceholder=\"{{placeholder}}\" \n        \tv-model=\"model\">\n    </div>\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\n</fieldset>\n";
 
 /***/ },
-/* 81 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2060,11 +2180,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(79);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/forms\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _utilsHelpersJs = __webpack_require__(52);
+	var _utilsHelpersJs = __webpack_require__(23);
 	
-	var _formSelectHtml = __webpack_require__(82);
+	var _formSelectHtml = __webpack_require__(44);
 	
 	var _formSelectHtml2 = _interopRequireDefault(_formSelectHtml);
 	
@@ -2134,13 +2254,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 82 */
+/* 44 */
 /***/ function(module, exports) {
 
-	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <!-- single select -->\r\n    <select class=\"form-control {{inputSize}}\" id=\"{{id}}\" v-model=\"model\" options=\"allOptions\" v-if=\"!multiple\">\r\n    \t<option v-for=\"option in allOptions\" v-bind:value=\"option.value\">{{option.text}}</option>\r\n    </select>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>\r\n";
+	module.exports = "<fieldset class=\"form-group {{inputState}}\">\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\n    <!-- single select -->\n    <select class=\"form-control {{inputSize}}\" id=\"{{id}}\" v-model=\"model\" options=\"allOptions\" v-if=\"!multiple\">\n    \t<option v-for=\"option in allOptions\" v-bind:value=\"option.value\">{{option.text}}</option>\n    </select>\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\n</fieldset>\n";
 
 /***/ },
-/* 83 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2152,11 +2272,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(79);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/forms\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _utilsHelpersJs = __webpack_require__(52);
+	var _utilsHelpersJs = __webpack_require__(23);
 	
-	var _formTextareaHtml = __webpack_require__(84);
+	var _formTextareaHtml = __webpack_require__(46);
 	
 	var _formTextareaHtml2 = _interopRequireDefault(_formTextareaHtml);
 	
@@ -2199,31 +2319,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 84 */
+/* 46 */
 /***/ function(module, exports) {
 
-	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <textarea class=\"form-control\" id=\"{{id}}\" rows=\"{{rows}}\" v-model=\"model\"></textarea>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>";
+	module.exports = "<fieldset class=\"form-group {{inputState}}\">\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\n    <textarea class=\"form-control\" id=\"{{id}}\" rows=\"{{rows}}\" v-model=\"model\"></textarea>\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\n</fieldset>";
 
 /***/ },
-/* 85 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(86);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/images\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 /***/ },
-/* 86 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(41);
-
-/***/ },
-/* 87 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2235,9 +2346,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(88);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/jumbotron\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _jumbotronHtml = __webpack_require__(91);
+	var _jumbotronHtml = __webpack_require__(49);
 	
 	var _jumbotronHtml2 = _interopRequireDefault(_jumbotronHtml);
 	
@@ -2255,29 +2366,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 88 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(89);
-
-/***/ },
-/* 89 */
+/* 49 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<div class=\"jumbotron\" v-bind:class=\"{ 'jumbotron-fluid': fluid }\">\n  <div class=\"container\">\n    <slot></slot>\n  </div>\n</div>";
 
 /***/ },
-/* 90 */,
-/* 91 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"jumbotron\" v-bind:class=\"{ 'jumbotron-fluid': fluid }\">\r\n  <div class=\"container\">\r\n    <slot></slot>\r\n  </div>\r\n</div>";
-
-/***/ },
-/* 92 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2289,13 +2384,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(93);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/list-group\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _listGroupHtml = __webpack_require__(94);
+	var _listGroupHtml = __webpack_require__(51);
 	
 	var _listGroupHtml2 = _interopRequireDefault(_listGroupHtml);
 	
-	__webpack_require__(95);
+	__webpack_require__(52);
 	
 	// export component object
 	var listGroup = {
@@ -2336,31 +2431,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.listGroupItem = listGroupItem;
 
 /***/ },
-/* 93 */
+/* 51 */
+/***/ function(module, exports) {
+
+	module.exports = "<ul v-bind:class=\"{'list-group': true, 'list-group-flush': flush}\">\n  <slot></slot>\n</ul>";
+
+/***/ },
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// import dependencies
-	'use strict';
+	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
-	__webpack_require__(43);
-	
-	__webpack_require__(15);
+	// load the styles
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./list-group-override.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(17)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./list-group-override.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./list-group-override.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
-/* 94 */
-/***/ function(module, exports) {
-
-	module.exports = "<ul v-bind:class=\"{'list-group': true, 'list-group-flush': flush}\">\r\n  <slot></slot>\r\n</ul>";
-
-/***/ },
-/* 95 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 96 */,
-/* 97 */
+/* 53 */,
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2372,9 +2476,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(98);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/media\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _mediaHtml = __webpack_require__(101);
+	var _mediaHtml = __webpack_require__(55);
 	
 	var _mediaHtml2 = _interopRequireDefault(_mediaHtml);
 	
@@ -2405,31 +2509,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 98 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(99);
-	
-	__webpack_require__(41);
-
-/***/ },
-/* 99 */
+/* 55 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<div class=\"media\">\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-left'\">\n  \t<slot name=\"aside\">\n  </div>\n  <div class=\"media-body\">\n  \t<slot name=\"body\">\n  </div>\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-right'\">\n  \t<slot name=\"aside\">\n  </div>\n</div>";
 
 /***/ },
-/* 100 */,
-/* 101 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"media\">\r\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-left'\">\r\n  \t<slot name=\"aside\">\r\n  </div>\r\n  <div class=\"media-body\">\r\n  \t<slot name=\"body\">\r\n  </div>\r\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-right'\">\r\n  \t<slot name=\"aside\">\r\n  </div>\r\n</div>";
-
-/***/ },
-/* 102 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2441,11 +2527,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(103);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/modal\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _utilsHelpersJs = __webpack_require__(52);
+	var _utilsHelpersJs = __webpack_require__(23);
 	
-	var _modalHtml = __webpack_require__(106);
+	var _modalHtml = __webpack_require__(57);
 	
 	var _modalHtml2 = _interopRequireDefault(_modalHtml);
 	
@@ -2551,31 +2637,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 103 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(104);
-	
-	__webpack_require__(10);
-
-/***/ },
-/* 104 */
+/* 57 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<div style=\"display: none\">\n\t<div id=\"{{id}}\" class=\"modal\" v-bind:class=\"{ fade: fade, in: animateModal || !fade }\" style=\"display: block\" v-on:click=\"onClickOut($event)\">\n\t  \t<div class=\"modal-dialog  modal-{{size}}\" role=\"document\" style=\"z-index: 9999\">\n\t\t    <div class=\"modal-content\">\n\t\t        <div class=\"modal-header\">\n\t\t        \t<slot name=\"modal-header\"></slot>\n\t\t        </div>\n\t\t        <div class=\"modal-body\">\n\t\t        \t<slot name=\"modal-body\"></slot>\n\t\t        </div>\n\t\t        <div class=\"modal-footer\">\n\t\t        \t<slot name=\"modal-footer\"></slot>\n\t\t        </div>\n\t\t    </div>\n\t\t</div>\n\t</div>\n\t<div class=\"modal-backdrop\" v-bind:class=\"{ fade: fade, in: animateBackdrop || !fade }\"></div>\n</div>";
 
 /***/ },
-/* 105 */,
-/* 106 */
-/***/ function(module, exports) {
-
-	module.exports = "<div style=\"display: none\">\r\n\t<div id=\"{{id}}\" class=\"modal\" v-bind:class=\"{ fade: fade, in: animateModal || !fade }\" style=\"display: block\" v-on:click=\"onClickOut($event)\">\r\n\t  \t<div class=\"modal-dialog  modal-{{size}}\" role=\"document\" style=\"z-index: 9999\">\r\n\t\t    <div class=\"modal-content\">\r\n\t\t        <div class=\"modal-header\">\r\n\t\t        \t<slot name=\"modal-header\"></slot>\r\n\t\t        </div>\r\n\t\t        <div class=\"modal-body\">\r\n\t\t        \t<slot name=\"modal-body\"></slot>\r\n\t\t        </div>\r\n\t\t        <div class=\"modal-footer\">\r\n\t\t        \t<slot name=\"modal-footer\"></slot>\r\n\t\t        </div>\r\n\t\t    </div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"modal-backdrop\" v-bind:class=\"{ fade: fade, in: animateBackdrop || !fade }\"></div>\r\n</div>";
-
-/***/ },
-/* 107 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2587,11 +2655,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(108);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/nav\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	__webpack_require__(111);
+	__webpack_require__(59);
 	
-	var _navHtml = __webpack_require__(113);
+	var _navHtml = __webpack_require__(61);
 	
 	var _navHtml2 = _interopRequireDefault(_navHtml);
 	
@@ -2634,36 +2702,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.navItem = navItem;
 
 /***/ },
-/* 108 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// import dependencies
-	'use strict';
+	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
-	__webpack_require__(109);
+	// load the styles
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./_nav-override.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(17)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./_nav-override.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/autoprefixer-loader/index.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vuestrap-theme-loader/index.js!./_nav-override.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
-/* 109 */
+/* 60 */,
+/* 61 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<ul v-bind:class=\"{'nav': true, 'nav-stacked': vertical, 'nav-pills': type == 'pills', 'navbar-nav': type == 'navbar' }\">\n  <slot></slot> \n</ul>";
 
 /***/ },
-/* 110 */,
-/* 111 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 112 */,
-/* 113 */
-/***/ function(module, exports) {
-
-	module.exports = "<ul v-bind:class=\"{'nav': true, 'nav-stacked': vertical, 'nav-pills': type == 'pills', 'navbar-nav': type == 'navbar' }\">\r\n  <slot></slot> \r\n</ul>";
-
-/***/ },
-/* 114 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2675,13 +2747,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(108);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/nav\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	__webpack_require__(115);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/navbar\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	__webpack_require__(79);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/forms\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _navbarHtml = __webpack_require__(118);
+	var _navbarHtml = __webpack_require__(63);
 	
 	var _navbarHtml2 = _interopRequireDefault(_navbarHtml);
 	
@@ -2722,35 +2794,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 115 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(116);
-	
-	__webpack_require__(10);
-	
-	__webpack_require__(109);
-	
-	__webpack_require__(69);
-
-/***/ },
-/* 116 */
+/* 63 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<nav class=\"navbar {{navbarType}} {{navbarVariant}} {{navbarfixed}} {{full ? 'navbar-full' : ''}}\">\n\t<slot></slot>\n</nav>";
 
 /***/ },
-/* 117 */,
-/* 118 */
-/***/ function(module, exports) {
-
-	module.exports = "<nav class=\"navbar {{navbarType}} {{navbarVariant}} {{navbarfixed}} {{full ? 'navbar-full' : ''}}\">\r\n\t<slot></slot>\r\n</nav>";
-
-/***/ },
-/* 119 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2762,9 +2812,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(120);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/pager\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _pagerHtml = __webpack_require__(123);
+	var _pagerHtml = __webpack_require__(65);
 	
 	var _pagerHtml2 = _interopRequireDefault(_pagerHtml);
 	
@@ -2776,29 +2826,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 120 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(121);
-
-/***/ },
-/* 121 */
+/* 65 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<nav>\n  <ul class=\"pager\">\n  \t<slot></slot>\n  </ul>\n</nav>";
 
 /***/ },
-/* 122 */,
-/* 123 */
-/***/ function(module, exports) {
-
-	module.exports = "<nav>\r\n  <ul class=\"pager\">\r\n  \t<slot></slot>\r\n  </ul>\r\n</nav>";
-
-/***/ },
-/* 124 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2810,9 +2844,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(125);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/pagination\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _paginationHtml = __webpack_require__(128);
+	var _paginationHtml = __webpack_require__(67);
 	
 	var _paginationHtml2 = _interopRequireDefault(_paginationHtml);
 	
@@ -2905,33 +2939,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 125 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(126);
-	
-	__webpack_require__(10);
-	
-	__webpack_require__(25);
-
-/***/ },
-/* 126 */
+/* 67 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<div class=\"btn-group pagination\" role=\"group\" aria-label=\"Pagination\">\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == 1 \" v-on:click.prevent=\"(currentPage == 1) ? return : currentPage--\"><span aria-hidden=\"true\">&laquo;</span></button>\n    <button type=\"button\" class=\"btn  btn-secondary {{btnSize}} {{ currentPage == 1 ?  'active' : '' }}\" v-on:click.prevent=\"currentPage = 1\" v-show=\"showPrev\">1</button>\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showPrev\">...</span>\n    <button type=\"button\"\n    \tclass=\"btn {{btnSize}} {{btnVariant($index)}} {{ $index + diff == currentPage ? 'active' : '' }} {{ $index + diff != currentPage ? 'hidden-xs-down' : '' }}\"\n    \tv-for=\"item in pageLinks\"\n        v-on:click.prevent=\"currentPage = $index + diff\">{{$index + diff}}\n    </button>\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showNext\">...</span>\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}} {{ numberOfPages == currentPage ? 'active' : '' }}\" v-show=\"showNext\" v-on:click.prevent=\"currentPage = numberOfPages\">{{numberOfPages}}</button>\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == numberOfPages\" v-on:click.prevent=\"(currentPage == numberOfPages) ? return : currentPage++\"><span aria-hidden=\"true\">&raquo;</span></button>\n</div>\n";
 
 /***/ },
-/* 127 */,
-/* 128 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"btn-group pagination\" role=\"group\" aria-label=\"Pagination\">\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == 1 \" v-on:click.prevent=\"(currentPage == 1) ? return : currentPage--\"><span aria-hidden=\"true\">&laquo;</span></button>\r\n    <button type=\"button\" class=\"btn  btn-secondary {{btnSize}} {{ currentPage == 1 ?  'active' : '' }}\" v-on:click.prevent=\"currentPage = 1\" v-show=\"showPrev\">1</button>\r\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showPrev\">...</span>\r\n    <button type=\"button\"\r\n    \tclass=\"btn {{btnSize}} {{btnVariant($index)}} {{ $index + diff == currentPage ? 'active' : '' }} {{ $index + diff != currentPage ? 'hidden-xs-down' : '' }}\"\r\n    \tv-for=\"item in pageLinks\"\r\n        v-on:click.prevent=\"currentPage = $index + diff\">{{$index + diff}}\r\n    </button>\r\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showNext\">...</span>\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}} {{ numberOfPages == currentPage ? 'active' : '' }}\" v-show=\"showNext\" v-on:click.prevent=\"currentPage = numberOfPages\">{{numberOfPages}}</button>\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == numberOfPages\" v-on:click.prevent=\"(currentPage == numberOfPages) ? return : currentPage++\"><span aria-hidden=\"true\">&raquo;</span></button>\r\n</div>\r\n";
-
-/***/ },
-/* 129 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2943,13 +2957,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(130);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/popover\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _tether = __webpack_require__(133);
+	var _tether = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"tether\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var _tether2 = _interopRequireDefault(_tether);
 	
-	var _popoverHtml = __webpack_require__(134);
+	var _popoverHtml = __webpack_require__(69);
 	
 	var _popoverHtml2 = _interopRequireDefault(_popoverHtml);
 	
@@ -3132,1752 +3146,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 130 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(131);
-	
-	__webpack_require__(10);
-
-/***/ },
-/* 131 */
+/* 69 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<span v-el:trigger>\n\t<slot></slot>\n</span> \n<div class=\"popover {{popoverAlignment}}\" v-el:popover>\n  <div class=\"popover-arrow\"></div>\n  <h3 class=\"popover-title\" v-if=\"title\">{{title}}</h3>\n  <div class=\"popover-content\">\n    <span v-html=\"text\"></span>\n  </div>\n</div>";
 
 /***/ },
-/* 132 */,
-/* 133 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! tether 1.1.0 */
-	
-	(function(root, factory) {
-	  if (true) {
-	    !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	  } else if (typeof exports === 'object') {
-	    module.exports = factory(require, exports, module);
-	  } else {
-	    root.Tether = factory();
-	  }
-	}(this, function(require, exports, module) {
-	
-	'use strict';
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	var TetherBase = undefined;
-	if (typeof TetherBase === 'undefined') {
-	  TetherBase = { modules: [] };
-	}
-	
-	function getScrollParent(el) {
-	  var _getComputedStyle = getComputedStyle(el);
-	
-	  var position = _getComputedStyle.position;
-	
-	  if (position === 'fixed') {
-	    return el;
-	  }
-	
-	  var parent = el;
-	  while (parent = parent.parentNode) {
-	    var style = undefined;
-	    try {
-	      style = getComputedStyle(parent);
-	    } catch (err) {}
-	
-	    if (typeof style === 'undefined' || style === null) {
-	      return parent;
-	    }
-	
-	    var _style = style;
-	    var overflow = _style.overflow;
-	    var overflowX = _style.overflowX;
-	    var overflowY = _style.overflowY;
-	
-	    if (/(auto|scroll)/.test(overflow + overflowY + overflowX)) {
-	      if (position !== 'absolute' || ['relative', 'absolute', 'fixed'].indexOf(style.position) >= 0) {
-	        return parent;
-	      }
-	    }
-	  }
-	
-	  return document.body;
-	}
-	
-	var uniqueId = (function () {
-	  var id = 0;
-	  return function () {
-	    return ++id;
-	  };
-	})();
-	
-	var zeroPosCache = {};
-	var getOrigin = function getOrigin(doc) {
-	  // getBoundingClientRect is unfortunately too accurate.  It introduces a pixel or two of
-	  // jitter as the user scrolls that messes with our ability to detect if two positions
-	  // are equivilant or not.  We place an element at the top left of the page that will
-	  // get the same jitter, so we can cancel the two out.
-	  var node = doc._tetherZeroElement;
-	  if (typeof node === 'undefined') {
-	    node = doc.createElement('div');
-	    node.setAttribute('data-tether-id', uniqueId());
-	    extend(node.style, {
-	      top: 0,
-	      left: 0,
-	      position: 'absolute'
-	    });
-	
-	    doc.body.appendChild(node);
-	
-	    doc._tetherZeroElement = node;
-	  }
-	
-	  var id = node.getAttribute('data-tether-id');
-	  if (typeof zeroPosCache[id] === 'undefined') {
-	    zeroPosCache[id] = {};
-	
-	    var rect = node.getBoundingClientRect();
-	    for (var k in rect) {
-	      // Can't use extend, as on IE9, elements don't resolve to be hasOwnProperty
-	      zeroPosCache[id][k] = rect[k];
-	    }
-	
-	    // Clear the cache when this position call is done
-	    defer(function () {
-	      delete zeroPosCache[id];
-	    });
-	  }
-	
-	  return zeroPosCache[id];
-	};
-	
-	function getBounds(el) {
-	  var doc = undefined;
-	  if (el === document) {
-	    doc = document;
-	    el = document.documentElement;
-	  } else {
-	    doc = el.ownerDocument;
-	  }
-	
-	  var docEl = doc.documentElement;
-	
-	  var box = {};
-	  // The original object returned by getBoundingClientRect is immutable, so we clone it
-	  // We can't use extend because the properties are not considered part of the object by hasOwnProperty in IE9
-	  var rect = el.getBoundingClientRect();
-	  for (var k in rect) {
-	    box[k] = rect[k];
-	  }
-	
-	  var origin = getOrigin(doc);
-	
-	  box.top -= origin.top;
-	  box.left -= origin.left;
-	
-	  if (typeof box.width === 'undefined') {
-	    box.width = document.body.scrollWidth - box.left - box.right;
-	  }
-	  if (typeof box.height === 'undefined') {
-	    box.height = document.body.scrollHeight - box.top - box.bottom;
-	  }
-	
-	  box.top = box.top - docEl.clientTop;
-	  box.left = box.left - docEl.clientLeft;
-	  box.right = doc.body.clientWidth - box.width - box.left;
-	  box.bottom = doc.body.clientHeight - box.height - box.top;
-	
-	  return box;
-	}
-	
-	function getOffsetParent(el) {
-	  return el.offsetParent || document.documentElement;
-	}
-	
-	function getScrollBarSize() {
-	  var inner = document.createElement('div');
-	  inner.style.width = '100%';
-	  inner.style.height = '200px';
-	
-	  var outer = document.createElement('div');
-	  extend(outer.style, {
-	    position: 'absolute',
-	    top: 0,
-	    left: 0,
-	    pointerEvents: 'none',
-	    visibility: 'hidden',
-	    width: '200px',
-	    height: '150px',
-	    overflow: 'hidden'
-	  });
-	
-	  outer.appendChild(inner);
-	
-	  document.body.appendChild(outer);
-	
-	  var widthContained = inner.offsetWidth;
-	  outer.style.overflow = 'scroll';
-	  var widthScroll = inner.offsetWidth;
-	
-	  if (widthContained === widthScroll) {
-	    widthScroll = outer.clientWidth;
-	  }
-	
-	  document.body.removeChild(outer);
-	
-	  var width = widthContained - widthScroll;
-	
-	  return { width: width, height: width };
-	}
-	
-	function extend() {
-	  var out = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-	
-	  var args = [];
-	
-	  Array.prototype.push.apply(args, arguments);
-	
-	  args.slice(1).forEach(function (obj) {
-	    if (obj) {
-	      for (var key in obj) {
-	        if (({}).hasOwnProperty.call(obj, key)) {
-	          out[key] = obj[key];
-	        }
-	      }
-	    }
-	  });
-	
-	  return out;
-	}
-	
-	function removeClass(el, name) {
-	  if (typeof el.classList !== 'undefined') {
-	    name.split(' ').forEach(function (cls) {
-	      if (cls.trim()) {
-	        el.classList.remove(cls);
-	      }
-	    });
-	  } else {
-	    var regex = new RegExp('(^| )' + name.split(' ').join('|') + '( |$)', 'gi');
-	    var className = getClassName(el).replace(regex, ' ');
-	    setClassName(el, className);
-	  }
-	}
-	
-	function addClass(el, name) {
-	  if (typeof el.classList !== 'undefined') {
-	    name.split(' ').forEach(function (cls) {
-	      if (cls.trim()) {
-	        el.classList.add(cls);
-	      }
-	    });
-	  } else {
-	    removeClass(el, name);
-	    var cls = getClassName(el) + (' ' + name);
-	    setClassName(el, cls);
-	  }
-	}
-	
-	function hasClass(el, name) {
-	  if (typeof el.classList !== 'undefined') {
-	    return el.classList.contains(name);
-	  }
-	  var className = getClassName(el);
-	  return new RegExp('(^| )' + name + '( |$)', 'gi').test(className);
-	}
-	
-	function getClassName(el) {
-	  if (el.className instanceof SVGAnimatedString) {
-	    return el.className.baseVal;
-	  }
-	  return el.className;
-	}
-	
-	function setClassName(el, className) {
-	  el.setAttribute('class', className);
-	}
-	
-	function updateClasses(el, add, all) {
-	  // Of the set of 'all' classes, we need the 'add' classes, and only the
-	  // 'add' classes to be set.
-	  all.forEach(function (cls) {
-	    if (add.indexOf(cls) === -1 && hasClass(el, cls)) {
-	      removeClass(el, cls);
-	    }
-	  });
-	
-	  add.forEach(function (cls) {
-	    if (!hasClass(el, cls)) {
-	      addClass(el, cls);
-	    }
-	  });
-	}
-	
-	var deferred = [];
-	
-	var defer = function defer(fn) {
-	  deferred.push(fn);
-	};
-	
-	var flush = function flush() {
-	  var fn = undefined;
-	  while (fn = deferred.pop()) {
-	    fn();
-	  }
-	};
-	
-	var Evented = (function () {
-	  function Evented() {
-	    _classCallCheck(this, Evented);
-	  }
-	
-	  _createClass(Evented, [{
-	    key: 'on',
-	    value: function on(event, handler, ctx) {
-	      var once = arguments.length <= 3 || arguments[3] === undefined ? false : arguments[3];
-	
-	      if (typeof this.bindings === 'undefined') {
-	        this.bindings = {};
-	      }
-	      if (typeof this.bindings[event] === 'undefined') {
-	        this.bindings[event] = [];
-	      }
-	      this.bindings[event].push({ handler: handler, ctx: ctx, once: once });
-	    }
-	  }, {
-	    key: 'once',
-	    value: function once(event, handler, ctx) {
-	      this.on(event, handler, ctx, true);
-	    }
-	  }, {
-	    key: 'off',
-	    value: function off(event, handler) {
-	      if (typeof this.bindings !== 'undefined' && typeof this.bindings[event] !== 'undefined') {
-	        return;
-	      }
-	
-	      if (typeof handler === 'undefined') {
-	        delete this.bindings[event];
-	      } else {
-	        var i = 0;
-	        while (i < this.bindings[event].length) {
-	          if (this.bindings[event][i].handler === handler) {
-	            this.bindings[event].splice(i, 1);
-	          } else {
-	            ++i;
-	          }
-	        }
-	      }
-	    }
-	  }, {
-	    key: 'trigger',
-	    value: function trigger(event) {
-	      if (typeof this.bindings !== 'undefined' && this.bindings[event]) {
-	        var i = 0;
-	
-	        for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-	          args[_key - 1] = arguments[_key];
-	        }
-	
-	        while (i < this.bindings[event].length) {
-	          var _bindings$event$i = this.bindings[event][i];
-	          var handler = _bindings$event$i.handler;
-	          var ctx = _bindings$event$i.ctx;
-	          var once = _bindings$event$i.once;
-	
-	          var context = ctx;
-	          if (typeof context === 'undefined') {
-	            context = this;
-	          }
-	
-	          handler.apply(context, args);
-	
-	          if (once) {
-	            this.bindings[event].splice(i, 1);
-	          } else {
-	            ++i;
-	          }
-	        }
-	      }
-	    }
-	  }]);
-	
-	  return Evented;
-	})();
-	
-	TetherBase.Utils = {
-	  getScrollParent: getScrollParent,
-	  getBounds: getBounds,
-	  getOffsetParent: getOffsetParent,
-	  extend: extend,
-	  addClass: addClass,
-	  removeClass: removeClass,
-	  hasClass: hasClass,
-	  updateClasses: updateClasses,
-	  defer: defer,
-	  flush: flush,
-	  uniqueId: uniqueId,
-	  Evented: Evented,
-	  getScrollBarSize: getScrollBarSize
-	};
-	/* globals TetherBase, performance */
-	
-	'use strict';
-	
-	var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	if (typeof TetherBase === 'undefined') {
-	  throw new Error('You must include the utils.js file before tether.js');
-	}
-	
-	var _TetherBase$Utils = TetherBase.Utils;
-	var getScrollParent = _TetherBase$Utils.getScrollParent;
-	var getBounds = _TetherBase$Utils.getBounds;
-	var getOffsetParent = _TetherBase$Utils.getOffsetParent;
-	var extend = _TetherBase$Utils.extend;
-	var addClass = _TetherBase$Utils.addClass;
-	var removeClass = _TetherBase$Utils.removeClass;
-	var updateClasses = _TetherBase$Utils.updateClasses;
-	var defer = _TetherBase$Utils.defer;
-	var flush = _TetherBase$Utils.flush;
-	var getScrollBarSize = _TetherBase$Utils.getScrollBarSize;
-	
-	function within(a, b) {
-	  var diff = arguments.length <= 2 || arguments[2] === undefined ? 1 : arguments[2];
-	
-	  return a + diff >= b && b >= a - diff;
-	}
-	
-	var transformKey = (function () {
-	  if (typeof document === 'undefined') {
-	    return '';
-	  }
-	  var el = document.createElement('div');
-	
-	  var transforms = ['transform', 'webkitTransform', 'OTransform', 'MozTransform', 'msTransform'];
-	  for (var i = 0; i < transforms.length; ++i) {
-	    var key = transforms[i];
-	    if (el.style[key] !== undefined) {
-	      return key;
-	    }
-	  }
-	})();
-	
-	var tethers = [];
-	
-	var position = function position() {
-	  tethers.forEach(function (tether) {
-	    tether.position(false);
-	  });
-	  flush();
-	};
-	
-	function now() {
-	  if (typeof performance !== 'undefined' && typeof performance.now !== 'undefined') {
-	    return performance.now();
-	  }
-	  return +new Date();
-	}
-	
-	(function () {
-	  var lastCall = null;
-	  var lastDuration = null;
-	  var pendingTimeout = null;
-	
-	  var tick = function tick() {
-	    if (typeof lastDuration !== 'undefined' && lastDuration > 16) {
-	      // We voluntarily throttle ourselves if we can't manage 60fps
-	      lastDuration = Math.min(lastDuration - 16, 250);
-	
-	      // Just in case this is the last event, remember to position just once more
-	      pendingTimeout = setTimeout(tick, 250);
-	      return;
-	    }
-	
-	    if (typeof lastCall !== 'undefined' && now() - lastCall < 10) {
-	      // Some browsers call events a little too frequently, refuse to run more than is reasonable
-	      return;
-	    }
-	
-	    if (typeof pendingTimeout !== 'undefined') {
-	      clearTimeout(pendingTimeout);
-	      pendingTimeout = null;
-	    }
-	
-	    lastCall = now();
-	    position();
-	    lastDuration = now() - lastCall;
-	  };
-	
-	  if (typeof window !== 'undefined') {
-	    ['resize', 'scroll', 'touchmove'].forEach(function (event) {
-	      window.addEventListener(event, tick);
-	    });
-	  }
-	})();
-	
-	var MIRROR_LR = {
-	  center: 'center',
-	  left: 'right',
-	  right: 'left'
-	};
-	
-	var MIRROR_TB = {
-	  middle: 'middle',
-	  top: 'bottom',
-	  bottom: 'top'
-	};
-	
-	var OFFSET_MAP = {
-	  top: 0,
-	  left: 0,
-	  middle: '50%',
-	  center: '50%',
-	  bottom: '100%',
-	  right: '100%'
-	};
-	
-	var autoToFixedAttachment = function autoToFixedAttachment(attachment, relativeToAttachment) {
-	  var left = attachment.left;
-	  var top = attachment.top;
-	
-	  if (left === 'auto') {
-	    left = MIRROR_LR[relativeToAttachment.left];
-	  }
-	
-	  if (top === 'auto') {
-	    top = MIRROR_TB[relativeToAttachment.top];
-	  }
-	
-	  return { left: left, top: top };
-	};
-	
-	var attachmentToOffset = function attachmentToOffset(attachment) {
-	  var left = attachment.left;
-	  var top = attachment.top;
-	
-	  if (typeof OFFSET_MAP[attachment.left] !== 'undefined') {
-	    left = OFFSET_MAP[attachment.left];
-	  }
-	
-	  if (typeof OFFSET_MAP[attachment.top] !== 'undefined') {
-	    top = OFFSET_MAP[attachment.top];
-	  }
-	
-	  return { left: left, top: top };
-	};
-	
-	function addOffset() {
-	  var out = { top: 0, left: 0 };
-	
-	  for (var _len = arguments.length, offsets = Array(_len), _key = 0; _key < _len; _key++) {
-	    offsets[_key] = arguments[_key];
-	  }
-	
-	  offsets.forEach(function (_ref) {
-	    var top = _ref.top;
-	    var left = _ref.left;
-	
-	    if (typeof top === 'string') {
-	      top = parseFloat(top, 10);
-	    }
-	    if (typeof left === 'string') {
-	      left = parseFloat(left, 10);
-	    }
-	
-	    out.top += top;
-	    out.left += left;
-	  });
-	
-	  return out;
-	}
-	
-	function offsetToPx(offset, size) {
-	  if (typeof offset.left === 'string' && offset.left.indexOf('%') !== -1) {
-	    offset.left = parseFloat(offset.left, 10) / 100 * size.width;
-	  }
-	  if (typeof offset.top === 'string' && offset.top.indexOf('%') !== -1) {
-	    offset.top = parseFloat(offset.top, 10) / 100 * size.height;
-	  }
-	
-	  return offset;
-	}
-	
-	var parseOffset = function parseOffset(value) {
-	  var _value$split = value.split(' ');
-	
-	  var _value$split2 = _slicedToArray(_value$split, 2);
-	
-	  var top = _value$split2[0];
-	  var left = _value$split2[1];
-	
-	  return { top: top, left: left };
-	};
-	var parseAttachment = parseOffset;
-	
-	var TetherClass = (function () {
-	  function TetherClass(options) {
-	    var _this = this;
-	
-	    _classCallCheck(this, TetherClass);
-	
-	    this.position = this.position.bind(this);
-	
-	    tethers.push(this);
-	
-	    this.history = [];
-	
-	    this.setOptions(options, false);
-	
-	    TetherBase.modules.forEach(function (module) {
-	      if (typeof module.initialize !== 'undefined') {
-	        module.initialize.call(_this);
-	      }
-	    });
-	
-	    this.position();
-	  }
-	
-	  _createClass(TetherClass, [{
-	    key: 'getClass',
-	    value: function getClass() {
-	      var key = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
-	      var classes = this.options.classes;
-	
-	      if (typeof classes !== 'undefined' && classes[key]) {
-	        return this.options.classes[key];
-	      } else if (this.options.classPrefix) {
-	        return this.options.classPrefix + '-' + key;
-	      } else {
-	        return key;
-	      }
-	    }
-	  }, {
-	    key: 'setOptions',
-	    value: function setOptions(options) {
-	      var _this2 = this;
-	
-	      var pos = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
-	
-	      var defaults = {
-	        offset: '0 0',
-	        targetOffset: '0 0',
-	        targetAttachment: 'auto auto',
-	        classPrefix: 'tether'
-	      };
-	
-	      this.options = extend(defaults, options);
-	
-	      var _options = this.options;
-	      var element = _options.element;
-	      var target = _options.target;
-	      var targetModifier = _options.targetModifier;
-	
-	      this.element = element;
-	      this.target = target;
-	      this.targetModifier = targetModifier;
-	
-	      if (this.target === 'viewport') {
-	        this.target = document.body;
-	        this.targetModifier = 'visible';
-	      } else if (this.target === 'scroll-handle') {
-	        this.target = document.body;
-	        this.targetModifier = 'scroll-handle';
-	      }
-	
-	      ['element', 'target'].forEach(function (key) {
-	        if (typeof _this2[key] === 'undefined') {
-	          throw new Error('Tether Error: Both element and target must be defined');
-	        }
-	
-	        if (typeof _this2[key].jquery !== 'undefined') {
-	          _this2[key] = _this2[key][0];
-	        } else if (typeof _this2[key] === 'string') {
-	          _this2[key] = document.querySelector(_this2[key]);
-	        }
-	      });
-	
-	      addClass(this.element, this.getClass('element'));
-	      if (!(this.options.addTargetClasses === false)) {
-	        addClass(this.target, this.getClass('target'));
-	      }
-	
-	      if (!this.options.attachment) {
-	        throw new Error('Tether Error: You must provide an attachment');
-	      }
-	
-	      this.targetAttachment = parseAttachment(this.options.targetAttachment);
-	      this.attachment = parseAttachment(this.options.attachment);
-	      this.offset = parseOffset(this.options.offset);
-	      this.targetOffset = parseOffset(this.options.targetOffset);
-	
-	      if (typeof this.scrollParent !== 'undefined') {
-	        this.disable();
-	      }
-	
-	      if (this.targetModifier === 'scroll-handle') {
-	        this.scrollParent = this.target;
-	      } else {
-	        this.scrollParent = getScrollParent(this.target);
-	      }
-	
-	      if (!(this.options.enabled === false)) {
-	        this.enable(pos);
-	      }
-	    }
-	  }, {
-	    key: 'getTargetBounds',
-	    value: function getTargetBounds() {
-	      if (typeof this.targetModifier !== 'undefined') {
-	        if (this.targetModifier === 'visible') {
-	          if (this.target === document.body) {
-	            return { top: pageYOffset, left: pageXOffset, height: innerHeight, width: innerWidth };
-	          } else {
-	            var bounds = getBounds(this.target);
-	
-	            var out = {
-	              height: bounds.height,
-	              width: bounds.width,
-	              top: bounds.top,
-	              left: bounds.left
-	            };
-	
-	            out.height = Math.min(out.height, bounds.height - (pageYOffset - bounds.top));
-	            out.height = Math.min(out.height, bounds.height - (bounds.top + bounds.height - (pageYOffset + innerHeight)));
-	            out.height = Math.min(innerHeight, out.height);
-	            out.height -= 2;
-	
-	            out.width = Math.min(out.width, bounds.width - (pageXOffset - bounds.left));
-	            out.width = Math.min(out.width, bounds.width - (bounds.left + bounds.width - (pageXOffset + innerWidth)));
-	            out.width = Math.min(innerWidth, out.width);
-	            out.width -= 2;
-	
-	            if (out.top < pageYOffset) {
-	              out.top = pageYOffset;
-	            }
-	            if (out.left < pageXOffset) {
-	              out.left = pageXOffset;
-	            }
-	
-	            return out;
-	          }
-	        } else if (this.targetModifier === 'scroll-handle') {
-	          var bounds = undefined;
-	          var target = this.target;
-	          if (target === document.body) {
-	            target = document.documentElement;
-	
-	            bounds = {
-	              left: pageXOffset,
-	              top: pageYOffset,
-	              height: innerHeight,
-	              width: innerWidth
-	            };
-	          } else {
-	            bounds = getBounds(target);
-	          }
-	
-	          var style = getComputedStyle(target);
-	
-	          var hasBottomScroll = target.scrollWidth > target.clientWidth || [style.overflow, style.overflowX].indexOf('scroll') >= 0 || this.target !== document.body;
-	
-	          var scrollBottom = 0;
-	          if (hasBottomScroll) {
-	            scrollBottom = 15;
-	          }
-	
-	          var height = bounds.height - parseFloat(style.borderTopWidth) - parseFloat(style.borderBottomWidth) - scrollBottom;
-	
-	          var out = {
-	            width: 15,
-	            height: height * 0.975 * (height / target.scrollHeight),
-	            left: bounds.left + bounds.width - parseFloat(style.borderLeftWidth) - 15
-	          };
-	
-	          var fitAdj = 0;
-	          if (height < 408 && this.target === document.body) {
-	            fitAdj = -0.00011 * Math.pow(height, 2) - 0.00727 * height + 22.58;
-	          }
-	
-	          if (this.target !== document.body) {
-	            out.height = Math.max(out.height, 24);
-	          }
-	
-	          var scrollPercentage = this.target.scrollTop / (target.scrollHeight - height);
-	          out.top = scrollPercentage * (height - out.height - fitAdj) + bounds.top + parseFloat(style.borderTopWidth);
-	
-	          if (this.target === document.body) {
-	            out.height = Math.max(out.height, 24);
-	          }
-	
-	          return out;
-	        }
-	      } else {
-	        return getBounds(this.target);
-	      }
-	    }
-	  }, {
-	    key: 'clearCache',
-	    value: function clearCache() {
-	      this._cache = {};
-	    }
-	  }, {
-	    key: 'cache',
-	    value: function cache(k, getter) {
-	      // More than one module will often need the same DOM info, so
-	      // we keep a cache which is cleared on each position call
-	      if (typeof this._cache === 'undefined') {
-	        this._cache = {};
-	      }
-	
-	      if (typeof this._cache[k] === 'undefined') {
-	        this._cache[k] = getter.call(this);
-	      }
-	
-	      return this._cache[k];
-	    }
-	  }, {
-	    key: 'enable',
-	    value: function enable() {
-	      var pos = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
-	
-	      if (!(this.options.addTargetClasses === false)) {
-	        addClass(this.target, this.getClass('enabled'));
-	      }
-	      addClass(this.element, this.getClass('enabled'));
-	      this.enabled = true;
-	
-	      if (this.scrollParent !== document) {
-	        this.scrollParent.addEventListener('scroll', this.position);
-	      }
-	
-	      if (pos) {
-	        this.position();
-	      }
-	    }
-	  }, {
-	    key: 'disable',
-	    value: function disable() {
-	      removeClass(this.target, this.getClass('enabled'));
-	      removeClass(this.element, this.getClass('enabled'));
-	      this.enabled = false;
-	
-	      if (typeof this.scrollParent !== 'undefined') {
-	        this.scrollParent.removeEventListener('scroll', this.position);
-	      }
-	    }
-	  }, {
-	    key: 'destroy',
-	    value: function destroy() {
-	      var _this3 = this;
-	
-	      this.disable();
-	
-	      tethers.forEach(function (tether, i) {
-	        if (tether === _this3) {
-	          tethers.splice(i, 1);
-	          return;
-	        }
-	      });
-	    }
-	  }, {
-	    key: 'updateAttachClasses',
-	    value: function updateAttachClasses(elementAttach, targetAttach) {
-	      var _this4 = this;
-	
-	      elementAttach = elementAttach || this.attachment;
-	      targetAttach = targetAttach || this.targetAttachment;
-	      var sides = ['left', 'top', 'bottom', 'right', 'middle', 'center'];
-	
-	      if (typeof this._addAttachClasses !== 'undefined' && this._addAttachClasses.length) {
-	        // updateAttachClasses can be called more than once in a position call, so
-	        // we need to clean up after ourselves such that when the last defer gets
-	        // ran it doesn't add any extra classes from previous calls.
-	        this._addAttachClasses.splice(0, this._addAttachClasses.length);
-	      }
-	
-	      if (typeof this._addAttachClasses === 'undefined') {
-	        this._addAttachClasses = [];
-	      }
-	      var add = this._addAttachClasses;
-	
-	      if (elementAttach.top) {
-	        add.push(this.getClass('element-attached') + '-' + elementAttach.top);
-	      }
-	      if (elementAttach.left) {
-	        add.push(this.getClass('element-attached') + '-' + elementAttach.left);
-	      }
-	      if (targetAttach.top) {
-	        add.push(this.getClass('target-attached') + '-' + targetAttach.top);
-	      }
-	      if (targetAttach.left) {
-	        add.push(this.getClass('target-attached') + '-' + targetAttach.left);
-	      }
-	
-	      var all = [];
-	      sides.forEach(function (side) {
-	        all.push(_this4.getClass('element-attached') + '-' + side);
-	        all.push(_this4.getClass('target-attached') + '-' + side);
-	      });
-	
-	      defer(function () {
-	        if (!(typeof _this4._addAttachClasses !== 'undefined')) {
-	          return;
-	        }
-	
-	        updateClasses(_this4.element, _this4._addAttachClasses, all);
-	        if (!(_this4.options.addTargetClasses === false)) {
-	          updateClasses(_this4.target, _this4._addAttachClasses, all);
-	        }
-	
-	        delete _this4._addAttachClasses;
-	      });
-	    }
-	  }, {
-	    key: 'position',
-	    value: function position() {
-	      var _this5 = this;
-	
-	      var flushChanges = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
-	
-	      // flushChanges commits the changes immediately, leave true unless you are positioning multiple
-	      // tethers (in which case call Tether.Utils.flush yourself when you're done)
-	
-	      if (!this.enabled) {
-	        return;
-	      }
-	
-	      this.clearCache();
-	
-	      // Turn 'auto' attachments into the appropriate corner or edge
-	      var targetAttachment = autoToFixedAttachment(this.targetAttachment, this.attachment);
-	
-	      this.updateAttachClasses(this.attachment, targetAttachment);
-	
-	      var elementPos = this.cache('element-bounds', function () {
-	        return getBounds(_this5.element);
-	      });
-	
-	      var width = elementPos.width;
-	      var height = elementPos.height;
-	
-	      if (width === 0 && height === 0 && typeof this.lastSize !== 'undefined') {
-	        var _lastSize = this.lastSize;
-	
-	        // We cache the height and width to make it possible to position elements that are
-	        // getting hidden.
-	        width = _lastSize.width;
-	        height = _lastSize.height;
-	      } else {
-	        this.lastSize = { width: width, height: height };
-	      }
-	
-	      var targetPos = this.cache('target-bounds', function () {
-	        return _this5.getTargetBounds();
-	      });
-	      var targetSize = targetPos;
-	
-	      // Get an actual px offset from the attachment
-	      var offset = offsetToPx(attachmentToOffset(this.attachment), { width: width, height: height });
-	      var targetOffset = offsetToPx(attachmentToOffset(targetAttachment), targetSize);
-	
-	      var manualOffset = offsetToPx(this.offset, { width: width, height: height });
-	      var manualTargetOffset = offsetToPx(this.targetOffset, targetSize);
-	
-	      // Add the manually provided offset
-	      offset = addOffset(offset, manualOffset);
-	      targetOffset = addOffset(targetOffset, manualTargetOffset);
-	
-	      // It's now our goal to make (element position + offset) == (target position + target offset)
-	      var left = targetPos.left + targetOffset.left - offset.left;
-	      var top = targetPos.top + targetOffset.top - offset.top;
-	
-	      for (var i = 0; i < TetherBase.modules.length; ++i) {
-	        var _module2 = TetherBase.modules[i];
-	        var ret = _module2.position.call(this, {
-	          left: left,
-	          top: top,
-	          targetAttachment: targetAttachment,
-	          targetPos: targetPos,
-	          elementPos: elementPos,
-	          offset: offset,
-	          targetOffset: targetOffset,
-	          manualOffset: manualOffset,
-	          manualTargetOffset: manualTargetOffset,
-	          scrollbarSize: scrollbarSize,
-	          attachment: this.attachment
-	        });
-	
-	        if (ret === false) {
-	          return false;
-	        } else if (typeof ret === 'undefined' || typeof ret !== 'object') {
-	          continue;
-	        } else {
-	          top = ret.top;
-	          left = ret.left;
-	        }
-	      }
-	
-	      // We describe the position three different ways to give the optimizer
-	      // a chance to decide the best possible way to position the element
-	      // with the fewest repaints.
-	      var next = {
-	        // It's position relative to the page (absolute positioning when
-	        // the element is a child of the body)
-	        page: {
-	          top: top,
-	          left: left
-	        },
-	
-	        // It's position relative to the viewport (fixed positioning)
-	        viewport: {
-	          top: top - pageYOffset,
-	          bottom: pageYOffset - top - height + innerHeight,
-	          left: left - pageXOffset,
-	          right: pageXOffset - left - width + innerWidth
-	        }
-	      };
-	
-	      var scrollbarSize = undefined;
-	      if (document.body.scrollWidth > window.innerWidth) {
-	        scrollbarSize = this.cache('scrollbar-size', getScrollBarSize);
-	        next.viewport.bottom -= scrollbarSize.height;
-	      }
-	
-	      if (document.body.scrollHeight > window.innerHeight) {
-	        scrollbarSize = this.cache('scrollbar-size', getScrollBarSize);
-	        next.viewport.right -= scrollbarSize.width;
-	      }
-	
-	      if (['', 'static'].indexOf(document.body.style.position) === -1 || ['', 'static'].indexOf(document.body.parentElement.style.position) === -1) {
-	        // Absolute positioning in the body will be relative to the page, not the 'initial containing block'
-	        next.page.bottom = document.body.scrollHeight - top - height;
-	        next.page.right = document.body.scrollWidth - left - width;
-	      }
-	
-	      if (typeof this.options.optimizations !== 'undefined' && this.options.optimizations.moveElement !== false && !(typeof this.targetModifier !== 'undefined')) {
-	        (function () {
-	          var offsetParent = _this5.cache('target-offsetparent', function () {
-	            return getOffsetParent(_this5.target);
-	          });
-	          var offsetPosition = _this5.cache('target-offsetparent-bounds', function () {
-	            return getBounds(offsetParent);
-	          });
-	          var offsetParentStyle = getComputedStyle(offsetParent);
-	          var offsetParentSize = offsetPosition;
-	
-	          var offsetBorder = {};
-	          ['Top', 'Left', 'Bottom', 'Right'].forEach(function (side) {
-	            offsetBorder[side.toLowerCase()] = parseFloat(offsetParentStyle['border' + side + 'Width']);
-	          });
-	
-	          offsetPosition.right = document.body.scrollWidth - offsetPosition.left - offsetParentSize.width + offsetBorder.right;
-	          offsetPosition.bottom = document.body.scrollHeight - offsetPosition.top - offsetParentSize.height + offsetBorder.bottom;
-	
-	          if (next.page.top >= offsetPosition.top + offsetBorder.top && next.page.bottom >= offsetPosition.bottom) {
-	            if (next.page.left >= offsetPosition.left + offsetBorder.left && next.page.right >= offsetPosition.right) {
-	              // We're within the visible part of the target's scroll parent
-	              var scrollTop = offsetParent.scrollTop;
-	              var scrollLeft = offsetParent.scrollLeft;
-	
-	              // It's position relative to the target's offset parent (absolute positioning when
-	              // the element is moved to be a child of the target's offset parent).
-	              next.offset = {
-	                top: next.page.top - offsetPosition.top + scrollTop - offsetBorder.top,
-	                left: next.page.left - offsetPosition.left + scrollLeft - offsetBorder.left
-	              };
-	            }
-	          }
-	        })();
-	      }
-	
-	      // We could also travel up the DOM and try each containing context, rather than only
-	      // looking at the body, but we're gonna get diminishing returns.
-	
-	      this.move(next);
-	
-	      this.history.unshift(next);
-	
-	      if (this.history.length > 3) {
-	        this.history.pop();
-	      }
-	
-	      if (flushChanges) {
-	        flush();
-	      }
-	
-	      return true;
-	    }
-	
-	    // THE ISSUE
-	  }, {
-	    key: 'move',
-	    value: function move(pos) {
-	      var _this6 = this;
-	
-	      if (!(typeof this.element.parentNode !== 'undefined')) {
-	        return;
-	      }
-	
-	      var same = {};
-	
-	      for (var type in pos) {
-	        same[type] = {};
-	
-	        for (var key in pos[type]) {
-	          var found = false;
-	
-	          for (var i = 0; i < this.history.length; ++i) {
-	            var point = this.history[i];
-	            if (typeof point[type] !== 'undefined' && !within(point[type][key], pos[type][key])) {
-	              found = true;
-	              break;
-	            }
-	          }
-	
-	          if (!found) {
-	            same[type][key] = true;
-	          }
-	        }
-	      }
-	
-	      var css = { top: '', left: '', right: '', bottom: '' };
-	
-	      var transcribe = function transcribe(_same, _pos) {
-	        var hasOptimizations = typeof _this6.options.optimizations !== 'undefined';
-	        var gpu = hasOptimizations ? _this6.options.optimizations.gpu : null;
-	        if (gpu !== false) {
-	          var yPos = undefined,
-	              xPos = undefined;
-	          if (_same.top) {
-	            css.top = 0;
-	            yPos = _pos.top;
-	          } else {
-	            css.bottom = 0;
-	            yPos = -_pos.bottom;
-	          }
-	
-	          if (_same.left) {
-	            css.left = 0;
-	            xPos = _pos.left;
-	          } else {
-	            css.right = 0;
-	            xPos = -_pos.right;
-	          }
-	
-	          css[transformKey] = 'translateX(' + Math.round(xPos) + 'px) translateY(' + Math.round(yPos) + 'px)';
-	
-	          if (transformKey !== 'msTransform') {
-	            // The Z transform will keep this in the GPU (faster, and prevents artifacts),
-	            // but IE9 doesn't support 3d transforms and will choke.
-	            css[transformKey] += " translateZ(0)";
-	          }
-	        } else {
-	          if (_same.top) {
-	            css.top = _pos.top + 'px';
-	          } else {
-	            css.bottom = _pos.bottom + 'px';
-	          }
-	
-	          if (_same.left) {
-	            css.left = _pos.left + 'px';
-	          } else {
-	            css.right = _pos.right + 'px';
-	          }
-	        }
-	      };
-	
-	      var moved = false;
-	      if ((same.page.top || same.page.bottom) && (same.page.left || same.page.right)) {
-	        css.position = 'absolute';
-	        transcribe(same.page, pos.page);
-	      } else if ((same.viewport.top || same.viewport.bottom) && (same.viewport.left || same.viewport.right)) {
-	        css.position = 'fixed';
-	        transcribe(same.viewport, pos.viewport);
-	      } else if (typeof same.offset !== 'undefined' && same.offset.top && same.offset.left) {
-	        (function () {
-	          css.position = 'absolute';
-	          var offsetParent = _this6.cache('target-offsetparent', function () {
-	            return getOffsetParent(_this6.target);
-	          });
-	
-	          if (getOffsetParent(_this6.element) !== offsetParent) {
-	            defer(function () {
-	              _this6.element.parentNode.removeChild(_this6.element);
-	              offsetParent.appendChild(_this6.element);
-	            });
-	          }
-	
-	          transcribe(same.offset, pos.offset);
-	          moved = true;
-	        })();
-	      } else {
-	        css.position = 'absolute';
-	        transcribe({ top: true, left: true }, pos.page);
-	      }
-	
-	      if (!moved) {
-	        var offsetParentIsBody = true;
-	        var currentNode = this.element.parentNode;
-	        while (currentNode && currentNode.tagName !== 'BODY') {
-	          if (getComputedStyle(currentNode).position !== 'static') {
-	            offsetParentIsBody = false;
-	            break;
-	          }
-	
-	          currentNode = currentNode.parentNode;
-	        }
-	
-	        if (!offsetParentIsBody) {
-	          this.element.parentNode.removeChild(this.element);
-	          document.body.appendChild(this.element);
-	        }
-	      }
-	
-	      // Any css change will trigger a repaint, so let's avoid one if nothing changed
-	      var writeCSS = {};
-	      var write = false;
-	      for (var key in css) {
-	        var val = css[key];
-	        var elVal = this.element.style[key];
-	
-	        if (elVal !== '' && val !== '' && ['top', 'left', 'bottom', 'right'].indexOf(key) >= 0) {
-	          elVal = parseFloat(elVal);
-	          val = parseFloat(val);
-	        }
-	
-	        if (elVal !== val) {
-	          write = true;
-	          writeCSS[key] = val;
-	        }
-	      }
-	
-	      if (write) {
-	        defer(function () {
-	          extend(_this6.element.style, writeCSS);
-	        });
-	      }
-	    }
-	  }]);
-	
-	  return TetherClass;
-	})();
-	
-	TetherClass.modules = [];
-	
-	TetherBase.position = position;
-	
-	var Tether = extend(TetherClass, TetherBase);
-	/* globals TetherBase */
-	
-	'use strict';
-	
-	var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
-	
-	var _TetherBase$Utils = TetherBase.Utils;
-	var getBounds = _TetherBase$Utils.getBounds;
-	var extend = _TetherBase$Utils.extend;
-	var updateClasses = _TetherBase$Utils.updateClasses;
-	var defer = _TetherBase$Utils.defer;
-	
-	var BOUNDS_FORMAT = ['left', 'top', 'right', 'bottom'];
-	
-	function getBoundingRect(tether, to) {
-	  if (to === 'scrollParent') {
-	    to = tether.scrollParent;
-	  } else if (to === 'window') {
-	    to = [pageXOffset, pageYOffset, innerWidth + pageXOffset, innerHeight + pageYOffset];
-	  }
-	
-	  if (to === document) {
-	    to = to.documentElement;
-	  }
-	
-	  if (typeof to.nodeType !== 'undefined') {
-	    (function () {
-	      var size = getBounds(to);
-	      var pos = size;
-	      var style = getComputedStyle(to);
-	
-	      to = [pos.left, pos.top, size.width + pos.left, size.height + pos.top];
-	
-	      BOUNDS_FORMAT.forEach(function (side, i) {
-	        side = side[0].toUpperCase() + side.substr(1);
-	        if (side === 'Top' || side === 'Left') {
-	          to[i] += parseFloat(style['border' + side + 'Width']);
-	        } else {
-	          to[i] -= parseFloat(style['border' + side + 'Width']);
-	        }
-	      });
-	    })();
-	  }
-	
-	  return to;
-	}
-	
-	TetherBase.modules.push({
-	  position: function position(_ref) {
-	    var _this = this;
-	
-	    var top = _ref.top;
-	    var left = _ref.left;
-	    var targetAttachment = _ref.targetAttachment;
-	
-	    if (!this.options.constraints) {
-	      return true;
-	    }
-	
-	    var _cache = this.cache('element-bounds', function () {
-	      return getBounds(_this.element);
-	    });
-	
-	    var height = _cache.height;
-	    var width = _cache.width;
-	
-	    if (width === 0 && height === 0 && typeof this.lastSize !== 'undefined') {
-	      var _lastSize = this.lastSize;
-	
-	      // Handle the item getting hidden as a result of our positioning without glitching
-	      // the classes in and out
-	      width = _lastSize.width;
-	      height = _lastSize.height;
-	    }
-	
-	    var targetSize = this.cache('target-bounds', function () {
-	      return _this.getTargetBounds();
-	    });
-	
-	    var targetHeight = targetSize.height;
-	    var targetWidth = targetSize.width;
-	
-	    var allClasses = [this.getClass('pinned'), this.getClass('out-of-bounds')];
-	
-	    this.options.constraints.forEach(function (constraint) {
-	      var outOfBoundsClass = constraint.outOfBoundsClass;
-	      var pinnedClass = constraint.pinnedClass;
-	
-	      if (outOfBoundsClass) {
-	        allClasses.push(outOfBoundsClass);
-	      }
-	      if (pinnedClass) {
-	        allClasses.push(pinnedClass);
-	      }
-	    });
-	
-	    allClasses.forEach(function (cls) {
-	      ['left', 'top', 'right', 'bottom'].forEach(function (side) {
-	        allClasses.push(cls + '-' + side);
-	      });
-	    });
-	
-	    var addClasses = [];
-	
-	    var tAttachment = extend({}, targetAttachment);
-	    var eAttachment = extend({}, this.attachment);
-	
-	    this.options.constraints.forEach(function (constraint) {
-	      var to = constraint.to;
-	      var attachment = constraint.attachment;
-	      var pin = constraint.pin;
-	
-	      if (typeof attachment === 'undefined') {
-	        attachment = '';
-	      }
-	
-	      var changeAttachX = undefined,
-	          changeAttachY = undefined;
-	      if (attachment.indexOf(' ') >= 0) {
-	        var _attachment$split = attachment.split(' ');
-	
-	        var _attachment$split2 = _slicedToArray(_attachment$split, 2);
-	
-	        changeAttachY = _attachment$split2[0];
-	        changeAttachX = _attachment$split2[1];
-	      } else {
-	        changeAttachX = changeAttachY = attachment;
-	      }
-	
-	      var bounds = getBoundingRect(_this, to);
-	
-	      if (changeAttachY === 'target' || changeAttachY === 'both') {
-	        if (top < bounds[1] && tAttachment.top === 'top') {
-	          top += targetHeight;
-	          tAttachment.top = 'bottom';
-	        }
-	
-	        if (top + height > bounds[3] && tAttachment.top === 'bottom') {
-	          top -= targetHeight;
-	          tAttachment.top = 'top';
-	        }
-	      }
-	
-	      if (changeAttachY === 'together') {
-	        if (top < bounds[1] && tAttachment.top === 'top') {
-	          if (eAttachment.top === 'bottom') {
-	            top += targetHeight;
-	            tAttachment.top = 'bottom';
-	
-	            top += height;
-	            eAttachment.top = 'top';
-	          } else if (eAttachment.top === 'top') {
-	            top += targetHeight;
-	            tAttachment.top = 'bottom';
-	
-	            top -= height;
-	            eAttachment.top = 'bottom';
-	          }
-	        }
-	
-	        if (top + height > bounds[3] && tAttachment.top === 'bottom') {
-	          if (eAttachment.top === 'top') {
-	            top -= targetHeight;
-	            tAttachment.top = 'top';
-	
-	            top -= height;
-	            eAttachment.top = 'bottom';
-	          } else if (eAttachment.top === 'bottom') {
-	            top -= targetHeight;
-	            tAttachment.top = 'top';
-	
-	            top += height;
-	            eAttachment.top = 'top';
-	          }
-	        }
-	
-	        if (tAttachment.top === 'middle') {
-	          if (top + height > bounds[3] && eAttachment.top === 'top') {
-	            top -= height;
-	            eAttachment.top = 'bottom';
-	          } else if (top < bounds[1] && eAttachment.top === 'bottom') {
-	            top += height;
-	            eAttachment.top = 'top';
-	          }
-	        }
-	      }
-	
-	      if (changeAttachX === 'target' || changeAttachX === 'both') {
-	        if (left < bounds[0] && tAttachment.left === 'left') {
-	          left += targetWidth;
-	          tAttachment.left = 'right';
-	        }
-	
-	        if (left + width > bounds[2] && tAttachment.left === 'right') {
-	          left -= targetWidth;
-	          tAttachment.left = 'left';
-	        }
-	      }
-	
-	      if (changeAttachX === 'together') {
-	        if (left < bounds[0] && tAttachment.left === 'left') {
-	          if (eAttachment.left === 'right') {
-	            left += targetWidth;
-	            tAttachment.left = 'right';
-	
-	            left += width;
-	            eAttachment.left = 'left';
-	          } else if (eAttachment.left === 'left') {
-	            left += targetWidth;
-	            tAttachment.left = 'right';
-	
-	            left -= width;
-	            eAttachment.left = 'right';
-	          }
-	        } else if (left + width > bounds[2] && tAttachment.left === 'right') {
-	          if (eAttachment.left === 'left') {
-	            left -= targetWidth;
-	            tAttachment.left = 'left';
-	
-	            left -= width;
-	            eAttachment.left = 'right';
-	          } else if (eAttachment.left === 'right') {
-	            left -= targetWidth;
-	            tAttachment.left = 'left';
-	
-	            left += width;
-	            eAttachment.left = 'left';
-	          }
-	        } else if (tAttachment.left === 'center') {
-	          if (left + width > bounds[2] && eAttachment.left === 'left') {
-	            left -= width;
-	            eAttachment.left = 'right';
-	          } else if (left < bounds[0] && eAttachment.left === 'right') {
-	            left += width;
-	            eAttachment.left = 'left';
-	          }
-	        }
-	      }
-	
-	      if (changeAttachY === 'element' || changeAttachY === 'both') {
-	        if (top < bounds[1] && eAttachment.top === 'bottom') {
-	          top += height;
-	          eAttachment.top = 'top';
-	        }
-	
-	        if (top + height > bounds[3] && eAttachment.top === 'top') {
-	          top -= height;
-	          eAttachment.top = 'bottom';
-	        }
-	      }
-	
-	      if (changeAttachX === 'element' || changeAttachX === 'both') {
-	        if (left < bounds[0] && eAttachment.left === 'right') {
-	          left += width;
-	          eAttachment.left = 'left';
-	        }
-	
-	        if (left + width > bounds[2] && eAttachment.left === 'left') {
-	          left -= width;
-	          eAttachment.left = 'right';
-	        }
-	      }
-	
-	      if (typeof pin === 'string') {
-	        pin = pin.split(',').map(function (p) {
-	          return p.trim();
-	        });
-	      } else if (pin === true) {
-	        pin = ['top', 'left', 'right', 'bottom'];
-	      }
-	
-	      pin = pin || [];
-	
-	      var pinned = [];
-	      var oob = [];
-	
-	      if (top < bounds[1]) {
-	        if (pin.indexOf('top') >= 0) {
-	          top = bounds[1];
-	          pinned.push('top');
-	        } else {
-	          oob.push('top');
-	        }
-	      }
-	
-	      if (top + height > bounds[3]) {
-	        if (pin.indexOf('bottom') >= 0) {
-	          top = bounds[3] - height;
-	          pinned.push('bottom');
-	        } else {
-	          oob.push('bottom');
-	        }
-	      }
-	
-	      if (left < bounds[0]) {
-	        if (pin.indexOf('left') >= 0) {
-	          left = bounds[0];
-	          pinned.push('left');
-	        } else {
-	          oob.push('left');
-	        }
-	      }
-	
-	      if (left + width > bounds[2]) {
-	        if (pin.indexOf('right') >= 0) {
-	          left = bounds[2] - width;
-	          pinned.push('right');
-	        } else {
-	          oob.push('right');
-	        }
-	      }
-	
-	      if (pinned.length) {
-	        (function () {
-	          var pinnedClass = undefined;
-	          if (typeof _this.options.pinnedClass !== 'undefined') {
-	            pinnedClass = _this.options.pinnedClass;
-	          } else {
-	            pinnedClass = _this.getClass('pinned');
-	          }
-	
-	          addClasses.push(pinnedClass);
-	          pinned.forEach(function (side) {
-	            addClasses.push(pinnedClass + '-' + side);
-	          });
-	        })();
-	      }
-	
-	      if (oob.length) {
-	        (function () {
-	          var oobClass = undefined;
-	          if (typeof _this.options.outOfBoundsClass !== 'undefined') {
-	            oobClass = _this.options.outOfBoundsClass;
-	          } else {
-	            oobClass = _this.getClass('out-of-bounds');
-	          }
-	
-	          addClasses.push(oobClass);
-	          oob.forEach(function (side) {
-	            addClasses.push(oobClass + '-' + side);
-	          });
-	        })();
-	      }
-	
-	      if (pinned.indexOf('left') >= 0 || pinned.indexOf('right') >= 0) {
-	        eAttachment.left = tAttachment.left = false;
-	      }
-	      if (pinned.indexOf('top') >= 0 || pinned.indexOf('bottom') >= 0) {
-	        eAttachment.top = tAttachment.top = false;
-	      }
-	
-	      if (tAttachment.top !== targetAttachment.top || tAttachment.left !== targetAttachment.left || eAttachment.top !== _this.attachment.top || eAttachment.left !== _this.attachment.left) {
-	        _this.updateAttachClasses(eAttachment, tAttachment);
-	      }
-	    });
-	
-	    defer(function () {
-	      if (!(_this.options.addTargetClasses === false)) {
-	        updateClasses(_this.target, addClasses, allClasses);
-	      }
-	      updateClasses(_this.element, addClasses, allClasses);
-	    });
-	
-	    return { top: top, left: left };
-	  }
-	});
-	/* globals TetherBase */
-	
-	'use strict';
-	
-	var _TetherBase$Utils = TetherBase.Utils;
-	var getBounds = _TetherBase$Utils.getBounds;
-	var updateClasses = _TetherBase$Utils.updateClasses;
-	var defer = _TetherBase$Utils.defer;
-	
-	TetherBase.modules.push({
-	  position: function position(_ref) {
-	    var _this = this;
-	
-	    var top = _ref.top;
-	    var left = _ref.left;
-	
-	    var _cache = this.cache('element-bounds', function () {
-	      return getBounds(_this.element);
-	    });
-	
-	    var height = _cache.height;
-	    var width = _cache.width;
-	
-	    var targetPos = this.getTargetBounds();
-	
-	    var bottom = top + height;
-	    var right = left + width;
-	
-	    var abutted = [];
-	    if (top <= targetPos.bottom && bottom >= targetPos.top) {
-	      ['left', 'right'].forEach(function (side) {
-	        var targetPosSide = targetPos[side];
-	        if (targetPosSide === left || targetPosSide === right) {
-	          abutted.push(side);
-	        }
-	      });
-	    }
-	
-	    if (left <= targetPos.right && right >= targetPos.left) {
-	      ['top', 'bottom'].forEach(function (side) {
-	        var targetPosSide = targetPos[side];
-	        if (targetPosSide === top || targetPosSide === bottom) {
-	          abutted.push(side);
-	        }
-	      });
-	    }
-	
-	    var allClasses = [];
-	    var addClasses = [];
-	
-	    var sides = ['left', 'top', 'right', 'bottom'];
-	    allClasses.push(this.getClass('abutted'));
-	    sides.forEach(function (side) {
-	      allClasses.push(_this.getClass('abutted') + '-' + side);
-	    });
-	
-	    if (abutted.length) {
-	      addClasses.push(this.getClass('abutted'));
-	    }
-	
-	    abutted.forEach(function (side) {
-	      addClasses.push(_this.getClass('abutted') + '-' + side);
-	    });
-	
-	    defer(function () {
-	      if (!(_this.options.addTargetClasses === false)) {
-	        updateClasses(_this.target, addClasses, allClasses);
-	      }
-	      updateClasses(_this.element, addClasses, allClasses);
-	    });
-	
-	    return true;
-	  }
-	});
-	/* globals TetherBase */
-	
-	'use strict';
-	
-	var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
-	
-	TetherBase.modules.push({
-	  position: function position(_ref) {
-	    var top = _ref.top;
-	    var left = _ref.left;
-	
-	    if (!this.options.shift) {
-	      return;
-	    }
-	
-	    var shift = this.options.shift;
-	    if (typeof this.options.shift === 'function') {
-	      shift = this.options.shift.call(this, { top: top, left: left });
-	    }
-	
-	    var shiftTop = undefined,
-	        shiftLeft = undefined;
-	    if (typeof shift === 'string') {
-	      shift = shift.split(' ');
-	      shift[1] = shift[1] || shift[0];
-	
-	      var _shift = shift;
-	
-	      var _shift2 = _slicedToArray(_shift, 2);
-	
-	      shiftTop = _shift2[0];
-	      shiftLeft = _shift2[1];
-	
-	      shiftTop = parseFloat(shiftTop, 10);
-	      shiftLeft = parseFloat(shiftLeft, 10);
-	    } else {
-	      shiftTop = shift.top;
-	      shiftLeft = shift.left;
-	    }
-	
-	    top += shiftTop;
-	    left += shiftLeft;
-	
-	    return { top: top, left: left };
-	  }
-	});
-	return Tether;
-	
-	}));
-
-
-/***/ },
-/* 134 */
-/***/ function(module, exports) {
-
-	module.exports = "<span v-el:trigger>\r\n\t<slot></slot>\r\n</span> \r\n<div class=\"popover {{popoverAlignment}}\" v-el:popover>\r\n  <div class=\"popover-arrow\"></div>\r\n  <h3 class=\"popover-title\" v-if=\"title\">{{title}}</h3>\r\n  <div class=\"popover-content\">\r\n    <span v-html=\"text\"></span>\r\n  </div>\r\n</div>";
-
-/***/ },
-/* 135 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -4889,9 +3164,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(136);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/progress\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _progressHtml = __webpack_require__(139);
+	var _progressHtml = __webpack_require__(71);
 	
 	var _progressHtml2 = _interopRequireDefault(_progressHtml);
 	
@@ -4942,29 +3217,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 136 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(137);
-
-/***/ },
-/* 137 */
+/* 71 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<progress \n\tclass=\"progress {{progressVariant}} {{striped ? 'progress-striped' : ''}} {{animated ? 'progres-animated' : ''}}\" \n\tvalue=\"{{value}}\" \n\tmax=\"{{max}}\" \n\taria-valuenow=\"{{value}}\" \n\taria-valuemin=\"0\" \n\taria-valuemax=\"{{max}}\"\n\tv-el:progress>\n  <div class=\"progress\">\n    <span class=\"progress-bar\" v-bind:style=\"{width: value + '%'}\" v-el:progressbar></span>\n  </div>\n</progress>";
 
 /***/ },
-/* 138 */,
-/* 139 */
-/***/ function(module, exports) {
-
-	module.exports = "<progress \r\n\tclass=\"progress {{progressVariant}} {{striped ? 'progress-striped' : ''}} {{animated ? 'progres-animated' : ''}}\" \r\n\tvalue=\"{{value}}\" \r\n\tmax=\"{{max}}\" \r\n\taria-valuenow=\"{{value}}\" \r\n\taria-valuemin=\"0\" \r\n\taria-valuemax=\"{{max}}\"\r\n\tv-el:progress>\r\n  <div class=\"progress\">\r\n    <span class=\"progress-bar\" v-bind:style=\"{width: value + '%'}\" v-el:progressbar></span>\r\n  </div>\r\n</progress>";
-
-/***/ },
-/* 140 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -4976,15 +3235,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(141);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/tables\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _tablesHtml = __webpack_require__(144);
+	var _tablesHtml = __webpack_require__(73);
 	
 	var _tablesHtml2 = _interopRequireDefault(_tablesHtml);
 	
 	// import ie9 polyfill
 	
-	__webpack_require__(46);
+	__webpack_require__(20);
 	
 	exports['default'] = {
 	  template: _tablesHtml2['default'],
@@ -5078,29 +3337,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 141 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(142);
-
-/***/ },
-/* 142 */
+/* 73 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<div v-bind:class=\"{repsonsive: responsive}\">\n\t<slot></slot>\n</div>";
 
 /***/ },
-/* 143 */,
-/* 144 */
-/***/ function(module, exports) {
-
-	module.exports = "<div v-bind:class=\"{repsonsive: responsive}\">\r\n\t<slot></slot>\r\n</div>";
-
-/***/ },
-/* 145 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -5112,13 +3355,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(108);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/nav\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _tabsHtml = __webpack_require__(146);
+	var _tabsHtml = __webpack_require__(75);
 	
 	var _tabsHtml2 = _interopRequireDefault(_tabsHtml);
 	
-	var _utilsHelpersJs = __webpack_require__(52);
+	var _utilsHelpersJs = __webpack_require__(23);
 	
 	// this is directly linked to the bootstrap animation timing in _tabs.scss
 	// for browsers that do not support transitions like IE9 just change slide immediately
@@ -5243,13 +3486,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.tab = tab;
 
 /***/ },
-/* 146 */
+/* 75 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"tabs\">\n  <ul class=\"nav nav-tabs\">\n    <li class=\"nav-item\" v-for=\"item in items\" v-on:click=\"setActive($index)\">\n      <span class=\"nav-link btn {{btnSize}} {{item.active ? 'active' : ''}} {{ item.disabled ? 'disabled' : '' }}\">{{item.title}}</span>\n    </li>\n  </ul>\n  <div class=\"tab-content\">\n    <slot></slot>\n  </div>\n</div>";
 
 /***/ },
-/* 147 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -5261,13 +3504,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(148);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/tooltip\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var _tether = __webpack_require__(133);
+	var _tether = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"tether\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var _tether2 = _interopRequireDefault(_tether);
 	
-	var _tooltipHtml = __webpack_require__(151);
+	var _tooltipHtml = __webpack_require__(77);
 	
 	var _tooltipHtml2 = _interopRequireDefault(_tooltipHtml);
 	
@@ -5449,28 +3692,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 148 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(149);
-	
-	__webpack_require__(10);
-
-/***/ },
-/* 149 */
+/* 77 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 150 */,
-/* 151 */
-/***/ function(module, exports) {
-
-	module.exports = "<span v-el:trigger>\r\n\t<slot></slot>\r\n</span> \r\n<div class=\"tooltip fade in {{tooltipAlignment}}\" v-el:tooltip>\r\n\t<div class=\"tooltip-inner\">\r\n\t\t<div class=\"tooltip-arrow\"></div>\r\n\t  <div class=\"tooltip-content\">\r\n\t    <span v-html=\"text\"></span>\r\n\t  </div>\r\n\t</div>\r\n</div>";
+	module.exports = "<span v-el:trigger>\n\t<slot></slot>\n</span> \n<div class=\"tooltip fade in {{tooltipAlignment}}\" v-el:tooltip>\n\t<div class=\"tooltip-inner\">\n\t\t<div class=\"tooltip-arrow\"></div>\n\t  <div class=\"tooltip-content\">\n\t    <span v-html=\"text\"></span>\n\t  </div>\n\t</div>\n</div>";
 
 /***/ }
 /******/ ])
