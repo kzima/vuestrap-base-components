@@ -27,6 +27,7 @@ import images from './images'
 import jumbotron from './jumbotron'
 import label from './labels'
 import listGroup from './list-group'
+import listGroupItem from './list-group-item'
 import media from './media'
 import modal from './modal'
 import {nav, navItem} from './nav'
@@ -63,6 +64,7 @@ const vuestrapBase = {
 	jumbotron,
 	label,
 	listGroup,
+	listGroupItem,
 	media,
 	modal,
 	nav,
