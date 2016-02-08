@@ -1,6 +1,6 @@
 {
   "name": "vuestrap-base-components",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "Web components that extend Bootstrap 4.",
   "library": "vuestrapBase",
   "repository": {
@@ -15,7 +15,8 @@
     "dev": "webpack --colors --progress --config webpack.build.js --env development",
     "dev-bundle": "webpack --colors --progress --config webpack.build.js --env development --bundle true",
     "docs": "webpack --colors --progress --config  webpack.build.js --env docs",
-    "serve-docs": "webpack-dev-server --port 8081 --inline --hot --quiet --config webpack.build.js --env docs"
+    "serve-docs": "webpack-dev-server --port 8081 --inline --hot --quiet --config webpack.build.js --env docs",
+    "release": "bash build/release.sh && bash build/gh-pages.sh"
   },
   "keywords": [
     "Bootstrap4",

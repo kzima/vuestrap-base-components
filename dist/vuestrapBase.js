@@ -55,9 +55,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
-	 * IMPORT GLOBAL STYLING
+	 * IMPORT EACH COMPONENT
 	 */
-	// import normalize, grid, utilities and
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
@@ -66,127 +65,119 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(1);
-	
-	/**
-	 * IMPORT EACH COMPONENT
-	 */
-	
-	var _alert = __webpack_require__(6);
+	var _alert = __webpack_require__(1);
 	
 	var _alert2 = _interopRequireDefault(_alert);
 	
-	var _labels = __webpack_require__(13);
+	var _labels = __webpack_require__(3);
 	
 	var _labels2 = _interopRequireDefault(_labels);
 	
-	var _breadcrumb = __webpack_require__(18);
+	var _breadcrumb = __webpack_require__(5);
 	
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 	
-	var _buttonCheckbox = __webpack_require__(23);
+	var _buttonCheckbox = __webpack_require__(8);
 	
 	var _buttonCheckbox2 = _interopRequireDefault(_buttonCheckbox);
 	
-	var _buttonGroup = __webpack_require__(28);
+	var _buttonGroup = __webpack_require__(10);
 	
 	var _buttonGroup2 = _interopRequireDefault(_buttonGroup);
 	
-	var _buttonRadio = __webpack_require__(30);
+	var _buttonRadio = __webpack_require__(12);
 	
 	var _buttonRadio2 = _interopRequireDefault(_buttonRadio);
 	
-	var _buttons = __webpack_require__(32);
+	var _buttons = __webpack_require__(14);
 	
 	var _buttons2 = _interopRequireDefault(_buttons);
 	
-	var _card = __webpack_require__(37);
+	var _card = __webpack_require__(20);
 	
 	var _card2 = _interopRequireDefault(_card);
 	
-	var _carousel = __webpack_require__(47);
+	var _carousel = __webpack_require__(23);
 	
-	var _collapse = __webpack_require__(53);
+	var _collapse = __webpack_require__(25);
 	
-	var _dropdown = __webpack_require__(55);
+	var _dropdown = __webpack_require__(27);
 	
 	var _dropdown2 = _interopRequireDefault(_dropdown);
 	
-	var _dropdownSelect = __webpack_require__(62);
+	var _dropdownSelect = __webpack_require__(31);
 	
 	var _dropdownSelect2 = _interopRequireDefault(_dropdownSelect);
 	
-	var _formCheckbox = __webpack_require__(66);
+	var _formCheckbox = __webpack_require__(35);
 	
 	var _formCheckbox2 = _interopRequireDefault(_formCheckbox);
 	
-	var _formRadio = __webpack_require__(76);
+	var _formRadio = __webpack_require__(40);
 	
 	var _formRadio2 = _interopRequireDefault(_formRadio);
 	
-	var _formInput = __webpack_require__(78);
+	var _formInput = __webpack_require__(42);
 	
 	var _formInput2 = _interopRequireDefault(_formInput);
 	
-	var _formSelect = __webpack_require__(81);
+	var _formSelect = __webpack_require__(44);
 	
 	var _formSelect2 = _interopRequireDefault(_formSelect);
 	
-	var _formTextarea = __webpack_require__(83);
+	var _formTextarea = __webpack_require__(46);
 	
 	var _formTextarea2 = _interopRequireDefault(_formTextarea);
 	
-	var _images = __webpack_require__(85);
+	var _images = __webpack_require__(48);
 	
 	var _images2 = _interopRequireDefault(_images);
 	
-	var _jumbotron = __webpack_require__(87);
+	var _jumbotron = __webpack_require__(49);
 	
 	var _jumbotron2 = _interopRequireDefault(_jumbotron);
 	
 	var _labels3 = _interopRequireDefault(_labels);
 	
-	var _listGroup = __webpack_require__(92);
+	var _listGroup = __webpack_require__(51);
 	
-	var _listGroup2 = _interopRequireDefault(_listGroup);
-	
-	var _media = __webpack_require__(97);
+	var _media = __webpack_require__(55);
 	
 	var _media2 = _interopRequireDefault(_media);
 	
-	var _modal = __webpack_require__(102);
+	var _modal = __webpack_require__(57);
 	
 	var _modal2 = _interopRequireDefault(_modal);
 	
-	var _nav = __webpack_require__(107);
+	var _nav = __webpack_require__(59);
 	
-	var _navbar = __webpack_require__(114);
+	var _navbar = __webpack_require__(63);
 	
 	var _navbar2 = _interopRequireDefault(_navbar);
 	
-	var _pager = __webpack_require__(119);
+	var _pager = __webpack_require__(65);
 	
 	var _pager2 = _interopRequireDefault(_pager);
 	
-	var _pagination = __webpack_require__(124);
+	var _pagination = __webpack_require__(67);
 	
 	var _pagination2 = _interopRequireDefault(_pagination);
 	
-	var _popover = __webpack_require__(129);
+	var _popover = __webpack_require__(69);
 	
 	var _popover2 = _interopRequireDefault(_popover);
 	
-	var _progress = __webpack_require__(135);
+	var _progress = __webpack_require__(72);
 	
 	var _progress2 = _interopRequireDefault(_progress);
 	
-	var _tables = __webpack_require__(140);
+	var _tables = __webpack_require__(74);
 	
 	var _tables2 = _interopRequireDefault(_tables);
 	
-	var _tabs = __webpack_require__(145);
+	var _tabs = __webpack_require__(76);
 	
-	var _tooltip = __webpack_require__(147);
+	var _tooltip = __webpack_require__(78);
 	
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 	
@@ -213,7 +204,8 @@ return /******/ (function(modules) { // webpackBootstrap
 		images: _images2['default'],
 		jumbotron: _jumbotron2['default'],
 		label: _labels3['default'],
-		listGroup: _listGroup2['default'],
+		listGroup: _listGroup.listGroup,
+		listGroupItem: _listGroup.listGroupItem,
 		media: _media2['default'],
 		modal: _modal2['default'],
 		nav: _nav.nav,
@@ -237,24 +229,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// import core stuff
-	'use strict';
-	
-	__webpack_require__(2);
-
-/***/ },
-/* 2 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// import dependencies
 	'use strict';
 	
@@ -264,9 +238,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(7);
-	
-	var _alertHtml = __webpack_require__(12);
+	var _alertHtml = __webpack_require__(2);
 	
 	var _alertHtml2 = _interopRequireDefault(_alertHtml);
 	
@@ -306,38 +278,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 7 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(8);
-	
-	__webpack_require__(10);
-
-/***/ },
-/* 8 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 9 */,
-/* 10 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 11 */,
-/* 12 */
+/* 2 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"alert {{alertState}} {{ dismissible ? 'alert-dismissible' : '' }} fade in\" role=\"alert\" v-show=\"show\">\r\n    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\" v-if=\"dismissible\" v-on:click.stop.prevent=\"dismiss\">\r\n        <span aria-hidden=\"true\">&times;</span>\r\n        <span class=\"sr-only\">Close</span>\r\n    </button>\r\n    <slot></slot>\r\n</div>\r\n";
 
 /***/ },
-/* 13 */
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -349,9 +296,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(14);
-	
-	var _labelsHtml = __webpack_require__(17);
+	var _labelsHtml = __webpack_require__(4);
 	
 	var _labelsHtml2 = _interopRequireDefault(_labelsHtml);
 	
@@ -381,29 +326,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(15);
-
-/***/ },
-/* 15 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 16 */,
-/* 17 */
+/* 4 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"label {{labelVariant}} {{labelType}}\">\r\n\t<slot></slot>\r\n</span>\r\n";
 
 /***/ },
-/* 18 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -415,11 +344,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(19);
-	
-	var _breadcrumbHtml = __webpack_require__(22);
+	var _breadcrumbHtml = __webpack_require__(6);
 	
 	var _breadcrumbHtml2 = _interopRequireDefault(_breadcrumbHtml);
+	
+	var _utilsHelpersJs = __webpack_require__(7);
 	
 	// export component object
 	exports['default'] = {
@@ -431,34 +360,73 @@ return /******/ (function(modules) { // webpackBootstrap
 	      'default': [],
 	      required: true
 	    }
+	  },
+	  methods: {
+	    changeLocation: _utilsHelpersJs.changeLocation
 	  }
 	};
 	module.exports = exports['default'];
 
 /***/ },
-/* 19 */
-/***/ function(module, exports, __webpack_require__) {
+/* 6 */
+/***/ function(module, exports) {
 
-	// import dependencies
+	module.exports = "<ol class=\"breadcrumb\">\r\n    <li v-for=\"item in list\" v-bind:class=\"{ active: item.active }\">\r\n        <a href=\"#\" v-on:click.stop.prevent=\"changeLocation($router, item.link)\" v-if=\"item.active\">{{item.text}}</a>\r\n        <span v-if=\"!item.active\">{{item.text}}</span>\r\n    </li>\r\n</ol>";
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	/**
+	 * Other utilities for demo pages
+	 *
+	 */
+	
+	// pulled from http://stackoverflow.com/questions/1349404/generate-a-string-of-5-random-characters-in-javascript
 	'use strict';
 	
-	__webpack_require__(20);
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	exports.makeid = makeid;
+	exports.csstransitions = csstransitions;
+	
+	function makeid() {
+	  var text = '';
+	  var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+	
+	  for (var i = 0; i < 5; i++) {
+	    text += possible.charAt(Math.floor(Math.random() * possible.length));
+	  }
+	  return text;
+	}
+	
+	// check if browser support css3 transitions
+	
+	function csstransitions() {
+	  var style = document.documentElement.style;
+	  return style.webkitTransition !== undefined || style.MozTransition !== undefined || style.OTransition !== undefined || style.MsTransition !== undefined || style.transition !== undefined;
+	}
+	
+	/**
+	 * change location utility supports v-link like paths or hrefs
+	 *
+	 * @param {Element} el
+	 * @param {String} event
+	 * @param {Object} [args]
+	 */
+	var changeLocation = function changeLocation(router, link) {
+	  if (!link) return;
+	  if (router) {
+	    router.go(link);
+	  } else {
+	    window.location.href = link;
+	  }
+	};
+	exports.changeLocation = changeLocation;
 
 /***/ },
-/* 20 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 21 */,
-/* 22 */
-/***/ function(module, exports) {
-
-	module.exports = "<ol class=\"breadcrumb\">\r\n    <li v-for=\"item in list\" v-bind:class=\"{ active: active }\">\r\n        <a href=\"{{item.href}}\" v-if=\"!active\">{{item.text}}</a>\r\n        <span v-if=\"active\">{{item.text}}</span>\r\n    </li>\r\n</ol>";
-
-/***/ },
-/* 23 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -470,9 +438,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(24);
-	
-	var _buttonCheckboxHtml = __webpack_require__(27);
+	var _buttonCheckboxHtml = __webpack_require__(9);
 	
 	var _buttonCheckboxHtml2 = _interopRequireDefault(_buttonCheckboxHtml);
 	
@@ -571,31 +537,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 24 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(25);
-	
-	__webpack_require__(10);
-
-/***/ },
-/* 25 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 26 */,
-/* 27 */
+/* 9 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n  <label class=\"btn {{btnVariant}} {{btnSize}} {{ checked($index) ? 'active' : '' }}\" v-for=\"item in list\">\r\n  <input \r\n  \ttype=\"checkbox\" \r\n  \tvalue=\"{{item.value}}\" \r\n  \tautocomplete=\"off\" \r\n  \tv-model=\"item.checked\" \r\n  \t:disabled=\"item.disabled\">\r\n  \t{{item.text}}\r\n  </label>\r\n</div>\r\n";
 
 /***/ },
-/* 28 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -607,9 +555,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(24);
-	
-	var _buttonGroupHtml = __webpack_require__(29);
+	var _buttonGroupHtml = __webpack_require__(11);
 	
 	var _buttonGroupHtml2 = _interopRequireDefault(_buttonGroupHtml);
 	
@@ -627,13 +573,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 29 */
+/* 11 */
 /***/ function(module, exports) {
 
-	module.exports = "<div role=\"group\" aria-label=\"Basic example\" v-bind:class=\"{ 'btn-group': true, btn-group-vertical': vertical }\">\r\n\t<slot></slot>\r\n</div>\r\n";
+	module.exports = "<div role=\"group\" aria-label=\"Basic example\" v-bind:class=\"{ 'btn-group': true, 'btn-group-vertical': vertical }\">\r\n\t<slot></slot>\r\n</div>\r\n";
 
 /***/ },
-/* 30 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -645,9 +591,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(24);
-	
-	var _buttonRadioHtml = __webpack_require__(31);
+	var _buttonRadioHtml = __webpack_require__(13);
 	
 	var _buttonRadioHtml2 = _interopRequireDefault(_buttonRadioHtml);
 	
@@ -722,13 +666,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 31 */
+/* 13 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n    <label \r\n    \tclass=\"btn {{btnVariant}} {{btnSize}} {{ selection == item.value ? 'active' : '' }}\" \r\n    \tv-for=\"item in list\">\r\n      <input \r\n      \ttype=\"radio\" \r\n      \tname=\"options\" \r\n      \tvalue=\"{{item.value}}\" \r\n      \tautocomplete=\"off\" \r\n      \tv-model=\"selection\"\r\n        :disabled=\"item.disabled\"> {{item.text}}\r\n    </label>\r\n</div>\r\n";
 
 /***/ },
-/* 32 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -739,13 +683,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(33);
-	
-	var _buttonsHtml = __webpack_require__(34);
+	var _buttonsHtml = __webpack_require__(15);
 	
 	var _buttonsHtml2 = _interopRequireDefault(_buttonsHtml);
 	
-	__webpack_require__(35);
+	__webpack_require__(16);
+	
+	var _utilsHelpersJs = __webpack_require__(7);
 	
 	// export component object
 	exports['default'] = {
@@ -778,7 +722,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      type: Boolean,
 	      'default': false
 	    },
-	    href: {
+	    link: {
 	      type: String,
 	      'default': ''
 	    },
@@ -795,34 +739,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	      'default': 'default'
 	    }
 	  },
-	  methods: {}
+	  methods: {
+	    changeLocation: _utilsHelpersJs.changeLocation
+	  }
 	};
 	module.exports = exports['default'];
 
 /***/ },
-/* 33 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(10);
-
-/***/ },
-/* 34 */
+/* 15 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}} {{btnDisabled}}\">\r\n\t<template v-if=\"!href\"><slot></slot></template>\r\n\t<a v-bind:href=\"href\" class=\"{{btnDisabled}}\" v-bind:role=\"role\" v-if=\"href\"><slot></slot></a>\r\n</span>";
+	module.exports = "<span class=\"btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}} {{btnDisabled}}\" v-on:click.stop.prevent=\"changeLocation($router, link)\">\r\n\t<slot></slot>\r\n</span>";
 
 /***/ },
-/* 35 */
+/* 16 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 36 */,
-/* 37 */
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -834,15 +773,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(38);
-	
-	var _cardHtml = __webpack_require__(45);
+	var _cardHtml = __webpack_require__(21);
 	
 	var _cardHtml2 = _interopRequireDefault(_cardHtml);
 	
 	// import polyfill for IE9
 	
-	__webpack_require__(46);
+	__webpack_require__(22);
 	
 	// export component object
 	exports['default'] = {
@@ -888,49 +825,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 38 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(39);
-	
-	__webpack_require__(10);
-	
-	__webpack_require__(41);
-	
-	__webpack_require__(43);
-
-/***/ },
-/* 39 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 40 */,
-/* 41 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 42 */,
-/* 43 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 44 */,
-/* 45 */
+/* 21 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"card {{cardVariant}} {{cardAlign}} {{cardInverse}}\">\r\n    <slot></slot>\r\n</div>\r\n";
 
 /***/ },
-/* 46 */
+/* 22 */
 /***/ function(module, exports) {
 
 	/*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js*/
@@ -1030,7 +931,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 47 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1059,17 +960,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(48);
-	
-	var _carouselHtml = __webpack_require__(51);
+	var _carouselHtml = __webpack_require__(24);
 	
 	var _carouselHtml2 = _interopRequireDefault(_carouselHtml);
 	
-	var _utilsHelpersJs = __webpack_require__(52);
+	var _utilsHelpersJs = __webpack_require__(7);
 	
 	// import polyfill for IE9
 	
-	__webpack_require__(46);
+	__webpack_require__(22);
 	
 	// this is directly linked to the bootstrap animation timing in _carousel.scss
 	// for browsers that do not support transitions like IE9 just change slide immediately
@@ -1213,66 +1112,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.slide = slide;
 
 /***/ },
-/* 48 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(41);
-	
-	__webpack_require__(49);
-
-/***/ },
-/* 49 */
+/* 24 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<div class=\"carousel slide\" data-ride=\"carousel\" v-on:mouseenter=\"pause()\" v-on:mouseleave=\"start()\">\r\n\r\n    <!-- Indicators -->\r\n    <ol class=\"carousel-indicators\" v-show=\"indicators\">\r\n        <li v-for=\"item in slides\" v-bind:class=\"{'active': item == index}\" v-on:click=\"changeSlide($index)\"></li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\" role=\"listbox\">\r\n        <slot></slot>\r\n    </div>\r\n\r\n    <!-- Controls -->\r\n    <a class=\"left carousel-control\" href=\"#\" role=\"button\" v-on:click.stop.prevent=\"prev\" v-show=\"controls\">\r\n        <span class=\"icon-prev\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#\" role=\"button\" v-on:click.stop.prevent=\"next\" v-show=\"controls\">\r\n        <span class=\"icon-next\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Next</span>\r\n    </a>\r\n\r\n</div>";
 
 /***/ },
-/* 50 */,
-/* 51 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"carousel slide\" data-ride=\"carousel\" v-on:mouseenter=\"pause()\" v-on:mouseleave=\"start()\">\r\n\r\n    <!-- Indicators -->\r\n    <ol class=\"carousel-indicators\" v-show=\"indicators\">\r\n        <li v-for=\"item in slides\" v-bind:class=\"{'active': item == index}\" v-on:click=\"changeSlide($index)\"></li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\" role=\"listbox\">\r\n        <slot></slot>\r\n    </div>\r\n\r\n    <!-- Controls -->\r\n    <a class=\"left carousel-control\" href=\"#\" role=\"button\" v-on:click.prevent=\"prev\" v-show=\"controls\">\r\n        <span class=\"icon-prev\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#\" role=\"button\" v-on:click.prevent=\"next\" v-show=\"controls\">\r\n        <span class=\"icon-next\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Next</span>\r\n    </a>\r\n\r\n</div>";
-
-/***/ },
-/* 52 */
-/***/ function(module, exports) {
-
-	/**
-	 * Other utilities for demo pages
-	 *
-	 */
-	
-	// pulled from http://stackoverflow.com/questions/1349404/generate-a-string-of-5-random-characters-in-javascript
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	exports.makeid = makeid;
-	exports.csstransitions = csstransitions;
-	
-	function makeid() {
-	  var text = '';
-	  var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-	
-	  for (var i = 0; i < 5; i++) {
-	    text += possible.charAt(Math.floor(Math.random() * possible.length));
-	  }
-	  return text;
-	}
-	
-	// check if browser support css3 transitions
-	
-	function csstransitions() {
-	  var style = document.documentElement.style;
-	  return style.webkitTransition !== undefined || style.MozTransition !== undefined || style.OTransition !== undefined || style.MsTransition !== undefined || style.transition !== undefined;
-	}
-
-/***/ },
-/* 53 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1284,15 +1130,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _collapseHtml = __webpack_require__(54);
+	var _collapseHtml = __webpack_require__(26);
 	
 	var _collapseHtml2 = _interopRequireDefault(_collapseHtml);
 	
-	var _utilsHelpersJs = __webpack_require__(52);
+	var _utilsHelpersJs = __webpack_require__(7);
 	
 	// import polyfill for IE9
 	
-	__webpack_require__(46);
+	__webpack_require__(22);
 	
 	// for browsers that do not support transitions like IE9 just change immediately
 	var TRANSITION_DURATION = (0, _utilsHelpersJs.csstransitions)() ? 350 : 0;
@@ -1411,13 +1257,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.collapseToggle = collapseToggle;
 
 /***/ },
-/* 54 */
+/* 26 */
 /***/ function(module, exports) {
 
 	module.exports = "<div id=\"{{id}}\" class=\"collapse\">\r\n  <slot></slot>\r\n</div>";
 
 /***/ },
-/* 55 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1429,13 +1275,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(56);
-	
-	var _dropdownHtml = __webpack_require__(59);
+	var _dropdownHtml = __webpack_require__(28);
 	
 	var _dropdownHtml2 = _interopRequireDefault(_dropdownHtml);
 	
-	__webpack_require__(60);
+	__webpack_require__(29);
 	
 	// export component object
 	exports['default'] = {
@@ -1505,38 +1349,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 56 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(57);
-	
-	__webpack_require__(10);
-
-/***/ },
-/* 57 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 58 */,
-/* 59 */
+/* 28 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:class=\"{ open: show, dropdown: !dropup, dropup: dropup}\">\r\n    <button\r\n        id=\"dLabel\"\r\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\" role=\"button\"\r\n        aria-haspopup=\"true\"\r\n        aria-expanded=\"{{show}}\"\r\n        v-on:click.prevent=\"toggle($event)\"\r\n        :disabled=\"disabled\">\r\n        <span v-html=\"text\" v-show=\"text\"></span>\r\n        <span class=\"caret\"></span>\r\n    </button>\r\n    <slot></slot>\r\n</div>\r\n";
 
 /***/ },
-/* 60 */
+/* 29 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 61 */,
-/* 62 */
+/* 30 */,
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1548,13 +1374,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(56);
-	
-	var _dropdownSelectHtml = __webpack_require__(63);
+	var _dropdownSelectHtml = __webpack_require__(32);
 	
 	var _dropdownSelectHtml2 = _interopRequireDefault(_dropdownSelectHtml);
 	
-	__webpack_require__(64);
+	__webpack_require__(33);
 	
 	// export component object
 	exports['default'] = {
@@ -1686,20 +1510,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 63 */
+/* 32 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"dropdown-select\" v-bind:class=\"{open: show, dropdown: !dropup, dropup: dropup}\">\r\n    <button\r\n        id=\"{{id}}\"\r\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\r\n        role=\"button\"\r\n        aria-haspopup=\"true\"\r\n        aria-expanded=\"show\"\r\n        v-on:click.prevent=\"toggle($event)\"\r\n        :disabled=\"disabled\">\r\n        <span class=\"checked-items\" v-html=\"displayItem\"></span>\r\n    </button>\r\n    <ul class=\"dropdown-menu\" v-bind:class=\"{'dropdown-menu-right' : position == 'right'}\" aria-labelledby=\"dLabel\">\r\n        <li v-for=\"item in list\">\r\n            <button class=\"dropdown-item\" v-on:click.stop.prevent=\"select(item)\">{{item.text}}</button>\r\n        </li>\r\n    </ul>\r\n</div>\r\n";
 
 /***/ },
-/* 64 */
+/* 33 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 65 */,
-/* 66 */
+/* 34 */,
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1711,9 +1535,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(67);
+	__webpack_require__(36);
 	
-	var _formCheckboxHtml = __webpack_require__(75);
+	var _formCheckboxHtml = __webpack_require__(39);
 	
 	var _formCheckboxHtml2 = _interopRequireDefault(_formCheckboxHtml);
 	
@@ -1798,58 +1622,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 67 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 	
-	__webpack_require__(68);
-	
-	__webpack_require__(73);
+	__webpack_require__(37);
 
 /***/ },
-/* 68 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(69);
-	
-	__webpack_require__(71);
-	
-	__webpack_require__(10);
-
-/***/ },
-/* 69 */
+/* 37 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 70 */,
-/* 71 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 72 */,
-/* 73 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 74 */,
-/* 75 */
+/* 38 */,
+/* 39 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n\t<div class=\"checkbox\" v-for=\"item in list\" v-bind:class=\"{ 'checkbox-inline': !vertical, disabled: item.disabled }\">\r\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-checkbox': custom }\">\r\n\t\t\t<input \r\n\t\t\t\tid=\"{{item.id}}\" \r\n\t\t\t\ttype=\"checkbox\" \r\n\t\t\t\tvalue=\"{{item.value}}\" \r\n\t\t\t\tautocomplete=\"off\" \r\n\t\t\t\tv-model=\"item.checked\" \r\n\t\t\t\tv-bind:disabled=\"item.disabled\">\r\n\t\t\t\t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.text}}\r\n\t\t</label>\r\n\t</div>\r\n</fieldset>\r\n";
 
 /***/ },
-/* 76 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1861,9 +1656,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(67);
+	__webpack_require__(36);
 	
-	var _formRadioHtml = __webpack_require__(77);
+	var _formRadioHtml = __webpack_require__(41);
 	
 	var _formRadioHtml2 = _interopRequireDefault(_formRadioHtml);
 	
@@ -1941,13 +1736,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 77 */
+/* 41 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n\t<div class=\"radio\" v-for=\"item in list\" v-bind:class=\"{ 'radio-inline': !vertical, disabled: item.disabled }\">\r\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-radio': custom }\">\r\n\t\t\t<input \r\n\t\t\t\tid=\"{{item.id}}\" \r\n\t\t\t\ttype=\"radio\" \r\n\t\t\t\tname=\"{{name}}\"\r\n\t\t\t\tvalue=\"{{item.value}}\" \r\n\t\t\t\tautocomplete=\"off\" \r\n\t\t\t\tv-model=\"selection\" \r\n\t\t\t\tdisabled=\"{{item.disabled}}\">\r\n\t\t \t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.name}}\r\n\t\t</label>\r\n\t</div>\r\n</fieldset>\r\n";
 
 /***/ },
-/* 78 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -1959,11 +1754,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(79);
+	var _utilsHelpersJs = __webpack_require__(7);
 	
-	var _utilsHelpersJs = __webpack_require__(52);
-	
-	var _formInputHtml = __webpack_require__(80);
+	var _formInputHtml = __webpack_require__(43);
 	
 	var _formInputHtml2 = _interopRequireDefault(_formInputHtml);
 	
@@ -2029,26 +1822,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 79 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(10);
-	
-	__webpack_require__(69);
-	
-	__webpack_require__(71);
-
-/***/ },
-/* 80 */
+/* 43 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <div class=\"inputClass\">\r\n        <input \r\n        \ttype=\"{{type}}\" \r\n        \tclass=\"form-control {{stateIconType}} {{inputSize}}\" \r\n        \tid=\"{{id}}\" \r\n        \tplaceholder=\"{{placeholder}}\" \r\n        \tv-model=\"model\">\r\n    </div>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>\r\n";
 
 /***/ },
-/* 81 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2060,11 +1840,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(79);
+	var _utilsHelpersJs = __webpack_require__(7);
 	
-	var _utilsHelpersJs = __webpack_require__(52);
-	
-	var _formSelectHtml = __webpack_require__(82);
+	var _formSelectHtml = __webpack_require__(45);
 	
 	var _formSelectHtml2 = _interopRequireDefault(_formSelectHtml);
 	
@@ -2134,13 +1912,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 82 */
+/* 45 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <!-- single select -->\r\n    <select class=\"form-control {{inputSize}}\" id=\"{{id}}\" v-model=\"model\" options=\"allOptions\" v-if=\"!multiple\">\r\n    \t<option v-for=\"option in allOptions\" v-bind:value=\"option.value\">{{option.text}}</option>\r\n    </select>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>\r\n";
 
 /***/ },
-/* 83 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2152,11 +1930,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(79);
+	var _utilsHelpersJs = __webpack_require__(7);
 	
-	var _utilsHelpersJs = __webpack_require__(52);
-	
-	var _formTextareaHtml = __webpack_require__(84);
+	var _formTextareaHtml = __webpack_require__(47);
 	
 	var _formTextareaHtml2 = _interopRequireDefault(_formTextareaHtml);
 	
@@ -2199,31 +1975,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 84 */
+/* 47 */
 /***/ function(module, exports) {
 
 	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <textarea class=\"form-control\" id=\"{{id}}\" rows=\"{{rows}}\" v-model=\"model\"></textarea>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>";
 
 /***/ },
-/* 85 */
-/***/ function(module, exports, __webpack_require__) {
+/* 48 */
+/***/ function(module, exports) {
+
+	"use strict";
 
 	// import dependencies
-	'use strict';
-	
-	__webpack_require__(86);
 
 /***/ },
-/* 86 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(41);
-
-/***/ },
-/* 87 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2235,9 +2001,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(88);
-	
-	var _jumbotronHtml = __webpack_require__(91);
+	var _jumbotronHtml = __webpack_require__(50);
 	
 	var _jumbotronHtml2 = _interopRequireDefault(_jumbotronHtml);
 	
@@ -2255,29 +2019,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 88 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(89);
-
-/***/ },
-/* 89 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 90 */,
-/* 91 */
+/* 50 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"jumbotron\" v-bind:class=\"{ 'jumbotron-fluid': fluid }\">\r\n  <div class=\"container\">\r\n    <slot></slot>\r\n  </div>\r\n</div>";
 
 /***/ },
-/* 92 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2289,13 +2037,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(93);
-	
-	var _listGroupHtml = __webpack_require__(94);
+	var _listGroupHtml = __webpack_require__(52);
 	
 	var _listGroupHtml2 = _interopRequireDefault(_listGroupHtml);
 	
-	__webpack_require__(95);
+	__webpack_require__(53);
 	
 	// export component object
 	var listGroup = {
@@ -2336,31 +2082,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.listGroupItem = listGroupItem;
 
 /***/ },
-/* 93 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(43);
-	
-	__webpack_require__(15);
-
-/***/ },
-/* 94 */
+/* 52 */
 /***/ function(module, exports) {
 
 	module.exports = "<ul v-bind:class=\"{'list-group': true, 'list-group-flush': flush}\">\r\n  <slot></slot>\r\n</ul>";
 
 /***/ },
-/* 95 */
+/* 53 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 96 */,
-/* 97 */
+/* 54 */,
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2372,9 +2107,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(98);
-	
-	var _mediaHtml = __webpack_require__(101);
+	var _mediaHtml = __webpack_require__(56);
 	
 	var _mediaHtml2 = _interopRequireDefault(_mediaHtml);
 	
@@ -2405,31 +2138,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 98 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(99);
-	
-	__webpack_require__(41);
-
-/***/ },
-/* 99 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 100 */,
-/* 101 */
+/* 56 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"media\">\r\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-left'\">\r\n  \t<slot name=\"aside\">\r\n  </div>\r\n  <div class=\"media-body\">\r\n  \t<slot name=\"body\">\r\n  </div>\r\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-right'\">\r\n  \t<slot name=\"aside\">\r\n  </div>\r\n</div>";
 
 /***/ },
-/* 102 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2441,13 +2156,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(103);
+	var _utilsHelpersJs = __webpack_require__(7);
 	
-	var _utilsHelpersJs = __webpack_require__(52);
-	
-	var _modalHtml = __webpack_require__(106);
+	var _modalHtml = __webpack_require__(58);
 	
 	var _modalHtml2 = _interopRequireDefault(_modalHtml);
+	
+	// import polyfill for IE9
+	
+	__webpack_require__(22);
 	
 	// this is directly linked to the bootstrap animation timing in _modal.scss
 	// // for browsers that do not support transitions like IE9 just change slide immediately
@@ -2486,11 +2203,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var _this2 = this;
 	
 	      this.$el.style.display = 'block';
+	      this._body = document.querySelector('body');
 	      var _this = this;
 	      // wait for the display block, and then add class "in" class on the modal
 	      this._modalAnimation = setTimeout(function () {
 	        _this.animateBackdrop = true;
 	        _this2._modalAnimation = setTimeout(function () {
+	          _this._body.classList.add('modal-open');
 	          _this.animateModal = true;
 	          _this.$dispatch('shown::modal');
 	        }, _this.fade ? TRANSITION_DURATION : 0);
@@ -2506,6 +2225,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        // wait for animation to complete and then hide the backdrop
 	        _this.animateBackdrop = false;
 	        _this3._modalAnimation = setTimeout(function () {
+	          _this._body.classList.remove('modal-open');
 	          // no hide the modal wrapper
 	          _this.$el.style.display = 'none';
 	          _this.$dispatch('hidden::modal');
@@ -2551,31 +2271,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 103 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(104);
-	
-	__webpack_require__(10);
-
-/***/ },
-/* 104 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 105 */,
-/* 106 */
+/* 58 */
 /***/ function(module, exports) {
 
 	module.exports = "<div style=\"display: none\">\r\n\t<div id=\"{{id}}\" class=\"modal\" v-bind:class=\"{ fade: fade, in: animateModal || !fade }\" style=\"display: block\" v-on:click=\"onClickOut($event)\">\r\n\t  \t<div class=\"modal-dialog  modal-{{size}}\" role=\"document\" style=\"z-index: 9999\">\r\n\t\t    <div class=\"modal-content\">\r\n\t\t        <div class=\"modal-header\">\r\n\t\t        \t<slot name=\"modal-header\"></slot>\r\n\t\t        </div>\r\n\t\t        <div class=\"modal-body\">\r\n\t\t        \t<slot name=\"modal-body\"></slot>\r\n\t\t        </div>\r\n\t\t        <div class=\"modal-footer\">\r\n\t\t        \t<slot name=\"modal-footer\"></slot>\r\n\t\t        </div>\r\n\t\t    </div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"modal-backdrop\" v-bind:class=\"{ fade: fade, in: animateBackdrop || !fade }\"></div>\r\n</div>";
 
 /***/ },
-/* 107 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2587,13 +2289,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(108);
+	__webpack_require__(60);
 	
-	__webpack_require__(111);
-	
-	var _navHtml = __webpack_require__(113);
+	var _navHtml = __webpack_require__(62);
 	
 	var _navHtml2 = _interopRequireDefault(_navHtml);
+	
+	var _utilsHelpersJs = __webpack_require__(7);
 	
 	// export component object
 	var nav = {
@@ -2614,10 +2316,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.nav = nav;
 	// export slide object
 	var navItem = {
-	  template: '<li class="nav-item"><a href="{{href}}" class="nav-link {{active ? \'active\' : \'\'}} {{disabled ? \'disabled\' : \'\'}}"><slot></slot></a></li>',
+	  template: '<li class="nav-item"><a href="#" v-on:click.stop.prevent="changeLocation($router, link)" class="nav-link {{active ? \'active\' : \'\'}} {{disabled ? \'disabled\' : \'\'}}"><slot></slot></a></li>',
 	  replace: true,
 	  props: {
-	    href: {
+	    link: {
 	      type: String,
 	      'default': ''
 	    },
@@ -2629,41 +2331,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	      type: Boolean,
 	      'default': false
 	    }
+	  },
+	  methods: {
+	    changeLocation: _utilsHelpersJs.changeLocation
 	  }
 	};
 	exports.navItem = navItem;
 
 /***/ },
-/* 108 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(109);
-
-/***/ },
-/* 109 */
+/* 60 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 110 */,
-/* 111 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 112 */,
-/* 113 */
+/* 61 */,
+/* 62 */
 /***/ function(module, exports) {
 
 	module.exports = "<ul v-bind:class=\"{'nav': true, 'nav-stacked': vertical, 'nav-pills': type == 'pills', 'navbar-nav': type == 'navbar' }\">\r\n  <slot></slot> \r\n</ul>";
 
 /***/ },
-/* 114 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2675,13 +2364,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(108);
-	
-	__webpack_require__(115);
-	
-	__webpack_require__(79);
-	
-	var _navbarHtml = __webpack_require__(118);
+	var _navbarHtml = __webpack_require__(64);
 	
 	var _navbarHtml2 = _interopRequireDefault(_navbarHtml);
 	
@@ -2722,35 +2405,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 115 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(116);
-	
-	__webpack_require__(10);
-	
-	__webpack_require__(109);
-	
-	__webpack_require__(69);
-
-/***/ },
-/* 116 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 117 */,
-/* 118 */
+/* 64 */
 /***/ function(module, exports) {
 
 	module.exports = "<nav class=\"navbar {{navbarType}} {{navbarVariant}} {{navbarfixed}} {{full ? 'navbar-full' : ''}}\">\r\n\t<slot></slot>\r\n</nav>";
 
 /***/ },
-/* 119 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2762,9 +2423,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(120);
-	
-	var _pagerHtml = __webpack_require__(123);
+	var _pagerHtml = __webpack_require__(66);
 	
 	var _pagerHtml2 = _interopRequireDefault(_pagerHtml);
 	
@@ -2776,29 +2435,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 120 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(121);
-
-/***/ },
-/* 121 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 122 */,
-/* 123 */
+/* 66 */
 /***/ function(module, exports) {
 
 	module.exports = "<nav>\r\n  <ul class=\"pager\">\r\n  \t<slot></slot>\r\n  </ul>\r\n</nav>";
 
 /***/ },
-/* 124 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2810,9 +2453,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(125);
-	
-	var _paginationHtml = __webpack_require__(128);
+	var _paginationHtml = __webpack_require__(68);
 	
 	var _paginationHtml2 = _interopRequireDefault(_paginationHtml);
 	
@@ -2905,33 +2546,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 125 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(126);
-	
-	__webpack_require__(10);
-	
-	__webpack_require__(25);
-
-/***/ },
-/* 126 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 127 */,
-/* 128 */
+/* 68 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"btn-group pagination\" role=\"group\" aria-label=\"Pagination\">\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == 1 \" v-on:click.prevent=\"(currentPage == 1) ? return : currentPage--\"><span aria-hidden=\"true\">&laquo;</span></button>\r\n    <button type=\"button\" class=\"btn  btn-secondary {{btnSize}} {{ currentPage == 1 ?  'active' : '' }}\" v-on:click.prevent=\"currentPage = 1\" v-show=\"showPrev\">1</button>\r\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showPrev\">...</span>\r\n    <button type=\"button\"\r\n    \tclass=\"btn {{btnSize}} {{btnVariant($index)}} {{ $index + diff == currentPage ? 'active' : '' }} {{ $index + diff != currentPage ? 'hidden-xs-down' : '' }}\"\r\n    \tv-for=\"item in pageLinks\"\r\n        v-on:click.prevent=\"currentPage = $index + diff\">{{$index + diff}}\r\n    </button>\r\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showNext\">...</span>\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}} {{ numberOfPages == currentPage ? 'active' : '' }}\" v-show=\"showNext\" v-on:click.prevent=\"currentPage = numberOfPages\">{{numberOfPages}}</button>\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == numberOfPages\" v-on:click.prevent=\"(currentPage == numberOfPages) ? return : currentPage++\"><span aria-hidden=\"true\">&raquo;</span></button>\r\n</div>\r\n";
 
 /***/ },
-/* 129 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2943,13 +2564,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(130);
-	
-	var _tether = __webpack_require__(133);
+	var _tether = __webpack_require__(70);
 	
 	var _tether2 = _interopRequireDefault(_tether);
 	
-	var _popoverHtml = __webpack_require__(134);
+	var _popoverHtml = __webpack_require__(71);
 	
 	var _popoverHtml2 = _interopRequireDefault(_popoverHtml);
 	
@@ -3132,25 +2751,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 130 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(131);
-	
-	__webpack_require__(10);
-
-/***/ },
-/* 131 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 132 */,
-/* 133 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! tether 1.1.0 */
@@ -4871,13 +4472,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 134 */
+/* 71 */
 /***/ function(module, exports) {
 
 	module.exports = "<span v-el:trigger>\r\n\t<slot></slot>\r\n</span> \r\n<div class=\"popover {{popoverAlignment}}\" v-el:popover>\r\n  <div class=\"popover-arrow\"></div>\r\n  <h3 class=\"popover-title\" v-if=\"title\">{{title}}</h3>\r\n  <div class=\"popover-content\">\r\n    <span v-html=\"text\"></span>\r\n  </div>\r\n</div>";
 
 /***/ },
-/* 135 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -4889,9 +4490,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(136);
-	
-	var _progressHtml = __webpack_require__(139);
+	var _progressHtml = __webpack_require__(73);
 	
 	var _progressHtml2 = _interopRequireDefault(_progressHtml);
 	
@@ -4942,29 +4541,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 136 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(137);
-
-/***/ },
-/* 137 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 138 */,
-/* 139 */
+/* 73 */
 /***/ function(module, exports) {
 
 	module.exports = "<progress \r\n\tclass=\"progress {{progressVariant}} {{striped ? 'progress-striped' : ''}} {{animated ? 'progres-animated' : ''}}\" \r\n\tvalue=\"{{value}}\" \r\n\tmax=\"{{max}}\" \r\n\taria-valuenow=\"{{value}}\" \r\n\taria-valuemin=\"0\" \r\n\taria-valuemax=\"{{max}}\"\r\n\tv-el:progress>\r\n  <div class=\"progress\">\r\n    <span class=\"progress-bar\" v-bind:style=\"{width: value + '%'}\" v-el:progressbar></span>\r\n  </div>\r\n</progress>";
 
 /***/ },
-/* 140 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -4976,15 +4559,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(141);
-	
-	var _tablesHtml = __webpack_require__(144);
+	var _tablesHtml = __webpack_require__(75);
 	
 	var _tablesHtml2 = _interopRequireDefault(_tablesHtml);
 	
 	// import ie9 polyfill
 	
-	__webpack_require__(46);
+	__webpack_require__(22);
 	
 	exports['default'] = {
 	  template: _tablesHtml2['default'],
@@ -5078,29 +4659,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 141 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(142);
-
-/***/ },
-/* 142 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 143 */,
-/* 144 */
+/* 75 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:class=\"{repsonsive: responsive}\">\r\n\t<slot></slot>\r\n</div>";
 
 /***/ },
-/* 145 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -5112,13 +4677,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(108);
-	
-	var _tabsHtml = __webpack_require__(146);
+	var _tabsHtml = __webpack_require__(77);
 	
 	var _tabsHtml2 = _interopRequireDefault(_tabsHtml);
 	
-	var _utilsHelpersJs = __webpack_require__(52);
+	var _utilsHelpersJs = __webpack_require__(7);
 	
 	// this is directly linked to the bootstrap animation timing in _tabs.scss
 	// for browsers that do not support transitions like IE9 just change slide immediately
@@ -5206,11 +4769,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.tabs = tabs;
 	// export tab object
 	var tab = {
-	  template: '<div role="tabpanel" class="tab-pane" v-bind:class="{ active: active, disabled: disabled, fade: fade, in: animate}"><slot></slot></div>',
+	  template: '<div role="tabpanel" class="tab-pane" v-bind:class="{active: active, disabled: disabled, fade: fade, in: animate}"><slot></slot></div>',
 	  replace: true,
 	  data: function data() {
 	    return {
-	      fade: this.$parent.fade
+	      fade: this.$parent.fade,
+	      animate: false
 	    };
 	  },
 	  props: {
@@ -5229,10 +4793,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    disabled: {
 	      type: Boolean,
 	      'default': false
-	    },
-	    animate: {
-	      type: Boolean,
-	      'default': false
 	    }
 	  },
 	  ready: function ready() {
@@ -5243,13 +4803,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.tab = tab;
 
 /***/ },
-/* 146 */
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"tabs\">\n  <ul class=\"nav nav-tabs\">\n    <li class=\"nav-item\" v-for=\"item in items\" v-on:click=\"setActive($index)\">\n      <span class=\"nav-link btn {{btnSize}} {{item.active ? 'active' : ''}} {{ item.disabled ? 'disabled' : '' }}\">{{item.title}}</span>\n    </li>\n  </ul>\n  <div class=\"tab-content\">\n    <slot></slot>\n  </div>\n</div>";
 
 /***/ },
-/* 147 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -5261,13 +4821,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	__webpack_require__(148);
-	
-	var _tether = __webpack_require__(133);
+	var _tether = __webpack_require__(70);
 	
 	var _tether2 = _interopRequireDefault(_tether);
 	
-	var _tooltipHtml = __webpack_require__(151);
+	var _tooltipHtml = __webpack_require__(79);
 	
 	var _tooltipHtml2 = _interopRequireDefault(_tooltipHtml);
 	
@@ -5449,25 +5007,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 148 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-	
-	__webpack_require__(149);
-	
-	__webpack_require__(10);
-
-/***/ },
-/* 149 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 150 */,
-/* 151 */
+/* 79 */
 /***/ function(module, exports) {
 
 	module.exports = "<span v-el:trigger>\r\n\t<slot></slot>\r\n</span> \r\n<div class=\"tooltip fade in {{tooltipAlignment}}\" v-el:tooltip>\r\n\t<div class=\"tooltip-inner\">\r\n\t\t<div class=\"tooltip-arrow\"></div>\r\n\t  <div class=\"tooltip-content\">\r\n\t    <span v-html=\"text\"></span>\r\n\t  </div>\r\n\t</div>\r\n</div>";
