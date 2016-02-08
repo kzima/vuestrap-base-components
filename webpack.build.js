@@ -5,30 +5,26 @@ var pkg = require('./package.json')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 // get some options
-var ENV = optimist.argv.env || 'development'
-var BUNDLE = optimist.argv.bundle || false
+var ENV = optimist.argv.env || 'dev'
 
 // file name
-var fileName = (ENV === 'production') ? './dist/[name].min' : './dist/[name]'
-if (BUNDLE) {
-  fileName = (ENV === 'production') ? './dist/[name]-bundle.min' : './dist/[name]-bundle'
-}
+var fileName = (ENV === 'dist') ? './dist/[name].min' : './dist/[name]'
 
 /**
- * define environment
+ * define plugins
  */
-// set an environment variable to be available in the build script
-config.plugins = []
-if (ENV) {
+// plugins for development
+config.plugins = [
+  new ExtractTextPlugin(fileName + '.css')
+]
+
+// plugins for production
+if (ENV === 'dist') {
   config.plugins.push(new webpack.DefinePlugin({
     'process.env': {
-      NODE_ENV: '"' + ENV + '"'
+      NODE_ENV: '"production"'
     }
   }))
-}
-
-// define plugins for production
-if (ENV === 'production') {
   config.plugins.push(new webpack.optimize.UglifyJsPlugin({
     sourceMap: false,
     compress: {
@@ -36,25 +32,32 @@ if (ENV === 'production') {
     }
   }))
 }
+// plugins for dev
+if (ENV === 'dev') {
+  config.plugins.push(new webpack.DefinePlugin({
+    'process.env': {
+      NODE_ENV: '"dev"'
+    }
+  }))
+}
 
 /**
  * define devtool for source maps
  */
-if (ENV === 'development' && !BUNDLE) {
+if (ENV === 'dev') {
   config.devtool = 'source-map'
 }
 
 /**
  * define scss loaders
- * in docs we want css stuff served from static bundle js that has css and js included
+ * in docs we want css stuff served from static bundle js
  */
-if (ENV === 'docs' || BUNDLE) {
+if (ENV === 'docs') {
   config.module.loaders.push({
     test: /\.scss$/,
     loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader!vuestrap-theme-loader'
   })
 } else {
-  config.plugins.push(new ExtractTextPlugin(fileName + '.css'))
   config.module.loaders.push({
     test: /\.scss$/,
     loader: ExtractTextPlugin.extract('style-loader', 'css-loader!autoprefixer-loader!sass-loader!vuestrap-theme-loader')
@@ -63,30 +66,26 @@ if (ENV === 'docs' || BUNDLE) {
 
 /**
  * define entry
- * if docs get everything, including styling, all source components and docs compoenents
- * otherwise just load source components
  */
 if (ENV !== 'docs') {
   config.entry = {}
-  config.entry[pkg.library] = './src/components/compiled.js'
+  config.entry[pkg.library] = './src/components/index.js'
 } else {
   config.entry = './src/index.js'
 }
 
+
 /**
  * define output
- * creates bundle files that include css and js -> this is a main script in package.json
- * creates seperate styling and js files -> these files will be included in bower
- * creates docs bundle file that includes everything -> used in index.html (gh_pages)
  */
 config.output = (ENV !== 'docs') ? {
   filename: fileName + '.js',
   library: pkg.library,
   libraryTarget: 'umd'
 } : {
-  path: './dist',
-  publicPath: '/dist/',
-  filename: 'docs.js'
+  path: './build',
+  publicPath: '/build/',
+  filename: 'build.js'
 }
 
 module.exports = config
