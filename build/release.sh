@@ -22,10 +22,6 @@ then
     # sauce
     # npm run sauce-all 2>/dev/null
 
-    # commit
-    git add -A
-    git commit -m "Release $VERSION"
-
-    # publish
-    git push origin master && npm publish
+    # commit & publish
+    git add -A && git commit -m "Release $VERSION" && git tag $VERSION && git push origin master --tags && npm publish
 fi
