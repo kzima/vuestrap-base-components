@@ -1,5 +1,4 @@
 // import dependencies
-import 'vuestrap/components/card'
 import template from './card.html'
 
 // import polyfill for IE9

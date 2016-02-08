@@ -1,5 +1,4 @@
 // import dependencies
-import 'vuestrap/components/dropdown'
 import template from './dropdown-select.html'
 import './dropdown-override.scss'
 

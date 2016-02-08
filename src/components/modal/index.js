@@ -1,5 +1,4 @@
 // import dependencies
-import 'vuestrap/components/modal'
 import {csstransitions} from '../../utils/helpers.js'
 import template from './modal.html'
 

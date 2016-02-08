@@ -1,5 +1,4 @@
 // import dependencies
-import 'vuestrap/components/tables'
 import template from './tables.html'
 
 // import ie9 polyfill

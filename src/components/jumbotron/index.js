@@ -1,5 +1,4 @@
 // import dependencies
-import 'vuestrap/components/jumbotron'
 import template from './jumbotron.html'
 
 // export component object

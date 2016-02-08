@@ -1,5 +1,4 @@
 // import dependencies
-import 'vuestrap/components/list-group'
 import template from './list-group.html'
 import './list-group-override.scss'
 

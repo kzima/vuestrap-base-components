@@ -1,5 +1,4 @@
 // import dependencies
-import 'vuestrap/components/tooltip'
 import Tether from 'tether'
 import template from './tooltip.html'
 

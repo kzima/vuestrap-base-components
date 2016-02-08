@@ -1,4 +1,3 @@
-<span class="btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}} {{btnDisabled}}">
-	<template v-if="!href"><slot></slot></template>
-	<a v-bind:href="href" class="{{btnDisabled}}" v-bind:role="role" v-if="href"><slot></slot></a>
+<span class="btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}} {{btnDisabled}}" v-on:click.stop.prevent="changeLocation($router, link)">
+	<slot></slot>
 </span>

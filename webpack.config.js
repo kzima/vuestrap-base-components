@@ -15,7 +15,9 @@ module.exports = {
       test: /\.js$/,
       include: [
         path.resolve('./src'),
-        path.resolve('./node_modules/vuestrap')
+        path.resolve('./node_modules/vuestrap'),
+        path.resolve('./node_modules/vuestrap-docs'),
+        path.resolve('./node_modules/gritcode-components')
       ],
       loader: 'babel'
     }, {

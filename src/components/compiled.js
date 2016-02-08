@@ -1,9 +1,4 @@
 /**
- * IMPORT GLOBAL STYLING
- */
-// import normalize, grid, utilities and
-import 'vuestrap/core'
-/**
  * IMPORT EACH COMPONENT
  */
 import alert from './alert'

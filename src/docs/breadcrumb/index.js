@@ -15,7 +15,7 @@ export default {
     return {
       meta: meta,
       snippet: snippet,
-      list: [{text: 'Home', href: '#'}, {text: 'Library', active: true}],
+      list: [{text: 'Home', link: '#', active: true}, {text: 'Library', active: false}],
     }
   },
   components: {

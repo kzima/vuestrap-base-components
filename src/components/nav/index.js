@@ -1,7 +1,7 @@
 // import dependencies
-import 'vuestrap/components/nav'
 import './_nav-override.scss'
 import template from './nav.html'
+import {changeLocation} from '../../utils/helpers.js'
 
 // export component object
 export const nav = {
@@ -21,10 +21,10 @@ export const nav = {
 
 // export slide object
 export const navItem = {
-  template: '<li class="nav-item"><a href="{{href}}" class="nav-link {{active ? \'active\' : \'\'}} {{disabled ? \'disabled\' : \'\'}}"><slot></slot></a></li>',
+  template: '<li class="nav-item"><a href="#" v-on:click.stop.prevent="changeLocation($router, link)" class="nav-link {{active ? \'active\' : \'\'}} {{disabled ? \'disabled\' : \'\'}}"><slot></slot></a></li>',
   replace: true,
   props: {
-    href: {
+    link: {
       type: String,
       default: '',
     },
@@ -36,5 +36,8 @@ export const navItem = {
       type: Boolean,
       default: false,
     },
-  }
+  },
+  methods: {
+    changeLocation: changeLocation
+  },
 }

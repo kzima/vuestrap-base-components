@@ -1,6 +1,6 @@
-import 'vuestrap/components/buttons'
 import template from './buttons.html'
 import './buttons-override.scss'
+import {changeLocation} from '../../utils/helpers.js'
 
 // export component object
 export default {
@@ -33,7 +33,7 @@ export default {
     	type: Boolean,
       default: false
     },
-    href: {
+    link: {
     	type: String,
       default: ''
     },
@@ -51,6 +51,6 @@ export default {
     },
   },
   methods: {
-
-  }
+    changeLocation: changeLocation
+  },
 }

@@ -1,5 +1,4 @@
 // import dependencies
-import 'vuestrap/components/forms'
 import {uniqueId} from '../../utils/helpers.js'
 import template from './form-textarea.html'
 

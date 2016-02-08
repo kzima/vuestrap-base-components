@@ -16,7 +16,6 @@
  */
 
 // import dependencies
-import 'vuestrap/components/carousel'
 import template from './carousel.html'
 import {csstransitions} from '../../utils/helpers.js'
 

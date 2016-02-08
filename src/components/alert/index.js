@@ -1,5 +1,4 @@
 // import dependencies
-import 'vuestrap/components/alert'
 import template from './alert.html'
 
 // export component object

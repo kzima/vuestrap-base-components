@@ -1,5 +1,4 @@
 // import dependencies
-import 'vuestrap/components/forms'
 import {uniqueId} from '../../utils/helpers.js'
 import template from './form-select.html'
 
@@ -8,7 +7,7 @@ export default {
   template: template,
   replace: true,
   computed: {
-    allOptions: function(){
+    allOptions(){
         if (this.defaultOption.length) {
             return [this.defaultOption].concat(this.options)
         }

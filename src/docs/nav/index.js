@@ -8,7 +8,7 @@ export default {
   route: {
     url: '/navigation',
     name: 'navigation',
-    title: 'Navigation',
+    title: 'Nav',
   },
   template: template,
   data() {

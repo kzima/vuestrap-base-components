@@ -1,5 +1,4 @@
 // import dependencies
-import 'vuestrap/components/pagination'
 import template from './pagination.html'
 
 // export component object

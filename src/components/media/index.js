@@ -1,5 +1,4 @@
 // import dependencies
-import 'vuestrap/components/media'
 import template from './media.html'
 
 // export component object

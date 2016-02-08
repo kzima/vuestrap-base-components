@@ -1,5 +1,4 @@
 // import dependencies
-import 'vuestrap/components/progress'
 import template from './progress.html'
 
 // export component object

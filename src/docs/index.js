@@ -1,3 +1,35 @@
+/**
+ * IMPORT GLOBAL STYLING
+ */
+// import normalize, grid, utilities and
+import 'vuestrap/core'
+// impoprt styling required for docs
+import 'vuestrap/components/alert'
+import 'vuestrap/components/breadcrumb'
+import 'vuestrap/components/button-group'
+import 'vuestrap/components/buttons'
+import 'vuestrap/components/card'
+import 'vuestrap/components/carousel'
+import 'vuestrap/components/custom-forms'
+import 'vuestrap/components/dropdown'
+import 'vuestrap/components/forms'
+import 'vuestrap/components/images'
+import 'vuestrap/components/jumbotron'
+import 'vuestrap/components/labels'
+import 'vuestrap/components/list-group'
+import 'vuestrap/components/media'
+import 'vuestrap/components/modal'
+import 'vuestrap/components/nav'
+import 'vuestrap/components/nav'
+import 'vuestrap/components/navbar'
+import 'vuestrap/components/pager'
+import 'vuestrap/components/pagination'
+import 'vuestrap/components/popover'
+import 'vuestrap/components/progress'
+import 'vuestrap/components/tables'
+import 'vuestrap/components/nav'
+import 'vuestrap/components/tooltip'
+
 // import modules and pages
 import introduction from 'src/docs/introduction'
 import accordion from 'src/docs/accordion'

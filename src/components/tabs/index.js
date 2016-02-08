@@ -1,5 +1,4 @@
 // import dependencies
-import 'vuestrap/components/nav'
 import template from './tabs.html'
 import {csstransitions} from '../../utils/helpers.js'
 

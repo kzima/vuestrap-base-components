@@ -9,52 +9,31 @@
 		<link href="assets/favicon.ico" rel="shortcut icon" type="image/x-icon">
 		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/tomorrow.min.css">
-
 		<style>
-			html {
-				font-size: 16px;
-			}
-			body {
-				margin: auto;
-				padding: 1.5rem;
-  			padding-top: 5em;
-			}
-			h1, h2, h3 {
-				font-family: 'Source Sans Pro', sans-serif;
-				color: #563d7c;
-			}
-			h2 {
-				padding-bottom: 0.3rem;
-				border-bottom: 1px solid #42b983;
-			}
-			h3 {
-				font-size: 1.3rem !important;
-			}
-			#docs-pages > .navbar {
-				padding: 0.2em 0 !important;
-				line-height: 3em;
-			}
-			#docs-pages > .navbar .navbar-brand {
-				padding: 0 !important;
-			}
-			#docs-pages > .navbar .navbar-brand img {
-				height: 2.5em;
-			}
 			[v-cloak] {
-				display: none;
-			}
-			.list-group-item.active {
-				color: #42b983 !important;
-				border-color: #42b983 !important;
-				background-color: transparent !important;
+			  display: none;
 			}
 		</style>
 	</head>
-
 	<body v-cloak>
-		<div id="docs-pages">
-			<docs-pages :routes="routes" :page-title.sync="pageTitle"></docs-pages>
-		</div>
+		
+		<!-- offcanvas wrapper -->
+		<vs-offcanvas-wrapper id="main" animation="ease" align="right">
+
+			<vs-offcanvas-drawer>
+				<!-- mobile drawer with navbar -->
+				<vs-docs-drawer :routes="routes" :pkg="pkg"></vs-docs-drawer>
+			</vs-offcanvas-drawer>
+
+			<!-- desktop content -->
+			<div id="docs-pages">
+				<vs-docs-pages :routes="routes" :page-title.sync="pageTitle" :pkg="pkg"></vs-docs-pages>
+			</div>
+
+		</vs-offcanvas-wrapper>
+		
+		<!-- footer -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>
 		<script src="dist/docs.js"></script>
 	</body>
 </html>

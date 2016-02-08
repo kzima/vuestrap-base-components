@@ -35,6 +35,13 @@
 			"default": "false",
 			"required": false,
 			"description": "A disabled state on the individual <code>&lt;vs-nav-item></code>."
+		},
+		{
+			"name": "link",
+			"type": "String",
+			"default": "false",
+			"required": false,
+			"description": "Nav items support vue-router style links or regular href values."
 		}
 	]
 }

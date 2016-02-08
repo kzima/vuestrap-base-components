@@ -1,5 +1,4 @@
 // import dependencies
-import 'vuestrap/components/button-group'
 import template from './button-checkbox.html'
 
 // export component object

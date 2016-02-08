@@ -1,5 +1,4 @@
 // import dependencies
-import 'vuestrap/components/labels'
 import template from './labels.html'
 
 // export component object

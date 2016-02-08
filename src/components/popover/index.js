@@ -1,5 +1,4 @@
 // import dependencies
-import 'vuestrap/components/popover'
 import Tether from 'tether'
 import template from './popover.html'
 

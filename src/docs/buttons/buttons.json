@@ -27,10 +27,10 @@
 			"description": "Similar to disabled state, but it's clickable."
 		}, 
 		{
-			"name": "href",
+			"name": "link",
 			"type": "String",
 			"default": "",
-			"description": "If <code>href</code> is provided, button is a regular <code>&lt;a></code> link with button spacing."
+			"description": "Buttons support vue-router style links or regular href values."
 		}, 
 		{
 			"name": "role",
