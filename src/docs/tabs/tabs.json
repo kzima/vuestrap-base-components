@@ -22,6 +22,27 @@
 			"values": ["sm", "md", "lg"],
 			"required": false,
 			"description": "Size of the tab buttons."
+		},
+		{
+			"name": "active",
+			"type": "String",
+			"default": "false",
+			"required": false,
+			"description": "Set this prop on the <code>&lt;tab></code> element to programmatically change the active tab."
+		},
+		{
+			"name": "disabled",
+			"type": "String",
+			"default": "false",
+			"required": false,
+			"description": "Set this prop on the <code>&lt;tab></code> element to disbale the tab."
+		},
+		{
+			"name": "title",
+			"type": "String",
+			"default": "false",
+			"required": false,
+			"description": "A title on the <code>&lt;tab></code> element."
 		}
 	]
 }

@@ -86,11 +86,12 @@ export const tabs = {
 
 // export tab object
 export const tab = {
-  template: '<div role="tabpanel" class="tab-pane" v-bind:class="{ active: active, disabled: disabled, fade: fade, in: animate}"><slot></slot></div>',
+  template: '<div role="tabpanel" class="tab-pane" v-bind:class="{active: active, disabled: disabled, fade: fade, in: animate}"><slot></slot></div>',
   replace: true,
   data() {
     return {
-      fade: this.$parent.fade
+      fade: this.$parent.fade,
+      animate: false,
     }
   },
   props: {
@@ -107,10 +108,6 @@ export const tab = {
       default: false
     },
     disabled: {
-      type: Boolean,
-      default: false
-    },
-    animate: {
       type: Boolean,
       default: false
     }
