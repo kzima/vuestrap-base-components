@@ -7187,13 +7187,13 @@
 /* 203 */
 /***/ function(module, exports) {
 
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>size\r\n\t\t\t<select v-model=\"size\">\r\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>state\r\n\t\t\t<select v-model=\"state\">\r\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-form-select\r\n\t\t    :model.sync=\"model\"\r\n\t\t    :options=\"options\"\r\n\t\t    type=\"text\"\r\n\t\t    label=\"Example Label\"\r\n\t\t    description=\"We'll never share your gender with anyone else.\"\r\n\t\t    :size=\"size\"\r\n\t\t    :state=\"state\">\r\n\t\t\t</vs-form-select>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>size\r\n\t\t\t<select v-model=\"size\">\r\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>state\r\n\t\t\t<select v-model=\"state\">\r\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-form-select\r\n\t\t    :model.sync=\"model\"\r\n\t\t    :options=\"options\"\r\n\t\t    :default-option=\"{text: 'Please select one',value: 'default'}\"\r\n\t\t    type=\"text\"\r\n\t\t    label=\"Example Label\"\r\n\t\t    description=\"We'll never share your gender with anyone else.\"\r\n\t\t    :size=\"size\"\r\n\t\t    :state=\"state\">\r\n\t\t\t</vs-form-select>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
 
 /***/ },
 /* 204 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-form-select</span> \r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">:options</span>=<span class=\"hljs-value\">\"options\"</span>\r\n  <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"text\"</span>\r\n  <span class=\"hljs-attribute\">label</span>=<span class=\"hljs-value\">\"Example Label\"</span>\r\n  <span class=\"hljs-attribute\">description</span>=<span class=\"hljs-value\">\"We'll never share your gender with anyone else.\"</span>\r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"'success'\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-form-select</span>&gt;</span>\r\n";
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-form-select</span> \r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">:options</span>=<span class=\"hljs-value\">\"options\"</span>\r\n  <span class=\"hljs-attribute\">:default-option</span>=<span class=\"hljs-value\">\"{text: 'Please select one',value: 'default'}\"</span>\r\n  <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"text\"</span>\r\n  <span class=\"hljs-attribute\">label</span>=<span class=\"hljs-value\">\"Example Label\"</span>\r\n  <span class=\"hljs-attribute\">description</span>=<span class=\"hljs-value\">\"We'll never share your gender with anyone else.\"</span>\r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"'success'\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-form-select</span>&gt;</span>\r\n";
 
 /***/ },
 /* 205 */
@@ -7220,7 +7220,7 @@
 	  replace: true,
 	  computed: {
 	    allOptions: function allOptions() {
-	      if (this.defaultOption.length) {
+	      if (this.defaultOption.text && this.defaultOption.value) {
 	        return [this.defaultOption].concat(this.options);
 	      }
 	      return this.options;
@@ -12472,7 +12472,7 @@
 
 	module.exports = {
 		"name": "vuestrap-base-components",
-		"version": "0.8.3",
+		"version": "0.8.4",
 		"description": "Web components that extend Bootstrap 4.",
 		"library": "vuestrapBase",
 		"repository": {

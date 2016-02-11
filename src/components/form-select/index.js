@@ -7,8 +7,8 @@ export default {
   template: template,
   replace: true,
   computed: {
-    allOptions(){
-        if (this.defaultOption.length) {
+    allOptions() {
+        if (this.defaultOption.text && this.defaultOption.value) {
             return [this.defaultOption].concat(this.options)
         }
         return this.options
