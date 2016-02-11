@@ -8,7 +8,7 @@ export default {
   replace: true,
   computed: {
     allOptions(){
-        if (this.defaultOption.length) {
+        if (this.defaultOption.text && this.defaultOption.value) {
             return [this.defaultOption].concat(this.options)
         }
         return this.options
