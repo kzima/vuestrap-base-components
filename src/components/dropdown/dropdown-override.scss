@@ -27,3 +27,9 @@
 		}
 	}
 }
+
+.dropdown, .dropup {
+	.btn-action [slot="button"] {
+		display: none;
+	}
+}
