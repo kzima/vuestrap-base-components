@@ -32,7 +32,7 @@
 	</div>
 	<div slot="markup" class="clearfix">
 			<!-- Html markup start-->
-			<div class="div" v-bind:class="{'pull-right': position == 'right'}">
+			<div class="div" v-bind:class="{'pull-xs-right': position == 'right'}">
 				<vs-dropdown-select
 			    :list="list"
 			    :model.sync="model"
@@ -41,6 +41,7 @@
 			    :variant="variant"
 			    default-text="Action"
 			    :force-default="forceDefault"
+			    :arrow="arrow"
 			    :caret="caret"
 			    :dropup="dropup"
 			    return-object>

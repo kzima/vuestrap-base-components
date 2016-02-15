@@ -27,6 +27,10 @@ export default {
       type: Boolean,
       default: true
     },
+    arrow: {
+      type: Boolean,
+      default: false
+    },
     text: {
       type: String,
       default: ''

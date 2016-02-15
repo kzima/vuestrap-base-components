@@ -16,6 +16,7 @@ export default {
     return {
       meta: meta,
       snippet: snippet,
+      arrow: true,
       caret: true,
       dropup: false,
       size: 'md',

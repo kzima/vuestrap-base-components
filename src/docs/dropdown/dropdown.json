@@ -9,6 +9,13 @@
 	},
 	"options": [
 		{
+			"name": "arrow",
+			"type": "Boolean",
+			"default": "true",
+			"required": false,
+			"description": "Show/hide down menu with arrow.."
+		},
+		{
 			"name": "caret",
 			"type": "Boolean",
 			"default": "true",
