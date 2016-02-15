@@ -22,7 +22,7 @@
 			"type": "String",
 			"default": "''",
 			"required": false,
-			"description": "Title or a small text."
+			"description": "A textual content in the tooltip. This can be also a simple Html. If you need more stuff in the popver, consider using <code>slot=\"content\"</code>. See code snippet for example."
 		},
 		{
 			"name": "triggers",

@@ -1,5 +1,6 @@
 // import dependencies
 import Tether from 'tether'
+import './tooltip.scss'
 import template from './tooltip.html'
 
 // export component object

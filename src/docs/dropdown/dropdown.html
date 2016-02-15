@@ -1,6 +1,7 @@
 <docs-demo :meta="meta" :snippet="snippet">
 	<div slot="controls">
 		<!-- Html controls start-->
+		<label>arrow <input type="checkbox" v-model="arrow"></label>
 		<label>caret <input type="checkbox" v-model="caret"></label>
 		<label>dropup <input type="checkbox" v-model="dropup"></label>
 		<label>
@@ -29,8 +30,9 @@
 			  :variant="variant"
 			  :size="size"
 			  :caret="caret"
+			  :arrow="arrow"
 			  :dropup="dropup">
-			  <ul class="dropdown-menu">
+			  <ul class="dropdown-menu dropdown-menu-left">
 			      <li><a class="dropdown-item" href="#" v-on:click.prevent="">Completed</a></li>
 			      <li><a class="dropdown-item" href="#" v-on:click.prevent="">Pending</a></li>
 			  </ul>

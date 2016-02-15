@@ -1,5 +1,6 @@
 // import dependencies
 import Tether from 'tether'
+import './popover.scss'
 import template from './popover.html'
 
 // export component object

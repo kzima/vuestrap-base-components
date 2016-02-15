@@ -1,6 +1,13 @@
+<!-- tooltip with a text -->
 <vs-tooltip 
   text="tooltip top" 
   position="top"
   :triggers="['hover']">
   <button class="btn">tooltip top</button>
+</vs-tooltip>
+
+<!-- tooltip with an html content -->
+<vs-tooltip position="right">
+  <button class="btn">tooltip right (html)</button>
+  <em slot="content">tooltip right (italic)</em>
 </vs-tooltip>
