@@ -2,8 +2,23 @@
   opacity: 0.8; }
 .dropup {
   display: inline-block; }
-.dropup.dropdown-select {
-  display: inline-block; }
+
+.dropdown.dropdown-arrow .dropdown-menu {
+  margin-top: 10px; }
+  .dropdown.dropdown-arrow .dropdown-menu:before {
+    padding: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.15);
+    content: ' ';
+    position: absolute;
+    top: -10px;
+    left: 10px; }
+  .dropdown.dropdown-arrow .dropdown-menu.dropdown-menu-right:before {
+    left: auto;
+    right: 10px; }
 .c-input {
   color: inherit; }
 .list-group li.list-group-item:focus, .list-group li.list-group-item:hover {
@@ -20,5 +35,9 @@
   margin-right: 0.5em; }
   .nav li:last-child {
     margin-right: 0; }
+.popover-trigger [slot="content"] {
+  display: none; }
+.tooltip-trigger [slot="content"] {
+  display: none; }
 
 /*# sourceMappingURL=vuestrapBase.css.map*/
