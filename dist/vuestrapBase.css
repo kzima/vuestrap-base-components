@@ -19,6 +19,9 @@
   .dropdown.dropdown-arrow .dropdown-menu.dropdown-menu-right:before {
     left: auto;
     right: 10px; }
+
+.dropdown .btn-action [slot="button"], .dropup .btn-action [slot="button"] {
+  display: none; }
 .c-input {
   color: inherit; }
 .list-group li.list-group-item:focus, .list-group li.list-group-item:hover {

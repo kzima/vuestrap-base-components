@@ -5773,7 +5773,7 @@
 /* 169 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-bind:class=\"{ open: show, dropdown: !dropup, dropup: dropup, 'dropdown-arrow': arrow}\" v-on:click.prevent=\"toggle($event)\">\r\n    <slot name=\"button\" class=\"btn-action\" role=\"button\" v-if=\"!text\"></slot>\r\n    <button\r\n        id=\"dLabel\"\r\n        class=\"btn {{dropdownToggle}} {{btnVariant}} {{btnSize}}\" role=\"button\"\r\n        aria-haspopup=\"true\"\r\n        aria-expanded=\"{{show}}\"\r\n        :disabled=\"disabled\"\r\n        v-if=\"text\">\r\n        <span v-html=\"text\"></span>\r\n        <span class=\"caret\"></span>\r\n    </button>\r\n    <slot></slot>\r\n</div>\r\n";
+	module.exports = "<div v-bind:class=\"{ open: show, dropdown: !dropup, dropup: dropup, 'dropdown-arrow': arrow}\" v-on:click.prevent=\"toggle($event)\">\r\n    <span class=\"btn-action\">\r\n        <button\r\n            id=\"dLabel\"\r\n            class=\"btn {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"{{show}}\"\r\n            :disabled=\"disabled\"\r\n            v-if=\"text\">\r\n            <span v-html=\"text\"></span>\r\n            <span class=\"caret\"></span>\r\n        </button>\r\n        <slot name=\"button\" v-if=\"!text\"></slot>\r\n    </span role=\"button\">\r\n    <slot></slot>\r\n</div>\r\n";
 
 /***/ },
 /* 170 */
@@ -5810,7 +5810,7 @@
 
 
 	// module
-	exports.push([module.id, ".dropup {\n  display: inline-block; }\n\n.dropdown.dropdown-arrow .dropdown-menu {\n  margin-top: 10px; }\n  .dropdown.dropdown-arrow .dropdown-menu:before {\n    padding: 0;\n    width: 0;\n    height: 0;\n    border-left: 10px solid transparent;\n    border-right: 10px solid transparent;\n    border-bottom: 10px solid rgba(0, 0, 0, 0.15);\n    content: ' ';\n    position: absolute;\n    top: -10px;\n    left: 10px; }\n  .dropdown.dropdown-arrow .dropdown-menu.dropdown-menu-right:before {\n    left: auto;\n    right: 10px; }\n", ""]);
+	exports.push([module.id, ".dropup {\n  display: inline-block; }\n\n.dropdown.dropdown-arrow .dropdown-menu {\n  margin-top: 10px; }\n  .dropdown.dropdown-arrow .dropdown-menu:before {\n    padding: 0;\n    width: 0;\n    height: 0;\n    border-left: 10px solid transparent;\n    border-right: 10px solid transparent;\n    border-bottom: 10px solid rgba(0, 0, 0, 0.15);\n    content: ' ';\n    position: absolute;\n    top: -10px;\n    left: 10px; }\n  .dropdown.dropdown-arrow .dropdown-menu.dropdown-menu-right:before {\n    left: auto;\n    right: 10px; }\n\n.dropdown .btn-action [slot=\"button\"], .dropup .btn-action [slot=\"button\"] {\n  display: none; }\n", ""]);
 
 	// exports
 
@@ -12528,7 +12528,7 @@
 
 	module.exports = {
 		"name": "vuestrap-base-components",
-		"version": "0.8.5",
+		"version": "0.8.6",
 		"description": "Web components that extend Bootstrap 4.",
 		"library": "vuestrapBase",
 		"repository": {

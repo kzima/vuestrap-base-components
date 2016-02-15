@@ -1,14 +1,16 @@
 <div v-bind:class="{ open: show, dropdown: !dropup, dropup: dropup, 'dropdown-arrow': arrow}" v-on:click.prevent="toggle($event)">
-    <slot name="button" class="btn-action" role="button" v-if="!text"></slot>
-    <button
-        id="dLabel"
-        class="btn {{dropdownToggle}} {{btnVariant}} {{btnSize}}" role="button"
-        aria-haspopup="true"
-        aria-expanded="{{show}}"
-        :disabled="disabled"
-        v-if="text">
-        <span v-html="text"></span>
-        <span class="caret"></span>
-    </button>
+    <span class="btn-action">
+        <button
+            id="dLabel"
+            class="btn {{dropdownToggle}} {{btnVariant}} {{btnSize}}"
+            aria-haspopup="true"
+            aria-expanded="{{show}}"
+            :disabled="disabled"
+            v-if="text">
+            <span v-html="text"></span>
+            <span class="caret"></span>
+        </button>
+        <slot name="button" v-if="!text"></slot>
+    </span role="button">
     <slot></slot>
 </div>
