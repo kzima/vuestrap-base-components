@@ -1,4 +1,4 @@
-<div v-bind:class="{ open: show, dropdown: !dropup, dropup: dropup, 'dropdown-arrow': arrow}" v-on:click.prevent="toggle($event)">
+<div v-bind:class="{ open: show, dropdown: !dropup, dropup: dropup, 'dropdown-arrow': arrow}" v-on:click="toggle($event)">
     <span class="btn-action">
         <button
             id="dLabel"
