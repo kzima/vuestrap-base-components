@@ -7803,11 +7803,11 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _srcComponentsLabels = __webpack_require__(227);
+	var _labels = __webpack_require__(227);
 
-	var _srcComponentsLabels2 = _interopRequireDefault(_srcComponentsLabels);
+	var _labels2 = _interopRequireDefault(_labels);
 
-	exports['default'] = _srcComponentsLabels2['default'];
+	exports['default'] = _labels2['default'];
 	module.exports = exports['default'];
 
 /***/ },
@@ -12528,7 +12528,7 @@
 
 	module.exports = {
 		"name": "vuestrap-base-components",
-		"version": "0.8.9",
+		"version": "0.8.10",
 		"description": "Web components that extend Bootstrap 4.",
 		"library": "vuestrapBase",
 		"repository": {
