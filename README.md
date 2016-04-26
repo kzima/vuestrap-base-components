@@ -19,8 +19,8 @@ bower install vuestrap-base --save-dev
 ```
 
 ```js
-<link href="bower_components/vuestrap-base/vuestrapBase.min.css" rel='stylesheet' type='text/css'>
-<script src="bower_components/vuestrap-base/vuestrapBase.min.js"></script>
+<link href="bower_components/vuestrap-base/dist/vuestrapBase.min.css" rel='stylesheet' type='text/css'>
+<script src="bower_components/vuestrap-base/dist/vuestrapBase.min.js"></script>
 ```
 
 *NPM*
