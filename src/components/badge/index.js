@@ -1,2 +1,2 @@
-import badge from 'src/components/labels'
+import badge from '../labels'
 export default badge
