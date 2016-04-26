@@ -12528,7 +12528,7 @@
 
 	module.exports = {
 		"name": "vuestrap-base-components",
-		"version": "0.8.8",
+		"version": "0.8.9",
 		"description": "Web components that extend Bootstrap 4.",
 		"library": "vuestrapBase",
 		"repository": {
@@ -12581,7 +12581,7 @@
 			"sass-loader": "^3.1.1",
 			"style-loader": "^0.13.0",
 			"tether": "^1.1.1",
-			"vuestrap": "^1.0.2",
+			"vuestrap": "^1.0.3",
 			"vuestrap-docs": "^0.5.1",
 			"vuestrap-theme-loader": "^0.1.2",
 			"webpack": "^1.12.9",
