@@ -10,12 +10,12 @@
     body {
         padding: 5em 2em;
     }
-    
+
     footer .container {
         border-top: 1px solid #ccc;
         padding-top: 1em;
     }
-    
+
     [v-cloak] {
         display: none;
     }
@@ -26,23 +26,29 @@
     <div id="app" v-cloak>
 
         <!-- navbar component -->
-        <vs-navbar fixed="top" variant="default">
-            <div class="col-xs-12 col-md-6">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <vs-nav type="navbar" :vertical="false" class="">
-                  <vs-nav-item href="#" active>Home</vs-nav-item>
-                  <vs-nav-item href="#">Features</vs-nav-item>
-                  <vs-nav-item href="#">Pricing</vs-nav-item>
-                  <vs-nav-item href="#">About</vs-nav-item>
-                </vs-nav>
-            </div>
-            <div class="col-xs-12 col-md-6">
-                <form class="form-inline navbar-form pull-sm-right">
-                    <input class="form-control" type="text" placeholder="Search">
-                    <button class="btn btn-success-outline hidden-sm-down" type="submit">Search</button>
-                </form>
-            </div>
-        </vs-navbar>
+        <vs-navbar fixed="top" type="light" variant="default" full>
+  <a class="navbar-brand" href="#">Navbar</a>
+  <vs-nav type="navbar" class="pull-xs-left">
+    <vs-nav-item link="#" active>Home <span class="sr-only">(current)</span></vs-nav-item>
+    <vs-nav-item link="#">Features</vs-nav-item>
+    <vs-nav-item link="#">Pricing</vs-nav-item>
+    <vs-nav-item link="#">About</vs-nav-item>
+  </vs-nav>
+  <div class="form-inline navbar-form pull-xs-right">
+    <vs-dropdown
+            text="Nazwa uzytkownika"
+            size="md"
+            variant="primary"
+            :arrow="arrow"
+            :caret="false"
+    >
+      <ul class="dropdown-menu dropdown-menu-left">
+        <li><a class="dropdown-item" href="#">Ustawienia</a></li>
+        <li><a class="dropdown-item" href="/logout">Wyloguj</a></li>
+      </ul>
+    </vs-dropdown>
+  </div>
+</vs-navbar>
 
         <!-- jumbotron component -->
         <div class="container">
@@ -111,7 +117,8 @@
                 'vs-nav-item': vuestrapBase.navItem,
                 'vs-navbar': vuestrapBase.navbar,
                 'vs-jumbotron': vuestrapBase.jumbotron,
-                'vs-card': vuestrapBase.card
+                'vs-card': vuestrapBase.card,
+                'vs-dropdown': vuestrapBase.dropdown
             }
         })
     </script>

@@ -4771,7 +4771,7 @@
 /* 143 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n    <label \r\n    \tclass=\"btn {{btnVariant}} {{btnSize}} {{ selection == item.value ? 'active' : '' }}\" \r\n    \tv-for=\"item in list\">\r\n      <input \r\n      \ttype=\"radio\" \r\n      \tname=\"options\" \r\n      \tvalue=\"{{item.value}}\" \r\n      \tautocomplete=\"off\" \r\n      \tv-model=\"selection\"\r\n        :disabled=\"item.disabled\"> {{item.text}}\r\n    </label>\r\n</div>\r\n";
+	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n    <label\r\n    \tclass=\"btn {{btnVariant}} {{btnSize}} {{ item.disabled ? 'disabled' : '' }} {{ selection == item.value ? 'active' : '' }}\"\r\n    \tv-for=\"item in list\">\r\n      <input\r\n      \ttype=\"radio\"\r\n      \tname=\"options\"\r\n      \tvalue=\"{{item.value}}\"\r\n      \tautocomplete=\"off\"\r\n      \tv-model=\"selection\"\r\n        :disabled=\"item.disabled\"> {{item.text}}\r\n    </label>\r\n</div>\r\n";
 
 /***/ },
 /* 144 */
@@ -12528,7 +12528,7 @@
 
 	module.exports = {
 		"name": "vuestrap-base-components",
-		"version": "0.8.7",
+		"version": "0.8.8",
 		"description": "Web components that extend Bootstrap 4.",
 		"library": "vuestrapBase",
 		"repository": {
