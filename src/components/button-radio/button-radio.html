@@ -1,12 +1,12 @@
 <div class="btn-group" data-toggle="buttons">
-    <label 
-    	class="btn {{btnVariant}} {{btnSize}} {{ selection == item.value ? 'active' : '' }}" 
+    <label
+    	class="btn {{btnVariant}} {{btnSize}} {{ item.disabled ? 'disabled' : '' }} {{ selection == item.value ? 'active' : '' }}"
     	v-for="item in list">
-      <input 
-      	type="radio" 
-      	name="options" 
-      	value="{{item.value}}" 
-      	autocomplete="off" 
+      <input
+      	type="radio"
+      	name="options"
+      	value="{{item.value}}"
+      	autocomplete="off"
       	v-model="selection"
         :disabled="item.disabled"> {{item.text}}
     </label>
