@@ -1,5 +1,5 @@
-import meta from './labels.json'
-import template from './labels.html'
+import meta from './tags.json'
+import template from './tags.html'
 import snippet from './snippet.html'
 import vsBadge from 'src/components/badge'
 import docsDemo from 'vuestrap-docs/src/components/demo'
@@ -7,9 +7,9 @@ import {variants} from 'src/utils'
 
 export default {
   route: {
-    url: '/labels',
-    name: 'labels',
-    title: 'Labels',
+    url: '/tags',
+    name: 'tags',
+    title: 'Tags',
   },
   template: template,
   data() {

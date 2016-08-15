@@ -1,2 +1,2 @@
-import badge from '../labels'
+import badge from '../tags'
 export default badge

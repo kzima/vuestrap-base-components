@@ -2,7 +2,7 @@ import meta from './list-group.json'
 import template from './list-group.html'
 import snippet from './snippet.html'
 import {listGroup as vsListGroup, listGroupItem as vsListGroupItem} from 'src/components/list-group'
-import vsBadge from 'src/components/labels'
+import vsBadge from 'src/components/tags'
 import docsDemo from 'vuestrap-docs/src/components/demo'
 import {states} from 'src/utils'
 

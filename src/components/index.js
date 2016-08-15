@@ -19,7 +19,7 @@ import formSelect from './form-select'
 import formTextarea from './form-textarea'
 import images from './images'
 import jumbotron from './jumbotron'
-import labels from './labels'
+import tags from './tags'
 import {listGroup, listGroupItem} from './list-group'
 import media from './media'
 import modal from './modal'
@@ -35,7 +35,7 @@ import tooltip from './tooltip'
 
 const vuestrapBase = {
 	'vsAlert': alert,
-	'vsBadge': labels,
+	'vsBadge': tags,
 	'vsBreadcrumb': breadcrumb,
 	'vsButtonCheckbox': buttonCheckbox,
 	'vsButtonGroup': buttonGroup,
@@ -55,7 +55,7 @@ const vuestrapBase = {
 	'vsFormTextarea': formTextarea,
 	'vsImages': images,
 	'vsJumbotron': jumbotron,
-	'vsLabel': labels,
+	'vsLabel': tags,
 	'vsListGroup': listGroup,
 	'vsListGroupItem': listGroupItem,
 	'vsMedia': media,

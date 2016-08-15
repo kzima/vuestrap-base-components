@@ -15,14 +15,13 @@ import 'vuestrap/components/dropdown'
 import 'vuestrap/components/forms'
 import 'vuestrap/components/images'
 import 'vuestrap/components/jumbotron'
-import 'vuestrap/components/labels'
+import 'vuestrap/components/tags'
 import 'vuestrap/components/list-group'
 import 'vuestrap/components/media'
 import 'vuestrap/components/modal'
 import 'vuestrap/components/nav'
 import 'vuestrap/components/nav'
 import 'vuestrap/components/navbar'
-import 'vuestrap/components/pager'
 import 'vuestrap/components/pagination'
 import 'vuestrap/components/popover'
 import 'vuestrap/components/progress'
@@ -51,13 +50,12 @@ import formSelect from 'src/docs/form-select'
 import formTextarea from 'src/docs/form-textarea'
 import images from 'src/docs/images'
 import jumbotron from 'src/docs/jumbotron'
-import labels from 'src/docs/labels'
+import tags from 'src/docs/tags'
 import listGroup from 'src/docs/list-group'
 import media from 'src/docs/media'
 import modal from 'src/docs/modal'
 import nav from 'src/docs/nav'
 import navbar from 'src/docs/navbar'
-import pager from 'src/docs/pager'
 import pagination from 'src/docs/pagination'
 import popover from 'src/docs/popover'
 import progress from 'src/docs/progress'
@@ -87,18 +85,17 @@ export default {
 		formTextarea,
 		images,
 		jumbotron,
-		labels,
 		listGroup,
 		media,
 		modal,
 		nav,
 		navbar,
-		pager,
 		pagination,
 		popover,
 		progress,
 		tables,
 		tabs,
+    tags,
 		tooltip,
 	]
 }
