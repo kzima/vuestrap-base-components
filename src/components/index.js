@@ -25,7 +25,6 @@ import media from './media'
 import modal from './modal'
 import {nav, navItem} from './nav'
 import navbar from './navbar'
-import pager from './pager'
 import pagination from './pagination'
 import popover from './popover'
 import progress from './progress'
@@ -63,7 +62,6 @@ const vuestrapBase = {
 	'vsNav': nav,
 	'vsNavItem': navItem,
 	'vsNavbar': navbar,
-	'vsPager': pager,
 	'vsPagination': pagination,
 	'vsPopover': popover,
 	'vsProgress': progress,
