@@ -32,6 +32,8 @@ export const collapse = {
       this._collapseAnimation = setTimeout(()=> {
         this.$el.classList.remove('collapsing')
         this.$el.classList.add('collapse', 'in')
+        this.$root.$broadcast('toggled::collapsed', {id: this.id, group: this.group, expanded: true})
+        this.$root.$dispatch('toggled::collapsed', {id: this.id, group: this.group, expanded: true})
       }, TRANSITION_DURATION)
     },
     hide() {
@@ -43,6 +45,8 @@ export const collapse = {
       this._collapseAnimation = setTimeout(()=> {
         this.$el.classList.remove('collapsing')
         this.$el.classList.add('collapse')
+        this.$root.$broadcast('toggled::collapsed', {id: this.id, group: this.group, expanded: false})
+        this.$root.$dispatch('toggled::collapsed', {id: this.id, group: this.group, expanded: false})
       }, TRANSITION_DURATION)
     },
   },
@@ -84,7 +88,7 @@ export const collapse = {
 
 // export component object
 export const collapseToggle = {
-  template: '<span v-on:click.stop.prevent="toggle($event)"><slot></slot></span>',
+  template: '<span v-on:click.stop.prevent="toggle($event)" :class="{collapsed: !expanded}" :aria-expanded="expanded ? \'true\' : \'false\'" :aria-controls="target"><slot></slot></span>',
   replace: true,
   computed: {
 
@@ -97,6 +101,10 @@ export const collapseToggle = {
     targetGroup: {
       type: String,
       default: ''
+    },
+    expanded: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
@@ -112,6 +120,13 @@ export const collapseToggle = {
       } else {
         this.$root.$broadcast('toggled::collapse', {id: this.target, group: this.targetGroup})
         this.$root.$dispatch('toggled::collapse', {id: this.target, group: this.targetGroup})
+      }
+    }
+  },
+  events: {
+    'toggled::collapsed'(data) {
+      if (data.id && data.id === this.target && !data.group || data.group && data.group === this.targetGroup && !data.id) {
+          this.expanded = data.expanded;
       }
     }
   },
