@@ -2,7 +2,7 @@
  * IMPORT EACH COMPONENT
  */
 import alert from './alert'
-import badge from './labels'
+import badge from './tags'
 import breadcrumb from './breadcrumb'
 import buttonCheckbox from './button-checkbox'
 import buttonGroup from './button-group'
@@ -20,13 +20,12 @@ import formSelect from './form-select'
 import formTextarea from './form-textarea'
 import images from './images'
 import jumbotron from './jumbotron'
-import label from './labels'
+import label from './tags'
 import {listGroup, listGroupItem} from './list-group'
 import media from './media'
 import modal from './modal'
 import {nav, navItem} from './nav'
 import navbar from './navbar'
-import pager from './pager'
 import pagination from './pagination'
 import popover from './popover'
 import progress from './progress'
@@ -64,7 +63,6 @@ const vuestrapBase = {
 	nav,
 	navItem,
 	navbar,
-	pager,
 	pagination,
 	popover,
 	progress,
