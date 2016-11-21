@@ -73,7 +73,7 @@
 
 	// import package.json meta data
 
-	var _packageJson = __webpack_require__(310);
+	var _packageJson = __webpack_require__(302);
 
 	var _packageJson2 = _interopRequireDefault(_packageJson);
 
@@ -431,7 +431,6 @@
 	function applyToTag(styleElement, obj) {
 		var css = obj.css;
 		var media = obj.media;
-		var sourceMap = obj.sourceMap;
 
 		if(media) {
 			styleElement.setAttribute("media", media)
@@ -449,7 +448,6 @@
 
 	function updateLink(linkElement, obj) {
 		var css = obj.css;
-		var media = obj.media;
 		var sourceMap = obj.sourceMap;
 
 		if(sourceMap) {
@@ -822,7 +820,7 @@
 /* 18 */
 /***/ function(module, exports) {
 
-	module.exports = "<!-- header -->\r\n<nav class=\"navbar navbar-fixed-top navbar-light bg-faded\">\r\n  <div class=\"container\">\r\n      <a class=\"navbar-brand text-center\" href=\"#/\">\r\n\t\t\t\t<img v-bind:src=\"'assets/vuestrap-logo.svg'\" alt=\"Vuestrap logo\">\r\n\t\t\t</a>\r\n\t\t\t<a class=\"navbar-brand text-center hidden-sm-down\" href=\"#/\">\r\n\t\t\t\tDocumentation\r\n\t\t\t</a>\r\n\t\t\t<ul class=\"nav navbar-nav pull-xs-right\">\r\n\t\t\t\t<li class=\"nav-item hidden-sm-down\">\r\n\t\t\t\t\t<a href=\"#/\" class=\"btn\">Introduction</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item hidden-sm-down\">\r\n\t\t\t\t\t<a href=\"{{pkg.homepage}}\" class=\"btn btn-success\" target=\"_blank\">&#9733; Github</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item hidden-md-up\">\r\n\t\t\t\t\t<a href=\"#\" class=\"btn btn-success\" target=\"_blank\" v-on:click.stop.prevent=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">&#9776;</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n  </div><!-- /.container -->\r\n</nav><!-- /.navbar -->\r\n\r\n<!-- content -->\r\n<div class=\"container\">\r\n\t<div class=\"row row-offcanvas row-offcanvas-right\">\r\n\t\t<div class=\"col-xs-12 col-md-9\">\r\n\t\t\t<component :is=\"currentView\"></component>\r\n    </div><!-- /col-xs-12 -->\r\n\r\n\t\t<!-- sidebar -->\r\n\t\t<div class=\"col-xs-12 col-md-3 sidebar-offcanvas hidden-sm-down\" id=\"sidebar\">\r\n\t\t\t<docs-search :list=\"routes\" :current-view=\"currentView\"></docs-search>\r\n\t\t</div><!--/sidebar-->\r\n\r\n\t</div><!--/row-->\r\n</div><!--/container-->";
+	module.exports = "<!-- header -->\r\n<nav class=\"navbar navbar-fixed-top navbar-light bg-faded\">\r\n  <div class=\"container\">\r\n      <a class=\"navbar-brand text-center\" href=\"#/\">\r\n\t\t\t\t<img v-bind:src=\"'assets/vuestrap-logo.svg'\" alt=\"Vuestrap logo\">\r\n\t\t\t</a>\r\n\t\t\t<a class=\"navbar-brand text-center hidden-sm-down\" href=\"#/\">\r\n\t\t\t\tDocumentation\r\n\t\t\t</a>\r\n\t\t\t<ul class=\"nav navbar-nav pull-right\">\r\n\t\t\t\t<li class=\"nav-item hidden-sm-down\">\r\n\t\t\t\t\t<a href=\"#/\" class=\"btn\">Introduction</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item hidden-sm-down\">\r\n\t\t\t\t\t<a href=\"{{pkg.homepage}}\" class=\"btn btn-success\" target=\"_blank\">&#9733; Github</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item hidden-md-up\">\r\n\t\t\t\t\t<a href=\"#\" class=\"btn btn-success\" target=\"_blank\" v-on:click.stop.prevent=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">&#9776;</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n  </div><!-- /.container -->\r\n</nav><!-- /.navbar -->\r\n\r\n<!-- content -->\r\n<div class=\"container\">\r\n\t<div class=\"row row-offcanvas row-offcanvas-right\">\r\n\t\t<div class=\"col-xs-12 col-md-9\">\r\n\t\t\t<component :is=\"currentView\"></component>\r\n    </div><!-- /col-xs-12 -->\r\n\r\n\t\t<!-- sidebar -->\r\n\t\t<div class=\"col-xs-12 col-md-3 sidebar-offcanvas hidden-sm-down\" id=\"sidebar\">\r\n\t\t\t<docs-search :list=\"routes\" :current-view=\"currentView\"></docs-search>\r\n\t\t</div><!--/sidebar-->\r\n\r\n\t</div><!--/row-->\r\n</div><!--/container-->";
 
 /***/ },
 /* 19 */
@@ -1711,7 +1709,7 @@
 /* 24 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"navbar navbar-collapse navbar-dark navbar-primary bg-inverse navbar-static-top navbar-full navbar-offcanvas-drawer\">\r\n\t<a href=\"{{pkg.homepage}}\" class=\"btn btn-success pull-xs-left\" target=\"_blank\" v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n  \t&#9733; Github\r\n  </a>\r\n  <!-- close button -->\r\n\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\" v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n    <span aria-hidden=\"true\">×</span>\r\n    <span class=\"sr-only\">Close</span>\r\n  </button>\r\n  <div class=\"m-b clearfix\"></div>\r\n  <div class=\"list-group list-group-flush\">\r\n\t  <a href=\"#{{item.url}}\" \r\n\t    v-bind:class=\"{\r\n\t      'list-group-item': true, \r\n\t    }\" \r\n\t    v-for=\"item in routes\"\r\n\t    v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n\t    {{item.title}}\r\n\t  </a>\r\n\t</div>\r\n</div>";
+	module.exports = "<div class=\"navbar navbar-collapse navbar-dark navbar-primary bg-inverse navbar-static-top navbar-full navbar-offcanvas-drawer\">\r\n\t<a href=\"{{pkg.homepage}}\" class=\"btn btn-success pull-left\" target=\"_blank\" v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n  \t&#9733; Github\r\n  </a>\r\n  <!-- close button -->\r\n\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\" v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n    <span aria-hidden=\"true\">×</span>\r\n    <span class=\"sr-only\">Close</span>\r\n  </button>\r\n  <div class=\"m-b clearfix\"></div>\r\n  <div class=\"list-group list-group-flush\">\r\n\t  <a href=\"#{{item.url}}\" \r\n\t    v-bind:class=\"{\r\n\t      'list-group-item': true, \r\n\t    }\" \r\n\t    v-for=\"item in routes\"\r\n\t    v-on:click=\"$root.$broadcast('toggle::offcanvas-drawer', 'main')\">\r\n\t    {{item.title}}\r\n\t  </a>\r\n\t</div>\r\n</div>";
 
 /***/ },
 /* 25 */
@@ -1818,7 +1816,7 @@
 
 
 	// module
-	exports.push([module.id, "/*\r\n * Off Canvas drawer\r\n * based on https://scotch.io/tutorials/off-canvas-drawers-with-css3-transitions-and-transforms\r\n * --------------------------------------------------\r\n */\n.gritcode-offcanvas-drawer {\n  width: 100%;\n  height: auto;\n  min-height: 100%;\n  position: relative;\n  -webkit-transform: translate(0, 0);\n      -ms-transform: translate(0, 0);\n          transform: translate(0, 0);\n  -webkit-transform: translate3d(0, 0, 0);\n          transform: translate3d(0, 0, 0);\n  -ms-transform: translate(0, 0);\n  -webkit-transition: 300ms ease transform;\n  transition: 300ms ease transform;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden; }\n  .gritcode-offcanvas-drawer .offcanvas-drawer {\n    width: 100%;\n    left: -100%;\n    height: 100%;\n    position: fixed;\n    top: 0;\n    z-index: 9999; }\n    .gritcode-offcanvas-drawer .offcanvas-drawer .close {\n      color: #fff; }\n    .gritcode-offcanvas-drawer .offcanvas-drawer .navbar {\n      height: 100%; }\n    @media (min-width: 360px) {\n      .gritcode-offcanvas-drawer .offcanvas-drawer {\n        width: 300px;\n        left: -300px; } }\n  .gritcode-offcanvas-drawer.active {\n    -webkit-transform: translate(100%, 0);\n        -ms-transform: translate(100%, 0);\n            transform: translate(100%, 0);\n    -webkit-transform: translate3d(100%, 0, 0);\n            transform: translate3d(100%, 0, 0);\n    -ms-transform: translate(100%, 0); }\n    @media (min-width: 360px) {\n      .gritcode-offcanvas-drawer.active {\n        -webkit-transform: translate(300px, 0);\n            -ms-transform: translate(300px, 0);\n                transform: translate(300px, 0);\n        -webkit-transform: translate3d(300px, 0, 0);\n                transform: translate3d(300px, 0, 0);\n        -ms-transform: translate(300px, 0); } }\n\n.gritcode-offcanvas-drawer.right .offcanvas-drawer {\n  left: auto;\n  right: -100%; }\n  @media (min-width: 360px) {\n    .gritcode-offcanvas-drawer.right .offcanvas-drawer {\n      left: auto;\n      right: -300px; } }\n\n.gritcode-offcanvas-drawer.right.active {\n  -webkit-transform: translate(-100%, 0);\n      -ms-transform: translate(-100%, 0);\n          transform: translate(-100%, 0);\n  -webkit-transform: translate3d(-100%, 0, 0);\n          transform: translate3d(-100%, 0, 0);\n  -ms-transform: translate(-100%, 0); }\n  @media (min-width: 360px) {\n    .gritcode-offcanvas-drawer.right.active {\n      -webkit-transform: translate(-300px, 0);\n          -ms-transform: translate(-300px, 0);\n              transform: translate(-300px, 0);\n      -webkit-transform: translate3d(-300px, 0, 0);\n              transform: translate3d(-300px, 0, 0);\n      -ms-transform: translate(-300px, 0); } }\n\n.gritcode-offcanvas-drawer.ease {\n  -webkit-transition: 300ms ease transform;\n  transition: 300ms ease transform; }\n\n.gritcode-offcanvas-drawer.linear {\n  -webkit-transition: 300ms linear transform;\n  transition: 300ms linear transform; }\n\n.gritcode-offcanvas-drawer.ease-in {\n  -webkit-transition: 300ms ease-in transform;\n  transition: 300ms ease-in transform; }\n\n.gritcode-offcanvas-drawer.ease-out {\n  -webkit-transition: 300ms ease-out transform;\n  transition: 300ms ease-out transform; }\n\n.gritcode-offcanvas-drawer.ease-in-out {\n  -webkit-transition: 300ms ease-out transform;\n  transition: 300ms ease-out transform; }\n\n.gritcode-offcanvas-drawer.bounce {\n  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.32, 1.25, 0.375, 1.15);\n  transition: -webkit-transform 300ms cubic-bezier(0.32, 1.25, 0.375, 1.15);\n  transition: transform 300ms cubic-bezier(0.32, 1.25, 0.375, 1.15);\n  transition: transform 300ms cubic-bezier(0.32, 1.25, 0.375, 1.15), -webkit-transform 300ms cubic-bezier(0.32, 1.25, 0.375, 1.15); }\n\n.gritcode-offcanvas-drawer.snappy {\n  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.694, 0.0482, 0.335, 1);\n  transition: -webkit-transform 300ms cubic-bezier(0.694, 0.0482, 0.335, 1);\n  transition: transform 300ms cubic-bezier(0.694, 0.0482, 0.335, 1);\n  transition: transform 300ms cubic-bezier(0.694, 0.0482, 0.335, 1), -webkit-transform 300ms cubic-bezier(0.694, 0.0482, 0.335, 1); }\n\n.gritcode-offcanvas-drawer.out-of-orbit {\n  -webkit-transition: -webkit-transform 300ms cubic-bezier(1, 0, 0.61, 0.15);\n  transition: -webkit-transform 300ms cubic-bezier(1, 0, 0.61, 0.15);\n  transition: transform 300ms cubic-bezier(1, 0, 0.61, 0.15);\n  transition: transform 300ms cubic-bezier(1, 0, 0.61, 0.15), -webkit-transform 300ms cubic-bezier(1, 0, 0.61, 0.15); }\n\n.gritcode-offcanvas-drawer.none {\n  -webkit-transition: none;\n  transition: none; }\n\n.lt-ie10 .gritcode-offcanvas-drawer.active .offcanvas-drawer, .ie9 .gritcode-offcanvas-drawer.active .offcanvas-drawer, .oldie .gritcode-offcanvas-drawer.active .offcanvas-drawer, .no-csstransitions .gritcode-offcanvas-drawer.active .offcanvas-drawer {\n  left: 0; }\n\n.lt-ie10 .gritcode-offcanvas-drawer.active .navbar-fixed-top, .lt-ie10 .gritcode-offcanvas-drawer.active .navbar-fixed-bottom, .ie9 .gritcode-offcanvas-drawer.active .navbar-fixed-top, .ie9 .gritcode-offcanvas-drawer.active .navbar-fixed-bottom, .oldie .gritcode-offcanvas-drawer.active .navbar-fixed-top, .oldie .gritcode-offcanvas-drawer.active .navbar-fixed-bottom, .no-csstransitions .gritcode-offcanvas-drawer.active .navbar-fixed-top, .no-csstransitions .gritcode-offcanvas-drawer.active .navbar-fixed-bottom {\n  left: 300px;\n  right: auto;\n  width: 100%; }\n\n.lt-ie10 .gritcode-offcanvas-drawer.active.right .offcanvas-drawer, .ie9 .gritcode-offcanvas-drawer.active.right .offcanvas-drawer, .oldie .gritcode-offcanvas-drawer.active.right .offcanvas-drawer, .no-csstransitions .gritcode-offcanvas-drawer.active.right .offcanvas-drawer {\n  left: auto;\n  right: 0; }\n\n.lt-ie10 .gritcode-offcanvas-drawer.active.right .navbar-fixed-top, .lt-ie10 .gritcode-offcanvas-drawer.active.right .navbar-fixed-bottom, .ie9 .gritcode-offcanvas-drawer.active.right .navbar-fixed-top, .ie9 .gritcode-offcanvas-drawer.active.right .navbar-fixed-bottom, .oldie .gritcode-offcanvas-drawer.active.right .navbar-fixed-top, .oldie .gritcode-offcanvas-drawer.active.right .navbar-fixed-bottom, .no-csstransitions .gritcode-offcanvas-drawer.active.right .navbar-fixed-top, .no-csstransitions .gritcode-offcanvas-drawer.active.right .navbar-fixed-bottom {\n  left: -300px;\n  right: auto;\n  width: 100%; }\n", ""]);
+	exports.push([module.id, "/*\r\n * Off Canvas drawer\r\n * based on https://scotch.io/tutorials/off-canvas-drawers-with-css3-transitions-and-transforms\r\n * --------------------------------------------------\r\n */\n.gritcode-offcanvas-drawer {\n  width: 100%;\n  height: auto;\n  min-height: 100%;\n  position: relative;\n  -webkit-transform: translate(0, 0);\n          transform: translate(0, 0);\n  -webkit-transform: translate3d(0, 0, 0);\n          transform: translate3d(0, 0, 0);\n  -ms-transform: translate(0, 0);\n  -webkit-transition: 300ms ease transform;\n  transition: 300ms ease transform;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden; }\n  .gritcode-offcanvas-drawer .offcanvas-drawer {\n    width: 100%;\n    left: -100%;\n    height: 100%;\n    position: fixed;\n    top: 0;\n    z-index: 9999; }\n    .gritcode-offcanvas-drawer .offcanvas-drawer .close {\n      color: #fff; }\n    .gritcode-offcanvas-drawer .offcanvas-drawer .navbar {\n      height: 100%; }\n    @media (min-width: 360px) {\n      .gritcode-offcanvas-drawer .offcanvas-drawer {\n        width: 300px;\n        left: -300px; } }\n  .gritcode-offcanvas-drawer.active {\n    -webkit-transform: translate(100%, 0);\n            transform: translate(100%, 0);\n    -webkit-transform: translate3d(100%, 0, 0);\n            transform: translate3d(100%, 0, 0);\n    -ms-transform: translate(100%, 0); }\n    @media (min-width: 360px) {\n      .gritcode-offcanvas-drawer.active {\n        -webkit-transform: translate(300px, 0);\n                transform: translate(300px, 0);\n        -webkit-transform: translate3d(300px, 0, 0);\n                transform: translate3d(300px, 0, 0);\n        -ms-transform: translate(300px, 0); } }\n\n.gritcode-offcanvas-drawer.right .offcanvas-drawer {\n  left: auto;\n  right: -100%; }\n  @media (min-width: 360px) {\n    .gritcode-offcanvas-drawer.right .offcanvas-drawer {\n      left: auto;\n      right: -300px; } }\n\n.gritcode-offcanvas-drawer.right.active {\n  -webkit-transform: translate(-100%, 0);\n          transform: translate(-100%, 0);\n  -webkit-transform: translate3d(-100%, 0, 0);\n          transform: translate3d(-100%, 0, 0);\n  -ms-transform: translate(-100%, 0); }\n  @media (min-width: 360px) {\n    .gritcode-offcanvas-drawer.right.active {\n      -webkit-transform: translate(-300px, 0);\n              transform: translate(-300px, 0);\n      -webkit-transform: translate3d(-300px, 0, 0);\n              transform: translate3d(-300px, 0, 0);\n      -ms-transform: translate(-300px, 0); } }\n\n.gritcode-offcanvas-drawer.ease {\n  -webkit-transition: 300ms ease transform;\n  transition: 300ms ease transform; }\n\n.gritcode-offcanvas-drawer.linear {\n  -webkit-transition: 300ms linear transform;\n  transition: 300ms linear transform; }\n\n.gritcode-offcanvas-drawer.ease-in {\n  -webkit-transition: 300ms ease-in transform;\n  transition: 300ms ease-in transform; }\n\n.gritcode-offcanvas-drawer.ease-out {\n  -webkit-transition: 300ms ease-out transform;\n  transition: 300ms ease-out transform; }\n\n.gritcode-offcanvas-drawer.ease-in-out {\n  -webkit-transition: 300ms ease-out transform;\n  transition: 300ms ease-out transform; }\n\n.gritcode-offcanvas-drawer.bounce {\n  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.32, 1.25, 0.375, 1.15);\n  transition: -webkit-transform 300ms cubic-bezier(0.32, 1.25, 0.375, 1.15);\n  transition: transform 300ms cubic-bezier(0.32, 1.25, 0.375, 1.15);\n  transition: transform 300ms cubic-bezier(0.32, 1.25, 0.375, 1.15), -webkit-transform 300ms cubic-bezier(0.32, 1.25, 0.375, 1.15); }\n\n.gritcode-offcanvas-drawer.snappy {\n  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.694, 0.0482, 0.335, 1);\n  transition: -webkit-transform 300ms cubic-bezier(0.694, 0.0482, 0.335, 1);\n  transition: transform 300ms cubic-bezier(0.694, 0.0482, 0.335, 1);\n  transition: transform 300ms cubic-bezier(0.694, 0.0482, 0.335, 1), -webkit-transform 300ms cubic-bezier(0.694, 0.0482, 0.335, 1); }\n\n.gritcode-offcanvas-drawer.out-of-orbit {\n  -webkit-transition: -webkit-transform 300ms cubic-bezier(1, 0, 0.61, 0.15);\n  transition: -webkit-transform 300ms cubic-bezier(1, 0, 0.61, 0.15);\n  transition: transform 300ms cubic-bezier(1, 0, 0.61, 0.15);\n  transition: transform 300ms cubic-bezier(1, 0, 0.61, 0.15), -webkit-transform 300ms cubic-bezier(1, 0, 0.61, 0.15); }\n\n.gritcode-offcanvas-drawer.none {\n  -webkit-transition: none;\n  transition: none; }\n\n.lt-ie10 .gritcode-offcanvas-drawer.active .offcanvas-drawer, .ie9 .gritcode-offcanvas-drawer.active .offcanvas-drawer, .oldie .gritcode-offcanvas-drawer.active .offcanvas-drawer, .no-csstransitions .gritcode-offcanvas-drawer.active .offcanvas-drawer {\n  left: 0; }\n\n.lt-ie10 .gritcode-offcanvas-drawer.active .navbar-fixed-top, .lt-ie10 .gritcode-offcanvas-drawer.active .navbar-fixed-bottom, .ie9 .gritcode-offcanvas-drawer.active .navbar-fixed-top, .ie9 .gritcode-offcanvas-drawer.active .navbar-fixed-bottom, .oldie .gritcode-offcanvas-drawer.active .navbar-fixed-top, .oldie .gritcode-offcanvas-drawer.active .navbar-fixed-bottom, .no-csstransitions .gritcode-offcanvas-drawer.active .navbar-fixed-top, .no-csstransitions .gritcode-offcanvas-drawer.active .navbar-fixed-bottom {\n  left: 300px;\n  right: auto;\n  width: 100%; }\n\n.lt-ie10 .gritcode-offcanvas-drawer.active.right .offcanvas-drawer, .ie9 .gritcode-offcanvas-drawer.active.right .offcanvas-drawer, .oldie .gritcode-offcanvas-drawer.active.right .offcanvas-drawer, .no-csstransitions .gritcode-offcanvas-drawer.active.right .offcanvas-drawer {\n  left: auto;\n  right: 0; }\n\n.lt-ie10 .gritcode-offcanvas-drawer.active.right .navbar-fixed-top, .lt-ie10 .gritcode-offcanvas-drawer.active.right .navbar-fixed-bottom, .ie9 .gritcode-offcanvas-drawer.active.right .navbar-fixed-top, .ie9 .gritcode-offcanvas-drawer.active.right .navbar-fixed-bottom, .oldie .gritcode-offcanvas-drawer.active.right .navbar-fixed-top, .oldie .gritcode-offcanvas-drawer.active.right .navbar-fixed-bottom, .no-csstransitions .gritcode-offcanvas-drawer.active.right .navbar-fixed-top, .no-csstransitions .gritcode-offcanvas-drawer.active.right .navbar-fixed-bottom {\n  left: -300px;\n  right: auto;\n  width: 100%; }\n", ""]);
 
 	// exports
 
@@ -1867,174 +1865,168 @@
 
 	__webpack_require__(60);
 
-	__webpack_require__(61);
+	__webpack_require__(63);
 
-	__webpack_require__(62);
+	__webpack_require__(64);
 
-	__webpack_require__(65);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"vuestrap/components/tags\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
-	__webpack_require__(68);
+	__webpack_require__(67);
 
-	__webpack_require__(69);
+	__webpack_require__(70);
 
-	__webpack_require__(72);
+	__webpack_require__(73);
 
-	__webpack_require__(75);
+	__webpack_require__(76);
 
-	__webpack_require__(75);
+	__webpack_require__(76);
 
-	__webpack_require__(78);
+	__webpack_require__(79);
 
-	__webpack_require__(81);
+	__webpack_require__(82);
 
-	__webpack_require__(84);
+	__webpack_require__(85);
 
-	__webpack_require__(87);
+	__webpack_require__(88);
 
-	__webpack_require__(90);
+	__webpack_require__(91);
 
-	__webpack_require__(93);
+	__webpack_require__(76);
 
-	__webpack_require__(75);
-
-	__webpack_require__(96);
+	__webpack_require__(94);
 
 	// import modules and pages
 
-	var _srcDocsIntroduction = __webpack_require__(99);
+	var _srcDocsIntroduction = __webpack_require__(97);
 
 	var _srcDocsIntroduction2 = _interopRequireDefault(_srcDocsIntroduction);
 
-	var _srcDocsAccordion = __webpack_require__(101);
+	var _srcDocsAccordion = __webpack_require__(99);
 
 	var _srcDocsAccordion2 = _interopRequireDefault(_srcDocsAccordion);
 
-	var _srcDocsAlert = __webpack_require__(109);
+	var _srcDocsAlert = __webpack_require__(107);
 
 	var _srcDocsAlert2 = _interopRequireDefault(_srcDocsAlert);
 
-	var _srcDocsBreadcrumb = __webpack_require__(115);
+	var _srcDocsBreadcrumb = __webpack_require__(113);
 
 	var _srcDocsBreadcrumb2 = _interopRequireDefault(_srcDocsBreadcrumb);
 
-	var _srcDocsButtonGroup = __webpack_require__(121);
+	var _srcDocsButtonGroup = __webpack_require__(119);
 
 	var _srcDocsButtonGroup2 = _interopRequireDefault(_srcDocsButtonGroup);
 
-	var _srcDocsButtonCheckbox = __webpack_require__(131);
+	var _srcDocsButtonCheckbox = __webpack_require__(129);
 
 	var _srcDocsButtonCheckbox2 = _interopRequireDefault(_srcDocsButtonCheckbox);
 
-	var _srcDocsButtonRadio = __webpack_require__(138);
+	var _srcDocsButtonRadio = __webpack_require__(136);
 
 	var _srcDocsButtonRadio2 = _interopRequireDefault(_srcDocsButtonRadio);
 
-	var _srcDocsButtons = __webpack_require__(144);
+	var _srcDocsButtons = __webpack_require__(142);
 
 	var _srcDocsButtons2 = _interopRequireDefault(_srcDocsButtons);
 
-	var _srcDocsCard = __webpack_require__(148);
+	var _srcDocsCard = __webpack_require__(146);
 
 	var _srcDocsCard2 = _interopRequireDefault(_srcDocsCard);
 
-	var _srcDocsCarousel = __webpack_require__(154);
+	var _srcDocsCarousel = __webpack_require__(152);
 
 	var _srcDocsCarousel2 = _interopRequireDefault(_srcDocsCarousel);
 
-	var _srcDocsCollapse = __webpack_require__(160);
+	var _srcDocsCollapse = __webpack_require__(158);
 
 	var _srcDocsCollapse2 = _interopRequireDefault(_srcDocsCollapse);
 
-	var _srcDocsDropdown = __webpack_require__(164);
+	var _srcDocsDropdown = __webpack_require__(162);
 
 	var _srcDocsDropdown2 = _interopRequireDefault(_srcDocsDropdown);
 
-	var _srcDocsDropdownSelect = __webpack_require__(172);
+	var _srcDocsDropdownSelect = __webpack_require__(170);
 
 	var _srcDocsDropdownSelect2 = _interopRequireDefault(_srcDocsDropdownSelect);
 
-	var _srcDocsFormCheckbox = __webpack_require__(178);
+	var _srcDocsFormCheckbox = __webpack_require__(176);
 
 	var _srcDocsFormCheckbox2 = _interopRequireDefault(_srcDocsFormCheckbox);
 
-	var _srcDocsFormRadio = __webpack_require__(187);
+	var _srcDocsFormRadio = __webpack_require__(185);
 
 	var _srcDocsFormRadio2 = _interopRequireDefault(_srcDocsFormRadio);
 
-	var _srcDocsFormInput = __webpack_require__(193);
+	var _srcDocsFormInput = __webpack_require__(191);
 
 	var _srcDocsFormInput2 = _interopRequireDefault(_srcDocsFormInput);
 
-	var _srcDocsFormSelect = __webpack_require__(199);
+	var _srcDocsFormSelect = __webpack_require__(197);
 
 	var _srcDocsFormSelect2 = _interopRequireDefault(_srcDocsFormSelect);
 
-	var _srcDocsFormTextarea = __webpack_require__(205);
+	var _srcDocsFormTextarea = __webpack_require__(203);
 
 	var _srcDocsFormTextarea2 = _interopRequireDefault(_srcDocsFormTextarea);
 
-	var _srcDocsImages = __webpack_require__(211);
+	var _srcDocsImages = __webpack_require__(209);
 
 	var _srcDocsImages2 = _interopRequireDefault(_srcDocsImages);
 
-	var _srcDocsJumbotron = __webpack_require__(216);
+	var _srcDocsJumbotron = __webpack_require__(214);
 
 	var _srcDocsJumbotron2 = _interopRequireDefault(_srcDocsJumbotron);
 
-	var _srcDocsLabels = __webpack_require__(222);
+	var _srcDocsTags = __webpack_require__(220);
 
-	var _srcDocsLabels2 = _interopRequireDefault(_srcDocsLabels);
+	var _srcDocsTags2 = _interopRequireDefault(_srcDocsTags);
 
-	var _srcDocsListGroup = __webpack_require__(229);
+	var _srcDocsListGroup = __webpack_require__(227);
 
 	var _srcDocsListGroup2 = _interopRequireDefault(_srcDocsListGroup);
 
-	var _srcDocsMedia = __webpack_require__(237);
+	var _srcDocsMedia = __webpack_require__(235);
 
 	var _srcDocsMedia2 = _interopRequireDefault(_srcDocsMedia);
 
-	var _srcDocsModal = __webpack_require__(243);
+	var _srcDocsModal = __webpack_require__(241);
 
 	var _srcDocsModal2 = _interopRequireDefault(_srcDocsModal);
 
-	var _srcDocsNav = __webpack_require__(249);
+	var _srcDocsNav = __webpack_require__(247);
 
 	var _srcDocsNav2 = _interopRequireDefault(_srcDocsNav);
 
-	var _srcDocsNavbar = __webpack_require__(257);
+	var _srcDocsNavbar = __webpack_require__(255);
 
 	var _srcDocsNavbar2 = _interopRequireDefault(_srcDocsNavbar);
 
-	var _srcDocsPager = __webpack_require__(263);
-
-	var _srcDocsPager2 = _interopRequireDefault(_srcDocsPager);
-
-	var _srcDocsPagination = __webpack_require__(269);
+	var _srcDocsPagination = __webpack_require__(261);
 
 	var _srcDocsPagination2 = _interopRequireDefault(_srcDocsPagination);
 
-	var _srcDocsPopover = __webpack_require__(275);
+	var _srcDocsPopover = __webpack_require__(267);
 
 	var _srcDocsPopover2 = _interopRequireDefault(_srcDocsPopover);
 
-	var _srcDocsProgress = __webpack_require__(284);
+	var _srcDocsProgress = __webpack_require__(276);
 
 	var _srcDocsProgress2 = _interopRequireDefault(_srcDocsProgress);
 
-	var _srcDocsTables = __webpack_require__(290);
+	var _srcDocsTables = __webpack_require__(282);
 
 	var _srcDocsTables2 = _interopRequireDefault(_srcDocsTables);
 
-	var _srcDocsTabs = __webpack_require__(296);
+	var _srcDocsTabs = __webpack_require__(288);
 
 	var _srcDocsTabs2 = _interopRequireDefault(_srcDocsTabs);
 
-	var _srcDocsTooltip = __webpack_require__(302);
+	var _srcDocsTooltip = __webpack_require__(294);
 
 	var _srcDocsTooltip2 = _interopRequireDefault(_srcDocsTooltip);
 
 	exports['default'] = {
-		pages: [_srcDocsIntroduction2['default'], _srcDocsAccordion2['default'], _srcDocsAlert2['default'], _srcDocsBreadcrumb2['default'], _srcDocsButtonGroup2['default'], _srcDocsButtonCheckbox2['default'], _srcDocsButtonRadio2['default'], _srcDocsButtons2['default'], _srcDocsCard2['default'], _srcDocsCarousel2['default'], _srcDocsCollapse2['default'], _srcDocsDropdown2['default'], _srcDocsDropdownSelect2['default'], _srcDocsFormCheckbox2['default'], _srcDocsFormRadio2['default'], _srcDocsFormInput2['default'], _srcDocsFormSelect2['default'], _srcDocsFormTextarea2['default'], _srcDocsImages2['default'], _srcDocsJumbotron2['default'], _srcDocsLabels2['default'], _srcDocsListGroup2['default'], _srcDocsMedia2['default'], _srcDocsModal2['default'], _srcDocsNav2['default'], _srcDocsNavbar2['default'], _srcDocsPager2['default'], _srcDocsPagination2['default'], _srcDocsPopover2['default'], _srcDocsProgress2['default'], _srcDocsTables2['default'], _srcDocsTabs2['default'], _srcDocsTooltip2['default']]
+		pages: [_srcDocsIntroduction2['default'], _srcDocsAccordion2['default'], _srcDocsAlert2['default'], _srcDocsBreadcrumb2['default'], _srcDocsButtonGroup2['default'], _srcDocsButtonCheckbox2['default'], _srcDocsButtonRadio2['default'], _srcDocsButtons2['default'], _srcDocsCard2['default'], _srcDocsCarousel2['default'], _srcDocsCollapse2['default'], _srcDocsDropdown2['default'], _srcDocsDropdownSelect2['default'], _srcDocsFormCheckbox2['default'], _srcDocsFormRadio2['default'], _srcDocsFormInput2['default'], _srcDocsFormSelect2['default'], _srcDocsFormTextarea2['default'], _srcDocsImages2['default'], _srcDocsJumbotron2['default'], _srcDocsListGroup2['default'], _srcDocsMedia2['default'], _srcDocsModal2['default'], _srcDocsNav2['default'], _srcDocsNavbar2['default'], _srcDocsPagination2['default'], _srcDocsPopover2['default'], _srcDocsProgress2['default'], _srcDocsTables2['default'], _srcDocsTabs2['default'], _srcDocsTags2['default'], _srcDocsTooltip2['default']]
 	};
 	module.exports = exports['default'];
 
@@ -2224,7 +2216,7 @@
 
 
 	// module
-	exports.push([module.id, ".btn-group,\n.btn-group-vertical {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle; }\n  .btn-group > .btn,\n  .btn-group-vertical > .btn {\n    position: relative;\n    float: left; }\n    .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,\n    .btn-group-vertical > .btn:focus,\n    .btn-group-vertical > .btn:active,\n    .btn-group-vertical > .btn.active {\n      z-index: 2; }\n    .btn-group > .btn:hover,\n    .btn-group-vertical > .btn:hover {\n      z-index: 2; }\n\n.btn-group .btn + .btn,\n.btn-group .btn + .btn-group,\n.btn-group .btn-group + .btn,\n.btn-group .btn-group + .btn-group {\n  margin-left: -1px; }\n\n.btn-toolbar {\n  margin-left: -5px; }\n  .btn-toolbar::after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .btn-toolbar .btn-group,\n  .btn-toolbar .input-group {\n    float: left; }\n  .btn-toolbar > .btn,\n  .btn-toolbar > .btn-group,\n  .btn-toolbar > .input-group {\n    margin-left: 5px; }\n\n.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {\n  border-radius: 0; }\n\n.btn-group > .btn:first-child {\n  margin-left: 0; }\n  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {\n    border-bottom-right-radius: 0;\n    border-top-right-radius: 0; }\n\n.btn-group > .btn:last-child:not(:first-child),\n.btn-group > .dropdown-toggle:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0; }\n\n.btn-group > .btn-group {\n  float: left; }\n\n.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {\n  border-radius: 0; }\n\n.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,\n.btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0; }\n\n.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0; }\n\n.btn-group .dropdown-toggle:active,\n.btn-group.open .dropdown-toggle {\n  outline: 0; }\n\n.btn-group > .btn + .dropdown-toggle {\n  padding-right: 8px;\n  padding-left: 8px; }\n\n.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle {\n  padding-right: 12px;\n  padding-left: 12px; }\n\n.btn .caret {\n  margin-left: 0; }\n\n.btn-lg .caret, .btn-group-lg > .btn .caret {\n  border-width: 0.3em 0.3em 0;\n  border-bottom-width: 0; }\n\n.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret {\n  border-width: 0 0.3em 0.3em; }\n\n.btn-group-vertical > .btn,\n.btn-group-vertical > .btn-group,\n.btn-group-vertical > .btn-group > .btn {\n  display: block;\n  float: none;\n  width: 100%;\n  max-width: 100%; }\n\n.btn-group-vertical > .btn-group::after {\n  content: \"\";\n  display: table;\n  clear: both; }\n\n.btn-group-vertical > .btn-group > .btn {\n  float: none; }\n\n.btn-group-vertical > .btn + .btn,\n.btn-group-vertical > .btn + .btn-group,\n.btn-group-vertical > .btn-group + .btn,\n.btn-group-vertical > .btn-group + .btn-group {\n  margin-top: -1px;\n  margin-left: 0; }\n\n.btn-group-vertical > .btn:not(:first-child):not(:last-child) {\n  border-radius: 0; }\n\n.btn-group-vertical > .btn:first-child:not(:last-child) {\n  border-top-right-radius: 0.25rem;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0; }\n\n.btn-group-vertical > .btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 0.25rem;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0; }\n\n.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {\n  border-radius: 0; }\n\n.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,\n.btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0; }\n\n.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {\n  border-top-right-radius: 0;\n  border-top-left-radius: 0; }\n\n[data-toggle=\"buttons\"] > .btn input[type=\"radio\"],\n[data-toggle=\"buttons\"] > .btn input[type=\"checkbox\"],\n[data-toggle=\"buttons\"] > .btn-group > .btn input[type=\"radio\"],\n[data-toggle=\"buttons\"] > .btn-group > .btn input[type=\"checkbox\"] {\n  position: absolute;\n  clip: rect(0, 0, 0, 0);\n  pointer-events: none; }\n", ""]);
+	exports.push([module.id, ".btn {\n  display: inline-block;\n  font-weight: normal;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  border: 1px solid transparent;\n  padding: 0.375rem 1rem;\n  font-size: 1rem;\n  line-height: 1.5;\n  border-radius: 0.25rem; }\n  .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {\n    outline: thin dotted;\n    outline: 5px auto -webkit-focus-ring-color;\n    outline-offset: -2px; }\n  .btn:focus, .btn:hover {\n    text-decoration: none; }\n  .btn.focus {\n    text-decoration: none; }\n  .btn:active, .btn.active {\n    background-image: none;\n    outline: 0; }\n  .btn.disabled, .btn:disabled {\n    cursor: not-allowed;\n    opacity: .65; }\n\na.btn.disabled,\nfieldset[disabled] a.btn {\n  pointer-events: none; }\n\n.btn-primary {\n  color: #fff;\n  background-color: #563d7c;\n  border-color: #563d7c; }\n  .btn-primary:hover {\n    color: #fff;\n    background-color: #3e2c5a;\n    border-color: #3a2953; }\n  .btn-primary:focus, .btn-primary.focus {\n    color: #fff;\n    background-color: #3e2c5a;\n    border-color: #3a2953; }\n  .btn-primary:active, .btn-primary.active,\n  .open > .btn-primary.dropdown-toggle {\n    color: #fff;\n    background-color: #3e2c5a;\n    border-color: #3a2953;\n    background-image: none; }\n    .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus,\n    .open > .btn-primary.dropdown-toggle:hover,\n    .open > .btn-primary.dropdown-toggle:focus,\n    .open > .btn-primary.dropdown-toggle.focus {\n      color: #fff;\n      background-color: #2e2042;\n      border-color: #1b1327; }\n  .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary:disabled:focus, .btn-primary:disabled.focus {\n    background-color: #563d7c;\n    border-color: #563d7c; }\n  .btn-primary.disabled:hover, .btn-primary:disabled:hover {\n    background-color: #563d7c;\n    border-color: #563d7c; }\n\n.btn-secondary {\n  color: #373a3c;\n  background-color: #fff;\n  border-color: #ccc; }\n  .btn-secondary:hover {\n    color: #373a3c;\n    background-color: #e6e6e6;\n    border-color: #adadad; }\n  .btn-secondary:focus, .btn-secondary.focus {\n    color: #373a3c;\n    background-color: #e6e6e6;\n    border-color: #adadad; }\n  .btn-secondary:active, .btn-secondary.active,\n  .open > .btn-secondary.dropdown-toggle {\n    color: #373a3c;\n    background-color: #e6e6e6;\n    border-color: #adadad;\n    background-image: none; }\n    .btn-secondary:active:hover, .btn-secondary:active:focus, .btn-secondary:active.focus, .btn-secondary.active:hover, .btn-secondary.active:focus, .btn-secondary.active.focus,\n    .open > .btn-secondary.dropdown-toggle:hover,\n    .open > .btn-secondary.dropdown-toggle:focus,\n    .open > .btn-secondary.dropdown-toggle.focus {\n      color: #373a3c;\n      background-color: #d4d4d4;\n      border-color: #8c8c8c; }\n  .btn-secondary.disabled:focus, .btn-secondary.disabled.focus, .btn-secondary:disabled:focus, .btn-secondary:disabled.focus {\n    background-color: #fff;\n    border-color: #ccc; }\n  .btn-secondary.disabled:hover, .btn-secondary:disabled:hover {\n    background-color: #fff;\n    border-color: #ccc; }\n\n.btn-info {\n  color: #fff;\n  background-color: #5bc0de;\n  border-color: #5bc0de; }\n  .btn-info:hover {\n    color: #fff;\n    background-color: #31b0d5;\n    border-color: #2aabd2; }\n  .btn-info:focus, .btn-info.focus {\n    color: #fff;\n    background-color: #31b0d5;\n    border-color: #2aabd2; }\n  .btn-info:active, .btn-info.active,\n  .open > .btn-info.dropdown-toggle {\n    color: #fff;\n    background-color: #31b0d5;\n    border-color: #2aabd2;\n    background-image: none; }\n    .btn-info:active:hover, .btn-info:active:focus, .btn-info:active.focus, .btn-info.active:hover, .btn-info.active:focus, .btn-info.active.focus,\n    .open > .btn-info.dropdown-toggle:hover,\n    .open > .btn-info.dropdown-toggle:focus,\n    .open > .btn-info.dropdown-toggle.focus {\n      color: #fff;\n      background-color: #269abc;\n      border-color: #1f7e9a; }\n  .btn-info.disabled:focus, .btn-info.disabled.focus, .btn-info:disabled:focus, .btn-info:disabled.focus {\n    background-color: #5bc0de;\n    border-color: #5bc0de; }\n  .btn-info.disabled:hover, .btn-info:disabled:hover {\n    background-color: #5bc0de;\n    border-color: #5bc0de; }\n\n.btn-success {\n  color: #fff;\n  background-color: #42b983;\n  border-color: #42b983; }\n  .btn-success:hover {\n    color: #fff;\n    background-color: #359368;\n    border-color: #328c63; }\n  .btn-success:focus, .btn-success.focus {\n    color: #fff;\n    background-color: #359368;\n    border-color: #328c63; }\n  .btn-success:active, .btn-success.active,\n  .open > .btn-success.dropdown-toggle {\n    color: #fff;\n    background-color: #359368;\n    border-color: #328c63;\n    background-image: none; }\n    .btn-success:active:hover, .btn-success:active:focus, .btn-success:active.focus, .btn-success.active:hover, .btn-success.active:focus, .btn-success.active.focus,\n    .open > .btn-success.dropdown-toggle:hover,\n    .open > .btn-success.dropdown-toggle:focus,\n    .open > .btn-success.dropdown-toggle.focus {\n      color: #fff;\n      background-color: #2b7956;\n      border-color: #205b40; }\n  .btn-success.disabled:focus, .btn-success.disabled.focus, .btn-success:disabled:focus, .btn-success:disabled.focus {\n    background-color: #42b983;\n    border-color: #42b983; }\n  .btn-success.disabled:hover, .btn-success:disabled:hover {\n    background-color: #42b983;\n    border-color: #42b983; }\n\n.btn-warning {\n  color: #fff;\n  background-color: #f0ad4e;\n  border-color: #f0ad4e; }\n  .btn-warning:hover {\n    color: #fff;\n    background-color: #ec971f;\n    border-color: #eb9316; }\n  .btn-warning:focus, .btn-warning.focus {\n    color: #fff;\n    background-color: #ec971f;\n    border-color: #eb9316; }\n  .btn-warning:active, .btn-warning.active,\n  .open > .btn-warning.dropdown-toggle {\n    color: #fff;\n    background-color: #ec971f;\n    border-color: #eb9316;\n    background-image: none; }\n    .btn-warning:active:hover, .btn-warning:active:focus, .btn-warning:active.focus, .btn-warning.active:hover, .btn-warning.active:focus, .btn-warning.active.focus,\n    .open > .btn-warning.dropdown-toggle:hover,\n    .open > .btn-warning.dropdown-toggle:focus,\n    .open > .btn-warning.dropdown-toggle.focus {\n      color: #fff;\n      background-color: #d58512;\n      border-color: #b06d0f; }\n  .btn-warning.disabled:focus, .btn-warning.disabled.focus, .btn-warning:disabled:focus, .btn-warning:disabled.focus {\n    background-color: #f0ad4e;\n    border-color: #f0ad4e; }\n  .btn-warning.disabled:hover, .btn-warning:disabled:hover {\n    background-color: #f0ad4e;\n    border-color: #f0ad4e; }\n\n.btn-danger {\n  color: #fff;\n  background-color: #d9534f;\n  border-color: #d9534f; }\n  .btn-danger:hover {\n    color: #fff;\n    background-color: #c9302c;\n    border-color: #c12e2a; }\n  .btn-danger:focus, .btn-danger.focus {\n    color: #fff;\n    background-color: #c9302c;\n    border-color: #c12e2a; }\n  .btn-danger:active, .btn-danger.active,\n  .open > .btn-danger.dropdown-toggle {\n    color: #fff;\n    background-color: #c9302c;\n    border-color: #c12e2a;\n    background-image: none; }\n    .btn-danger:active:hover, .btn-danger:active:focus, .btn-danger:active.focus, .btn-danger.active:hover, .btn-danger.active:focus, .btn-danger.active.focus,\n    .open > .btn-danger.dropdown-toggle:hover,\n    .open > .btn-danger.dropdown-toggle:focus,\n    .open > .btn-danger.dropdown-toggle.focus {\n      color: #fff;\n      background-color: #ac2925;\n      border-color: #8b211e; }\n  .btn-danger.disabled:focus, .btn-danger.disabled.focus, .btn-danger:disabled:focus, .btn-danger:disabled.focus {\n    background-color: #d9534f;\n    border-color: #d9534f; }\n  .btn-danger.disabled:hover, .btn-danger:disabled:hover {\n    background-color: #d9534f;\n    border-color: #d9534f; }\n\n.btn-primary-outline {\n  color: #563d7c;\n  background-image: none;\n  background-color: transparent;\n  border-color: #563d7c; }\n  .btn-primary-outline:focus, .btn-primary-outline.focus, .btn-primary-outline:active, .btn-primary-outline.active,\n  .open > .btn-primary-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #563d7c;\n    border-color: #563d7c; }\n  .btn-primary-outline:hover {\n    color: #fff;\n    background-color: #563d7c;\n    border-color: #563d7c; }\n  .btn-primary-outline.disabled:focus, .btn-primary-outline.disabled.focus, .btn-primary-outline:disabled:focus, .btn-primary-outline:disabled.focus {\n    border-color: #886ab5; }\n  .btn-primary-outline.disabled:hover, .btn-primary-outline:disabled:hover {\n    border-color: #886ab5; }\n\n.btn-secondary-outline {\n  color: #ccc;\n  background-image: none;\n  background-color: transparent;\n  border-color: #ccc; }\n  .btn-secondary-outline:focus, .btn-secondary-outline.focus, .btn-secondary-outline:active, .btn-secondary-outline.active,\n  .open > .btn-secondary-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #ccc;\n    border-color: #ccc; }\n  .btn-secondary-outline:hover {\n    color: #fff;\n    background-color: #ccc;\n    border-color: #ccc; }\n  .btn-secondary-outline.disabled:focus, .btn-secondary-outline.disabled.focus, .btn-secondary-outline:disabled:focus, .btn-secondary-outline:disabled.focus {\n    border-color: white; }\n  .btn-secondary-outline.disabled:hover, .btn-secondary-outline:disabled:hover {\n    border-color: white; }\n\n.btn-info-outline {\n  color: #5bc0de;\n  background-image: none;\n  background-color: transparent;\n  border-color: #5bc0de; }\n  .btn-info-outline:focus, .btn-info-outline.focus, .btn-info-outline:active, .btn-info-outline.active,\n  .open > .btn-info-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #5bc0de;\n    border-color: #5bc0de; }\n  .btn-info-outline:hover {\n    color: #fff;\n    background-color: #5bc0de;\n    border-color: #5bc0de; }\n  .btn-info-outline.disabled:focus, .btn-info-outline.disabled.focus, .btn-info-outline:disabled:focus, .btn-info-outline:disabled.focus {\n    border-color: #b0e1ef; }\n  .btn-info-outline.disabled:hover, .btn-info-outline:disabled:hover {\n    border-color: #b0e1ef; }\n\n.btn-success-outline {\n  color: #42b983;\n  background-image: none;\n  background-color: transparent;\n  border-color: #42b983; }\n  .btn-success-outline:focus, .btn-success-outline.focus, .btn-success-outline:active, .btn-success-outline.active,\n  .open > .btn-success-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #42b983;\n    border-color: #42b983; }\n  .btn-success-outline:hover {\n    color: #fff;\n    background-color: #42b983;\n    border-color: #42b983; }\n  .btn-success-outline.disabled:focus, .btn-success-outline.disabled.focus, .btn-success-outline:disabled:focus, .btn-success-outline:disabled.focus {\n    border-color: #8bd6b4; }\n  .btn-success-outline.disabled:hover, .btn-success-outline:disabled:hover {\n    border-color: #8bd6b4; }\n\n.btn-warning-outline {\n  color: #f0ad4e;\n  background-image: none;\n  background-color: transparent;\n  border-color: #f0ad4e; }\n  .btn-warning-outline:focus, .btn-warning-outline.focus, .btn-warning-outline:active, .btn-warning-outline.active,\n  .open > .btn-warning-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #f0ad4e;\n    border-color: #f0ad4e; }\n  .btn-warning-outline:hover {\n    color: #fff;\n    background-color: #f0ad4e;\n    border-color: #f0ad4e; }\n  .btn-warning-outline.disabled:focus, .btn-warning-outline.disabled.focus, .btn-warning-outline:disabled:focus, .btn-warning-outline:disabled.focus {\n    border-color: #f8d9ac; }\n  .btn-warning-outline.disabled:hover, .btn-warning-outline:disabled:hover {\n    border-color: #f8d9ac; }\n\n.btn-danger-outline {\n  color: #d9534f;\n  background-image: none;\n  background-color: transparent;\n  border-color: #d9534f; }\n  .btn-danger-outline:focus, .btn-danger-outline.focus, .btn-danger-outline:active, .btn-danger-outline.active,\n  .open > .btn-danger-outline.dropdown-toggle {\n    color: #fff;\n    background-color: #d9534f;\n    border-color: #d9534f; }\n  .btn-danger-outline:hover {\n    color: #fff;\n    background-color: #d9534f;\n    border-color: #d9534f; }\n  .btn-danger-outline.disabled:focus, .btn-danger-outline.disabled.focus, .btn-danger-outline:disabled:focus, .btn-danger-outline:disabled.focus {\n    border-color: #eba5a3; }\n  .btn-danger-outline.disabled:hover, .btn-danger-outline:disabled:hover {\n    border-color: #eba5a3; }\n\n.btn-link {\n  font-weight: normal;\n  color: #563d7c;\n  border-radius: 0; }\n  .btn-link, .btn-link:active, .btn-link.active, .btn-link:disabled {\n    background-color: transparent; }\n  .btn-link, .btn-link:focus, .btn-link:active {\n    border-color: transparent; }\n  .btn-link:hover {\n    border-color: transparent; }\n  .btn-link:focus, .btn-link:hover {\n    color: #322449;\n    text-decoration: underline;\n    background-color: transparent; }\n  .btn-link:disabled:focus, .btn-link:disabled:hover {\n    color: #818a91;\n    text-decoration: none; }\n\n.btn-lg, .btn-group-lg > .btn {\n  padding: 0.75rem 1.25rem;\n  font-size: 1.25rem;\n  line-height: 1.33333;\n  border-radius: 0.3rem; }\n\n.btn-sm, .btn-group-sm > .btn {\n  padding: 0.25rem 0.75rem;\n  font-size: 0.875rem;\n  line-height: 1.5;\n  border-radius: 0.2rem; }\n\n.btn-block {\n  display: block;\n  width: 100%; }\n\n.btn-block + .btn-block {\n  margin-top: 5px; }\n\ninput[type=\"submit\"].btn-block,\ninput[type=\"reset\"].btn-block,\ninput[type=\"button\"].btn-block {\n  width: 100%; }\n\n.btn-group,\n.btn-group-vertical {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle; }\n  .btn-group > .btn,\n  .btn-group-vertical > .btn {\n    position: relative;\n    float: left; }\n    .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,\n    .btn-group-vertical > .btn:focus,\n    .btn-group-vertical > .btn:active,\n    .btn-group-vertical > .btn.active {\n      z-index: 2; }\n    .btn-group > .btn:hover,\n    .btn-group-vertical > .btn:hover {\n      z-index: 2; }\n\n.btn-group .btn + .btn,\n.btn-group .btn + .btn-group,\n.btn-group .btn-group + .btn,\n.btn-group .btn-group + .btn-group {\n  margin-left: -1px; }\n\n.btn-toolbar {\n  margin-left: -5px; }\n  .btn-toolbar::after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .btn-toolbar .btn-group,\n  .btn-toolbar .input-group {\n    float: left; }\n  .btn-toolbar > .btn,\n  .btn-toolbar > .btn-group,\n  .btn-toolbar > .input-group {\n    margin-left: 5px; }\n\n.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {\n  border-radius: 0; }\n\n.btn-group > .btn:first-child {\n  margin-left: 0; }\n  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {\n    border-bottom-right-radius: 0;\n    border-top-right-radius: 0; }\n\n.btn-group > .btn:last-child:not(:first-child),\n.btn-group > .dropdown-toggle:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0; }\n\n.btn-group > .btn-group {\n  float: left; }\n\n.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {\n  border-radius: 0; }\n\n.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,\n.btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0; }\n\n.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0; }\n\n.btn-group .dropdown-toggle:active,\n.btn-group.open .dropdown-toggle {\n  outline: 0; }\n\n.btn-group > .btn + .dropdown-toggle {\n  padding-right: 8px;\n  padding-left: 8px; }\n\n.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle {\n  padding-right: 12px;\n  padding-left: 12px; }\n\n.btn .caret {\n  margin-left: 0; }\n\n.btn-lg .caret, .btn-group-lg > .btn .caret {\n  border-width: 0.3em 0.3em 0;\n  border-bottom-width: 0; }\n\n.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret {\n  border-width: 0 0.3em 0.3em; }\n\n.btn-group-vertical > .btn,\n.btn-group-vertical > .btn-group,\n.btn-group-vertical > .btn-group > .btn {\n  display: block;\n  float: none;\n  width: 100%;\n  max-width: 100%; }\n\n.btn-group-vertical > .btn-group::after {\n  content: \"\";\n  display: table;\n  clear: both; }\n\n.btn-group-vertical > .btn-group > .btn {\n  float: none; }\n\n.btn-group-vertical > .btn + .btn,\n.btn-group-vertical > .btn + .btn-group,\n.btn-group-vertical > .btn-group + .btn,\n.btn-group-vertical > .btn-group + .btn-group {\n  margin-top: -1px;\n  margin-left: 0; }\n\n.btn-group-vertical > .btn:not(:first-child):not(:last-child) {\n  border-radius: 0; }\n\n.btn-group-vertical > .btn:first-child:not(:last-child) {\n  border-top-right-radius: 0.25rem;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0; }\n\n.btn-group-vertical > .btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 0.25rem;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0; }\n\n.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {\n  border-radius: 0; }\n\n.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,\n.btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0; }\n\n.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {\n  border-top-right-radius: 0;\n  border-top-left-radius: 0; }\n\n[data-toggle=\"buttons\"] > .btn input[type=\"radio\"],\n[data-toggle=\"buttons\"] > .btn input[type=\"checkbox\"],\n[data-toggle=\"buttons\"] > .btn-group > .btn input[type=\"radio\"],\n[data-toggle=\"buttons\"] > .btn-group > .btn input[type=\"checkbox\"] {\n  position: absolute;\n  clip: rect(0, 0, 0, 0);\n  pointer-events: none; }\n", ""]);
 
 	// exports
 
@@ -2419,7 +2411,7 @@
 
 
 	// module
-	exports.push([module.id, ".carousel {\n  position: relative; }\n\n.carousel-inner {\n  position: relative;\n  width: 100%;\n  overflow: hidden; }\n  .carousel-inner > .carousel-item {\n    position: relative;\n    display: none;\n    -webkit-transition: .6s ease-in-out left;\n    transition: .6s ease-in-out left; }\n    .carousel-inner > .carousel-item > img,\n    .carousel-inner > .carousel-item > a > img {\n      line-height: 1; }\n    @media all and (transform-3d), (-webkit-transform-3d) {\n      .carousel-inner > .carousel-item {\n        -webkit-transition: -webkit-transform .6s ease-in-out;\n        transition: -webkit-transform .6s ease-in-out;\n        transition: transform .6s ease-in-out;\n        transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;\n        -webkit-backface-visibility: hidden;\n                backface-visibility: hidden;\n        -webkit-perspective: 1000px;\n                perspective: 1000px; }\n        .carousel-inner > .carousel-item.next, .carousel-inner > .carousel-item.active.right {\n          left: 0;\n          -webkit-transform: translate3d(100%, 0, 0);\n                  transform: translate3d(100%, 0, 0); }\n        .carousel-inner > .carousel-item.prev, .carousel-inner > .carousel-item.active.left {\n          left: 0;\n          -webkit-transform: translate3d(-100%, 0, 0);\n                  transform: translate3d(-100%, 0, 0); }\n        .carousel-inner > .carousel-item.next.left, .carousel-inner > .carousel-item.prev.right, .carousel-inner > .carousel-item.active {\n          left: 0;\n          -webkit-transform: translate3d(0, 0, 0);\n                  transform: translate3d(0, 0, 0); } }\n  .carousel-inner > .active,\n  .carousel-inner > .next,\n  .carousel-inner > .prev {\n    display: block; }\n  .carousel-inner > .active {\n    left: 0; }\n  .carousel-inner > .next,\n  .carousel-inner > .prev {\n    position: absolute;\n    top: 0;\n    width: 100%; }\n  .carousel-inner > .next {\n    left: 100%; }\n  .carousel-inner > .prev {\n    left: -100%; }\n  .carousel-inner > .next.left,\n  .carousel-inner > .prev.right {\n    left: 0; }\n  .carousel-inner > .active.left {\n    left: -100%; }\n  .carousel-inner > .active.right {\n    left: 100%; }\n\n.carousel-control {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  width: 15%;\n  font-size: 20px;\n  color: #fff;\n  text-align: center;\n  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);\n  opacity: 0.5; }\n  .carousel-control.left {\n    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);\n    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);\n    background-repeat: repeat-x;\n    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1); }\n  .carousel-control.right {\n    right: 0;\n    left: auto;\n    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);\n    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);\n    background-repeat: repeat-x;\n    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1); }\n  .carousel-control:focus, .carousel-control:hover {\n    color: #fff;\n    text-decoration: none;\n    outline: 0;\n    opacity: .9; }\n  .carousel-control .icon-prev,\n  .carousel-control .icon-next {\n    position: absolute;\n    top: 50%;\n    z-index: 5;\n    display: inline-block;\n    width: 20px;\n    height: 20px;\n    margin-top: -10px;\n    font-family: serif;\n    line-height: 1; }\n  .carousel-control .icon-prev {\n    left: 50%;\n    margin-left: -10px; }\n  .carousel-control .icon-next {\n    right: 50%;\n    margin-right: -10px; }\n  .carousel-control .icon-prev::before {\n    content: \"\\2039\"; }\n  .carousel-control .icon-next::before {\n    content: \"\\203A\"; }\n\n.carousel-indicators {\n  position: absolute;\n  bottom: 10px;\n  left: 50%;\n  z-index: 15;\n  width: 60%;\n  padding-left: 0;\n  margin-left: -30%;\n  text-align: center;\n  list-style: none; }\n  .carousel-indicators li {\n    display: inline-block;\n    width: 10px;\n    height: 10px;\n    margin: 1px;\n    text-indent: -999px;\n    cursor: pointer;\n    background-color: transparent;\n    border: 1px solid #fff;\n    border-radius: 10px; }\n  .carousel-indicators .active {\n    width: 12px;\n    height: 12px;\n    margin: 0;\n    background-color: #fff; }\n\n.carousel-caption {\n  position: absolute;\n  right: 15%;\n  bottom: 20px;\n  left: 15%;\n  z-index: 10;\n  padding-top: 20px;\n  padding-bottom: 20px;\n  color: #fff;\n  text-align: center;\n  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }\n  .carousel-caption .btn {\n    text-shadow: none; }\n\n@media (min-width: 544px) {\n  .carousel-control .icon-prev,\n  .carousel-control .icon-next {\n    width: 30px;\n    height: 30px;\n    margin-top: -15px;\n    font-size: 30px; }\n  .carousel-control .icon-prev {\n    margin-left: -15px; }\n  .carousel-control .icon-next {\n    margin-right: -15px; }\n  .carousel-caption {\n    right: 20%;\n    left: 20%;\n    padding-bottom: 30px; }\n  .carousel-indicators {\n    bottom: 20px; } }\n", ""]);
+	exports.push([module.id, ".img-fluid, .carousel-inner > .carousel-item > img,\n.carousel-inner > .carousel-item > a > img {\n  display: block;\n  max-width: 100%;\n  height: auto; }\n\n.img-rounded {\n  border-radius: 0.3rem; }\n\n.img-thumbnail {\n  padding: 0.25rem;\n  line-height: 1.5;\n  background-color: #fff;\n  border: 1px solid #ddd;\n  border-radius: 0.25rem;\n  -webkit-transition: all .2s ease-in-out;\n  transition: all .2s ease-in-out;\n  display: inline-block;\n  max-width: 100%;\n  height: auto; }\n\n.img-circle {\n  border-radius: 50%; }\n\n.figure {\n  display: inline-block; }\n\n.figure-img {\n  margin-bottom: 0.5rem;\n  line-height: 1; }\n\n.figure-caption {\n  font-size: 90%;\n  color: #818a91; }\n\n.carousel {\n  position: relative; }\n\n.carousel-inner {\n  position: relative;\n  width: 100%;\n  overflow: hidden; }\n  .carousel-inner > .carousel-item {\n    position: relative;\n    display: none;\n    -webkit-transition: .6s ease-in-out left;\n    transition: .6s ease-in-out left; }\n    .carousel-inner > .carousel-item > img,\n    .carousel-inner > .carousel-item > a > img {\n      line-height: 1; }\n    @media all and (transform-3d), (-webkit-transform-3d) {\n      .carousel-inner > .carousel-item {\n        -webkit-transition: -webkit-transform .6s ease-in-out;\n        transition: -webkit-transform .6s ease-in-out;\n        transition: transform .6s ease-in-out;\n        transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;\n        -webkit-backface-visibility: hidden;\n                backface-visibility: hidden;\n        -webkit-perspective: 1000px;\n                perspective: 1000px; }\n        .carousel-inner > .carousel-item.next, .carousel-inner > .carousel-item.active.right {\n          left: 0;\n          -webkit-transform: translate3d(100%, 0, 0);\n                  transform: translate3d(100%, 0, 0); }\n        .carousel-inner > .carousel-item.prev, .carousel-inner > .carousel-item.active.left {\n          left: 0;\n          -webkit-transform: translate3d(-100%, 0, 0);\n                  transform: translate3d(-100%, 0, 0); }\n        .carousel-inner > .carousel-item.next.left, .carousel-inner > .carousel-item.prev.right, .carousel-inner > .carousel-item.active {\n          left: 0;\n          -webkit-transform: translate3d(0, 0, 0);\n                  transform: translate3d(0, 0, 0); } }\n  .carousel-inner > .active,\n  .carousel-inner > .next,\n  .carousel-inner > .prev {\n    display: block; }\n  .carousel-inner > .active {\n    left: 0; }\n  .carousel-inner > .next,\n  .carousel-inner > .prev {\n    position: absolute;\n    top: 0;\n    width: 100%; }\n  .carousel-inner > .next {\n    left: 100%; }\n  .carousel-inner > .prev {\n    left: -100%; }\n  .carousel-inner > .next.left,\n  .carousel-inner > .prev.right {\n    left: 0; }\n  .carousel-inner > .active.left {\n    left: -100%; }\n  .carousel-inner > .active.right {\n    left: 100%; }\n\n.carousel-control {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  width: 15%;\n  font-size: 20px;\n  color: #fff;\n  text-align: center;\n  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);\n  opacity: 0.5; }\n  .carousel-control.left {\n    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);\n    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);\n    background-repeat: repeat-x;\n    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1); }\n  .carousel-control.right {\n    right: 0;\n    left: auto;\n    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);\n    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);\n    background-repeat: repeat-x;\n    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1); }\n  .carousel-control:focus, .carousel-control:hover {\n    color: #fff;\n    text-decoration: none;\n    outline: 0;\n    opacity: .9; }\n  .carousel-control .icon-prev,\n  .carousel-control .icon-next {\n    position: absolute;\n    top: 50%;\n    z-index: 5;\n    display: inline-block;\n    width: 20px;\n    height: 20px;\n    margin-top: -10px;\n    font-family: serif;\n    line-height: 1; }\n  .carousel-control .icon-prev {\n    left: 50%;\n    margin-left: -10px; }\n  .carousel-control .icon-next {\n    right: 50%;\n    margin-right: -10px; }\n  .carousel-control .icon-prev::before {\n    content: \"\\2039\"; }\n  .carousel-control .icon-next::before {\n    content: \"\\203A\"; }\n\n.carousel-indicators {\n  position: absolute;\n  bottom: 10px;\n  left: 50%;\n  z-index: 15;\n  width: 60%;\n  padding-left: 0;\n  margin-left: -30%;\n  text-align: center;\n  list-style: none; }\n  .carousel-indicators li {\n    display: inline-block;\n    width: 10px;\n    height: 10px;\n    margin: 1px;\n    text-indent: -999px;\n    cursor: pointer;\n    background-color: transparent;\n    border: 1px solid #fff;\n    border-radius: 10px; }\n  .carousel-indicators .active {\n    width: 12px;\n    height: 12px;\n    margin: 0;\n    background-color: #fff; }\n\n.carousel-caption {\n  position: absolute;\n  right: 15%;\n  bottom: 20px;\n  left: 15%;\n  z-index: 10;\n  padding-top: 20px;\n  padding-bottom: 20px;\n  color: #fff;\n  text-align: center;\n  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }\n  .carousel-caption .btn {\n    text-shadow: none; }\n\n@media (min-width: 544px) {\n  .carousel-control .icon-prev,\n  .carousel-control .icon-next {\n    width: 30px;\n    height: 30px;\n    margin-top: -15px;\n    font-size: 30px; }\n  .carousel-control .icon-prev {\n    margin-left: -15px; }\n  .carousel-control .icon-next {\n    margin-right: -15px; }\n  .carousel-caption {\n    right: 20%;\n    left: 20%;\n    padding-bottom: 30px; }\n  .carousel-indicators {\n    bottom: 20px; } }\n", ""]);
 
 	// exports
 
@@ -2581,8 +2573,50 @@
 
 	__webpack_require__(55);
 
+	__webpack_require__(61);
+
 /***/ },
 /* 61 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(62);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_input-group.scss", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_input-group.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 62 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".input-group {\n  position: relative;\n  display: table;\n  border-collapse: separate; }\n  .input-group .form-control {\n    position: relative;\n    z-index: 2;\n    float: left;\n    width: 100%;\n    margin-bottom: 0; }\n    .input-group .form-control:focus, .input-group .form-control:active, .input-group .form-control:hover {\n      z-index: 3; }\n\n.input-group-addon,\n.input-group-btn,\n.input-group .form-control {\n  display: table-cell; }\n  .input-group-addon:not(:first-child):not(:last-child),\n  .input-group-btn:not(:first-child):not(:last-child),\n  .input-group .form-control:not(:first-child):not(:last-child) {\n    border-radius: 0; }\n\n.input-group-addon,\n.input-group-btn {\n  width: 1%;\n  white-space: nowrap;\n  vertical-align: middle; }\n\n.input-group-addon {\n  padding: 0.375rem 0.75rem;\n  font-size: 1rem;\n  font-weight: normal;\n  line-height: 1;\n  color: #55595c;\n  text-align: center;\n  background-color: #eceeef;\n  border: 1px solid #ccc;\n  border-radius: 0.25rem; }\n  .input-group-addon.form-control-sm,\n  .input-group-sm > .input-group-addon,\n  .input-group-sm > .input-group-btn > .input-group-addon.btn {\n    padding: 0.275rem 0.75rem;\n    font-size: 0.875rem;\n    border-radius: 0.2rem; }\n  .input-group-addon.form-control-lg,\n  .input-group-lg > .input-group-addon,\n  .input-group-lg > .input-group-btn > .input-group-addon.btn {\n    padding: 0.75rem 1.25rem;\n    font-size: 1.25rem;\n    border-radius: 0.3rem; }\n  .input-group-addon input[type=\"radio\"],\n  .input-group-addon input[type=\"checkbox\"] {\n    margin-top: 0; }\n\n.input-group .form-control:first-child,\n.input-group-addon:first-child,\n.input-group-btn:first-child > .btn,\n.input-group-btn:first-child > .btn-group > .btn,\n.input-group-btn:first-child > .dropdown-toggle,\n.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),\n.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0; }\n\n.input-group-addon:first-child {\n  border-right: 0; }\n\n.input-group .form-control:last-child,\n.input-group-addon:last-child,\n.input-group-btn:last-child > .btn,\n.input-group-btn:last-child > .btn-group > .btn,\n.input-group-btn:last-child > .dropdown-toggle,\n.input-group-btn:first-child > .btn:not(:first-child),\n.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0; }\n\n.input-group-addon:last-child {\n  border-left: 0; }\n\n.input-group-btn {\n  position: relative;\n  font-size: 0;\n  white-space: nowrap; }\n  .input-group-btn > .btn {\n    position: relative; }\n    .input-group-btn > .btn + .btn {\n      margin-left: -1px; }\n    .input-group-btn > .btn:focus, .input-group-btn > .btn:active, .input-group-btn > .btn:hover {\n      z-index: 3; }\n  .input-group-btn:first-child > .btn,\n  .input-group-btn:first-child > .btn-group {\n    margin-right: -1px; }\n  .input-group-btn:last-child > .btn,\n  .input-group-btn:last-child > .btn-group {\n    z-index: 2;\n    margin-left: -1px; }\n    .input-group-btn:last-child > .btn:focus, .input-group-btn:last-child > .btn:active, .input-group-btn:last-child > .btn:hover,\n    .input-group-btn:last-child > .btn-group:focus,\n    .input-group-btn:last-child > .btn-group:active,\n    .input-group-btn:last-child > .btn-group:hover {\n      z-index: 3; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2591,22 +2625,22 @@
 	__webpack_require__(45);
 
 /***/ },
-/* 62 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(63);
+	__webpack_require__(65);
 
 /***/ },
-/* 63 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(64);
+	var content = __webpack_require__(66);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2626,7 +2660,7 @@
 	}
 
 /***/ },
-/* 64 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2640,22 +2674,24 @@
 
 
 /***/ },
-/* 65 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(66);
+	__webpack_require__(47);
+
+	__webpack_require__(68);
 
 /***/ },
-/* 66 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(67);
+	var content = __webpack_require__(69);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2675,7 +2711,7 @@
 	}
 
 /***/ },
-/* 67 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2689,35 +2725,24 @@
 
 
 /***/ },
-/* 68 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(47);
-
-	__webpack_require__(66);
-
-/***/ },
-/* 69 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-
-	__webpack_require__(70);
+	__webpack_require__(71);
 
 	__webpack_require__(45);
 
 /***/ },
-/* 70 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(71);
+	var content = __webpack_require__(72);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2737,7 +2762,7 @@
 	}
 
 /***/ },
-/* 71 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2751,24 +2776,24 @@
 
 
 /***/ },
-/* 72 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(73);
+	__webpack_require__(74);
 
 	__webpack_require__(33);
 
 /***/ },
-/* 73 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(74);
+	var content = __webpack_require__(75);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2788,7 +2813,7 @@
 	}
 
 /***/ },
-/* 74 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2796,28 +2821,28 @@
 
 
 	// module
-	exports.push([module.id, ".modal-open {\n  overflow: hidden; }\n\n.modal {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1050;\n  display: none;\n  overflow: hidden;\n  outline: 0;\n  -webkit-overflow-scrolling: touch; }\n  .modal.fade .modal-dialog {\n    -webkit-transition: -webkit-transform .3s ease-out;\n    transition: -webkit-transform .3s ease-out;\n    transition: transform .3s ease-out;\n    transition: transform .3s ease-out, -webkit-transform .3s ease-out;\n    -webkit-transform: translate(0, -25%);\n        -ms-transform: translate(0, -25%);\n            transform: translate(0, -25%); }\n  .modal.in .modal-dialog {\n    -webkit-transform: translate(0, 0);\n        -ms-transform: translate(0, 0);\n            transform: translate(0, 0); }\n\n.modal-open .modal {\n  overflow-x: hidden;\n  overflow-y: auto; }\n\n.modal-dialog {\n  position: relative;\n  width: auto;\n  margin: 10px; }\n\n.modal-content {\n  position: relative;\n  background-color: #fff;\n  background-clip: padding-box;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  border-radius: 0.3rem;\n  outline: 0; }\n\n.modal-backdrop {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1040;\n  background-color: #000; }\n  .modal-backdrop.fade {\n    opacity: 0; }\n  .modal-backdrop.in {\n    opacity: 0.5; }\n\n.modal-header {\n  padding: 15px;\n  border-bottom: 1px solid #e5e5e5; }\n  .modal-header::after {\n    content: \"\";\n    display: table;\n    clear: both; }\n\n.modal-header .close {\n  margin-top: -2px; }\n\n.modal-title {\n  margin: 0;\n  line-height: 1.5; }\n\n.modal-body {\n  position: relative;\n  padding: 15px; }\n\n.modal-footer {\n  padding: 15px;\n  text-align: right;\n  border-top: 1px solid #e5e5e5; }\n  .modal-footer::after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .modal-footer .btn + .btn {\n    margin-bottom: 0;\n    margin-left: 5px; }\n  .modal-footer .btn-group .btn + .btn {\n    margin-left: -1px; }\n  .modal-footer .btn-block + .btn-block {\n    margin-left: 0; }\n\n.modal-scrollbar-measure {\n  position: absolute;\n  top: -9999px;\n  width: 50px;\n  height: 50px;\n  overflow: scroll; }\n\n@media (min-width: 544px) {\n  .modal-dialog {\n    width: 600px;\n    margin: 30px auto; }\n  .modal-sm {\n    width: 300px; } }\n\n@media (min-width: 768px) {\n  .modal-lg {\n    width: 900px; } }\n", ""]);
+	exports.push([module.id, ".modal-open {\n  overflow: hidden; }\n\n.modal {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1050;\n  display: none;\n  overflow: hidden;\n  outline: 0;\n  -webkit-overflow-scrolling: touch; }\n  .modal.fade .modal-dialog {\n    -webkit-transition: -webkit-transform .3s ease-out;\n    transition: -webkit-transform .3s ease-out;\n    transition: transform .3s ease-out;\n    transition: transform .3s ease-out, -webkit-transform .3s ease-out;\n    -webkit-transform: translate(0, -25%);\n            transform: translate(0, -25%); }\n  .modal.in .modal-dialog {\n    -webkit-transform: translate(0, 0);\n            transform: translate(0, 0); }\n\n.modal-open .modal {\n  overflow-x: hidden;\n  overflow-y: auto; }\n\n.modal-dialog {\n  position: relative;\n  width: auto;\n  margin: 10px; }\n\n.modal-content {\n  position: relative;\n  background-color: #fff;\n  background-clip: padding-box;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  border-radius: 0.3rem;\n  outline: 0; }\n\n.modal-backdrop {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1040;\n  background-color: #000; }\n  .modal-backdrop.fade {\n    opacity: 0; }\n  .modal-backdrop.in {\n    opacity: 0.5; }\n\n.modal-header {\n  padding: 15px;\n  border-bottom: 1px solid #e5e5e5; }\n  .modal-header::after {\n    content: \"\";\n    display: table;\n    clear: both; }\n\n.modal-header .close {\n  margin-top: -2px; }\n\n.modal-title {\n  margin: 0;\n  line-height: 1.5; }\n\n.modal-body {\n  position: relative;\n  padding: 15px; }\n\n.modal-footer {\n  padding: 15px;\n  text-align: right;\n  border-top: 1px solid #e5e5e5; }\n  .modal-footer::after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .modal-footer .btn + .btn {\n    margin-bottom: 0;\n    margin-left: 5px; }\n  .modal-footer .btn-group .btn + .btn {\n    margin-left: -1px; }\n  .modal-footer .btn-block + .btn-block {\n    margin-left: 0; }\n\n.modal-scrollbar-measure {\n  position: absolute;\n  top: -9999px;\n  width: 50px;\n  height: 50px;\n  overflow: scroll; }\n\n@media (min-width: 544px) {\n  .modal-dialog {\n    width: 600px;\n    margin: 30px auto; }\n  .modal-sm {\n    width: 300px; } }\n\n@media (min-width: 768px) {\n  .modal-lg {\n    width: 900px; } }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 75 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(76);
+	__webpack_require__(77);
 
 /***/ },
-/* 76 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(77);
+	var content = __webpack_require__(78);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2837,7 +2862,7 @@
 	}
 
 /***/ },
-/* 77 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2851,28 +2876,28 @@
 
 
 /***/ },
-/* 78 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(79);
+	__webpack_require__(80);
 
 	__webpack_require__(33);
 
-	__webpack_require__(76);
+	__webpack_require__(77);
 
 	__webpack_require__(53);
 
 /***/ },
-/* 79 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(80);
+	var content = __webpack_require__(81);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2892,7 +2917,7 @@
 	}
 
 /***/ },
-/* 80 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2906,75 +2931,26 @@
 
 
 /***/ },
-/* 81 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-
-	__webpack_require__(82);
-
-/***/ },
 /* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(83);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_pager.scss", function() {
-				var newContent = require("!!./../../css-loader/index.js!./../../autoprefixer-loader/index.js!./../../sass-loader/index.js!./../../vuestrap-theme-loader/index.js!./_pager.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 83 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".pager {\n  padding-left: 0;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  text-align: center;\n  list-style: none; }\n  .pager::after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .pager li {\n    display: inline; }\n    .pager li > a,\n    .pager li > span {\n      display: inline-block;\n      padding: 5px 14px;\n      background-color: #fff;\n      border: 1px solid #ddd;\n      border-radius: 15px; }\n    .pager li > a:focus, .pager li > a:hover {\n      text-decoration: none;\n      background-color: #eceeef; }\n  .pager .disabled > a, .pager .disabled > a:focus, .pager .disabled > a:hover {\n    color: #818a91;\n    cursor: not-allowed;\n    background-color: #fff; }\n  .pager .disabled > span {\n    color: #818a91;\n    cursor: not-allowed;\n    background-color: #fff; }\n\n.pager-next > a,\n.pager-next > span {\n  float: right; }\n\n.pager-prev > a,\n.pager-prev > span {\n  float: left; }\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 84 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(85);
+	__webpack_require__(83);
 
 	__webpack_require__(33);
 
 	__webpack_require__(39);
 
 /***/ },
-/* 85 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(86);
+	var content = __webpack_require__(84);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2994,7 +2970,7 @@
 	}
 
 /***/ },
-/* 86 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -3008,24 +2984,24 @@
 
 
 /***/ },
-/* 87 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(88);
+	__webpack_require__(86);
 
 	__webpack_require__(33);
 
 /***/ },
-/* 88 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(89);
+	var content = __webpack_require__(87);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -3045,7 +3021,7 @@
 	}
 
 /***/ },
-/* 89 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -3059,22 +3035,22 @@
 
 
 /***/ },
-/* 90 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(91);
+	__webpack_require__(89);
 
 /***/ },
-/* 91 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(92);
+	var content = __webpack_require__(90);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -3094,7 +3070,7 @@
 	}
 
 /***/ },
-/* 92 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -3108,22 +3084,22 @@
 
 
 /***/ },
-/* 93 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(94);
+	__webpack_require__(92);
 
 /***/ },
-/* 94 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(95);
+	var content = __webpack_require__(93);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -3143,7 +3119,7 @@
 	}
 
 /***/ },
-/* 95 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -3157,24 +3133,24 @@
 
 
 /***/ },
-/* 96 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(97);
+	__webpack_require__(95);
 
 	__webpack_require__(33);
 
 /***/ },
-/* 97 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(98);
+	var content = __webpack_require__(96);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -3194,7 +3170,7 @@
 	}
 
 /***/ },
-/* 98 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -3208,7 +3184,7 @@
 
 
 /***/ },
-/* 99 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3219,11 +3195,11 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _introductionHtml = __webpack_require__(100);
+	var _introductionHtml = __webpack_require__(98);
 
 	var _introductionHtml2 = _interopRequireDefault(_introductionHtml);
 
-	__webpack_require__(62);
+	__webpack_require__(64);
 
 	exports['default'] = {
 		route: {
@@ -3244,13 +3220,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 100 */
+/* 98 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"jumbotron\">\r\n  <h1>{{pkg.name}} <span class=\"label label-success\">{{pkg.version}}</span></h1>\r\n  <p>{{pkg.description}}</p>\r\n</div>\r\n<h2>Installation</h2>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12 col-sm-6\">\r\n    <h3>Compiled</h3>\r\n    <p>Minified CSS and JavaScript with no  documentation or original source files.</p>\r\n    <code>bower install {{pkg.name}} --save-dev</code>\r\n  </div>\r\n  <div class=\"col-xs-12 col-sm-6\">\r\n    <h3>Source</h3>\r\n    <p>Source Sass, JavaScript, and documentation files.</p>\r\n    <code>npm install {{pkg.name}} --save-dev</code>\r\n   </div>\r\n</div>\r\n\r\n<div class=\"m-b-lg\"></div>\r\n<h2>Usage</h2>\r\n<p>For compiled components, use it within your Vue instance like this:</p>\r\n<p><code>new Vue({ components: { '{{componentNameSurfixed}}': {{pkg.library}}.{{componentName}} }})</code></p>\r\n\r\n<div class=\"m-b\"></div>\r\n<strong>OR</strong>\r\n<div class=\"m-b\"></div>\r\n\r\n<p>If you chosen to work with source components, just import* desired component like so:</p>\r\n<p><code>import { {{componentNameCamelCase}} } from '{{pkg.name}}/src/components'</code></p>\r\n<p>and then load it in your Vue instance:</p>\r\n<p><code>new Vue({ components: { {{componentNameCamelCase}} }})</code></p>\r\n<p>*Note: You will need <a href=\"https://github.com/babel/babel-loader\">Babel Loader</a> in your Webpack config file to support ES6 syntax.</p>\r\n\r\n<div class=\"m-b-lg\"></div>\r\n<h2>Examples</h2>\r\n<ul>\r\n  <li><a href=\"examples/basic.html\" target=\"_blank\">Basic example of a landing page with selected components.</a></li>\r\n  <li><a href=\"http://kzima.github.io/vuestrap-starter/\" target=\"_blank\">Advanced example</a> with webpack config and theme implementation - (<a href=\"https://github.com/kzima/vuestrap-starter\" target=\"_blank\">source on github</a>)</li>\r\n</ul>\r\n\r\n<div class=\"m-b-lg\"></div>\r\n<h2>Theming</h2>\r\n<p>To be able to use your app theme with component's scss variables, you will need to use <a href=\"https://github.com/kzima/vueastrap-theme-loader\">vuestrap-theme-loader</a> in your webpack config file. </p>\r\n\r\n<p><code>npm install vuestrap-theme-loader --save-dev</code></p>\r\n\r\n<p>See <a href=\"https://github.com/kzima/vuestrap-starter\">vuestrap-starter</a> for a webpack config example with theme loader.</p>";
+	module.exports = "<div class=\"jumbotron\">\n  <h1>{{pkg.name}} <span class=\"label label-success\">{{pkg.version}}</span></h1>\n  <p>{{pkg.description}}</p>\n</div>\n<h2>Installation</h2>\n<div class=\"row\">\n  <div class=\"col-xs-12 col-sm-6\">\n    <h3>Compiled</h3>\n    <p>Minified CSS and JavaScript with no  documentation or original source files.</p>\n    <code>bower install {{pkg.name}} --save-dev</code>\n  </div>\n  <div class=\"col-xs-12 col-sm-6\">\n    <h3>Source</h3>\n    <p>Source Sass, JavaScript, and documentation files.</p>\n    <code>npm install {{pkg.name}} --save-dev</code>\n   </div>\n</div>\n\n<div class=\"m-b-lg\"></div>\n<h2>Usage</h2>\n<p>For compiled components, use it within your Vue instance like this:</p>\n<p><code>new Vue({ components: { '{{componentNameSurfixed}}': {{pkg.library}}.{{componentName}} }})</code></p>\n\n<div class=\"m-b\"></div>\n<strong>OR</strong>\n<div class=\"m-b\"></div>\n\n<p>If you chosen to work with source components, just import* desired component like so:</p>\n<p><code>import { {{componentNameCamelCase}} } from '{{pkg.name}}/src/components'</code></p>\n<p>and then load it in your Vue instance:</p>\n<p><code>new Vue({ components: { {{componentNameCamelCase}} }})</code></p>\n<p>*Note: You will need <a href=\"https://github.com/babel/babel-loader\">Babel Loader</a> in your Webpack config file to support ES6 syntax.</p>\n\n<div class=\"m-b-lg\"></div>\n<h2>Examples</h2>\n<ul>\n  <li><a href=\"examples/basic.html\" target=\"_blank\">Basic example of a landing page with selected components.</a></li>\n  <li><a href=\"http://kzima.github.io/vuestrap-starter/\" target=\"_blank\">Advanced example</a> with webpack config and theme implementation - (<a href=\"https://github.com/kzima/vuestrap-starter\" target=\"_blank\">source on github</a>)</li>\n</ul>\n\n<div class=\"m-b-lg\"></div>\n<h2>Theming</h2>\n<p>To be able to use your app theme with component's scss variables, you will need to use <a href=\"https://github.com/kzima/vueastrap-theme-loader\">vuestrap-theme-loader</a> in your webpack config file. </p>\n\n<p><code>npm install vuestrap-theme-loader --save-dev</code></p>\n\n<p>See <a href=\"https://github.com/kzima/vuestrap-starter\">vuestrap-starter</a> for a webpack config example with theme loader.</p>";
 
 /***/ },
-/* 101 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3261,19 +3237,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _accordionJson = __webpack_require__(102);
+	var _accordionJson = __webpack_require__(100);
 
 	var _accordionJson2 = _interopRequireDefault(_accordionJson);
 
-	var _accordionHtml = __webpack_require__(103);
+	var _accordionHtml = __webpack_require__(101);
 
 	var _accordionHtml2 = _interopRequireDefault(_accordionHtml);
 
-	var _snippetHtml = __webpack_require__(104);
+	var _snippetHtml = __webpack_require__(102);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsCollapse = __webpack_require__(105);
+	var _srcComponentsCollapse = __webpack_require__(103);
 
 	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(7);
 
@@ -3301,7 +3277,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 102 */
+/* 100 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -3338,19 +3314,19 @@
 	};
 
 /***/ },
+/* 101 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\n\t<!-- Html markup start-->\n\t<div slot=\"markup\">\n\t\t<vs-collapse-toggle target=\"item-1\" target-group=\"accordion-1\">\n\t\t\t<div><a href=\"#\">Collapsible Group Item #1</a></div>\n\t\t</vs-collapse-toggle>\n\t\t<vs-collapse id=\"item-1\" group=\"accordion-1\">\n\t\t\t<div class=\"card card-block\">\n\t\t\t\t<h5>First</h5>\n\t\t    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\n\t\t  </div>\n\t\t</vs-collapse>\n\t\t<vs-collapse-toggle target=\"item-2\" target-group=\"accordion-1\">\n\t\t\t<div><a href=\"#\">Collapsible Group Item #2</a></div>\n\t\t</vs-collapse-toggle>\n\t\t<vs-collapse id=\"item-2\" group=\"accordion-1\">\n\t\t\t<div class=\"card card-block\">\n\t\t\t\t<h5>Second</h5>\n\t\t    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\n\t\t  </div>\n\t\t</vs-collapse>\n\t\t<vs-collapse-toggle target=\"item-3\" target-group=\"accordion-1\">\n\t\t\t<div><a href=\"#\">Collapsible Group Item #3</a></div>\n\t\t</vs-collapse-toggle>\n\t\t<vs-collapse id=\"item-3\" group=\"accordion-1\">\n\t\t\t<div class=\"card card-block\">\n\t\t\t\t<h5>Third</h5>\n\t\t    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\n\t\t  </div>\n\t\t</vs-collapse>\n\t</div>\n\t<!-- Html markup end-->\n\n</docs-demo>\t\n";
+
+/***/ },
+/* 102 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-comment\">&lt;!-- item 1 --&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">target</span>=<span class=\"hljs-value\">\"item-1\"</span> <span class=\"hljs-attribute\">target-group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Collapsible Group Item #1<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"item-1\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card card-block\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h5</span>&gt;</span>First<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h5</span>&gt;</span>\n    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse</span>&gt;</span>\n\n<span class=\"hljs-comment\">&lt;!-- item 2 --&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">target</span>=<span class=\"hljs-value\">\"item-2\"</span> <span class=\"hljs-attribute\">target-group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Collapsible Group Item #2<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"item-2\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card card-block\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h5</span>&gt;</span>Second<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h5</span>&gt;</span>\n    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse</span>&gt;</span>\n\n<span class=\"hljs-comment\">&lt;!-- item 3--&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">target</span>=<span class=\"hljs-value\">\"item-3\"</span> <span class=\"hljs-attribute\">target-group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Collapsible Group Item #3<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"item-3\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card card-block\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h5</span>&gt;</span>Third<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h5</span>&gt;</span>\n    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse</span>&gt;</span>\n";
+
+/***/ },
 /* 103 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t<vs-collapse-toggle target=\"item-1\" target-group=\"accordion-1\">\r\n\t\t\t<div><a href=\"#\">Collapsible Group Item #1</a></div>\r\n\t\t</vs-collapse-toggle>\r\n\t\t<vs-collapse id=\"item-1\" group=\"accordion-1\">\r\n\t\t\t<div class=\"card card-block\">\r\n\t\t\t\t<h5>First</h5>\r\n\t\t    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n\t\t  </div>\r\n\t\t</vs-collapse>\r\n\t\t<vs-collapse-toggle target=\"item-2\" target-group=\"accordion-1\">\r\n\t\t\t<div><a href=\"#\">Collapsible Group Item #2</a></div>\r\n\t\t</vs-collapse-toggle>\r\n\t\t<vs-collapse id=\"item-2\" group=\"accordion-1\">\r\n\t\t\t<div class=\"card card-block\">\r\n\t\t\t\t<h5>Second</h5>\r\n\t\t    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n\t\t  </div>\r\n\t\t</vs-collapse>\r\n\t\t<vs-collapse-toggle target=\"item-3\" target-group=\"accordion-1\">\r\n\t\t\t<div><a href=\"#\">Collapsible Group Item #3</a></div>\r\n\t\t</vs-collapse-toggle>\r\n\t\t<vs-collapse id=\"item-3\" group=\"accordion-1\">\r\n\t\t\t<div class=\"card card-block\">\r\n\t\t\t\t<h5>Third</h5>\r\n\t\t    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n\t\t  </div>\r\n\t\t</vs-collapse>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 104 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-comment\">&lt;!-- item 1 --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">target</span>=<span class=\"hljs-value\">\"item-1\"</span> <span class=\"hljs-attribute\">target-group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Collapsible Group Item #1<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"item-1\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card card-block\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h5</span>&gt;</span>First<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h5</span>&gt;</span>\r\n    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse</span>&gt;</span>\r\n\r\n<span class=\"hljs-comment\">&lt;!-- item 2 --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">target</span>=<span class=\"hljs-value\">\"item-2\"</span> <span class=\"hljs-attribute\">target-group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Collapsible Group Item #2<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"item-2\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card card-block\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h5</span>&gt;</span>Second<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h5</span>&gt;</span>\r\n    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse</span>&gt;</span>\r\n\r\n<span class=\"hljs-comment\">&lt;!-- item 3--&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">target</span>=<span class=\"hljs-value\">\"item-3\"</span> <span class=\"hljs-attribute\">target-group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Collapsible Group Item #3<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"item-3\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"accordion-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card card-block\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h5</span>&gt;</span>Third<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h5</span>&gt;</span>\r\n    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse</span>&gt;</span>\r\n";
-
-/***/ },
-/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -3362,15 +3338,15 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _collapseHtml = __webpack_require__(106);
+	var _collapseHtml = __webpack_require__(104);
 
 	var _collapseHtml2 = _interopRequireDefault(_collapseHtml);
 
-	var _utilsHelpersJs = __webpack_require__(107);
+	var _utilsHelpersJs = __webpack_require__(105);
 
 	// import polyfill for IE9
 
-	__webpack_require__(108);
+	__webpack_require__(106);
 
 	// for browsers that do not support transitions like IE9 just change immediately
 	var TRANSITION_DURATION = (0, _utilsHelpersJs.csstransitions)() ? 350 : 0;
@@ -3401,11 +3377,15 @@
 	      this._collapseAnimation = setTimeout(function () {
 	        _this.$el.classList.remove('collapsing');
 	        _this.$el.classList.add('collapse', 'in');
+	        _this.$root.$broadcast('toggled::collapsed', { id: _this.id, group: _this.group, expanded: true });
+	        _this.$root.$dispatch('toggled::collapsed', { id: _this.id, group: _this.group, expanded: true });
+	        _this.$el.style.height = null;
 	      }, TRANSITION_DURATION);
 	    },
 	    hide: function hide() {
 	      var _this2 = this;
 
+	      this.$el.style.height = this.$el.scrollHeight + 'px';
 	      this.$el.classList.remove('collapse');
 	      this.$el.classList.remove('in');
 	      this.$el.classList.add('collapsing');
@@ -3414,6 +3394,9 @@
 	      this._collapseAnimation = setTimeout(function () {
 	        _this2.$el.classList.remove('collapsing');
 	        _this2.$el.classList.add('collapse');
+	        _this2.$root.$broadcast('toggled::collapsed', { id: _this2.id, group: _this2.group, expanded: false });
+	        _this2.$root.$dispatch('toggled::collapsed', { id: _this2.id, group: _this2.group, expanded: false });
+	        _this2.$el.style.height = null;
 	      }, TRANSITION_DURATION);
 	    }
 	  },
@@ -3456,7 +3439,7 @@
 	exports.collapse = collapse;
 	// export component object
 	var collapseToggle = {
-	  template: '<span v-on:click.stop.prevent="toggle($event)"><slot></slot></span>',
+	  template: '<span v-on:click.stop.prevent="toggle($event)" :class="{collapsed: !expanded}" :aria-expanded="expanded ? \'true\' : \'false\'" :aria-controls="target"><slot></slot></span>',
 	  replace: true,
 	  computed: {},
 	  props: {
@@ -3467,6 +3450,10 @@
 	    targetGroup: {
 	      type: String,
 	      'default': ''
+	    },
+	    expanded: {
+	      type: Boolean,
+	      'default': false
 	    }
 	  },
 	  methods: {
@@ -3484,18 +3471,25 @@
 	        this.$root.$dispatch('toggled::collapse', { id: this.target, group: this.targetGroup });
 	      }
 	    }
+	  },
+	  events: {
+	    'toggled::collapsed': function toggledCollapsed(data) {
+	      if (data.id && data.id === this.target && !data.group || data.group && data.group === this.targetGroup && !data.id) {
+	        this.expanded = data.expanded;
+	      }
+	    }
 	  }
 	};
 	exports.collapseToggle = collapseToggle;
 
 /***/ },
-/* 106 */
+/* 104 */
 /***/ function(module, exports) {
 
-	module.exports = "<div id=\"{{id}}\" class=\"collapse\">\r\n  <slot></slot>\r\n</div>";
+	module.exports = "<div id=\"{{id}}\" class=\"collapse\">\n  <slot></slot>\n</div>";
 
 /***/ },
-/* 107 */
+/* 105 */
 /***/ function(module, exports) {
 
 	/**
@@ -3547,7 +3541,7 @@
 	exports.changeLocation = changeLocation;
 
 /***/ },
-/* 108 */
+/* 106 */
 /***/ function(module, exports) {
 
 	/*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js*/
@@ -3647,7 +3641,7 @@
 	};
 
 /***/ },
-/* 109 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3658,19 +3652,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _alertJson = __webpack_require__(110);
+	var _alertJson = __webpack_require__(108);
 
 	var _alertJson2 = _interopRequireDefault(_alertJson);
 
-	var _alertHtml = __webpack_require__(111);
+	var _alertHtml = __webpack_require__(109);
 
 	var _alertHtml2 = _interopRequireDefault(_alertHtml);
 
-	var _snippetHtml = __webpack_require__(112);
+	var _snippetHtml = __webpack_require__(110);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsAlert = __webpack_require__(113);
+	var _srcComponentsAlert = __webpack_require__(111);
 
 	var _srcComponentsAlert2 = _interopRequireDefault(_srcComponentsAlert);
 
@@ -3704,7 +3698,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 110 */
+/* 108 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -3751,19 +3745,19 @@
 	};
 
 /***/ },
+/* 109 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\n\t<!-- Html controls start-->\n\t<div slot=\"controls\">\n\t\t<label>show <input type=\"checkbox\" v-model=\"show\"></label>\n\t\t<label>dismissible <input type=\"checkbox\" v-model=\"dismissible\"></label>\n\t\t<label>state\n\t\t\t<select v-model=\"state\">\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t</div>\n\t<!-- Html controls end-->\n\t\n\t<!-- Html markup start-->\n\t<div slot=\"markup\">\n\t\t<vs-alert\n\t\t    :show.sync=\"show\"\n\t\t    :state=\"state\"\n\t\t    :message=\"message\"\n\t\t    :dismissible=\"dismissible\">\n\t\t    This is an alert\n\t\t</vs-alert>\n\t\t<template v-if=\"!show\">\n\t\t\t<button href='#' v-on:click=\"show = true\">Show alert again</button>\n\t\t</template>\n\t</div>\n\t<!-- Html markup end-->\n\n</docs-demo>\t\n";
+
+/***/ },
+/* 110 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-alert</span> \n  <span class=\"hljs-attribute\">:show</span>=<span class=\"hljs-value\">\"showVariable\"</span>\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"state\"</span>\n  <span class=\"hljs-attribute\">dismissible</span>&gt;</span>\n  This is an alert\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-alert</span>&gt;</span>\n";
+
+/***/ },
 /* 111 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\">\r\n\t\t<label>show <input type=\"checkbox\" v-model=\"show\"></label>\r\n\t\t<label>dismissible <input type=\"checkbox\" v-model=\"dismissible\"></label>\r\n\t\t<label>state\r\n\t\t\t<select v-model=\"state\">\r\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\t\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t<vs-alert\r\n\t\t    :show.sync=\"show\"\r\n\t\t    :state=\"state\"\r\n\t\t    :message=\"message\"\r\n\t\t    :dismissible=\"dismissible\">\r\n\t\t    This is an alert\r\n\t\t</vs-alert>\r\n\t\t<template v-if=\"!show\">\r\n\t\t\t<button href='#' v-on:click=\"show = true\">Show alert again</button>\r\n\t\t</template>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 112 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-alert</span> \r\n  <span class=\"hljs-attribute\">show.sync</span>=<span class=\"hljs-value\">\"showVariable\"</span>\r\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"state\"</span>\r\n  <span class=\"hljs-attribute\">dismissible</span>&gt;</span>\r\n  This is an alert\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-alert</span>&gt;</span>\r\n";
-
-/***/ },
-/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -3775,7 +3769,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _alertHtml = __webpack_require__(114);
+	var _alertHtml = __webpack_require__(112);
 
 	var _alertHtml2 = _interopRequireDefault(_alertHtml);
 
@@ -3815,13 +3809,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 114 */
+/* 112 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"alert {{alertState}} {{ dismissible ? 'alert-dismissible' : '' }} fade in\" role=\"alert\" v-show=\"show\">\r\n    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\" v-if=\"dismissible\" v-on:click.stop.prevent=\"dismiss\">\r\n        <span aria-hidden=\"true\">&times;</span>\r\n        <span class=\"sr-only\">Close</span>\r\n    </button>\r\n    <slot></slot>\r\n</div>\r\n";
+	module.exports = "<div class=\"alert {{alertState}} {{ dismissible ? 'alert-dismissible' : '' }} fade in\" role=\"alert\" v-show=\"show\">\n    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\" v-if=\"dismissible\" v-on:click.stop.prevent=\"dismiss\">\n        <span aria-hidden=\"true\">&times;</span>\n        <span class=\"sr-only\">Close</span>\n    </button>\n    <slot></slot>\n</div>\n";
 
 /***/ },
-/* 115 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3832,19 +3826,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _breadcrumbJson = __webpack_require__(116);
+	var _breadcrumbJson = __webpack_require__(114);
 
 	var _breadcrumbJson2 = _interopRequireDefault(_breadcrumbJson);
 
-	var _breadcrumbHtml = __webpack_require__(117);
+	var _breadcrumbHtml = __webpack_require__(115);
 
 	var _breadcrumbHtml2 = _interopRequireDefault(_breadcrumbHtml);
 
-	var _snippetHtml = __webpack_require__(118);
+	var _snippetHtml = __webpack_require__(116);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsBreadcrumb = __webpack_require__(119);
+	var _srcComponentsBreadcrumb = __webpack_require__(117);
 
 	var _srcComponentsBreadcrumb2 = _interopRequireDefault(_srcComponentsBreadcrumb);
 
@@ -3874,7 +3868,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 116 */
+/* 114 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -3901,19 +3895,19 @@
 	};
 
 /***/ },
+/* 115 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\n\t<!-- Html markup start-->\n\t<div slot=\"markup\">\n\t\t\t<vs-breadcrumb\n    \t\t:list=\"list\">\n\t\t\t</vs-breadcrumb>\n\t</div>\n\t<!-- Html markup end-->\n\t\n</docs-demo>\t\n";
+
+/***/ },
+/* 116 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-breadcrumb</span> \n  <span class=\"hljs-attribute\">:list:</span> \"[{<span class=\"hljs-attribute\">text:</span> '<span class=\"hljs-attribute\">Home</span>', <span class=\"hljs-attribute\">link:</span> '#', <span class=\"hljs-attribute\">active:</span> <span class=\"hljs-attribute\">true</span>}, {<span class=\"hljs-attribute\">text:</span> '<span class=\"hljs-attribute\">Library</span>', <span class=\"hljs-attribute\">active:</span> <span class=\"hljs-attribute\">false</span>}]\"&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-breadcrumb</span>&gt;</span>\n";
+
+/***/ },
 /* 117 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t\t<vs-breadcrumb\r\n    \t\t:list=\"list\">\r\n\t\t\t</vs-breadcrumb>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n\t\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 118 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-breadcrumb</span> \r\n  <span class=\"hljs-attribute\">:list:</span> \"[{<span class=\"hljs-attribute\">text:</span> '<span class=\"hljs-attribute\">Home</span>', <span class=\"hljs-attribute\">link:</span> '#', <span class=\"hljs-attribute\">active:</span> <span class=\"hljs-attribute\">true</span>}, {<span class=\"hljs-attribute\">text:</span> '<span class=\"hljs-attribute\">Library</span>', <span class=\"hljs-attribute\">active:</span> <span class=\"hljs-attribute\">false</span>}]\"&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-breadcrumb</span>&gt;</span>\r\n";
-
-/***/ },
-/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -3925,11 +3919,11 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _breadcrumbHtml = __webpack_require__(120);
+	var _breadcrumbHtml = __webpack_require__(118);
 
 	var _breadcrumbHtml2 = _interopRequireDefault(_breadcrumbHtml);
 
-	var _utilsHelpersJs = __webpack_require__(107);
+	var _utilsHelpersJs = __webpack_require__(105);
 
 	// export component object
 	exports['default'] = {
@@ -3949,13 +3943,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 120 */
+/* 118 */
 /***/ function(module, exports) {
 
-	module.exports = "<ol class=\"breadcrumb\">\r\n    <li v-for=\"item in list\" v-bind:class=\"{ active: item.active }\">\r\n        <a href=\"#\" v-on:click.stop.prevent=\"changeLocation($router, item.link)\" v-if=\"item.active\">{{item.text}}</a>\r\n        <span v-if=\"!item.active\">{{item.text}}</span>\r\n    </li>\r\n</ol>";
+	module.exports = "<ol class=\"breadcrumb\">\n    <li v-for=\"item in list\" v-bind:class=\"{ active: item.active }\">\n        <a href=\"#\" v-on:click.stop.prevent=\"changeLocation($router, item.link)\" v-if=\"item.active\">{{item.text}}</a>\n        <span v-if=\"!item.active\">{{item.text}}</span>\n    </li>\n</ol>";
 
 /***/ },
-/* 121 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3966,23 +3960,23 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _buttonGroupJson = __webpack_require__(122);
+	var _buttonGroupJson = __webpack_require__(120);
 
 	var _buttonGroupJson2 = _interopRequireDefault(_buttonGroupJson);
 
-	var _buttonGroupHtml = __webpack_require__(123);
+	var _buttonGroupHtml = __webpack_require__(121);
 
 	var _buttonGroupHtml2 = _interopRequireDefault(_buttonGroupHtml);
 
-	var _snippetHtml = __webpack_require__(124);
+	var _snippetHtml = __webpack_require__(122);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsButtonGroup = __webpack_require__(125);
+	var _srcComponentsButtonGroup = __webpack_require__(123);
 
 	var _srcComponentsButtonGroup2 = _interopRequireDefault(_srcComponentsButtonGroup);
 
-	var _srcComponentsButtons = __webpack_require__(127);
+	var _srcComponentsButtons = __webpack_require__(125);
 
 	var _srcComponentsButtons2 = _interopRequireDefault(_srcComponentsButtons);
 
@@ -4013,7 +4007,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 122 */
+/* 120 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4042,19 +4036,19 @@
 	};
 
 /***/ },
+/* 121 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\n\t<!-- Html controls start-->\n\t<div slot=\"controls\">\n\t\t<label>vertical <input type=\"checkbox\" v-model=\"vertical\"></label>\n\t</div>\n\t<!-- Html controls end-->\n\n\t<!-- Html markup start-->\n\t<div slot=\"markup\">\n\t\t\t<vs-button-group :vertical=\"vertical\">\n\t\t\t  <vs-button>Left</vs-button>\n\t\t\t  <vs-button>Middle</vs-button>\n\t\t\t  <vs-button>Right</vs-button>\n\t\t\t</vs-button-group>\n\t</div>\n\t<!-- Html markup end-->\n</docs-demo>\t\n";
+
+/***/ },
+/* 122 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-button-group</span> <span class=\"hljs-attribute\">vertical</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-button</span>&gt;</span>Left<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-button</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-button</span>&gt;</span>Middle<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-button</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-button</span>&gt;</span>Right<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-button</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-button-group</span>&gt;</span>\n";
+
+/***/ },
 /* 123 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\">\r\n\t\t<label>vertical <input type=\"checkbox\" v-model=\"vertical\"></label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t\t<vs-button-group :vertical=\"vertical\">\r\n\t\t\t  <vs-button>Left</vs-button>\r\n\t\t\t  <vs-button>Middle</vs-button>\r\n\t\t\t  <vs-button>Right</vs-button>\r\n\t\t\t</vs-button-group>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 124 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-button-group</span> <span class=\"hljs-attribute\">vertical</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-button</span>&gt;</span>Left<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-button</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-button</span>&gt;</span>Middle<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-button</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-button</span>&gt;</span>Right<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-button</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-button-group</span>&gt;</span>\r\n";
-
-/***/ },
-/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -4066,7 +4060,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _buttonGroupHtml = __webpack_require__(126);
+	var _buttonGroupHtml = __webpack_require__(124);
 
 	var _buttonGroupHtml2 = _interopRequireDefault(_buttonGroupHtml);
 
@@ -4084,13 +4078,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 126 */
+/* 124 */
 /***/ function(module, exports) {
 
-	module.exports = "<div role=\"group\" aria-label=\"Basic example\" v-bind:class=\"{ 'btn-group': true, 'btn-group-vertical': vertical }\">\r\n\t<slot></slot>\r\n</div>\r\n";
+	module.exports = "<div role=\"group\" aria-label=\"Basic example\" v-bind:class=\"{ 'btn-group': true, 'btn-group-vertical': vertical }\">\n\t<slot></slot>\n</div>\n";
 
 /***/ },
-/* 127 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4101,13 +4095,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _buttonsHtml = __webpack_require__(128);
+	var _buttonsHtml = __webpack_require__(126);
 
 	var _buttonsHtml2 = _interopRequireDefault(_buttonsHtml);
 
-	__webpack_require__(129);
+	__webpack_require__(127);
 
-	var _utilsHelpersJs = __webpack_require__(107);
+	var _utilsHelpersJs = __webpack_require__(105);
 
 	// export component object
 	exports['default'] = {
@@ -4164,19 +4158,19 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 128 */
+/* 126 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}} {{btnDisabled}}\" v-on:click.stop.prevent=\"changeLocation($router, link)\">\r\n\t<slot></slot>\r\n</span>";
+	module.exports = "<span class=\"btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}} {{btnDisabled}}\" v-on:click.stop.prevent=\"changeLocation($router, link)\">\n\t<slot></slot>\n</span>";
 
 /***/ },
-/* 129 */
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(130);
+	var content = __webpack_require__(128);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -4196,7 +4190,7 @@
 	}
 
 /***/ },
-/* 130 */
+/* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -4210,7 +4204,7 @@
 
 
 /***/ },
-/* 131 */
+/* 129 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4221,19 +4215,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _buttonCheckboxJson = __webpack_require__(132);
+	var _buttonCheckboxJson = __webpack_require__(130);
 
 	var _buttonCheckboxJson2 = _interopRequireDefault(_buttonCheckboxJson);
 
-	var _buttonCheckboxHtml = __webpack_require__(133);
+	var _buttonCheckboxHtml = __webpack_require__(131);
 
 	var _buttonCheckboxHtml2 = _interopRequireDefault(_buttonCheckboxHtml);
 
-	var _snippetHtml = __webpack_require__(134);
+	var _snippetHtml = __webpack_require__(132);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsButtonCheckbox = __webpack_require__(135);
+	var _srcComponentsButtonCheckbox = __webpack_require__(133);
 
 	var _srcComponentsButtonCheckbox2 = _interopRequireDefault(_srcComponentsButtonCheckbox);
 
@@ -4241,7 +4235,7 @@
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -4282,7 +4276,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 132 */
+/* 130 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4351,19 +4345,19 @@
 	};
 
 /***/ },
+/* 131 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\n\t<!-- Html controls start-->\n\t<div slot=\"controls\">\n\t\t<label>\n\t\t\tsize \n\t\t\t<select v-model=\"size\">\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<label>\n\t\t\tvariant \n\t\t\t<select v-model=\"variant\">\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t</div>\n\t<!-- Html controls end-->\n\n\t<!-- Html markup start-->\n\t<div slot=\"markup\">\n\t\t<vs-button-checkbox\n\t\t  :list.sync=\"list\"\n\t\t  :model.sync=\"model\"\n\t\t  :size=\"size\"\n\t\t  :variant=\"variant\"\n\t\t  return-object>\n\t\t</vs-button-checkbox>\n\t</div>\n\t<!-- Html markup end-->\n\n</docs-demo>\t\n";
+
+/***/ },
+/* 132 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-button-checkbox</span> \n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\n  <span class=\"hljs-attribute\">:list.sync</span>=<span class=\"hljs-value\">\" [{\n      text: 'First',\n      value: 'first',\n    }, {\n      text: 'Second',\n      value: 'second',\n    }, {\n      text: 'Third',\n      value: 'third',\n    }]\"</span>\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\n  <span class=\"hljs-attribute\">return-object</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-button-checkbox</span>&gt;</span>\n";
+
+/***/ },
 /* 133 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\">\r\n\t\t<label>\r\n\t\t\tsize \r\n\t\t\t<select v-model=\"size\">\r\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>\r\n\t\t\tvariant \r\n\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t<vs-button-checkbox\r\n\t\t  :list.sync=\"list\"\r\n\t\t  :model.sync=\"model\"\r\n\t\t  :size=\"size\"\r\n\t\t  :variant=\"variant\"\r\n\t\t  return-object>\r\n\t\t</vs-button-checkbox>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 134 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-button-checkbox</span> \r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">:list.sync</span>=<span class=\"hljs-value\">\" [{\r\n      text: 'First',\r\n      value: 'first',\r\n    }, {\r\n      text: 'Second',\r\n      value: 'second',\r\n    }, {\r\n      text: 'Third',\r\n      value: 'third',\r\n    }]\"</span>\r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\r\n  <span class=\"hljs-attribute\">return-object</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-button-checkbox</span>&gt;</span>\r\n";
-
-/***/ },
-/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -4375,7 +4369,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _buttonCheckboxHtml = __webpack_require__(136);
+	var _buttonCheckboxHtml = __webpack_require__(134);
 
 	var _buttonCheckboxHtml2 = _interopRequireDefault(_buttonCheckboxHtml);
 
@@ -4474,13 +4468,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 136 */
+/* 134 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n  <label class=\"btn {{btnVariant}} {{btnSize}} {{ checked($index) ? 'active' : '' }}\" v-for=\"item in list\">\r\n  <input \r\n  \ttype=\"checkbox\" \r\n  \tvalue=\"{{item.value}}\" \r\n  \tautocomplete=\"off\" \r\n  \tv-model=\"item.checked\" \r\n  \t:disabled=\"item.disabled\">\r\n  \t{{item.text}}\r\n  </label>\r\n</div>\r\n";
+	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\n  <label class=\"btn {{btnVariant}} {{btnSize}} {{ checked($index) ? 'active' : '' }}\" v-for=\"item in list\">\n  <input \n  \ttype=\"checkbox\" \n  \tvalue=\"{{item.value}}\" \n  \tautocomplete=\"off\" \n  \tv-model=\"item.checked\" \n  \t:disabled=\"item.disabled\">\n  \t{{item.text}}\n  </label>\n</div>\n";
 
 /***/ },
-/* 137 */
+/* 135 */
 /***/ function(module, exports) {
 
 	/**
@@ -4528,7 +4522,7 @@
 	exports.sizes = sizes;
 
 /***/ },
-/* 138 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4539,19 +4533,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _buttonRadioJson = __webpack_require__(139);
+	var _buttonRadioJson = __webpack_require__(137);
 
 	var _buttonRadioJson2 = _interopRequireDefault(_buttonRadioJson);
 
-	var _buttonRadioHtml = __webpack_require__(140);
+	var _buttonRadioHtml = __webpack_require__(138);
 
 	var _buttonRadioHtml2 = _interopRequireDefault(_buttonRadioHtml);
 
-	var _snippetHtml = __webpack_require__(141);
+	var _snippetHtml = __webpack_require__(139);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsButtonRadio = __webpack_require__(142);
+	var _srcComponentsButtonRadio = __webpack_require__(140);
 
 	var _srcComponentsButtonRadio2 = _interopRequireDefault(_srcComponentsButtonRadio);
 
@@ -4559,7 +4553,7 @@
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -4600,7 +4594,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 139 */
+/* 137 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4669,19 +4663,19 @@
 	};
 
 /***/ },
+/* 138 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\n\t<!-- Html controls start-->\n\t<div slot=\"controls\">\n\t\t\t<label>\n\t\t\t\tsize\n\t\t\t\t<select v-model=\"size\">\n\t\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\n\t\t\t\t    {{ option.text }}\n\t\t\t\t  </option>\n\t\t\t\t</select>\n\t\t\t</label>\n\n\t\t\t<label>\n\t\t\t\tvariant\n\t\t\t\t<select v-model=\"variant\">\n\t\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\n\t\t\t\t    {{ option.text }}\n\t\t\t\t  </option>\n\t\t\t\t</select>\n\t\t\t</label>\n\t</div>\n\t<!-- Html controls end-->\n\n\t<!-- Html markup start-->\n\t<div slot=\"markup\">\n\t\t<vs-button-radio\n\t\t\t:model.sync=\"model\"\n\t    :list=\"list\"\n\t    :size=\"size\"\n\t    :variant=\"variant\"\n\t    return-object>\n\t\t</vs-button-radio>\n\t</div>\n\t<!-- Html markup end-->\n\t\n</docs-demo>\t\n";
+
+/***/ },
+/* 139 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-button-radio</span> \n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\n  <span class=\"hljs-attribute\">:list</span>=<span class=\"hljs-value\">\"[{\n      text: 'First',\n      value: 'first',\n    }, {\n      text: 'Second',\n      value: 'second',\n    }, {\n      text: 'Third',\n      value: 'third',\n    }]\"</span>\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\n  <span class=\"hljs-attribute\">return-boject</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-button-radio</span>&gt;</span>\n";
+
+/***/ },
 /* 140 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\">\r\n\t\t\t<label>\r\n\t\t\t\tsize\r\n\t\t\t\t<select v-model=\"size\">\r\n\t\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t\t    {{ option.text }}\r\n\t\t\t\t  </option>\r\n\t\t\t\t</select>\r\n\t\t\t</label>\r\n\r\n\t\t\t<label>\r\n\t\t\t\tvariant\r\n\t\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t\t    {{ option.text }}\r\n\t\t\t\t  </option>\r\n\t\t\t\t</select>\r\n\t\t\t</label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t<vs-button-radio\r\n\t\t\t:model.sync=\"model\"\r\n\t    :list=\"list\"\r\n\t    :size=\"size\"\r\n\t    :variant=\"variant\"\r\n\t    return-object>\r\n\t\t</vs-button-radio>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n\t\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 141 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-button-radio</span> \r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">:list</span>=<span class=\"hljs-value\">\"[{\r\n      text: 'First',\r\n      value: 'first',\r\n    }, {\r\n      text: 'Second',\r\n      value: 'second',\r\n    }, {\r\n      text: 'Third',\r\n      value: 'third',\r\n    }]\"</span>\r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\r\n  <span class=\"hljs-attribute\">return-boject</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-button-radio</span>&gt;</span>\r\n";
-
-/***/ },
-/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -4693,7 +4687,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _buttonRadioHtml = __webpack_require__(143);
+	var _buttonRadioHtml = __webpack_require__(141);
 
 	var _buttonRadioHtml2 = _interopRequireDefault(_buttonRadioHtml);
 
@@ -4768,13 +4762,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 143 */
+/* 141 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n    <label\r\n    \tclass=\"btn {{btnVariant}} {{btnSize}} {{ item.disabled ? 'disabled' : '' }} {{ selection == item.value ? 'active' : '' }}\"\r\n    \tv-for=\"item in list\">\r\n      <input\r\n      \ttype=\"radio\"\r\n      \tname=\"options\"\r\n      \tvalue=\"{{item.value}}\"\r\n      \tautocomplete=\"off\"\r\n      \tv-model=\"selection\"\r\n        :disabled=\"item.disabled\"> {{item.text}}\r\n    </label>\r\n</div>\r\n";
+	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\n    <label\n    \tclass=\"btn {{btnVariant}} {{btnSize}} {{ item.disabled ? 'disabled' : '' }} {{ selection == item.value ? 'active' : '' }}\"\n    \tv-for=\"item in list\">\n      <input\n      \ttype=\"radio\"\n      \tname=\"options\"\n      \tvalue=\"{{item.value}}\"\n      \tautocomplete=\"off\"\n      \tv-model=\"selection\"\n        :disabled=\"item.disabled\"> {{item.text}}\n    </label>\n</div>\n";
 
 /***/ },
-/* 144 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4785,19 +4779,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _buttonsJson = __webpack_require__(145);
+	var _buttonsJson = __webpack_require__(143);
 
 	var _buttonsJson2 = _interopRequireDefault(_buttonsJson);
 
-	var _buttonsHtml = __webpack_require__(146);
+	var _buttonsHtml = __webpack_require__(144);
 
 	var _buttonsHtml2 = _interopRequireDefault(_buttonsHtml);
 
-	var _snippetHtml = __webpack_require__(147);
+	var _snippetHtml = __webpack_require__(145);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsButtons = __webpack_require__(127);
+	var _srcComponentsButtons = __webpack_require__(125);
 
 	var _srcComponentsButtons2 = _interopRequireDefault(_srcComponentsButtons);
 
@@ -4805,7 +4799,7 @@
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -4832,7 +4826,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 145 */
+/* 143 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4916,19 +4910,19 @@
 	};
 
 /***/ },
+/* 144 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\n\t<!-- Html controls start-->\n\t<div slot=\"controls\">\n\t\t<label>\n\t\t\tsize \n\t\t\t<select v-model=\"size\">\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t</div>\n\t<!-- Html controls end-->\n\n\t<!-- Html markup start-->\n\t<div slot=\"markup\">\n\t\t<vs-btn :size=\"size\" variant=\"primary\">Primary</vs-btn>\n\t\t<vs-btn :size=\"size\" variant=\"secondary\">Secondary</vs-btn>\n\t\t<vs-btn :size=\"size\" variant=\"success\">Success</vs-btn>\n\t\t<vs-btn :size=\"size\" variant=\"warning\">Warning</vs-btn>\n\t\t<vs-btn :size=\"size\" variant=\"danger\">Danger</vs-btn>\n\t\t<hr>\n\t\t<vs-btn :size=\"size\" variant=\"primary-outline\">Primary</vs-btn>\n\t\t<vs-btn :size=\"size\" variant=\"secondary-outline\">Secondary</vs-btn>\n\t\t<vs-btn :size=\"size\" variant=\"success-outline\">Success</vs-btn>\n\t\t<vs-btn :size=\"size\" variant=\"warning-outline\">Warning</vs-btn>\n\t\t<vs-btn :size=\"size\" variant=\"danger-outline\">Danger</vs-btn>\n\t\t<hr>\n\t\t<vs-btn :size=\"size\" variant=\"link\" link=\"#\">Button Link</vs-btn>\n\t\t<vs-btn :size=\"size\" variant=\"primary\" disabled>Disabled</vs-btn>\n\t\t<hr>\n\t\t<vs-btn :size=\"size\" variant=\"primary\" block>Block</vs-btn>\n\t</div>\n\t<!-- Html markup end-->\n\n</docs-demo>\t\n";
+
+/***/ },
+/* 145 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-comment\">&lt;!-- colour variants --&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>&gt;</span>Primary<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"secondary\"</span>&gt;</span>Secondary<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"success\"</span>&gt;</span>Success<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"warning\"</span>&gt;</span>Warning<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"danger\"</span>&gt;</span>Danger<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\n\n<span class=\"hljs-comment\">&lt;!-- outlined variants --&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary-outline\"</span>&gt;</span>Primary<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"secondary-outline\"</span>&gt;</span>Secondary<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"success-outline\"</span>&gt;</span>Success<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"warning-outline\"</span>&gt;</span>Warning<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"danger-outline\"</span>&gt;</span>Danger<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\n\n<span class=\"hljs-comment\">&lt;!-- button types --&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"link\"</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Button Link<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span> <span class=\"hljs-attribute\">disabled</span>&gt;</span>Disabled<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span> <span class=\"hljs-attribute\">block</span>&gt;</span>Block<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\n";
+
+/***/ },
 /* 146 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\">\r\n\t\t<label>\r\n\t\t\tsize \r\n\t\t\t<select v-model=\"size\">\r\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t<vs-btn :size=\"size\" variant=\"primary\">Primary</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"secondary\">Secondary</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"success\">Success</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"warning\">Warning</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"danger\">Danger</vs-btn>\r\n\t\t<hr>\r\n\t\t<vs-btn :size=\"size\" variant=\"primary-outline\">Primary</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"secondary-outline\">Secondary</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"success-outline\">Success</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"warning-outline\">Warning</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"danger-outline\">Danger</vs-btn>\r\n\t\t<hr>\r\n\t\t<vs-btn :size=\"size\" variant=\"link\" link=\"#\">Button Link</vs-btn>\r\n\t\t<vs-btn :size=\"size\" variant=\"primary\" disabled>Disabled</vs-btn>\r\n\t\t<hr>\r\n\t\t<vs-btn :size=\"size\" variant=\"primary\" block>Block</vs-btn>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 147 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-comment\">&lt;!-- colour variants --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>&gt;</span>Primary<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"secondary\"</span>&gt;</span>Secondary<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"success\"</span>&gt;</span>Success<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"warning\"</span>&gt;</span>Warning<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"danger\"</span>&gt;</span>Danger<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n\r\n<span class=\"hljs-comment\">&lt;!-- outlined variants --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary-outline\"</span>&gt;</span>Primary<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"secondary-outline\"</span>&gt;</span>Secondary<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"success-outline\"</span>&gt;</span>Success<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"warning-outline\"</span>&gt;</span>Warning<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"danger-outline\"</span>&gt;</span>Danger<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n\r\n<span class=\"hljs-comment\">&lt;!-- button types --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"link\"</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Button Link<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span> <span class=\"hljs-attribute\">disabled</span>&gt;</span>Disabled<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-btn</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span> <span class=\"hljs-attribute\">block</span>&gt;</span>Block<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-btn</span>&gt;</span>\r\n";
-
-/***/ },
-/* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4939,19 +4933,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _cardJson = __webpack_require__(149);
+	var _cardJson = __webpack_require__(147);
 
 	var _cardJson2 = _interopRequireDefault(_cardJson);
 
-	var _cardHtml = __webpack_require__(150);
+	var _cardHtml = __webpack_require__(148);
 
 	var _cardHtml2 = _interopRequireDefault(_cardHtml);
 
-	var _snippetHtml = __webpack_require__(151);
+	var _snippetHtml = __webpack_require__(149);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsCard = __webpack_require__(152);
+	var _srcComponentsCard = __webpack_require__(150);
 
 	var _srcComponentsCard2 = _interopRequireDefault(_srcComponentsCard);
 
@@ -4959,7 +4953,7 @@
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -4988,7 +4982,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 149 */
+/* 147 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5048,19 +5042,19 @@
 	};
 
 /***/ },
+/* 148 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\n\t<!-- Html controls start-->\n\t<div slot=\"controls\">\n\t\t<label>\n\t\t\tvariant\n\t\t\t<select v-model=\"variant\">\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\n\t\t<label>\n\t\t\ttype\n\t\t\t<select v-model=\"type\">\n\t\t\t\t<option v-for=\"option in types\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\n\t\t<label>\n\t\t\talign\n\t\t\t<select v-model=\"align\">\n\t\t\t\t<option v-for=\"option in aligns\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t</div>\n\t<!-- Html controls end-->\n\n\t<!-- Html markup start-->\n\t<div slot=\"markup\">\n\t\t\t<vs-card style=\"max-width: 350px;\" \n\t\t\t\t:variant=\"variant\"\n\t\t\t\t:type=\"type\"\n\t\t\t\t:align=\"align\">\n\t\t\t\t<img class=\"card-img img-fluid\" v-bind:src=\"'assets/card-350x150.png'\" alt=\"Card image cap\">\n\t\t\t  <div class=\"card-block\">\n\t\t\t    <h4 class=\"card-title\">Card title</h4>\n\t\t\t    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n\t\t\t  </div>\n\t\t  </vs-card>\n\t</div>\n\t<!-- Html markup end-->\n\n</docs-demo>\t\n";
+
+/***/ },
+/* 149 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-card</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"default\"</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"default\"</span> <span class=\"hljs-attribute\">align</span>=<span class=\"hljs-value\">\"left\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card-img img-fluid\"</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"https://placehold.it/350x150\"</span> <span class=\"hljs-attribute\">alt</span>=<span class=\"hljs-value\">\"Card image cap\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card-block\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h4</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card-title\"</span>&gt;</span>Card title<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h4</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">p</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card-text\"</span>&gt;</span>Some quick example text to build on the card title and make up the bulk of the card's content.<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">p</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-card</span>&gt;</span>\n";
+
+/***/ },
 /* 150 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\">\r\n\t\t<label>\r\n\t\t\tvariant\r\n\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\r\n\t\t<label>\r\n\t\t\ttype\r\n\t\t\t<select v-model=\"type\">\r\n\t\t\t\t<option v-for=\"option in types\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\r\n\t\t<label>\r\n\t\t\talign\r\n\t\t\t<select v-model=\"align\">\r\n\t\t\t\t<option v-for=\"option in aligns\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t\t<vs-card style=\"max-width: 350px;\" \r\n\t\t\t\t:variant=\"variant\"\r\n\t\t\t\t:type=\"type\"\r\n\t\t\t\t:align=\"align\">\r\n\t\t\t\t<img class=\"card-img img-fluid\" v-bind:src=\"'assets/card-350x150.png'\" alt=\"Card image cap\">\r\n\t\t\t  <div class=\"card-block\">\r\n\t\t\t    <h4 class=\"card-title\">Card title</h4>\r\n\t\t\t    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\r\n\t\t\t  </div>\r\n\t\t  </vs-card>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 151 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-card</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"default\"</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"default\"</span> <span class=\"hljs-attribute\">align</span>=<span class=\"hljs-value\">\"left\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card-img img-fluid\"</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"https://placehold.it/350x150\"</span> <span class=\"hljs-attribute\">alt</span>=<span class=\"hljs-value\">\"Card image cap\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card-block\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h4</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card-title\"</span>&gt;</span>Card title<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h4</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">p</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card-text\"</span>&gt;</span>Some quick example text to build on the card title and make up the bulk of the card's content.<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">p</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-card</span>&gt;</span>\r\n";
-
-/***/ },
-/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -5072,13 +5066,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _cardHtml = __webpack_require__(153);
+	var _cardHtml = __webpack_require__(151);
 
 	var _cardHtml2 = _interopRequireDefault(_cardHtml);
 
 	// import polyfill for IE9
 
-	__webpack_require__(108);
+	__webpack_require__(106);
 
 	// export component object
 	exports['default'] = {
@@ -5124,13 +5118,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 153 */
+/* 151 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"card {{cardVariant}} {{cardAlign}} {{cardInverse}}\">\r\n    <slot></slot>\r\n</div>\r\n";
+	module.exports = "<div class=\"card {{cardVariant}} {{cardAlign}} {{cardInverse}}\">\n    <slot></slot>\n</div>\n";
 
 /***/ },
-/* 154 */
+/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5141,25 +5135,25 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _carouselJson = __webpack_require__(155);
+	var _carouselJson = __webpack_require__(153);
 
 	var _carouselJson2 = _interopRequireDefault(_carouselJson);
 
-	var _carouselHtml = __webpack_require__(156);
+	var _carouselHtml = __webpack_require__(154);
 
 	var _carouselHtml2 = _interopRequireDefault(_carouselHtml);
 
-	var _snippetHtml = __webpack_require__(157);
+	var _snippetHtml = __webpack_require__(155);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsCarousel = __webpack_require__(158);
+	var _srcComponentsCarousel = __webpack_require__(156);
 
 	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(7);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -5185,7 +5179,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 155 */
+/* 153 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5228,19 +5222,19 @@
 	};
 
 /***/ },
+/* 154 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<!-- Html controls start-->\n\t<div slot=\"controls\">\n\t\t<label>controls <input type=\"checkbox\" v-model=\"controls\"></label>\n\t\t<label>indicators <input type=\"checkbox\" v-model=\"indicators\"></label>\n\t</div>\n\t<!-- Html controls end-->\n\t<div slot=\"markup\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<vs-carousel\n\t\t\t\t:interval=\"5000\",\n\t\t\t\t:controls=\"controls\"\n\t\t\t\t:indicators=\"indicators\">\n\t\t\t  <vs-slide>\n\t\t\t    <img v-bind:src=\"'assets/carousel-one.png'\" class=\"img-fluid\">\n\t\t\t  </vs-slide>\n\t\t\t  <vs-slide>\n\t\t\t    <img v-bind:src=\"'assets/carousel-two.png'\" class=\"img-fluid\">\n\t\t\t  </vs-slide>\n\t\t\t  <vs-slide>\n\t\t\t    <img v-bind:src=\"'assets/carousel-three.png'\" class=\"img-fluid\">\n\t\t\t  </vs-slide>\n\t\t\t</vs-carousel>\n\t\t\t<!-- Html markup end-->\n\t</div>\n</docs-demo>\t\n";
+
+/***/ },
+/* 155 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-carousel</span> <span class=\"hljs-attribute\">:interval</span>=<span class=\"hljs-value\">\"5000\"</span> <span class=\"hljs-attribute\">:controls</span>=<span class=\"hljs-value\">\"false\"</span> <span class=\"hljs-attribute\">:indicators</span>=<span class=\"hljs-value\">\"false\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-slide</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/1200x400?text=one\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-slide</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-slide</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/1200x400?text=two\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-slide</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-slide</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/1200x400?text=three\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-slide</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-carousel</span>&gt;</span>\n";
+
+/***/ },
 /* 156 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\">\r\n\t\t<label>controls <input type=\"checkbox\" v-model=\"controls\"></label>\r\n\t\t<label>indicators <input type=\"checkbox\" v-model=\"indicators\"></label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-carousel\r\n\t\t\t\t:interval=\"5000\",\r\n\t\t\t\t:controls=\"controls\"\r\n\t\t\t\t:indicators=\"indicators\">\r\n\t\t\t  <vs-slide>\r\n\t\t\t    <img v-bind:src=\"'assets/carousel-one.png'\" class=\"img-fluid\">\r\n\t\t\t  </vs-slide>\r\n\t\t\t  <vs-slide>\r\n\t\t\t    <img v-bind:src=\"'assets/carousel-two.png'\" class=\"img-fluid\">\r\n\t\t\t  </vs-slide>\r\n\t\t\t  <vs-slide>\r\n\t\t\t    <img v-bind:src=\"'assets/carousel-three.png'\" class=\"img-fluid\">\r\n\t\t\t  </vs-slide>\r\n\t\t\t</vs-carousel>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 157 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-carousel</span> <span class=\"hljs-attribute\">:interval</span>=<span class=\"hljs-value\">\"5000\"</span> <span class=\"hljs-attribute\">:controls</span>=<span class=\"hljs-value\">\"false\"</span> <span class=\"hljs-attribute\">:indicators</span>=<span class=\"hljs-value\">\"false\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-slide</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/1200x400?text=one\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-slide</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-slide</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/1200x400?text=two\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-slide</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-slide</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/1200x400?text=three\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-slide</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-carousel</span>&gt;</span>\r\n";
-
-/***/ },
-/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5269,15 +5263,15 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _carouselHtml = __webpack_require__(159);
+	var _carouselHtml = __webpack_require__(157);
 
 	var _carouselHtml2 = _interopRequireDefault(_carouselHtml);
 
-	var _utilsHelpersJs = __webpack_require__(107);
+	var _utilsHelpersJs = __webpack_require__(105);
 
 	// import polyfill for IE9
 
-	__webpack_require__(108);
+	__webpack_require__(106);
 
 	// this is directly linked to the bootstrap animation timing in _carousel.scss
 	// for browsers that do not support transitions like IE9 just change slide immediately
@@ -5421,13 +5415,13 @@
 	exports.slide = slide;
 
 /***/ },
-/* 159 */
+/* 157 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"carousel slide\" data-ride=\"carousel\" v-on:mouseenter=\"pause()\" v-on:mouseleave=\"start()\">\r\n\r\n    <!-- Indicators -->\r\n    <ol class=\"carousel-indicators\" v-show=\"indicators\">\r\n        <li v-for=\"item in slides\" v-bind:class=\"{'active': item == index}\" v-on:click=\"changeSlide($index)\"></li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\" role=\"listbox\">\r\n        <slot></slot>\r\n    </div>\r\n\r\n    <!-- Controls -->\r\n    <a class=\"left carousel-control\" href=\"#\" role=\"button\" v-on:click.stop.prevent=\"prev\" v-show=\"controls\">\r\n        <span class=\"icon-prev\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#\" role=\"button\" v-on:click.stop.prevent=\"next\" v-show=\"controls\">\r\n        <span class=\"icon-next\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Next</span>\r\n    </a>\r\n\r\n</div>";
+	module.exports = "<div class=\"carousel slide\" data-ride=\"carousel\" v-on:mouseenter=\"pause()\" v-on:mouseleave=\"start()\">\n\n    <!-- Indicators -->\n    <ol class=\"carousel-indicators\" v-show=\"indicators\">\n        <li v-for=\"item in slides\" v-bind:class=\"{'active': item == index}\" v-on:click=\"changeSlide($index)\"></li>\n    </ol>\n\n    <!-- Wrapper for slides -->\n    <div class=\"carousel-inner\" role=\"listbox\">\n        <slot></slot>\n    </div>\n\n    <!-- Controls -->\n    <a class=\"left carousel-control\" href=\"#\" role=\"button\" v-on:click.stop.prevent=\"prev\" v-show=\"controls\">\n        <span class=\"icon-prev\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Previous</span>\n    </a>\n    <a class=\"right carousel-control\" href=\"#\" role=\"button\" v-on:click.stop.prevent=\"next\" v-show=\"controls\">\n        <span class=\"icon-next\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Next</span>\n    </a>\n\n</div>";
 
 /***/ },
-/* 160 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5438,19 +5432,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _collapseJson = __webpack_require__(161);
+	var _collapseJson = __webpack_require__(159);
 
 	var _collapseJson2 = _interopRequireDefault(_collapseJson);
 
-	var _collapseHtml = __webpack_require__(162);
+	var _collapseHtml = __webpack_require__(160);
 
 	var _collapseHtml2 = _interopRequireDefault(_collapseHtml);
 
-	var _snippetHtml = __webpack_require__(163);
+	var _snippetHtml = __webpack_require__(161);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsCollapse = __webpack_require__(105);
+	var _srcComponentsCollapse = __webpack_require__(103);
 
 	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(7);
 
@@ -5478,7 +5472,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 161 */
+/* 159 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5514,19 +5508,19 @@
 	};
 
 /***/ },
+/* 160 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\n\t<!-- Html markup start-->\n\t<div slot=\"markup\">\n\t\t<vs-collapse-toggle target=\"collapse-1\">\n\t\t\t<button class=\"btn btn-default\">Toogle first</button>\n\t\t</vs-collapse-toggle>\n\t\t<vs-collapse-toggle target=\"collapse-2\">\n\t\t\t<button class=\"btn btn-default\">Toogle second</button>\n\t\t</vs-collapse-toggle>\n\t\t<vs-collapse-toggle target-group=\"group-1\">\n\t\t\t<button class=\"btn btn-default\">Toogle all</button>\n\t\t</vs-collapse-toggle>\n\t\t\n\t\t<div class=\"m-b\"></div>\n\n\t\t<vs-collapse id=\"collapse-1\" group=\"group-1\">\n\t\t\t<div class=\"card card-block\">\n\t\t\t\t<h5>First</h5>\n\t\t    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\n\t\t  </div>\n\t\t</vs-collapse>\n\t\t<vs-collapse id=\"collapse-2\" group=\"group-1\">\n\t\t\t<div class=\"card card-block\">\n\t\t\t\t<h5>Second</h5>\n\t\t    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\n\t\t  </div>\n\t\t</vs-collapse>\n\t</div>\n\t<!-- Html markup end-->\n\n</docs-demo>\t\n";
+
+/***/ },
+/* 161 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-comment\">&lt;!-- triggers --&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">target</span>=<span class=\"hljs-value\">\"collapse-1\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-default\"</span>&gt;</span>Toogle first<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">target</span>=<span class=\"hljs-value\">\"collapse-2\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-default\"</span>&gt;</span>Toogle second<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">target-group</span>=<span class=\"hljs-value\">\"group-1\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-default\"</span>&gt;</span>Toogle all<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\n\n<span class=\"hljs-comment\">&lt;!-- item 1 --&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"collapse-1\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"group-1\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card card-block\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h5</span>&gt;</span>First<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h5</span>&gt;</span>\n    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse</span>&gt;</span>\n\n<span class=\"hljs-comment\">&lt;!-- item 2 --&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"collapse-2\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"group-1\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card card-block\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h5</span>&gt;</span>Second<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h5</span>&gt;</span>\n    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse</span>&gt;</span>\n";
+
+/***/ },
 /* 162 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t<vs-collapse-toggle target=\"collapse-1\">\r\n\t\t\t<button class=\"btn btn-default\">Toogle first</button>\r\n\t\t</vs-collapse-toggle>\r\n\t\t<vs-collapse-toggle target=\"collapse-2\">\r\n\t\t\t<button class=\"btn btn-default\">Toogle second</button>\r\n\t\t</vs-collapse-toggle>\r\n\t\t<vs-collapse-toggle target-group=\"group-1\">\r\n\t\t\t<button class=\"btn btn-default\">Toogle all</button>\r\n\t\t</vs-collapse-toggle>\r\n\t\t\r\n\t\t<div class=\"m-b\"></div>\r\n\r\n\t\t<vs-collapse id=\"collapse-1\" group=\"group-1\">\r\n\t\t\t<div class=\"card card-block\">\r\n\t\t\t\t<h5>First</h5>\r\n\t\t    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n\t\t  </div>\r\n\t\t</vs-collapse>\r\n\t\t<vs-collapse id=\"collapse-2\" group=\"group-1\">\r\n\t\t\t<div class=\"card card-block\">\r\n\t\t\t\t<h5>Second</h5>\r\n\t\t    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n\t\t  </div>\r\n\t\t</vs-collapse>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 163 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-comment\">&lt;!-- triggers --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">target</span>=<span class=\"hljs-value\">\"collapse-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-default\"</span>&gt;</span>Toogle first<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">target</span>=<span class=\"hljs-value\">\"collapse-2\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-default\"</span>&gt;</span>Toogle second<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse-toggle</span> <span class=\"hljs-attribute\">target-group</span>=<span class=\"hljs-value\">\"group-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-default\"</span>&gt;</span>Toogle all<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse-toggle</span>&gt;</span>\r\n\r\n<span class=\"hljs-comment\">&lt;!-- item 1 --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"collapse-1\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"group-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card card-block\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h5</span>&gt;</span>First<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h5</span>&gt;</span>\r\n    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse</span>&gt;</span>\r\n\r\n<span class=\"hljs-comment\">&lt;!-- item 2 --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-collapse</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"collapse-2\"</span> <span class=\"hljs-attribute\">group</span>=<span class=\"hljs-value\">\"group-1\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"card card-block\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h5</span>&gt;</span>Second<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h5</span>&gt;</span>\r\n    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-collapse</span>&gt;</span>\r\n";
-
-/***/ },
-/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5537,19 +5531,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _dropdownJson = __webpack_require__(165);
+	var _dropdownJson = __webpack_require__(163);
 
 	var _dropdownJson2 = _interopRequireDefault(_dropdownJson);
 
-	var _dropdownHtml = __webpack_require__(166);
+	var _dropdownHtml = __webpack_require__(164);
 
 	var _dropdownHtml2 = _interopRequireDefault(_dropdownHtml);
 
-	var _snippetHtml = __webpack_require__(167);
+	var _snippetHtml = __webpack_require__(165);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsDropdown = __webpack_require__(168);
+	var _srcComponentsDropdown = __webpack_require__(166);
 
 	var _srcComponentsDropdown2 = _interopRequireDefault(_srcComponentsDropdown);
 
@@ -5557,7 +5551,7 @@
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -5587,7 +5581,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 165 */
+/* 163 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5668,19 +5662,19 @@
 	};
 
 /***/ },
+/* 164 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"controls\">\n\t\t<!-- Html controls start-->\n\t\t<label>arrow <input type=\"checkbox\" v-model=\"arrow\"></label>\n\t\t<label>caret <input type=\"checkbox\" v-model=\"caret\"></label>\n\t\t<label>dropup <input type=\"checkbox\" v-model=\"dropup\"></label>\n\t\t<label>\n\t\t\tsize \n\t\t\t<select v-model=\"size\">\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<label>\n\t\t\tvariant \n\t\t\t<select v-model=\"variant\">\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t</div>\n\t\t<!-- Html controls end-->\n\t</div>\n\t<div slot=\"markup\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<vs-dropdown\n\t\t\t  :text=\"'Action'\"\n\t\t\t  :variant=\"variant\"\n\t\t\t  :size=\"size\"\n\t\t\t  :caret=\"caret\"\n\t\t\t  :arrow=\"arrow\"\n\t\t\t  :dropup=\"dropup\">\n\t\t\t  <ul class=\"dropdown-menu dropdown-menu-left\">\n\t\t\t      <li><a class=\"dropdown-item\" href=\"#\" v-on:click.prevent=\"\">Completed</a></li>\n\t\t\t      <li><a class=\"dropdown-item\" href=\"#\" v-on:click.prevent=\"\">Pending</a></li>\n\t\t\t  </ul>\n\t\t\t</vs-dropdown>\n\t\t\t<!-- Html markup end-->\n\t</div>\n</docs-demo>\t\n";
+
+/***/ },
+/* 165 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-dropdown</span> \n  <span class=\"hljs-attribute\">text</span>=<span class=\"hljs-value\">\"Action\"</span>\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\n  <span class=\"hljs-attribute\">:arrow</span>=<span class=\"hljs-value\">\"arrow\"</span>\n  <span class=\"hljs-attribute\">:caret</span>=<span class=\"hljs-value\">\"false\"</span>\n  <span class=\"hljs-attribute\">dropup</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">ul</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"dropdown-menu dropdown-menu-left\"</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"dropdown-item\"</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Completed<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"dropdown-item\"</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Pending<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">ul</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-dropdown</span>&gt;</span>\n";
+
+/***/ },
 /* 166 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>arrow <input type=\"checkbox\" v-model=\"arrow\"></label>\r\n\t\t<label>caret <input type=\"checkbox\" v-model=\"caret\"></label>\r\n\t\t<label>dropup <input type=\"checkbox\" v-model=\"dropup\"></label>\r\n\t\t<label>\r\n\t\t\tsize \r\n\t\t\t<select v-model=\"size\">\r\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>\r\n\t\t\tvariant \r\n\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t</div>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-dropdown\r\n\t\t\t  :text=\"'Action'\"\r\n\t\t\t  :variant=\"variant\"\r\n\t\t\t  :size=\"size\"\r\n\t\t\t  :caret=\"caret\"\r\n\t\t\t  :arrow=\"arrow\"\r\n\t\t\t  :dropup=\"dropup\">\r\n\t\t\t  <ul class=\"dropdown-menu dropdown-menu-left\">\r\n\t\t\t      <li><a class=\"dropdown-item\" href=\"#\" v-on:click.prevent=\"\">Completed</a></li>\r\n\t\t\t      <li><a class=\"dropdown-item\" href=\"#\" v-on:click.prevent=\"\">Pending</a></li>\r\n\t\t\t  </ul>\r\n\t\t\t</vs-dropdown>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 167 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-dropdown</span> \r\n  <span class=\"hljs-attribute\">text</span>=<span class=\"hljs-value\">\"Action\"</span>\r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\r\n  <span class=\"hljs-attribute\">:arrow</span>=<span class=\"hljs-value\">\"arrow\"</span>\r\n  <span class=\"hljs-attribute\">:caret</span>=<span class=\"hljs-value\">\"false\"</span>\r\n  <span class=\"hljs-attribute\">dropup</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">ul</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"dropdown-menu dropdown-menu-left\"</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"dropdown-item\"</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Completed<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"dropdown-item\"</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Pending<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">ul</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-dropdown</span>&gt;</span>\r\n";
-
-/***/ },
-/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -5692,11 +5686,11 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _dropdownHtml = __webpack_require__(169);
+	var _dropdownHtml = __webpack_require__(167);
 
 	var _dropdownHtml2 = _interopRequireDefault(_dropdownHtml);
 
-	__webpack_require__(170);
+	__webpack_require__(168);
 
 	// export component object
 	exports['default'] = {
@@ -5770,19 +5764,19 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 169 */
+/* 167 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-bind:class=\"{ open: show, dropdown: !dropup, dropup: dropup, 'dropdown-arrow': arrow}\" v-on:click=\"toggle($event)\">\r\n    <span class=\"btn-action\">\r\n        <button\r\n            id=\"dLabel\"\r\n            class=\"btn {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"{{show}}\"\r\n            :disabled=\"disabled\"\r\n            v-if=\"text\">\r\n            <span v-html=\"text\"></span>\r\n            <span class=\"caret\"></span>\r\n        </button>\r\n        <slot name=\"button\" v-if=\"!text\"></slot>\r\n    </span role=\"button\">\r\n    <slot></slot>\r\n</div>\r\n";
+	module.exports = "<div v-bind:class=\"{ open: show, dropdown: !dropup, dropup: dropup, 'dropdown-arrow': arrow}\" v-on:click=\"toggle($event)\">\n    <span class=\"btn-action\">\n        <button\n            id=\"dLabel\"\n            class=\"btn {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\n            aria-haspopup=\"true\"\n            aria-expanded=\"{{show}}\"\n            :disabled=\"disabled\"\n            v-if=\"text\">\n            <span v-html=\"text\"></span>\n            <span class=\"caret\"></span>\n        </button>\n        <slot name=\"button\" v-if=\"!text\"></slot>\n    </span role=\"button\">\n    <slot></slot>\n</div>\n";
 
 /***/ },
-/* 170 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(171);
+	var content = __webpack_require__(169);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -5802,7 +5796,7 @@
 	}
 
 /***/ },
-/* 171 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -5816,7 +5810,7 @@
 
 
 /***/ },
-/* 172 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5827,19 +5821,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _dropdownSelectJson = __webpack_require__(173);
+	var _dropdownSelectJson = __webpack_require__(171);
 
 	var _dropdownSelectJson2 = _interopRequireDefault(_dropdownSelectJson);
 
-	var _dropdownSelectHtml = __webpack_require__(174);
+	var _dropdownSelectHtml = __webpack_require__(172);
 
 	var _dropdownSelectHtml2 = _interopRequireDefault(_dropdownSelectHtml);
 
-	var _snippetHtml = __webpack_require__(175);
+	var _snippetHtml = __webpack_require__(173);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsDropdownSelect = __webpack_require__(176);
+	var _srcComponentsDropdownSelect = __webpack_require__(174);
 
 	var _srcComponentsDropdownSelect2 = _interopRequireDefault(_srcComponentsDropdownSelect);
 
@@ -5847,7 +5841,7 @@
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -5893,7 +5887,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 173 */
+/* 171 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -6000,19 +5994,19 @@
 	};
 
 /***/ },
+/* 172 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"controls\">\n\t\t<!-- Html controls start-->\n\t\t<label>caret <input type=\"checkbox\" v-model=\"caret\"></label>\n\t\t<label>dropup <input type=\"checkbox\" v-model=\"dropup\"></label>\n\t\t<label>force default <input type=\"checkbox\" v-model=\"forceDefault\"></label>\n\t\t<label>\n\t\t\tsize \n\t\t\t<select v-model=\"size\">\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<label>\n\t\t\tvariant \n\t\t\t<select v-model=\"variant\">\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<label>\n\t\t\tposition \n\t\t\t<select v-model=\"position\">\n\t\t\t\t<option v-for=\"option in positions\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<!-- Html controls end-->\n\t</div>\n\t<div slot=\"markup\" class=\"clearfix\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<div class=\"div\" v-bind:class=\"{'pull-xs-right': position == 'right'}\">\n\t\t\t\t<vs-dropdown-select\n\t\t\t    :list=\"list\"\n\t\t\t    :model.sync=\"model\"\n\t\t\t    :position=\"position\"\n\t\t\t    :size=\"size\"\n\t\t\t    :variant=\"variant\"\n\t\t\t    default-text=\"Action\"\n\t\t\t    :force-default=\"forceDefault\"\n\t\t\t    :arrow=\"arrow\"\n\t\t\t    :caret=\"caret\"\n\t\t\t    :dropup=\"dropup\"\n\t\t\t    return-object>\n\t\t\t\t</vs-dropdown-select>\n\t\t\t</div>\n\t\t\t<!-- Html markup end-->\n\t</div>\n</docs-demo>\t\n";
+
+/***/ },
+/* 173 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-dropdown-select</span> \n  <span class=\"hljs-attribute\">:list</span>=<span class=\"hljs-value\">\"[\n    {\n      text: 'First',\n      value: 'first',\n    }, {\n      text: 'Second',\n      value: 'second',\n    }, {\n      text: 'Third',\n      value: 'third',\n    }]\"</span>\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\n  <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"left\"</span>\n  <span class=\"hljs-attribute\">default-text</span>=<span class=\"hljs-value\">\"Action\"</span>\n  <span class=\"hljs-attribute\">:force-default</span>=<span class=\"hljs-value\">\"false\"</span>\n  <span class=\"hljs-attribute\">:caret</span>=<span class=\"hljs-value\">\"false\"</span>\n  <span class=\"hljs-attribute\">dropup</span>\n  <span class=\"hljs-attribute\">return-object</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-dropdown-select</span>&gt;</span>\n";
+
+/***/ },
 /* 174 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>caret <input type=\"checkbox\" v-model=\"caret\"></label>\r\n\t\t<label>dropup <input type=\"checkbox\" v-model=\"dropup\"></label>\r\n\t\t<label>force default <input type=\"checkbox\" v-model=\"forceDefault\"></label>\r\n\t\t<label>\r\n\t\t\tsize \r\n\t\t\t<select v-model=\"size\">\r\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>\r\n\t\t\tvariant \r\n\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>\r\n\t\t\tposition \r\n\t\t\t<select v-model=\"position\">\r\n\t\t\t\t<option v-for=\"option in positions\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\" class=\"clearfix\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<div class=\"div\" v-bind:class=\"{'pull-xs-right': position == 'right'}\">\r\n\t\t\t\t<vs-dropdown-select\r\n\t\t\t    :list=\"list\"\r\n\t\t\t    :model.sync=\"model\"\r\n\t\t\t    :position=\"position\"\r\n\t\t\t    :size=\"size\"\r\n\t\t\t    :variant=\"variant\"\r\n\t\t\t    default-text=\"Action\"\r\n\t\t\t    :force-default=\"forceDefault\"\r\n\t\t\t    :arrow=\"arrow\"\r\n\t\t\t    :caret=\"caret\"\r\n\t\t\t    :dropup=\"dropup\"\r\n\t\t\t    return-object>\r\n\t\t\t\t</vs-dropdown-select>\r\n\t\t\t</div>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 175 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-dropdown-select</span> \r\n  <span class=\"hljs-attribute\">:list</span>=<span class=\"hljs-value\">\"[\r\n    {\r\n      text: 'First',\r\n      value: 'first',\r\n    }, {\r\n      text: 'Second',\r\n      value: 'second',\r\n    }, {\r\n      text: 'Third',\r\n      value: 'third',\r\n    }]\"</span>\r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\r\n  <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"left\"</span>\r\n  <span class=\"hljs-attribute\">default-text</span>=<span class=\"hljs-value\">\"Action\"</span>\r\n  <span class=\"hljs-attribute\">:force-default</span>=<span class=\"hljs-value\">\"false\"</span>\r\n  <span class=\"hljs-attribute\">:caret</span>=<span class=\"hljs-value\">\"false\"</span>\r\n  <span class=\"hljs-attribute\">dropup</span>\r\n  <span class=\"hljs-attribute\">return-object</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-dropdown-select</span>&gt;</span>\r\n";
-
-/***/ },
-/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -6024,11 +6018,11 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _dropdownSelectHtml = __webpack_require__(177);
+	var _dropdownSelectHtml = __webpack_require__(175);
 
 	var _dropdownSelectHtml2 = _interopRequireDefault(_dropdownSelectHtml);
 
-	__webpack_require__(170);
+	__webpack_require__(168);
 
 	// export component object
 	exports['default'] = {
@@ -6160,13 +6154,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 177 */
+/* 175 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"dropdown-select\" v-bind:class=\"{open: show, dropdown: !dropup, dropup: dropup}\">\r\n    <button\r\n        id=\"{{id}}\"\r\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\r\n        role=\"button\"\r\n        aria-haspopup=\"true\"\r\n        aria-expanded=\"show\"\r\n        v-on:click.prevent=\"toggle($event)\"\r\n        :disabled=\"disabled\">\r\n        <span class=\"checked-items\" v-html=\"displayItem\"></span>\r\n    </button>\r\n    <ul class=\"dropdown-menu\" v-bind:class=\"{'dropdown-menu-right' : position == 'right'}\" aria-labelledby=\"dLabel\">\r\n        <li v-for=\"item in list\">\r\n            <button class=\"dropdown-item\" v-on:click.stop.prevent=\"select(item)\">{{item.text}}</button>\r\n        </li>\r\n    </ul>\r\n</div>\r\n";
+	module.exports = "<div class=\"dropdown-select\" v-bind:class=\"{open: show, dropdown: !dropup, dropup: dropup}\">\n    <button\n        id=\"{{id}}\"\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\n        role=\"button\"\n        aria-haspopup=\"true\"\n        aria-expanded=\"show\"\n        v-on:click.prevent=\"toggle($event)\"\n        :disabled=\"disabled\">\n        <span class=\"checked-items\" v-html=\"displayItem\"></span>\n    </button>\n    <ul class=\"dropdown-menu\" v-bind:class=\"{'dropdown-menu-right' : position == 'right'}\" aria-labelledby=\"dLabel\">\n        <li v-for=\"item in list\">\n            <button class=\"dropdown-item\" v-on:click.stop.prevent=\"select(item)\">{{item.text}}</button>\n        </li>\n    </ul>\n</div>\n";
 
 /***/ },
-/* 178 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6177,19 +6171,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _formCheckboxJson = __webpack_require__(179);
+	var _formCheckboxJson = __webpack_require__(177);
 
 	var _formCheckboxJson2 = _interopRequireDefault(_formCheckboxJson);
 
-	var _formCheckboxHtml = __webpack_require__(180);
+	var _formCheckboxHtml = __webpack_require__(178);
 
 	var _formCheckboxHtml2 = _interopRequireDefault(_formCheckboxHtml);
 
-	var _snippetHtml = __webpack_require__(181);
+	var _snippetHtml = __webpack_require__(179);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsFormCheckbox = __webpack_require__(182);
+	var _srcComponentsFormCheckbox = __webpack_require__(180);
 
 	var _srcComponentsFormCheckbox2 = _interopRequireDefault(_srcComponentsFormCheckbox);
 
@@ -6197,7 +6191,7 @@
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -6242,7 +6236,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 179 */
+/* 177 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -6311,19 +6305,19 @@
 	};
 
 /***/ },
+/* 178 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"controls\">\n\t\t<!-- Html controls start-->\n\t\t<label>vertical <input type=\"checkbox\" v-model=\"vertical\"></label>\n\t\t<label>custom <input type=\"checkbox\" v-model=\"custom\"></label>\n\t\t<label>state\n\t\t\t<select v-model=\"state\">\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<!-- Html controls end-->\n\t</div>\n\t<div slot=\"markup\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<vs-form-checkbox\n\t\t    :list.sync=\"list\"\n\t\t    :model.sync=\"model\"\n\t\t    :custom=\"custom\"\n\t\t    :vertical=\"vertical\"\n\t\t    :state=\"state\"\n\t\t    return-object>\n\t\t\t</vs-form-checkbox>\n\t\t\t<!-- Html markup end-->\n\t</div>\n</docs-demo>\t\n";
+
+/***/ },
+/* 179 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-form-checkbox</span> \n  <span class=\"hljs-attribute\">:list.sync</span>=<span class=\"hljs-value\">\"[{\n    text: 'First',\n    value: 'first',\n  }, {\n    text: 'Second',\n    value: 'second',\n  }, {\n    text: 'Third',\n    value: 'third',\n    disabled: true\n  }]\"</span>\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"'default'\"</span>\n  <span class=\"hljs-attribute\">:custom</span>=<span class=\"hljs-value\">\"false\"</span>\n  <span class=\"hljs-attribute\">vertical</span>\n  <span class=\"hljs-attribute\">return-object</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-form-checkbox</span>&gt;</span>\n";
+
+/***/ },
 /* 180 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>vertical <input type=\"checkbox\" v-model=\"vertical\"></label>\r\n\t\t<label>custom <input type=\"checkbox\" v-model=\"custom\"></label>\r\n\t\t<label>state\r\n\t\t\t<select v-model=\"state\">\r\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-form-checkbox\r\n\t\t    :list.sync=\"list\"\r\n\t\t    :model.sync=\"model\"\r\n\t\t    :custom=\"custom\"\r\n\t\t    :vertical=\"vertical\"\r\n\t\t    :state=\"state\"\r\n\t\t    return-object>\r\n\t\t\t</vs-form-checkbox>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 181 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-form-checkbox</span> \r\n  <span class=\"hljs-attribute\">:list.sync</span>=<span class=\"hljs-value\">\"[{\r\n    text: 'First',\r\n    value: 'first',\r\n  }, {\r\n    text: 'Second',\r\n    value: 'second',\r\n  }, {\r\n    text: 'Third',\r\n    value: 'third',\r\n    disabled: true\r\n  }]\"</span>\r\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"'default'\"</span>\r\n  <span class=\"hljs-attribute\">:custom</span>=<span class=\"hljs-value\">\"false\"</span>\r\n  <span class=\"hljs-attribute\">vertical</span>\r\n  <span class=\"hljs-attribute\">return-object</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-form-checkbox</span>&gt;</span>\r\n";
-
-/***/ },
-/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -6335,9 +6329,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(183);
+	__webpack_require__(181);
 
-	var _formCheckboxHtml = __webpack_require__(186);
+	var _formCheckboxHtml = __webpack_require__(184);
 
 	var _formCheckboxHtml2 = _interopRequireDefault(_formCheckboxHtml);
 
@@ -6422,22 +6416,22 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 183 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(184);
+	__webpack_require__(182);
 
 /***/ },
-/* 184 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(185);
+	var content = __webpack_require__(183);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -6457,7 +6451,7 @@
 	}
 
 /***/ },
-/* 185 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -6471,13 +6465,13 @@
 
 
 /***/ },
-/* 186 */
+/* 184 */
 /***/ function(module, exports) {
 
-	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n\t<div class=\"checkbox\" v-for=\"item in list\" v-bind:class=\"{ 'checkbox-inline': !vertical, disabled: item.disabled }\">\r\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-checkbox': custom }\">\r\n\t\t\t<input \r\n\t\t\t\tid=\"{{item.id}}\" \r\n\t\t\t\ttype=\"checkbox\" \r\n\t\t\t\tvalue=\"{{item.value}}\" \r\n\t\t\t\tautocomplete=\"off\" \r\n\t\t\t\tv-model=\"item.checked\" \r\n\t\t\t\tv-bind:disabled=\"item.disabled\">\r\n\t\t\t\t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.text}}\r\n\t\t</label>\r\n\t</div>\r\n</fieldset>\r\n";
+	module.exports = "<fieldset class=\"form-group {{inputState}}\">\n\t<div class=\"checkbox\" v-for=\"item in list\" v-bind:class=\"{ 'checkbox-inline': !vertical, disabled: item.disabled }\">\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-checkbox': custom }\">\n\t\t\t<input \n\t\t\t\tid=\"{{item.id}}\" \n\t\t\t\ttype=\"checkbox\" \n\t\t\t\tvalue=\"{{item.value}}\" \n\t\t\t\tautocomplete=\"off\" \n\t\t\t\tv-model=\"item.checked\" \n\t\t\t\tv-bind:disabled=\"item.disabled\">\n\t\t\t\t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.text}}\n\t\t</label>\n\t</div>\n</fieldset>\n";
 
 /***/ },
-/* 187 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6488,19 +6482,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _formRadioJson = __webpack_require__(188);
+	var _formRadioJson = __webpack_require__(186);
 
 	var _formRadioJson2 = _interopRequireDefault(_formRadioJson);
 
-	var _formRadioHtml = __webpack_require__(189);
+	var _formRadioHtml = __webpack_require__(187);
 
 	var _formRadioHtml2 = _interopRequireDefault(_formRadioHtml);
 
-	var _snippetHtml = __webpack_require__(190);
+	var _snippetHtml = __webpack_require__(188);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsFormRadio = __webpack_require__(191);
+	var _srcComponentsFormRadio = __webpack_require__(189);
 
 	var _srcComponentsFormRadio2 = _interopRequireDefault(_srcComponentsFormRadio);
 
@@ -6508,7 +6502,7 @@
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -6550,7 +6544,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 188 */
+/* 186 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -6625,19 +6619,19 @@
 	};
 
 /***/ },
+/* 187 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"controls\">\n\t\t<!-- Html controls start-->\n\t\t<label>vertical <input type=\"checkbox\" v-model=\"vertical\"></label>\n\t\t<label>custom <input type=\"checkbox\" v-model=\"custom\"></label>\n\t\t<label>state\n\t\t\t<select v-model=\"state\">\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<!-- Html controls end-->\n\t</div>\n\t<div slot=\"markup\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<vs-form-radio\n\t\t    :model.sync=\"model\"\n\t\t    :list=\"list\"\n\t\t    :custom=\"custom\"\n\t\t    :vertical=\"vertical\"\n\t\t    :state=\"state\"\n\t\t    return-object>\n\t\t\t</vs-form-radio>\n\t\t\t<!-- Html markup end-->\n\t</div>\n</docs-demo>\t\n";
+
+/***/ },
+/* 188 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-form-radio</span> \n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\n  <span class=\"hljs-attribute\">:list</span>=<span class=\"hljs-value\">\"[\n    {\n      name: 'First',\n      value: 'first',\n    }, {\n      name: 'Second',\n      value: 'second',\n    }, {\n      name: 'Third (disabled)',\n      value: 'third',\n      disabled: true,\n    }]\"</span>\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"'success'\"</span>\n  <span class=\"hljs-attribute\">:custom</span>=<span class=\"hljs-value\">\"false\"</span>\n  <span class=\"hljs-attribute\">vertical</span>\n  <span class=\"hljs-attribute\">return-object</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-form-radio</span>&gt;</span>\n";
+
+/***/ },
 /* 189 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>vertical <input type=\"checkbox\" v-model=\"vertical\"></label>\r\n\t\t<label>custom <input type=\"checkbox\" v-model=\"custom\"></label>\r\n\t\t<label>state\r\n\t\t\t<select v-model=\"state\">\r\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-form-radio\r\n\t\t    :model.sync=\"model\"\r\n\t\t    :list=\"list\"\r\n\t\t    :custom=\"custom\"\r\n\t\t    :vertical=\"vertical\"\r\n\t\t    :state=\"state\"\r\n\t\t    return-object>\r\n\t\t\t</vs-form-radio>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 190 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-form-radio</span> \r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">:list</span>=<span class=\"hljs-value\">\"[\r\n    {\r\n      name: 'First',\r\n      value: 'first',\r\n    }, {\r\n      name: 'Second',\r\n      value: 'second',\r\n    }, {\r\n      name: 'Third (disabled)',\r\n      value: 'third',\r\n      disabled: true,\r\n    }]\"</span>\r\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"'success'\"</span>\r\n  <span class=\"hljs-attribute\">:custom</span>=<span class=\"hljs-value\">\"false\"</span>\r\n  <span class=\"hljs-attribute\">vertical</span>\r\n  <span class=\"hljs-attribute\">return-object</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-form-radio</span>&gt;</span>\r\n";
-
-/***/ },
-/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -6649,9 +6643,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(183);
+	__webpack_require__(181);
 
-	var _formRadioHtml = __webpack_require__(192);
+	var _formRadioHtml = __webpack_require__(190);
 
 	var _formRadioHtml2 = _interopRequireDefault(_formRadioHtml);
 
@@ -6729,13 +6723,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 192 */
+/* 190 */
 /***/ function(module, exports) {
 
-	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n\t<div class=\"radio\" v-for=\"item in list\" v-bind:class=\"{ 'radio-inline': !vertical, disabled: item.disabled }\">\r\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-radio': custom }\">\r\n\t\t\t<input \r\n\t\t\t\tid=\"{{item.id}}\" \r\n\t\t\t\ttype=\"radio\" \r\n\t\t\t\tname=\"{{name}}\"\r\n\t\t\t\tvalue=\"{{item.value}}\" \r\n\t\t\t\tautocomplete=\"off\" \r\n\t\t\t\tv-model=\"selection\" \r\n\t\t\t\tdisabled=\"{{item.disabled}}\">\r\n\t\t \t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.name}}\r\n\t\t</label>\r\n\t</div>\r\n</fieldset>\r\n";
+	module.exports = "<fieldset class=\"form-group {{inputState}}\">\n\t<div class=\"radio\" v-for=\"item in list\" v-bind:class=\"{ 'radio-inline': !vertical, disabled: item.disabled }\">\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-radio': custom }\">\n\t\t\t<input \n\t\t\t\tid=\"{{item.id}}\" \n\t\t\t\ttype=\"radio\" \n\t\t\t\tname=\"{{name}}\"\n\t\t\t\tvalue=\"{{item.value}}\" \n\t\t\t\tautocomplete=\"off\" \n\t\t\t\tv-model=\"selection\" \n\t\t\t\tdisabled=\"{{item.disabled}}\">\n\t\t \t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.name}}\n\t\t</label>\n\t</div>\n</fieldset>\n";
 
 /***/ },
-/* 193 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6746,19 +6740,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _formInputJson = __webpack_require__(194);
+	var _formInputJson = __webpack_require__(192);
 
 	var _formInputJson2 = _interopRequireDefault(_formInputJson);
 
-	var _formInputHtml = __webpack_require__(195);
+	var _formInputHtml = __webpack_require__(193);
 
 	var _formInputHtml2 = _interopRequireDefault(_formInputHtml);
 
-	var _snippetHtml = __webpack_require__(196);
+	var _snippetHtml = __webpack_require__(194);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsFormInput = __webpack_require__(197);
+	var _srcComponentsFormInput = __webpack_require__(195);
 
 	var _srcComponentsFormInput2 = _interopRequireDefault(_srcComponentsFormInput);
 
@@ -6766,7 +6760,7 @@
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -6797,7 +6791,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 194 */
+/* 192 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -6906,19 +6900,19 @@
 	};
 
 /***/ },
+/* 193 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"controls\">\n\t\t<!-- Html controls start-->\n\t\t<label>state icon <input type=\"checkbox\" v-model=\"stateIcon\"></label>\n\t\t<label>size\n\t\t\t<select v-model=\"size\">\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<label>state\n\t\t\t<select v-model=\"state\">\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<!-- Html controls end-->\n\t</div>\n\t<div slot=\"markup\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<vs-form-input\n\t\t    :model.sync=\"model\"\n\t\t    type=\"text\"\n\t\t    label=\"Example Label\"\n\t\t    placeholder=\"Placeholder\"\n\t\t    description=\"We'll never share your email with anyone else.\"\n\t\t    :size=\"size\"\n\t\t    :state-icon=\"stateIcon\"\n\t\t    :state=\"state\">\n\t\t\t</vs-form-input>\n\t\t\t<!-- Html markup end-->\n\t</div>\n</docs-demo>\t\n";
+
+/***/ },
+/* 194 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-form-input</span> \n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\n  <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"text\"</span>\n  <span class=\"hljs-attribute\">label</span>=<span class=\"hljs-value\">\"Example Label\"</span>\n  <span class=\"hljs-attribute\">placeholder</span>=<span class=\"hljs-value\">\"Placeholder\"</span>\n  <span class=\"hljs-attribute\">description</span>=<span class=\"hljs-value\">\"We'll never share your email with anyone else.\"</span>\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"'success'\"</span>\n  <span class=\"hljs-attribute\">state-icon</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-form-input</span>&gt;</span>\n";
+
+/***/ },
 /* 195 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>state icon <input type=\"checkbox\" v-model=\"stateIcon\"></label>\r\n\t\t<label>size\r\n\t\t\t<select v-model=\"size\">\r\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>state\r\n\t\t\t<select v-model=\"state\">\r\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-form-input\r\n\t\t    :model.sync=\"model\"\r\n\t\t    type=\"text\"\r\n\t\t    label=\"Example Label\"\r\n\t\t    placeholder=\"Placeholder\"\r\n\t\t    description=\"We'll never share your email with anyone else.\"\r\n\t\t    :size=\"size\"\r\n\t\t    :state-icon=\"stateIcon\"\r\n\t\t    :state=\"state\">\r\n\t\t\t</vs-form-input>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 196 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-form-input</span> \r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"text\"</span>\r\n  <span class=\"hljs-attribute\">label</span>=<span class=\"hljs-value\">\"Example Label\"</span>\r\n  <span class=\"hljs-attribute\">placeholder</span>=<span class=\"hljs-value\">\"Placeholder\"</span>\r\n  <span class=\"hljs-attribute\">description</span>=<span class=\"hljs-value\">\"We'll never share your email with anyone else.\"</span>\r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"'success'\"</span>\r\n  <span class=\"hljs-attribute\">state-icon</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-form-input</span>&gt;</span>\r\n";
-
-/***/ },
-/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -6930,9 +6924,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _utilsHelpersJs = __webpack_require__(107);
+	var _utilsHelpersJs = __webpack_require__(105);
 
-	var _formInputHtml = __webpack_require__(198);
+	var _formInputHtml = __webpack_require__(196);
 
 	var _formInputHtml2 = _interopRequireDefault(_formInputHtml);
 
@@ -6998,13 +6992,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 198 */
+/* 196 */
 /***/ function(module, exports) {
 
-	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <div class=\"inputClass\">\r\n        <input \r\n        \ttype=\"{{type}}\" \r\n        \tclass=\"form-control {{stateIconType}} {{inputSize}}\" \r\n        \tid=\"{{id}}\" \r\n        \tplaceholder=\"{{placeholder}}\" \r\n        \tv-model=\"model\">\r\n    </div>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>\r\n";
+	module.exports = "<fieldset class=\"form-group {{inputState}}\">\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\n    <div class=\"inputClass\">\n        <input \n        \ttype=\"{{type}}\" \n        \tclass=\"form-control {{stateIconType}} {{inputSize}}\" \n        \tid=\"{{id}}\" \n        \tplaceholder=\"{{placeholder}}\" \n        \tv-model=\"model\">\n    </div>\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\n</fieldset>\n";
 
 /***/ },
-/* 199 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7015,19 +7009,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _formSelectJson = __webpack_require__(200);
+	var _formSelectJson = __webpack_require__(198);
 
 	var _formSelectJson2 = _interopRequireDefault(_formSelectJson);
 
-	var _formSelectHtml = __webpack_require__(201);
+	var _formSelectHtml = __webpack_require__(199);
 
 	var _formSelectHtml2 = _interopRequireDefault(_formSelectHtml);
 
-	var _snippetHtml = __webpack_require__(202);
+	var _snippetHtml = __webpack_require__(200);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsFormSelect = __webpack_require__(203);
+	var _srcComponentsFormSelect = __webpack_require__(201);
 
 	var _srcComponentsFormSelect2 = _interopRequireDefault(_srcComponentsFormSelect);
 
@@ -7035,7 +7029,7 @@
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -7070,7 +7064,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 200 */
+/* 198 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -7156,19 +7150,19 @@
 	};
 
 /***/ },
+/* 199 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"controls\">\n\t\t<!-- Html controls start-->\n\t\t<label>size\n\t\t\t<select v-model=\"size\">\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<label>state\n\t\t\t<select v-model=\"state\">\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<!-- Html controls end-->\n\t</div>\n\t<div slot=\"markup\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<vs-form-select\n\t\t    :model.sync=\"model\"\n\t\t    :options=\"options\"\n\t\t    :default-option=\"{text: 'Please select one',value: 'default'}\"\n\t\t    type=\"text\"\n\t\t    label=\"Example Label\"\n\t\t    description=\"We'll never share your gender with anyone else.\"\n\t\t    :size=\"size\"\n\t\t    :state=\"state\">\n\t\t\t</vs-form-select>\n\t\t\t<!-- Html markup end-->\n\t</div>\n</docs-demo>\t\n";
+
+/***/ },
+/* 200 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-form-select</span> \n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\n  <span class=\"hljs-attribute\">:options</span>=<span class=\"hljs-value\">\"options\"</span>\n  <span class=\"hljs-attribute\">:default-option</span>=<span class=\"hljs-value\">\"{text: 'Please select one',value: 'default'}\"</span>\n  <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"text\"</span>\n  <span class=\"hljs-attribute\">label</span>=<span class=\"hljs-value\">\"Example Label\"</span>\n  <span class=\"hljs-attribute\">description</span>=<span class=\"hljs-value\">\"We'll never share your gender with anyone else.\"</span>\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"'success'\"</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-form-select</span>&gt;</span>\n";
+
+/***/ },
 /* 201 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>size\r\n\t\t\t<select v-model=\"size\">\r\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>state\r\n\t\t\t<select v-model=\"state\">\r\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-form-select\r\n\t\t    :model.sync=\"model\"\r\n\t\t    :options=\"options\"\r\n\t\t    :default-option=\"{text: 'Please select one',value: 'default'}\"\r\n\t\t    type=\"text\"\r\n\t\t    label=\"Example Label\"\r\n\t\t    description=\"We'll never share your gender with anyone else.\"\r\n\t\t    :size=\"size\"\r\n\t\t    :state=\"state\">\r\n\t\t\t</vs-form-select>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 202 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-form-select</span> \r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">:options</span>=<span class=\"hljs-value\">\"options\"</span>\r\n  <span class=\"hljs-attribute\">:default-option</span>=<span class=\"hljs-value\">\"{text: 'Please select one',value: 'default'}\"</span>\r\n  <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"text\"</span>\r\n  <span class=\"hljs-attribute\">label</span>=<span class=\"hljs-value\">\"Example Label\"</span>\r\n  <span class=\"hljs-attribute\">description</span>=<span class=\"hljs-value\">\"We'll never share your gender with anyone else.\"</span>\r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"'success'\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-form-select</span>&gt;</span>\r\n";
-
-/***/ },
-/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -7180,9 +7174,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _utilsHelpersJs = __webpack_require__(107);
+	var _utilsHelpersJs = __webpack_require__(105);
 
-	var _formSelectHtml = __webpack_require__(204);
+	var _formSelectHtml = __webpack_require__(202);
 
 	var _formSelectHtml2 = _interopRequireDefault(_formSelectHtml);
 
@@ -7252,13 +7246,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 204 */
+/* 202 */
 /***/ function(module, exports) {
 
-	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <!-- single select -->\r\n    <select class=\"form-control {{inputSize}}\" id=\"{{id}}\" v-model=\"model\" options=\"allOptions\" v-if=\"!multiple\">\r\n    \t<option v-for=\"option in allOptions\" v-bind:value=\"option.value\">{{option.text}}</option>\r\n    </select>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>\r\n";
+	module.exports = "<fieldset class=\"form-group {{inputState}}\">\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\n    <!-- single select -->\n    <select class=\"form-control {{inputSize}}\" id=\"{{id}}\" v-model=\"model\" options=\"allOptions\" v-if=\"!multiple\">\n    \t<option v-for=\"option in allOptions\" v-bind:value=\"option.value\">{{option.text}}</option>\n    </select>\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\n</fieldset>\n";
 
 /***/ },
-/* 205 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7269,19 +7263,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _formTextareaJson = __webpack_require__(206);
+	var _formTextareaJson = __webpack_require__(204);
 
 	var _formTextareaJson2 = _interopRequireDefault(_formTextareaJson);
 
-	var _formTextareaHtml = __webpack_require__(207);
+	var _formTextareaHtml = __webpack_require__(205);
 
 	var _formTextareaHtml2 = _interopRequireDefault(_formTextareaHtml);
 
-	var _snippetHtml = __webpack_require__(208);
+	var _snippetHtml = __webpack_require__(206);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsFormTextarea = __webpack_require__(209);
+	var _srcComponentsFormTextarea = __webpack_require__(207);
 
 	var _srcComponentsFormTextarea2 = _interopRequireDefault(_srcComponentsFormTextarea);
 
@@ -7289,7 +7283,7 @@
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -7315,7 +7309,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 206 */
+/* 204 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -7383,19 +7377,19 @@
 	};
 
 /***/ },
+/* 205 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"controls\">\n\t\t<!-- Html controls start-->\n\t\t<label>state\n\t\t\t<select v-model=\"state\">\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<!-- Html controls end-->\n\t</div>\n\t<div slot=\"markup\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<vs-form-textarea\n\t\t    :model.sync=\"model\"\n\t\t    type=\"text\"\n\t\t    label=\"Example Label\"\n\t\t    description=\"Extra textarea description.\"\n\t\t    :rows=\"2\"\n\t\t    :state=\"state\">\n\t\t\t</vs-form-textarea>\n\t\t\t<!-- Html markup end-->\n\t</div>\n</docs-demo>\t\n";
+
+/***/ },
+/* 206 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-form-textarea</span> \n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\n  <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"text\"</span>\n  <span class=\"hljs-attribute\">label</span>=<span class=\"hljs-value\">\"Example Label\"</span>\n  <span class=\"hljs-attribute\">description</span>=<span class=\"hljs-value\">\"Extra textarea description.\"</span>\n  <span class=\"hljs-attribute\">rows</span>=<span class=\"hljs-value\">\"2\"</span>\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"'success'\"</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-form-textarea</span>&gt;</span>\n";
+
+/***/ },
 /* 207 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>state\r\n\t\t\t<select v-model=\"state\">\r\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-form-textarea\r\n\t\t    :model.sync=\"model\"\r\n\t\t    type=\"text\"\r\n\t\t    label=\"Example Label\"\r\n\t\t    description=\"Extra textarea description.\"\r\n\t\t    :rows=\"2\"\r\n\t\t    :state=\"state\">\r\n\t\t\t</vs-form-textarea>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 208 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-form-textarea</span> \r\n  <span class=\"hljs-attribute\">:model.sync</span>=<span class=\"hljs-value\">\"model\"</span>\r\n  <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"text\"</span>\r\n  <span class=\"hljs-attribute\">label</span>=<span class=\"hljs-value\">\"Example Label\"</span>\r\n  <span class=\"hljs-attribute\">description</span>=<span class=\"hljs-value\">\"Extra textarea description.\"</span>\r\n  <span class=\"hljs-attribute\">rows</span>=<span class=\"hljs-value\">\"2\"</span>\r\n  <span class=\"hljs-attribute\">:state</span>=<span class=\"hljs-value\">\"'success'\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-form-textarea</span>&gt;</span>\r\n";
-
-/***/ },
-/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -7407,9 +7401,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _utilsHelpersJs = __webpack_require__(107);
+	var _utilsHelpersJs = __webpack_require__(105);
 
-	var _formTextareaHtml = __webpack_require__(210);
+	var _formTextareaHtml = __webpack_require__(208);
 
 	var _formTextareaHtml2 = _interopRequireDefault(_formTextareaHtml);
 
@@ -7452,13 +7446,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 210 */
+/* 208 */
 /***/ function(module, exports) {
 
-	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <textarea class=\"form-control\" id=\"{{id}}\" rows=\"{{rows}}\" v-model=\"model\"></textarea>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>";
+	module.exports = "<fieldset class=\"form-group {{inputState}}\">\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\n    <textarea class=\"form-control\" id=\"{{id}}\" rows=\"{{rows}}\" v-model=\"model\"></textarea>\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\n</fieldset>";
 
 /***/ },
-/* 211 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7469,17 +7463,17 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(212);
+	__webpack_require__(210);
 
-	var _imagesJson = __webpack_require__(213);
+	var _imagesJson = __webpack_require__(211);
 
 	var _imagesJson2 = _interopRequireDefault(_imagesJson);
 
-	var _imagesHtml = __webpack_require__(214);
+	var _imagesHtml = __webpack_require__(212);
 
 	var _imagesHtml2 = _interopRequireDefault(_imagesHtml);
 
-	var _snippetHtml = __webpack_require__(215);
+	var _snippetHtml = __webpack_require__(213);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
@@ -7507,7 +7501,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 212 */
+/* 210 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -7515,7 +7509,7 @@
 	// import dependencies
 
 /***/ },
-/* 213 */
+/* 211 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -7536,19 +7530,19 @@
 	};
 
 /***/ },
+/* 212 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"controls\" v-if=\"controls\">\n\t\t<!-- Html controls start-->\n\t\t<!-- Html controls end-->\n\t</div>\n\t<div slot=\"markup\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<img v-bind:src=\"'assets/150x150.png'\" alt=\"...\" class=\"img-rounded\">\n\t\t\t<img v-bind:src=\"'assets/150x150.png'\" alt=\"...\" class=\"img-circle\">\n\t\t\t<img v-bind:src=\"'assets/150x150.png'\" alt=\"...\" class=\"img-thumbnail\">\n\t\t\t<div class=\"m-b\"></div>\n\t\t\t<img v-bind:src=\"'assets/responsive.png'\" alt=\"...\" class=\"img-fluid\" >\n\t\t\t<!-- Html markup end-->\n\t</div>\n</docs-demo>\t\n";
+
+/***/ },
+/* 213 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/150x150?text=150x150\"</span> <span class=\"hljs-attribute\">alt</span>=<span class=\"hljs-value\">\"...\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"img-rounded\"</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/150x150?text=150x150\"</span> <span class=\"hljs-attribute\">alt</span>=<span class=\"hljs-value\">\"...\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"img-circle\"</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/150x150?text=150x150\"</span> <span class=\"hljs-attribute\">alt</span>=<span class=\"hljs-value\">\"...\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"img-thumbnail\"</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/1000x150?text=1000x150 - responsive\"</span> <span class=\"hljs-attribute\">alt</span>=<span class=\"hljs-value\">\"...\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"img-fluid\"</span> &gt;</span>\n";
+
+/***/ },
 /* 214 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\" v-if=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<img v-bind:src=\"'assets/150x150.png'\" alt=\"...\" class=\"img-rounded\">\r\n\t\t\t<img v-bind:src=\"'assets/150x150.png'\" alt=\"...\" class=\"img-circle\">\r\n\t\t\t<img v-bind:src=\"'assets/150x150.png'\" alt=\"...\" class=\"img-thumbnail\">\r\n\t\t\t<div class=\"m-b\"></div>\r\n\t\t\t<img v-bind:src=\"'assets/responsive.png'\" alt=\"...\" class=\"img-fluid\" >\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 215 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/150x150?text=150x150\"</span> <span class=\"hljs-attribute\">alt</span>=<span class=\"hljs-value\">\"...\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"img-rounded\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/150x150?text=150x150\"</span> <span class=\"hljs-attribute\">alt</span>=<span class=\"hljs-value\">\"...\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"img-circle\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/150x150?text=150x150\"</span> <span class=\"hljs-attribute\">alt</span>=<span class=\"hljs-value\">\"...\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"img-thumbnail\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/1000x150?text=1000x150 - responsive\"</span> <span class=\"hljs-attribute\">alt</span>=<span class=\"hljs-value\">\"...\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"img-fluid\"</span> &gt;</span>\r\n";
-
-/***/ },
-/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7559,19 +7553,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _jumbotronJson = __webpack_require__(217);
+	var _jumbotronJson = __webpack_require__(215);
 
 	var _jumbotronJson2 = _interopRequireDefault(_jumbotronJson);
 
-	var _jumbotronHtml = __webpack_require__(218);
+	var _jumbotronHtml = __webpack_require__(216);
 
 	var _jumbotronHtml2 = _interopRequireDefault(_jumbotronHtml);
 
-	var _snippetHtml = __webpack_require__(219);
+	var _snippetHtml = __webpack_require__(217);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsJumbotron = __webpack_require__(220);
+	var _srcComponentsJumbotron = __webpack_require__(218);
 
 	var _srcComponentsJumbotron2 = _interopRequireDefault(_srcComponentsJumbotron);
 
@@ -7600,7 +7594,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 217 */
+/* 215 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -7627,19 +7621,19 @@
 	};
 
 /***/ },
+/* 216 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"controls\">\n\t\t<!-- Html controls start-->\n\t\t<label>fluid <input type=\"checkbox\" v-model=\"fluid\"></label>\n\t\t<!-- Html controls end-->\n\t</div>\n\t<div slot=\"markup\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<vs-jumbotron :fluid=\"fluid\">\n\t\t\t\t<h1 class=\"display-3\">Hello, world!</h1>\n\t\t\t  <p class=\"lead\">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>\n\t\t\t  <hr class=\"m-y-md\">\n\t\t\t  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>\n\t\t\t  <p class=\"lead\">\n\t\t\t    <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more</a>\n\t\t\t  </p>\n\t\t\t</vs-jumbotron>\n\t\t\t<!-- Html markup end-->\n\t</div>\n</docs-demo>\t\n";
+
+/***/ },
+/* 217 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-jumbotron</span> <span class=\"hljs-attribute\">fluid</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h1</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"display-3\"</span>&gt;</span>Hello, world!<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h1</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">p</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"lead\"</span>&gt;</span>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">p</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">hr</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"m-y-md\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">p</span>&gt;</span>It uses utility classes for typography and spacing to space content out within the larger container.<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">p</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">p</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"lead\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-primary btn-lg\"</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span> <span class=\"hljs-attribute\">role</span>=<span class=\"hljs-value\">\"button\"</span>&gt;</span>Learn more<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">p</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-jumbotron</span>&gt;</span>\n";
+
+/***/ },
 /* 218 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>fluid <input type=\"checkbox\" v-model=\"fluid\"></label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-jumbotron :fluid=\"fluid\">\r\n\t\t\t\t<h1 class=\"display-3\">Hello, world!</h1>\r\n\t\t\t  <p class=\"lead\">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>\r\n\t\t\t  <hr class=\"m-y-md\">\r\n\t\t\t  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>\r\n\t\t\t  <p class=\"lead\">\r\n\t\t\t    <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more</a>\r\n\t\t\t  </p>\r\n\t\t\t</vs-jumbotron>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 219 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-jumbotron</span> <span class=\"hljs-attribute\">fluid</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h1</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"display-3\"</span>&gt;</span>Hello, world!<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h1</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">p</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"lead\"</span>&gt;</span>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">p</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">hr</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"m-y-md\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">p</span>&gt;</span>It uses utility classes for typography and spacing to space content out within the larger container.<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">p</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">p</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"lead\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-primary btn-lg\"</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span> <span class=\"hljs-attribute\">role</span>=<span class=\"hljs-value\">\"button\"</span>&gt;</span>Learn more<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">p</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-jumbotron</span>&gt;</span>\r\n";
-
-/***/ },
-/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -7651,7 +7645,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _jumbotronHtml = __webpack_require__(221);
+	var _jumbotronHtml = __webpack_require__(219);
 
 	var _jumbotronHtml2 = _interopRequireDefault(_jumbotronHtml);
 
@@ -7669,13 +7663,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 221 */
+/* 219 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"jumbotron\" v-bind:class=\"{ 'jumbotron-fluid': fluid }\">\r\n  <div class=\"container\">\r\n    <slot></slot>\r\n  </div>\r\n</div>";
+	module.exports = "<div class=\"jumbotron\" v-bind:class=\"{ 'jumbotron-fluid': fluid }\">\n  <div class=\"container\">\n    <slot></slot>\n  </div>\n</div>";
 
 /***/ },
-/* 222 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7686,19 +7680,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _labelsJson = __webpack_require__(223);
+	var _tagsJson = __webpack_require__(221);
 
-	var _labelsJson2 = _interopRequireDefault(_labelsJson);
+	var _tagsJson2 = _interopRequireDefault(_tagsJson);
 
-	var _labelsHtml = __webpack_require__(224);
+	var _tagsHtml = __webpack_require__(222);
 
-	var _labelsHtml2 = _interopRequireDefault(_labelsHtml);
+	var _tagsHtml2 = _interopRequireDefault(_tagsHtml);
 
-	var _snippetHtml = __webpack_require__(225);
+	var _snippetHtml = __webpack_require__(223);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsBadge = __webpack_require__(226);
+	var _srcComponentsBadge = __webpack_require__(224);
 
 	var _srcComponentsBadge2 = _interopRequireDefault(_srcComponentsBadge);
 
@@ -7706,18 +7700,18 @@
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
-	    url: '/labels',
-	    name: 'labels',
-	    title: 'Labels'
+	    url: '/tags',
+	    name: 'tags',
+	    title: 'Tags'
 	  },
-	  template: _labelsHtml2['default'],
+	  template: _tagsHtml2['default'],
 	  data: function data() {
 	    return {
-	      meta: _labelsJson2['default'],
+	      meta: _tagsJson2['default'],
 	      snippet: _snippetHtml2['default'],
 	      variant: 'primary',
 	      variants: _srcUtils.variants,
@@ -7733,14 +7727,14 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 223 */
+/* 221 */
 /***/ function(module, exports) {
 
 	module.exports = {
 		"name": "labels",
-		"title": "Labels/Badges",
+		"title": "Tags/Badges",
 		"description": "Small and adaptive tag for adding context to just about any content.",
-		"note": "Labels scale to match the size of the immediate parent element by using relative font sizing and em units.",
+		"note": "Tags scale to match the size of the immediate parent element by using relative font sizing and em units.",
 		"dependencies": [],
 		"category": "components",
 		"browserSupport": {
@@ -7780,19 +7774,19 @@
 	};
 
 /***/ },
+/* 222 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"controls\">\n\t\t<!-- Html controls start-->\n\t\t<label>\n\t\t\ttype \n\t\t\t<select v-model=\"type\">\n\t\t\t\t<option v-for=\"option in types\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<label>\n\t\t\tvariant \n\t\t\t<select v-model=\"variant\">\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<!-- Html controls end-->\n\t</div>\n\t<div slot=\"markup\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<vs-badge :variant=\"variant\" :type=\"type\">open</vs-badge>\n\t\t\t<!-- Html markup end-->\n\t</div>\n</docs-demo>\t\n";
+
+/***/ },
+/* 223 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-badge</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"default\"</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"pill\"</span>&gt;</span>open<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-badge</span>&gt;</span>\n";
+
+/***/ },
 /* 224 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>\r\n\t\t\ttype \r\n\t\t\t<select v-model=\"type\">\r\n\t\t\t\t<option v-for=\"option in types\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>\r\n\t\t\tvariant \r\n\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-badge :variant=\"variant\" :type=\"type\">open</vs-badge>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 225 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-badge</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"default\"</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"pill\"</span>&gt;</span>open<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-badge</span>&gt;</span>\r\n";
-
-/***/ },
-/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7803,15 +7797,15 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _labels = __webpack_require__(227);
+	var _tags = __webpack_require__(225);
 
-	var _labels2 = _interopRequireDefault(_labels);
+	var _tags2 = _interopRequireDefault(_tags);
 
-	exports['default'] = _labels2['default'];
+	exports['default'] = _tags2['default'];
 	module.exports = exports['default'];
 
 /***/ },
-/* 227 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -7823,20 +7817,20 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _labelsHtml = __webpack_require__(228);
+	var _tagsHtml = __webpack_require__(226);
 
-	var _labelsHtml2 = _interopRequireDefault(_labelsHtml);
+	var _tagsHtml2 = _interopRequireDefault(_tagsHtml);
 
 	// export component object
 	exports['default'] = {
-	  template: _labelsHtml2['default'],
+	  template: _tagsHtml2['default'],
 	  replace: true,
 	  computed: {
 	    labelVariant: function labelVariant() {
-	      return !this.variant || this.variant === 'default' ? 'label-default' : 'label-' + this.variant;
+	      return !this.variant || this.variant === 'default' ? 'tag-default' : 'tag-' + this.variant;
 	    },
 	    labelType: function labelType() {
-	      return !this.type ? '' : 'label-' + this.type;
+	      return !this.type ? '' : 'tag-' + this.type;
 	    }
 	  },
 	  props: {
@@ -7853,13 +7847,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 228 */
+/* 226 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"label {{labelVariant}} {{labelType}}\">\r\n\t<slot></slot>\r\n</span>\r\n";
+	module.exports = "<span class=\"tag {{labelVariant}} {{labelType}}\">\n\t<slot></slot>\n</span>\n";
 
 /***/ },
-/* 229 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7870,29 +7864,29 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _listGroupJson = __webpack_require__(230);
+	var _listGroupJson = __webpack_require__(228);
 
 	var _listGroupJson2 = _interopRequireDefault(_listGroupJson);
 
-	var _listGroupHtml = __webpack_require__(231);
+	var _listGroupHtml = __webpack_require__(229);
 
 	var _listGroupHtml2 = _interopRequireDefault(_listGroupHtml);
 
-	var _snippetHtml = __webpack_require__(232);
+	var _snippetHtml = __webpack_require__(230);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsListGroup = __webpack_require__(233);
+	var _srcComponentsListGroup = __webpack_require__(231);
 
-	var _srcComponentsLabels = __webpack_require__(227);
+	var _srcComponentsTags = __webpack_require__(225);
 
-	var _srcComponentsLabels2 = _interopRequireDefault(_srcComponentsLabels);
+	var _srcComponentsTags2 = _interopRequireDefault(_srcComponentsTags);
 
 	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(7);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -7915,14 +7909,14 @@
 	  components: {
 	    vsListGroup: _srcComponentsListGroup.listGroup,
 	    vsListGroupItem: _srcComponentsListGroup.listGroupItem,
-	    vsBadge: _srcComponentsLabels2['default'],
+	    vsBadge: _srcComponentsTags2['default'],
 	    docsDemo: _vuestrapDocsSrcComponentsDemo2['default']
 	  }
 	};
 	module.exports = exports['default'];
 
 /***/ },
-/* 230 */
+/* 228 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -7979,19 +7973,19 @@
 	};
 
 /***/ },
+/* 229 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n<div slot=\"controls\">\n\t\t<!-- Html controls start-->\n\t\t<label>flush <input type=\"checkbox\" v-model=\"flush\"></label>\n\t\t<label>\n\t\t\tstate \n\t\t\t<select v-model=\"state\">\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t</div>\n\t<!-- Html controls end-->\n\t<div slot=\"markup\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<vs-list-group style=\"width: 350px\" :flush=\"flush\">\n\t\t\t\t<vs-list-group-item :state=\"state\">\n\t\t\t    <vs-badge type=\"pill\" class=\"pull-xs-right\">14</vs-badge>\n\t\t\t    Cras justo odio\n\t\t\t  </vs-list-group-item>\n\t\t\t  <vs-list-group-item>\n\t\t\t    <vs-badge type=\"pill\" class=\"pull-xs-right\">2</vs-badge>\n\t\t\t    Dapibus ac facilisis in\n\t\t\t  </vs-list-group-item>\n\t\t\t  <vs-list-group-item>\n\t\t\t    <vs-badge type=\"pill\" class=\"pull-xs-right\">1</vs-badge>\n\t\t\t    Morbi leo risus\n\t\t\t  </vs-list-group-item>\n\t\t\t</vs-list-group>\n\t\t\t<!-- Html markup end-->\n\t</div>\n</docs-demo>\t\n";
+
+/***/ },
+/* 230 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-list-group</span> <span class=\"hljs-attribute\">flush</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-list-group-item</span> <span class=\"hljs-attribute\">state</span>=<span class=\"hljs-value\">\"success\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-badge</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"pill\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"pull-xs-right\"</span>&gt;</span>14<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-badge</span>&gt;</span>\n    Cras justo odio\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-list-group-item</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-list-group-item</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-badge</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"pill\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"pull-xs-right\"</span>&gt;</span>2<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-badge</span>&gt;</span>\n    Dapibus ac facilisis in\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-list-group-item</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-list-group-item</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-badge</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"pill\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"pull-xs-right\"</span>&gt;</span>1<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-badge</span>&gt;</span>\n    Morbi leo risus\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-list-group-item</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-list-group</span>&gt;</span>";
+
+/***/ },
 /* 231 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>flush <input type=\"checkbox\" v-model=\"flush\"></label>\r\n\t\t<label>\r\n\t\t\tstate \r\n\t\t\t<select v-model=\"state\">\r\n\t\t\t\t<option v-for=\"option in states\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-list-group style=\"width: 350px\" :flush=\"flush\">\r\n\t\t\t\t<vs-list-group-item :state=\"state\">\r\n\t\t\t    <vs-badge type=\"pill\" class=\"pull-xs-right\">14</vs-badge>\r\n\t\t\t    Cras justo odio\r\n\t\t\t  </vs-list-group-item>\r\n\t\t\t  <vs-list-group-item>\r\n\t\t\t    <vs-badge type=\"pill\" class=\"pull-xs-right\">2</vs-badge>\r\n\t\t\t    Dapibus ac facilisis in\r\n\t\t\t  </vs-list-group-item>\r\n\t\t\t  <vs-list-group-item>\r\n\t\t\t    <vs-badge type=\"pill\" class=\"pull-xs-right\">1</vs-badge>\r\n\t\t\t    Morbi leo risus\r\n\t\t\t  </vs-list-group-item>\r\n\t\t\t</vs-list-group>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 232 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-list-group</span> <span class=\"hljs-attribute\">flush</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-list-group-item</span> <span class=\"hljs-attribute\">state</span>=<span class=\"hljs-value\">\"success\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-badge</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"pill\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"pull-xs-right\"</span>&gt;</span>14<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-badge</span>&gt;</span>\r\n    Cras justo odio\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-list-group-item</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-list-group-item</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-badge</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"pill\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"pull-xs-right\"</span>&gt;</span>2<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-badge</span>&gt;</span>\r\n    Dapibus ac facilisis in\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-list-group-item</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-list-group-item</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-badge</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"pill\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"pull-xs-right\"</span>&gt;</span>1<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-badge</span>&gt;</span>\r\n    Morbi leo risus\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-list-group-item</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-list-group</span>&gt;</span>";
-
-/***/ },
-/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -8003,11 +7997,11 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _listGroupHtml = __webpack_require__(234);
+	var _listGroupHtml = __webpack_require__(232);
 
 	var _listGroupHtml2 = _interopRequireDefault(_listGroupHtml);
 
-	__webpack_require__(235);
+	__webpack_require__(233);
 
 	// export component object
 	var listGroup = {
@@ -8048,19 +8042,19 @@
 	exports.listGroupItem = listGroupItem;
 
 /***/ },
-/* 234 */
+/* 232 */
 /***/ function(module, exports) {
 
-	module.exports = "<ul v-bind:class=\"{'list-group': true, 'list-group-flush': flush}\">\r\n  <slot></slot>\r\n</ul>";
+	module.exports = "<ul v-bind:class=\"{'list-group': true, 'list-group-flush': flush}\">\n  <slot></slot>\n</ul>";
 
 /***/ },
-/* 235 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(236);
+	var content = __webpack_require__(234);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -8080,7 +8074,7 @@
 	}
 
 /***/ },
-/* 236 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -8094,7 +8088,7 @@
 
 
 /***/ },
-/* 237 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8105,19 +8099,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _mediaJson = __webpack_require__(238);
+	var _mediaJson = __webpack_require__(236);
 
 	var _mediaJson2 = _interopRequireDefault(_mediaJson);
 
-	var _mediaHtml = __webpack_require__(239);
+	var _mediaHtml = __webpack_require__(237);
 
 	var _mediaHtml2 = _interopRequireDefault(_mediaHtml);
 
-	var _snippetHtml = __webpack_require__(240);
+	var _snippetHtml = __webpack_require__(238);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsMedia = __webpack_require__(241);
+	var _srcComponentsMedia = __webpack_require__(239);
 
 	var _srcComponentsMedia2 = _interopRequireDefault(_srcComponentsMedia);
 
@@ -8148,7 +8142,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 238 */
+/* 236 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -8177,19 +8171,19 @@
 	};
 
 /***/ },
+/* 237 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n    <div slot=\"controls\">\n        <!-- Html controls start-->\n        <label>\n\t\t\tposition\n\t\t\t<select v-model=\"position\">\n\t\t\t\t<option v-for=\"option in positions\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n        <!-- Html controls end-->\n    </div>\n    <div slot=\"markup\">\n        <!-- Html markup start-->\n        <vs-media :position=\"position\">\n            <div slot=\"aside\">\n                <a href=\"#\">\n                \t<img class=\"media-object\" v-bind:src=\"'assets/media.png'\">\n                </a>\n            </div>\n            <div slot=\"body\">\n            \t<h4 class=\"media-heading\">Media heading</h4>\n                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.\n            </div>\n        </vs-media>\n        <!-- Html markup end-->\n    </div>\n</docs-demo>\n";
+
+/***/ },
+/* 238 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-media</span> <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"top left\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"aside\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"media-object\"</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/50x50?text=media\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"body\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h4</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"media-heading\"</span>&gt;</span>Media heading<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h4</span>&gt;</span> \n    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-media</span>&gt;</span>\n";
+
+/***/ },
 /* 239 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n    <div slot=\"controls\">\r\n        <!-- Html controls start-->\r\n        <label>\r\n\t\t\tposition\r\n\t\t\t<select v-model=\"position\">\r\n\t\t\t\t<option v-for=\"option in positions\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n        <!-- Html controls end-->\r\n    </div>\r\n    <div slot=\"markup\">\r\n        <!-- Html markup start-->\r\n        <vs-media :position=\"position\">\r\n            <div slot=\"aside\">\r\n                <a href=\"#\">\r\n                \t<img class=\"media-object\" v-bind:src=\"'assets/media.png'\">\r\n                </a>\r\n            </div>\r\n            <div slot=\"body\">\r\n            \t<h4 class=\"media-heading\">Media heading</h4>\r\n                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.\r\n            </div>\r\n        </vs-media>\r\n        <!-- Html markup end-->\r\n    </div>\r\n</docs-demo>\r\n";
-
-/***/ },
-/* 240 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-media</span> <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"top left\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"aside\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">img</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"media-object\"</span> <span class=\"hljs-attribute\">src</span>=<span class=\"hljs-value\">\"http://placehold.it/50x50?text=media\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"body\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h4</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"media-heading\"</span>&gt;</span>Media heading<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h4</span>&gt;</span> \r\n    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-media</span>&gt;</span>\r\n";
-
-/***/ },
-/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -8201,7 +8195,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _mediaHtml = __webpack_require__(242);
+	var _mediaHtml = __webpack_require__(240);
 
 	var _mediaHtml2 = _interopRequireDefault(_mediaHtml);
 
@@ -8232,13 +8226,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 242 */
+/* 240 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"media\">\r\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-left'\">\r\n  \t<slot name=\"aside\">\r\n  </div>\r\n  <div class=\"media-body\">\r\n  \t<slot name=\"body\">\r\n  </div>\r\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-right'\">\r\n  \t<slot name=\"aside\">\r\n  </div>\r\n</div>";
+	module.exports = "<div class=\"media\">\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-left'\">\n  \t<slot name=\"aside\">\n  </div>\n  <div class=\"media-body\">\n  \t<slot name=\"body\">\n  </div>\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-right'\">\n  \t<slot name=\"aside\">\n  </div>\n</div>";
 
 /***/ },
-/* 243 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8249,23 +8243,23 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _modalJson = __webpack_require__(244);
+	var _modalJson = __webpack_require__(242);
 
 	var _modalJson2 = _interopRequireDefault(_modalJson);
 
-	var _modalHtml = __webpack_require__(245);
+	var _modalHtml = __webpack_require__(243);
 
 	var _modalHtml2 = _interopRequireDefault(_modalHtml);
 
-	var _snippetHtml = __webpack_require__(246);
+	var _snippetHtml = __webpack_require__(244);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsModal = __webpack_require__(247);
+	var _srcComponentsModal = __webpack_require__(245);
 
 	var _srcComponentsModal2 = _interopRequireDefault(_srcComponentsModal);
 
-	var _srcComponentsButtons = __webpack_require__(127);
+	var _srcComponentsButtons = __webpack_require__(125);
 
 	var _srcComponentsButtons2 = _interopRequireDefault(_srcComponentsButtons);
 
@@ -8273,7 +8267,7 @@
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -8300,7 +8294,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 244 */
+/* 242 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -8353,19 +8347,19 @@
 	};
 
 /***/ },
+/* 243 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n    <div slot=\"controls\">\n        <!-- Html controls start-->\n        <label>fade <input type=\"checkbox\" v-model=\"fade\"></label>\n        <label>\n\t\t\tsize\n\t\t\t<select v-model=\"size\">\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n        <!-- Html controls end-->\n    </div>\n    <div slot=\"markup\">\n        <!-- Html markup start-->\n\n        <!-- trigger -->\n        <vs-button variant=\"primary\" v-on:click=\"$broadcast('show::modal', 'modal1')\">\n        \tShow Modal\n        </vs-button>\n\n        <!-- modal -->\n        <vs-modal id=\"modal1\" :size=\"size\" :fade=\"fade\">\n            <div slot=\"modal-header\">\n                <h3>header</h3>\n            </div>\n            <div slot=\"modal-body\">\n                body\n            </div>\n            <div slot=\"modal-footer\">\n                <button class=\"btn btn-primary\" v-on:click=\"$broadcast('hide::modal', 'modal1')\">\n                    OK\n                </button>\n            </div>\n        </vs-modal>\n        <!-- Html markup end-->\n    </div>\n</docs-demo>\n";
+
+/***/ },
+/* 244 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-comment\">&lt;!-- trigger --&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-button</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span> <span class=\"hljs-attribute\">v-on:click</span>=<span class=\"hljs-value\">\"$broadcast('show::modal', 'modal1')\"</span>&gt;</span>\n  Show Modal\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-button</span>&gt;</span>\n\n<span class=\"hljs-comment\">&lt;!-- modal --&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-modal</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"modal1\"</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">:fade</span>=<span class=\"hljs-value\">\"false\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"modal-header\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h3</span>&gt;</span>header<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h3</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"modal-body\"</span>&gt;</span>\n    body\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"modal-footer\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-primary\"</span> <span class=\"hljs-attribute\">v-on:click</span>=<span class=\"hljs-value\">\"$broadcast('hide::modal', 'modal1')\"</span>&gt;</span>\n      OK\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-modal</span>&gt;</span>\n";
+
+/***/ },
 /* 245 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n    <div slot=\"controls\">\r\n        <!-- Html controls start-->\r\n        <label>fade <input type=\"checkbox\" v-model=\"fade\"></label>\r\n        <label>\r\n\t\t\tsize\r\n\t\t\t<select v-model=\"size\">\r\n\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n        <!-- Html controls end-->\r\n    </div>\r\n    <div slot=\"markup\">\r\n        <!-- Html markup start-->\r\n\r\n        <!-- trigger -->\r\n        <vs-button variant=\"primary\" v-on:click=\"$broadcast('show::modal', 'modal1')\">\r\n        \tShow Modal\r\n        </vs-button>\r\n\r\n        <!-- modal -->\r\n        <vs-modal id=\"modal1\" :size=\"size\" :fade=\"fade\">\r\n            <div slot=\"modal-header\">\r\n                <h3>header</h3>\r\n            </div>\r\n            <div slot=\"modal-body\">\r\n                body\r\n            </div>\r\n            <div slot=\"modal-footer\">\r\n                <button class=\"btn btn-primary\" v-on:click=\"$broadcast('hide::modal', 'modal1')\">\r\n                    OK\r\n                </button>\r\n            </div>\r\n        </vs-modal>\r\n        <!-- Html markup end-->\r\n    </div>\r\n</docs-demo>\r\n";
-
-/***/ },
-/* 246 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-comment\">&lt;!-- trigger --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-button</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span> <span class=\"hljs-attribute\">v-on:click</span>=<span class=\"hljs-value\">\"$broadcast('show::modal', 'modal1')\"</span>&gt;</span>\r\n  Show Modal\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-button</span>&gt;</span>\r\n\r\n<span class=\"hljs-comment\">&lt;!-- modal --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-modal</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"modal1\"</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">:fade</span>=<span class=\"hljs-value\">\"false\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"modal-header\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">h3</span>&gt;</span>header<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">h3</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"modal-body\"</span>&gt;</span>\r\n    body\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"modal-footer\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-primary\"</span> <span class=\"hljs-attribute\">v-on:click</span>=<span class=\"hljs-value\">\"$broadcast('hide::modal', 'modal1')\"</span>&gt;</span>\r\n      OK\r\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-modal</span>&gt;</span>\r\n";
-
-/***/ },
-/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -8377,15 +8371,15 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _utilsHelpersJs = __webpack_require__(107);
+	var _utilsHelpersJs = __webpack_require__(105);
 
-	var _modalHtml = __webpack_require__(248);
+	var _modalHtml = __webpack_require__(246);
 
 	var _modalHtml2 = _interopRequireDefault(_modalHtml);
 
 	// import polyfill for IE9
 
-	__webpack_require__(108);
+	__webpack_require__(106);
 
 	// this is directly linked to the bootstrap animation timing in _modal.scss
 	// // for browsers that do not support transitions like IE9 just change slide immediately
@@ -8492,13 +8486,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 248 */
+/* 246 */
 /***/ function(module, exports) {
 
-	module.exports = "<div style=\"display: none\">\r\n\t<div id=\"{{id}}\" class=\"modal\" v-bind:class=\"{ fade: fade, in: animateModal || !fade }\" style=\"display: block\" v-on:click=\"onClickOut($event)\">\r\n\t  \t<div class=\"modal-dialog  modal-{{size}}\" role=\"document\" style=\"z-index: 9999\">\r\n\t\t    <div class=\"modal-content\">\r\n\t\t        <div class=\"modal-header\">\r\n\t\t        \t<slot name=\"modal-header\"></slot>\r\n\t\t        </div>\r\n\t\t        <div class=\"modal-body\">\r\n\t\t        \t<slot name=\"modal-body\"></slot>\r\n\t\t        </div>\r\n\t\t        <div class=\"modal-footer\">\r\n\t\t        \t<slot name=\"modal-footer\"></slot>\r\n\t\t        </div>\r\n\t\t    </div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"modal-backdrop\" v-bind:class=\"{ fade: fade, in: animateBackdrop || !fade }\"></div>\r\n</div>";
+	module.exports = "<div style=\"display: none\">\n\t<div id=\"{{id}}\" class=\"modal\" v-bind:class=\"{ fade: fade, in: animateModal || !fade }\" style=\"display: block\" v-on:click=\"onClickOut($event)\">\n\t  \t<div class=\"modal-dialog  modal-{{size}}\" role=\"document\" style=\"z-index: 9999\">\n\t\t    <div class=\"modal-content\">\n\t\t        <div class=\"modal-header\">\n\t\t        \t<slot name=\"modal-header\"></slot>\n\t\t        </div>\n\t\t        <div class=\"modal-body\">\n\t\t        \t<slot name=\"modal-body\"></slot>\n\t\t        </div>\n\t\t        <div class=\"modal-footer\">\n\t\t        \t<slot name=\"modal-footer\"></slot>\n\t\t        </div>\n\t\t    </div>\n\t\t</div>\n\t</div>\n\t<div class=\"modal-backdrop\" v-bind:class=\"{ fade: fade, in: animateBackdrop || !fade }\"></div>\n</div>";
 
 /***/ },
-/* 249 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8509,19 +8503,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _navJson = __webpack_require__(250);
+	var _navJson = __webpack_require__(248);
 
 	var _navJson2 = _interopRequireDefault(_navJson);
 
-	var _navHtml = __webpack_require__(251);
+	var _navHtml = __webpack_require__(249);
 
 	var _navHtml2 = _interopRequireDefault(_navHtml);
 
-	var _snippetHtml = __webpack_require__(252);
+	var _snippetHtml = __webpack_require__(250);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsNav = __webpack_require__(253);
+	var _srcComponentsNav = __webpack_require__(251);
 
 	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(7);
 
@@ -8564,7 +8558,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 250 */
+/* 248 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -8623,19 +8617,19 @@
 	};
 
 /***/ },
+/* 249 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"controls\">\n\t\t<!-- Html controls start-->\n\t\t<label>\n\t\t\ttype\n\t\t\t<select v-model=\"type\">\n\t\t\t\t<option v-for=\"option in types\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<label>vertical <input type=\"checkbox\" v-model=\"vertical\"></label>\n\t\t<!-- Html controls end-->\n\t</div>\n\t<div slot=\"markup\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<vs-nav :type=\"type\" :vertical=\"vertical\">\n\t\t\t \t<vs-nav-item link=\"#\" v-on:click.prevent=\"\" active>Active</vs-nav-item>\n\t\t\t \t<vs-nav-item link=\"#\" v-on:click.prevent=\"\">Link</vs-nav-item>\n\t\t\t \t<vs-nav-item link=\"#\" v-on:click.prevent=\"\">Another Link</vs-nav-item>\n\t\t\t \t<vs-nav-item link=\"#\" v-on:click.prevent=\"\" disabled>Disabled</vs-nav-item>\n\t\t\t</vs-nav>\n\t\t\t<!-- Html markup end-->\n\t</div>\n</docs-demo>\t\n";
+
+/***/ },
+/* 250 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"default\"</span> <span class=\"hljs-attribute\">:vertical</span>=<span class=\"hljs-value\">\"false\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span> <span class=\"hljs-attribute\">active</span>&gt;</span>Active<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Link<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Another Link<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span> <span class=\"hljs-attribute\">disabled</span>&gt;</span>Disabled<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav</span>&gt;</span>";
+
+/***/ },
 /* 251 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>\r\n\t\t\ttype\r\n\t\t\t<select v-model=\"type\">\r\n\t\t\t\t<option v-for=\"option in types\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>vertical <input type=\"checkbox\" v-model=\"vertical\"></label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-nav :type=\"type\" :vertical=\"vertical\">\r\n\t\t\t \t<vs-nav-item link=\"#\" v-on:click.prevent=\"\" active>Active</vs-nav-item>\r\n\t\t\t \t<vs-nav-item link=\"#\" v-on:click.prevent=\"\">Link</vs-nav-item>\r\n\t\t\t \t<vs-nav-item link=\"#\" v-on:click.prevent=\"\">Another Link</vs-nav-item>\r\n\t\t\t \t<vs-nav-item link=\"#\" v-on:click.prevent=\"\" disabled>Disabled</vs-nav-item>\r\n\t\t\t</vs-nav>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 252 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"default\"</span> <span class=\"hljs-attribute\">:vertical</span>=<span class=\"hljs-value\">\"false\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span> <span class=\"hljs-attribute\">active</span>&gt;</span>Active<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Link<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Another Link<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span> <span class=\"hljs-attribute\">disabled</span>&gt;</span>Disabled<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav</span>&gt;</span>";
-
-/***/ },
-/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -8647,13 +8641,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(254);
+	__webpack_require__(252);
 
-	var _navHtml = __webpack_require__(256);
+	var _navHtml = __webpack_require__(254);
 
 	var _navHtml2 = _interopRequireDefault(_navHtml);
 
-	var _utilsHelpersJs = __webpack_require__(107);
+	var _utilsHelpersJs = __webpack_require__(105);
 
 	// export component object
 	var nav = {
@@ -8697,13 +8691,13 @@
 	exports.navItem = navItem;
 
 /***/ },
-/* 254 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(255);
+	var content = __webpack_require__(253);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -8723,7 +8717,7 @@
 	}
 
 /***/ },
-/* 255 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -8737,13 +8731,13 @@
 
 
 /***/ },
-/* 256 */
+/* 254 */
 /***/ function(module, exports) {
 
-	module.exports = "<ul v-bind:class=\"{'nav': true, 'nav-stacked': vertical, 'nav-pills': type == 'pills', 'navbar-nav': type == 'navbar' }\">\r\n  <slot></slot> \r\n</ul>";
+	module.exports = "<ul v-bind:class=\"{'nav': true, 'nav-stacked': vertical, 'nav-pills': type == 'pills', 'navbar-nav': type == 'navbar' }\">\n  <slot></slot> \n</ul>";
 
 /***/ },
-/* 257 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8754,21 +8748,21 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _navbarJson = __webpack_require__(258);
+	var _navbarJson = __webpack_require__(256);
 
 	var _navbarJson2 = _interopRequireDefault(_navbarJson);
 
-	var _navbarHtml = __webpack_require__(259);
+	var _navbarHtml = __webpack_require__(257);
 
 	var _navbarHtml2 = _interopRequireDefault(_navbarHtml);
 
-	var _snippetHtml = __webpack_require__(260);
+	var _snippetHtml = __webpack_require__(258);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsNav = __webpack_require__(253);
+	var _srcComponentsNav = __webpack_require__(251);
 
-	var _srcComponentsNavbar = __webpack_require__(261);
+	var _srcComponentsNavbar = __webpack_require__(259);
 
 	var _srcComponentsNavbar2 = _interopRequireDefault(_srcComponentsNavbar);
 
@@ -8776,7 +8770,7 @@
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -8819,7 +8813,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 258 */
+/* 256 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -8879,19 +8873,19 @@
 	};
 
 /***/ },
+/* 257 */
+/***/ function(module, exports) {
+
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"controls\">\n\t\t<!-- Html controls start-->\n\t\t<label>\n\t\t\tfixed\n\t\t\t<select v-model=\"fixed\">\n\t\t\t\t<option v-for=\"option in fixeds\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<label>\n\t\t\ttype\n\t\t\t<select v-model=\"type\">\n\t\t\t\t<option v-for=\"option in types\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<label>\n\t\t\tvariant\n\t\t\t<select v-model=\"variant\">\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<!-- Html controls end-->\n\t</div>\n\t<div slot=\"markup\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<vs-navbar :fixed=\"fixed\" :type=\"type\" :variant=\"variant\">\n\t\t\t  <a class=\"navbar-brand\" href=\"#\">Navbar</a>\n\t\t\t  <vs-nav type=\"navbar\" class=\"pull-xs-left\">\n\t\t\t    <vs-nav-item link=\"#\" active>Home <span class=\"sr-only\">(current)</span></vs-nav-item>\n\t\t\t    <vs-nav-item link=\"#\">Features</vs-nav-item>\n\t\t\t    <vs-nav-item link=\"#\">Pricing</vs-nav-item>\n\t\t\t    <vs-nav-item link=\"#\">About</vs-nav-item>\n\t\t\t  </vs-nav>\n\t\t\t  <form class=\"form-inline navbar-form pull-xs-right\">\n\t\t\t    <input class=\"form-control\" type=\"text\" placeholder=\"Search\">\n\t\t\t    <button class=\"btn btn-success-outline\" type=\"submit\">Search</button>\n\t\t\t  </form>\n\t\t\t</vs-navbar>\n\t\t\t<div v-if=\"fixed\">Look for navbar at the {{fixed}} :)</div>\n\t\t\t<!-- Html markup end-->\n\t</div>\n</docs-demo>\t\n";
+
+/***/ },
+/* 258 */
+/***/ function(module, exports) {
+
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-navbar</span> <span class=\"hljs-attribute\">fixed</span>=<span class=\"hljs-value\">\"top\"</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"light\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"default\"</span> <span class=\"hljs-attribute\">full</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"navbar-brand\"</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Navbar<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"navbar\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"pull-xs-left\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span> <span class=\"hljs-attribute\">active</span>&gt;</span>Home <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">span</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"sr-only\"</span>&gt;</span>(current)<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">span</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Features<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Pricing<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>About<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">form</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"form-inline navbar-form pull-xs-right\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">input</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"form-control\"</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"text\"</span> <span class=\"hljs-attribute\">placeholder</span>=<span class=\"hljs-value\">\"Search\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-success-outline\"</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"submit\"</span>&gt;</span>Search<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">form</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-navbar</span>&gt;</span>\n";
+
+/***/ },
 /* 259 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>\r\n\t\t\tfixed\r\n\t\t\t<select v-model=\"fixed\">\r\n\t\t\t\t<option v-for=\"option in fixeds\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>\r\n\t\t\ttype\r\n\t\t\t<select v-model=\"type\">\r\n\t\t\t\t<option v-for=\"option in types\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label>\r\n\t\t\tvariant\r\n\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-navbar :fixed=\"fixed\" :type=\"type\" :variant=\"variant\">\r\n\t\t\t  <a class=\"navbar-brand\" href=\"#\">Navbar</a>\r\n\t\t\t  <vs-nav type=\"navbar\" class=\"pull-xs-left\">\r\n\t\t\t    <vs-nav-item link=\"#\" active>Home <span class=\"sr-only\">(current)</span></vs-nav-item>\r\n\t\t\t    <vs-nav-item link=\"#\">Features</vs-nav-item>\r\n\t\t\t    <vs-nav-item link=\"#\">Pricing</vs-nav-item>\r\n\t\t\t    <vs-nav-item link=\"#\">About</vs-nav-item>\r\n\t\t\t  </vs-nav>\r\n\t\t\t  <form class=\"form-inline navbar-form pull-xs-right\">\r\n\t\t\t    <input class=\"form-control\" type=\"text\" placeholder=\"Search\">\r\n\t\t\t    <button class=\"btn btn-success-outline\" type=\"submit\">Search</button>\r\n\t\t\t  </form>\r\n\t\t\t</vs-navbar>\r\n\t\t\t<div v-if=\"fixed\">Look for navbar at the {{fixed}} :)</div>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 260 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-navbar</span> <span class=\"hljs-attribute\">fixed</span>=<span class=\"hljs-value\">\"top\"</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"light\"</span> <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"default\"</span> <span class=\"hljs-attribute\">full</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"navbar-brand\"</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Navbar<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"navbar\"</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"pull-xs-left\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span> <span class=\"hljs-attribute\">active</span>&gt;</span>Home <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">span</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"sr-only\"</span>&gt;</span>(current)<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">span</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Features<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Pricing<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-nav-item</span> <span class=\"hljs-attribute\">link</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>About<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav-item</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-nav</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">form</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"form-inline navbar-form pull-xs-right\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">input</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"form-control\"</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"text\"</span> <span class=\"hljs-attribute\">placeholder</span>=<span class=\"hljs-value\">\"Search\"</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn btn-success-outline\"</span> <span class=\"hljs-attribute\">type</span>=<span class=\"hljs-value\">\"submit\"</span>&gt;</span>Search<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">form</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-navbar</span>&gt;</span>\r\n";
-
-/***/ },
-/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -8903,7 +8897,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _navbarHtml = __webpack_require__(262);
+	var _navbarHtml = __webpack_require__(260);
 
 	var _navbarHtml2 = _interopRequireDefault(_navbarHtml);
 
@@ -8944,13 +8938,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 262 */
+/* 260 */
 /***/ function(module, exports) {
 
-	module.exports = "<nav class=\"navbar {{navbarType}} {{navbarVariant}} {{navbarfixed}} {{full ? 'navbar-full' : ''}}\">\r\n\t<slot></slot>\r\n</nav>";
+	module.exports = "<nav class=\"navbar {{navbarType}} {{navbarVariant}} {{navbarfixed}} {{full ? 'navbar-full' : ''}}\">\n\t<slot></slot>\n</nav>";
 
 /***/ },
-/* 263 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8961,135 +8955,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _pagerJson = __webpack_require__(264);
-
-	var _pagerJson2 = _interopRequireDefault(_pagerJson);
-
-	var _pagerHtml = __webpack_require__(265);
-
-	var _pagerHtml2 = _interopRequireDefault(_pagerHtml);
-
-	var _snippetHtml = __webpack_require__(266);
-
-	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
-
-	var _srcComponentsPager = __webpack_require__(267);
-
-	var _srcComponentsPager2 = _interopRequireDefault(_srcComponentsPager);
-
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(7);
-
-	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
-
-	exports['default'] = {
-	  route: {
-	    url: '/pager',
-	    name: 'pager',
-	    title: 'Pager'
-	  },
-	  template: _pagerHtml2['default'],
-	  data: function data() {
-	    return {
-	      meta: _pagerJson2['default'],
-	      snippet: _snippetHtml2['default'],
-	      vertical: false,
-	      type: 'default',
-	      types: [{ text: 'default', value: 'default' }, { text: 'pills', value: 'pills' }]
-	    };
-	  },
-	  components: {
-	    vsPager: _srcComponentsPager2['default'],
-	    docsDemo: _vuestrapDocsSrcComponentsDemo2['default']
-	  }
-	};
-	module.exports = exports['default'];
-
-/***/ },
-/* 264 */
-/***/ function(module, exports) {
-
-	module.exports = {
-		"name": "pager",
-		"title": "Pager",
-		"description": "Quick previous and next links for simple pagination implementations with light markup and styles. It’s great for simple sites like blogs or magazines.",
-		"dependencies": [],
-		"category": "components",
-		"browserSupport": {
-			"browsers": [
-				"IE9+",
-				"Android 4.3"
-			]
-		},
-		"options": []
-	};
-
-/***/ },
-/* 265 */
-/***/ function(module, exports) {
-
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-pager>\r\n\t\t\t\t<li><a href=\"#\">Previous</a></li>\r\n    \t\t<li><a href=\"#\">Next</a></li>\r\n    \t</vs-pager>\r\n    \t<hr>\r\n    \t<vs-pager>\r\n\t\t\t\t<li class=\"pager-prev\"><a href=\"#\">Older</a></li>\r\n    \t\t<li class=\"pager-next\"><a href=\"#\">Newer</a></li>\r\n    \t</vs-pager>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
-
-/***/ },
-/* 266 */
-/***/ function(module, exports) {
-
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-pager</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Previous<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Next<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-pager</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">hr</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-pager</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"pager-prev\"</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Older<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"pager-next\"</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"#\"</span>&gt;</span>Newer<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-pager</span>&gt;</span>\r\n";
-
-/***/ },
-/* 267 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	var _pagerHtml = __webpack_require__(268);
-
-	var _pagerHtml2 = _interopRequireDefault(_pagerHtml);
-
-	// export component object
-	exports['default'] = {
-	  template: _pagerHtml2['default'],
-	  replace: true
-	};
-	module.exports = exports['default'];
-
-/***/ },
-/* 268 */
-/***/ function(module, exports) {
-
-	module.exports = "<nav>\r\n  <ul class=\"pager\">\r\n  \t<slot></slot>\r\n  </ul>\r\n</nav>";
-
-/***/ },
-/* 269 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	var _paginationJson = __webpack_require__(270);
+	var _paginationJson = __webpack_require__(262);
 
 	var _paginationJson2 = _interopRequireDefault(_paginationJson);
 
-	var _paginationHtml = __webpack_require__(271);
+	var _paginationHtml = __webpack_require__(263);
 
 	var _paginationHtml2 = _interopRequireDefault(_paginationHtml);
 
-	var _snippetHtml = __webpack_require__(272);
+	var _snippetHtml = __webpack_require__(264);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsPagination = __webpack_require__(273);
+	var _srcComponentsPagination = __webpack_require__(265);
 
 	var _srcComponentsPagination2 = _interopRequireDefault(_srcComponentsPagination);
 
@@ -9097,7 +8975,7 @@
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -9128,7 +9006,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 270 */
+/* 262 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -9201,19 +9079,19 @@
 	};
 
 /***/ },
-/* 271 */
+/* 263 */
 /***/ function(module, exports) {
 
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>\r\n\t\t\t\tsize\r\n\t\t\t\t<select v-model=\"size\">\r\n\t\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t\t    {{ option.text }}\r\n\t\t\t\t  </option>\r\n\t\t\t\t</select>\r\n\t\t\t</label>\r\n\r\n\t\t\t<label>\r\n\t\t\t\tvariant\r\n\t\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t\t    {{ option.text }}\r\n\t\t\t\t  </option>\r\n\t\t\t\t</select>\r\n\t\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-pagination\r\n\t\t\t    :size=\"size\"\r\n\t\t\t    :variant=\"variant\"\r\n\t\t\t    :total-rows=\"totalRows\"\r\n\t\t\t    :current-page.sync=\"currentPage\"\r\n\t\t\t    :per-page=\"perPage\">\r\n\t\t\t</vs-pagination>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"controls\">\n\t\t<!-- Html controls start-->\n\t\t<label>\n\t\t\t\tsize\n\t\t\t\t<select v-model=\"size\">\n\t\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\n\t\t\t\t    {{ option.text }}\n\t\t\t\t  </option>\n\t\t\t\t</select>\n\t\t\t</label>\n\n\t\t\t<label>\n\t\t\t\tvariant\n\t\t\t\t<select v-model=\"variant\">\n\t\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\n\t\t\t\t    {{ option.text }}\n\t\t\t\t  </option>\n\t\t\t\t</select>\n\t\t\t</label>\n\t\t<!-- Html controls end-->\n\t</div>\n\t<div slot=\"markup\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<vs-pagination\n\t\t\t    :size=\"size\"\n\t\t\t    :variant=\"variant\"\n\t\t\t    :total-rows=\"totalRows\"\n\t\t\t    :current-page.sync=\"currentPage\"\n\t\t\t    :per-page=\"perPage\">\n\t\t\t</vs-pagination>\n\t\t\t<!-- Html markup end-->\n\t</div>\n</docs-demo>\t\n";
 
 /***/ },
-/* 272 */
+/* 264 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-pagination</span> \r\n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\r\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\r\n  <span class=\"hljs-attribute\">:total-rows</span>=<span class=\"hljs-value\">\"100\"</span>\r\n  <span class=\"hljs-attribute\">:current-page</span>=<span class=\"hljs-value\">\"currentPageVariable\"</span>\r\n  <span class=\"hljs-attribute\">:per-page</span>=<span class=\"hljs-value\">\"10\"</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-pagination</span>&gt;</span>\r\n";
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-pagination</span> \n  <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span>\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\n  <span class=\"hljs-attribute\">:total-rows</span>=<span class=\"hljs-value\">\"100\"</span>\n  <span class=\"hljs-attribute\">:current-page</span>=<span class=\"hljs-value\">\"currentPageVariable\"</span>\n  <span class=\"hljs-attribute\">:per-page</span>=<span class=\"hljs-value\">\"10\"</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-pagination</span>&gt;</span>\n";
 
 /***/ },
-/* 273 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -9225,7 +9103,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _paginationHtml = __webpack_require__(274);
+	var _paginationHtml = __webpack_require__(266);
 
 	var _paginationHtml2 = _interopRequireDefault(_paginationHtml);
 
@@ -9318,13 +9196,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 274 */
+/* 266 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"btn-group pagination\" role=\"group\" aria-label=\"Pagination\">\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == 1 \" v-on:click.prevent=\"(currentPage == 1) ? return : currentPage--\"><span aria-hidden=\"true\">&laquo;</span></button>\r\n    <button type=\"button\" class=\"btn  btn-secondary {{btnSize}} {{ currentPage == 1 ?  'active' : '' }}\" v-on:click.prevent=\"currentPage = 1\" v-show=\"showPrev\">1</button>\r\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showPrev\">...</span>\r\n    <button type=\"button\"\r\n    \tclass=\"btn {{btnSize}} {{btnVariant($index)}} {{ $index + diff == currentPage ? 'active' : '' }} {{ $index + diff != currentPage ? 'hidden-xs-down' : '' }}\"\r\n    \tv-for=\"item in pageLinks\"\r\n        v-on:click.prevent=\"currentPage = $index + diff\">{{$index + diff}}\r\n    </button>\r\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showNext\">...</span>\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}} {{ numberOfPages == currentPage ? 'active' : '' }}\" v-show=\"showNext\" v-on:click.prevent=\"currentPage = numberOfPages\">{{numberOfPages}}</button>\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == numberOfPages\" v-on:click.prevent=\"(currentPage == numberOfPages) ? return : currentPage++\"><span aria-hidden=\"true\">&raquo;</span></button>\r\n</div>\r\n";
+	module.exports = "<div class=\"btn-group pagination\" role=\"group\" aria-label=\"Pagination\">\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == 1 \" v-on:click.prevent=\"(currentPage == 1) ? return : currentPage--\"><span aria-hidden=\"true\">&laquo;</span></button>\n    <button type=\"button\" class=\"btn  btn-secondary {{btnSize}} {{ currentPage == 1 ?  'active' : '' }}\" v-on:click.prevent=\"currentPage = 1\" v-show=\"showPrev\">1</button>\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showPrev\">...</span>\n    <button type=\"button\"\n    \tclass=\"btn {{btnSize}} {{btnVariant($index)}} {{ $index + diff == currentPage ? 'active' : '' }} {{ $index + diff != currentPage ? 'hidden-xs-down' : '' }}\"\n    \tv-for=\"item in pageLinks\"\n        v-on:click.prevent=\"currentPage = $index + diff\">{{$index + diff}}\n    </button>\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showNext\">...</span>\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}} {{ numberOfPages == currentPage ? 'active' : '' }}\" v-show=\"showNext\" v-on:click.prevent=\"currentPage = numberOfPages\">{{numberOfPages}}</button>\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == numberOfPages\" v-on:click.prevent=\"(currentPage == numberOfPages) ? return : currentPage++\"><span aria-hidden=\"true\">&raquo;</span></button>\n</div>\n";
 
 /***/ },
-/* 275 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9335,19 +9213,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _popoverJson = __webpack_require__(276);
+	var _popoverJson = __webpack_require__(268);
 
 	var _popoverJson2 = _interopRequireDefault(_popoverJson);
 
-	var _popoverHtml = __webpack_require__(277);
+	var _popoverHtml = __webpack_require__(269);
 
 	var _popoverHtml2 = _interopRequireDefault(_popoverHtml);
 
-	var _snippetHtml = __webpack_require__(278);
+	var _snippetHtml = __webpack_require__(270);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsPopover = __webpack_require__(279);
+	var _srcComponentsPopover = __webpack_require__(271);
 
 	var _srcComponentsPopover2 = _interopRequireDefault(_srcComponentsPopover);
 
@@ -9376,7 +9254,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 276 */
+/* 268 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -9437,19 +9315,19 @@
 	};
 
 /***/ },
-/* 277 */
+/* 269 */
 /***/ function(module, exports) {
 
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"markup\">\r\n\t\t<vs-popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"top\">\r\n\t\t\t<button class=\"btn\">popover top</button>\r\n\t\t</vs-popover>\r\n\t\t<vs-popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"bottom\">\r\n\t\t\t<button class=\"btn\">popover bottom</button>\r\n\t\t</vs-popover>\r\n\t\t<vs-popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"left\">\r\n\t\t\t<button class=\"btn\">popover left</button>\r\n\t\t</vs-popover>\r\n\t\t<vs-popover title=\"title\" position=\"right\">\r\n\t\t\t<button class=\"btn\">popover right (html)</button>\r\n\t\t\t<em slot=\"content\">Lorem ipsum dolor.</em>\r\n\t\t</vs-popover>\r\n\t</div>\r\n</docs-demo>\t\r\n";
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"markup\">\n\t\t<vs-popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"top\">\n\t\t\t<button class=\"btn\">popover top</button>\n\t\t</vs-popover>\n\t\t<vs-popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"bottom\">\n\t\t\t<button class=\"btn\">popover bottom</button>\n\t\t</vs-popover>\n\t\t<vs-popover title=\"title\" text=\"Lorem ipsum dolor.\" position=\"left\">\n\t\t\t<button class=\"btn\">popover left</button>\n\t\t</vs-popover>\n\t\t<vs-popover title=\"title\" position=\"right\">\n\t\t\t<button class=\"btn\">popover right (html)</button>\n\t\t\t<em slot=\"content\">Lorem ipsum dolor.</em>\n\t\t</vs-popover>\n\t</div>\n</docs-demo>\t\n";
 
 /***/ },
-/* 278 */
+/* 270 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"hljs-comment\">&lt;!-- tooltip with a text --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-popover</span> <span class=\"hljs-attribute\">title</span>=<span class=\"hljs-value\">\"title\"</span> <span class=\"hljs-attribute\">text</span>=<span class=\"hljs-value\">\"Lorem ipsum dolor.\"</span> <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"top\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn\"</span>&gt;</span>popover top<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-popover</span>&gt;</span>\r\n\r\n\r\n<span class=\"hljs-comment\">&lt;!-- tooltip with an html content --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-popover</span> <span class=\"hljs-attribute\">title</span>=<span class=\"hljs-value\">\"title\"</span> <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"right\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn\"</span>&gt;</span>popover right (html)<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">em</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"content\"</span>&gt;</span>Lorem ipsum dolor.<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">em</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-popover</span>&gt;</span>";
+	module.exports = "<span class=\"hljs-comment\">&lt;!-- tooltip with a text --&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-popover</span> <span class=\"hljs-attribute\">title</span>=<span class=\"hljs-value\">\"title\"</span> <span class=\"hljs-attribute\">text</span>=<span class=\"hljs-value\">\"Lorem ipsum dolor.\"</span> <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"top\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn\"</span>&gt;</span>popover top<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-popover</span>&gt;</span>\n\n\n<span class=\"hljs-comment\">&lt;!-- tooltip with an html content --&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-popover</span> <span class=\"hljs-attribute\">title</span>=<span class=\"hljs-value\">\"title\"</span> <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"right\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn\"</span>&gt;</span>popover right (html)<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">em</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"content\"</span>&gt;</span>Lorem ipsum dolor.<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">em</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-popover</span>&gt;</span>";
 
 /***/ },
-/* 279 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -9461,13 +9339,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _tether = __webpack_require__(280);
+	var _tether = __webpack_require__(272);
 
 	var _tether2 = _interopRequireDefault(_tether);
 
-	__webpack_require__(281);
+	__webpack_require__(273);
 
-	var _popoverHtml = __webpack_require__(283);
+	var _popoverHtml = __webpack_require__(275);
 
 	var _popoverHtml2 = _interopRequireDefault(_popoverHtml);
 
@@ -9650,10 +9528,10 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 280 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! tether 1.1.0 */
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! tether 1.3.7 */
 
 	(function(root, factory) {
 	  if (true) {
@@ -9676,24 +9554,55 @@
 	  TetherBase = { modules: [] };
 	}
 
-	function getScrollParent(el) {
-	  var _getComputedStyle = getComputedStyle(el);
+	var zeroElement = null;
 
-	  var position = _getComputedStyle.position;
+	// Same as native getBoundingClientRect, except it takes into account parent <frame> offsets
+	// if the element lies within a nested document (<frame> or <iframe>-like).
+	function getActualBoundingClientRect(node) {
+	  var boundingRect = node.getBoundingClientRect();
+
+	  // The original object returned by getBoundingClientRect is immutable, so we clone it
+	  // We can't use extend because the properties are not considered part of the object by hasOwnProperty in IE9
+	  var rect = {};
+	  for (var k in boundingRect) {
+	    rect[k] = boundingRect[k];
+	  }
+
+	  if (node.ownerDocument !== document) {
+	    var _frameElement = node.ownerDocument.defaultView.frameElement;
+	    if (_frameElement) {
+	      var frameRect = getActualBoundingClientRect(_frameElement);
+	      rect.top += frameRect.top;
+	      rect.bottom += frameRect.top;
+	      rect.left += frameRect.left;
+	      rect.right += frameRect.left;
+	    }
+	  }
+
+	  return rect;
+	}
+
+	function getScrollParents(el) {
+	  // In firefox if the el is inside an iframe with display: none; window.getComputedStyle() will return null;
+	  // https://bugzilla.mozilla.org/show_bug.cgi?id=548397
+	  var computedStyle = getComputedStyle(el) || {};
+	  var position = computedStyle.position;
+	  var parents = [];
 
 	  if (position === 'fixed') {
-	    return el;
+	    return [el];
 	  }
 
 	  var parent = el;
-	  while (parent = parent.parentNode) {
+	  while ((parent = parent.parentNode) && parent && parent.nodeType === 1) {
 	    var style = undefined;
 	    try {
 	      style = getComputedStyle(parent);
 	    } catch (err) {}
 
 	    if (typeof style === 'undefined' || style === null) {
-	      return parent;
+	      parents.push(parent);
+	      return parents;
 	    }
 
 	    var _style = style;
@@ -9703,12 +9612,19 @@
 
 	    if (/(auto|scroll)/.test(overflow + overflowY + overflowX)) {
 	      if (position !== 'absolute' || ['relative', 'absolute', 'fixed'].indexOf(style.position) >= 0) {
-	        return parent;
+	        parents.push(parent);
 	      }
 	    }
 	  }
 
-	  return document.body;
+	  parents.push(el.ownerDocument.body);
+
+	  // If the node is within a frame, account for the parent window scroll
+	  if (el.ownerDocument !== document) {
+	    parents.push(el.ownerDocument.defaultView);
+	  }
+
+	  return parents;
 	}
 
 	var uniqueId = (function () {
@@ -9719,14 +9635,14 @@
 	})();
 
 	var zeroPosCache = {};
-	var getOrigin = function getOrigin(doc) {
+	var getOrigin = function getOrigin() {
 	  // getBoundingClientRect is unfortunately too accurate.  It introduces a pixel or two of
 	  // jitter as the user scrolls that messes with our ability to detect if two positions
 	  // are equivilant or not.  We place an element at the top left of the page that will
 	  // get the same jitter, so we can cancel the two out.
-	  var node = doc._tetherZeroElement;
-	  if (typeof node === 'undefined') {
-	    node = doc.createElement('div');
+	  var node = zeroElement;
+	  if (!node) {
+	    node = document.createElement('div');
 	    node.setAttribute('data-tether-id', uniqueId());
 	    extend(node.style, {
 	      top: 0,
@@ -9734,20 +9650,14 @@
 	      position: 'absolute'
 	    });
 
-	    doc.body.appendChild(node);
+	    document.body.appendChild(node);
 
-	    doc._tetherZeroElement = node;
+	    zeroElement = node;
 	  }
 
 	  var id = node.getAttribute('data-tether-id');
 	  if (typeof zeroPosCache[id] === 'undefined') {
-	    zeroPosCache[id] = {};
-
-	    var rect = node.getBoundingClientRect();
-	    for (var k in rect) {
-	      // Can't use extend, as on IE9, elements don't resolve to be hasOwnProperty
-	      zeroPosCache[id][k] = rect[k];
-	    }
+	    zeroPosCache[id] = getActualBoundingClientRect(node);
 
 	    // Clear the cache when this position call is done
 	    defer(function () {
@@ -9756,6 +9666,13 @@
 	  }
 
 	  return zeroPosCache[id];
+	};
+
+	function removeUtilElements() {
+	  if (zeroElement) {
+	    document.body.removeChild(zeroElement);
+	  }
+	  zeroElement = null;
 	};
 
 	function getBounds(el) {
@@ -9769,15 +9686,9 @@
 
 	  var docEl = doc.documentElement;
 
-	  var box = {};
-	  // The original object returned by getBoundingClientRect is immutable, so we clone it
-	  // We can't use extend because the properties are not considered part of the object by hasOwnProperty in IE9
-	  var rect = el.getBoundingClientRect();
-	  for (var k in rect) {
-	    box[k] = rect[k];
-	  }
+	  var box = getActualBoundingClientRect(el);
 
-	  var origin = getOrigin(doc);
+	  var origin = getOrigin();
 
 	  box.top -= origin.top;
 	  box.left -= origin.left;
@@ -9801,7 +9712,11 @@
 	  return el.offsetParent || document.documentElement;
 	}
 
+	var _scrollBarSize = null;
 	function getScrollBarSize() {
+	  if (_scrollBarSize) {
+	    return _scrollBarSize;
+	  }
 	  var inner = document.createElement('div');
 	  inner.style.width = '100%';
 	  inner.style.height = '200px';
@@ -9834,7 +9749,8 @@
 
 	  var width = widthContained - widthScroll;
 
-	  return { width: width, height: width };
+	  _scrollBarSize = { width: width, height: width };
+	  return _scrollBarSize;
 	}
 
 	function extend() {
@@ -9894,7 +9810,9 @@
 	}
 
 	function getClassName(el) {
-	  if (el.className instanceof SVGAnimatedString) {
+	  // Can't use just SVGAnimatedString here since nodes within a Frame in IE have
+	  // completely separately SVGAnimatedString base classes
+	  if (el.className instanceof el.ownerDocument.defaultView.SVGAnimatedString) {
 	    return el.className.baseVal;
 	  }
 	  return el.className;
@@ -9959,7 +9877,7 @@
 	  }, {
 	    key: 'off',
 	    value: function off(event, handler) {
-	      if (typeof this.bindings !== 'undefined' && typeof this.bindings[event] !== 'undefined') {
+	      if (typeof this.bindings === 'undefined' || typeof this.bindings[event] === 'undefined') {
 	        return;
 	      }
 
@@ -10013,7 +9931,8 @@
 	})();
 
 	TetherBase.Utils = {
-	  getScrollParent: getScrollParent,
+	  getActualBoundingClientRect: getActualBoundingClientRect,
+	  getScrollParents: getScrollParents,
 	  getBounds: getBounds,
 	  getOffsetParent: getOffsetParent,
 	  extend: extend,
@@ -10025,7 +9944,8 @@
 	  flush: flush,
 	  uniqueId: uniqueId,
 	  Evented: Evented,
-	  getScrollBarSize: getScrollBarSize
+	  getScrollBarSize: getScrollBarSize,
+	  removeUtilElements: removeUtilElements
 	};
 	/* globals TetherBase, performance */
 
@@ -10035,14 +9955,18 @@
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
+	var _get = function get(_x6, _x7, _x8) { var _again = true; _function: while (_again) { var object = _x6, property = _x7, receiver = _x8; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x6 = parent; _x7 = property; _x8 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	if (typeof TetherBase === 'undefined') {
 	  throw new Error('You must include the utils.js file before tether.js');
 	}
 
 	var _TetherBase$Utils = TetherBase.Utils;
-	var getScrollParent = _TetherBase$Utils.getScrollParent;
+	var getScrollParents = _TetherBase$Utils.getScrollParents;
 	var getBounds = _TetherBase$Utils.getBounds;
 	var getOffsetParent = _TetherBase$Utils.getOffsetParent;
 	var extend = _TetherBase$Utils.extend;
@@ -10052,6 +9976,7 @@
 	var defer = _TetherBase$Utils.defer;
 	var flush = _TetherBase$Utils.flush;
 	var getScrollBarSize = _TetherBase$Utils.getScrollBarSize;
+	var removeUtilElements = _TetherBase$Utils.removeUtilElements;
 
 	function within(a, b) {
 	  var diff = arguments.length <= 2 || arguments[2] === undefined ? 1 : arguments[2];
@@ -10065,7 +9990,7 @@
 	  }
 	  var el = document.createElement('div');
 
-	  var transforms = ['transform', 'webkitTransform', 'OTransform', 'MozTransform', 'msTransform'];
+	  var transforms = ['transform', 'WebkitTransform', 'OTransform', 'MozTransform', 'msTransform'];
 	  for (var i = 0; i < transforms.length; ++i) {
 	    var key = transforms[i];
 	    if (el.style[key] !== undefined) {
@@ -10110,7 +10035,7 @@
 	      return;
 	    }
 
-	    if (typeof pendingTimeout !== 'undefined') {
+	    if (pendingTimeout != null) {
 	      clearTimeout(pendingTimeout);
 	      pendingTimeout = null;
 	    }
@@ -10120,7 +10045,7 @@
 	    lastDuration = now() - lastCall;
 	  };
 
-	  if (typeof window !== 'undefined') {
+	  if (typeof window !== 'undefined' && typeof window.addEventListener !== 'undefined') {
 	    ['resize', 'scroll', 'touchmove'].forEach(function (event) {
 	      window.addEventListener(event, tick);
 	    });
@@ -10226,12 +10151,15 @@
 	};
 	var parseAttachment = parseOffset;
 
-	var TetherClass = (function () {
+	var TetherClass = (function (_Evented) {
+	  _inherits(TetherClass, _Evented);
+
 	  function TetherClass(options) {
 	    var _this = this;
 
 	    _classCallCheck(this, TetherClass);
 
+	    _get(Object.getPrototypeOf(TetherClass.prototype), 'constructor', this).call(this);
 	    this.position = this.position.bind(this);
 
 	    tethers.push(this);
@@ -10322,14 +10250,14 @@
 	      this.offset = parseOffset(this.options.offset);
 	      this.targetOffset = parseOffset(this.options.targetOffset);
 
-	      if (typeof this.scrollParent !== 'undefined') {
+	      if (typeof this.scrollParents !== 'undefined') {
 	        this.disable();
 	      }
 
 	      if (this.targetModifier === 'scroll-handle') {
-	        this.scrollParent = this.target;
+	        this.scrollParents = [this.target];
 	      } else {
-	        this.scrollParent = getScrollParent(this.target);
+	        this.scrollParents = getScrollParents(this.target);
 	      }
 
 	      if (!(this.options.enabled === false)) {
@@ -10450,6 +10378,8 @@
 	  }, {
 	    key: 'enable',
 	    value: function enable() {
+	      var _this3 = this;
+
 	      var pos = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
 
 	      if (!(this.options.addTargetClasses === false)) {
@@ -10458,9 +10388,11 @@
 	      addClass(this.element, this.getClass('enabled'));
 	      this.enabled = true;
 
-	      if (this.scrollParent !== document) {
-	        this.scrollParent.addEventListener('scroll', this.position);
-	      }
+	      this.scrollParents.forEach(function (parent) {
+	        if (parent !== _this3.target.ownerDocument) {
+	          parent.addEventListener('scroll', _this3.position);
+	        }
+	      });
 
 	      if (pos) {
 	        this.position();
@@ -10469,32 +10401,40 @@
 	  }, {
 	    key: 'disable',
 	    value: function disable() {
+	      var _this4 = this;
+
 	      removeClass(this.target, this.getClass('enabled'));
 	      removeClass(this.element, this.getClass('enabled'));
 	      this.enabled = false;
 
-	      if (typeof this.scrollParent !== 'undefined') {
-	        this.scrollParent.removeEventListener('scroll', this.position);
+	      if (typeof this.scrollParents !== 'undefined') {
+	        this.scrollParents.forEach(function (parent) {
+	          parent.removeEventListener('scroll', _this4.position);
+	        });
 	      }
 	    }
 	  }, {
 	    key: 'destroy',
 	    value: function destroy() {
-	      var _this3 = this;
+	      var _this5 = this;
 
 	      this.disable();
 
 	      tethers.forEach(function (tether, i) {
-	        if (tether === _this3) {
+	        if (tether === _this5) {
 	          tethers.splice(i, 1);
-	          return;
 	        }
 	      });
+
+	      // Remove any elements we were using for convenience from the DOM
+	      if (tethers.length === 0) {
+	        removeUtilElements();
+	      }
 	    }
 	  }, {
 	    key: 'updateAttachClasses',
 	    value: function updateAttachClasses(elementAttach, targetAttach) {
-	      var _this4 = this;
+	      var _this6 = this;
 
 	      elementAttach = elementAttach || this.attachment;
 	      targetAttach = targetAttach || this.targetAttachment;
@@ -10527,27 +10467,27 @@
 
 	      var all = [];
 	      sides.forEach(function (side) {
-	        all.push(_this4.getClass('element-attached') + '-' + side);
-	        all.push(_this4.getClass('target-attached') + '-' + side);
+	        all.push(_this6.getClass('element-attached') + '-' + side);
+	        all.push(_this6.getClass('target-attached') + '-' + side);
 	      });
 
 	      defer(function () {
-	        if (!(typeof _this4._addAttachClasses !== 'undefined')) {
+	        if (!(typeof _this6._addAttachClasses !== 'undefined')) {
 	          return;
 	        }
 
-	        updateClasses(_this4.element, _this4._addAttachClasses, all);
-	        if (!(_this4.options.addTargetClasses === false)) {
-	          updateClasses(_this4.target, _this4._addAttachClasses, all);
+	        updateClasses(_this6.element, _this6._addAttachClasses, all);
+	        if (!(_this6.options.addTargetClasses === false)) {
+	          updateClasses(_this6.target, _this6._addAttachClasses, all);
 	        }
 
-	        delete _this4._addAttachClasses;
+	        delete _this6._addAttachClasses;
 	      });
 	    }
 	  }, {
 	    key: 'position',
 	    value: function position() {
-	      var _this5 = this;
+	      var _this7 = this;
 
 	      var flushChanges = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
 
@@ -10566,7 +10506,7 @@
 	      this.updateAttachClasses(this.attachment, targetAttachment);
 
 	      var elementPos = this.cache('element-bounds', function () {
-	        return getBounds(_this5.element);
+	        return getBounds(_this7.element);
 	      });
 
 	      var width = elementPos.width;
@@ -10584,7 +10524,7 @@
 	      }
 
 	      var targetPos = this.cache('target-bounds', function () {
-	        return _this5.getTargetBounds();
+	        return _this7.getTargetBounds();
 	      });
 	      var targetSize = targetPos;
 
@@ -10649,29 +10589,32 @@
 	        }
 	      };
 
+	      var doc = this.target.ownerDocument;
+	      var win = doc.defaultView;
+
 	      var scrollbarSize = undefined;
-	      if (document.body.scrollWidth > window.innerWidth) {
+	      if (win.innerHeight > doc.documentElement.clientHeight) {
 	        scrollbarSize = this.cache('scrollbar-size', getScrollBarSize);
 	        next.viewport.bottom -= scrollbarSize.height;
 	      }
 
-	      if (document.body.scrollHeight > window.innerHeight) {
+	      if (win.innerWidth > doc.documentElement.clientWidth) {
 	        scrollbarSize = this.cache('scrollbar-size', getScrollBarSize);
 	        next.viewport.right -= scrollbarSize.width;
 	      }
 
-	      if (['', 'static'].indexOf(document.body.style.position) === -1 || ['', 'static'].indexOf(document.body.parentElement.style.position) === -1) {
+	      if (['', 'static'].indexOf(doc.body.style.position) === -1 || ['', 'static'].indexOf(doc.body.parentElement.style.position) === -1) {
 	        // Absolute positioning in the body will be relative to the page, not the 'initial containing block'
-	        next.page.bottom = document.body.scrollHeight - top - height;
-	        next.page.right = document.body.scrollWidth - left - width;
+	        next.page.bottom = doc.body.scrollHeight - top - height;
+	        next.page.right = doc.body.scrollWidth - left - width;
 	      }
 
 	      if (typeof this.options.optimizations !== 'undefined' && this.options.optimizations.moveElement !== false && !(typeof this.targetModifier !== 'undefined')) {
 	        (function () {
-	          var offsetParent = _this5.cache('target-offsetparent', function () {
-	            return getOffsetParent(_this5.target);
+	          var offsetParent = _this7.cache('target-offsetparent', function () {
+	            return getOffsetParent(_this7.target);
 	          });
-	          var offsetPosition = _this5.cache('target-offsetparent-bounds', function () {
+	          var offsetPosition = _this7.cache('target-offsetparent-bounds', function () {
 	            return getBounds(offsetParent);
 	          });
 	          var offsetParentStyle = getComputedStyle(offsetParent);
@@ -10682,8 +10625,8 @@
 	            offsetBorder[side.toLowerCase()] = parseFloat(offsetParentStyle['border' + side + 'Width']);
 	          });
 
-	          offsetPosition.right = document.body.scrollWidth - offsetPosition.left - offsetParentSize.width + offsetBorder.right;
-	          offsetPosition.bottom = document.body.scrollHeight - offsetPosition.top - offsetParentSize.height + offsetBorder.bottom;
+	          offsetPosition.right = doc.body.scrollWidth - offsetPosition.left - offsetParentSize.width + offsetBorder.right;
+	          offsetPosition.bottom = doc.body.scrollHeight - offsetPosition.top - offsetParentSize.height + offsetBorder.bottom;
 
 	          if (next.page.top >= offsetPosition.top + offsetBorder.top && next.page.bottom >= offsetPosition.bottom) {
 	            if (next.page.left >= offsetPosition.left + offsetBorder.left && next.page.right >= offsetPosition.right) {
@@ -10724,7 +10667,7 @@
 	  }, {
 	    key: 'move',
 	    value: function move(pos) {
-	      var _this6 = this;
+	      var _this8 = this;
 
 	      if (!(typeof this.element.parentNode !== 'undefined')) {
 	        return;
@@ -10755,8 +10698,8 @@
 	      var css = { top: '', left: '', right: '', bottom: '' };
 
 	      var transcribe = function transcribe(_same, _pos) {
-	        var hasOptimizations = typeof _this6.options.optimizations !== 'undefined';
-	        var gpu = hasOptimizations ? _this6.options.optimizations.gpu : null;
+	        var hasOptimizations = typeof _this8.options.optimizations !== 'undefined';
+	        var gpu = hasOptimizations ? _this8.options.optimizations.gpu : null;
 	        if (gpu !== false) {
 	          var yPos = undefined,
 	              xPos = undefined;
@@ -10776,7 +10719,16 @@
 	            xPos = -_pos.right;
 	          }
 
-	          css[transformKey] = 'translateX(' + Math.round(xPos) + 'px) translateY(' + Math.round(yPos) + 'px)';
+	          if (window.matchMedia) {
+	            // HubSpot/tether#207
+	            var retina = window.matchMedia('only screen and (min-resolution: 1.3dppx)').matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 1.3)').matches;
+	            if (!retina) {
+	              xPos = Math.round(xPos);
+	              yPos = Math.round(yPos);
+	            }
+	          }
+
+	          css[transformKey] = 'translateX(' + xPos + 'px) translateY(' + yPos + 'px)';
 
 	          if (transformKey !== 'msTransform') {
 	            // The Z transform will keep this in the GPU (faster, and prevents artifacts),
@@ -10808,14 +10760,14 @@
 	      } else if (typeof same.offset !== 'undefined' && same.offset.top && same.offset.left) {
 	        (function () {
 	          css.position = 'absolute';
-	          var offsetParent = _this6.cache('target-offsetparent', function () {
-	            return getOffsetParent(_this6.target);
+	          var offsetParent = _this8.cache('target-offsetparent', function () {
+	            return getOffsetParent(_this8.target);
 	          });
 
-	          if (getOffsetParent(_this6.element) !== offsetParent) {
+	          if (getOffsetParent(_this8.element) !== offsetParent) {
 	            defer(function () {
-	              _this6.element.parentNode.removeChild(_this6.element);
-	              offsetParent.appendChild(_this6.element);
+	              _this8.element.parentNode.removeChild(_this8.element);
+	              offsetParent.appendChild(_this8.element);
 	            });
 	          }
 
@@ -10830,7 +10782,7 @@
 	      if (!moved) {
 	        var offsetParentIsBody = true;
 	        var currentNode = this.element.parentNode;
-	        while (currentNode && currentNode.tagName !== 'BODY') {
+	        while (currentNode && currentNode.nodeType === 1 && currentNode.tagName !== 'BODY') {
 	          if (getComputedStyle(currentNode).position !== 'static') {
 	            offsetParentIsBody = false;
 	            break;
@@ -10841,7 +10793,7 @@
 
 	        if (!offsetParentIsBody) {
 	          this.element.parentNode.removeChild(this.element);
-	          document.body.appendChild(this.element);
+	          this.element.ownerDocument.body.appendChild(this.element);
 	        }
 	      }
 
@@ -10852,11 +10804,6 @@
 	        var val = css[key];
 	        var elVal = this.element.style[key];
 
-	        if (elVal !== '' && val !== '' && ['top', 'left', 'bottom', 'right'].indexOf(key) >= 0) {
-	          elVal = parseFloat(elVal);
-	          val = parseFloat(val);
-	        }
-
 	        if (elVal !== val) {
 	          write = true;
 	          writeCSS[key] = val;
@@ -10865,14 +10812,15 @@
 
 	      if (write) {
 	        defer(function () {
-	          extend(_this6.element.style, writeCSS);
+	          extend(_this8.element.style, writeCSS);
+	          _this8.trigger('repositioned');
 	        });
 	      }
 	    }
 	  }]);
 
 	  return TetherClass;
-	})();
+	})(Evented);
 
 	TetherClass.modules = [];
 
@@ -10895,7 +10843,7 @@
 
 	function getBoundingRect(tether, to) {
 	  if (to === 'scrollParent') {
-	    to = tether.scrollParent;
+	    to = tether.scrollParents[0];
 	  } else if (to === 'window') {
 	    to = [pageXOffset, pageYOffset, innerWidth + pageXOffset, innerHeight + pageYOffset];
 	  }
@@ -10906,11 +10854,21 @@
 
 	  if (typeof to.nodeType !== 'undefined') {
 	    (function () {
+	      var node = to;
 	      var size = getBounds(to);
 	      var pos = size;
 	      var style = getComputedStyle(to);
 
 	      to = [pos.left, pos.top, size.width + pos.left, size.height + pos.top];
+
+	      // Account any parent Frames scroll offset
+	      if (node.ownerDocument !== document) {
+	        var win = node.ownerDocument.defaultView;
+	        to[0] += win.pageXOffset;
+	        to[1] += win.pageYOffset;
+	        to[2] += win.pageXOffset;
+	        to[3] += win.pageYOffset;
+	      }
 
 	      BOUNDS_FORMAT.forEach(function (side, i) {
 	        side = side[0].toUpperCase() + side.substr(1);
@@ -11023,34 +10981,32 @@
 	      }
 
 	      if (changeAttachY === 'together') {
-	        if (top < bounds[1] && tAttachment.top === 'top') {
-	          if (eAttachment.top === 'bottom') {
+	        if (tAttachment.top === 'top') {
+	          if (eAttachment.top === 'bottom' && top < bounds[1]) {
 	            top += targetHeight;
 	            tAttachment.top = 'bottom';
 
 	            top += height;
 	            eAttachment.top = 'top';
-	          } else if (eAttachment.top === 'top') {
-	            top += targetHeight;
+	          } else if (eAttachment.top === 'top' && top + height > bounds[3] && top - (height - targetHeight) >= bounds[1]) {
+	            top -= height - targetHeight;
 	            tAttachment.top = 'bottom';
 
-	            top -= height;
 	            eAttachment.top = 'bottom';
 	          }
 	        }
 
-	        if (top + height > bounds[3] && tAttachment.top === 'bottom') {
-	          if (eAttachment.top === 'top') {
+	        if (tAttachment.top === 'bottom') {
+	          if (eAttachment.top === 'top' && top + height > bounds[3]) {
 	            top -= targetHeight;
 	            tAttachment.top = 'top';
 
 	            top -= height;
 	            eAttachment.top = 'bottom';
-	          } else if (eAttachment.top === 'bottom') {
-	            top -= targetHeight;
+	          } else if (eAttachment.top === 'bottom' && top < bounds[1] && top + (height * 2 - targetHeight) <= bounds[3]) {
+	            top += height - targetHeight;
 	            tAttachment.top = 'top';
 
-	            top += height;
 	            eAttachment.top = 'top';
 	          }
 	        }
@@ -11131,14 +11087,24 @@
 	      }
 
 	      if (changeAttachX === 'element' || changeAttachX === 'both') {
-	        if (left < bounds[0] && eAttachment.left === 'right') {
-	          left += width;
-	          eAttachment.left = 'left';
+	        if (left < bounds[0]) {
+	          if (eAttachment.left === 'right') {
+	            left += width;
+	            eAttachment.left = 'left';
+	          } else if (eAttachment.left === 'center') {
+	            left += width / 2;
+	            eAttachment.left = 'left';
+	          }
 	        }
 
-	        if (left + width > bounds[2] && eAttachment.left === 'left') {
-	          left -= width;
-	          eAttachment.left = 'right';
+	        if (left + width > bounds[2]) {
+	          if (eAttachment.left === 'left') {
+	            left -= width;
+	            eAttachment.left = 'right';
+	          } else if (eAttachment.left === 'center') {
+	            left -= width / 2;
+	            eAttachment.left = 'right';
+	          }
 	        }
 	      }
 
@@ -11232,6 +11198,10 @@
 
 	      if (tAttachment.top !== targetAttachment.top || tAttachment.left !== targetAttachment.left || eAttachment.top !== _this.attachment.top || eAttachment.left !== _this.attachment.left) {
 	        _this.updateAttachClasses(eAttachment, tAttachment);
+	        _this.trigger('update', {
+	          attachment: eAttachment,
+	          targetAttachment: tAttachment
+	        });
 	      }
 	    });
 
@@ -11371,13 +11341,13 @@
 
 
 /***/ },
-/* 281 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(282);
+	var content = __webpack_require__(274);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -11397,7 +11367,7 @@
 	}
 
 /***/ },
-/* 282 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -11411,13 +11381,13 @@
 
 
 /***/ },
-/* 283 */
+/* 275 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"popover-trigger\" v-el:trigger>\r\n\t<slot></slot>\r\n</span> \r\n<div class=\"popover {{popoverAlignment}}\" v-el:popover>\r\n  <div class=\"popover-arrow\"></div>\r\n  <h3 class=\"popover-title\" v-if=\"title\">{{title}}</h3>\r\n  <div class=\"popover-content\">\r\n    <span v-html=\"text\" v-if=\"text\"></span>\r\n    <slot name=\"content\" v-if=\"!text\"></slot>\r\n  </div>\r\n</div>";
+	module.exports = "<span class=\"popover-trigger\" v-el:trigger>\n\t<slot></slot>\n</span> \n<div class=\"popover {{popoverAlignment}}\" v-el:popover>\n  <div class=\"popover-arrow\"></div>\n  <h3 class=\"popover-title\" v-if=\"title\">{{title}}</h3>\n  <div class=\"popover-content\">\n    <span v-html=\"text\" v-if=\"text\"></span>\n    <slot name=\"content\" v-if=\"!text\"></slot>\n  </div>\n</div>";
 
 /***/ },
-/* 284 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11428,19 +11398,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _progressJson = __webpack_require__(285);
+	var _progressJson = __webpack_require__(277);
 
 	var _progressJson2 = _interopRequireDefault(_progressJson);
 
-	var _progressHtml = __webpack_require__(286);
+	var _progressHtml = __webpack_require__(278);
 
 	var _progressHtml2 = _interopRequireDefault(_progressHtml);
 
-	var _snippetHtml = __webpack_require__(287);
+	var _snippetHtml = __webpack_require__(279);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsProgress = __webpack_require__(288);
+	var _srcComponentsProgress = __webpack_require__(280);
 
 	var _srcComponentsProgress2 = _interopRequireDefault(_srcComponentsProgress);
 
@@ -11448,7 +11418,7 @@
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -11476,7 +11446,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 285 */
+/* 277 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -11531,19 +11501,19 @@
 	};
 
 /***/ },
-/* 286 */
+/* 278 */
 /***/ function(module, exports) {
 
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>striped <input type=\"checkbox\" v-model=\"striped\"></label>\r\n\t\t<!-- <label>animated <input type=\"checkbox\" v-model=\"animated\"></label> -->\r\n\t\t<label>\r\n\t\t\tvariant\r\n\t\t\t<select v-model=\"variant\">\r\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t\t<label class=\"form-control-label\">value</label> <input type=\"range\" v-model=\"value\"> {{value}}%\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-progress :variant=\"variant\" :value=\"value\" :striped=\"striped\" :animated=\"animated\">25%</vs-progress>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"controls\">\n\t\t<!-- Html controls start-->\n\t\t<label>striped <input type=\"checkbox\" v-model=\"striped\"></label>\n\t\t<!-- <label>animated <input type=\"checkbox\" v-model=\"animated\"></label> -->\n\t\t<label>\n\t\t\tvariant\n\t\t\t<select v-model=\"variant\">\n\t\t\t\t<option v-for=\"option in variants\" v-bind:value=\"option.value\">\n\t\t\t    {{ option.text }}\n\t\t\t  </option>\n\t\t\t</select>\n\t\t</label>\n\t\t<label class=\"form-control-label\">value</label> <input type=\"range\" v-model=\"value\"> {{value}}%\n\t\t<!-- Html controls end-->\n\t</div>\n\t<div slot=\"markup\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<vs-progress :variant=\"variant\" :value=\"value\" :striped=\"striped\" :animated=\"animated\">25%</vs-progress>\n\t\t\t<!-- Html markup end-->\n\t</div>\n</docs-demo>\t\n";
 
 /***/ },
-/* 287 */
+/* 279 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-progress</span> \r\n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\r\n  <span class=\"hljs-attribute\">value</span>=<span class=\"hljs-value\">\"25\"</span> \r\n  <span class=\"hljs-attribute\">striped</span>&gt;</span>\r\n  25%\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-progress</span>&gt;</span>";
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-progress</span> \n  <span class=\"hljs-attribute\">variant</span>=<span class=\"hljs-value\">\"primary\"</span>\n  <span class=\"hljs-attribute\">value</span>=<span class=\"hljs-value\">\"25\"</span> \n  <span class=\"hljs-attribute\">striped</span>&gt;</span>\n  25%\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-progress</span>&gt;</span>";
 
 /***/ },
-/* 288 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -11555,7 +11525,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _progressHtml = __webpack_require__(289);
+	var _progressHtml = __webpack_require__(281);
 
 	var _progressHtml2 = _interopRequireDefault(_progressHtml);
 
@@ -11606,13 +11576,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 289 */
+/* 281 */
 /***/ function(module, exports) {
 
-	module.exports = "<progress \r\n\tclass=\"progress {{progressVariant}} {{striped ? 'progress-striped' : ''}} {{animated ? 'progres-animated' : ''}}\" \r\n\tvalue=\"{{value}}\" \r\n\tmax=\"{{max}}\" \r\n\taria-valuenow=\"{{value}}\" \r\n\taria-valuemin=\"0\" \r\n\taria-valuemax=\"{{max}}\"\r\n\tv-el:progress>\r\n  <div class=\"progress\">\r\n    <span class=\"progress-bar\" v-bind:style=\"{width: value + '%'}\" v-el:progressbar></span>\r\n  </div>\r\n</progress>";
+	module.exports = "<progress \n\tclass=\"progress {{progressVariant}} {{striped ? 'progress-striped' : ''}} {{animated ? 'progres-animated' : ''}}\" \n\tvalue=\"{{value}}\" \n\tmax=\"{{max}}\" \n\taria-valuenow=\"{{value}}\" \n\taria-valuemin=\"0\" \n\taria-valuemax=\"{{max}}\"\n\tv-el:progress>\n  <div class=\"progress\">\n    <span class=\"progress-bar\" v-bind:style=\"{width: value + '%'}\" v-el:progressbar></span>\n  </div>\n</progress>";
 
 /***/ },
-/* 290 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11623,19 +11593,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _tablesJson = __webpack_require__(291);
+	var _tablesJson = __webpack_require__(283);
 
 	var _tablesJson2 = _interopRequireDefault(_tablesJson);
 
-	var _tablesHtml = __webpack_require__(292);
+	var _tablesHtml = __webpack_require__(284);
 
 	var _tablesHtml2 = _interopRequireDefault(_tablesHtml);
 
-	var _snippetHtml = __webpack_require__(293);
+	var _snippetHtml = __webpack_require__(285);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsTables = __webpack_require__(294);
+	var _srcComponentsTables = __webpack_require__(286);
 
 	var _srcComponentsTables2 = _interopRequireDefault(_srcComponentsTables);
 
@@ -11665,7 +11635,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 291 */
+/* 283 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -11755,19 +11725,19 @@
 	};
 
 /***/ },
-/* 292 */
+/* 284 */
 /***/ function(module, exports) {
 
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-table hover responsive>\r\n\t\t\t\t<table>\r\n\t\t\t\t  <thead>\r\n\t\t\t\t    <tr>\r\n\t\t\t\t      <th>#</th>\r\n\t\t\t\t      <th>First Name</th>\r\n\t\t\t\t      <th>Last Name</th>\r\n\t\t\t\t      <th>Username</th>\r\n\t\t\t\t    </tr>\r\n\t\t\t\t  </thead>\r\n\t\t\t\t  <tbody>\r\n\t\t\t\t    <tr>\r\n\t\t\t\t      <th scope=\"row\">1</th>\r\n\t\t\t\t      <td>Mark</td>\r\n\t\t\t\t      <td>Otto</td>\r\n\t\t\t\t      <td>@mdo</td>\r\n\t\t\t\t    </tr>\r\n\t\t\t\t    <tr>\r\n\t\t\t\t      <th scope=\"row\">2</th>\r\n\t\t\t\t      <td>Jacob</td>\r\n\t\t\t\t      <td>Thornton</td>\r\n\t\t\t\t      <td>@fat</td>\r\n\t\t\t\t    </tr>\r\n\t\t\t\t    <tr>\r\n\t\t\t\t      <th scope=\"row\">3</th>\r\n\t\t\t\t      <td colspan=\"2\">Larry the Bird</td>\r\n\t\t\t\t      <td>@twitter</td>\r\n\t\t\t\t    </tr>\r\n\t\t\t\t  </tbody>\r\n\t\t\t\t</table>\r\n\t\t\t</vs-table>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</docs-demo>\t\r\n";
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"markup\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<vs-table hover responsive>\n\t\t\t\t<table>\n\t\t\t\t  <thead>\n\t\t\t\t    <tr>\n\t\t\t\t      <th>#</th>\n\t\t\t\t      <th>First Name</th>\n\t\t\t\t      <th>Last Name</th>\n\t\t\t\t      <th>Username</th>\n\t\t\t\t    </tr>\n\t\t\t\t  </thead>\n\t\t\t\t  <tbody>\n\t\t\t\t    <tr>\n\t\t\t\t      <th scope=\"row\">1</th>\n\t\t\t\t      <td>Mark</td>\n\t\t\t\t      <td>Otto</td>\n\t\t\t\t      <td>@mdo</td>\n\t\t\t\t    </tr>\n\t\t\t\t    <tr>\n\t\t\t\t      <th scope=\"row\">2</th>\n\t\t\t\t      <td>Jacob</td>\n\t\t\t\t      <td>Thornton</td>\n\t\t\t\t      <td>@fat</td>\n\t\t\t\t    </tr>\n\t\t\t\t    <tr>\n\t\t\t\t      <th scope=\"row\">3</th>\n\t\t\t\t      <td colspan=\"2\">Larry the Bird</td>\n\t\t\t\t      <td>@twitter</td>\n\t\t\t\t    </tr>\n\t\t\t\t  </tbody>\n\t\t\t\t</table>\n\t\t\t</vs-table>\n\t\t\t<!-- Html markup end-->\n\t</div>\n</docs-demo>\t\n";
 
 /***/ },
-/* 293 */
+/* 285 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-table</span> <span class=\"hljs-attribute\">hover</span> <span class=\"hljs-attribute\">responsive</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">table</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">thead</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">tr</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span>&gt;</span>#<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span>&gt;</span>First Name<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span>&gt;</span>Last Name<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span>&gt;</span>Username<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">tr</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">thead</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">tbody</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">tr</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span> <span class=\"hljs-attribute\">scope</span>=<span class=\"hljs-value\">\"row\"</span>&gt;</span>1<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>Mark<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>Otto<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>@mdo<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">tr</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">tr</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span> <span class=\"hljs-attribute\">scope</span>=<span class=\"hljs-value\">\"row\"</span>&gt;</span>2<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>Jacob<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>Thornton<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>@fat<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">tr</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">tr</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span> <span class=\"hljs-attribute\">scope</span>=<span class=\"hljs-value\">\"row\"</span>&gt;</span>3<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span> <span class=\"hljs-attribute\">colspan</span>=<span class=\"hljs-value\">\"2\"</span>&gt;</span>Larry the Bird<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\r\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>@twitter<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\r\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">tr</span>&gt;</span>\r\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">tbody</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">table</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-table</span>&gt;</span>";
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-table</span> <span class=\"hljs-attribute\">hover</span> <span class=\"hljs-attribute\">responsive</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">table</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">thead</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">tr</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span>&gt;</span>#<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span>&gt;</span>First Name<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span>&gt;</span>Last Name<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span>&gt;</span>Username<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">tr</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">thead</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">tbody</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">tr</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span> <span class=\"hljs-attribute\">scope</span>=<span class=\"hljs-value\">\"row\"</span>&gt;</span>1<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>Mark<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>Otto<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>@mdo<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">tr</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">tr</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span> <span class=\"hljs-attribute\">scope</span>=<span class=\"hljs-value\">\"row\"</span>&gt;</span>2<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>Jacob<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>Thornton<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>@fat<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">tr</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">tr</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">th</span> <span class=\"hljs-attribute\">scope</span>=<span class=\"hljs-value\">\"row\"</span>&gt;</span>3<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">th</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span> <span class=\"hljs-attribute\">colspan</span>=<span class=\"hljs-value\">\"2\"</span>&gt;</span>Larry the Bird<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">td</span>&gt;</span>@twitter<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">td</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">tr</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">tbody</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">table</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-table</span>&gt;</span>";
 
 /***/ },
-/* 294 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -11779,13 +11749,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _tablesHtml = __webpack_require__(295);
+	var _tablesHtml = __webpack_require__(287);
 
 	var _tablesHtml2 = _interopRequireDefault(_tablesHtml);
 
 	// import ie9 polyfill
 
-	__webpack_require__(108);
+	__webpack_require__(106);
 
 	exports['default'] = {
 	  template: _tablesHtml2['default'],
@@ -11879,13 +11849,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 295 */
+/* 287 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-bind:class=\"{repsonsive: responsive}\">\r\n\t<slot></slot>\r\n</div>";
+	module.exports = "<div v-bind:class=\"{repsonsive: responsive}\">\n\t<slot></slot>\n</div>";
 
 /***/ },
-/* 296 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11896,25 +11866,25 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _tabsJson = __webpack_require__(297);
+	var _tabsJson = __webpack_require__(289);
 
 	var _tabsJson2 = _interopRequireDefault(_tabsJson);
 
-	var _tabsHtml = __webpack_require__(298);
+	var _tabsHtml = __webpack_require__(290);
 
 	var _tabsHtml2 = _interopRequireDefault(_tabsHtml);
 
-	var _snippetHtml = __webpack_require__(299);
+	var _snippetHtml = __webpack_require__(291);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsTabs = __webpack_require__(300);
+	var _srcComponentsTabs = __webpack_require__(292);
 
 	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(7);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
-	var _srcUtils = __webpack_require__(137);
+	var _srcUtils = __webpack_require__(135);
 
 	exports['default'] = {
 	  route: {
@@ -11941,7 +11911,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 297 */
+/* 289 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -12003,19 +11973,19 @@
 	};
 
 /***/ },
-/* 298 */
+/* 290 */
 /***/ function(module, exports) {
 
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"controls\">\r\n\t\t<!-- Html controls start-->\r\n\t\t<label>fade <input type=\"checkbox\" v-model=\"fade\"></label>\r\n\t\t<label>\r\n\t\t\t\tsize\r\n\t\t\t\t<select v-model=\"size\">\r\n\t\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\r\n\t\t\t\t    {{ option.text }}\r\n\t\t\t\t  </option>\r\n\t\t\t\t</select>\r\n\t\t\t</label>\r\n\t\t<!-- Html controls end-->\r\n\t</div>\r\n\t<div slot=\"markup\">\r\n\t\t\t<!-- Html markup start-->\r\n\t\t\t<vs-tabs :fade=\"fade\" :size=\"size\">\r\n\t\t\t\t<vs-tab id=\"tab-1\" title=\"Tab 1\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quidem!</vs-tab>\r\n\t\t\t\t<vs-tab id=\"tab-2\" title=\"Tab 2\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, corporis?</vs-tab>\r\n\t\t\t\t<vs-tab id=\"tab-2\" title=\"Tab 3\" disabled>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, architecto, maiores.</vs-tab>\r\n\t\t\t</vs-tabs>\r\n\t\t\t<!-- Html markup end-->\r\n\t</div>\r\n</example>\t\r\n";
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"controls\">\n\t\t<!-- Html controls start-->\n\t\t<label>fade <input type=\"checkbox\" v-model=\"fade\"></label>\n\t\t<label>\n\t\t\t\tsize\n\t\t\t\t<select v-model=\"size\">\n\t\t\t\t\t<option v-for=\"option in sizes\" v-bind:value=\"option.value\">\n\t\t\t\t    {{ option.text }}\n\t\t\t\t  </option>\n\t\t\t\t</select>\n\t\t\t</label>\n\t\t<!-- Html controls end-->\n\t</div>\n\t<div slot=\"markup\">\n\t\t\t<!-- Html markup start-->\n\t\t\t<vs-tabs :fade=\"fade\" :size=\"size\">\n\t\t\t\t<vs-tab id=\"tab-1\" title=\"Tab 1\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quidem!</vs-tab>\n\t\t\t\t<vs-tab id=\"tab-2\" title=\"Tab 2\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, corporis?</vs-tab>\n\t\t\t\t<vs-tab id=\"tab-2\" title=\"Tab 3\" disabled>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, architecto, maiores.</vs-tab>\n\t\t\t</vs-tabs>\n\t\t\t<!-- Html markup end-->\n\t</div>\n</example>\t\n";
 
 /***/ },
-/* 299 */
+/* 291 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-tabs</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">:fade</span>=<span class=\"hljs-value\">\"false\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-tab</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"tab-1\"</span> <span class=\"hljs-attribute\">title</span>=<span class=\"hljs-value\">\"Tab 1\"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quidem!<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-tab</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-tab</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"tab-2\"</span> <span class=\"hljs-attribute\">title</span>=<span class=\"hljs-value\">\"Tab 2\"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, corporis?<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-tab</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-tab</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"tab-2\"</span> <span class=\"hljs-attribute\">title</span>=<span class=\"hljs-value\">\"Tab 3\"</span> <span class=\"hljs-attribute\">disabled</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, architecto, maiores.<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-tab</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-tabs</span>&gt;</span>\r\n";
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-tabs</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">:fade</span>=<span class=\"hljs-value\">\"false\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-tab</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"tab-1\"</span> <span class=\"hljs-attribute\">title</span>=<span class=\"hljs-value\">\"Tab 1\"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quidem!<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-tab</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-tab</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"tab-2\"</span> <span class=\"hljs-attribute\">title</span>=<span class=\"hljs-value\">\"Tab 2\"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, corporis?<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-tab</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-tab</span> <span class=\"hljs-attribute\">id</span>=<span class=\"hljs-value\">\"tab-2\"</span> <span class=\"hljs-attribute\">title</span>=<span class=\"hljs-value\">\"Tab 3\"</span> <span class=\"hljs-attribute\">disabled</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, architecto, maiores.<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-tab</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-tabs</span>&gt;</span>\n";
 
 /***/ },
-/* 300 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -12027,11 +11997,11 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _tabsHtml = __webpack_require__(301);
+	var _tabsHtml = __webpack_require__(293);
 
 	var _tabsHtml2 = _interopRequireDefault(_tabsHtml);
 
-	var _utilsHelpersJs = __webpack_require__(107);
+	var _utilsHelpersJs = __webpack_require__(105);
 
 	// this is directly linked to the bootstrap animation timing in _tabs.scss
 	// for browsers that do not support transitions like IE9 just change slide immediately
@@ -12153,13 +12123,13 @@
 	exports.tab = tab;
 
 /***/ },
-/* 301 */
+/* 293 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"tabs\">\n  <ul class=\"nav nav-tabs\">\n    <li class=\"nav-item\" v-for=\"item in items\" v-on:click=\"setActive($index)\">\n      <span class=\"nav-link btn {{btnSize}} {{item.active ? 'active' : ''}} {{ item.disabled ? 'disabled' : '' }}\">{{item.title}}</span>\n    </li>\n  </ul>\n  <div class=\"tab-content\">\n    <slot></slot>\n  </div>\n</div>";
 
 /***/ },
-/* 302 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12170,19 +12140,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _tooltipJson = __webpack_require__(303);
+	var _tooltipJson = __webpack_require__(295);
 
 	var _tooltipJson2 = _interopRequireDefault(_tooltipJson);
 
-	var _tooltipHtml = __webpack_require__(304);
+	var _tooltipHtml = __webpack_require__(296);
 
 	var _tooltipHtml2 = _interopRequireDefault(_tooltipHtml);
 
-	var _snippetHtml = __webpack_require__(305);
+	var _snippetHtml = __webpack_require__(297);
 
 	var _snippetHtml2 = _interopRequireDefault(_snippetHtml);
 
-	var _srcComponentsTooltip = __webpack_require__(306);
+	var _srcComponentsTooltip = __webpack_require__(298);
 
 	var _srcComponentsTooltip2 = _interopRequireDefault(_srcComponentsTooltip);
 
@@ -12211,7 +12181,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 303 */
+/* 295 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -12265,19 +12235,19 @@
 	};
 
 /***/ },
-/* 304 */
+/* 296 */
 /***/ function(module, exports) {
 
-	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\r\n\t<div slot=\"markup\">\r\n\t\t\t\t<vs-tooltip text=\"tooltip top\" position=\"top\">\r\n\t\t\t\t\t<button class=\"btn\">tooltip top</button>\r\n\t\t\t\t</vs-tooltip>\r\n\t\t\t\t<vs-tooltip text=\"tooltip bottom\" position=\"bottom\">\r\n\t\t\t\t\t<button class=\"btn\">tooltip bottom</button>\r\n\t\t\t\t</vs-tooltip>\r\n\t\t\t\t<vs-tooltip text=\"tooltip left\" position=\"left\">\r\n\t\t\t\t\t<button class=\"btn\">tooltip left</button>\r\n\t\t\t\t</vs-tooltip>\r\n\t\t\t\t<vs-tooltip position=\"right\">\r\n\t\t\t\t\t<button class=\"btn\">tooltip right (html)</button>\r\n\t\t\t\t\t<em slot=\"content\">tooltip right (italic)</em>\r\n\t\t\t\t</vs-tooltip>\r\n\t</div>\r\n</docs-demo>\t\r\n";
+	module.exports = "<docs-demo :meta=\"meta\" :snippet=\"snippet\">\n\t<div slot=\"markup\">\n\t\t\t\t<vs-tooltip text=\"tooltip top\" position=\"top\">\n\t\t\t\t\t<button class=\"btn\">tooltip top</button>\n\t\t\t\t</vs-tooltip>\n\t\t\t\t<vs-tooltip text=\"tooltip bottom\" position=\"bottom\">\n\t\t\t\t\t<button class=\"btn\">tooltip bottom</button>\n\t\t\t\t</vs-tooltip>\n\t\t\t\t<vs-tooltip text=\"tooltip left\" position=\"left\">\n\t\t\t\t\t<button class=\"btn\">tooltip left</button>\n\t\t\t\t</vs-tooltip>\n\t\t\t\t<vs-tooltip position=\"right\">\n\t\t\t\t\t<button class=\"btn\">tooltip right (html)</button>\n\t\t\t\t\t<em slot=\"content\">tooltip right (italic)</em>\n\t\t\t\t</vs-tooltip>\n\t</div>\n</docs-demo>\t\n";
 
 /***/ },
-/* 305 */
+/* 297 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"hljs-comment\">&lt;!-- tooltip with a text --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-tooltip</span> \r\n  <span class=\"hljs-attribute\">text</span>=<span class=\"hljs-value\">\"tooltip top\"</span> \r\n  <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"top\"</span>\r\n  <span class=\"hljs-attribute\">:triggers</span>=<span class=\"hljs-value\">\"['hover']\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn\"</span>&gt;</span>tooltip top<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-tooltip</span>&gt;</span>\r\n\r\n<span class=\"hljs-comment\">&lt;!-- tooltip with an html content --&gt;</span>\r\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-tooltip</span> <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"right\"</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn\"</span>&gt;</span>tooltip right (html)<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\r\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">em</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"content\"</span>&gt;</span>tooltip right (italic)<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">em</span>&gt;</span>\r\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-tooltip</span>&gt;</span>";
+	module.exports = "<span class=\"hljs-comment\">&lt;!-- tooltip with a text --&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-tooltip</span> \n  <span class=\"hljs-attribute\">text</span>=<span class=\"hljs-value\">\"tooltip top\"</span> \n  <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"top\"</span>\n  <span class=\"hljs-attribute\">:triggers</span>=<span class=\"hljs-value\">\"['hover']\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn\"</span>&gt;</span>tooltip top<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-tooltip</span>&gt;</span>\n\n<span class=\"hljs-comment\">&lt;!-- tooltip with an html content --&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">vs-tooltip</span> <span class=\"hljs-attribute\">position</span>=<span class=\"hljs-value\">\"right\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">button</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"btn\"</span>&gt;</span>tooltip right (html)<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">button</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">em</span> <span class=\"hljs-attribute\">slot</span>=<span class=\"hljs-value\">\"content\"</span>&gt;</span>tooltip right (italic)<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">em</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">vs-tooltip</span>&gt;</span>";
 
 /***/ },
-/* 306 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -12289,13 +12259,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _tether = __webpack_require__(280);
+	var _tether = __webpack_require__(272);
 
 	var _tether2 = _interopRequireDefault(_tether);
 
-	__webpack_require__(307);
+	__webpack_require__(299);
 
-	var _tooltipHtml = __webpack_require__(309);
+	var _tooltipHtml = __webpack_require__(301);
 
 	var _tooltipHtml2 = _interopRequireDefault(_tooltipHtml);
 
@@ -12477,13 +12447,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 307 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(308);
+	var content = __webpack_require__(300);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -12503,7 +12473,7 @@
 	}
 
 /***/ },
-/* 308 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -12517,13 +12487,13 @@
 
 
 /***/ },
-/* 309 */
+/* 301 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"tooltip-trigger\" v-el:trigger>\r\n\t<slot></slot>\r\n</span> \r\n<div class=\"tooltip fade in {{tooltipAlignment}}\" v-el:tooltip>\r\n\t<div class=\"tooltip-inner\">\r\n\t\t<div class=\"tooltip-arrow\"></div>\r\n\t  <div class=\"tooltip-content\">\r\n\t    <span v-html=\"text\" v-if=\"text\"></span>\r\n\t    <slot name=\"content\" v-if=\"!text\"></slot>\r\n\t  </div>\r\n\t</div>\r\n</div>";
+	module.exports = "<span class=\"tooltip-trigger\" v-el:trigger>\n\t<slot></slot>\n</span> \n<div class=\"tooltip fade in {{tooltipAlignment}}\" v-el:tooltip>\n\t<div class=\"tooltip-inner\">\n\t\t<div class=\"tooltip-arrow\"></div>\n\t  <div class=\"tooltip-content\">\n\t    <span v-html=\"text\" v-if=\"text\"></span>\n\t    <slot name=\"content\" v-if=\"!text\"></slot>\n\t  </div>\n\t</div>\n</div>";
 
 /***/ },
-/* 310 */
+/* 302 */
 /***/ function(module, exports) {
 
 	module.exports = {

@@ -34,9 +34,11 @@ export const collapse = {
         this.$el.classList.add('collapse', 'in')
         this.$root.$broadcast('toggled::collapsed', {id: this.id, group: this.group, expanded: true})
         this.$root.$dispatch('toggled::collapsed', {id: this.id, group: this.group, expanded: true})
+        this.$el.style.height = null
       }, TRANSITION_DURATION)
     },
     hide() {
+      this.$el.style.height = this.$el.scrollHeight + 'px'
       this.$el.classList.remove('collapse')
       this.$el.classList.remove('in')
       this.$el.classList.add('collapsing')
@@ -47,8 +49,9 @@ export const collapse = {
         this.$el.classList.add('collapse')
         this.$root.$broadcast('toggled::collapsed', {id: this.id, group: this.group, expanded: false})
         this.$root.$dispatch('toggled::collapsed', {id: this.id, group: this.group, expanded: false})
+        this.$el.style.height = null
       }, TRANSITION_DURATION)
-    },
+    }
   },
   events: {
     'toggled::collapse'(data) {

@@ -69,9 +69,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _alert2 = _interopRequireDefault(_alert);
 
-	var _labels = __webpack_require__(3);
+	var _tags = __webpack_require__(3);
 
-	var _labels2 = _interopRequireDefault(_labels);
+	var _tags2 = _interopRequireDefault(_tags);
 
 	var _breadcrumb = __webpack_require__(5);
 
@@ -137,7 +137,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _jumbotron2 = _interopRequireDefault(_jumbotron);
 
-	var _labels3 = _interopRequireDefault(_labels);
+	var _tags3 = _interopRequireDefault(_tags);
 
 	var _listGroup = __webpack_require__(49);
 
@@ -155,35 +155,31 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _navbar2 = _interopRequireDefault(_navbar);
 
-	var _pager = __webpack_require__(63);
-
-	var _pager2 = _interopRequireDefault(_pager);
-
-	var _pagination = __webpack_require__(65);
+	var _pagination = __webpack_require__(63);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
-	var _popover = __webpack_require__(67);
+	var _popover = __webpack_require__(65);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
-	var _progress = __webpack_require__(72);
+	var _progress = __webpack_require__(70);
 
 	var _progress2 = _interopRequireDefault(_progress);
 
-	var _tables = __webpack_require__(74);
+	var _tables = __webpack_require__(72);
 
 	var _tables2 = _interopRequireDefault(_tables);
 
-	var _tabs = __webpack_require__(76);
+	var _tabs = __webpack_require__(74);
 
-	var _tooltip = __webpack_require__(78);
+	var _tooltip = __webpack_require__(76);
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
 	var vuestrapBase = {
 		alert: _alert2['default'],
-		badge: _labels2['default'],
+		badge: _tags2['default'],
 		breadcrumb: _breadcrumb2['default'],
 		buttonCheckbox: _buttonCheckbox2['default'],
 		buttonGroup: _buttonGroup2['default'],
@@ -203,7 +199,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		formTextarea: _formTextarea2['default'],
 		images: _images2['default'],
 		jumbotron: _jumbotron2['default'],
-		label: _labels3['default'],
+		label: _tags3['default'],
 		listGroup: _listGroup.listGroup,
 		listGroupItem: _listGroup.listGroupItem,
 		media: _media2['default'],
@@ -211,7 +207,6 @@ return /******/ (function(modules) { // webpackBootstrap
 		nav: _nav.nav,
 		navItem: _nav.navItem,
 		navbar: _navbar2['default'],
-		pager: _pager2['default'],
 		pagination: _pagination2['default'],
 		popover: _popover2['default'],
 		progress: _progress2['default'],
@@ -281,7 +276,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 2 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"alert {{alertState}} {{ dismissible ? 'alert-dismissible' : '' }} fade in\" role=\"alert\" v-show=\"show\">\r\n    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\" v-if=\"dismissible\" v-on:click.stop.prevent=\"dismiss\">\r\n        <span aria-hidden=\"true\">&times;</span>\r\n        <span class=\"sr-only\">Close</span>\r\n    </button>\r\n    <slot></slot>\r\n</div>\r\n";
+	module.exports = "<div class=\"alert {{alertState}} {{ dismissible ? 'alert-dismissible' : '' }} fade in\" role=\"alert\" v-show=\"show\">\n    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\" v-if=\"dismissible\" v-on:click.stop.prevent=\"dismiss\">\n        <span aria-hidden=\"true\">&times;</span>\n        <span class=\"sr-only\">Close</span>\n    </button>\n    <slot></slot>\n</div>\n";
 
 /***/ },
 /* 3 */
@@ -296,20 +291,20 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _labelsHtml = __webpack_require__(4);
+	var _tagsHtml = __webpack_require__(4);
 
-	var _labelsHtml2 = _interopRequireDefault(_labelsHtml);
+	var _tagsHtml2 = _interopRequireDefault(_tagsHtml);
 
 	// export component object
 	exports['default'] = {
-	  template: _labelsHtml2['default'],
+	  template: _tagsHtml2['default'],
 	  replace: true,
 	  computed: {
 	    labelVariant: function labelVariant() {
-	      return !this.variant || this.variant === 'default' ? 'label-default' : 'label-' + this.variant;
+	      return !this.variant || this.variant === 'default' ? 'tag-default' : 'tag-' + this.variant;
 	    },
 	    labelType: function labelType() {
-	      return !this.type ? '' : 'label-' + this.type;
+	      return !this.type ? '' : 'tag-' + this.type;
 	    }
 	  },
 	  props: {
@@ -329,7 +324,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 4 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"label {{labelVariant}} {{labelType}}\">\r\n\t<slot></slot>\r\n</span>\r\n";
+	module.exports = "<span class=\"tag {{labelVariant}} {{labelType}}\">\n\t<slot></slot>\n</span>\n";
 
 /***/ },
 /* 5 */
@@ -371,7 +366,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 6 */
 /***/ function(module, exports) {
 
-	module.exports = "<ol class=\"breadcrumb\">\r\n    <li v-for=\"item in list\" v-bind:class=\"{ active: item.active }\">\r\n        <a href=\"#\" v-on:click.stop.prevent=\"changeLocation($router, item.link)\" v-if=\"item.active\">{{item.text}}</a>\r\n        <span v-if=\"!item.active\">{{item.text}}</span>\r\n    </li>\r\n</ol>";
+	module.exports = "<ol class=\"breadcrumb\">\n    <li v-for=\"item in list\" v-bind:class=\"{ active: item.active }\">\n        <a href=\"#\" v-on:click.stop.prevent=\"changeLocation($router, item.link)\" v-if=\"item.active\">{{item.text}}</a>\n        <span v-if=\"!item.active\">{{item.text}}</span>\n    </li>\n</ol>";
 
 /***/ },
 /* 7 */
@@ -540,7 +535,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 9 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n  <label class=\"btn {{btnVariant}} {{btnSize}} {{ checked($index) ? 'active' : '' }}\" v-for=\"item in list\">\r\n  <input \r\n  \ttype=\"checkbox\" \r\n  \tvalue=\"{{item.value}}\" \r\n  \tautocomplete=\"off\" \r\n  \tv-model=\"item.checked\" \r\n  \t:disabled=\"item.disabled\">\r\n  \t{{item.text}}\r\n  </label>\r\n</div>\r\n";
+	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\n  <label class=\"btn {{btnVariant}} {{btnSize}} {{ checked($index) ? 'active' : '' }}\" v-for=\"item in list\">\n  <input \n  \ttype=\"checkbox\" \n  \tvalue=\"{{item.value}}\" \n  \tautocomplete=\"off\" \n  \tv-model=\"item.checked\" \n  \t:disabled=\"item.disabled\">\n  \t{{item.text}}\n  </label>\n</div>\n";
 
 /***/ },
 /* 10 */
@@ -576,7 +571,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 11 */
 /***/ function(module, exports) {
 
-	module.exports = "<div role=\"group\" aria-label=\"Basic example\" v-bind:class=\"{ 'btn-group': true, 'btn-group-vertical': vertical }\">\r\n\t<slot></slot>\r\n</div>\r\n";
+	module.exports = "<div role=\"group\" aria-label=\"Basic example\" v-bind:class=\"{ 'btn-group': true, 'btn-group-vertical': vertical }\">\n\t<slot></slot>\n</div>\n";
 
 /***/ },
 /* 12 */
@@ -669,7 +664,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 13 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\r\n    <label\r\n    \tclass=\"btn {{btnVariant}} {{btnSize}} {{ item.disabled ? 'disabled' : '' }} {{ selection == item.value ? 'active' : '' }}\"\r\n    \tv-for=\"item in list\">\r\n      <input\r\n      \ttype=\"radio\"\r\n      \tname=\"options\"\r\n      \tvalue=\"{{item.value}}\"\r\n      \tautocomplete=\"off\"\r\n      \tv-model=\"selection\"\r\n        :disabled=\"item.disabled\"> {{item.text}}\r\n    </label>\r\n</div>\r\n";
+	module.exports = "<div class=\"btn-group\" data-toggle=\"buttons\">\n    <label\n    \tclass=\"btn {{btnVariant}} {{btnSize}} {{ item.disabled ? 'disabled' : '' }} {{ selection == item.value ? 'active' : '' }}\"\n    \tv-for=\"item in list\">\n      <input\n      \ttype=\"radio\"\n      \tname=\"options\"\n      \tvalue=\"{{item.value}}\"\n      \tautocomplete=\"off\"\n      \tv-model=\"selection\"\n        :disabled=\"item.disabled\"> {{item.text}}\n    </label>\n</div>\n";
 
 /***/ },
 /* 14 */
@@ -749,7 +744,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 15 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}} {{btnDisabled}}\" v-on:click.stop.prevent=\"changeLocation($router, link)\">\r\n\t<slot></slot>\r\n</span>";
+	module.exports = "<span class=\"btn {{btnVariant}} {{btnSize}} {{btnBlock}} {{inactive ? 'btn-inactive' : ''}} {{btnDisabled}}\" v-on:click.stop.prevent=\"changeLocation($router, link)\">\n\t<slot></slot>\n</span>";
 
 /***/ },
 /* 16 */
@@ -1064,7 +1059,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	function applyToTag(styleElement, obj) {
 		var css = obj.css;
 		var media = obj.media;
-		var sourceMap = obj.sourceMap;
 
 		if(media) {
 			styleElement.setAttribute("media", media)
@@ -1082,7 +1076,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function updateLink(linkElement, obj) {
 		var css = obj.css;
-		var media = obj.media;
 		var sourceMap = obj.sourceMap;
 
 		if(sourceMap) {
@@ -1169,7 +1162,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 21 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"card {{cardVariant}} {{cardAlign}} {{cardInverse}}\">\r\n    <slot></slot>\r\n</div>\r\n";
+	module.exports = "<div class=\"card {{cardVariant}} {{cardAlign}} {{cardInverse}}\">\n    <slot></slot>\n</div>\n";
 
 /***/ },
 /* 22 */
@@ -1456,7 +1449,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 24 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"carousel slide\" data-ride=\"carousel\" v-on:mouseenter=\"pause()\" v-on:mouseleave=\"start()\">\r\n\r\n    <!-- Indicators -->\r\n    <ol class=\"carousel-indicators\" v-show=\"indicators\">\r\n        <li v-for=\"item in slides\" v-bind:class=\"{'active': item == index}\" v-on:click=\"changeSlide($index)\"></li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\" role=\"listbox\">\r\n        <slot></slot>\r\n    </div>\r\n\r\n    <!-- Controls -->\r\n    <a class=\"left carousel-control\" href=\"#\" role=\"button\" v-on:click.stop.prevent=\"prev\" v-show=\"controls\">\r\n        <span class=\"icon-prev\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#\" role=\"button\" v-on:click.stop.prevent=\"next\" v-show=\"controls\">\r\n        <span class=\"icon-next\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Next</span>\r\n    </a>\r\n\r\n</div>";
+	module.exports = "<div class=\"carousel slide\" data-ride=\"carousel\" v-on:mouseenter=\"pause()\" v-on:mouseleave=\"start()\">\n\n    <!-- Indicators -->\n    <ol class=\"carousel-indicators\" v-show=\"indicators\">\n        <li v-for=\"item in slides\" v-bind:class=\"{'active': item == index}\" v-on:click=\"changeSlide($index)\"></li>\n    </ol>\n\n    <!-- Wrapper for slides -->\n    <div class=\"carousel-inner\" role=\"listbox\">\n        <slot></slot>\n    </div>\n\n    <!-- Controls -->\n    <a class=\"left carousel-control\" href=\"#\" role=\"button\" v-on:click.stop.prevent=\"prev\" v-show=\"controls\">\n        <span class=\"icon-prev\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Previous</span>\n    </a>\n    <a class=\"right carousel-control\" href=\"#\" role=\"button\" v-on:click.stop.prevent=\"next\" v-show=\"controls\">\n        <span class=\"icon-next\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Next</span>\n    </a>\n\n</div>";
 
 /***/ },
 /* 25 */
@@ -1510,11 +1503,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this._collapseAnimation = setTimeout(function () {
 	        _this.$el.classList.remove('collapsing');
 	        _this.$el.classList.add('collapse', 'in');
+	        _this.$root.$broadcast('toggled::collapsed', { id: _this.id, group: _this.group, expanded: true });
+	        _this.$root.$dispatch('toggled::collapsed', { id: _this.id, group: _this.group, expanded: true });
+	        _this.$el.style.height = null;
 	      }, TRANSITION_DURATION);
 	    },
 	    hide: function hide() {
 	      var _this2 = this;
 
+	      this.$el.style.height = this.$el.scrollHeight + 'px';
 	      this.$el.classList.remove('collapse');
 	      this.$el.classList.remove('in');
 	      this.$el.classList.add('collapsing');
@@ -1523,6 +1520,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this._collapseAnimation = setTimeout(function () {
 	        _this2.$el.classList.remove('collapsing');
 	        _this2.$el.classList.add('collapse');
+	        _this2.$root.$broadcast('toggled::collapsed', { id: _this2.id, group: _this2.group, expanded: false });
+	        _this2.$root.$dispatch('toggled::collapsed', { id: _this2.id, group: _this2.group, expanded: false });
+	        _this2.$el.style.height = null;
 	      }, TRANSITION_DURATION);
 	    }
 	  },
@@ -1565,7 +1565,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.collapse = collapse;
 	// export component object
 	var collapseToggle = {
-	  template: '<span v-on:click.stop.prevent="toggle($event)"><slot></slot></span>',
+	  template: '<span v-on:click.stop.prevent="toggle($event)" :class="{collapsed: !expanded}" :aria-expanded="expanded ? \'true\' : \'false\'" :aria-controls="target"><slot></slot></span>',
 	  replace: true,
 	  computed: {},
 	  props: {
@@ -1576,6 +1576,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    targetGroup: {
 	      type: String,
 	      'default': ''
+	    },
+	    expanded: {
+	      type: Boolean,
+	      'default': false
 	    }
 	  },
 	  methods: {
@@ -1593,6 +1597,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.$root.$dispatch('toggled::collapse', { id: this.target, group: this.targetGroup });
 	      }
 	    }
+	  },
+	  events: {
+	    'toggled::collapsed': function toggledCollapsed(data) {
+	      if (data.id && data.id === this.target && !data.group || data.group && data.group === this.targetGroup && !data.id) {
+	        this.expanded = data.expanded;
+	      }
+	    }
 	  }
 	};
 	exports.collapseToggle = collapseToggle;
@@ -1601,7 +1612,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 26 */
 /***/ function(module, exports) {
 
-	module.exports = "<div id=\"{{id}}\" class=\"collapse\">\r\n  <slot></slot>\r\n</div>";
+	module.exports = "<div id=\"{{id}}\" class=\"collapse\">\n  <slot></slot>\n</div>";
 
 /***/ },
 /* 27 */
@@ -1697,7 +1708,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 28 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-bind:class=\"{ open: show, dropdown: !dropup, dropup: dropup, 'dropdown-arrow': arrow}\" v-on:click=\"toggle($event)\">\r\n    <span class=\"btn-action\">\r\n        <button\r\n            id=\"dLabel\"\r\n            class=\"btn {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"{{show}}\"\r\n            :disabled=\"disabled\"\r\n            v-if=\"text\">\r\n            <span v-html=\"text\"></span>\r\n            <span class=\"caret\"></span>\r\n        </button>\r\n        <slot name=\"button\" v-if=\"!text\"></slot>\r\n    </span role=\"button\">\r\n    <slot></slot>\r\n</div>\r\n";
+	module.exports = "<div v-bind:class=\"{ open: show, dropdown: !dropup, dropup: dropup, 'dropdown-arrow': arrow}\" v-on:click=\"toggle($event)\">\n    <span class=\"btn-action\">\n        <button\n            id=\"dLabel\"\n            class=\"btn {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\n            aria-haspopup=\"true\"\n            aria-expanded=\"{{show}}\"\n            :disabled=\"disabled\"\n            v-if=\"text\">\n            <span v-html=\"text\"></span>\n            <span class=\"caret\"></span>\n        </button>\n        <slot name=\"button\" v-if=\"!text\"></slot>\n    </span role=\"button\">\n    <slot></slot>\n</div>\n";
 
 /***/ },
 /* 29 */
@@ -1891,7 +1902,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 32 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"dropdown-select\" v-bind:class=\"{open: show, dropdown: !dropup, dropup: dropup}\">\r\n    <button\r\n        id=\"{{id}}\"\r\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\r\n        role=\"button\"\r\n        aria-haspopup=\"true\"\r\n        aria-expanded=\"show\"\r\n        v-on:click.prevent=\"toggle($event)\"\r\n        :disabled=\"disabled\">\r\n        <span class=\"checked-items\" v-html=\"displayItem\"></span>\r\n    </button>\r\n    <ul class=\"dropdown-menu\" v-bind:class=\"{'dropdown-menu-right' : position == 'right'}\" aria-labelledby=\"dLabel\">\r\n        <li v-for=\"item in list\">\r\n            <button class=\"dropdown-item\" v-on:click.stop.prevent=\"select(item)\">{{item.text}}</button>\r\n        </li>\r\n    </ul>\r\n</div>\r\n";
+	module.exports = "<div class=\"dropdown-select\" v-bind:class=\"{open: show, dropdown: !dropup, dropup: dropup}\">\n    <button\n        id=\"{{id}}\"\n        class=\"btn dropdown {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\n        role=\"button\"\n        aria-haspopup=\"true\"\n        aria-expanded=\"show\"\n        v-on:click.prevent=\"toggle($event)\"\n        :disabled=\"disabled\">\n        <span class=\"checked-items\" v-html=\"displayItem\"></span>\n    </button>\n    <ul class=\"dropdown-menu\" v-bind:class=\"{'dropdown-menu-right' : position == 'right'}\" aria-labelledby=\"dLabel\">\n        <li v-for=\"item in list\">\n            <button class=\"dropdown-item\" v-on:click.stop.prevent=\"select(item)\">{{item.text}}</button>\n        </li>\n    </ul>\n</div>\n";
 
 /***/ },
 /* 33 */
@@ -2045,7 +2056,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 37 */
 /***/ function(module, exports) {
 
-	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n\t<div class=\"checkbox\" v-for=\"item in list\" v-bind:class=\"{ 'checkbox-inline': !vertical, disabled: item.disabled }\">\r\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-checkbox': custom }\">\r\n\t\t\t<input \r\n\t\t\t\tid=\"{{item.id}}\" \r\n\t\t\t\ttype=\"checkbox\" \r\n\t\t\t\tvalue=\"{{item.value}}\" \r\n\t\t\t\tautocomplete=\"off\" \r\n\t\t\t\tv-model=\"item.checked\" \r\n\t\t\t\tv-bind:disabled=\"item.disabled\">\r\n\t\t\t\t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.text}}\r\n\t\t</label>\r\n\t</div>\r\n</fieldset>\r\n";
+	module.exports = "<fieldset class=\"form-group {{inputState}}\">\n\t<div class=\"checkbox\" v-for=\"item in list\" v-bind:class=\"{ 'checkbox-inline': !vertical, disabled: item.disabled }\">\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-checkbox': custom }\">\n\t\t\t<input \n\t\t\t\tid=\"{{item.id}}\" \n\t\t\t\ttype=\"checkbox\" \n\t\t\t\tvalue=\"{{item.value}}\" \n\t\t\t\tautocomplete=\"off\" \n\t\t\t\tv-model=\"item.checked\" \n\t\t\t\tv-bind:disabled=\"item.disabled\">\n\t\t\t\t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.text}}\n\t\t</label>\n\t</div>\n</fieldset>\n";
 
 /***/ },
 /* 38 */
@@ -2143,7 +2154,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 39 */
 /***/ function(module, exports) {
 
-	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n\t<div class=\"radio\" v-for=\"item in list\" v-bind:class=\"{ 'radio-inline': !vertical, disabled: item.disabled }\">\r\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-radio': custom }\">\r\n\t\t\t<input \r\n\t\t\t\tid=\"{{item.id}}\" \r\n\t\t\t\ttype=\"radio\" \r\n\t\t\t\tname=\"{{name}}\"\r\n\t\t\t\tvalue=\"{{item.value}}\" \r\n\t\t\t\tautocomplete=\"off\" \r\n\t\t\t\tv-model=\"selection\" \r\n\t\t\t\tdisabled=\"{{item.disabled}}\">\r\n\t\t \t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.name}}\r\n\t\t</label>\r\n\t</div>\r\n</fieldset>\r\n";
+	module.exports = "<fieldset class=\"form-group {{inputState}}\">\n\t<div class=\"radio\" v-for=\"item in list\" v-bind:class=\"{ 'radio-inline': !vertical, disabled: item.disabled }\">\n\t\t<label v-bind:class=\"{ 'c-input': custom, 'c-radio': custom }\">\n\t\t\t<input \n\t\t\t\tid=\"{{item.id}}\" \n\t\t\t\ttype=\"radio\" \n\t\t\t\tname=\"{{name}}\"\n\t\t\t\tvalue=\"{{item.value}}\" \n\t\t\t\tautocomplete=\"off\" \n\t\t\t\tv-model=\"selection\" \n\t\t\t\tdisabled=\"{{item.disabled}}\">\n\t\t \t<span class=\"c-indicator\" v-if=\"custom\"></span> {{item.name}}\n\t\t</label>\n\t</div>\n</fieldset>\n";
 
 /***/ },
 /* 40 */
@@ -2229,7 +2240,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 41 */
 /***/ function(module, exports) {
 
-	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <div class=\"inputClass\">\r\n        <input \r\n        \ttype=\"{{type}}\" \r\n        \tclass=\"form-control {{stateIconType}} {{inputSize}}\" \r\n        \tid=\"{{id}}\" \r\n        \tplaceholder=\"{{placeholder}}\" \r\n        \tv-model=\"model\">\r\n    </div>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>\r\n";
+	module.exports = "<fieldset class=\"form-group {{inputState}}\">\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\n    <div class=\"inputClass\">\n        <input \n        \ttype=\"{{type}}\" \n        \tclass=\"form-control {{stateIconType}} {{inputSize}}\" \n        \tid=\"{{id}}\" \n        \tplaceholder=\"{{placeholder}}\" \n        \tv-model=\"model\">\n    </div>\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\n</fieldset>\n";
 
 /***/ },
 /* 42 */
@@ -2319,7 +2330,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 43 */
 /***/ function(module, exports) {
 
-	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <!-- single select -->\r\n    <select class=\"form-control {{inputSize}}\" id=\"{{id}}\" v-model=\"model\" options=\"allOptions\" v-if=\"!multiple\">\r\n    \t<option v-for=\"option in allOptions\" v-bind:value=\"option.value\">{{option.text}}</option>\r\n    </select>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>\r\n";
+	module.exports = "<fieldset class=\"form-group {{inputState}}\">\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\n    <!-- single select -->\n    <select class=\"form-control {{inputSize}}\" id=\"{{id}}\" v-model=\"model\" options=\"allOptions\" v-if=\"!multiple\">\n    \t<option v-for=\"option in allOptions\" v-bind:value=\"option.value\">{{option.text}}</option>\n    </select>\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\n</fieldset>\n";
 
 /***/ },
 /* 44 */
@@ -2382,7 +2393,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 45 */
 /***/ function(module, exports) {
 
-	module.exports = "<fieldset class=\"form-group {{inputState}}\">\r\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\r\n    <textarea class=\"form-control\" id=\"{{id}}\" rows=\"{{rows}}\" v-model=\"model\"></textarea>\r\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\r\n</fieldset>";
+	module.exports = "<fieldset class=\"form-group {{inputState}}\">\n    <label for=\"{{id}}\" v-if=\"label\" class=\"control-label\">{{label}}</label>\n    <textarea class=\"form-control\" id=\"{{id}}\" rows=\"{{rows}}\" v-model=\"model\"></textarea>\n    <small class=\"text-muted\" v-if=\"description\" v-html=\"description\"></small>\n</fieldset>";
 
 /***/ },
 /* 46 */
@@ -2426,7 +2437,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 48 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"jumbotron\" v-bind:class=\"{ 'jumbotron-fluid': fluid }\">\r\n  <div class=\"container\">\r\n    <slot></slot>\r\n  </div>\r\n</div>";
+	module.exports = "<div class=\"jumbotron\" v-bind:class=\"{ 'jumbotron-fluid': fluid }\">\n  <div class=\"container\">\n    <slot></slot>\n  </div>\n</div>";
 
 /***/ },
 /* 49 */
@@ -2489,7 +2500,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 50 */
 /***/ function(module, exports) {
 
-	module.exports = "<ul v-bind:class=\"{'list-group': true, 'list-group-flush': flush}\">\r\n  <slot></slot>\r\n</ul>";
+	module.exports = "<ul v-bind:class=\"{'list-group': true, 'list-group-flush': flush}\">\n  <slot></slot>\n</ul>";
 
 /***/ },
 /* 51 */
@@ -2578,7 +2589,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 54 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"media\">\r\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-left'\">\r\n  \t<slot name=\"aside\">\r\n  </div>\r\n  <div class=\"media-body\">\r\n  \t<slot name=\"body\">\r\n  </div>\r\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-right'\">\r\n  \t<slot name=\"aside\">\r\n  </div>\r\n</div>";
+	module.exports = "<div class=\"media\">\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-left'\">\n  \t<slot name=\"aside\">\n  </div>\n  <div class=\"media-body\">\n  \t<slot name=\"body\">\n  </div>\n  <div class=\"{{mediaHorizontalAlign}} {{mediaVerticalAlign}}\" v-if=\"mediaHorizontalAlign == 'media-right'\">\n  \t<slot name=\"aside\">\n  </div>\n</div>";
 
 /***/ },
 /* 55 */
@@ -2711,7 +2722,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 56 */
 /***/ function(module, exports) {
 
-	module.exports = "<div style=\"display: none\">\r\n\t<div id=\"{{id}}\" class=\"modal\" v-bind:class=\"{ fade: fade, in: animateModal || !fade }\" style=\"display: block\" v-on:click=\"onClickOut($event)\">\r\n\t  \t<div class=\"modal-dialog  modal-{{size}}\" role=\"document\" style=\"z-index: 9999\">\r\n\t\t    <div class=\"modal-content\">\r\n\t\t        <div class=\"modal-header\">\r\n\t\t        \t<slot name=\"modal-header\"></slot>\r\n\t\t        </div>\r\n\t\t        <div class=\"modal-body\">\r\n\t\t        \t<slot name=\"modal-body\"></slot>\r\n\t\t        </div>\r\n\t\t        <div class=\"modal-footer\">\r\n\t\t        \t<slot name=\"modal-footer\"></slot>\r\n\t\t        </div>\r\n\t\t    </div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"modal-backdrop\" v-bind:class=\"{ fade: fade, in: animateBackdrop || !fade }\"></div>\r\n</div>";
+	module.exports = "<div style=\"display: none\">\n\t<div id=\"{{id}}\" class=\"modal\" v-bind:class=\"{ fade: fade, in: animateModal || !fade }\" style=\"display: block\" v-on:click=\"onClickOut($event)\">\n\t  \t<div class=\"modal-dialog  modal-{{size}}\" role=\"document\" style=\"z-index: 9999\">\n\t\t    <div class=\"modal-content\">\n\t\t        <div class=\"modal-header\">\n\t\t        \t<slot name=\"modal-header\"></slot>\n\t\t        </div>\n\t\t        <div class=\"modal-body\">\n\t\t        \t<slot name=\"modal-body\"></slot>\n\t\t        </div>\n\t\t        <div class=\"modal-footer\">\n\t\t        \t<slot name=\"modal-footer\"></slot>\n\t\t        </div>\n\t\t    </div>\n\t\t</div>\n\t</div>\n\t<div class=\"modal-backdrop\" v-bind:class=\"{ fade: fade, in: animateBackdrop || !fade }\"></div>\n</div>";
 
 /***/ },
 /* 57 */
@@ -2819,7 +2830,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 60 */
 /***/ function(module, exports) {
 
-	module.exports = "<ul v-bind:class=\"{'nav': true, 'nav-stacked': vertical, 'nav-pills': type == 'pills', 'navbar-nav': type == 'navbar' }\">\r\n  <slot></slot> \r\n</ul>";
+	module.exports = "<ul v-bind:class=\"{'nav': true, 'nav-stacked': vertical, 'nav-pills': type == 'pills', 'navbar-nav': type == 'navbar' }\">\n  <slot></slot> \n</ul>";
 
 /***/ },
 /* 61 */
@@ -2878,7 +2889,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 62 */
 /***/ function(module, exports) {
 
-	module.exports = "<nav class=\"navbar {{navbarType}} {{navbarVariant}} {{navbarfixed}} {{full ? 'navbar-full' : ''}}\">\r\n\t<slot></slot>\r\n</nav>";
+	module.exports = "<nav class=\"navbar {{navbarType}} {{navbarVariant}} {{navbarfixed}} {{full ? 'navbar-full' : ''}}\">\n\t<slot></slot>\n</nav>";
 
 /***/ },
 /* 63 */
@@ -2893,37 +2904,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _pagerHtml = __webpack_require__(64);
-
-	var _pagerHtml2 = _interopRequireDefault(_pagerHtml);
-
-	// export component object
-	exports['default'] = {
-	  template: _pagerHtml2['default'],
-	  replace: true
-	};
-	module.exports = exports['default'];
-
-/***/ },
-/* 64 */
-/***/ function(module, exports) {
-
-	module.exports = "<nav>\r\n  <ul class=\"pager\">\r\n  \t<slot></slot>\r\n  </ul>\r\n</nav>";
-
-/***/ },
-/* 65 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	var _paginationHtml = __webpack_require__(66);
+	var _paginationHtml = __webpack_require__(64);
 
 	var _paginationHtml2 = _interopRequireDefault(_paginationHtml);
 
@@ -3016,13 +2997,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 66 */
+/* 64 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"btn-group pagination\" role=\"group\" aria-label=\"Pagination\">\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == 1 \" v-on:click.prevent=\"(currentPage == 1) ? return : currentPage--\"><span aria-hidden=\"true\">&laquo;</span></button>\r\n    <button type=\"button\" class=\"btn  btn-secondary {{btnSize}} {{ currentPage == 1 ?  'active' : '' }}\" v-on:click.prevent=\"currentPage = 1\" v-show=\"showPrev\">1</button>\r\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showPrev\">...</span>\r\n    <button type=\"button\"\r\n    \tclass=\"btn {{btnSize}} {{btnVariant($index)}} {{ $index + diff == currentPage ? 'active' : '' }} {{ $index + diff != currentPage ? 'hidden-xs-down' : '' }}\"\r\n    \tv-for=\"item in pageLinks\"\r\n        v-on:click.prevent=\"currentPage = $index + diff\">{{$index + diff}}\r\n    </button>\r\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showNext\">...</span>\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}} {{ numberOfPages == currentPage ? 'active' : '' }}\" v-show=\"showNext\" v-on:click.prevent=\"currentPage = numberOfPages\">{{numberOfPages}}</button>\r\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == numberOfPages\" v-on:click.prevent=\"(currentPage == numberOfPages) ? return : currentPage++\"><span aria-hidden=\"true\">&raquo;</span></button>\r\n</div>\r\n";
+	module.exports = "<div class=\"btn-group pagination\" role=\"group\" aria-label=\"Pagination\">\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == 1 \" v-on:click.prevent=\"(currentPage == 1) ? return : currentPage--\"><span aria-hidden=\"true\">&laquo;</span></button>\n    <button type=\"button\" class=\"btn  btn-secondary {{btnSize}} {{ currentPage == 1 ?  'active' : '' }}\" v-on:click.prevent=\"currentPage = 1\" v-show=\"showPrev\">1</button>\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showPrev\">...</span>\n    <button type=\"button\"\n    \tclass=\"btn {{btnSize}} {{btnVariant($index)}} {{ $index + diff == currentPage ? 'active' : '' }} {{ $index + diff != currentPage ? 'hidden-xs-down' : '' }}\"\n    \tv-for=\"item in pageLinks\"\n        v-on:click.prevent=\"currentPage = $index + diff\">{{$index + diff}}\n    </button>\n    <span class=\"btn btn-secondary {{btnSize}}\" v-show=\"showNext\">...</span>\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}} {{ numberOfPages == currentPage ? 'active' : '' }}\" v-show=\"showNext\" v-on:click.prevent=\"currentPage = numberOfPages\">{{numberOfPages}}</button>\n    <button type=\"button\" class=\"btn btn-secondary {{btnSize}}\" v-bind:disabled=\"currentPage == numberOfPages\" v-on:click.prevent=\"(currentPage == numberOfPages) ? return : currentPage++\"><span aria-hidden=\"true\">&raquo;</span></button>\n</div>\n";
 
 /***/ },
-/* 67 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -3034,13 +3015,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _tether = __webpack_require__(68);
+	var _tether = __webpack_require__(66);
 
 	var _tether2 = _interopRequireDefault(_tether);
 
-	__webpack_require__(69);
+	__webpack_require__(67);
 
-	var _popoverHtml = __webpack_require__(71);
+	var _popoverHtml = __webpack_require__(69);
 
 	var _popoverHtml2 = _interopRequireDefault(_popoverHtml);
 
@@ -3223,10 +3204,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 68 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! tether 1.1.0 */
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! tether 1.3.7 */
 
 	(function(root, factory) {
 	  if (true) {
@@ -3249,24 +3230,55 @@ return /******/ (function(modules) { // webpackBootstrap
 	  TetherBase = { modules: [] };
 	}
 
-	function getScrollParent(el) {
-	  var _getComputedStyle = getComputedStyle(el);
+	var zeroElement = null;
 
-	  var position = _getComputedStyle.position;
+	// Same as native getBoundingClientRect, except it takes into account parent <frame> offsets
+	// if the element lies within a nested document (<frame> or <iframe>-like).
+	function getActualBoundingClientRect(node) {
+	  var boundingRect = node.getBoundingClientRect();
+
+	  // The original object returned by getBoundingClientRect is immutable, so we clone it
+	  // We can't use extend because the properties are not considered part of the object by hasOwnProperty in IE9
+	  var rect = {};
+	  for (var k in boundingRect) {
+	    rect[k] = boundingRect[k];
+	  }
+
+	  if (node.ownerDocument !== document) {
+	    var _frameElement = node.ownerDocument.defaultView.frameElement;
+	    if (_frameElement) {
+	      var frameRect = getActualBoundingClientRect(_frameElement);
+	      rect.top += frameRect.top;
+	      rect.bottom += frameRect.top;
+	      rect.left += frameRect.left;
+	      rect.right += frameRect.left;
+	    }
+	  }
+
+	  return rect;
+	}
+
+	function getScrollParents(el) {
+	  // In firefox if the el is inside an iframe with display: none; window.getComputedStyle() will return null;
+	  // https://bugzilla.mozilla.org/show_bug.cgi?id=548397
+	  var computedStyle = getComputedStyle(el) || {};
+	  var position = computedStyle.position;
+	  var parents = [];
 
 	  if (position === 'fixed') {
-	    return el;
+	    return [el];
 	  }
 
 	  var parent = el;
-	  while (parent = parent.parentNode) {
+	  while ((parent = parent.parentNode) && parent && parent.nodeType === 1) {
 	    var style = undefined;
 	    try {
 	      style = getComputedStyle(parent);
 	    } catch (err) {}
 
 	    if (typeof style === 'undefined' || style === null) {
-	      return parent;
+	      parents.push(parent);
+	      return parents;
 	    }
 
 	    var _style = style;
@@ -3276,12 +3288,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    if (/(auto|scroll)/.test(overflow + overflowY + overflowX)) {
 	      if (position !== 'absolute' || ['relative', 'absolute', 'fixed'].indexOf(style.position) >= 0) {
-	        return parent;
+	        parents.push(parent);
 	      }
 	    }
 	  }
 
-	  return document.body;
+	  parents.push(el.ownerDocument.body);
+
+	  // If the node is within a frame, account for the parent window scroll
+	  if (el.ownerDocument !== document) {
+	    parents.push(el.ownerDocument.defaultView);
+	  }
+
+	  return parents;
 	}
 
 	var uniqueId = (function () {
@@ -3292,14 +3311,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	})();
 
 	var zeroPosCache = {};
-	var getOrigin = function getOrigin(doc) {
+	var getOrigin = function getOrigin() {
 	  // getBoundingClientRect is unfortunately too accurate.  It introduces a pixel or two of
 	  // jitter as the user scrolls that messes with our ability to detect if two positions
 	  // are equivilant or not.  We place an element at the top left of the page that will
 	  // get the same jitter, so we can cancel the two out.
-	  var node = doc._tetherZeroElement;
-	  if (typeof node === 'undefined') {
-	    node = doc.createElement('div');
+	  var node = zeroElement;
+	  if (!node) {
+	    node = document.createElement('div');
 	    node.setAttribute('data-tether-id', uniqueId());
 	    extend(node.style, {
 	      top: 0,
@@ -3307,20 +3326,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      position: 'absolute'
 	    });
 
-	    doc.body.appendChild(node);
+	    document.body.appendChild(node);
 
-	    doc._tetherZeroElement = node;
+	    zeroElement = node;
 	  }
 
 	  var id = node.getAttribute('data-tether-id');
 	  if (typeof zeroPosCache[id] === 'undefined') {
-	    zeroPosCache[id] = {};
-
-	    var rect = node.getBoundingClientRect();
-	    for (var k in rect) {
-	      // Can't use extend, as on IE9, elements don't resolve to be hasOwnProperty
-	      zeroPosCache[id][k] = rect[k];
-	    }
+	    zeroPosCache[id] = getActualBoundingClientRect(node);
 
 	    // Clear the cache when this position call is done
 	    defer(function () {
@@ -3329,6 +3342,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  return zeroPosCache[id];
+	};
+
+	function removeUtilElements() {
+	  if (zeroElement) {
+	    document.body.removeChild(zeroElement);
+	  }
+	  zeroElement = null;
 	};
 
 	function getBounds(el) {
@@ -3342,15 +3362,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  var docEl = doc.documentElement;
 
-	  var box = {};
-	  // The original object returned by getBoundingClientRect is immutable, so we clone it
-	  // We can't use extend because the properties are not considered part of the object by hasOwnProperty in IE9
-	  var rect = el.getBoundingClientRect();
-	  for (var k in rect) {
-	    box[k] = rect[k];
-	  }
+	  var box = getActualBoundingClientRect(el);
 
-	  var origin = getOrigin(doc);
+	  var origin = getOrigin();
 
 	  box.top -= origin.top;
 	  box.left -= origin.left;
@@ -3374,7 +3388,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return el.offsetParent || document.documentElement;
 	}
 
+	var _scrollBarSize = null;
 	function getScrollBarSize() {
+	  if (_scrollBarSize) {
+	    return _scrollBarSize;
+	  }
 	  var inner = document.createElement('div');
 	  inner.style.width = '100%';
 	  inner.style.height = '200px';
@@ -3407,7 +3425,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  var width = widthContained - widthScroll;
 
-	  return { width: width, height: width };
+	  _scrollBarSize = { width: width, height: width };
+	  return _scrollBarSize;
 	}
 
 	function extend() {
@@ -3467,7 +3486,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function getClassName(el) {
-	  if (el.className instanceof SVGAnimatedString) {
+	  // Can't use just SVGAnimatedString here since nodes within a Frame in IE have
+	  // completely separately SVGAnimatedString base classes
+	  if (el.className instanceof el.ownerDocument.defaultView.SVGAnimatedString) {
 	    return el.className.baseVal;
 	  }
 	  return el.className;
@@ -3532,7 +3553,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'off',
 	    value: function off(event, handler) {
-	      if (typeof this.bindings !== 'undefined' && typeof this.bindings[event] !== 'undefined') {
+	      if (typeof this.bindings === 'undefined' || typeof this.bindings[event] === 'undefined') {
 	        return;
 	      }
 
@@ -3586,7 +3607,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	})();
 
 	TetherBase.Utils = {
-	  getScrollParent: getScrollParent,
+	  getActualBoundingClientRect: getActualBoundingClientRect,
+	  getScrollParents: getScrollParents,
 	  getBounds: getBounds,
 	  getOffsetParent: getOffsetParent,
 	  extend: extend,
@@ -3598,7 +3620,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  flush: flush,
 	  uniqueId: uniqueId,
 	  Evented: Evented,
-	  getScrollBarSize: getScrollBarSize
+	  getScrollBarSize: getScrollBarSize,
+	  removeUtilElements: removeUtilElements
 	};
 	/* globals TetherBase, performance */
 
@@ -3608,14 +3631,18 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
+	var _get = function get(_x6, _x7, _x8) { var _again = true; _function: while (_again) { var object = _x6, property = _x7, receiver = _x8; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x6 = parent; _x7 = property; _x8 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	if (typeof TetherBase === 'undefined') {
 	  throw new Error('You must include the utils.js file before tether.js');
 	}
 
 	var _TetherBase$Utils = TetherBase.Utils;
-	var getScrollParent = _TetherBase$Utils.getScrollParent;
+	var getScrollParents = _TetherBase$Utils.getScrollParents;
 	var getBounds = _TetherBase$Utils.getBounds;
 	var getOffsetParent = _TetherBase$Utils.getOffsetParent;
 	var extend = _TetherBase$Utils.extend;
@@ -3625,6 +3652,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var defer = _TetherBase$Utils.defer;
 	var flush = _TetherBase$Utils.flush;
 	var getScrollBarSize = _TetherBase$Utils.getScrollBarSize;
+	var removeUtilElements = _TetherBase$Utils.removeUtilElements;
 
 	function within(a, b) {
 	  var diff = arguments.length <= 2 || arguments[2] === undefined ? 1 : arguments[2];
@@ -3638,7 +3666,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	  var el = document.createElement('div');
 
-	  var transforms = ['transform', 'webkitTransform', 'OTransform', 'MozTransform', 'msTransform'];
+	  var transforms = ['transform', 'WebkitTransform', 'OTransform', 'MozTransform', 'msTransform'];
 	  for (var i = 0; i < transforms.length; ++i) {
 	    var key = transforms[i];
 	    if (el.style[key] !== undefined) {
@@ -3683,7 +3711,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return;
 	    }
 
-	    if (typeof pendingTimeout !== 'undefined') {
+	    if (pendingTimeout != null) {
 	      clearTimeout(pendingTimeout);
 	      pendingTimeout = null;
 	    }
@@ -3693,7 +3721,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    lastDuration = now() - lastCall;
 	  };
 
-	  if (typeof window !== 'undefined') {
+	  if (typeof window !== 'undefined' && typeof window.addEventListener !== 'undefined') {
 	    ['resize', 'scroll', 'touchmove'].forEach(function (event) {
 	      window.addEventListener(event, tick);
 	    });
@@ -3799,12 +3827,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var parseAttachment = parseOffset;
 
-	var TetherClass = (function () {
+	var TetherClass = (function (_Evented) {
+	  _inherits(TetherClass, _Evented);
+
 	  function TetherClass(options) {
 	    var _this = this;
 
 	    _classCallCheck(this, TetherClass);
 
+	    _get(Object.getPrototypeOf(TetherClass.prototype), 'constructor', this).call(this);
 	    this.position = this.position.bind(this);
 
 	    tethers.push(this);
@@ -3895,14 +3926,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.offset = parseOffset(this.options.offset);
 	      this.targetOffset = parseOffset(this.options.targetOffset);
 
-	      if (typeof this.scrollParent !== 'undefined') {
+	      if (typeof this.scrollParents !== 'undefined') {
 	        this.disable();
 	      }
 
 	      if (this.targetModifier === 'scroll-handle') {
-	        this.scrollParent = this.target;
+	        this.scrollParents = [this.target];
 	      } else {
-	        this.scrollParent = getScrollParent(this.target);
+	        this.scrollParents = getScrollParents(this.target);
 	      }
 
 	      if (!(this.options.enabled === false)) {
@@ -4023,6 +4054,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'enable',
 	    value: function enable() {
+	      var _this3 = this;
+
 	      var pos = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
 
 	      if (!(this.options.addTargetClasses === false)) {
@@ -4031,9 +4064,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      addClass(this.element, this.getClass('enabled'));
 	      this.enabled = true;
 
-	      if (this.scrollParent !== document) {
-	        this.scrollParent.addEventListener('scroll', this.position);
-	      }
+	      this.scrollParents.forEach(function (parent) {
+	        if (parent !== _this3.target.ownerDocument) {
+	          parent.addEventListener('scroll', _this3.position);
+	        }
+	      });
 
 	      if (pos) {
 	        this.position();
@@ -4042,32 +4077,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'disable',
 	    value: function disable() {
+	      var _this4 = this;
+
 	      removeClass(this.target, this.getClass('enabled'));
 	      removeClass(this.element, this.getClass('enabled'));
 	      this.enabled = false;
 
-	      if (typeof this.scrollParent !== 'undefined') {
-	        this.scrollParent.removeEventListener('scroll', this.position);
+	      if (typeof this.scrollParents !== 'undefined') {
+	        this.scrollParents.forEach(function (parent) {
+	          parent.removeEventListener('scroll', _this4.position);
+	        });
 	      }
 	    }
 	  }, {
 	    key: 'destroy',
 	    value: function destroy() {
-	      var _this3 = this;
+	      var _this5 = this;
 
 	      this.disable();
 
 	      tethers.forEach(function (tether, i) {
-	        if (tether === _this3) {
+	        if (tether === _this5) {
 	          tethers.splice(i, 1);
-	          return;
 	        }
 	      });
+
+	      // Remove any elements we were using for convenience from the DOM
+	      if (tethers.length === 0) {
+	        removeUtilElements();
+	      }
 	    }
 	  }, {
 	    key: 'updateAttachClasses',
 	    value: function updateAttachClasses(elementAttach, targetAttach) {
-	      var _this4 = this;
+	      var _this6 = this;
 
 	      elementAttach = elementAttach || this.attachment;
 	      targetAttach = targetAttach || this.targetAttachment;
@@ -4100,27 +4143,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      var all = [];
 	      sides.forEach(function (side) {
-	        all.push(_this4.getClass('element-attached') + '-' + side);
-	        all.push(_this4.getClass('target-attached') + '-' + side);
+	        all.push(_this6.getClass('element-attached') + '-' + side);
+	        all.push(_this6.getClass('target-attached') + '-' + side);
 	      });
 
 	      defer(function () {
-	        if (!(typeof _this4._addAttachClasses !== 'undefined')) {
+	        if (!(typeof _this6._addAttachClasses !== 'undefined')) {
 	          return;
 	        }
 
-	        updateClasses(_this4.element, _this4._addAttachClasses, all);
-	        if (!(_this4.options.addTargetClasses === false)) {
-	          updateClasses(_this4.target, _this4._addAttachClasses, all);
+	        updateClasses(_this6.element, _this6._addAttachClasses, all);
+	        if (!(_this6.options.addTargetClasses === false)) {
+	          updateClasses(_this6.target, _this6._addAttachClasses, all);
 	        }
 
-	        delete _this4._addAttachClasses;
+	        delete _this6._addAttachClasses;
 	      });
 	    }
 	  }, {
 	    key: 'position',
 	    value: function position() {
-	      var _this5 = this;
+	      var _this7 = this;
 
 	      var flushChanges = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
 
@@ -4139,7 +4182,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.updateAttachClasses(this.attachment, targetAttachment);
 
 	      var elementPos = this.cache('element-bounds', function () {
-	        return getBounds(_this5.element);
+	        return getBounds(_this7.element);
 	      });
 
 	      var width = elementPos.width;
@@ -4157,7 +4200,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 
 	      var targetPos = this.cache('target-bounds', function () {
-	        return _this5.getTargetBounds();
+	        return _this7.getTargetBounds();
 	      });
 	      var targetSize = targetPos;
 
@@ -4222,29 +4265,32 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	      };
 
+	      var doc = this.target.ownerDocument;
+	      var win = doc.defaultView;
+
 	      var scrollbarSize = undefined;
-	      if (document.body.scrollWidth > window.innerWidth) {
+	      if (win.innerHeight > doc.documentElement.clientHeight) {
 	        scrollbarSize = this.cache('scrollbar-size', getScrollBarSize);
 	        next.viewport.bottom -= scrollbarSize.height;
 	      }
 
-	      if (document.body.scrollHeight > window.innerHeight) {
+	      if (win.innerWidth > doc.documentElement.clientWidth) {
 	        scrollbarSize = this.cache('scrollbar-size', getScrollBarSize);
 	        next.viewport.right -= scrollbarSize.width;
 	      }
 
-	      if (['', 'static'].indexOf(document.body.style.position) === -1 || ['', 'static'].indexOf(document.body.parentElement.style.position) === -1) {
+	      if (['', 'static'].indexOf(doc.body.style.position) === -1 || ['', 'static'].indexOf(doc.body.parentElement.style.position) === -1) {
 	        // Absolute positioning in the body will be relative to the page, not the 'initial containing block'
-	        next.page.bottom = document.body.scrollHeight - top - height;
-	        next.page.right = document.body.scrollWidth - left - width;
+	        next.page.bottom = doc.body.scrollHeight - top - height;
+	        next.page.right = doc.body.scrollWidth - left - width;
 	      }
 
 	      if (typeof this.options.optimizations !== 'undefined' && this.options.optimizations.moveElement !== false && !(typeof this.targetModifier !== 'undefined')) {
 	        (function () {
-	          var offsetParent = _this5.cache('target-offsetparent', function () {
-	            return getOffsetParent(_this5.target);
+	          var offsetParent = _this7.cache('target-offsetparent', function () {
+	            return getOffsetParent(_this7.target);
 	          });
-	          var offsetPosition = _this5.cache('target-offsetparent-bounds', function () {
+	          var offsetPosition = _this7.cache('target-offsetparent-bounds', function () {
 	            return getBounds(offsetParent);
 	          });
 	          var offsetParentStyle = getComputedStyle(offsetParent);
@@ -4255,8 +4301,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            offsetBorder[side.toLowerCase()] = parseFloat(offsetParentStyle['border' + side + 'Width']);
 	          });
 
-	          offsetPosition.right = document.body.scrollWidth - offsetPosition.left - offsetParentSize.width + offsetBorder.right;
-	          offsetPosition.bottom = document.body.scrollHeight - offsetPosition.top - offsetParentSize.height + offsetBorder.bottom;
+	          offsetPosition.right = doc.body.scrollWidth - offsetPosition.left - offsetParentSize.width + offsetBorder.right;
+	          offsetPosition.bottom = doc.body.scrollHeight - offsetPosition.top - offsetParentSize.height + offsetBorder.bottom;
 
 	          if (next.page.top >= offsetPosition.top + offsetBorder.top && next.page.bottom >= offsetPosition.bottom) {
 	            if (next.page.left >= offsetPosition.left + offsetBorder.left && next.page.right >= offsetPosition.right) {
@@ -4297,7 +4343,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'move',
 	    value: function move(pos) {
-	      var _this6 = this;
+	      var _this8 = this;
 
 	      if (!(typeof this.element.parentNode !== 'undefined')) {
 	        return;
@@ -4328,8 +4374,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var css = { top: '', left: '', right: '', bottom: '' };
 
 	      var transcribe = function transcribe(_same, _pos) {
-	        var hasOptimizations = typeof _this6.options.optimizations !== 'undefined';
-	        var gpu = hasOptimizations ? _this6.options.optimizations.gpu : null;
+	        var hasOptimizations = typeof _this8.options.optimizations !== 'undefined';
+	        var gpu = hasOptimizations ? _this8.options.optimizations.gpu : null;
 	        if (gpu !== false) {
 	          var yPos = undefined,
 	              xPos = undefined;
@@ -4349,7 +4395,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	            xPos = -_pos.right;
 	          }
 
-	          css[transformKey] = 'translateX(' + Math.round(xPos) + 'px) translateY(' + Math.round(yPos) + 'px)';
+	          if (window.matchMedia) {
+	            // HubSpot/tether#207
+	            var retina = window.matchMedia('only screen and (min-resolution: 1.3dppx)').matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 1.3)').matches;
+	            if (!retina) {
+	              xPos = Math.round(xPos);
+	              yPos = Math.round(yPos);
+	            }
+	          }
+
+	          css[transformKey] = 'translateX(' + xPos + 'px) translateY(' + yPos + 'px)';
 
 	          if (transformKey !== 'msTransform') {
 	            // The Z transform will keep this in the GPU (faster, and prevents artifacts),
@@ -4381,14 +4436,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      } else if (typeof same.offset !== 'undefined' && same.offset.top && same.offset.left) {
 	        (function () {
 	          css.position = 'absolute';
-	          var offsetParent = _this6.cache('target-offsetparent', function () {
-	            return getOffsetParent(_this6.target);
+	          var offsetParent = _this8.cache('target-offsetparent', function () {
+	            return getOffsetParent(_this8.target);
 	          });
 
-	          if (getOffsetParent(_this6.element) !== offsetParent) {
+	          if (getOffsetParent(_this8.element) !== offsetParent) {
 	            defer(function () {
-	              _this6.element.parentNode.removeChild(_this6.element);
-	              offsetParent.appendChild(_this6.element);
+	              _this8.element.parentNode.removeChild(_this8.element);
+	              offsetParent.appendChild(_this8.element);
 	            });
 	          }
 
@@ -4403,7 +4458,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (!moved) {
 	        var offsetParentIsBody = true;
 	        var currentNode = this.element.parentNode;
-	        while (currentNode && currentNode.tagName !== 'BODY') {
+	        while (currentNode && currentNode.nodeType === 1 && currentNode.tagName !== 'BODY') {
 	          if (getComputedStyle(currentNode).position !== 'static') {
 	            offsetParentIsBody = false;
 	            break;
@@ -4414,7 +4469,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        if (!offsetParentIsBody) {
 	          this.element.parentNode.removeChild(this.element);
-	          document.body.appendChild(this.element);
+	          this.element.ownerDocument.body.appendChild(this.element);
 	        }
 	      }
 
@@ -4425,11 +4480,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var val = css[key];
 	        var elVal = this.element.style[key];
 
-	        if (elVal !== '' && val !== '' && ['top', 'left', 'bottom', 'right'].indexOf(key) >= 0) {
-	          elVal = parseFloat(elVal);
-	          val = parseFloat(val);
-	        }
-
 	        if (elVal !== val) {
 	          write = true;
 	          writeCSS[key] = val;
@@ -4438,14 +4488,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      if (write) {
 	        defer(function () {
-	          extend(_this6.element.style, writeCSS);
+	          extend(_this8.element.style, writeCSS);
+	          _this8.trigger('repositioned');
 	        });
 	      }
 	    }
 	  }]);
 
 	  return TetherClass;
-	})();
+	})(Evented);
 
 	TetherClass.modules = [];
 
@@ -4468,7 +4519,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function getBoundingRect(tether, to) {
 	  if (to === 'scrollParent') {
-	    to = tether.scrollParent;
+	    to = tether.scrollParents[0];
 	  } else if (to === 'window') {
 	    to = [pageXOffset, pageYOffset, innerWidth + pageXOffset, innerHeight + pageYOffset];
 	  }
@@ -4479,11 +4530,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  if (typeof to.nodeType !== 'undefined') {
 	    (function () {
+	      var node = to;
 	      var size = getBounds(to);
 	      var pos = size;
 	      var style = getComputedStyle(to);
 
 	      to = [pos.left, pos.top, size.width + pos.left, size.height + pos.top];
+
+	      // Account any parent Frames scroll offset
+	      if (node.ownerDocument !== document) {
+	        var win = node.ownerDocument.defaultView;
+	        to[0] += win.pageXOffset;
+	        to[1] += win.pageYOffset;
+	        to[2] += win.pageXOffset;
+	        to[3] += win.pageYOffset;
+	      }
 
 	      BOUNDS_FORMAT.forEach(function (side, i) {
 	        side = side[0].toUpperCase() + side.substr(1);
@@ -4596,34 +4657,32 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 
 	      if (changeAttachY === 'together') {
-	        if (top < bounds[1] && tAttachment.top === 'top') {
-	          if (eAttachment.top === 'bottom') {
+	        if (tAttachment.top === 'top') {
+	          if (eAttachment.top === 'bottom' && top < bounds[1]) {
 	            top += targetHeight;
 	            tAttachment.top = 'bottom';
 
 	            top += height;
 	            eAttachment.top = 'top';
-	          } else if (eAttachment.top === 'top') {
-	            top += targetHeight;
+	          } else if (eAttachment.top === 'top' && top + height > bounds[3] && top - (height - targetHeight) >= bounds[1]) {
+	            top -= height - targetHeight;
 	            tAttachment.top = 'bottom';
 
-	            top -= height;
 	            eAttachment.top = 'bottom';
 	          }
 	        }
 
-	        if (top + height > bounds[3] && tAttachment.top === 'bottom') {
-	          if (eAttachment.top === 'top') {
+	        if (tAttachment.top === 'bottom') {
+	          if (eAttachment.top === 'top' && top + height > bounds[3]) {
 	            top -= targetHeight;
 	            tAttachment.top = 'top';
 
 	            top -= height;
 	            eAttachment.top = 'bottom';
-	          } else if (eAttachment.top === 'bottom') {
-	            top -= targetHeight;
+	          } else if (eAttachment.top === 'bottom' && top < bounds[1] && top + (height * 2 - targetHeight) <= bounds[3]) {
+	            top += height - targetHeight;
 	            tAttachment.top = 'top';
 
-	            top += height;
 	            eAttachment.top = 'top';
 	          }
 	        }
@@ -4704,14 +4763,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 
 	      if (changeAttachX === 'element' || changeAttachX === 'both') {
-	        if (left < bounds[0] && eAttachment.left === 'right') {
-	          left += width;
-	          eAttachment.left = 'left';
+	        if (left < bounds[0]) {
+	          if (eAttachment.left === 'right') {
+	            left += width;
+	            eAttachment.left = 'left';
+	          } else if (eAttachment.left === 'center') {
+	            left += width / 2;
+	            eAttachment.left = 'left';
+	          }
 	        }
 
-	        if (left + width > bounds[2] && eAttachment.left === 'left') {
-	          left -= width;
-	          eAttachment.left = 'right';
+	        if (left + width > bounds[2]) {
+	          if (eAttachment.left === 'left') {
+	            left -= width;
+	            eAttachment.left = 'right';
+	          } else if (eAttachment.left === 'center') {
+	            left -= width / 2;
+	            eAttachment.left = 'right';
+	          }
 	        }
 	      }
 
@@ -4805,6 +4874,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      if (tAttachment.top !== targetAttachment.top || tAttachment.left !== targetAttachment.left || eAttachment.top !== _this.attachment.top || eAttachment.left !== _this.attachment.left) {
 	        _this.updateAttachClasses(eAttachment, tAttachment);
+	        _this.trigger('update', {
+	          attachment: eAttachment,
+	          targetAttachment: tAttachment
+	        });
 	      }
 	    });
 
@@ -4944,13 +5017,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 69 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(70);
+	var content = __webpack_require__(68);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(19)(content, {});
@@ -4970,7 +5043,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 70 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(18)();
@@ -4984,13 +5057,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 71 */
+/* 69 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"popover-trigger\" v-el:trigger>\r\n\t<slot></slot>\r\n</span> \r\n<div class=\"popover {{popoverAlignment}}\" v-el:popover>\r\n  <div class=\"popover-arrow\"></div>\r\n  <h3 class=\"popover-title\" v-if=\"title\">{{title}}</h3>\r\n  <div class=\"popover-content\">\r\n    <span v-html=\"text\" v-if=\"text\"></span>\r\n    <slot name=\"content\" v-if=\"!text\"></slot>\r\n  </div>\r\n</div>";
+	module.exports = "<span class=\"popover-trigger\" v-el:trigger>\n\t<slot></slot>\n</span> \n<div class=\"popover {{popoverAlignment}}\" v-el:popover>\n  <div class=\"popover-arrow\"></div>\n  <h3 class=\"popover-title\" v-if=\"title\">{{title}}</h3>\n  <div class=\"popover-content\">\n    <span v-html=\"text\" v-if=\"text\"></span>\n    <slot name=\"content\" v-if=\"!text\"></slot>\n  </div>\n</div>";
 
 /***/ },
-/* 72 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -5002,7 +5075,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _progressHtml = __webpack_require__(73);
+	var _progressHtml = __webpack_require__(71);
 
 	var _progressHtml2 = _interopRequireDefault(_progressHtml);
 
@@ -5053,13 +5126,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 73 */
+/* 71 */
 /***/ function(module, exports) {
 
-	module.exports = "<progress \r\n\tclass=\"progress {{progressVariant}} {{striped ? 'progress-striped' : ''}} {{animated ? 'progres-animated' : ''}}\" \r\n\tvalue=\"{{value}}\" \r\n\tmax=\"{{max}}\" \r\n\taria-valuenow=\"{{value}}\" \r\n\taria-valuemin=\"0\" \r\n\taria-valuemax=\"{{max}}\"\r\n\tv-el:progress>\r\n  <div class=\"progress\">\r\n    <span class=\"progress-bar\" v-bind:style=\"{width: value + '%'}\" v-el:progressbar></span>\r\n  </div>\r\n</progress>";
+	module.exports = "<progress \n\tclass=\"progress {{progressVariant}} {{striped ? 'progress-striped' : ''}} {{animated ? 'progres-animated' : ''}}\" \n\tvalue=\"{{value}}\" \n\tmax=\"{{max}}\" \n\taria-valuenow=\"{{value}}\" \n\taria-valuemin=\"0\" \n\taria-valuemax=\"{{max}}\"\n\tv-el:progress>\n  <div class=\"progress\">\n    <span class=\"progress-bar\" v-bind:style=\"{width: value + '%'}\" v-el:progressbar></span>\n  </div>\n</progress>";
 
 /***/ },
-/* 74 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -5071,7 +5144,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _tablesHtml = __webpack_require__(75);
+	var _tablesHtml = __webpack_require__(73);
 
 	var _tablesHtml2 = _interopRequireDefault(_tablesHtml);
 
@@ -5171,13 +5244,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 75 */
+/* 73 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-bind:class=\"{repsonsive: responsive}\">\r\n\t<slot></slot>\r\n</div>";
+	module.exports = "<div v-bind:class=\"{repsonsive: responsive}\">\n\t<slot></slot>\n</div>";
 
 /***/ },
-/* 76 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -5189,7 +5262,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _tabsHtml = __webpack_require__(77);
+	var _tabsHtml = __webpack_require__(75);
 
 	var _tabsHtml2 = _interopRequireDefault(_tabsHtml);
 
@@ -5315,13 +5388,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.tab = tab;
 
 /***/ },
-/* 77 */
+/* 75 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"tabs\">\n  <ul class=\"nav nav-tabs\">\n    <li class=\"nav-item\" v-for=\"item in items\" v-on:click=\"setActive($index)\">\n      <span class=\"nav-link btn {{btnSize}} {{item.active ? 'active' : ''}} {{ item.disabled ? 'disabled' : '' }}\">{{item.title}}</span>\n    </li>\n  </ul>\n  <div class=\"tab-content\">\n    <slot></slot>\n  </div>\n</div>";
 
 /***/ },
-/* 78 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -5333,13 +5406,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _tether = __webpack_require__(68);
+	var _tether = __webpack_require__(66);
 
 	var _tether2 = _interopRequireDefault(_tether);
 
-	__webpack_require__(79);
+	__webpack_require__(77);
 
-	var _tooltipHtml = __webpack_require__(81);
+	var _tooltipHtml = __webpack_require__(79);
 
 	var _tooltipHtml2 = _interopRequireDefault(_tooltipHtml);
 
@@ -5521,13 +5594,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 79 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(80);
+	var content = __webpack_require__(78);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(19)(content, {});
@@ -5547,7 +5620,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 80 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(18)();
@@ -5561,10 +5634,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 81 */
+/* 79 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"tooltip-trigger\" v-el:trigger>\r\n\t<slot></slot>\r\n</span> \r\n<div class=\"tooltip fade in {{tooltipAlignment}}\" v-el:tooltip>\r\n\t<div class=\"tooltip-inner\">\r\n\t\t<div class=\"tooltip-arrow\"></div>\r\n\t  <div class=\"tooltip-content\">\r\n\t    <span v-html=\"text\" v-if=\"text\"></span>\r\n\t    <slot name=\"content\" v-if=\"!text\"></slot>\r\n\t  </div>\r\n\t</div>\r\n</div>";
+	module.exports = "<span class=\"tooltip-trigger\" v-el:trigger>\n\t<slot></slot>\n</span> \n<div class=\"tooltip fade in {{tooltipAlignment}}\" v-el:tooltip>\n\t<div class=\"tooltip-inner\">\n\t\t<div class=\"tooltip-arrow\"></div>\n\t  <div class=\"tooltip-content\">\n\t    <span v-html=\"text\" v-if=\"text\"></span>\n\t    <slot name=\"content\" v-if=\"!text\"></slot>\n\t  </div>\n\t</div>\n</div>";
 
 /***/ }
 /******/ ])
