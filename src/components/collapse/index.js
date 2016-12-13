@@ -31,7 +31,8 @@ export const collapse = {
       this.$el.style.height = height + 'px'
       this._collapseAnimation = setTimeout(()=> {
         this.$el.classList.remove('collapsing')
-        this.$el.classList.add('collapse', 'in')
+        this.$el.classList.add('collapse')
+        this.$el.classList.add('in')
         this.$root.$broadcast('toggled::collapsed', {id: this.id, group: this.group, expanded: true})
         this.$root.$dispatch('toggled::collapsed', {id: this.id, group: this.group, expanded: true})
         this.$el.style.height = null
