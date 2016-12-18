@@ -3376,7 +3376,8 @@
 	      this.$el.style.height = height + 'px';
 	      this._collapseAnimation = setTimeout(function () {
 	        _this.$el.classList.remove('collapsing');
-	        _this.$el.classList.add('collapse', 'in');
+	        _this.$el.classList.add('collapse');
+	        _this.$el.classList.add('in');
 	        _this.$root.$broadcast('toggled::collapsed', { id: _this.id, group: _this.group, expanded: true });
 	        _this.$root.$dispatch('toggled::collapsed', { id: _this.id, group: _this.group, expanded: true });
 	        _this.$el.style.height = null;
@@ -3402,15 +3403,22 @@
 	  },
 	  events: {
 	    'toggled::collapse': function toggledCollapse(data) {
+	      var shouldPropagate = true;
+
 	      if (data.id && data.id === this.id && !data.group || data.group && data.group === this.group && !data.id) {
 	        if ((this.$el.className + ' ').indexOf(' in ') > -1) {
 	          this.hide();
 	        } else {
 	          this.show();
 	        }
+
+	        shouldPropagate = false;
 	      }
+
+	      return shouldPropagate;
 	    },
 	    'toggled::accordion': function toggledAccordion(data) {
+	      var shouldPropagate = true;
 	      // if id and group id is provided it means it is an accordion and takes priority over all
 	      if (data.id && data.group && data.group === this.group) {
 	        // for current element
@@ -3423,12 +3431,16 @@
 	          }
 	        } else {
 	          // ignore if non-selected item is already closed
-	          if ((this.$el.className + ' ').indexOf(' in ') === -1) return;
+	          if ((this.$el.className + ' ').indexOf(' in ') === -1) return shouldPropagate;
 
 	          // close all items in the group, and open the one selected
 	          this.hide();
 	        }
+
+	        shouldPropagate = false;
 	      }
+
+	      return shouldPropagate;
 	    }
 	  },
 	  destroyed: function destroyed() {
@@ -5767,7 +5779,7 @@
 /* 167 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-bind:class=\"{ open: show, dropdown: !dropup, dropup: dropup, 'dropdown-arrow': arrow}\" v-on:click=\"toggle($event)\">\n    <span class=\"btn-action\">\n        <button\n            id=\"dLabel\"\n            class=\"btn {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\n            aria-haspopup=\"true\"\n            aria-expanded=\"{{show}}\"\n            :disabled=\"disabled\"\n            v-if=\"text\">\n            <span v-html=\"text\"></span>\n            <span class=\"caret\"></span>\n        </button>\n        <slot name=\"button\" v-if=\"!text\"></slot>\n    </span role=\"button\">\n    <slot></slot>\n</div>\n";
+	module.exports = "<div v-bind:class=\"{ open: show, dropdown: !dropup, dropup: dropup, 'dropdown-arrow': arrow}\" v-on:click=\"toggle($event)\">\n    <span class=\"btn-action\">\n        <template v-if=\"dropdownToggleAnchor\">\n            <a\n                id=\"dLabel\"\n                class=\"{{dropdownToggle}} {{anchorClass}} {{btnSize}}\"\n                aria-haspopup=\"true\"\n                aria-expanded=\"{{show}}\"\n                :disabled=\"disabled\"\n                v-if=\"text\">\n                <span v-html=\"text\"></span>\n                <span class=\"caret\"></span>\n            </a>\n            <slot name=\"anchor\" v-if=\"!text\"></slot>\n        </template>\n        <template v-else>\n            <button\n                id=\"dLabel\"\n                class=\"btn {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\n                aria-haspopup=\"true\"\n                aria-expanded=\"{{show}}\"\n                :disabled=\"disabled\"\n                v-if=\"text\">\n                <span v-html=\"text\"></span>\n                <span class=\"caret\"></span>\n            </button>\n            <slot name=\"button\" v-if=\"!text\"></slot>\n        </template>\n    </span role=\"button\">\n    <slot></slot>\n</div>\n";
 
 /***/ },
 /* 168 */
