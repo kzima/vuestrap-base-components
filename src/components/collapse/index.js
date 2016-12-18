@@ -56,15 +56,22 @@ export const collapse = {
   },
   events: {
     'toggled::collapse'(data) {
+      let shouldPropagate = true
+
       if (data.id && data.id === this.id && !data.group || data.group && data.group === this.group && !data.id) {
         if ((this.$el.className + ' ').indexOf(' in ') > -1) {
           this.hide()
         } else {
           this.show()
         }
+
+        shouldPropagate = false
       }
+
+      return shouldPropagate
     },
     'toggled::accordion'(data) {
+      let shouldPropagate = true
       // if id and group id is provided it means it is an accordion and takes priority over all
       if (data.id && data.group && data.group === this.group) {
         // for current element
@@ -77,12 +84,16 @@ export const collapse = {
           }
         } else {
           // ignore if non-selected item is already closed
-          if ((this.$el.className + ' ').indexOf(' in ') === -1) return
+          if ((this.$el.className + ' ').indexOf(' in ') === -1) return shouldPropagate
 
            // close all items in the group, and open the one selected
           this.hide()
         }
+
+        shouldPropagate = false
       }
+
+      return shouldPropagate
     },
   },
   destroyed() {
