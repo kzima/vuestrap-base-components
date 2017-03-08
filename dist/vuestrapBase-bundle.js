@@ -1495,6 +1495,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    show: function show() {
 	      var _this = this;
 
+	      this.$root.$broadcast('toggled::transitioning', { id: this.id, group: this.group });
+	      this.$root.$dispatch('toggled::transitioning', { id: this.id, group: this.group });
 	      this.$el.classList.remove('collapse');
 	      var height = this.$el.scrollHeight;
 	      this.$el.classList.add('collapsing');
@@ -1512,6 +1514,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    hide: function hide() {
 	      var _this2 = this;
 
+	      this.$root.$broadcast('toggled::transitioning', { id: this.id, group: this.group });
+	      this.$root.$dispatch('toggled::transitioning', { id: this.id, group: this.group });
 	      this.$el.style.height = this.$el.scrollHeight + 'px';
 	      this.$el.classList.remove('collapse');
 	      this.$el.classList.remove('in');
@@ -1592,6 +1596,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    expanded: {
 	      type: Boolean,
 	      'default': false
+	    },
+	    transitioning: {
+	      type: Boolean,
+	      'default': false
 	    }
 	  },
 	  methods: {
@@ -1613,7 +1621,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	  events: {
 	    'toggled::collapsed': function toggledCollapsed(data) {
 	      if (data.id && data.id === this.target && !data.group || data.group && data.group === this.targetGroup && !data.id) {
+	        this.transitioning = false;
 	        this.expanded = data.expanded;
+	      }
+	    },
+	    'toggled::transitioning': function toggledTransitioning(data) {
+	      if (data.id && data.id === this.target && !data.group || data.group && data.group === this.targetGroup && !data.id) {
+	        this.transitioning = true;
 	      }
 	    }
 	  }
@@ -1720,7 +1734,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 28 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-bind:class=\"{ open: show, dropdown: !dropup, dropup: dropup, 'dropdown-arrow': arrow}\" v-on:click=\"toggle($event)\">\n    <span class=\"btn-action\">\n        <template v-if=\"dropdownToggleAnchor\">\n            <a\n                id=\"dLabel\"\n                class=\"{{dropdownToggle}} {{anchorClass}} {{btnSize}}\"\n                aria-haspopup=\"true\"\n                aria-expanded=\"{{show}}\"\n                :disabled=\"disabled\"\n                v-if=\"text\">\n                <span v-html=\"text\"></span>\n                <span class=\"caret\"></span>\n            </a>\n            <slot name=\"anchor\" v-if=\"!text\"></slot>\n        </template>\n        <template v-else>\n            <button\n                id=\"dLabel\"\n                class=\"btn {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\n                aria-haspopup=\"true\"\n                aria-expanded=\"{{show}}\"\n                :disabled=\"disabled\"\n                v-if=\"text\">\n                <span v-html=\"text\"></span>\n                <span class=\"caret\"></span>\n            </button>\n            <slot name=\"button\" v-if=\"!text\"></slot>\n        </template>\n    </span role=\"button\">\n    <slot></slot>\n</div>\n";
+	module.exports = "<div v-bind:class=\"{ open: show, dropdown: !dropup, dropup: dropup, 'dropdown-arrow': arrow}\" v-on:click=\"toggle($event)\">\n    <span class=\"btn-action\">\n        <button\n            id=\"dLabel\"\n            class=\"btn {{dropdownToggle}} {{btnVariant}} {{btnSize}}\"\n            aria-haspopup=\"true\"\n            aria-expanded=\"{{show}}\"\n            :disabled=\"disabled\"\n            v-if=\"text\">\n            <span v-html=\"text\"></span>\n            <span class=\"caret\"></span>\n        </button>\n        <slot name=\"button\" v-if=\"!text\"></slot>\n    </span role=\"button\">\n    <slot></slot>\n</div>\n";
 
 /***/ },
 /* 29 */

@@ -24,6 +24,8 @@ export const collapse = {
   },
   methods: {
     show() {
+      this.$root.$broadcast('toggled::transitioning', {id: this.id, group: this.group})
+      this.$root.$dispatch('toggled::transitioning', {id: this.id, group: this.group})
       this.$el.classList.remove('collapse')
       const height = this.$el.scrollHeight
       this.$el.classList.add('collapsing')
@@ -39,6 +41,8 @@ export const collapse = {
       }, TRANSITION_DURATION)
     },
     hide() {
+      this.$root.$broadcast('toggled::transitioning', {id: this.id, group: this.group})
+      this.$root.$dispatch('toggled::transitioning', {id: this.id, group: this.group})
       this.$el.style.height = this.$el.scrollHeight + 'px'
       this.$el.classList.remove('collapse')
       this.$el.classList.remove('in')
@@ -120,6 +124,10 @@ export const collapseToggle = {
     expanded: {
       type: Boolean,
       default: false
+    },
+    transitioning: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
@@ -141,7 +149,13 @@ export const collapseToggle = {
   events: {
     'toggled::collapsed'(data) {
       if (data.id && data.id === this.target && !data.group || data.group && data.group === this.targetGroup && !data.id) {
-          this.expanded = data.expanded;
+        this.transitioning = false;
+        this.expanded = data.expanded;
+      }
+    },
+    'toggled::transitioning'(data) {
+      if (data.id && data.id === this.target && !data.group || data.group && data.group === this.targetGroup && !data.id) {
+        this.transitioning = true;
       }
     }
   },
