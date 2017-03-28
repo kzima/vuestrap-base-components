@@ -115,4 +115,13 @@ export const tab = {
     const items = this.$parent.$get('items')
     items.push({id: this.id, title: this.title, active: this.active, disabled: this.disabled})
   },
+  watch: {
+    title(n) {
+      const items = this.$parent.$get('items')
+
+      const index = _.indexOf(_.map(items, item => item.id), this.id)
+
+      items[index].title = n
+    }
+  }
 }
