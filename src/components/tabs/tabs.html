@@ -1,7 +1,7 @@
 <div class="tabs">
   <ul class="nav nav-tabs">
     <li class="nav-item" v-for="item in items" v-on:click="setActive($index)">
-      <span class="nav-link btn {{btnSize}} {{item.active ? 'active' : ''}} {{ item.disabled ? 'disabled' : '' }}">{{item.title}}</span>
+      <span class="nav-link btn {{btnSize}} {{item.active ? 'active' : ''}} {{ item.disabled ? 'disabled' : '' }}">{{{item.title}}}</span>
     </li>
   </ul>
   <div class="tab-content">

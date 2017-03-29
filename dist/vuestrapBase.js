@@ -4905,6 +4905,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	  ready: function ready() {
 	    var items = this.$parent.$get('items');
 	    items.push({ id: this.id, title: this.title, active: this.active, disabled: this.disabled });
+	  },
+	  watch: {
+	    title: function title(n) {
+	      var items = this.$parent.$get('items');
+	
+	      var index = _.indexOf(_.map(items, function (item) {
+	        return item.id;
+	      }), this.id);
+	
+	      items[index].title = n;
+	    }
 	  }
 	};
 	exports.tab = tab;
@@ -4913,7 +4924,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 75 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"tabs\">\n  <ul class=\"nav nav-tabs\">\n    <li class=\"nav-item\" v-for=\"item in items\" v-on:click=\"setActive($index)\">\n      <span class=\"nav-link btn {{btnSize}} {{item.active ? 'active' : ''}} {{ item.disabled ? 'disabled' : '' }}\">{{item.title}}</span>\n    </li>\n  </ul>\n  <div class=\"tab-content\">\n    <slot></slot>\n  </div>\n</div>";
+	module.exports = "<div class=\"tabs\">\n  <ul class=\"nav nav-tabs\">\n    <li class=\"nav-item\" v-for=\"item in items\" v-on:click=\"setActive($index)\">\n      <span class=\"nav-link btn {{btnSize}} {{item.active ? 'active' : ''}} {{ item.disabled ? 'disabled' : '' }}\">{{{item.title}}}</span>\n    </li>\n  </ul>\n  <div class=\"tab-content\">\n    <slot></slot>\n  </div>\n</div>\n";
 
 /***/ },
 /* 76 */
